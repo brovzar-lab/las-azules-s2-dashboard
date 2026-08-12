@@ -184,6 +184,14 @@
     .page.active { display: block; animation: fadeIn .18s ease; }
     @keyframes fadeIn { from { opacity:0; transform:translateY(3px) } to { opacity:1; transform:none } }
 
+    /* ── Responsive grids ── */
+    .grid-3col   { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--bd); border:1px solid var(--bd); }
+    .grid-scores { display:grid; grid-template-columns:1fr 240px;     gap:1px; background:var(--bd); border:1px solid var(--bd); }
+    .grid-2col   { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--bd); border:1px solid var(--bd); }
+    @media (max-width: 600px) {
+      .grid-3col, .grid-scores, .grid-2col { grid-template-columns: 1fr; }
+    }
+
     /* ── Container ── */
     .container {
       max-width: 1060px;
@@ -504,6 +512,7 @@
     #season-narrative { border-left: 3px solid var(--coral); background: var(--smoke); }
 
     .hidden { display: none !important; }
+
   </style>
 </head>
 <body>
@@ -613,7 +622,7 @@
       <p class="sec-caption">Click any bar to filter the coverage ledger to that segment.</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:48px">
+    <div class="grid-3col" style="margin-bottom:48px">
       <div style="background:var(--white);padding:22px">
         <p class="sec-label" style="margin-bottom:14px">By Market</p>
         <div id="chart-market"></div>
@@ -661,7 +670,7 @@
       </div>
       <p class="sec-caption">Season 2 scores accumulate over the 8-week run through Sep 30.</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 240px;gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:48px">
+    <div class="grid-scores" style="margin-bottom:48px">
       <div style="background:var(--white);padding:26px">
         <p style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Season 2 — Scores Accumulating</p>
         <p style="font-size:13px;color:var(--ink2);line-height:1.65;margin-bottom:18px">Rotten Tomatoes, IMDb, and Metacritic scores build over the 8-week season. Season 1 baseline: <strong style="color:var(--ink1)">100% RT · 7.3 IMDb · 76 Metacritic</strong>.</p>
@@ -687,7 +696,7 @@
       </div>
       <p class="sec-caption">Cast, creator, and critic voices for social amplification.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd)">
+    <div class="grid-2col">
       <blockquote style="background:var(--white);padding:24px 26px">
         <p style="font-family:'Playfair Display',serif;font-size:.95rem;color:var(--ink1);line-height:1.7;font-style:italic;margin-bottom:12px">"If in the first season the enemy was a serial killer, in this season it's an entire system."</p>
         <footer style="font-size:10px;font-weight:700;color:var(--coral);letter-spacing:.06em;text-transform:uppercase">Fernando Rovzar — Creator &amp; Showrunner</footer>
@@ -858,7 +867,7 @@
       <p style="font-size:13px;color:var(--ink2);line-height:1.72;max-width:640px">Mexico City, 1971. Lieutenant María and the Azules investigate a student activist's murder — uncovering a conspiracy reaching back to the Halconazo massacre. Created by <strong style="color:var(--ink1)">Fernando Rovzar</strong>, produced by <strong style="color:var(--ink1)">Lemon Studios</strong>. 8 episodes through September 30, 2026.</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:24px">
+    <div class="grid-2col" style="margin-bottom:24px">
       <div style="background:var(--white);padding:24px">
         <p class="sec-label" style="margin-bottom:14px">Episode Schedule — Season 2</p>
         <div id="episode-list" style="display:flex;flex-direction:column;gap:2px"></div>
@@ -874,7 +883,7 @@
       <div id="crew-list" style="display:flex;flex-direction:column;gap:1px;background:var(--bd)"></div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd)">
+    <div class="grid-2col">
       <div style="background:var(--white);padding:24px">
         <p style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:10px">Historical Context — Season 2</p>
         <p style="font-size:13px;color:var(--ink2);line-height:1.68">Set in June 1971, centered on the <a href="https://en.wikipedia.org/wiki/Corpus_Christi_massacre" target="_blank" rel="noopener noreferrer" style="color:var(--ink1);font-weight:600;text-decoration:underline;text-underline-offset:3px">Halconazo (Corpus Christi Massacre) ↗</a>, where paramilitary "Halcones" attacked student protesters.</p>
