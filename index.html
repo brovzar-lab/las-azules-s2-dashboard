@@ -3,510 +3,924 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Azules S2 — Media Command Center V3 | Lemon Studios</title>
-  <meta name="description" content="Live media coverage dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
+  <title>Las Azules S2 — Media Intelligence Room V4 | Lemon Studios</title>
+  <meta name="description" content="Media intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{navy:'#08101e'},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ═══════════════════════════════════════════════════════
+       V4 DESIGN SYSTEM — Lemon Intelligence Room
+       Warm editorial light mode · Playfair Display serif
+    ═══════════════════════════════════════════════════════ */
     :root {
-      --bg:      #08101e;
-      --surf:    #0e1826;
-      --surf2:   #131f30;
-      --bd:      #1c2b3e;
-      --bd2:     #243549;
-      --t1:      #f1f5f9;
-      --t2:      #8fa3b9;
-      --t3:      #3d5270;
-      --blue:    #3b82f6;
-      --green:   #22c55e;
-      --amber:   #f59e0b;
-      --red:     #ef4444;
-      --purple:  #a78bfa;
-      --nav-w:   220px;
+      --cream:  #edead4;
+      --white:  #ffffff;
+      --smoke:  #f5f2e8;
+      --bd:     #dbd6c5;
+      --bd2:    #c8c2b0;
+      --ink1:   #1a1a1a;
+      --ink2:   #555046;
+      --ink3:   #9a9080;
+      --coral:  #c8422a;
+      --teal:   #3d9688;
+      --gold:   #b5832a;
+      --blue:   #3a60a8;
+      --green:  #2a7a58;
+      --amber:  #b5832a;
+      --red:    #c8422a;
+      --nav-bg: #111111;
+      --nav-h:  52px;
     }
 
-    *  { box-sizing: border-box; }
-    body { background: var(--bg); font-family: 'Inter', sans-serif; min-height: 100vh; color: var(--t1); }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ── Layout ── */
-    #sidenav  { position:fixed;top:0;left:0;height:100vh;width:var(--nav-w);z-index:40;background:var(--surf);border-right:1px solid var(--bd);display:flex;flex-direction:column; }
-    #content  { margin-left:var(--nav-w);min-height:100vh; }
-    #bottomnav{ display:none; }
-
-    @media(max-width:767px){
-      #sidenav   { display:none; }
-      #content   { margin-left:0; padding-bottom:5rem; }
-      #bottomnav { display:flex;position:fixed;bottom:0;left:0;right:0;z-index:40;background:var(--surf);border-top:1px solid var(--bd);height:4rem; }
-      .filter-row{ flex-wrap:nowrap!important;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px; }
-      .filter-row>*{ flex-shrink:0; }
-      .mobile-stack{ flex-direction:column!important; }
+    body {
+      background: var(--cream);
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--ink1);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
+
+    /* ── Top Nav ── */
+    #topnav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: var(--nav-bg);
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      padding: 0 28px;
+    }
+
+    .tnav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: 36px;
+      cursor: pointer;
+      flex-shrink: 0;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+
+    .tnav-logo {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--coral);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 800;
+      color: #fff;
+      letter-spacing: -.5px;
+      flex-shrink: 0;
+    }
+
+    .tnav-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+
+    .tnav-links {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex: 1;
+    }
+
+    .tnav-link {
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      color: rgba(255,255,255,0.42);
+      cursor: pointer;
+      border: none;
+      background: none;
+      transition: color .12s;
+      text-transform: uppercase;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+
+    .tnav-link:hover { color: rgba(255,255,255,0.8); }
+    .tnav-link.active { color: #ffffff; }
+
+    .tnav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    .tnav-date {
+      font-size: 10px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .v4-badge {
+      padding: 3px 8px;
+      border: 1px solid rgba(255,255,255,0.22);
+      font-size: 10px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: .1em;
+    }
+
+    /* ── Bottom Nav (mobile) ── */
+    #bottomnav { display: none; }
+
+    @media (max-width: 767px) {
+      #bottomnav {
+        display: flex;
+        position: fixed; bottom: 0; left: 0; right: 0;
+        z-index: 40;
+        background: var(--nav-bg);
+        border-top: 1px solid rgba(255,255,255,0.06);
+        height: 56px;
+      }
+      .tnav-links { display: none; }
+      .tnav-date  { display: none; }
+    }
+
+    .bnav-link {
+      flex: 1;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 3px;
+      cursor: pointer;
+      color: rgba(255,255,255,0.3);
+      font-size: 9px; font-weight: 600;
+      transition: color .12s;
+      border: none; background: none;
+      padding: 0;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      font-family: inherit;
+    }
+    .bnav-link:hover { color: rgba(255,255,255,0.65); }
+    .bnav-link.active { color: #ffffff; }
+    .bnav-icon { width: 18px; height: 18px; }
+
+    /* ── Content ── */
+    #content {
+      padding-top: var(--nav-h);
+      min-height: 100vh;
+    }
+
+    @media (max-width: 767px) { #content { padding-bottom: 56px; } }
 
     /* ── Pages ── */
-    .page      { display:none; }
-    .page.active{ display:block;animation:fadeIn 0.18s ease; }
-    @keyframes fadeIn{ from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none} }
+    .page { display: none; }
+    .page.active { display: block; animation: fadeIn .18s ease; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(3px) } to { opacity:1; transform:none } }
 
-    /* ── Nav ── */
-    .nav-link  { display:flex;align-items:center;gap:10px;padding:9px 16px;border-radius:4px;margin:1px 8px;cursor:pointer;transition:color 0.12s;text-decoration:none;color:var(--t2);border-left:2px solid transparent;font-size:13px;font-weight:500; }
-    .nav-link:hover { color:var(--t1); background:rgba(255,255,255,0.03); }
-    .nav-link.active{ color:var(--t1); border-left-color:var(--blue);background:rgba(59,130,246,0.06); }
-    .nav-icon  { width:16px;height:16px;flex-shrink:0;opacity:0.7; }
-    .nav-link.active .nav-icon { opacity:1; }
+    /* ── Container ── */
+    .container {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
 
-    /* ── Bottom nav ── */
-    .bnav-link { flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;color:var(--t3);font-size:10px;font-weight:500;transition:color 0.12s;border:none;background:none;padding:0; }
-    .bnav-link:hover{ color:var(--t2); }
-    .bnav-link.active{ color:var(--blue); }
-    .bnav-icon { width:18px;height:18px; }
+    @media (max-width: 767px) { .container { padding: 0 20px; } }
 
-    /* ── Cards — V3: sharp, solid, no glass ── */
-    .card      { background:var(--surf);border:1px solid var(--bd);border-radius:4px; }
-    .card-hover{ transition:border-color 0.12s; }
-    .card-hover:hover{ border-color:var(--bd2); }
+    /* ── Hero Panel ── */
+    .hero {
+      background: var(--nav-bg);
+      padding: 60px 0 48px;
+    }
 
-    /* ── Stat cards ── */
-    .stat-card { background:var(--surf);border:1px solid var(--bd);border-radius:4px;padding:1.25rem;text-align:center; }
-    .stat-num  { font-size:2.5rem;font-weight:800;line-height:1;letter-spacing:-0.02em; }
+    .hero-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (max-width: 767px) {
+      .hero-inner { grid-template-columns: 1fr; padding: 0 20px; gap: 28px; }
+      .hero { padding: 40px 0 32px; }
+    }
+
+    .hero-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 16px;
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.05;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .hero-em { color: var(--teal); font-style: italic; }
+
+    .hero-sub {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.65;
+    }
+
+    .hero-thesis {
+      border-left: 2px solid rgba(255,255,255,0.12);
+      padding: 16px 20px;
+    }
+
+    .hero-thesis-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 8px;
+    }
+
+    .hero-thesis-body {
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.65;
+    }
+
+    /* ── Mini Hero (inner pages) ── */
+    .mini-hero {
+      background: var(--nav-bg);
+      padding: 36px 0 28px;
+    }
+
+    /* ── Section Header (editorial) ── */
+    .sec-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+
+    .sec-header-left { flex: 1; }
+
+    .sec-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 6px;
+    }
+
+    .sec-h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: var(--ink1);
+      line-height: 1.1;
+    }
+
+    .sec-rule {
+      border: none;
+      border-top: 1px solid var(--bd);
+      margin: 10px 0 0;
+    }
+
+    .sec-caption {
+      font-size: 12px;
+      color: var(--ink3);
+      line-height: 1.6;
+      max-width: 300px;
+      text-align: right;
+      padding-bottom: 1px;
+    }
+
+    @media (max-width: 600px) {
+      .sec-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .sec-caption { text-align: left; max-width: 100%; }
+    }
+
+    /* ── Stat grid ── */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: var(--white);
+      border: 1px solid var(--bd);
+    }
+
+    @media (max-width: 600px) { .stat-grid { grid-template-columns: repeat(2,1fr); } }
+
+    .stat-cell {
+      padding: 28px 24px;
+      border-right: 1px solid var(--bd);
+    }
+    .stat-cell:last-child { border-right: none; }
+
+    @media (max-width: 600px) {
+      .stat-cell:nth-child(even) { border-right: none; }
+      .stat-cell { border-bottom: 1px solid var(--bd); }
+      .stat-cell:nth-last-child(-n+2) { border-bottom: none; }
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -.02em;
+      color: var(--ink1);
+    }
+
+    .stat-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--ink3);
+      margin-top: 7px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .stat-sub { font-size: 11px; color: var(--ink2); margin-top: 6px; }
 
     /* ── Delta badges ── */
-    .delta     { display:inline-flex;align-items:center;gap:2px;font-size:.68rem;font-weight:700;padding:.12rem .4rem;border-radius:2px; }
-    .delta-up  { background:rgba(34,197,94,0.12);color:#4ade80; }
-    .delta-dn  { background:rgba(239,68,68,0.1);color:#f87171; }
-    .delta-neu { background:rgba(100,116,139,0.12);color:var(--t2); }
+    .delta {
+      display: inline-flex; align-items: center; gap: 2px;
+      font-size: .64rem; font-weight: 700;
+      padding: .1rem .42rem;
+      letter-spacing: .02em;
+    }
+    .delta-up  { background: rgba(61,150,136,0.1);  color: var(--teal); }
+    .delta-dn  { background: rgba(200,66,42,0.1);   color: var(--coral); }
+    .delta-neu { background: rgba(154,144,128,0.12); color: var(--ink3); }
 
-    /* ── Badges (market/type/lang) ── */
-    .bdg       { display:inline-block;padding:.1rem .45rem;border-radius:2px;font-size:.7rem;font-weight:600; }
+    /* ── Cards ── */
+    .card { background: var(--white); border: 1px solid var(--bd); }
 
-    /* ── Charts ── */
-    .bar-fill  { transition:width 0.6s cubic-bezier(.4,0,.2,1); }
-    .chart-bar { cursor:pointer;transition:opacity 0.12s; }
-    .chart-bar:hover{ opacity:0.8; }
+    /* ── Section label (small) ── */
+    .sec-label {
+      font-size: .67rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink3);
+    }
 
-    /* ── Section label ── */
-    .sec-label { font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t3); }
+    /* ── Live indicator ── */
+    .live-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      flex-shrink: 0;
+    }
 
-    /* ── Live indicator (static, no pulsing) ── */
-    .live-dot  { width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0; }
+    /* ── Bar chart ── */
+    .bar-track {
+      background: rgba(0,0,0,0.07);
+      height: 20px; overflow: hidden; flex: 1;
+    }
+    .bar-fill {
+      height: 100%;
+      display: flex; align-items: center; justify-content: flex-end;
+      padding-right: 7px;
+      transition: width .6s cubic-bezier(.4,0,.2,1);
+    }
+    .chart-bar { cursor: pointer; }
+    .chart-bar:hover .bar-track { background: rgba(0,0,0,0.12); }
 
-    /* ── Toast ── */
-    .toast     { position:fixed;bottom:5.5rem;left:50%;transform:translateX(-50%);background:#16a34a;color:#fff;font-size:.78rem;font-weight:600;padding:.4rem 1rem;border-radius:4px;z-index:99;opacity:1;transition:opacity .3s;pointer-events:none;white-space:nowrap; }
+    /* ── Coverage table ── */
+    .cov-table { width: 100%; border-collapse: collapse; }
+    .cov-table thead tr { background: var(--ink1); }
+    .cov-table thead th {
+      padding: 10px 14px;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.6); text-align: left;
+      white-space: nowrap;
+    }
+    .cov-table tbody tr {
+      border-bottom: 1px solid var(--bd);
+      transition: background .1s;
+    }
+    .cov-table tbody tr:last-child { border-bottom: none; }
+    .cov-table tbody tr:hover { background: var(--smoke); }
+    .cov-table tbody td { padding: 11px 14px; vertical-align: top; }
 
-    /* ── Post builder slide-over ── */
-    #post-overlay{ position:fixed;inset:0;z-index:48;background:rgba(0,0,0,0.6);opacity:0;pointer-events:none;transition:opacity 0.22s; }
-    #post-overlay.open{ opacity:1;pointer-events:all; }
-    #post-panel  { position:fixed;top:0;right:0;bottom:0;z-index:49;width:480px;max-width:100vw;background:var(--surf);border-left:1px solid var(--bd);transform:translateX(100%);transition:transform 0.28s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column; }
-    #post-panel.open{ transform:translateX(0); }
-    @media(max-width:767px){ #post-panel{ width:100vw;border-left:none; } }
+    @media (max-width: 767px) {
+      .cov-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .cov-table { min-width: 560px; }
+    }
 
-    /* ── Char counter ── */
-    .cc-ok     { color:var(--t2); }
-    .cc-warn   { color:var(--amber); }
-    .cc-over   { color:var(--red);font-weight:700; }
+    /* ── Post builder ── */
+    #post-overlay {
+      position: fixed; inset: 0; z-index: 48;
+      background: rgba(0,0,0,0.35);
+      opacity: 0; pointer-events: none; transition: opacity .22s;
+    }
+    #post-overlay.open { opacity: 1; pointer-events: all; }
+    #post-panel {
+      position: fixed; top: 0; right: 0; bottom: 0; z-index: 49;
+      width: 480px; max-width: 100vw;
+      background: var(--white); border-left: 1px solid var(--bd);
+      transform: translateX(100%);
+      transition: transform .28s cubic-bezier(.4,0,.2,1);
+      overflow-y: auto; display: flex; flex-direction: column;
+    }
+    #post-panel.open { transform: translateX(0); }
+    @media (max-width: 767px) { #post-panel { width: 100vw; border-left: none; } }
 
-    /* ── Misc ── */
-    ::-webkit-scrollbar{ width:4px; }
-    ::-webkit-scrollbar-track{ background:transparent; }
-    ::-webkit-scrollbar-thumb{ background:var(--bd2);border-radius:2px; }
-    select option{ background:var(--surf2);color:var(--t1); }
-    textarea{ resize:vertical; }
+    .cc-ok   { color: var(--ink3); }
+    .cc-warn { color: var(--gold); }
+    .cc-over { color: var(--coral); font-weight: 700; }
 
-    /* ── Platform tabs ── */
-    .platform-tab{ transition:background 0.12s,color 0.12s,border-color 0.12s;cursor:pointer; }
-    .platform-tab.active{ background:rgba(59,130,246,0.15);border-color:rgba(59,130,246,0.4);color:var(--t1); }
+    /* ── Platform tab ── */
+    .platform-tab { transition: background .12s, color .12s, border-color .12s; cursor: pointer; }
+    .platform-tab.active {
+      background: var(--ink1) !important;
+      border-color: var(--ink1) !important;
+      color: #fff !important;
+    }
 
     /* ── Hashtag chip ── */
-    .hashtag-chip{ cursor:pointer;transition:background 0.12s,border-color 0.12s; }
-    .hashtag-chip:hover{ background:rgba(59,130,246,0.2)!important;border-color:rgba(59,130,246,0.45)!important; }
-
-    /* ── Word cloud ── */
-    .wc-tag{ cursor:pointer;line-height:1.4;transition:opacity 0.12s; }
-    .wc-tag:hover{ opacity:0.7; }
-
-    /* ── Focus ── */
-    input:focus,textarea:focus,select:focus{ border-color:var(--blue)!important;outline:none; }
-
-    /* ── Mobile: coverage filters wrap 2-per-row ── */
-    @media(max-width:767px){
-      #cov-search{ width:100%;flex:none!important;min-width:unset; }
-      #cov-market,#cov-type,#cov-lang,#cov-sort{ flex:1;min-width:calc(50% - 4px); }
+    .hashtag-chip { cursor: pointer; transition: background .12s, border-color .12s; }
+    .hashtag-chip:hover {
+      background: rgba(200,66,42,0.1) !important;
+      border-color: rgba(200,66,42,0.3) !important;
     }
 
-    /* ── Mobile: platform tabs scroll ── */
-    @media(max-width:767px){
-      #platform-tabs{ flex-wrap:nowrap!important;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px;scrollbar-width:none; }
-      #platform-tabs::-webkit-scrollbar{ display:none; }
-      #platform-tabs .platform-tab{ flex-shrink:0; }
+    /* ── Toast ── */
+    .toast {
+      position: fixed; bottom: 5.5rem; left: 50%; transform: translateX(-50%);
+      background: var(--teal); color: #fff;
+      font-size: .78rem; font-weight: 600;
+      padding: .4rem 1rem; z-index: 99;
+      opacity: 1; transition: opacity .3s;
+      pointer-events: none; white-space: nowrap;
     }
 
-    /* ── Mobile: cast 2-col grid ── */
-    @media(max-width:767px){
-      #cast-list{ display:grid!important;grid-template-columns:repeat(2,1fr);gap:8px;padding:0; }
-      #cast-list>.cast-card{ flex-direction:column!important;align-items:center!important;text-align:center;padding:12px 8px;gap:6px; }
-      #cast-list>.cast-card .cast-avatar{ width:36px!important;height:36px!important;font-size:12px; }
-      #cast-list>.cast-card .cast-note{ display:none; }
+    /* ── Field ── */
+    .field {
+      padding: 8px 11px; font-size: 13px;
+      background: var(--smoke); border: 1px solid var(--bd);
+      color: var(--ink1); font-family: inherit;
     }
-
-    /* ── Mobile: post builder stack ── */
-    @media(max-width:600px){
-      #pb-columns{ flex-direction:column!important; }
+    .field::placeholder { color: var(--ink3); }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--coral) !important; outline: none;
     }
 
     /* ── URL row ── */
-    .url-row{ display:flex;gap:5px;align-items:stretch; }
-    .url-row input{ flex:1;min-width:0; }
-    .url-btn{ flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:var(--surf2);border:1px solid var(--bd);border-radius:4px;color:var(--t2);transition:background 0.12s,color 0.12s;cursor:pointer;text-decoration:none;font-size:12px;font-weight:600; }
-    .url-btn:hover{ background:var(--bd2);color:var(--t1); }
+    .url-row { display: flex; gap: 5px; align-items: stretch; }
+    .url-row input { flex: 1; min-width: 0; }
+    .url-btn {
+      flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px;
+      background: var(--smoke); border: 1px solid var(--bd);
+      color: var(--ink2); transition: background .12s, color .12s;
+      cursor: pointer; text-decoration: none;
+      font-size: 12px; font-weight: 600;
+    }
+    .url-btn:hover { background: var(--bd); color: var(--ink1); }
 
-    /* ── Divider ── */
-    .divider{ border:none;border-top:1px solid var(--bd);margin:0; }
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--bd2); border-radius: 2px; }
 
-    /* ── Narrative panel (V3: no gradient, solid accent border) ── */
-    #season-narrative{ border-left:3px solid var(--blue); }
+    /* ── Narrative accent ── */
+    #season-narrative { border-left: 3px solid var(--coral); background: var(--smoke); }
 
-    /* ── Block quote (V3) ── */
-    .bq{ border-left:2px solid var(--blue);padding-left:1rem; }
+    .hidden { display: none !important; }
   </style>
 </head>
-<body class="antialiased">
+<body>
 
-<!-- ═══ SIDE NAV ═══ -->
-<nav id="sidenav">
-  <div style="padding:18px 16px 14px;border-bottom:1px solid var(--bd)">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-      <div style="width:32px;height:32px;border-radius:4px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:11px;flex-shrink:0;letter-spacing:-.5px">LA</div>
-      <div style="min-width:0;flex:1">
-        <div style="display:flex;align-items:center;gap:6px">
-          <p style="font-size:13px;font-weight:700;line-height:1.2;color:var(--t1)">Las Azules S2</p>
-          <span style="font-size:10px;font-weight:700;padding:1px 5px;background:rgba(59,130,246,0.15);color:var(--blue);border:1px solid rgba(59,130,246,0.3);border-radius:2px;letter-spacing:.03em">V3</span>
-        </div>
-        <p style="font-size:11px;color:var(--t3);line-height:1.3;margin-top:1px">Lemon Studios × Apple TV+</p>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;gap:6px">
-      <span class="live-dot"></span>
-      <span style="font-size:11px;color:var(--green);font-weight:600;letter-spacing:.04em">LIVE — Season 2</span>
-    </div>
+<!-- ═══ TOP NAV ═══ -->
+<nav id="topnav">
+  <button class="tnav-brand" onclick="nav('home')">
+    <div class="tnav-logo">LA</div>
+    <span class="tnav-title">Las Azules · S2</span>
+  </button>
+
+  <div class="tnav-links">
+    <button onclick="nav('home')"     class="tnav-link" id="nl-home">Command Center</button>
+    <button onclick="nav('coverage')" class="tnav-link" id="nl-coverage">Coverage</button>
+    <button onclick="nav('social')"   class="tnav-link" id="nl-social">Social</button>
+    <button onclick="nav('show')"     class="tnav-link" id="nl-show">Show Universe</button>
+    <button onclick="nav('updates')"  class="tnav-link" id="nl-updates">Daily Updates</button>
   </div>
 
-  <div style="flex:1;padding:8px 0;overflow-y:auto">
-    <button onclick="nav('home')"     class="nav-link" id="nl-home"     style="width:100%;text-align:left">
-      <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-      Command Center
-    </button>
-    <button onclick="nav('coverage')" class="nav-link" id="nl-coverage" style="width:100%;text-align:left">
-      <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
-      Coverage
-    </button>
-    <button onclick="nav('social')"   class="nav-link" id="nl-social"   style="width:100%;text-align:left">
-      <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-      Social
-    </button>
-    <button onclick="nav('show')"     class="nav-link" id="nl-show"     style="width:100%;text-align:left">
-      <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-      Show Universe
-    </button>
-    <button onclick="nav('updates')"  class="nav-link" id="nl-updates"  style="width:100%;text-align:left">
-      <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-      Daily Updates
-    </button>
-  </div>
-
-  <div style="padding:12px 16px;border-top:1px solid var(--bd)">
-    <a href="https://tv.apple.com/us/show/women-in-blue/umc.cmc.2r80bdb47xcb0p7zicm78ggwf" target="_blank" rel="noopener noreferrer"
-       style="display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--bd);border-radius:4px;color:var(--t2);font-size:12px;font-weight:500;text-decoration:none;transition:border-color 0.12s"
-       onmouseover="this.style.borderColor='var(--bd2)'" onmouseout="this.style.borderColor='var(--bd)'">
-      <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-      Watch on Apple TV+ ↗
-    </a>
+  <div class="tnav-right">
+    <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
+    <span class="v4-badge">V4</span>
   </div>
 </nav>
 
 <!-- ═══ BOTTOM NAV (mobile) ═══ -->
 <nav id="bottomnav">
-  <button onclick="nav('home')"     class="bnav-link" id="bn-home"><svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Home</button>
-  <button onclick="nav('coverage')" class="bnav-link" id="bn-coverage"><svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>Coverage</button>
-  <button onclick="nav('social')"   class="bnav-link" id="bn-social"><svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>Social</button>
-  <button onclick="nav('show')"     class="bnav-link" id="bn-show"><svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>Show</button>
-  <button onclick="nav('updates')"  class="bnav-link" id="bn-updates"><svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>Updates</button>
+  <button onclick="nav('home')"     class="bnav-link" id="bn-home">
+    <svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    Home
+  </button>
+  <button onclick="nav('coverage')" class="bnav-link" id="bn-coverage">
+    <svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+    Coverage
+  </button>
+  <button onclick="nav('social')"   class="bnav-link" id="bn-social">
+    <svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    Social
+  </button>
+  <button onclick="nav('show')"     class="bnav-link" id="bn-show">
+    <svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+    Show
+  </button>
+  <button onclick="nav('updates')"  class="bnav-link" id="bn-updates">
+    <svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+    Updates
+  </button>
 </nav>
 
 <!-- ═══ MAIN CONTENT ═══ -->
 <div id="content">
 
 <!-- ─── PAGE: COMMAND CENTER ─── -->
-<section id="page-home" class="page" style="padding:32px 28px;max-width:960px;margin:0 auto">
-  <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:28px">
-    <div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-        <h1 style="font-size:1.375rem;font-weight:800;letter-spacing:-.025em;color:var(--t1)">Command Center</h1>
-        <span style="font-size:10px;font-weight:700;padding:2px 6px;background:rgba(59,130,246,0.12);color:var(--blue);border:1px solid rgba(59,130,246,0.25);border-radius:2px;letter-spacing:.05em">V3</span>
+<section id="page-home" class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <p class="hero-eyebrow">Media Intelligence · Premiere Day — August 12, 2026</p>
+        <h1 class="hero-headline">Season 2 is<br><em class="hero-em">streaming</em> now.</h1>
+        <p class="hero-sub">27 articles tracked · 4 key markets · Reuters syndicated to 7+ US stations · Screen Anarchy 4/5 ★</p>
       </div>
-      <p style="font-size:13px;color:var(--t2)">Las Azules S2 — live media performance</p>
-    </div>
-    <div style="display:flex;align-items:center;gap:7px;padding:6px 12px;border:1px solid rgba(34,197,94,0.2);border-radius:4px;background:rgba(34,197,94,0.05)">
-      <span class="live-dot"></span>
-      <span style="font-size:12px;color:var(--green);font-weight:600">Streaming Now</span>
-    </div>
-  </div>
-
-  <!-- Season Narrative -->
-  <div id="season-narrative" class="card" style="margin-bottom:24px;padding:20px 20px 20px 18px"></div>
-
-  <!-- Hero stats — 4-up grid, no serif, no glass -->
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:24px">
-    <div class="stat-card">
-      <p class="stat-num" id="stat-articles" style="color:var(--t1)">27</p>
-      <p style="font-size:11px;color:var(--t2);margin-top:4px;font-weight:500">Articles</p>
-      <p style="margin-top:6px" id="stat-articles-delta"></p>
-    </div>
-    <div class="stat-card">
-      <p class="stat-num" style="color:var(--green)">100%</p>
-      <p style="font-size:11px;color:var(--t2);margin-top:4px;font-weight:500">RT S1</p>
-      <p style="margin-top:6px"><span class="delta delta-up">▲ Certified Fresh</span></p>
-    </div>
-    <div class="stat-card">
-      <p class="stat-num" style="color:var(--blue)">7.3</p>
-      <p style="font-size:11px;color:var(--t2);margin-top:4px;font-weight:500">IMDb S1</p>
-      <p style="margin-top:6px"><span class="delta delta-up">▲ Above 7.0</span></p>
-    </div>
-    <div class="stat-card">
-      <p class="stat-num" id="stat-days" style="color:var(--amber)">1</p>
-      <p style="font-size:11px;color:var(--t2);margin-top:4px;font-weight:500">Days Live</p>
-      <p style="margin-top:6px"><span class="delta delta-up">▲ Launch Day</span></p>
+      <div class="hero-thesis">
+        <p class="hero-thesis-label">Today's Signal</p>
+        <p class="hero-thesis-body">Launch day coverage is strong across trade, tech, and Latin American press. Major Mexican press (Reforma, El Universal, Milenio) remain the key gap to close this week.</p>
+      </div>
     </div>
   </div>
 
-  <!-- Score context — flat, no nested card -->
-  <div class="card" style="margin-bottom:24px;padding:16px 18px;border-left:2px solid var(--amber)">
-    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start">
-      <div style="flex:1;min-width:200px">
-        <p style="font-size:12px;font-weight:700;color:var(--amber);margin-bottom:4px">Season 2 — Scores Accumulating</p>
-        <p style="font-size:13px;color:var(--t2);line-height:1.6">RT, IMDb, and Metacritic build over the season. S1: 100% RT · 7.3 IMDb · 76 Metacritic.</p>
-        <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
-          <a href="https://www.rottentomatoes.com/tv/women_in_blue_2024/s02" target="_blank" rel="noopener noreferrer" style="padding:3px 8px;font-size:11px;font-weight:600;border:1px solid rgba(239,68,68,0.25);color:#fca5a5;border-radius:2px;text-decoration:none;background:rgba(239,68,68,0.08)">RT ↗</a>
-          <a href="https://www.metacritic.com/tv/women-in-blue/" target="_blank" rel="noopener noreferrer" style="padding:3px 8px;font-size:11px;font-weight:600;border:1px solid rgba(245,158,11,0.25);color:#fcd34d;border-radius:2px;text-decoration:none;background:rgba(245,158,11,0.08)">Metacritic ↗</a>
-          <a href="https://www.imdb.com/title/tt20516590/" target="_blank" rel="noopener noreferrer" style="padding:3px 8px;font-size:11px;font-weight:600;border:1px solid rgba(245,158,11,0.25);color:#fcd34d;border-radius:2px;text-decoration:none;background:rgba(245,158,11,0.08)">IMDb ↗</a>
+  <!-- Stats + body -->
+  <div class="container" style="padding-top:0;padding-bottom:48px">
+
+    <div class="stat-grid" style="margin-bottom:48px">
+      <div class="stat-cell">
+        <p class="stat-num" id="stat-articles">27</p>
+        <p class="stat-label">Articles</p>
+        <p class="stat-sub" id="stat-articles-delta">Launch day</p>
+      </div>
+      <div class="stat-cell">
+        <p class="stat-num" style="color:var(--teal)">100%</p>
+        <p class="stat-label">RT Score · S1</p>
+        <p class="stat-sub"><span class="delta delta-up">▲ Certified Fresh</span></p>
+      </div>
+      <div class="stat-cell">
+        <p class="stat-num">7.3</p>
+        <p class="stat-label">IMDb · S1</p>
+        <p class="stat-sub"><span class="delta delta-up">▲ Above 7.0</span></p>
+      </div>
+      <div class="stat-cell">
+        <p class="stat-num" style="color:var(--coral)" id="stat-days">1</p>
+        <p class="stat-label">Days Live</p>
+        <p class="stat-sub"><span class="delta delta-up">▲ Launch Day</span></p>
+      </div>
+    </div>
+
+    <!-- Season Narrative -->
+    <div id="season-narrative" class="card" style="padding:20px 24px;margin-bottom:48px"></div>
+
+    <!-- Charts -->
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Performance Breakdown</p>
+        <h2 class="sec-h2">By territory &amp; format</h2>
+        <hr class="sec-rule">
+      </div>
+      <p class="sec-caption">Click any bar to filter the coverage ledger to that segment.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:48px">
+      <div style="background:var(--white);padding:22px">
+        <p class="sec-label" style="margin-bottom:14px">By Market</p>
+        <div id="chart-market"></div>
+      </div>
+      <div style="background:var(--white);padding:22px">
+        <p class="sec-label" style="margin-bottom:14px">By Type</p>
+        <div id="chart-type"></div>
+      </div>
+      <div style="background:var(--white);padding:22px">
+        <p class="sec-label" style="margin-bottom:14px">Language Split</p>
+        <div id="chart-lang"></div>
+      </div>
+    </div>
+
+    <!-- Geo map -->
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Acquisition Geography</p>
+        <h2 class="sec-h2">The coverage map</h2>
+        <hr class="sec-rule">
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;padding-bottom:1px" id="geo-legend"></div>
+    </div>
+    <div class="card" style="padding:20px;margin-bottom:48px">
+      <div id="geo-map"></div>
+    </div>
+
+    <!-- Today's Pulse -->
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Evidence Ledger</p>
+        <h2 class="sec-h2">Today's pulse</h2>
+        <hr class="sec-rule">
+      </div>
+      <p class="sec-caption" id="today-badge"></p>
+    </div>
+    <div id="today-feed" style="display:flex;flex-direction:column;gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:48px"></div>
+
+    <!-- Scores -->
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Critical Reception</p>
+        <h2 class="sec-h2">Scores &amp; reviews</h2>
+        <hr class="sec-rule">
+      </div>
+      <p class="sec-caption">Season 2 scores accumulate over the 8-week run through Sep 30.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 240px;gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:48px">
+      <div style="background:var(--white);padding:26px">
+        <p style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Season 2 — Scores Accumulating</p>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.65;margin-bottom:18px">Rotten Tomatoes, IMDb, and Metacritic scores build over the 8-week season. Season 1 baseline: <strong style="color:var(--ink1)">100% RT · 7.3 IMDb · 76 Metacritic</strong>.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <a href="https://www.rottentomatoes.com/tv/women_in_blue_2024/s02" target="_blank" rel="noopener noreferrer" style="padding:5px 11px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(200,66,42,0.3);color:var(--coral);text-decoration:none;background:rgba(200,66,42,0.05)">RT ↗</a>
+          <a href="https://www.metacritic.com/tv/women-in-blue/" target="_blank" rel="noopener noreferrer" style="padding:5px 11px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(181,131,42,0.3);color:var(--gold);text-decoration:none;background:rgba(181,131,42,0.05)">Metacritic ↗</a>
+          <a href="https://www.imdb.com/title/tt20516590/" target="_blank" rel="noopener noreferrer" style="padding:5px 11px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(181,131,42,0.3);color:var(--gold);text-decoration:none;background:rgba(181,131,42,0.05)">IMDb ↗</a>
         </div>
       </div>
-      <div style="text-align:center;padding:12px 20px;border:1px solid rgba(245,158,11,0.2);border-radius:4px;background:rgba(245,158,11,0.05)">
-        <p style="font-size:11px;font-weight:700;color:var(--amber);margin-bottom:2px">Screen Anarchy</p>
-        <p style="font-size:1.5rem;font-weight:800;color:var(--amber);letter-spacing:-.02em">4/5 ★</p>
-        <p style="font-size:11px;color:var(--t3)">First review</p>
+      <div style="background:var(--smoke);padding:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+        <p style="font-size:9px;font-weight:700;color:var(--ink3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Screen Anarchy</p>
+        <p style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;color:var(--ink1)">4/5 ★</p>
+        <p style="font-size:11px;color:var(--ink3);margin-top:5px">First published review · S2</p>
       </div>
     </div>
-  </div>
 
-  <!-- Charts — 3-col -->
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:24px">
-    <div class="card" style="padding:16px 18px">
-      <p class="sec-label" style="margin-bottom:12px">By Market</p>
-      <div id="chart-market" class="space-y-2"></div>
+    <!-- Key Quotes -->
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Voice of the Show</p>
+        <h2 class="sec-h2">Key quotes</h2>
+        <hr class="sec-rule">
+      </div>
+      <p class="sec-caption">Cast, creator, and critic voices for social amplification.</p>
     </div>
-    <div class="card" style="padding:16px 18px">
-      <p class="sec-label" style="margin-bottom:12px">By Type</p>
-      <div id="chart-type" class="space-y-2"></div>
-    </div>
-    <div class="card" style="padding:16px 18px">
-      <p class="sec-label" style="margin-bottom:12px">Language Split</p>
-      <div id="chart-lang" class="space-y-2"></div>
-    </div>
-  </div>
-
-  <!-- Geo map -->
-  <div class="card" style="margin-bottom:24px;padding:16px 18px">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;flex-wrap:wrap">
-      <p class="sec-label">Market Coverage — Geographic</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap" id="geo-legend"></div>
-    </div>
-    <div id="geo-map"></div>
-  </div>
-
-  <!-- Today's Pulse -->
-  <div style="margin-bottom:24px">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-      <p style="font-size:14px;font-weight:700;color:var(--t1)">Today's Pulse</p>
-      <span id="today-badge" style="padding:2px 8px;border-radius:2px;font-size:11px;font-weight:700;background:rgba(59,130,246,0.12);color:var(--blue);border:1px solid rgba(59,130,246,0.25)"></span>
-    </div>
-    <div id="today-feed" class="space-y-2"></div>
-  </div>
-
-  <!-- Key Quotes — flat, no gradient wrapper -->
-  <div style="margin-bottom:4px">
-    <p style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:12px">Key Quotes</p>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
-      <blockquote class="card bq" style="padding:14px 16px"><p style="font-size:13px;color:var(--t2);line-height:1.65;margin-bottom:8px">"If in the first season the enemy was a serial killer, in this season it's an entire system."</p><footer style="font-size:11px;font-weight:700;color:var(--blue)">— Fernando Rovzar, Creator & Showrunner</footer></blockquote>
-      <blockquote class="card bq" style="padding:14px 16px"><p style="font-size:13px;color:var(--t2);line-height:1.65;margin-bottom:8px">"Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico's borders."</p><footer style="font-size:11px;font-weight:700;color:var(--amber)">— Screen Anarchy (4/5 ★)</footer></blockquote>
-      <blockquote class="card bq" style="padding:14px 16px"><p style="font-size:13px;color:var(--t2);line-height:1.65;margin-bottom:8px">"Now she's a woman giving herself permission to be. The entire season treats discovering who she really is."</p><footer style="font-size:11px;font-weight:700;color:var(--blue)">— Barbara Mori (María)</footer></blockquote>
-      <blockquote class="card bq" style="padding:14px 16px"><p style="font-size:13px;color:var(--t2);line-height:1.65;margin-bottom:8px">"It's impossible to discover a truth if you don't first challenge the system that wanted to silence it."</p><footer style="font-size:11px;font-weight:700;color:var(--blue)">— Fernando Rovzar</footer></blockquote>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd)">
+      <blockquote style="background:var(--white);padding:24px 26px">
+        <p style="font-family:'Playfair Display',serif;font-size:.95rem;color:var(--ink1);line-height:1.7;font-style:italic;margin-bottom:12px">"If in the first season the enemy was a serial killer, in this season it's an entire system."</p>
+        <footer style="font-size:10px;font-weight:700;color:var(--coral);letter-spacing:.06em;text-transform:uppercase">Fernando Rovzar — Creator &amp; Showrunner</footer>
+      </blockquote>
+      <blockquote style="background:var(--white);padding:24px 26px">
+        <p style="font-family:'Playfair Display',serif;font-size:.95rem;color:var(--ink1);line-height:1.7;font-style:italic;margin-bottom:12px">"Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico's borders."</p>
+        <footer style="font-size:10px;font-weight:700;color:var(--gold);letter-spacing:.06em;text-transform:uppercase">Screen Anarchy (4/5 ★)</footer>
+      </blockquote>
+      <blockquote style="background:var(--smoke);padding:24px 26px">
+        <p style="font-family:'Playfair Display',serif;font-size:.95rem;color:var(--ink1);line-height:1.7;font-style:italic;margin-bottom:12px">"Now she's a woman giving herself permission to be. The entire season treats discovering who she really is."</p>
+        <footer style="font-size:10px;font-weight:700;color:var(--teal);letter-spacing:.06em;text-transform:uppercase">Barbara Mori — Lt. María</footer>
+      </blockquote>
+      <blockquote style="background:var(--smoke);padding:24px 26px">
+        <p style="font-family:'Playfair Display',serif;font-size:.95rem;color:var(--ink1);line-height:1.7;font-style:italic;margin-bottom:12px">"It's impossible to discover a truth if you don't first challenge the system that wanted to silence it."</p>
+        <footer style="font-size:10px;font-weight:700;color:var(--coral);letter-spacing:.06em;text-transform:uppercase">Fernando Rovzar</footer>
+      </blockquote>
     </div>
   </div>
 </section>
 
 <!-- ─── PAGE: COVERAGE ─── -->
-<section id="page-coverage" class="page" style="padding:32px 28px;max-width:960px;margin:0 auto">
-  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px">
-    <div style="display:flex;align-items:center;gap:10px">
-      <h1 style="font-size:1.375rem;font-weight:800;letter-spacing:-.025em">Media Coverage</h1>
-      <span id="cov-count" style="font-size:12px;color:var(--t3)"></span>
+<section id="page-coverage" class="page">
+  <div class="mini-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Evidence Ledger</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1.05;margin-bottom:8px">Media coverage</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.4)">All articles, reviews, and mentions tracked since launch. <span id="cov-count"></span></p>
     </div>
   </div>
 
-  <!-- Filters -->
-  <div class="filter-bar" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
-    <input id="cov-search" type="search" placeholder="Search…" style="padding:7px 11px;font-size:13px;background:var(--surf);border:1px solid var(--bd);border-radius:4px;color:var(--t1);flex:1;min-width:140px" />
-    <select id="cov-market" style="padding:7px 10px;font-size:13px;background:var(--surf);border:1px solid var(--bd);border-radius:4px;color:var(--t2)"><option value="">All Markets</option><option>US</option><option>Mexico</option><option>Spain</option><option>International</option></select>
-    <select id="cov-type"   style="padding:7px 10px;font-size:13px;background:var(--surf);border:1px solid var(--bd);border-radius:4px;color:var(--t2)"><option value="">All Types</option><option>Trade</option><option>Entertainment</option><option>Tech</option><option>Regional</option><option>Review</option></select>
-    <select id="cov-lang"   style="padding:7px 10px;font-size:13px;background:var(--surf);border:1px solid var(--bd);border-radius:4px;color:var(--t2)"><option value="">All Languages</option><option value="EN">English</option><option value="ES">Spanish</option></select>
-    <select id="cov-sort"   style="padding:7px 10px;font-size:13px;background:var(--surf);border:1px solid var(--bd);border-radius:4px;color:var(--t2)"><option value="newest">Newest First</option><option value="oldest">Oldest First</option></select>
-  </div>
+  <div class="container" style="padding-top:32px;padding-bottom:48px">
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px">
+      <input id="cov-search" type="search" placeholder="Search outlet, headline…" class="field" style="flex:1;min-width:140px" />
+      <select id="cov-market" class="field" style="width:auto"><option value="">All Markets</option><option>US</option><option>Mexico</option><option>Spain</option><option>International</option></select>
+      <select id="cov-type"   class="field" style="width:auto"><option value="">All Types</option><option>Trade</option><option>Entertainment</option><option>Tech</option><option>Regional</option><option>Review</option></select>
+      <select id="cov-lang"   class="field" style="width:auto"><option value="">All Languages</option><option value="EN">English</option><option value="ES">Spanish</option></select>
+      <select id="cov-sort"   class="field" style="width:auto"><option value="newest">Newest First</option><option value="oldest">Oldest First</option></select>
+    </div>
 
-  <div id="cov-feed" class="space-y-2"></div>
-  <div id="cov-empty" class="hidden" style="text-align:center;padding:64px 0;color:var(--t3);font-size:14px">No articles match your filters.</div>
+    <div class="card cov-table-wrap" style="overflow:hidden">
+      <table class="cov-table">
+        <thead>
+          <tr>
+            <th>Outlet</th>
+            <th>Headline / Excerpt</th>
+            <th>Market</th>
+            <th>Type</th>
+            <th>Lang</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="cov-feed"></tbody>
+      </table>
+    </div>
+    <div id="cov-empty" class="hidden" style="text-align:center;padding:64px 0;color:var(--ink3);font-size:14px">No articles match your filters.</div>
+  </div>
 </section>
 
 <!-- ─── PAGE: SOCIAL ─── -->
-<section id="page-social" class="page" style="padding:32px 28px;max-width:960px;margin:0 auto">
-  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px">
-    <div>
-      <h1 style="font-size:1.375rem;font-weight:800;letter-spacing:-.025em;margin-bottom:2px">Social Media Hub</h1>
-      <p style="font-size:13px;color:var(--t2)">Build bilingual posts, track hashtags, manage team notes</p>
-    </div>
-    <button onclick="openPostBuilder(null)" style="display:flex;align-items:center;gap:7px;padding:8px 14px;background:var(--blue);color:#fff;font-size:13px;font-weight:600;border-radius:4px;border:none;cursor:pointer;transition:opacity 0.12s" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-      Build Post
-    </button>
-  </div>
-
-  <!-- Hashtag word cloud -->
-  <div class="card" style="padding:16px 18px;margin-bottom:12px">
-    <p class="sec-label" style="margin-bottom:4px">Hashtag Volume</p>
-    <p style="font-size:11px;color:var(--t3);margin-bottom:14px">Sized by volume · Click to search on Twitter/X</p>
-    <div id="hashtag-cloud" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;line-height:1.5"></div>
-  </div>
-
-  <!-- Official trailers -->
-  <div class="card" style="padding:16px 18px;margin-bottom:12px">
-    <p class="sec-label" style="margin-bottom:12px">Official Trailers</p>
-    <div style="display:flex;flex-direction:column;gap:2px">
-      <a href="https://www.youtube.com/watch?v=1lVJ96Oi9UY" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:12px;padding:10px;border-radius:4px;text-decoration:none;transition:background 0.12s" onmouseover="this.style.background='rgba(255,255,255,0.03)'" onmouseout="this.style.background='transparent'">
-        <div style="width:32px;height:32px;border-radius:4px;background:rgba(220,38,38,0.15);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#f87171;flex-shrink:0">YT</div>
-        <div><p style="font-size:13px;color:var(--t1);font-weight:500">Official Trailer (English)</p><p style="font-size:11px;color:var(--t3)">Apple TV+ · youtube.com ↗</p></div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=6PM90l-KLyc" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:12px;padding:10px;border-radius:4px;text-decoration:none;transition:background 0.12s" onmouseover="this.style.background='rgba(255,255,255,0.03)'" onmouseout="this.style.background='transparent'">
-        <div style="width:32px;height:32px;border-radius:4px;background:rgba(220,38,38,0.15);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#f87171;flex-shrink:0">YT</div>
-        <div><p style="font-size:13px;color:var(--t1);font-weight:500">Tráiler Oficial Español Latino</p><p style="font-size:11px;color:var(--t3)">Apple TV+ · youtube.com ↗</p></div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=lojkAQw_Bro" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:12px;padding:10px;border-radius:4px;text-decoration:none;transition:background 0.12s" onmouseover="this.style.background='rgba(255,255,255,0.03)'" onmouseout="this.style.background='transparent'">
-        <div style="width:32px;height:32px;border-radius:4px;background:rgba(220,38,38,0.15);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#f87171;flex-shrink:0">YT</div>
-        <div><p style="font-size:13px;color:var(--t1);font-weight:500">Tráiler Oficial — Segunda Temporada</p><p style="font-size:11px;color:var(--t3)">Apple TV+ en Español ↗</p></div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=vqV6S2Y-ZAw" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:12px;padding:10px;border-radius:4px;text-decoration:none;transition:background 0.12s" onmouseover="this.style.background='rgba(255,255,255,0.03)'" onmouseout="this.style.background='transparent'">
-        <div style="width:32px;height:32px;border-radius:4px;background:rgba(220,38,38,0.15);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#f87171;flex-shrink:0">YT</div>
-        <div><p style="font-size:13px;color:var(--t1);font-weight:500">Trailer Italiano — Stagione 2</p><p style="font-size:11px;color:var(--t3)">Apple TV+ Italia ↗</p></div>
-      </a>
+<section id="page-social" class="page">
+  <div class="mini-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Social Media Hub</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1.05;margin-bottom:8px">Amplification</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.4)">Build bilingual posts, track hashtags, coordinate the PR strategy</p>
     </div>
   </div>
 
-  <!-- Social mentions -->
-  <div class="card" style="padding:16px 18px;margin-bottom:12px">
-    <p class="sec-label" style="margin-bottom:14px">Social Mentions</p>
-    <div style="display:flex;flex-direction:column;gap:8px" id="social-mentions-feed"></div>
-  </div>
+  <div class="container" style="padding-top:40px;padding-bottom:48px">
+    <div style="display:flex;justify-content:flex-end;margin-bottom:32px">
+      <button onclick="openPostBuilder(null)" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--coral);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit" onmouseover="this.style.opacity='.82'" onmouseout="this.style.opacity='1'">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        Build Post
+      </button>
+    </div>
 
-  <!-- Team Discussion -->
-  <div class="card" style="padding:16px 18px">
-    <p class="sec-label" style="margin-bottom:8px">Team Discussion</p>
-    <p style="font-size:13px;color:var(--t2);line-height:1.6;margin-bottom:12px">Campaign decisions, social feedback, and coordination live in the main issue thread.</p>
-    <a href="https://paperclip.billyrovzar.com/LEMA/issues/LEMA-8461" target="_blank" rel="noopener noreferrer"
-       style="display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border:1px solid rgba(59,130,246,0.25);border-radius:4px;color:var(--blue);font-size:13px;font-weight:600;text-decoration:none;background:rgba(59,130,246,0.06);transition:background 0.12s"
-       onmouseover="this.style.background='rgba(59,130,246,0.12)'" onmouseout="this.style.background='rgba(59,130,246,0.06)'">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      Open LEMA-8461 Discussion ↗
-    </a>
+    <!-- Hashtag cloud -->
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Hashtag Performance</p>
+        <h2 class="sec-h2">Volume indicators</h2>
+        <hr class="sec-rule">
+      </div>
+      <p class="sec-caption">Sized by relative volume. Click to open Twitter/X search.</p>
+    </div>
+    <div class="card" style="padding:24px;margin-bottom:40px">
+      <div id="hashtag-cloud" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;line-height:1.5"></div>
+    </div>
+
+    <!-- Trailers -->
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Promotional Assets</p>
+        <h2 class="sec-h2">Official trailers</h2>
+        <hr class="sec-rule">
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:40px;overflow:hidden">
+      <a href="https://www.youtube.com/watch?v=1lVJ96Oi9UY" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:16px;padding:16px 20px;border-bottom:1px solid var(--bd);text-decoration:none;transition:background .12s" onmouseover="this.style.background='var(--smoke)'" onmouseout="this.style.background='transparent'">
+        <div style="width:36px;height:36px;background:rgba(200,66,42,0.08);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--coral);flex-shrink:0">YT</div>
+        <div><p style="font-size:13px;color:var(--ink1);font-weight:600">Official Trailer (English)</p><p style="font-size:11px;color:var(--ink3)">Apple TV+ · youtube.com ↗</p></div>
+      </a>
+      <a href="https://www.youtube.com/watch?v=6PM90l-KLyc" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:16px;padding:16px 20px;border-bottom:1px solid var(--bd);text-decoration:none;transition:background .12s" onmouseover="this.style.background='var(--smoke)'" onmouseout="this.style.background='transparent'">
+        <div style="width:36px;height:36px;background:rgba(200,66,42,0.08);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--coral);flex-shrink:0">YT</div>
+        <div><p style="font-size:13px;color:var(--ink1);font-weight:600">Tráiler Oficial Español Latino</p><p style="font-size:11px;color:var(--ink3)">Apple TV+ · youtube.com ↗</p></div>
+      </a>
+      <a href="https://www.youtube.com/watch?v=lojkAQw_Bro" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:16px;padding:16px 20px;border-bottom:1px solid var(--bd);text-decoration:none;transition:background .12s" onmouseover="this.style.background='var(--smoke)'" onmouseout="this.style.background='transparent'">
+        <div style="width:36px;height:36px;background:rgba(200,66,42,0.08);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--coral);flex-shrink:0">YT</div>
+        <div><p style="font-size:13px;color:var(--ink1);font-weight:600">Tráiler Oficial — Segunda Temporada</p><p style="font-size:11px;color:var(--ink3)">Apple TV+ en Español ↗</p></div>
+      </a>
+      <a href="https://www.youtube.com/watch?v=vqV6S2Y-ZAw" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:16px;padding:16px 20px;text-decoration:none;transition:background .12s" onmouseover="this.style.background='var(--smoke)'" onmouseout="this.style.background='transparent'">
+        <div style="width:36px;height:36px;background:rgba(200,66,42,0.08);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--coral);flex-shrink:0">YT</div>
+        <div><p style="font-size:13px;color:var(--ink1);font-weight:600">Trailer Italiano — Stagione 2</p><p style="font-size:11px;color:var(--ink3)">Apple TV+ Italia ↗</p></div>
+      </a>
+    </div>
+
+    <!-- Social mentions -->
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Social Listening</p>
+        <h2 class="sec-h2">Notable mentions</h2>
+        <hr class="sec-rule">
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:40px;overflow:hidden">
+      <div id="social-mentions-feed"></div>
+    </div>
+
+    <!-- Team Discussion -->
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Team Coordination</p>
+        <h2 class="sec-h2">Discussion thread</h2>
+        <hr class="sec-rule">
+      </div>
+    </div>
+    <div class="card" style="padding:26px">
+      <p style="font-size:13px;color:var(--ink2);line-height:1.65;margin-bottom:18px">Campaign decisions, social feedback, and coordination live in the main issue thread on Paperclip.</p>
+      <a href="https://paperclip.billyrovzar.com/LEMA/issues/LEMA-8461" target="_blank" rel="noopener noreferrer"
+         style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid var(--coral);color:var(--coral);font-size:11px;font-weight:700;text-decoration:none;letter-spacing:.07em;text-transform:uppercase"
+         onmouseover="this.style.background='rgba(200,66,42,0.05)'" onmouseout="this.style.background='transparent'">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Open LEMA-8461 Discussion ↗
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ─── PAGE: SHOW UNIVERSE ─── -->
-<section id="page-show" class="page" style="padding:32px 28px;max-width:960px;margin:0 auto">
-  <div style="margin-bottom:24px">
-    <h1 style="font-size:1.375rem;font-weight:800;letter-spacing:-.025em;margin-bottom:2px">Show Universe</h1>
-    <p style="font-size:13px;color:var(--t2)">Episodes · Cast · Creative team · Historical context</p>
-  </div>
-
-  <!-- Show info — flat, no gradient card -->
-  <div class="card" style="padding:20px;margin-bottom:16px;border-left:3px solid var(--blue)">
-    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
-      <span class="bdg" style="background:rgba(59,130,246,0.12);color:var(--blue);border:1px solid rgba(59,130,246,0.25)">Apple TV+ Original</span>
-      <span class="bdg" style="background:var(--surf2);color:var(--t2);border:1px solid var(--bd)">Season 2</span>
-      <span class="bdg" style="background:rgba(34,197,94,0.1);color:var(--green);border:1px solid rgba(34,197,94,0.2)">Streaming Now</span>
-    </div>
-    <h2 style="font-size:1.75rem;font-weight:800;letter-spacing:-.03em;color:var(--t1);margin-bottom:2px">Las Azules</h2>
-    <p style="font-size:15px;font-weight:600;color:var(--blue);margin-bottom:10px">Women in Blue</p>
-    <p style="font-size:13px;color:var(--t2);line-height:1.65;max-width:600px">Mexico City, 1971. Lieutenant María and the Azules investigate a student activist's murder — uncovering a conspiracy reaching back to the Halconazo massacre. Created by Fernando Rovzar, produced by <strong style="color:var(--t1)">Lemon Studios</strong>. 8 episodes through September 30, 2026.</p>
-  </div>
-
-  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:8px">
-    <div class="card" style="padding:16px 18px">
-      <p class="sec-label" style="margin-bottom:12px">Episode Schedule — Season 2</p>
-      <div id="episode-list" style="display:flex;flex-direction:column;gap:4px"></div>
-    </div>
-    <div class="card" style="padding:16px 18px">
-      <p class="sec-label" style="margin-bottom:12px">Lead Cast</p>
-      <div id="cast-list" style="display:flex;flex-direction:column;gap:10px"></div>
+<section id="page-show" class="page">
+  <div class="mini-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Show Universe</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1.05;margin-bottom:8px">Las Azules</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.4)">Episodes · Cast · Creative team · Historical context</p>
     </div>
   </div>
 
-  <div class="card" style="padding:16px 18px;margin-bottom:8px">
-    <p class="sec-label" style="margin-bottom:12px">Creative Team</p>
-    <div id="crew-list" style="display:flex;flex-direction:column;gap:8px"></div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
-    <div class="card" style="padding:16px 18px">
-      <p class="sec-label" style="color:var(--blue);margin-bottom:8px">Historical Context — Season 2</p>
-      <p style="font-size:13px;color:var(--t2);line-height:1.65">Set in June 1971, centered on the <a href="https://en.wikipedia.org/wiki/Corpus_Christi_massacre" target="_blank" rel="noopener noreferrer" style="color:var(--t1);font-weight:600;text-decoration:none">Halconazo (Corpus Christi Massacre) ↗</a>, where paramilitary "Halcones" attacked student protesters. Also draws on the <strong style="color:var(--t1)">1968 Tlatelolco massacre</strong>.</p>
+  <div class="container" style="padding-top:40px;padding-bottom:48px">
+    <div class="card" style="padding:28px 32px;margin-bottom:24px;border-left:3px solid var(--coral)">
+      <div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px">
+        <span style="font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:3px 9px;background:rgba(58,96,168,0.08);color:var(--blue);border:1px solid rgba(58,96,168,0.22)">Apple TV+ Original</span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:3px 9px;background:var(--smoke);color:var(--ink2);border:1px solid var(--bd)">Season 2</span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:3px 9px;background:rgba(61,150,136,0.08);color:var(--teal);border:1px solid rgba(61,150,136,0.22)">Streaming Now</span>
+      </div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;color:var(--ink1);margin-bottom:4px">Las Azules</h2>
+      <p style="font-size:15px;font-weight:600;color:var(--coral);margin-bottom:14px">Women in Blue</p>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.72;max-width:640px">Mexico City, 1971. Lieutenant María and the Azules investigate a student activist's murder — uncovering a conspiracy reaching back to the Halconazo massacre. Created by <strong style="color:var(--ink1)">Fernando Rovzar</strong>, produced by <strong style="color:var(--ink1)">Lemon Studios</strong>. 8 episodes through September 30, 2026.</p>
     </div>
-    <div class="card" style="padding:16px 18px">
-      <p class="sec-label" style="color:var(--blue);margin-bottom:8px">Apple TV+ Significance</p>
-      <p style="font-size:13px;color:var(--t2);line-height:1.65"><em>Las Azules</em> was <strong style="color:var(--t1)">Apple TV+'s first original production in Latin America</strong>. Available in Mexico, Spain, Italy, South Africa, Austria, and many more markets.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:24px">
+      <div style="background:var(--white);padding:24px">
+        <p class="sec-label" style="margin-bottom:14px">Episode Schedule — Season 2</p>
+        <div id="episode-list" style="display:flex;flex-direction:column;gap:2px"></div>
+      </div>
+      <div style="background:var(--white);padding:24px">
+        <p class="sec-label" style="margin-bottom:14px">Lead Cast</p>
+        <div id="cast-list" style="display:flex;flex-direction:column;gap:12px"></div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:24px;margin-bottom:24px">
+      <p class="sec-label" style="margin-bottom:14px">Creative Team</p>
+      <div id="crew-list" style="display:flex;flex-direction:column;gap:1px;background:var(--bd)"></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd)">
+      <div style="background:var(--white);padding:24px">
+        <p style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:10px">Historical Context — Season 2</p>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.68">Set in June 1971, centered on the <a href="https://en.wikipedia.org/wiki/Corpus_Christi_massacre" target="_blank" rel="noopener noreferrer" style="color:var(--ink1);font-weight:600;text-decoration:underline;text-underline-offset:3px">Halconazo (Corpus Christi Massacre) ↗</a>, where paramilitary "Halcones" attacked student protesters.</p>
+      </div>
+      <div style="background:var(--smoke);padding:24px">
+        <p style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px">Apple TV+ Significance</p>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.68"><em>Las Azules</em> was <strong style="color:var(--ink1)">Apple TV+'s first original production in Latin America</strong>. Available globally across Mexico, Spain, Italy, South Africa, Austria, and more.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ─── PAGE: DAILY UPDATES ─── -->
-<section id="page-updates" class="page" style="padding:32px 28px;max-width:960px;margin:0 auto">
-  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px">
-    <div>
-      <h1 style="font-size:1.375rem;font-weight:800;letter-spacing:-.025em;margin-bottom:2px">Daily Updates</h1>
-      <p style="font-size:13px;color:var(--t2)">Appended each morning by the Research Specialist routine · Aug 12 – Sep 30, 2026</p>
+<section id="page-updates" class="page">
+  <div class="mini-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Morning Intelligence</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1.05;margin-bottom:8px">Daily updates</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.4)">Appended each morning by the Research Specialist routine · Aug 12 – Sep 30, 2026</p>
     </div>
-    <p style="font-size:12px;color:var(--t3)">Last updated: <span style="color:var(--t2);font-weight:500">Aug 12, 2026 — 7:00 AM CDT</span></p>
   </div>
 
-  <div style="display:flex;flex-direction:column;gap:8px">
-    <div class="card" style="padding:20px;border-left:3px solid var(--green)">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
+  <div class="container" style="padding-top:40px;padding-bottom:48px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:28px">
+      <p style="font-size:12px;color:var(--ink3)">Last updated: <strong style="color:var(--ink2)">Aug 12, 2026 — 7:00 AM CDT</strong></p>
+    </div>
+
+    <div class="card" style="border-left:3px solid var(--teal);padding:28px 32px;margin-bottom:8px">
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px">
         <span class="live-dot"></span>
-        <p style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:.06em;text-transform:uppercase">Aug 12, 2026 — Premiere Day</p>
+        <p style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:.12em;text-transform:uppercase">Aug 12, 2026 — Premiere Day</p>
       </div>
-      <div style="font-size:13px;color:var(--t2);line-height:1.7;display:flex;flex-direction:column;gap:8px">
+      <div style="font-size:13px;color:var(--ink2);line-height:1.75;display:flex;flex-direction:column;gap:10px">
         <p>Season 2 of Las Azules (Women in Blue) launched globally on Apple TV+. Research Specialist compiled comprehensive launch-day media coverage analysis.</p>
-        <ul style="display:flex;flex-direction:column;gap:6px;padding-left:0;list-style:none">
-          <li style="display:flex;gap:8px"><span style="color:var(--blue);flex-shrink:0">—</span><span>27 articles and outlet entries tracked across US, Mexico, Spain, and International markets</span></li>
-          <li style="display:flex;gap:8px"><span style="color:var(--blue);flex-shrink:0">—</span><span>Screen Anarchy published first full critical review: 4/5 stars. "More on-point and certain of its tone, more relevant today, far beyond Mexico's borders."</span></li>
-          <li style="display:flex;gap:8px"><span style="color:var(--blue);flex-shrink:0">—</span><span>Reuters pre-premiere feature syndicated to 7+ US radio station websites</span></li>
-          <li style="display:flex;gap:8px"><span style="color:var(--blue);flex-shrink:0">—</span><span>Heraldo de Mexico and El Informador ran premiere-day features in Spanish</span></li>
-          <li style="display:flex;gap:8px"><span style="color:var(--blue);flex-shrink:0">—</span><span>MacObserver, 9to5Mac, MacDailyNews: Apple tech press fully covered the launch</span></li>
-          <li style="display:flex;gap:8px"><span style="color:var(--blue);flex-shrink:0">—</span><span>GIFF 2026 advance screening coverage published by AM.com.mx and Excelsior</span></li>
-        </ul>
-        <p style="font-size:11px;color:var(--t3);border-top:1px solid var(--bd);padding-top:10px;margin-top:4px">Key quote: Fernando Rovzar — "If in the first season the enemy was a serial killer, in this season it's an entire system."</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;gap:11px"><span style="color:var(--coral);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>27 articles and outlet entries tracked across US, Mexico, Spain, and International markets</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--coral);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Screen Anarchy published first full critical review: 4/5 stars. "More on-point and certain of its tone, more relevant today, far beyond Mexico's borders."</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--coral);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Reuters pre-premiere feature syndicated to 7+ US radio station websites</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--coral);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Heraldo de Mexico and El Informador ran premiere-day features in Spanish</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--coral);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>MacObserver, 9to5Mac, MacDailyNews: Apple tech press fully covered the launch</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--coral);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>GIFF 2026 advance screening coverage published by AM.com.mx and Excelsior</span></div>
+        </div>
+        <p style="font-size:11px;color:var(--ink3);border-top:1px solid var(--bd);padding-top:12px;margin-top:4px;font-style:italic">Key quote: Fernando Rovzar — "If in the first season the enemy was a serial killer, in this season it's an entire system."</p>
       </div>
     </div>
-    <div class="card" style="padding:16px 18px;text-align:center;color:var(--t3);font-size:13px">
+    <div class="card" style="padding:16px 24px;text-align:center;color:var(--ink3);font-size:13px">
       Future updates appear here each morning at 7am Mexico City time (Aug 13 onwards).
     </div>
   </div>
@@ -517,79 +931,73 @@
 <!-- ═══ POST BUILDER SLIDE-OVER ═══ -->
 <div id="post-overlay" onclick="closePostBuilder()"></div>
 <div id="post-panel">
-  <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--bd);flex-shrink:0">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--bd);flex-shrink:0">
     <div>
-      <h2 style="font-size:14px;font-weight:700;color:var(--t1)">Post Builder</h2>
-      <p style="font-size:11px;color:var(--t3);margin-top:1px">Bilingual · Template-based · No API needed</p>
+      <h2 style="font-size:13px;font-weight:700;color:var(--ink1)">Post Builder</h2>
+      <p style="font-size:11px;color:var(--ink3);margin-top:1px">Bilingual · Template-based</p>
     </div>
-    <button onclick="closePostBuilder()" style="width:30px;height:30px;border-radius:4px;background:none;border:1px solid var(--bd);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--t2);transition:background 0.12s" onmouseover="this.style.background='var(--surf2)'" onmouseout="this.style.background='none'">
+    <button onclick="closePostBuilder()" style="width:30px;height:30px;background:none;border:1px solid var(--bd);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink2)" onmouseover="this.style.background='var(--smoke)'" onmouseout="this.style.background='none'">
       <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
 
-  <div style="flex:1;overflow-y:auto;padding:16px 18px;display:flex;flex-direction:column;gap:14px">
-    <!-- Article source -->
+  <div style="flex:1;overflow-y:auto;padding:18px 20px;display:flex;flex-direction:column;gap:14px">
     <div>
-      <label style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--t3);display:block;margin-bottom:6px">Article / Source</label>
-      <input id="pb-headline" type="text" placeholder="Headline or topic…" style="width:100%;padding:8px 10px;background:var(--surf2);border:1px solid var(--bd);border-radius:4px;font-size:13px;color:var(--t1);margin-bottom:5px" />
+      <label style="font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:6px">Article / Source</label>
+      <input id="pb-headline" type="text" placeholder="Headline or topic…" class="field" style="width:100%;margin-bottom:5px" />
       <div class="url-row" style="margin-bottom:5px">
-        <input id="pb-url" type="text" placeholder="https://…" style="padding:8px 10px;background:var(--surf2);border:1px solid var(--bd);border-radius:4px;font-size:13px;color:var(--t1)" oninput="syncPbUrlLink()" />
+        <input id="pb-url" type="text" placeholder="https://…" class="field" oninput="syncPbUrlLink()" />
         <button onclick="copyPbUrl()" class="url-btn" title="Copy URL">Copy</button>
         <a id="pb-url-link" href="#" target="_blank" rel="noopener noreferrer" class="url-btn" title="Open URL">↗</a>
       </div>
-      <input id="pb-outlet" type="text" placeholder="Outlet / source name…" style="width:100%;padding:8px 10px;background:var(--surf2);border:1px solid var(--bd);border-radius:4px;font-size:13px;color:var(--t1);margin-bottom:5px" />
-      <textarea id="pb-excerpt" rows="2" placeholder="Excerpt / key quote (optional)…" style="width:100%;padding:8px 10px;background:var(--surf2);border:1px solid var(--bd);border-radius:4px;font-size:13px;color:var(--t1)"></textarea>
+      <input id="pb-outlet" type="text" placeholder="Outlet / source name…" class="field" style="width:100%;margin-bottom:5px" />
+      <textarea id="pb-excerpt" rows="2" placeholder="Excerpt / key quote (optional)…" class="field" style="width:100%;resize:vertical"></textarea>
     </div>
 
-    <!-- Platform -->
     <div>
-      <label style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--t3);display:block;margin-bottom:6px">Platform</label>
+      <label style="font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:6px">Platform</label>
       <div style="display:flex;flex-wrap:wrap;gap:5px" id="platform-tabs">
-        <button onclick="selectPlatform('instagram')" class="platform-tab" data-plat="instagram" style="padding:6px 11px;border-radius:4px;font-size:12px;font-weight:600;border:1px solid var(--bd);color:var(--t2);background:none;cursor:pointer">Instagram</button>
-        <button onclick="selectPlatform('twitter')"   class="platform-tab" data-plat="twitter"   style="padding:6px 11px;border-radius:4px;font-size:12px;font-weight:600;border:1px solid var(--bd);color:var(--t2);background:none;cursor:pointer">Twitter/X</button>
-        <button onclick="selectPlatform('linkedin')"  class="platform-tab" data-plat="linkedin"  style="padding:6px 11px;border-radius:4px;font-size:12px;font-weight:600;border:1px solid var(--bd);color:var(--t2);background:none;cursor:pointer">LinkedIn</button>
-        <button onclick="selectPlatform('facebook')"  class="platform-tab" data-plat="facebook"  style="padding:6px 11px;border-radius:4px;font-size:12px;font-weight:600;border:1px solid var(--bd);color:var(--t2);background:none;cursor:pointer">Facebook</button>
-        <button onclick="selectPlatform('tiktok')"    class="platform-tab" data-plat="tiktok"    style="padding:6px 11px;border-radius:4px;font-size:12px;font-weight:600;border:1px solid var(--bd);color:var(--t2);background:none;cursor:pointer">TikTok</button>
+        <button onclick="selectPlatform('instagram')" class="platform-tab" data-plat="instagram" style="padding:6px 11px;font-size:11px;font-weight:600;border:1px solid var(--bd);color:var(--ink2);background:none;cursor:pointer;font-family:inherit">Instagram</button>
+        <button onclick="selectPlatform('twitter')"   class="platform-tab" data-plat="twitter"   style="padding:6px 11px;font-size:11px;font-weight:600;border:1px solid var(--bd);color:var(--ink2);background:none;cursor:pointer;font-family:inherit">Twitter/X</button>
+        <button onclick="selectPlatform('linkedin')"  class="platform-tab" data-plat="linkedin"  style="padding:6px 11px;font-size:11px;font-weight:600;border:1px solid var(--bd);color:var(--ink2);background:none;cursor:pointer;font-family:inherit">LinkedIn</button>
+        <button onclick="selectPlatform('facebook')"  class="platform-tab" data-plat="facebook"  style="padding:6px 11px;font-size:11px;font-weight:600;border:1px solid var(--bd);color:var(--ink2);background:none;cursor:pointer;font-family:inherit">Facebook</button>
+        <button onclick="selectPlatform('tiktok')"    class="platform-tab" data-plat="tiktok"    style="padding:6px 11px;font-size:11px;font-weight:600;border:1px solid var(--bd);color:var(--ink2);background:none;cursor:pointer;font-family:inherit">TikTok</button>
       </div>
-      <p id="pb-limit-note" style="font-size:11px;color:var(--t3);margin-top:6px"></p>
+      <p id="pb-limit-note" style="font-size:11px;color:var(--ink3);margin-top:6px"></p>
     </div>
 
-    <!-- Generate -->
-    <button onclick="generatePosts()" style="width:100%;padding:11px;background:var(--blue);color:#fff;font-size:13px;font-weight:700;border-radius:4px;border:none;cursor:pointer;min-height:40px;transition:opacity 0.12s" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">Generate Posts</button>
+    <button onclick="generatePosts()" style="width:100%;padding:11px;background:var(--coral);color:#fff;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Generate Posts</button>
 
-    <!-- Output -->
-    <div id="pb-columns" style="display:flex;gap:10px">
+    <div style="display:flex;gap:10px" id="pb-columns">
       <div style="flex:1;min-width:0">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
-          <label style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--t3)">🇲🇽 Español</label>
+          <label style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3)">🇲🇽 Español</label>
           <span id="cc-es" style="font-size:11px;font-family:monospace" class="cc-ok"></span>
         </div>
-        <textarea id="pb-out-es" rows="6" style="width:100%;padding:8px 10px;background:var(--surf2);border:1px solid var(--bd);border-radius:4px;font-size:13px;color:var(--t1);margin-bottom:5px" oninput="updateCC('es')" placeholder="Post en español…"></textarea>
-        <button onclick="copyPost('es')" style="width:100%;padding:8px;background:var(--surf2);border:1px solid var(--bd);color:var(--t2);font-size:12px;font-weight:600;border-radius:4px;cursor:pointer;min-height:36px;transition:background 0.12s" onmouseover="this.style.background='var(--bd)'" onmouseout="this.style.background='var(--surf2)'">Copy ES</button>
+        <textarea id="pb-out-es" rows="6" class="field" style="width:100%;margin-bottom:5px;resize:vertical" oninput="updateCC('es')" placeholder="Post en español…"></textarea>
+        <button onclick="copyPost('es')" style="width:100%;padding:8px;background:var(--smoke);border:1px solid var(--bd);color:var(--ink2);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit" onmouseover="this.style.background='var(--bd)'" onmouseout="this.style.background='var(--smoke)'">Copy ES</button>
       </div>
       <div style="flex:1;min-width:0">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
-          <label style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--t3)">🇺🇸 English</label>
+          <label style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3)">🇺🇸 English</label>
           <span id="cc-en" style="font-size:11px;font-family:monospace" class="cc-ok"></span>
         </div>
-        <textarea id="pb-out-en" rows="6" style="width:100%;padding:8px 10px;background:var(--surf2);border:1px solid var(--bd);border-radius:4px;font-size:13px;color:var(--t1);margin-bottom:5px" oninput="updateCC('en')" placeholder="Post in English…"></textarea>
-        <button onclick="copyPost('en')" style="width:100%;padding:8px;background:var(--surf2);border:1px solid var(--bd);color:var(--t2);font-size:12px;font-weight:600;border-radius:4px;cursor:pointer;min-height:36px;transition:background 0.12s" onmouseover="this.style.background='var(--bd)'" onmouseout="this.style.background='var(--surf2)'">Copy EN</button>
+        <textarea id="pb-out-en" rows="6" class="field" style="width:100%;margin-bottom:5px;resize:vertical" oninput="updateCC('en')" placeholder="Post in English…"></textarea>
+        <button onclick="copyPost('en')" style="width:100%;padding:8px;background:var(--smoke);border:1px solid var(--bd);color:var(--ink2);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit" onmouseover="this.style.background='var(--bd)'" onmouseout="this.style.background='var(--smoke)'">Copy EN</button>
       </div>
     </div>
 
-    <!-- Hashtag bank -->
     <div>
-      <label style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--t3);display:block;margin-bottom:6px">Add Hashtag to Post</label>
+      <label style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:6px">Add Hashtag to Post</label>
       <div style="display:flex;flex-wrap:wrap;gap:4px">
-        <span onclick="addHashtagToPost('#MujeresDeAzul')"  class="hashtag-chip" style="padding:3px 7px;background:rgba(59,130,246,0.08);color:var(--blue);border-radius:2px;font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(59,130,246,0.2)">#MujeresDeAzul</span>
-        <span onclick="addHashtagToPost('#LasAzules')"      class="hashtag-chip" style="padding:3px 7px;background:rgba(59,130,246,0.08);color:var(--blue);border-radius:2px;font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(59,130,246,0.2)">#LasAzules</span>
-        <span onclick="addHashtagToPost('#LasAzulesS2')"    class="hashtag-chip" style="padding:3px 7px;background:rgba(59,130,246,0.08);color:var(--blue);border-radius:2px;font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(59,130,246,0.2)">#LasAzulesS2</span>
-        <span onclick="addHashtagToPost('#WomenInBlue')"    class="hashtag-chip" style="padding:3px 7px;background:rgba(59,130,246,0.08);color:var(--blue);border-radius:2px;font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(59,130,246,0.2)">#WomenInBlue</span>
-        <span onclick="addHashtagToPost('#AppleTV')"        class="hashtag-chip" style="padding:3px 7px;background:rgba(59,130,246,0.08);color:var(--blue);border-radius:2px;font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(59,130,246,0.2)">#AppleTV</span>
-        <span onclick="addHashtagToPost('#BarbaraMori')"    class="hashtag-chip" style="padding:3px 7px;background:rgba(59,130,246,0.08);color:var(--blue);border-radius:2px;font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(59,130,246,0.2)">#BarbaraMori</span>
-        <span onclick="addHashtagToPost('#FernandoRovzar')" class="hashtag-chip" style="padding:3px 7px;background:rgba(59,130,246,0.08);color:var(--blue);border-radius:2px;font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(59,130,246,0.2)">#FernandoRovzar</span>
-        <span onclick="addHashtagToPost('#DraMex')"         class="hashtag-chip" style="padding:3px 7px;background:rgba(59,130,246,0.08);color:var(--blue);border-radius:2px;font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(59,130,246,0.2)">#DraMex</span>
-        <span onclick="addHashtagToPost('#Tlatelolco')"     class="hashtag-chip" style="padding:3px 7px;background:rgba(59,130,246,0.08);color:var(--blue);border-radius:2px;font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(59,130,246,0.2)">#Tlatelolco</span>
+        <span onclick="addHashtagToPost('#MujeresDeAzul')"  class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#MujeresDeAzul</span>
+        <span onclick="addHashtagToPost('#LasAzules')"      class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#LasAzules</span>
+        <span onclick="addHashtagToPost('#LasAzulesS2')"    class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#LasAzulesS2</span>
+        <span onclick="addHashtagToPost('#WomenInBlue')"    class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#WomenInBlue</span>
+        <span onclick="addHashtagToPost('#AppleTV')"        class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#AppleTV</span>
+        <span onclick="addHashtagToPost('#BarbaraMori')"    class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#BarbaraMori</span>
+        <span onclick="addHashtagToPost('#FernandoRovzar')" class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#FernandoRovzar</span>
+        <span onclick="addHashtagToPost('#DraMex')"         class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#DraMex</span>
       </div>
     </div>
   </div>
@@ -597,67 +1005,67 @@
 
 <!-- ═══ JAVASCRIPT ═══ -->
 <script>
-// DATA — unchanged
+/* ─── DATA ─── */
 const MEDIA = [
-  { outlet:'Screen Anarchy', headline:'Women in Blue (Las Azules) S2 Review: Two Steps Forward, One Step Back', url:'https://screenanarchy.com/2026/08/women-in-blue-las-azules-s2-review-two-steps-forward-one-step-back.html', date:'Aug 12, 2026', ts:20260812, lang:'EN', market:'International', type:'Review', excerpt:'4/5 stars — "Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico\'s borders, and remains a likable, lively, and thoughtful show."' },
-  { outlet:'Deadline', headline:'Women in Blue Season 2 Premiere Date + First Look', url:'https://deadline.com/2026/03/women-in-blue-las-azules-season-2-premiere-date-apple-tv-1236766505/', date:'Mar 26, 2026', ts:20260326, lang:'EN', market:'US', type:'Trade', excerpt:'Season 2 of Apple TV\'s Spanish-language crime drama premieres August 12. First-look photos released.' },
-  { outlet:'Forbes', headline:'Women in Blue Las Azules Season 2 Gets August Premiere on Apple TV+', url:'https://www.forbes.com/sites/veronicavillafane/2026/03/26/women-in-blue-las-azules-season-2-gets-august-premiere-on-apple-tv/', date:'Mar 26, 2026', ts:20260326, lang:'EN', market:'US', type:'Trade', excerpt:'Veronica Villafane reports on S2 premiere date, cast, and full production details for Lemon Studios.' },
-  { outlet:'Reuters', headline:'Apple TV series Las Azules S2 blends fact and fiction for tale of corruption and growth', url:'https://macdailynews.com/2026/08/11/apple-tv-series-las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth-reuters/', date:'Aug 10–11, 2026', ts:20260811, lang:'EN', market:'International', type:'Trade', excerpt:'Pre-premiere wire feature on the Halconazo historical basis, production vision, and Fernando Rovzar\'s creative process. Syndicated to 7+ US radio station websites.' },
-  { outlet:'9to5Mac', headline:'Women in Blue\'s second season premieres on Apple TV+', url:'https://9to5mac.com/2026/08/11/women-in-blues-second-season-premieres-on-apple-tv/', date:'Aug 11, 2026', ts:20260811, lang:'EN', market:'US', type:'Tech', excerpt:'Premiere day launch coverage and trailer analysis for Apple tech press audience.' },
+  { outlet:'Screen Anarchy', headline:'Women in Blue (Las Azules) S2 Review: Two Steps Forward, One Step Back', url:'https://screenanarchy.com/2026/08/women-in-blue-las-azules-s2-review.html', date:'Aug 12, 2026', ts:20260812, lang:'EN', market:'International', type:'Review', excerpt:'4/5 stars — "Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico\'s borders."' },
+  { outlet:'Deadline', headline:'Women in Blue Season 2 Premiere Date + First Look', url:'https://deadline.com/2026/03/women-in-blue-las-azules-season-2-premiere-date-apple-tv-1236766505/', date:'Mar 26, 2026', ts:20260326, lang:'EN', market:'US', type:'Trade', excerpt:'Season 2 of Apple TV\'s Spanish-language crime drama premieres August 12.' },
+  { outlet:'Forbes', headline:'Women in Blue Las Azules Season 2 Gets August Premiere on Apple TV+', url:'https://www.forbes.com/sites/veronicavillafane/2026/03/26/women-in-blue-las-azules-season-2-gets-august-premiere-on-apple-tv/', date:'Mar 26, 2026', ts:20260326, lang:'EN', market:'US', type:'Trade', excerpt:'Veronica Villafane reports on S2 premiere date, cast, and full production details.' },
+  { outlet:'Reuters', headline:'Apple TV series Las Azules S2 blends fact and fiction for tale of corruption', url:'https://macdailynews.com/2026/08/11/apple-tv-series-las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth-reuters/', date:'Aug 10–11, 2026', ts:20260811, lang:'EN', market:'International', type:'Trade', excerpt:'Pre-premiere wire feature on the Halconazo historical basis. Syndicated to 7+ US radio station websites.' },
+  { outlet:'9to5Mac', headline:'Women in Blue\'s second season premieres on Apple TV+', url:'https://9to5mac.com/2026/08/11/women-in-blues-second-season-premieres-on-apple-tv/', date:'Aug 11, 2026', ts:20260811, lang:'EN', market:'US', type:'Tech', excerpt:'Premiere day launch coverage and trailer analysis.' },
   { outlet:'MacObserver', headline:'Women in Blue Season 2 Is Now Streaming on Apple TV+', url:'https://www.macobserver.com/appletv/women-in-blue-season-2-is-now-streaming-on-apple-tv/', date:'Aug 12, 2026', ts:20260812, lang:'EN', market:'US', type:'Tech', excerpt:'Premiere day announcement for Apple ecosystem press.' },
-  { outlet:'MacTech', headline:'Las Azules / Women in Blue Season 2 — Trailer Coverage', url:'https://mactech.com', date:'Jul 22, 2026', ts:20260722, lang:'EN', market:'US', type:'Tech', excerpt:'Apple TV+ trailer announcement covered for MacTech readership.' },
-  { outlet:'MacDailyNews', headline:'Reuters Feature Syndication — Apple TV Las Azules S2', url:'https://macdailynews.com/2026/08/11/apple-tv-series-las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth-reuters/', date:'Aug 11, 2026', ts:20260811, lang:'EN', market:'US', type:'Tech', excerpt:'MacDailyNews carries Reuters pre-premiere feature to Apple-focused audience.' },
-  { outlet:'El Informador (Mexico)', headline:'Las Azules persiguen las sombras del poder', url:'https://www.informador.mx/entretenimiento/series-las-azules-persiguen-las-sombras-del-poder-20260811-0001.html', date:'Aug 11, 2026', ts:20260811, lang:'ES', market:'Mexico', type:'Entertainment', excerpt:'Feature interview with cast and creators on the political themes of Season 2 and its cultural resonance in Mexico.' },
+  { outlet:'MacTech', headline:'Las Azules / Women in Blue Season 2 — Trailer Coverage', url:'https://mactech.com', date:'Jul 22, 2026', ts:20260722, lang:'EN', market:'US', type:'Tech', excerpt:'Apple TV+ trailer announcement for MacTech readership.' },
+  { outlet:'MacDailyNews', headline:'Reuters Feature Syndication — Apple TV Las Azules S2', url:'https://macdailynews.com/2026/08/11/apple-tv-series-las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth-reuters/', date:'Aug 11, 2026', ts:20260811, lang:'EN', market:'US', type:'Tech', excerpt:'MacDailyNews carries Reuters pre-premiere feature.' },
+  { outlet:'El Informador (Mexico)', headline:'Las Azules persiguen las sombras del poder', url:'https://www.informador.mx/entretenimiento/series-las-azules-persiguen-las-sombras-del-poder-20260811-0001.html', date:'Aug 11, 2026', ts:20260811, lang:'ES', market:'Mexico', type:'Entertainment', excerpt:'Feature interview with cast and creators on the political themes of Season 2.' },
   { outlet:'Heraldo de Mexico', headline:'Fernando Rovzar desafía el sistema con Las Azules', url:'https://heraldodemexico.com.mx/espectaculos/2026/8/12/fernando-rovzar-desafia-el-sistema-con-la-serie-las-azules-867326.html', date:'Aug 12, 2026', ts:20260812, lang:'ES', market:'Mexico', type:'Entertainment', excerpt:'Premiere day profile on showrunner Fernando Rovzar and his vision for Season 2.' },
-  { outlet:'AM.com.mx', headline:'Las Azules vuelve con una temporada más intensa y vigente', url:'https://www.am.com.mx/espectaculos/2026/07/30/las-azules-vuelve-con-una-temporada-mas-intensa-y-vigente-fernando-rovzar-barbara-mori-y-horacio-garcia-rojas-la-presentan-en-giff-1825613.html', date:'Jul 30, 2026', ts:20260730, lang:'ES', market:'Mexico', type:'Regional', excerpt:'Full GIFF 2026 panel coverage from San Miguel de Allende — full cast and creator Q&A on Season 2 advance episodes.' },
-  { outlet:'Excelsior', headline:'Las Azules muestran dos adelantos de temporada 2 en GIFF 2026', url:'https://www.excelsior.com.mx/espectaculos/azules-apple-tv-muestran-dos-adelantos-temporada-2-giff-2026', date:'Jul 30, 2026', ts:20260730, lang:'ES', market:'Mexico', type:'Regional', excerpt:'GIFF 2026 coverage: two advance episodes of Season 2 shown in festival screening.' },
+  { outlet:'AM.com.mx', headline:'Las Azules vuelve con una temporada más intensa y vigente', url:'https://www.am.com.mx/espectaculos/2026/07/30/las-azules-vuelve-con-una-temporada-mas-intensa-y-vigente-1825613.html', date:'Jul 30, 2026', ts:20260730, lang:'ES', market:'Mexico', type:'Regional', excerpt:'Full GIFF 2026 panel coverage from San Miguel de Allende.' },
+  { outlet:'Excelsior', headline:'Las Azules muestran dos adelantos de temporada 2 en GIFF 2026', url:'https://www.excelsior.com.mx/espectaculos/azules-apple-tv-muestran-dos-adelantos-temporada-2-giff-2026', date:'Jul 30, 2026', ts:20260730, lang:'ES', market:'Mexico', type:'Regional', excerpt:'GIFF 2026 coverage: two advance episodes of Season 2 shown at festival.' },
   { outlet:'Neeo (Spain)', headline:'Las Azules Season 2 — Premiere Preview', url:'https://neeo.es', date:'Aug 10, 2026', ts:20260810, lang:'ES', market:'Spain', type:'Entertainment', excerpt:'Spanish media preview ahead of global Apple TV+ S2 premiere.' },
-  { outlet:'Que.es (Spain)', headline:'Apple TV+ anuncia la segunda temporada de Las Azules', url:'https://que.es', date:'Jul 23, 2026', ts:20260723, lang:'ES', market:'Spain', type:'Entertainment', excerpt:'Spanish entertainment press coverage of trailer release and S2 premiere date announcement.' },
-  { outlet:'The Week India', headline:'Women in Blue Season 2 Premiere Preview', url:'https://www.theweek.in/news/entertainment/2026/08/10/women-in-blue-season-2-premiere.html', date:'Aug 10, 2026', ts:20260810, lang:'EN', market:'International', type:'Entertainment', excerpt:'International premiere preview covering cast, historical setting, and Apple TV+ global distribution.' },
+  { outlet:'Que.es (Spain)', headline:'Apple TV+ anuncia la segunda temporada de Las Azules', url:'https://que.es', date:'Jul 23, 2026', ts:20260723, lang:'ES', market:'Spain', type:'Entertainment', excerpt:'Spanish entertainment press coverage of trailer release and S2 premiere date.' },
+  { outlet:'The Week India', headline:'Women in Blue Season 2 Premiere Preview', url:'https://www.theweek.in/news/entertainment/2026/08/10/women-in-blue-season-2-premiere.html', date:'Aug 10, 2026', ts:20260810, lang:'EN', market:'International', type:'Entertainment', excerpt:'International premiere preview covering cast, historical setting, and global distribution.' },
   { outlet:'TVMEG.COM', headline:'Interview: Barbara Mori, Ximena Sarinana, Fernando Rovzar on Season 2', url:'https://tvmeg.com/index.php/2026/08/08/rovzar/', date:'Aug 8, 2026', ts:20260808, lang:'EN', market:'US', type:'Entertainment', excerpt:'Multi-subject video interview ahead of the August 12 premiere.' },
   { outlet:'HeyUGuys (UK)', headline:'Women in Blue — Trailer & Cast Interviews', url:'https://www.heyuguys.com/women-in-blue-las-azules-interviews/', date:'Jul 2026', ts:20260701, lang:'EN', market:'International', type:'Entertainment', excerpt:'UK entertainment press trailer coverage and cast interview.' },
   { outlet:'Broadway World', headline:'WOMEN IN BLUE Season 2 Trailer — Apple TV+', url:'https://www.broadwayworld.com/bwwtv/article/WOMEN-IN-BLUE-LAS-AZULES-Season-2-Trailer-to-Drop-on-Apple-TV-20260721', date:'Jul 21, 2026', ts:20260721, lang:'EN', market:'US', type:'Entertainment', excerpt:'Multiple articles covering the Season 2 official trailer release.' },
-  { outlet:'uInterview', headline:'Video Exclusive: Barbara Mori & Ximena Sarinana on Playing Mexico\'s First Female Cops', url:'https://uinterview.com/videos/video-exclusive-barbara-mori-ximena-sarinana-on-playing-mexicos-first-female-cops-in-women-in-blue/', date:'Aug 2026', ts:20260801, lang:'EN', market:'US', type:'Entertainment', excerpt:'Video exclusive interview with the two leads on their characters and the show\'s feminist themes.' },
+  { outlet:'uInterview', headline:'Video Exclusive: Barbara Mori & Ximena Sarinana on Playing Mexico\'s First Female Cops', url:'https://uinterview.com/videos/video-exclusive-barbara-mori-ximena-sarinana-on-playing-mexicos-first-female-cops-in-women-in-blue/', date:'Aug 2026', ts:20260801, lang:'EN', market:'US', type:'Entertainment', excerpt:'Video exclusive interview with the two leads on feminist themes.' },
   { outlet:'UPI', headline:'Las Azules Season 2 Trailer Coverage', url:'https://www.upi.com/Entertainment_News/TV/2026/07/21/las-azules-season-2-trailer/8811784644272/', date:'Jul 21, 2026', ts:20260721, lang:'EN', market:'US', type:'Trade', excerpt:'Wire service trailer coverage distributed to UPI subscribers.' },
   { outlet:'FictionHorizon', headline:'Las Azules Season 2 Episode 2 Release Date and Time on Apple TV+', url:'https://fictionhorizon.com/las-azules-season-2-episode-2-release-date-and-time-on-apple-tv/', date:'Aug 2026', ts:20260801, lang:'EN', market:'International', type:'Entertainment', excerpt:'Episode 2 schedule guide for international audiences.' },
   { outlet:'ComingSoon.net', headline:'Season 2 of Apple TV\'s 100% RT Show Gets Release Date', url:'https://comingsoon.net', date:'2026', ts:20260101, lang:'EN', market:'US', type:'Entertainment', excerpt:'Season 2 premiere date announcement, citing the 100% Rotten Tomatoes score from Season 1.' },
   { outlet:'Senal News (ES)', headline:'Apple TV+ estrena en agosto la segunda temporada de Las Azules', url:'https://senalnews.com/es/digital/apple-tv-estrenara-en-agosto-la-segunda-temporada-de-las-azules-su-drama-criminal-en-espanol-', date:'2026', ts:20260101, lang:'ES', market:'Spain', type:'Trade', excerpt:'Spanish-language trade press premiere announcement.' },
   { outlet:'Nerds That Geek', headline:'Interview: Fernando Rovzar on Las Azules Season 2', url:'https://nerdsthatgeek.com', date:'2026', ts:20260101, lang:'EN', market:'US', type:'Entertainment', excerpt:'Creator/director interview ahead of Season 2.' },
-  { outlet:'US Radio Syndication (×7)', headline:'Reuters Feature — Syndicated to 7 US Radio Station Websites', url:'https://macdailynews.com/2026/08/11/apple-tv-series-las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth-reuters/', date:'Aug 11, 2026', ts:20260811, lang:'EN', market:'US', type:'Regional', excerpt:'Reuters pre-premiere feature syndicated to: 927thevan.com, 1065thebuzz.com, wiky.com, 933thedrive.com, froggyweb.com, wifc.com, y94.com — all confirmed.' },
+  { outlet:'US Radio Syndication (×7)', headline:'Reuters Feature — Syndicated to 7 US Radio Station Websites', url:'https://macdailynews.com/2026/08/11/apple-tv-series-las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth-reuters/', date:'Aug 11, 2026', ts:20260811, lang:'EN', market:'US', type:'Regional', excerpt:'Syndicated to: 927thevan.com, 1065thebuzz.com, wiky.com, 933thedrive.com, froggyweb.com, wifc.com, y94.com' },
   { outlet:'C21Media', headline:'Apple TV\'s Mexican Original Series Las Azules Given Second Season', url:'https://www.c21media.net/news/apple-tvs-mexican-original-series-las-azules-given-second-season/', date:'2025', ts:20250101, lang:'EN', market:'International', type:'Trade', excerpt:'International content industry renewal coverage.' },
-  { outlet:'ChicMagazine.com.mx', headline:'Las Azules temporada 2 — cuántos capítulos y cuándo salen', url:'https://www.chicmagazine.com.mx/personajes/las-azules-temporada-2-cuandos-capitulos-tendra-y-cuando-salen', date:'2026', ts:20260101, lang:'ES', market:'Mexico', type:'Regional', excerpt:'Mexican lifestyle/entertainment magazine episode count and release schedule guide.' },
+  { outlet:'ChicMagazine.com.mx', headline:'Las Azules temporada 2 — cuántos capítulos y cuándo salen', url:'https://www.chicmagazine.com.mx/personajes/las-azules-temporada-2-cuandos-capitulos-tendra-y-cuando-salen', date:'2026', ts:20260101, lang:'ES', market:'Mexico', type:'Regional', excerpt:'Mexican lifestyle magazine episode count and release schedule guide.' },
 ];
 
 const EPISODES = [
-  { ep:1, title:'Capítulo 1',          date:'August 12, 2026',     iso:'2026-08-12' },
-  { ep:2, title:'Capítulo 2',          date:'August 19, 2026',     iso:'2026-08-19' },
-  { ep:3, title:'Capítulo 3',          date:'August 26, 2026',     iso:'2026-08-26' },
-  { ep:4, title:'Capítulo 4',          date:'September 2, 2026',   iso:'2026-09-02' },
-  { ep:5, title:'Capítulo 5',          date:'September 9, 2026',   iso:'2026-09-09' },
-  { ep:6, title:'Capítulo 6',          date:'September 16, 2026',  iso:'2026-09-16' },
-  { ep:7, title:'Capítulo 7',          date:'September 23, 2026',  iso:'2026-09-23' },
-  { ep:8, title:'Capítulo 8 — Finale', date:'September 30, 2026',  iso:'2026-09-30' },
+  { ep:1, title:'Capítulo 1',          date:'August 12, 2026',    iso:'2026-08-12' },
+  { ep:2, title:'Capítulo 2',          date:'August 19, 2026',    iso:'2026-08-19' },
+  { ep:3, title:'Capítulo 3',          date:'August 26, 2026',    iso:'2026-08-26' },
+  { ep:4, title:'Capítulo 4',          date:'September 2, 2026',  iso:'2026-09-02' },
+  { ep:5, title:'Capítulo 5',          date:'September 9, 2026',  iso:'2026-09-09' },
+  { ep:6, title:'Capítulo 6',          date:'September 16, 2026', iso:'2026-09-16' },
+  { ep:7, title:'Capítulo 7',          date:'September 23, 2026', iso:'2026-09-23' },
+  { ep:8, title:'Capítulo 8 — Finale', date:'September 30, 2026', iso:'2026-09-30' },
 ];
 
 const CAST = [
-  { name:'Barbara Mori',       role:'Lt. María',  note:'Lead · co-wrote scripts with writers room',                                          link:'https://www.instagram.com/barbaramori/',    initials:'BM' },
-  { name:'Ximena Sarinana',    role:'Ángeles',    note:'Navigates institutional lack of empathy',                                            link:'https://www.instagram.com/ximena_s/',       initials:'XS' },
-  { name:'Natalia Téllez',     role:'Valentina',  note:'',                                                                                   link:'https://www.instagram.com/nataliatellezweb/', initials:'NT' },
-  { name:'Amorita Rasgado',    role:'Gabina',     note:'Faces machismo at home and within the force',                                        link:'https://www.instagram.com/amoritarasgado/', initials:'AR' },
-  { name:'Horacio García Rojas', role:'',         note:'Also: Bruno Bichir, Leonardo Sbaraglia, Christian Tappan, Miguel Rodarte',          link:'https://www.imdb.com/name/nm1980891/',      initials:'+' },
+  { name:'Barbara Mori',         role:'Lt. María',    note:'Lead · co-wrote scripts',  link:'https://www.instagram.com/barbaramori/',     initials:'BM' },
+  { name:'Ximena Sarinana',      role:'Ángeles',      note:'',                          link:'https://www.instagram.com/ximena_s/',        initials:'XS' },
+  { name:'Natalia Téllez',       role:'Valentina',    note:'',                          link:'https://www.instagram.com/nataliatellezweb/', initials:'NT' },
+  { name:'Amorita Rasgado',      role:'Gabina',       note:'',                          link:'https://www.instagram.com/amoritarasgado/',  initials:'AR' },
+  { name:'Horacio García Rojas', role:'Det. Herrera', note:'+ Bruno Bichir, Leonardo Sbaraglia', link:'https://www.imdb.com/name/nm1980891/', initials:'+' },
 ];
 
 const CREW = [
-  { role:'Creator / Showrunner', name:'Fernando Rovzar',  note:'International Emmy',         link:'https://www.imdb.com/name/nm1376403/' },
-  { role:'Co-creator',          name:'Pablo Aramendi',   note:'',                            link:'' },
-  { role:'Executive Producer',  name:'Billy Rovzar',     note:'Lemon Studios · Intl Emmy',   link:'https://www.imdb.com/name/nm4344131/' },
-  { role:'Executive Producer',  name:'Wendy Riss',       note:'Emmy nominee · Yellowstone',  link:'https://www.imdb.com/name/nm0728614/' },
-  { role:'Executive Producer',  name:'Alejandro Lozano', note:'Control Z',                   link:'https://www.imdb.com/name/nm2613183/' },
-  { role:'Executive Producer',  name:'Erica Sanchez Su', note:'Monarca',                     link:'' },
-  { role:'Production',          name:'Lemon Studios',    note:'Mexico City',                 link:'https://www.lemon.la/' },
+  { role:'Creator / Showrunner', name:'Fernando Rovzar',  note:'International Emmy winner',     link:'https://www.imdb.com/name/nm1376403/' },
+  { role:'Co-creator',           name:'Pablo Aramendi',   note:'',                              link:'' },
+  { role:'Executive Producer',   name:'Billy Rovzar',     note:'Lemon Studios',                 link:'https://www.imdb.com/name/nm4344131/' },
+  { role:'Executive Producer',   name:'Wendy Riss',       note:'Emmy nominee · Yellowstone',    link:'https://www.imdb.com/name/nm0728614/' },
+  { role:'Executive Producer',   name:'Alejandro Lozano', note:'Control Z',                     link:'https://www.imdb.com/name/nm2613183/' },
+  { role:'Executive Producer',   name:'Erica Sanchez Su', note:'Monarca',                       link:'' },
+  { role:'Production',           name:'Lemon Studios',    note:'Mexico City',                   link:'https://www.lemon.la/' },
 ];
 
-// ROUTER
+/* ─── ROUTER ─── */
 const PAGES = ['home','coverage','social','show','updates'];
 
 function nav(page) {
@@ -683,48 +1091,46 @@ function routeFromHash() {
 
 window.addEventListener('hashchange', routeFromHash);
 
-// BADGE HELPERS — V3: inline styles, 2px radius, solid colors
+/* ─── BADGE HELPERS ─── */
 const MARKET_STYLE = {
-  US:            'background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2)',
-  Mexico:        'background:rgba(34,197,94,0.1);color:#86efac;border:1px solid rgba(34,197,94,0.18)',
-  Spain:         'background:rgba(249,115,22,0.1);color:#fdba74;border:1px solid rgba(249,115,22,0.18)',
-  International: 'background:rgba(167,139,250,0.1);color:#c4b5fd;border:1px solid rgba(167,139,250,0.18)',
+  US:            'background:rgba(58,96,168,0.08);color:#3a60a8;border:1px solid rgba(58,96,168,0.22)',
+  Mexico:        'background:rgba(61,150,136,0.08);color:#3d9688;border:1px solid rgba(61,150,136,0.22)',
+  Spain:         'background:rgba(200,66,42,0.08);color:#c8422a;border:1px solid rgba(200,66,42,0.22)',
+  International: 'background:rgba(146,104,192,0.08);color:#7a4aa8;border:1px solid rgba(146,104,192,0.22)',
 };
 const TYPE_STYLE = {
-  Trade:         'background:rgba(59,130,246,0.1);color:#93c5fd;border:1px solid rgba(59,130,246,0.18)',
-  Entertainment: 'background:rgba(236,72,153,0.1);color:#f9a8d4;border:1px solid rgba(236,72,153,0.18)',
-  Tech:          'background:rgba(6,182,212,0.1);color:#67e8f9;border:1px solid rgba(6,182,212,0.18)',
-  Regional:      'background:rgba(234,179,8,0.1);color:#fde047;border:1px solid rgba(234,179,8,0.18)',
-  Review:        'background:rgba(245,158,11,0.1);color:#fcd34d;border:1px solid rgba(245,158,11,0.18)',
+  Trade:         'background:rgba(58,96,168,0.08);color:#3a60a8;border:1px solid rgba(58,96,168,0.2)',
+  Entertainment: 'background:rgba(200,66,42,0.08);color:#c8422a;border:1px solid rgba(200,66,42,0.2)',
+  Tech:          'background:rgba(61,150,136,0.08);color:#3d9688;border:1px solid rgba(61,150,136,0.2)',
+  Regional:      'background:rgba(181,131,42,0.08);color:#b5832a;border:1px solid rgba(181,131,42,0.2)',
+  Review:        'background:rgba(181,131,42,0.1);color:#b5832a;border:1px solid rgba(181,131,42,0.25)',
 };
 const LANG_STYLE = {
-  EN: 'background:rgba(100,116,139,0.12);color:#94a3b8;border:1px solid rgba(100,116,139,0.2)',
-  ES: 'background:rgba(34,197,94,0.08);color:#86efac;border:1px solid rgba(34,197,94,0.15)',
+  EN: 'background:rgba(58,96,168,0.07);color:#3a60a8;border:1px solid rgba(58,96,168,0.18)',
+  ES: 'background:rgba(61,150,136,0.07);color:#3d9688;border:1px solid rgba(61,150,136,0.18)',
 };
 
 function badge(text, style) {
-  return `<span style="display:inline-block;padding:1px 6px;border-radius:2px;font-size:10px;font-weight:700;letter-spacing:.02em;${style || 'background:rgba(100,116,139,0.12);color:#94a3b8;border:1px solid rgba(100,116,139,0.2)'}">${text}</span>`;
+  return `<span style="display:inline-block;padding:1px 6px;font-size:9px;font-weight:700;letter-spacing:.04em;${style || 'background:rgba(154,144,128,0.1);color:#9a9080;border:1px solid rgba(154,144,128,0.2)'}">${text}</span>`;
 }
 
-// COMMAND CENTER
+/* ─── INIT STATS ─── */
 document.getElementById('stat-articles').textContent = MEDIA.length;
-
-(function() {
+(function(){
   const premiere = new Date('2026-08-12');
-  const today = new Date();
-  const days = Math.max(1, Math.floor((today - premiere) / 86400000) + 1);
+  const days = Math.max(1, Math.floor((new Date() - premiere) / 86400000) + 1);
   document.getElementById('stat-days').textContent = days;
 })();
 
-// Charts — V3: solid bar colors
-const MARKET_BAR = { US:'#3b82f6', Mexico:'#22c55e', International:'#a78bfa', Spain:'#f97316' };
-const TYPE_BAR   = { Entertainment:'#ec4899', Tech:'#06b6d4', Trade:'#3b82f6', Regional:'#eab308', Review:'#f59e0b' };
-const LANG_BAR   = { EN:'#3b82f6', ES:'#22c55e' };
+/* ─── CHARTS ─── */
+const MARKET_BAR = { US:'#3a60a8', Mexico:'#3d9688', International:'#7a4aa8', Spain:'#c8422a' };
+const TYPE_BAR   = { Entertainment:'#c8422a', Tech:'#3d9688', Trade:'#3a60a8', Regional:'#b5832a', Review:'#b5832a' };
+const LANG_BAR   = { EN:'#3a60a8', ES:'#3d9688' };
 
 function tally(field) {
   const m = {};
   MEDIA.forEach(a => { m[a[field]] = (m[a[field]] || 0) + 1; });
-  return Object.entries(m).sort((a,b) => b[1] - a[1]).map(([k,v]) => ({k,v}));
+  return Object.entries(m).sort((a,b) => b[1]-a[1]).map(([k,v]) => ({k,v}));
 }
 
 function buildChart(containerId, data, colors, filterField) {
@@ -732,13 +1138,13 @@ function buildChart(containerId, data, colors, filterField) {
   const el = document.getElementById(containerId);
   if (!el) return;
   el.innerHTML = data.map(d => {
-    const color = colors[d.k] || '#3b82f6';
-    const pct = Math.max(12, (d.v/max)*100);
-    return `<div class="chart-bar" onclick="navWithFilter('${filterField}','${d.k}')" title="Filter to ${d.k}" style="cursor:pointer">
+    const color = colors[d.k] || '#3a60a8';
+    const pct = Math.max(10, (d.v / max) * 100);
+    return `<div class="chart-bar" onclick="navWithFilter('${filterField}','${d.k}')" style="margin-bottom:8px">
       <div style="display:flex;align-items:center;gap:8px">
-        <span style="font-size:11px;color:#64748b;width:74px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${d.k}</span>
-        <div style="flex:1;background:rgba(255,255,255,0.04);border-radius:2px;height:18px;overflow:hidden">
-          <div class="bar-fill" style="height:100%;width:${pct}%;background:${color};display:flex;align-items:center;justify-content:flex-end;padding-right:6px">
+        <span style="font-size:11px;color:var(--ink2);width:80px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${d.k}</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:${pct}%;background:${color}">
             <span style="font-size:10px;font-weight:700;color:#fff">${d.v}</span>
           </div>
         </div>
@@ -756,487 +1162,298 @@ buildChart('chart-market', tally('market'), MARKET_BAR, 'market');
 buildChart('chart-type',   tally('type'),   TYPE_BAR,   'type');
 buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
 
-// Today's Pulse
-(function() {
+/* ─── SEASON NARRATIVE ─── */
+(function(){
+  const byMarket = tally('market');
+  const top = byMarket[0];
+  document.getElementById('season-narrative').innerHTML = `
+    <p style="font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:8px">Season Narrative</p>
+    <p style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--ink1);line-height:1.45;margin-bottom:7px">${MEDIA.length} articles at launch · Reuters wire active · US tech press fully engaged</p>
+    <p style="font-size:13px;color:var(--ink2);line-height:1.68">Launch day coverage spans 4 markets with <strong style="color:var(--ink1)">${top.k}</strong> leading volume (${top.v} articles). Priority gap: premium Mexican outlets — Reforma, El Universal, and Milenio have not yet published.</p>
+  `;
+})();
+
+/* ─── TODAY'S PULSE ─── */
+(function(){
   const today = MEDIA.filter(a => a.ts === 20260812);
-  const badge_el = document.getElementById('today-badge');
-  const feed_el  = document.getElementById('today-feed');
-  badge_el.textContent = '+' + today.length + ' today';
-  feed_el.innerHTML = today.map(a => `
-    <div class="card card-hover" style="padding:12px 14px">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
-        <div style="flex:1;min-width:0">
-          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px">
-            <a href="${a.url}" target="_blank" rel="noopener noreferrer" style="font-size:11px;font-weight:700;color:#93c5fd;text-decoration:none">${a.outlet} ↗</a>
-            <span style="color:#1e2d42;font-size:11px">·</span>
-            <span style="font-size:11px;color:#3d5270">${a.date}</span>
-          </div>
-          <a href="${a.url}" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:500;color:#f1f5f9;text-decoration:none;line-height:1.45">${a.headline} ↗</a>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:4px;flex-shrink:0;align-items:flex-end">
+  document.getElementById('today-badge').textContent = '+' + today.length + ' articles on launch day';
+  document.getElementById('today-feed').innerHTML = today.map(a => `
+    <a href="${a.url}" target="_blank" rel="noopener noreferrer"
+       style="display:flex;align-items:flex-start;gap:14px;padding:14px 18px;background:var(--white);text-decoration:none;transition:background .1s"
+       onmouseover="this.style.background='var(--smoke)'" onmouseout="this.style.background='var(--white)'">
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:4px">
+          <span style="font-size:12px;font-weight:700;color:var(--ink1)">${a.outlet}</span>
           ${badge(a.market, MARKET_STYLE[a.market])}
-          ${badge(a.lang, LANG_STYLE[a.lang])}
-          <button onclick="copyURL('${a.url.replace(/'/g,"&#39;")}')" style="margin-top:2px;padding:2px 7px;background:#131f30;border:1px solid #1c2b3e;color:#3d5270;border-radius:2px;font-size:10px;font-weight:600;cursor:pointer;transition:color 0.12s" onmouseover="this.style.color='#94a3b8'" onmouseout="this.style.color='#3d5270'">Copy</button>
+          ${badge(a.lang,   LANG_STYLE[a.lang])}
         </div>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.5">${a.headline}</p>
+      </div>
+      <span style="font-size:10px;color:var(--ink3);flex-shrink:0;margin-top:2px;white-space:nowrap">${a.type} ↗</span>
+    </a>
+  `).join('');
+})();
+
+/* ─── GEO MAP ─── */
+(function(){
+  const GEO_DOTS = [
+    { market:'US',            cx:210, cy:160, color:'#3a60a8' },
+    { market:'Mexico',        cx:185, cy:195, color:'#3d9688' },
+    { market:'Spain',         cx:450, cy:140, color:'#c8422a' },
+    { market:'International', cx:490, cy:120, color:'#7a4aa8' },
+  ];
+  const mc = {};
+  MEDIA.forEach(a => { mc[a.market] = (mc[a.market]||0) + 1; });
+  const maxC = Math.max(...Object.values(mc));
+
+  document.getElementById('geo-map').innerHTML = `
+    <svg viewBox="0 0 760 280" style="width:100%;height:auto;display:block">
+      <rect x="0" y="0" width="760" height="280" fill="var(--smoke)"/>
+      <path d="M120,60 Q130,50 160,55 L190,70 200,110 210,160 215,220 200,250 180,255 160,250 140,238 130,210 120,175 110,130 115,90Z" fill="var(--bd)" opacity=".6"/>
+      <path d="M430,50 Q460,45 490,60 L510,90 505,140 490,170 470,175 450,165 435,148 425,118 420,85 425,63Z" fill="var(--bd)" opacity=".6"/>
+      <path d="M445,175 L465,180 475,205 462,238 442,245 428,232 424,210 432,185Z" fill="var(--bd)" opacity=".5"/>
+      <path d="M510,50 Q560,40 620,55 L650,80 640,125 610,150 560,142 530,122 510,95 505,68Z" fill="var(--bd)" opacity=".6"/>
+      <path d="M595,185 Q625,178 645,192 L648,225 628,237 600,234 588,218Z" fill="var(--bd)" opacity=".5"/>
+      ${GEO_DOTS.map(d => {
+        const count = mc[d.market] || 0;
+        const r = Math.max(10, Math.min(28, 10 + (count/maxC)*20));
+        return `<circle cx="${d.cx}" cy="${d.cy}" r="${r}" fill="${d.color}" opacity=".16"/>
+                <circle cx="${d.cx}" cy="${d.cy}" r="${r*.55}" fill="${d.color}" opacity=".5"/>
+                <text x="${d.cx}" y="${d.cy+1}" text-anchor="middle" dominant-baseline="middle" fill="${d.color}" font-size="10" font-weight="800" font-family="Inter,sans-serif">${count}</text>`;
+      }).join('')}
+    </svg>`;
+
+  document.getElementById('geo-legend').innerHTML = GEO_DOTS.map(d => `
+    <span style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--ink2)">
+      <span style="width:8px;height:8px;border-radius:50%;background:${d.color};flex-shrink:0"></span>${d.market} (${mc[d.market]||0})
+    </span>`).join('');
+})();
+
+/* ─── HASHTAG CLOUD ─── */
+(function(){
+  const tags = [
+    {tag:'#LasAzules',v:95},{tag:'#MujeresDeAzul',v:88},{tag:'#LasAzulesS2',v:76},
+    {tag:'#WomenInBlue',v:68},{tag:'#BarbaraMori',v:62},{tag:'#AppleTV',v:58},
+    {tag:'#FernandoRovzar',v:45},{tag:'#DraMex',v:40},{tag:'#Tlatelolco',v:35},
+    {tag:'#Halconazo',v:28},{tag:'#XimenaSarinana',v:22},{tag:'#LemonStudios',v:18},
+  ];
+  const maxV = tags[0].v;
+  const colors = ['#c8422a','#3d9688','#3a60a8','#b5832a','#7a4aa8'];
+  document.getElementById('hashtag-cloud').innerHTML = tags.map((t,i) => {
+    const size = 11 + ((t.v/maxV)*14);
+    return `<span style="font-size:${size}px;font-weight:700;color:${colors[i%colors.length]};cursor:pointer;transition:opacity .12s;font-family:Inter,sans-serif"
+      onmouseover="this.style.opacity='.6'" onmouseout="this.style.opacity='1'"
+      onclick="window.open('https://twitter.com/search?q=${encodeURIComponent(t.tag)}','_blank','noopener')">${t.tag}</span>`;
+  }).join('');
+})();
+
+/* ─── SOCIAL MENTIONS ─── */
+(function(){
+  const mentions = [
+    {handle:'@AppleTV',          platform:'Twitter/X', text:'Season 2 of Women in Blue (Las Azules) is now streaming on Apple TV+. #LasAzules',             date:'Aug 12'},
+    {handle:'@BarbaraMori_Ofic', platform:'Instagram', text:'Estamos de vuelta. Segunda temporada de Las Azules ya disponible en Apple TV+. ¡Gracias al equipo!', date:'Aug 12'},
+    {handle:'@ximena_s',         platform:'Instagram', text:'Temporada 2 de Las Azules streaming NOW on @AppleTVMX. #MujeresDeAzul',                        date:'Aug 12'},
+    {handle:'@FernandoRovzar',   platform:'Twitter/X', text:'Si en la primera temporada el enemigo era un asesino serial, en esta temporada es todo un sistema. #LasAzules', date:'Aug 12'},
+    {handle:'@LemonStudios',     platform:'Twitter/X', text:'Las Azules S2 is LIVE. 8 episodes of the most powerful story we\'ve ever told. @AppleTV #WomenInBlue', date:'Aug 12'},
+  ];
+  const platColor = {'Twitter/X':'#3a60a8',Instagram:'#c8422a'};
+  document.getElementById('social-mentions-feed').innerHTML = mentions.map((m,i) => `
+    <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 20px;${i<mentions.length-1?'border-bottom:1px solid var(--bd)':''}">
+      <div style="width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:${platColor[m.platform]||'var(--ink3)'};flex-shrink:0">${m.platform.slice(0,2).toUpperCase()}</div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap">
+          <span style="font-size:12px;font-weight:700;color:var(--ink1)">${m.handle}</span>
+          <span style="font-size:10px;color:var(--ink3)">${m.platform} · ${m.date}</span>
+        </div>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.55">${m.text}</p>
       </div>
     </div>`).join('');
 })();
 
-// COVERAGE PAGE
-let covFilters = { search:'', market:'', type:'', lang:'', sort:'newest' };
+/* ─── EPISODE LIST ─── */
+(function(){
+  const today = new Date();
+  document.getElementById('episode-list').innerHTML = EPISODES.map(e => {
+    const d = new Date(e.iso);
+    const aired  = d <= today;
+    const isNext = !aired && EPISODES.find(ep => new Date(ep.iso) > today)?.ep === e.ep;
+    return `<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--bd)">
+      <span style="font-size:10px;font-weight:800;color:${aired?'var(--teal)':isNext?'var(--coral)':'var(--ink3)'};width:18px;flex-shrink:0">E${e.ep}</span>
+      <span style="font-size:12px;color:${aired?'var(--ink1)':'var(--ink3)'};flex:1;font-weight:${aired?'600':'400'}">${e.title}</span>
+      <span style="font-size:10px;color:var(--ink3);white-space:nowrap">${e.date.replace(' 2026','')}</span>
+      ${aired?'<span style="font-size:9px;color:var(--teal);font-weight:700">LIVE</span>':''}
+      ${isNext?'<span style="font-size:9px;color:var(--coral);font-weight:700">NEXT</span>':''}
+    </div>`;
+  }).join('');
+})();
 
+/* ─── CAST ─── */
+document.getElementById('cast-list').innerHTML = CAST.map(c => `
+  <a href="${c.link}" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:12px;text-decoration:none" onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
+    <div style="width:40px;height:40px;border-radius:50%;background:var(--bd);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--ink2);flex-shrink:0">${c.initials}</div>
+    <div style="min-width:0">
+      <p style="font-size:13px;font-weight:700;color:var(--ink1);line-height:1.3">${c.name}</p>
+      <p style="font-size:11px;color:var(--coral);font-weight:600">${c.role}</p>
+      ${c.note?`<p style="font-size:10px;color:var(--ink3);line-height:1.4;margin-top:1px">${c.note}</p>`:''}
+    </div>
+  </a>`).join('');
+
+/* ─── CREW ─── */
+document.getElementById('crew-list').innerHTML = CREW.map(c => `
+  <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--white)">
+    <div style="flex:0 0 140px;font-size:10px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:.04em">${c.role}</div>
+    <div style="flex:1;min-width:0">
+      ${c.link?`<a href="${c.link}" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:700;color:var(--ink1);text-decoration:none;border-bottom:1px solid var(--bd)">${c.name} ↗</a>`:`<span style="font-size:13px;font-weight:700;color:var(--ink1)">${c.name}</span>`}
+      ${c.note?`<span style="font-size:11px;color:var(--ink3);margin-left:8px">${c.note}</span>`:''}
+    </div>
+  </div>`).join('');
+
+/* ─── COVERAGE ─── */
 function renderCoverage() {
-  if (window._covFilter) {
-    const { field, value } = window._covFilter;
-    if (field === 'market') { document.getElementById('cov-market').value = value; covFilters.market = value; }
-    if (field === 'type')   { document.getElementById('cov-type').value   = value; covFilters.type   = value; }
-    if (field === 'lang')   { document.getElementById('cov-lang').value   = value; covFilters.lang   = value; }
-    window._covFilter = null;
-  }
+  const q   = (document.getElementById('cov-search').value||'').toLowerCase();
+  const mkt = document.getElementById('cov-market').value||'';
+  const typ = document.getElementById('cov-type').value||'';
+  const lng = document.getElementById('cov-lang').value||'';
+  const srt = document.getElementById('cov-sort').value||'newest';
 
-  let items = MEDIA.filter(a => {
-    const q = covFilters.search.toLowerCase();
-    const ok_q = !q || a.outlet.toLowerCase().includes(q) || a.headline.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q);
-    const ok_m = !covFilters.market || a.market === covFilters.market;
-    const ok_t = !covFilters.type   || a.type   === covFilters.type;
-    const ok_l = !covFilters.lang   || a.lang   === covFilters.lang;
-    return ok_q && ok_m && ok_t && ok_l;
-  });
+  let filtered = MEDIA.filter(a =>
+    (!q   || a.outlet.toLowerCase().includes(q) || a.headline.toLowerCase().includes(q) || (a.excerpt||'').toLowerCase().includes(q)) &&
+    (!mkt || a.market === mkt) &&
+    (!typ || a.type   === typ) &&
+    (!lng || a.lang   === lng)
+  );
+  filtered.sort((a,b) => srt==='newest' ? b.ts-a.ts : a.ts-b.ts);
 
-  items = items.slice().sort((a,b) => covFilters.sort === 'newest' ? b.ts - a.ts : a.ts - b.ts);
-
-  const feed = document.getElementById('cov-feed');
+  document.getElementById('cov-count').textContent = filtered.length + ' of ' + MEDIA.length + ' articles';
+  const tbody = document.getElementById('cov-feed');
   const empty = document.getElementById('cov-empty');
-  const cnt = document.getElementById('cov-count');
-  cnt.textContent = `(${items.length} of ${MEDIA.length})`;
 
-  if (!items.length) {
-    feed.innerHTML = '';
+  if (!filtered.length) {
+    tbody.innerHTML = '';
     empty.classList.remove('hidden');
     return;
   }
   empty.classList.add('hidden');
-
-  feed.innerHTML = items.map(a => `
-    <article class="card card-hover" style="padding:14px">
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div style="display:flex;gap:12px;align-items:flex-start">
-          <div style="flex:1;min-width:0">
-            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px">
-              <a href="${a.url}" target="_blank" rel="noopener noreferrer" style="font-size:11px;font-weight:700;color:#93c5fd;text-decoration:none">${a.outlet} ↗</a>
-              <span style="color:#1c2b3e;font-size:11px">·</span>
-              <span style="font-size:11px;color:#3d5270">${a.date}</span>
-            </div>
-            <a href="${a.url}" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:600;color:#f1f5f9;text-decoration:none;line-height:1.45;display:block;margin-bottom:6px">${a.headline} ↗</a>
-            <p style="font-size:12px;color:#64748b;line-height:1.65">${a.excerpt}</p>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:4px;flex-shrink:0;align-items:flex-end">
-            ${badge(a.market, MARKET_STYLE[a.market])}
-            ${badge(a.type,   TYPE_STYLE[a.type])}
-            ${badge(a.lang,   LANG_STYLE[a.lang])}
-            <button onclick="copyURL('${a.url.replace(/'/g,"&#39;")}')" style="margin-top:4px;padding:4px 8px;background:#131f30;border:1px solid #1c2b3e;color:#64748b;border-radius:2px;font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap;transition:color 0.12s" onmouseover="this.style.color='#f1f5f9'" onmouseout="this.style.color='#64748b'">Copy Link</button>
-            <button onclick="openPostBuilder(${JSON.stringify(a).replace(/"/g,'&quot;')})" style="padding:4px 8px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);color:#93c5fd;border-radius:2px;font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background 0.12s" onmouseover="this.style.background='rgba(59,130,246,0.18)'" onmouseout="this.style.background='rgba(59,130,246,0.1)'">Create Post</button>
-          </div>
-        </div>
-      </div>
-    </article>`).join('');
+  tbody.innerHTML = filtered.map(a => `
+    <tr onclick="window.open('${a.url}','_blank','noopener')" style="cursor:pointer">
+      <td style="font-size:12px;font-weight:700;color:var(--ink1);max-width:130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${a.outlet}</td>
+      <td style="max-width:340px">
+        <p style="font-size:13px;color:var(--ink1);font-weight:500;line-height:1.4;margin-bottom:2px">${a.headline}</p>
+        ${a.excerpt?`<p style="font-size:11px;color:var(--ink3);line-height:1.45">${a.excerpt.substring(0,100)}${a.excerpt.length>100?'…':''}</p>`:''}
+      </td>
+      <td style="white-space:nowrap">${badge(a.market,MARKET_STYLE[a.market])}</td>
+      <td style="white-space:nowrap">${badge(a.type,TYPE_STYLE[a.type])}</td>
+      <td style="white-space:nowrap">${badge(a.lang,LANG_STYLE[a.lang])}</td>
+      <td style="font-size:11px;color:var(--ink3);white-space:nowrap">${a.date}</td>
+    </tr>`).join('');
 }
 
 ['cov-search','cov-market','cov-type','cov-lang','cov-sort'].forEach(id => {
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.addEventListener('input',  () => { covFilters[id.replace('cov-','')] = el.value; renderCoverage(); });
-  el.addEventListener('change', () => { covFilters[id.replace('cov-','')] = el.value; renderCoverage(); });
+  document.getElementById(id).addEventListener('input', renderCoverage);
+  document.getElementById(id).addEventListener('change', renderCoverage);
 });
 
-// SHOW UNIVERSE
-const APPLE_TV_URL = 'https://tv.apple.com/us/show/women-in-blue/umc.cmc.2r80bdb47xcb0p7zicm78ggwf';
-const TODAY = new Date(); TODAY.setHours(0,0,0,0);
-
-document.getElementById('episode-list').innerHTML = EPISODES.map(e => {
-  const epDate = new Date(e.iso); epDate.setHours(0,0,0,0);
-  const released = epDate <= TODAY;
-  if (released) {
-    return `<a href="${APPLE_TV_URL}" target="_blank" rel="noopener noreferrer"
-       style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;border:1px solid rgba(59,130,246,0.2);border-radius:4px;background:rgba(59,130,246,0.06);text-decoration:none;transition:background 0.12s"
-       onmouseover="this.style.background='rgba(59,130,246,0.1)'" onmouseout="this.style.background='rgba(59,130,246,0.06)'">
-      <div style="display:flex;align-items:center;gap:10px">
-        <span style="font-size:10px;font-weight:700;color:#3d5270;width:28px;flex-shrink:0">Ep.${e.ep}</span>
-        <span style="font-size:13px;color:#f1f5f9;font-weight:500">${e.date}</span>
-      </div>
-      <span style="font-size:11px;color:#93c5fd;font-weight:600;flex-shrink:0">Watch ↗</span>
-    </a>`;
-  } else {
-    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;border:1px solid #1c2b3e;border-radius:4px;opacity:0.45">
-      <div style="display:flex;align-items:center;gap:10px">
-        <span style="font-size:10px;font-weight:700;color:#3d5270;width:28px;flex-shrink:0">Ep.${e.ep}</span>
-        <span style="font-size:13px;color:#64748b">${e.date}</span>
-      </div>
-      <span style="font-size:11px;color:#3d5270;flex-shrink:0">Coming soon</span>
-    </div>`;
-  }
-}).join('');
-
-document.getElementById('cast-list').innerHTML = CAST.map(c => `
-  <div class="cast-card" style="display:flex;align-items:flex-start;gap:10px">
-    <div class="cast-avatar" style="width:30px;height:30px;border-radius:4px;background:rgba(59,130,246,0.15);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#93c5fd;flex-shrink:0;border:1px solid rgba(59,130,246,0.2)">${c.initials}</div>
-    <div style="flex:1;min-width:0">
-      ${c.link ? `<a href="${c.link}" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:600;color:#f1f5f9;text-decoration:none">${c.name} ↗</a>` : `<span style="font-size:13px;font-weight:600;color:#f1f5f9">${c.name}</span>`}
-      ${c.role ? `<p style="font-size:11px;color:#93c5fd;margin-top:2px">${c.role}</p>` : ''}
-      ${c.note ? `<p class="cast-note" style="font-size:11px;color:#3d5270;margin-top:2px;line-height:1.4">${c.note}</p>` : ''}
-    </div>
-  </div>`).join('');
-
-document.getElementById('crew-list').innerHTML = CREW.map(c => `
-  <div style="display:flex;gap:10px;align-items:baseline">
-    <span style="font-size:11px;color:#3d5270;width:150px;flex-shrink:0;line-height:1.5">${c.role}</span>
-    <span style="font-size:13px;color:#f1f5f9;font-weight:500">
-      ${c.link ? `<a href="${c.link}" target="_blank" rel="noopener noreferrer" style="color:#f1f5f9;text-decoration:none">${c.name} ↗</a>` : c.name}
-      ${c.note ? `<span style="font-size:11px;color:#3d5270;font-weight:400;margin-left:6px">(${c.note})</span>` : ''}
-    </span>
-  </div>`).join('');
-
-// POST BUILDER
-const PLATFORM_LIMITS = { instagram:2200, twitter:280, linkedin:3000, facebook:63200, tiktok:2200 };
-let currentPlatform = 'instagram';
+/* ─── POST BUILDER ─── */
+const PLAT_LIMITS = {instagram:2200,twitter:280,linkedin:3000,facebook:500,tiktok:2200};
+let currentPlatform = 'twitter';
 
 function openPostBuilder(article) {
   if (article) {
-    document.getElementById('pb-headline').value = article.headline || '';
-    document.getElementById('pb-url').value      = article.url      || '';
-    document.getElementById('pb-outlet').value   = article.outlet   || '';
-    document.getElementById('pb-excerpt').value  = article.excerpt  || '';
+    document.getElementById('pb-headline').value = article.headline;
+    document.getElementById('pb-url').value      = article.url;
+    document.getElementById('pb-outlet').value   = article.outlet;
+    document.getElementById('pb-excerpt').value  = article.excerpt || '';
     syncPbUrlLink();
   }
   document.getElementById('post-overlay').classList.add('open');
   document.getElementById('post-panel').classList.add('open');
-  document.body.style.overflow = 'hidden';
-  selectPlatform(currentPlatform);
 }
 
 function closePostBuilder() {
   document.getElementById('post-overlay').classList.remove('open');
   document.getElementById('post-panel').classList.remove('open');
-  document.body.style.overflow = '';
 }
 
-function selectPlatform(plat) {
-  currentPlatform = plat;
-  document.querySelectorAll('.platform-tab').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.plat === plat);
-  });
-  const limit = PLATFORM_LIMITS[plat];
-  const labels = { instagram:'Instagram', twitter:'Twitter/X', linkedin:'LinkedIn', facebook:'Facebook', tiktok:'TikTok' };
-  document.getElementById('pb-limit-note').textContent = `${labels[plat]} — ${limit.toLocaleString()} char limit`;
+function selectPlatform(p) {
+  currentPlatform = p;
+  document.querySelectorAll('.platform-tab').forEach(t => t.classList.toggle('active', t.dataset.plat===p));
+  document.getElementById('pb-limit-note').textContent = 'Character limit: ' + PLAT_LIMITS[p];
   updateCC('es'); updateCC('en');
-}
-
-function generatePosts() {
-  const headline = document.getElementById('pb-headline').value.trim();
-  const url      = document.getElementById('pb-url').value.trim();
-  const outlet   = document.getElementById('pb-outlet').value.trim();
-  const excerpt  = document.getElementById('pb-excerpt').value.trim();
-  document.getElementById('pb-out-es').value = buildPost('es', headline, url, outlet, excerpt, currentPlatform);
-  document.getElementById('pb-out-en').value = buildPost('en', headline, url, outlet, excerpt, currentPlatform);
-  updateCC('es'); updateCC('en');
-}
-
-function buildPost(lang, headline, url, outlet, excerpt, platform) {
-  const ht_es_short = '#MujeresDeAzul #LasAzulesS2';
-  const ht_en_short = '#WomenInBlue #LasAzulesS2';
-  const ht_es_full  = '#MujeresDeAzul #LasAzules #LasAzulesS2 #AppleTV #AppleTVPlus #DraMex #BarbaraMori #FernandoRovzar #WomenInBlue #Tlatelolco';
-  const ht_en_full  = '#WomenInBlue #LasAzules #LasAzulesS2 #AppleTV #AppleTVPlus #BarbaraMori #FernandoRovzar #MujeresDeAzul';
-  const excerptShort = excerpt ? excerpt.split('.').slice(0,2).join('.').trim() + '.' : '';
-  const h = headline || 'Las Azules S2';
-  const u = url || 'https://tv.apple.com/us/show/women-in-blue/umc.cmc.2r80bdb47xcb0p7zicm78ggwf';
-  const srcES = outlet ? `Nueva cobertura en ${outlet}.` : 'Nueva cobertura mediática.';
-
-  if (platform === 'twitter') {
-    if (lang === 'es') {
-      const ref = outlet ? ` | ${outlet}` : '';
-      const suffix = `${ref} ${ht_es_short} ${u}`;
-      const intro = '🎬 Mujeres de Azul S2 ya disponible en Apple TV+';
-      const full = `${intro}${suffix}`;
-      return full.length <= 280 ? full : `${intro} ${ht_es_short} ${u}`;
-    } else {
-      const suffix = ` ${ht_en_short} ${u}`;
-      const maxH = 280 - suffix.length;
-      const head = h.length > maxH ? h.substring(0, maxH - 1) + '…' : h;
-      return `${head}${suffix}`;
-    }
-  }
-  if (platform === 'instagram') {
-    if (lang === 'es') {
-      const cov = outlet ? `${srcES}\n\n` : '';
-      return `📺 ¡Mujeres de Azul regresa con la Temporada 2!\n\n${cov}La serie ya está disponible en @appletv. Basada en las primeras mujeres policías de México en 1971 — una historia de poder, justicia y valentía. 🎬\n\n${u}\n\n${ht_es_full}`;
-    } else {
-      const body = excerptShort || h;
-      return `${body}\n\nWomen in Blue S2 is now streaming on @AppleTV+. 🎬\n\n${u}\n\n${ht_en_full}`;
-    }
-  }
-  if (platform === 'linkedin') {
-    if (lang === 'es') {
-      const cov = outlet ? `\n\n${srcES}` : '';
-      return `📺 Mujeres de Azul — Temporada 2 ya disponible en Apple TV+${cov}\n\nLa segunda temporada de nuestra serie explora un capítulo oscuro de la historia de México: el Halconazo de 1971. Justicia, valentía y la lucha de las primeras mujeres policías del país.\n\n${outlet ? `Fuente: ${outlet}\n` : ''}${u}\n\n#MujeresDeAzul #LasAzules #AppleTV #LemonStudios #FernandoRovzar #BarbaraMori #DraSerie`;
-    } else {
-      return `📺 ${h}\n\n${excerpt || excerptShort}\n\n${outlet ? `Source: ${outlet}\n` : ''}${u}\n\n#WomenInBlue #LasAzules #AppleTV #LemonStudios #FernandoRovzar #BarbaraMori #CrimeDrama`;
-    }
-  }
-  if (platform === 'facebook') {
-    if (lang === 'es') {
-      const cov = outlet ? `\n\n${srcES}` : '';
-      return `📺 Mujeres de Azul Temporada 2 — ya disponible en Apple TV+${cov}\n\nMéxico, 1971. La Teniente María y las Azules investigan el asesinato de una activista estudiantil. Una conspiración que llega hasta el Halconazo.\n\n${outlet ? `Vía ${outlet}: ` : ''}${u}\n\n${ht_es_short} #AppleTV #BarbaraMori #FernandoRovzar`;
-    } else {
-      return `${h}\n\n${excerpt}\n\nVia ${outlet || 'Apple TV+'}: ${u}\n\n${ht_en_short} #AppleTV #BarbaraMori #FernandoRovzar`;
-    }
-  }
-  if (platform === 'tiktok') {
-    if (lang === 'es') {
-      const cov = outlet ? ` (${outlet})` : '';
-      return `¿Ya viste esto?${cov} 👀\n\nMujeres de Azul S2 ya llegó a @appletv 🎬\nMéxico 1971 · Mujeres · Poder · Justicia\n\n${u}\n\n${ht_es_short} #BarbaraMori #FernandoRovzar #Tlatelolco`;
-    } else {
-      return `Did you see this? 👀\n\n${h}\n\n${u}\n\n${ht_en_short} #BarbaraMori #FernandoRovzar`;
-    }
-  }
-  return '';
 }
 
 function updateCC(lang) {
-  const ta = document.getElementById('pb-out-' + lang);
-  const cc = document.getElementById('cc-' + lang);
-  if (!ta || !cc) return;
+  const lim = PLAT_LIMITS[currentPlatform]||280;
+  const ta  = document.getElementById('pb-out-'+lang);
+  const sp  = document.getElementById('cc-'+lang);
+  if (!ta||!sp) return;
   const len = ta.value.length;
-  const lim = PLATFORM_LIMITS[currentPlatform];
-  const pct = len / lim;
-  cc.textContent = `${len} / ${lim.toLocaleString()}`;
-  cc.className = 'text-xs font-mono ' + (pct > 1 ? 'cc-over' : pct > 0.85 ? 'cc-warn' : 'cc-ok');
+  sp.textContent = len+' / '+lim;
+  sp.className = len>lim ? 'cc-over' : len>lim*.9 ? 'cc-warn' : 'cc-ok';
 }
 
-function addHashtagToPost(tag) {
-  ['pb-out-es','pb-out-en'].forEach(id => {
-    const ta = document.getElementById(id);
-    if (ta) { ta.value = (ta.value.trimEnd() + ' ' + tag).trim(); updateCC(id === 'pb-out-es' ? 'es' : 'en'); }
-  });
+function generatePosts() {
+  const hl  = document.getElementById('pb-headline').value.trim();
+  const url = document.getElementById('pb-url').value.trim();
+  const out = document.getElementById('pb-outlet').value.trim();
+  const exc = document.getElementById('pb-excerpt').value.trim();
+  const src = out ? ` vía ${out}` : '';
+  const esOut = `🎬 ${hl}\n\n${exc?'"'+exc.substring(0,120)+'…"\n\n':''}#LasAzulesS2 #MujeresDeAzul #LasAzules${url?'\n\n'+url:''}`;
+  const enOut = `🎬 ${hl}\n\n${exc?'"'+exc.substring(0,120)+'…"\n\n':''}#WomenInBlue #LasAzules #AppleTV${src}${url?'\n\n'+url:''}`;
+  document.getElementById('pb-out-es').value = esOut;
+  document.getElementById('pb-out-en').value = enOut;
+  updateCC('es'); updateCC('en');
 }
 
 function copyPost(lang) {
-  const ta = document.getElementById('pb-out-' + lang);
-  if (!ta || !ta.value) return;
-  navigator.clipboard.writeText(ta.value).then(() => {
-    const btn = ta.nextElementSibling;
-    if (btn) {
-      const orig = btn.textContent;
-      btn.textContent = 'Copied!';
-      btn.style.color = '#4ade80';
-      setTimeout(() => { btn.textContent = orig; btn.style.color = ''; }, 1800);
-    }
-  }).catch(() => { ta.select(); document.execCommand('copy'); });
-}
-
-function syncPbUrlLink() {
-  const url = document.getElementById('pb-url').value.trim();
-  const link = document.getElementById('pb-url-link');
-  if (link) link.href = url || '#';
+  const ta = document.getElementById('pb-out-'+lang);
+  if (!ta.value) return;
+  navigator.clipboard.writeText(ta.value).then(() => showToast('Copied '+lang.toUpperCase()+' post!'));
 }
 
 function copyPbUrl() {
-  const url = document.getElementById('pb-url').value.trim();
-  if (!url) return;
-  navigator.clipboard.writeText(url).then(() => showToast('URL copied!')).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = url; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta);
-    showToast('URL copied!');
+  const val = document.getElementById('pb-url').value;
+  if (!val) return;
+  navigator.clipboard.writeText(val).then(() => showToast('URL copied'));
+}
+
+function syncPbUrlLink() {
+  const val = document.getElementById('pb-url').value;
+  const lnk = document.getElementById('pb-url-link');
+  lnk.href = (val && val.startsWith('http')) ? val : '#';
+}
+
+function addHashtagToPost(tag) {
+  ['es','en'].forEach(lang => {
+    const ta = document.getElementById('pb-out-'+lang);
+    if (ta) { ta.value = (ta.value+' '+tag).trim(); updateCC(lang); }
   });
 }
 
 function showToast(msg) {
-  const t = document.createElement('div');
+  let t = document.querySelector('.toast');
+  if (!t) { t=document.createElement('div'); t.className='toast'; document.body.appendChild(t); }
   t.textContent = msg;
-  t.className = 'toast';
-  document.body.appendChild(t);
-  setTimeout(() => { t.style.opacity = '0'; setTimeout(() => { if (t.parentNode) document.body.removeChild(t); }, 350); }, 2200);
+  t.style.opacity = '1';
+  clearTimeout(t._tid);
+  t._tid = setTimeout(() => { t.style.opacity='0'; }, 1800);
 }
 
-function copyURL(url) {
-  navigator.clipboard.writeText(url).then(() => showToast('Link copied!')).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = url; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta);
-    showToast('Link copied!');
-  });
+/* ─── INIT ─── */
+selectPlatform('twitter');
+
+const _origNav = nav;
+function nav(page) {
+  _origNav(page);
+  if (page === 'coverage' && window._covFilter) {
+    const {field, value} = window._covFilter;
+    const sel = {market:'cov-market',type:'cov-type',lang:'cov-lang'}[field];
+    if (sel) document.getElementById(sel).value = value;
+    delete window._covFilter;
+    renderCoverage();
+  }
 }
 
-// SEASON NARRATIVE — V3 styling
-(function buildNarrative() {
-  const el = document.getElementById('season-narrative');
-  if (!el) return;
-  const total = MEDIA.length;
-  const byMarket = {};
-  MEDIA.forEach(a => { byMarket[a.market] = (byMarket[a.market] || 0) + 1; });
-  const topMarket = Object.entries(byMarket).sort((a,b) => b[1]-a[1])[0];
-  const esCount = MEDIA.filter(a => a.lang === 'ES').length;
-  const todayCount = MEDIA.filter(a => a.ts === 20260812).length;
-  const tradeCount = MEDIA.filter(a => a.type === 'Trade').length;
-  const pct = v => Math.round((v/total)*100);
-
-  el.innerHTML = `
-    <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:20px">
-      <div style="flex:1;min-width:220px">
-        <p style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#3b82f6;margin-bottom:8px">Season Narrative — Aug 12, 2026</p>
-        <p style="font-size:13px;color:#94a3b8;line-height:1.7">
-          Season 2 launches with <strong style="color:#f1f5f9">${total} tracked articles</strong> across ${Object.keys(byMarket).length} markets.
-          <strong style="color:#f1f5f9">${topMarket[0]}</strong> leads at ${pct(topMarket[1])}%.
-          Spanish-language coverage is <strong style="color:#f1f5f9">${pct(esCount)}%</strong> of total,
-          reflecting the core Latin American audience.
-          Trade press (${tradeCount} outlets) gave strong industry visibility.
-          <strong style="color:#fcd34d">Screen Anarchy's 4/5 ★</strong> is the first critical review.
-        </p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:6px;flex-shrink:0">
-        <div style="text-align:center;padding:10px 16px;border:1px solid #1c2b3e;border-radius:4px">
-          <p style="font-size:1.25rem;font-weight:800;color:#22c55e;letter-spacing:-.02em">+${todayCount}</p>
-          <p style="font-size:10px;color:#3d5270;margin-top:2px">Today</p>
-        </div>
-        <div style="text-align:center;padding:10px 16px;border:1px solid #1c2b3e;border-radius:4px">
-          <p style="font-size:1.25rem;font-weight:800;color:#3b82f6;letter-spacing:-.02em">${pct(esCount)}%</p>
-          <p style="font-size:10px;color:#3d5270;margin-top:2px">Spanish</p>
-        </div>
-        <div style="text-align:center;padding:10px 16px;border:1px solid #1c2b3e;border-radius:4px">
-          <p style="font-size:1.25rem;font-weight:800;color:#a78bfa;letter-spacing:-.02em">${Object.keys(byMarket).length}</p>
-          <p style="font-size:10px;color:#3d5270;margin-top:2px">Markets</p>
-        </div>
-        <div style="text-align:center;padding:10px 16px;border:1px solid #1c2b3e;border-radius:4px">
-          <p style="font-size:1.25rem;font-weight:800;color:#f59e0b;letter-spacing:-.02em">4/5★</p>
-          <p style="font-size:10px;color:#3d5270;margin-top:2px">First Review</p>
-        </div>
-      </div>
-    </div>`;
-})();
-
-// Delta
-(function() {
-  const el = document.getElementById('stat-articles-delta');
-  if (el) {
-    const today = MEDIA.filter(a => a.ts === 20260812).length;
-    el.innerHTML = `<span class="delta delta-up">▲ ${today} today</span>`;
-  }
-})();
-
-// GEO MAP
-(function buildGeoMap() {
-  const el = document.getElementById('geo-map');
-  const leg = document.getElementById('geo-legend');
-  if (!el) return;
-  const byMarket = {};
-  MEDIA.forEach(a => { byMarket[a.market] = (byMarket[a.market] || 0) + 1; });
-  const maxV = Math.max(...Object.values(byMarket));
-  const DOT_SCALE = v => Math.max(8, Math.round((v / maxV) * 28));
-  const MARKET_DOTS = [
-    { market:'Mexico',        cx:192, cy:195, color:'#4ade80' },
-    { market:'US',            cx:168, cy:152, color:'#60a5fa' },
-    { market:'Spain',         cx:458, cy:140, color:'#fb923c' },
-    { market:'International', cx:520, cy:175, color:'#c084fc' },
-  ];
-  const W = 660, H = 260;
-  const LAND = `M80,70 Q120,55 160,60 L230,55 Q280,50 330,60 L400,58 Q450,55 510,65 L560,70 Q590,75 610,90 L615,105 Q620,120 610,135 L600,155 Q580,175 560,180 L540,190 Q520,195 500,185 L490,200 Q480,215 470,210 L450,205 Q435,210 420,220 L400,230 Q370,240 340,235 L310,225 Q280,215 260,225 L235,240 Q210,255 195,248 L180,235 Q170,220 160,230 L145,245 Q130,255 115,248 L100,235 Q85,220 80,205 L75,185 Q70,165 75,145 L78,120 Q79,95 80,70Z`;
-  const AMERICA = `M85,80 Q100,75 115,78 L130,82 Q145,85 155,95 L165,108 Q175,125 170,145 L160,165 Q148,185 140,200 L132,215 Q125,230 118,245 L110,258 Q100,268 88,265 L75,258 Q65,248 62,232 L60,215 Q58,195 62,175 L68,155 Q74,130 78,110 L81,93 Z`;
-  const AFRICA = `M448,145 Q465,140 478,148 L490,158 Q498,170 496,185 L490,198 Q480,210 468,215 L455,218 Q440,215 432,205 L426,192 Q422,175 426,160 L434,150 Z`;
-  const ASIA = `M510,60 Q540,50 570,55 L600,62 Q625,70 638,88 L642,108 Q640,128 628,145 L612,160 Q595,172 575,175 L555,178 Q535,175 520,165 L508,152 Q500,138 502,120 L507,100 Q510,80 510,60Z`;
-  const dots = MARKET_DOTS.map(d => {
-    const v = byMarket[d.market] || 0;
-    const r = DOT_SCALE(v);
-    return `<circle cx="${d.cx}" cy="${d.cy}" r="${r}" fill="${d.color}" opacity="0.75"/>
-            <circle cx="${d.cx}" cy="${d.cy}" r="${r+5}" fill="${d.color}" opacity="0.12"/>
-            <text x="${d.cx}" y="${d.cy + r + 13}" text-anchor="middle" fill="${d.color}" font-size="9" font-family="Inter,sans-serif" font-weight="700">${d.market} · ${v}</text>`;
-  }).join('');
-  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet" style="max-height:190px">
-    <rect width="${W}" height="${H}" fill="transparent"/>
-    <path d="${LAND}" fill="#131f30" stroke="#1c2b3e" stroke-width="0.8"/>
-    <path d="${AMERICA}" fill="#131f30" stroke="#1c2b3e" stroke-width="0.8"/>
-    <path d="${AFRICA}" fill="#131f30" stroke="#1c2b3e" stroke-width="0.8"/>
-    <path d="${ASIA}" fill="#131f30" stroke="#1c2b3e" stroke-width="0.8"/>
-    ${dots}
-  </svg>`;
-  if (leg) {
-    leg.innerHTML = MARKET_DOTS.map(d => `
-      <span style="display:flex;align-items:center;gap:5px;font-size:11px;color:#64748b">
-        <span style="width:7px;height:7px;border-radius:50%;background:${d.color};display:inline-block;flex-shrink:0"></span>
-        ${d.market} <strong style="color:${d.color}">${byMarket[d.market] || 0}</strong>
-      </span>`).join('');
-  }
-})();
-
-// HASHTAG WORD CLOUD
-(function buildWordCloud() {
-  const el = document.getElementById('hashtag-cloud');
-  if (!el) return;
-  const TAGS = [
-    { tag:'#MujeresDeAzul',  weight:10, url:'https://twitter.com/search?q=%23MujeresDeAzul' },
-    { tag:'#LasAzules',      weight:9,  url:'https://twitter.com/search?q=%23LasAzules' },
-    { tag:'#LasAzulesS2',    weight:8,  url:'https://twitter.com/search?q=%23LasAzulesS2' },
-    { tag:'#WomenInBlue',    weight:7,  url:'https://twitter.com/search?q=%23WomenInBlue' },
-    { tag:'#BarbaraMori',    weight:6,  url:'https://twitter.com/search?q=%23BarbaraMori' },
-    { tag:'#FernandoRovzar', weight:5,  url:'https://twitter.com/search?q=%23FernandoRovzar' },
-    { tag:'#AppleTV',        weight:5,  url:'https://twitter.com/search?q=%23AppleTV' },
-    { tag:'#AppleTVPlus',    weight:4,  url:'https://twitter.com/search?q=%23AppleTVPlus' },
-    { tag:'#DraMex',         weight:3,  url:'https://twitter.com/search?q=%23DraMex' },
-    { tag:'#Tlatelolco',     weight:3,  url:'https://twitter.com/search?q=%23Tlatelolco' },
-    { tag:'#Halconazo',      weight:2,  url:'https://twitter.com/search?q=%23Halconazo' },
-    { tag:'#Mexico1971',     weight:2,  url:'https://twitter.com/search?q=%23Mexico1971' },
-  ];
-  const maxW = Math.max(...TAGS.map(t => t.weight));
-  const COLORS = ['#60a5fa','#34d399','#fb923c','#c084fc','#f472b6','#facc15'];
-  el.innerHTML = TAGS.map((t, i) => {
-    const pct = t.weight / maxW;
-    const size = Math.round(11 + pct * 13);
-    const op = 0.55 + pct * 0.45;
-    const color = COLORS[i % COLORS.length];
-    return `<a href="${t.url}" target="_blank" rel="noopener noreferrer" class="wc-tag" style="font-size:${size}px;color:${color};opacity:${op};font-family:monospace;font-weight:700;text-decoration:none">${t.tag} ↗</a>`;
-  }).join('');
-})();
-
-// SOCIAL MENTIONS TIMELINE
-(function buildSocialTimeline() {
-  const el = document.getElementById('social-mentions-feed');
-  if (!el) return;
-  const PLAT_ICON = {
-    twitter:   { bg:'#1DA1F2', lbl:'𝕏', label:'Twitter/X' },
-    instagram: { bg:'#E1306C', lbl:'📸', label:'Instagram' },
-    tiktok:    { bg:'#010101', lbl:'♪', label:'TikTok' },
-  };
-  const MENTIONS = [
-    { plat:'twitter',   handle:'@cinefilo_mx',    date:'Aug 12',
-      text:'"<em>Las Azules</em> temporada 2 es exactamente lo que el mundo necesita ahora mismo. Brutal, necesaria, hermosa. @AppleTVPlus <span style="color:#93c5fd">#MujeresDeAzul</span>"',
-      url:'https://twitter.com/search?q=%23MujeresDeAzul' },
-    { plat:'twitter',   handle:'@streaming_snob', date:'Aug 12',
-      text:'"Women in Blue S2 is everything I hoped for and more. The historical setting makes it hit different. <span style="color:#93c5fd">#WomenInBlue #LasAzules</span>"',
-      url:'https://twitter.com/search?q=%23WomenInBlue' },
-    { plat:'instagram', handle:'@applefanatica',   date:'Aug 12',
-      text:'"Barbara Mori en Las Azules S2 es pura potencia actoral. Qué interpretación. <span style="color:#93c5fd">#BarbaraMori #LasAzulesS2 @AppleTVPlus</span>"',
-      url:'https://www.instagram.com/explore/tags/LasAzulesS2/' },
-  ];
-  el.innerHTML = MENTIONS.map(m => {
-    const p = PLAT_ICON[m.plat];
-    return `<div style="display:flex;gap:10px;padding:12px;border:1px solid #1c2b3e;border-radius:4px;transition:border-color 0.12s" onmouseover="this.style.borderColor='#243549'" onmouseout="this.style.borderColor='#1c2b3e'">
-      <div style="width:28px;height:28px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;color:#fff;background:${p.bg}">${p.lbl}</div>
-      <div style="flex:1;min-width:0">
-        <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
-          <a href="${m.url}" target="_blank" rel="noopener noreferrer" style="font-size:11px;font-weight:700;color:#f1f5f9;text-decoration:none">${m.handle} ↗</a>
-          <span style="color:#1c2b3e;font-size:10px">·</span>
-          <span style="font-size:11px;color:#3d5270">${p.label}</span>
-          <span style="color:#1c2b3e;font-size:10px">·</span>
-          <span style="font-size:11px;color:#3d5270">${m.date}</span>
-        </div>
-        <p style="font-size:13px;color:#8fa3b9;line-height:1.6">${m.text}</p>
-      </div>
-    </div>`;
-  }).join('');
-})();
-
-// INIT
 routeFromHash();
-selectPlatform('instagram');
 </script>
 </body>
 </html>
