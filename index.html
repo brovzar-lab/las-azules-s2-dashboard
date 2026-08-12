@@ -427,24 +427,13 @@
 
   <!-- Team Discussion -->
   <div class="card p-5">
-    <div class="flex items-center justify-between mb-3">
-      <p class="text-sm font-semibold text-slate-300">Team Discussion</p>
-      <a href="https://paperclip.billyrovzar.com/LEMA/issues/LEMA-8461" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 hover:text-blue-300 transition-colors">LEMA-8461 ↗</a>
-    </div>
-    <div id="team-disc-msgs" class="space-y-2 mb-3 max-h-64 overflow-y-auto"></div>
-    <div class="flex gap-2 flex-wrap sm:flex-nowrap">
-      <input id="disc-name" type="text" placeholder="Your name…" maxlength="24"
-        class="px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder-slate-600 transition-colors w-28 flex-shrink-0"
-        style="border-color:rgba(255,255,255,0.1)" />
-      <input id="disc-input" type="text" placeholder="Add a note or comment…"
-        class="flex-1 px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder-slate-600 transition-colors min-w-0"
-        style="border-color:rgba(255,255,255,0.1)"
-        onkeydown="if(event.key==='Enter')postDiscMsg()" />
-      <button onclick="postDiscMsg()"
-        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors flex-shrink-0"
-        style="min-height:40px">Post</button>
-    </div>
-    <p class="text-xs text-slate-600 mt-2">Notes stored locally in this browser.</p>
+    <p class="text-sm font-semibold text-slate-300 mb-2">Team Discussion</p>
+    <p class="text-sm text-slate-400 leading-relaxed mb-4">Campaign decisions, social feedback, and coordination live in the main issue thread — not a local notes field.</p>
+    <a href="https://paperclip.billyrovzar.com/LEMA/issues/LEMA-8461" target="_blank" rel="noopener noreferrer"
+       class="inline-flex items-center gap-2 px-4 py-2.5 bg-blue-600/15 hover:bg-blue-600/25 border border-blue-500/30 text-blue-300 text-sm font-semibold rounded-xl transition-colors">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Open LEMA-8461 Discussion ↗
+    </a>
   </div>
 </section>
 
@@ -916,12 +905,12 @@ document.getElementById('episode-list').innerHTML = EPISODES.map(e => {
 }).join('');
 
 document.getElementById('cast-list').innerHTML = CAST.map(c => `
-  <div class="flex items-start gap-3">
-    <div class="w-8 h-8 rounded-full bg-blue-600/30 flex items-center justify-center text-sm font-bold text-blue-300 flex-shrink-0">${c.initials}</div>
+  <div class="cast-card flex items-start gap-3">
+    <div class="cast-avatar w-8 h-8 rounded-full bg-blue-600/30 flex items-center justify-center text-sm font-bold text-blue-300 flex-shrink-0">${c.initials}</div>
     <div class="flex-1 min-w-0">
-      <a href="${c.link}" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white hover:text-blue-300 transition-colors">${c.name}${c.link ? ' ↗' : ''}</a>
-      ${c.role ? `<p class="text-xs text-blue-300">${c.role}</p>` : ''}
-      ${c.note ? `<p class="text-xs text-slate-500 mt-0.5">${c.note}</p>` : ''}
+      ${c.link ? `<a href="${c.link}" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white hover:text-blue-300 transition-colors">${c.name} ↗</a>` : `<span class="text-sm font-semibold text-white">${c.name}</span>`}
+      ${c.role ? `<p class="text-xs text-blue-300 mt-0.5">${c.role}</p>` : ''}
+      ${c.note ? `<p class="cast-note text-xs text-slate-500 mt-0.5 leading-tight">${c.note}</p>` : ''}
     </div>
   </div>`).join('');
 
