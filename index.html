@@ -23,6 +23,9 @@
       #sidenav{display:none}
       #content{margin-left:0;padding-bottom:5rem}
       #bottomnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:40;background:rgba(9,14,27,0.98);border-top:1px solid rgba(255,255,255,0.06);height:4rem}
+      .filter-row{flex-wrap:nowrap!important;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+      .filter-row>*{flex-shrink:0}
+      .mobile-stack{flex-direction:column!important}
     }
 
     /* ── Pages ── */
@@ -57,6 +60,9 @@
     .live-ping{animation:ping 1.5s cubic-bezier(0,0,.2,1) infinite}
     @keyframes ping{75%,100%{transform:scale(2);opacity:0}}
 
+    /* ── Toast ── */
+    .toast{position:fixed;bottom:6rem;left:50%;transform:translateX(-50%);background:#16a34a;color:#fff;font-size:.8rem;font-weight:600;padding:.45rem 1.1rem;border-radius:1rem;z-index:99;opacity:1;transition:opacity .3s;pointer-events:none;white-space:nowrap}
+
     /* ── Post builder slide-over ── */
     #post-overlay{position:fixed;inset:0;z-index:48;background:rgba(0,0,0,0.65);opacity:0;pointer-events:none;transition:opacity 0.25s}
     #post-overlay.open{opacity:1;pointer-events:all}
@@ -81,6 +87,31 @@
     .platform-tab.active{background:rgba(37,99,235,0.2);border-color:rgba(37,99,235,0.5);color:#fff}
     input[type=text],input[type=search]{outline:none}
     input[type=text]:focus,input[type=search]:focus,textarea:focus,select:focus{border-color:#2563EB!important;outline:none}
+
+    /* ── Mobile filters (horizontal scroll) ── */
+    @media(max-width:767px){
+      .filter-bar{display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;gap:8px;scrollbar-width:none}
+      .filter-bar::-webkit-scrollbar{display:none}
+      .filter-bar input,.filter-bar select{flex-shrink:0;min-width:140px}
+      .filter-bar input[type=search]{min-width:180px}
+    }
+
+    /* ── URL row in post builder ── */
+    .url-row{display:flex;gap:6px;align-items:stretch}
+    .url-row input{flex:1;min-width:0}
+    .url-btn{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#94A3B8;transition:background 0.15s,color 0.15s;cursor:pointer;text-decoration:none;font-size:13px}
+    .url-btn:hover{background:rgba(255,255,255,0.1);color:#fff}
+
+    /* ── Copy flash ── */
+    .copy-flash{color:#4ade80!important}
+
+    /* ── ES label hint ── */
+    .es-hint{font-size:10px;color:#64748b;margin-left:4px;font-weight:400}
+
+    /* ── Mobile post builder ES/EN stacked ── */
+    @media(max-width:600px){
+      #pb-columns{flex-direction:column!important}
+    }
   </style>
 </head>
 <body class="antialiased">
@@ -266,8 +297,8 @@
   </div>
 
   <!-- Filters -->
-  <div class="flex flex-wrap gap-2 mb-6">
-    <input id="cov-search" type="search" placeholder="Search outlets or headlines…" class="px-3 py-2 text-sm bg-white/5 border border-white/12 rounded-lg text-white placeholder-slate-600 transition-colors flex-1 min-w-48" style="border-color:rgba(255,255,255,0.12)" />
+  <div class="filter-row flex flex-wrap gap-2 mb-6">
+    <input id="cov-search" type="search" placeholder="Search…" class="px-3 py-2 text-sm bg-white/5 border border-white/12 rounded-lg text-white placeholder-slate-600 transition-colors flex-1 min-w-36" style="border-color:rgba(255,255,255,0.12)" />
     <select id="cov-market" class="px-3 py-2 text-sm bg-white/5 border border-white/12 rounded-lg text-slate-300 transition-colors" style="border-color:rgba(255,255,255,0.12)">
       <option value="">All Markets</option>
       <option value="US">US</option>
@@ -373,13 +404,24 @@
 
   <!-- Team Discussion -->
   <div class="card p-5">
-    <p class="text-sm font-semibold text-slate-300 mb-2">Team Discussion</p>
-    <p class="text-sm text-slate-400 leading-relaxed mb-4">Campaign decisions, social feedback, and coordination live in the main issue thread — not a local notes field.</p>
-    <a href="https://lemon.paperclip.ing/LEMA/issues/LEMA-8461" target="_blank" rel="noopener noreferrer"
-       class="inline-flex items-center gap-2 px-4 py-2.5 bg-blue-600/15 hover:bg-blue-600/25 border border-blue-500/30 text-blue-300 text-sm font-semibold rounded-xl transition-colors">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      Open LEMA-8461 Discussion ↗
-    </a>
+    <div class="flex items-center justify-between mb-3">
+      <p class="text-sm font-semibold text-slate-300">Team Discussion</p>
+      <a href="https://paperclip.billyrovzar.com/LEMA/issues/LEMA-8461" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 hover:text-blue-300 transition-colors">LEMA-8461 ↗</a>
+    </div>
+    <div id="team-disc-msgs" class="space-y-2 mb-3 max-h-64 overflow-y-auto"></div>
+    <div class="flex gap-2 flex-wrap sm:flex-nowrap">
+      <input id="disc-name" type="text" placeholder="Your name…" maxlength="24"
+        class="px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder-slate-600 transition-colors w-28 flex-shrink-0"
+        style="border-color:rgba(255,255,255,0.1)" />
+      <input id="disc-input" type="text" placeholder="Add a note or comment…"
+        class="flex-1 px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder-slate-600 transition-colors min-w-0"
+        style="border-color:rgba(255,255,255,0.1)"
+        onkeydown="if(event.key==='Enter')postDiscMsg()" />
+      <button onclick="postDiscMsg()"
+        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors flex-shrink-0"
+        style="min-height:40px">Post</button>
+    </div>
+    <p class="text-xs text-slate-600 mt-2">Notes stored locally in this browser.</p>
   </div>
 </section>
 
@@ -491,7 +533,11 @@
     <div>
       <label class="text-xs text-slate-400 font-semibold uppercase tracking-wider block mb-2">Article / Source</label>
       <input id="pb-headline" type="text" placeholder="Headline or topic…" class="w-full px-3 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder-slate-600 transition-colors mb-2" />
-      <input id="pb-url" type="text" placeholder="https://…" class="w-full px-3 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder-slate-600 transition-colors mb-2" />
+      <div class="flex gap-1.5 mb-2">
+        <input id="pb-url" type="text" placeholder="https://…" class="flex-1 px-3 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder-slate-600 transition-colors" oninput="syncPbUrlLink()" />
+        <button onclick="copyPbUrl()" title="Copy URL" class="px-3 py-2.5 bg-white/6 hover:bg-white/12 border border-white/10 rounded-lg text-slate-400 hover:text-white transition-colors flex-shrink-0 text-xs font-bold">Copy</button>
+        <a id="pb-url-link" href="#" target="_blank" rel="noopener noreferrer" title="Open URL" class="px-3 py-2.5 bg-white/6 hover:bg-white/12 border border-white/10 rounded-lg text-slate-400 hover:text-white transition-colors flex-shrink-0 text-xs font-bold flex items-center">↗</a>
+      </div>
       <input id="pb-outlet" type="text" placeholder="Outlet / source name…" class="w-full px-3 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder-slate-600 transition-colors mb-2" />
       <textarea id="pb-excerpt" rows="2" placeholder="Excerpt / key quote (optional)…" class="w-full px-3 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder-slate-600 transition-colors"></textarea>
     </div>
@@ -943,17 +989,24 @@ function buildPost(lang, headline, url, outlet, excerpt, platform) {
   const u = url || 'https://tv.apple.com/us/show/women-in-blue/umc.cmc.2r80bdb47xcb0p7zicm78ggwf';
 
   if (platform === 'twitter') {
-    const ht  = lang === 'es' ? ht_es_short : ht_en_short;
-    const suffix = ` ${ht} ${u}`;
-    const maxH = 280 - suffix.length;
-    const head = h.length > maxH ? h.substring(0, maxH - 1) + '…' : h;
-    return `${head}${suffix}`;
+    if (lang === 'es') {
+      const intro = '🎬 ¡Mujeres de Azul S2 ya llegó! ';
+      const suffix = ` — ${ht_es_short} ${u}`;
+      const maxH = 280 - intro.length - suffix.length;
+      const head = h.length > maxH ? h.substring(0, maxH - 1) + '…' : h;
+      return `${intro}${head}${suffix}`;
+    } else {
+      const suffix = ` ${ht_en_short} ${u}`;
+      const maxH = 280 - suffix.length;
+      const head = h.length > maxH ? h.substring(0, maxH - 1) + '…' : h;
+      return `${head}${suffix}`;
+    }
   }
 
   if (platform === 'instagram') {
     if (lang === 'es') {
       const body = excerptShort || h;
-      return `${body}\n\nMujeres De Azul S2 ya disponible en @AppleTVPlus. 🎬\n\n${u}\n\n${ht_es_full}`;
+      return `📺 ¡Nueva cobertura de Mujeres de Azul S2!\n\n"${body}"\n\n✅ Ya disponible en @AppleTVPlus. 🎬\n${outlet ? `Vía ${outlet}\n` : ''}${u}\n\n${ht_es_full}`;
     } else {
       const body = excerptShort || h;
       return `${body}\n\nWomen in Blue S2 is now streaming on @AppleTV+. 🎬\n\n${u}\n\n${ht_en_full}`;
@@ -962,7 +1015,7 @@ function buildPost(lang, headline, url, outlet, excerpt, platform) {
 
   if (platform === 'linkedin') {
     if (lang === 'es') {
-      return `📺 ${h}\n\n${excerpt || excerptShort}\n\n${outlet ? `Fuente: ${outlet}\n` : ''}${u}\n\n#MujeresDeAzul #LasAzules #AppleTV #LemonStudios #FernandoRovzar #BarbaraMori #DraSerie`;
+      return `📺 Mujeres de Azul — Temporada 2\n\n"${excerpt || excerptShort || h}"\n\n${outlet ? `Fuente: ${outlet}\n` : ''}🍎 Ya disponible en Apple TV+\n${u}\n\n#MujeresDeAzul #LasAzules #AppleTV #LemonStudios #FernandoRovzar #BarbaraMori #DraSerie`;
     } else {
       return `📺 ${h}\n\n${excerpt || excerptShort}\n\n${outlet ? `Source: ${outlet}\n` : ''}${u}\n\n#WomenInBlue #LasAzules #AppleTV #LemonStudios #FernandoRovzar #BarbaraMori #CrimeDrama`;
     }
@@ -970,7 +1023,7 @@ function buildPost(lang, headline, url, outlet, excerpt, platform) {
 
   if (platform === 'facebook') {
     if (lang === 'es') {
-      return `${h}\n\n${excerpt}\n\n${outlet ? `Vía ${outlet}: ` : ''}${u}\n\n${ht_es_short} #AppleTV #BarbaraMori #FernandoRovzar`;
+      return `Mujeres de Azul Temporada 2 ya está en Apple TV+\n\n"${excerpt || h}"\n\n${outlet ? `Vía ${outlet}: ` : ''}${u}\n\n${ht_es_short} #AppleTV #BarbaraMori #FernandoRovzar`;
     } else {
       return `${h}\n\n${excerpt}\n\nVia ${outlet || 'Apple TV+'}: ${u}\n\n${ht_en_short} #AppleTV #BarbaraMori #FernandoRovzar`;
     }
@@ -978,7 +1031,7 @@ function buildPost(lang, headline, url, outlet, excerpt, platform) {
 
   if (platform === 'tiktok') {
     if (lang === 'es') {
-      return `¿Ya viste esto? 👀\n\n${h}\n\n${u}\n\n${ht_es_short} #BarbaraMori #FernandoRovzar #Tlatelolco`;
+      return `¿Ya viste esto? 👀\n\nMujeres de Azul S2 ya llegó — ${h}\n\n${u}\n\n${ht_es_short} #BarbaraMori #FernandoRovzar #Tlatelolco`;
     } else {
       return `Did you see this? 👀\n\n${h}\n\n${u}\n\n${ht_en_short} #BarbaraMori #FernandoRovzar`;
     }
@@ -1022,6 +1075,25 @@ function copyPost(lang) {
   }).catch(() => {
     ta.select();
     document.execCommand('copy');
+  });
+}
+
+function syncPbUrlLink() {
+  const url = document.getElementById('pb-url').value.trim();
+  const link = document.getElementById('pb-url-link');
+  if (link) link.href = url || '#';
+}
+
+function copyPbUrl() {
+  const url = document.getElementById('pb-url').value.trim();
+  if (!url) return;
+  navigator.clipboard.writeText(url).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = url;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
   });
 }
 
