@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Azules S2 — Media Intelligence Room V7 | Lemon Studios</title>
+  <title>Las Azules S2 — Media Intelligence Room V8 | Lemon Studios</title>
   <meta name="description" content="Media intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -513,7 +513,7 @@
 
     /* ── Platform buttons ── */
     .plat-btn {
-      padding: 5px 11px;
+      padding: 5px 12px;
       font-size: 10px;
       font-weight: 700;
       letter-spacing: .05em;
@@ -523,6 +523,7 @@
       color: var(--ink3);
       cursor: pointer;
       transition: all .1s;
+      white-space: nowrap;
     }
     .plat-btn.active {
       background: var(--poster-blue);
@@ -530,7 +531,68 @@
       border-color: var(--poster-blue);
     }
 
-    @media (max-width: 600px) { #pb-columns { grid-template-columns: 1fr !important; } }
+    /* ── Quick-generate topic chips ── */
+    .quick-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid var(--bd);
+      background: var(--white);
+      color: var(--ink2);
+      cursor: pointer;
+      transition: all .1s;
+      font-family: inherit;
+    }
+    .quick-chip:hover {
+      border-color: var(--poster-blue);
+      color: var(--poster-blue);
+      background: rgba(27,123,196,0.04);
+    }
+    .quick-chip.active-chip {
+      background: var(--poster-blue);
+      color: #fff;
+      border-color: var(--poster-blue);
+    }
+
+    /* ── Image dimension guide ── */
+    .pb-img-guide {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      background: rgba(27,123,196,0.07);
+      border: 1px solid rgba(27,123,196,0.18);
+      font-size: 11px;
+      color: var(--poster-blue);
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+
+    /* ── Mobile responsive ── */
+    @media (max-width: 600px) {
+      #pb-columns { grid-template-columns: 1fr !important; }
+      .chart-3col { grid-template-columns: 1fr !important; }
+      .ep-cast-grid { grid-template-columns: 1fr !important; }
+      .quote-grid { grid-template-columns: 1fr !important; }
+      .score-grid { grid-template-columns: 1fr !important; }
+      .show-syn-grid { grid-template-columns: 1fr !important; }
+      /* Platform tabs — horizontal scroll row, no wrap */
+      #pb-plat-btns { flex-wrap: nowrap !important; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 3px; scrollbar-width: none; }
+      #pb-plat-btns::-webkit-scrollbar { display: none; }
+      #pb-plat-btns .plat-btn { flex-shrink: 0; }
+      /* Quick chips scroll */
+      #pb-quick-chips { flex-wrap: nowrap !important; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+      #pb-quick-chips::-webkit-scrollbar { display: none; }
+      #pb-quick-chips .quick-chip { flex-shrink: 0; }
+      /* Copy buttons — full width + 44px tap target on mobile */
+      .pb-copy-btn { width: 100% !important; min-height: 44px; }
+    }
+    @media (max-width: 480px) {
+      .stat-grid { grid-template-columns: repeat(2,1fr) !important; }
+    }
 
     /* ── Scrollbar ── */
     ::-webkit-scrollbar { width: 4px; }
@@ -562,7 +624,7 @@
 
   <div class="tnav-right">
     <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
-    <span class="v4-badge">V7</span>
+    <span class="v4-badge">V8</span>
   </div>
 </nav>
 
@@ -652,7 +714,7 @@
       <p class="sec-caption">Click any bar to filter the coverage ledger to that segment.</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:48px">
+    <div class="chart-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:48px">
       <div style="background:var(--white);padding:22px">
         <p class="sec-label" style="margin-bottom:14px">By Market</p>
         <div id="chart-market"></div>
@@ -687,7 +749,7 @@
       </div>
       <p class="sec-caption">Season 2 scores accumulate over the 8-week run through Sep 30.</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 240px;gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:48px">
+    <div class="score-grid" style="display:grid;grid-template-columns:1fr 240px;gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:48px">
       <div style="background:var(--white);padding:26px">
         <p style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Season 2 — Scores Accumulating</p>
         <p style="font-size:13px;color:var(--ink2);line-height:1.65;margin-bottom:18px">Rotten Tomatoes, IMDb, and Metacritic scores build over the 8-week season. Season 1 baseline: <strong style="color:var(--ink1)">100% RT · 7.3 IMDb · 76 Metacritic</strong>.</p>
@@ -713,7 +775,7 @@
       </div>
       <p class="sec-caption">Cast, creator, and critic voices for social amplification.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd)">
+    <div class="quote-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd)">
       <blockquote style="background:var(--white);padding:24px 26px">
         <p style="font-family:'Playfair Display',serif;font-size:.95rem;color:var(--ink1);line-height:1.7;font-style:italic;margin-bottom:12px">"If in the first season the enemy was a serial killer, in this season it's an entire system."</p>
         <footer style="font-size:10px;font-weight:700;color:var(--coral);letter-spacing:.06em;text-transform:uppercase">Fernando Rovzar — Creator &amp; Showrunner</footer>
@@ -774,62 +836,100 @@
 
 <!-- ─── PAGE: SOCIAL ─── -->
 <section id="page-social" class="page">
-  <div class="mini-hero">
-    <div class="container">
+  <div class="mini-hero" style="position:relative;overflow:hidden">
+    <div style="position:absolute;right:0;top:0;bottom:0;width:45%;background:url('https://img.youtube.com/vi/1lVJ96Oi9UY/hqdefault.jpg') center/cover no-repeat;mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,0.15) 30%,rgba(0,0,0,0.35) 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,0.15) 30%,rgba(0,0,0,0.35) 100%);pointer-events:none"></div>
+    <div class="container" style="position:relative">
       <p class="hero-eyebrow">Social Media</p>
       <h1 style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1.05;margin-bottom:8px">Post Generator</h1>
-      <p style="font-size:13px;color:rgba(255,255,255,0.4)">Build bilingual posts in English and Spanish, track hashtags and mentions</p>
+      <p style="font-size:13px;color:rgba(255,255,255,0.4)">Pick a platform · tap a topic · get a bilingual post ready to copy &amp; paste</p>
     </div>
   </div>
 
   <div class="container" style="padding-top:40px;padding-bottom:48px">
 
-    <!-- Inline Bilingual Post Builder -->
-    <div class="card" style="padding:28px 32px;margin-bottom:48px;border-left:3px solid var(--poster-blue)">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap">
-        <div>
-          <p class="sec-label" style="margin-bottom:3px">Bilingual Post Builder</p>
-          <p style="font-size:11px;color:var(--ink3)">Paste an article headline + URL and generate ready-to-post copy in both languages</p>
+    <!-- AI Post Generator V8 -->
+    <div class="card" style="overflow:hidden;margin-bottom:48px;border-left:3px solid var(--poster-blue)">
+
+      <!-- Platform + Image Guide -->
+      <div style="padding:22px 26px 16px;border-bottom:1px solid var(--bd)">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+          <div>
+            <p class="sec-label" style="margin-bottom:2px">AI Post Generator</p>
+            <p style="font-size:11px;color:var(--ink3)">Pick a topic — fully written bilingual posts, ready to copy &amp; paste</p>
+          </div>
         </div>
-        <div style="display:flex;gap:5px;flex-wrap:wrap" id="pb-plat-btns">
+        <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px" id="pb-plat-btns">
           <button onclick="selectPlatform('twitter')"   id="pb-btn-twitter"   class="plat-btn" style="font-family:inherit">Twitter / X</button>
           <button onclick="selectPlatform('instagram')" id="pb-btn-instagram" class="plat-btn" style="font-family:inherit">Instagram</button>
           <button onclick="selectPlatform('linkedin')"  id="pb-btn-linkedin"  class="plat-btn" style="font-family:inherit">LinkedIn</button>
           <button onclick="selectPlatform('facebook')"  id="pb-btn-facebook"  class="plat-btn" style="font-family:inherit">Facebook</button>
+          <button onclick="selectPlatform('tiktok')"    id="pb-btn-tiktok"    class="plat-btn" style="font-family:inherit">TikTok</button>
+        </div>
+        <!-- Visual image spec card -->
+        <div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:rgba(27,123,196,0.06);border:1px solid rgba(27,123,196,0.16)">
+          <div id="pb-spec-box" style="flex-shrink:0;border:1.5px solid rgba(27,123,196,0.35);display:flex;align-items:center;justify-content:center;font-size:6px;font-weight:800;color:var(--poster-blue);letter-spacing:.04em;text-align:center;line-height:1.3;width:48px;height:36px"></div>
+          <div style="flex:1;min-width:0">
+            <p id="pb-img-text" style="font-size:11px;font-weight:600;color:var(--poster-blue);line-height:1.5"></p>
+          </div>
+          <button onclick="copyImgSpec()" style="flex-shrink:0;font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 10px;border:1px solid rgba(27,123,196,0.3);background:var(--white);color:var(--poster-blue);cursor:pointer;font-family:inherit;white-space:nowrap" onmouseover="this.style.background='rgba(27,123,196,0.07)'" onmouseout="this.style.background='var(--white)'">Copy</button>
         </div>
       </div>
 
-      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
-        <input id="pb-headline" type="text" placeholder="Article headline or topic…" class="field" style="width:100%" />
-        <div style="display:flex;gap:6px">
-          <input id="pb-url" type="text" placeholder="Article URL (https://…)" class="field" style="flex:1" oninput="syncPbUrlLink()" />
-          <a id="pb-url-link" href="#" target="_blank" rel="noopener noreferrer" class="url-btn" title="Open URL">↗</a>
+      <!-- Quick Generate — one tap, no typing -->
+      <div style="padding:18px 26px;border-bottom:1px solid var(--bd);background:var(--smoke)">
+        <p style="font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px">One-tap generate — no typing needed</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px" id="pb-quick-btns">
+          <button onclick="quickGenerate(0)" class="quick-chip" style="font-family:inherit">🎬 Premiere</button>
+          <button onclick="quickGenerate(1)" class="quick-chip" style="font-family:inherit">⭐ Screen Anarchy 4/5</button>
+          <button onclick="quickGenerate(2)" class="quick-chip" style="font-family:inherit">💬 Fernando Quote</button>
+          <button onclick="quickGenerate(3)" class="quick-chip" style="font-family:inherit">💬 Barbara Mori</button>
+          <button onclick="quickGenerate(4)" class="quick-chip" style="font-family:inherit">📺 Episode 1 Live</button>
+          <button onclick="quickGenerate(5)" class="quick-chip" style="font-family:inherit">📰 Latest Article</button>
         </div>
-        <div style="display:flex;gap:6px">
-          <input id="pb-outlet" type="text" placeholder="Outlet / publication name…" class="field" style="flex:1" />
-          <button onclick="generatePost()" style="padding:8px 18px;background:var(--poster-blue);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit;white-space:nowrap" onmouseover="this.style.opacity='.82'" onmouseout="this.style.opacity='1'">Generate ↗</button>
-        </div>
-        <textarea id="pb-excerpt" rows="2" placeholder="Key quote or excerpt (optional)…" class="field" style="width:100%;resize:vertical"></textarea>
       </div>
 
-      <p id="pb-limit-note" style="font-size:10px;color:var(--ink3);margin-bottom:10px"></p>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px" id="pb-columns">
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
-            <p style="font-size:10px;font-weight:700;color:var(--poster-blue);letter-spacing:.08em;text-transform:uppercase">Español</p>
-            <button onclick="copyPost('es')" style="font-size:10px;font-weight:600;padding:3px 9px;border:1px solid var(--bd);background:none;cursor:pointer;color:var(--ink2);font-family:inherit">Copiar</button>
+      <!-- Custom topic (collapsed) -->
+      <div style="padding:14px 26px;border-bottom:1px solid var(--bd)">
+        <button onclick="togglePbCustom()" id="pb-custom-toggle"
+          style="font-size:11px;font-weight:600;color:var(--poster-blue);background:none;border:none;cursor:pointer;padding:0;font-family:inherit;display:flex;align-items:center;gap:5px">
+          <span id="pb-custom-arrow">+</span> Custom topic or article
+        </button>
+        <div id="pb-custom-wrap" style="display:none;margin-top:14px;display:none">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <input id="pb-headline" type="text" placeholder="Article headline or topic…" class="field" style="width:100%" />
+            <div style="display:flex;gap:6px">
+              <input id="pb-url" type="text" placeholder="Article URL (https://…)" class="field" style="flex:1" oninput="syncPbUrlLink()" />
+              <a id="pb-url-link" href="#" target="_blank" rel="noopener noreferrer" class="url-btn" title="Open URL">↗</a>
+            </div>
+            <div style="display:flex;gap:6px">
+              <input id="pb-outlet" type="text" placeholder="Outlet / publication…" class="field" style="flex:1" />
+              <button onclick="generatePost()" style="padding:8px 16px;background:var(--poster-blue);color:#fff;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit;white-space:nowrap" onmouseover="this.style.opacity='.82'" onmouseout="this.style.opacity='1'">Generate ↗</button>
+            </div>
+            <textarea id="pb-excerpt" rows="2" placeholder="Key quote or excerpt (optional)…" class="field" style="width:100%;resize:vertical"></textarea>
           </div>
-          <textarea id="pb-out-es" rows="6" class="field" style="width:100%;resize:vertical" oninput="updateCC('es')" placeholder="Post en español…"></textarea>
-          <p id="cc-es" style="font-size:10px;color:var(--ink3);text-align:right;margin-top:3px"></p>
         </div>
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
-            <p style="font-size:10px;font-weight:700;color:var(--poster-blue);letter-spacing:.08em;text-transform:uppercase">English</p>
-            <button onclick="copyPost('en')" style="font-size:10px;font-weight:600;padding:3px 9px;border:1px solid var(--bd);background:none;cursor:pointer;color:var(--ink2);font-family:inherit">Copy</button>
+      </div>
+
+      <!-- Output -->
+      <div style="padding:18px 26px">
+        <p id="pb-limit-note" style="font-size:10px;color:var(--ink3);margin-bottom:12px"></p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px" id="pb-columns">
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+              <p style="font-size:10px;font-weight:700;color:var(--poster-blue);letter-spacing:.1em;text-transform:uppercase">🇲🇽 Español</p>
+              <button onclick="copyPost('es')" style="font-size:10px;font-weight:600;padding:4px 10px;border:1px solid var(--poster-blue);color:var(--poster-blue);background:none;cursor:pointer;font-family:inherit" onmouseover="this.style.background='rgba(27,123,196,0.07)'" onmouseout="this.style.background='none'">Copiar</button>
+            </div>
+            <textarea id="pb-out-es" rows="8" class="field" style="width:100%;resize:vertical;line-height:1.6" oninput="updateCC('es')" placeholder="El post en español aparece aquí…"></textarea>
+            <p id="cc-es" style="font-size:10px;color:var(--ink3);text-align:right;margin-top:3px"></p>
           </div>
-          <textarea id="pb-out-en" rows="6" class="field" style="width:100%;resize:vertical" oninput="updateCC('en')" placeholder="Post in English…"></textarea>
-          <p id="cc-en" style="font-size:10px;color:var(--ink3);text-align:right;margin-top:3px"></p>
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+              <p style="font-size:10px;font-weight:700;color:var(--poster-blue);letter-spacing:.1em;text-transform:uppercase">🇺🇸 English</p>
+              <button onclick="copyPost('en')" style="font-size:10px;font-weight:600;padding:4px 10px;border:1px solid var(--poster-blue);color:var(--poster-blue);background:none;cursor:pointer;font-family:inherit" onmouseover="this.style.background='rgba(27,123,196,0.07)'" onmouseout="this.style.background='none'">Copy</button>
+            </div>
+            <textarea id="pb-out-en" rows="8" class="field" style="width:100%;resize:vertical;line-height:1.6" oninput="updateCC('en')" placeholder="The English post appears here…"></textarea>
+            <p id="cc-en" style="font-size:10px;color:var(--ink3);text-align:right;margin-top:3px"></p>
+          </div>
         </div>
       </div>
     </div>
@@ -874,6 +974,55 @@
       </a>
     </div>
 
+    <!-- Show images — visual stills from trailers for social posts -->
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Show Imagery</p>
+        <h2 class="sec-h2">Visuals for social</h2>
+        <hr class="sec-rule">
+      </div>
+      <p class="sec-caption">Click to open full-size. Right-click → Save to download.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:40px">
+      <a href="https://img.youtube.com/vi/1lVJ96Oi9UY/maxresdefault.jpg" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
+        <div style="aspect-ratio:16/9;background:url('https://img.youtube.com/vi/1lVJ96Oi9UY/hqdefault.jpg') center/cover;border:1px solid var(--bd);position:relative;overflow:hidden" onmouseover="this.querySelector('.img-overlay').style.opacity='1'" onmouseout="this.querySelector('.img-overlay').style.opacity='0'">
+          <div class="img-overlay" style="position:absolute;inset:0;background:rgba(7,14,30,0.65);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;transition:opacity .18s">
+            <span style="font-size:11px;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase">Open full-size ↗</span>
+            <span style="font-size:9px;color:rgba(255,255,255,0.55)">Right-click to save · 1280×720</span>
+          </div>
+        </div>
+        <p style="font-size:10px;color:var(--ink3);margin-top:5px">Trailer oficial · English · 16:9</p>
+      </a>
+      <a href="https://img.youtube.com/vi/6PM90l-KLyc/maxresdefault.jpg" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
+        <div style="aspect-ratio:16/9;background:url('https://img.youtube.com/vi/6PM90l-KLyc/hqdefault.jpg') center/cover;border:1px solid var(--bd);position:relative;overflow:hidden" onmouseover="this.querySelector('.img-overlay').style.opacity='1'" onmouseout="this.querySelector('.img-overlay').style.opacity='0'">
+          <div class="img-overlay" style="position:absolute;inset:0;background:rgba(7,14,30,0.65);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;transition:opacity .18s">
+            <span style="font-size:11px;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase">Open full-size ↗</span>
+            <span style="font-size:9px;color:rgba(255,255,255,0.55)">Right-click to save · 1280×720</span>
+          </div>
+        </div>
+        <p style="font-size:10px;color:var(--ink3);margin-top:5px">Tráiler oficial · Español · 16:9</p>
+      </a>
+      <a href="https://img.youtube.com/vi/lojkAQw_Bro/maxresdefault.jpg" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
+        <div style="aspect-ratio:16/9;background:url('https://img.youtube.com/vi/lojkAQw_Bro/hqdefault.jpg') center/cover;border:1px solid var(--bd);position:relative;overflow:hidden" onmouseover="this.querySelector('.img-overlay').style.opacity='1'" onmouseout="this.querySelector('.img-overlay').style.opacity='0'">
+          <div class="img-overlay" style="position:absolute;inset:0;background:rgba(7,14,30,0.65);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;transition:opacity .18s">
+            <span style="font-size:11px;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase">Open full-size ↗</span>
+            <span style="font-size:9px;color:rgba(255,255,255,0.55)">Right-click to save · 1280×720</span>
+          </div>
+        </div>
+        <p style="font-size:10px;color:var(--ink3);margin-top:5px">Segunda temporada · Español · 16:9</p>
+      </a>
+      <a href="https://img.youtube.com/vi/vqV6S2Y-ZAw/maxresdefault.jpg" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
+        <div style="aspect-ratio:16/9;background:url('https://img.youtube.com/vi/vqV6S2Y-ZAw/hqdefault.jpg') center/cover;border:1px solid var(--bd);position:relative;overflow:hidden" onmouseover="this.querySelector('.img-overlay').style.opacity='1'" onmouseout="this.querySelector('.img-overlay').style.opacity='0'">
+          <div class="img-overlay" style="position:absolute;inset:0;background:rgba(7,14,30,0.65);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;transition:opacity .18s">
+            <span style="font-size:11px;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase">Open full-size ↗</span>
+            <span style="font-size:9px;color:rgba(255,255,255,0.55)">Right-click to save · 1280×720</span>
+          </div>
+        </div>
+        <p style="font-size:10px;color:var(--ink3);margin-top:5px">Trailer italiano · Stagione 2 · 16:9</p>
+      </a>
+    </div>
+    <p style="font-size:10px;color:var(--ink3);margin-bottom:40px;margin-top:-28px">💡 For Instagram square (1080×1080) or Stories (1080×1920), contact @Marketing Assets Designer for properly cropped show stills.</p>
+
     <!-- Social mentions -->
     <div class="sec-header">
       <div class="sec-header-left">
@@ -891,12 +1040,20 @@
 
 <!-- ─── PAGE: SHOW UNIVERSE ─── -->
 <section id="page-show" class="page">
-  <div class="mini-hero">
-    <div class="container">
-      <p class="hero-eyebrow">Show Universe</p>
-      <h1 style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1.05;margin-bottom:8px">Las Azules</h1>
-      <p style="font-size:13px;color:rgba(255,255,255,0.4)">Episodes · Cast · Creative team · Historical context</p>
+  <!-- Show key art banner -->
+  <div style="position:relative;height:220px;overflow:hidden;background:#070e1e">
+    <img src="https://img.youtube.com/vi/1lVJ96Oi9UY/maxresdefault.jpg"
+         alt="Las Azules S2 — key art"
+         style="width:100%;height:100%;object-fit:cover;object-position:center 20%;opacity:0.6;display:block"
+         onerror="this.style.display='none'" />
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(7,14,30,0.2) 0%, rgba(7,14,30,0.85) 100%)"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 40px">
+      <p style="font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--poster-blue2);margin-bottom:6px">Apple TV+ · Lemon Studios</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;line-height:1;letter-spacing:-.01em">Las <em style="color:var(--poster-blue2);font-style:italic">Azules</em></h1>
     </div>
+  </div>
+  <div style="border-bottom:1px solid rgba(27,123,196,0.22);background:var(--nav-bg);padding:10px 40px">
+    <p style="font-size:11px;color:rgba(255,255,255,0.35)">Women in Blue · Season 2 · Episodes · Cast · Creative team · Historical context</p>
   </div>
 
   <div class="container" style="padding-top:40px;padding-bottom:48px">
@@ -911,7 +1068,7 @@
       <p style="font-size:13px;color:var(--ink2);line-height:1.72;max-width:640px">Mexico City, 1971. Lieutenant María and the Azules investigate a student activist's murder — uncovering a conspiracy reaching back to the Halconazo massacre. Created by <strong style="color:var(--ink1)">Fernando Rovzar</strong>, produced by <strong style="color:var(--ink1)">Lemon Studios</strong>. 8 episodes through September 30, 2026.</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:24px">
+    <div class="ep-cast-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:24px">
       <div style="background:var(--white);padding:24px">
         <p class="sec-label" style="margin-bottom:14px">Episode Schedule — Season 2</p>
         <div id="episode-list" style="display:flex;flex-direction:column;gap:2px"></div>
@@ -927,7 +1084,7 @@
       <div id="crew-list" style="display:flex;flex-direction:column;gap:1px;background:var(--bd)"></div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd)">
+    <div class="show-syn-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd)">
       <div style="background:var(--white);padding:24px">
         <p style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:10px">Historical Context — Season 2</p>
         <p style="font-size:13px;color:var(--ink2);line-height:1.68">Set in June 1971, centered on the <a href="https://en.wikipedia.org/wiki/Corpus_Christi_massacre" target="_blank" rel="noopener noreferrer" style="color:var(--ink1);font-weight:600;text-decoration:underline;text-underline-offset:3px">Halconazo (Corpus Christi Massacre) ↗</a>, where paramilitary "Halcones" attacked student protesters.</p>
@@ -1306,17 +1463,84 @@ function renderCoverage() {
   document.getElementById(id).addEventListener('change', renderCoverage);
 });
 
-/* ─── POST BUILDER ─── */
-const PLAT_LIMITS = {instagram:2200,twitter:280,linkedin:3000,facebook:500,tiktok:2200};
+/* ─── POST BUILDER V8 — Platform-smart AI generator ─── */
+const PLATFORM_GUIDE = {
+  twitter:   { limit: 280,  ratio: '16:9',  w: 48, h: 27, imgText: '1200 × 628 px (16:9) · link card auto-crops to 1.91:1 · also: 1080 × 1080 (square)' },
+  instagram: { limit: 2200, ratio: '1:1',   w: 36, h: 36, imgText: '1080 × 1080 px (square 1:1) · 1080 × 1350 (portrait 4:5) · Stories/Reels: 1080 × 1920 (9:16)' },
+  linkedin:  { limit: 3000, ratio: '1.91:1',w: 48, h: 25, imgText: '1200 × 627 px (1.91:1) · link share · or 1200 × 1200 for square' },
+  facebook:  { limit: 500,  ratio: '1.91:1',w: 48, h: 25, imgText: '1200 × 630 px (1.91:1) · link post · or 1080 × 1080 square' },
+  tiktok:    { limit: 2200, ratio: '9:16',  w: 20, h: 36, imgText: '1080 × 1920 px (9:16 vertical) · cover frame · also: 1080 × 1080 for square feed' },
+};
+
+/* Platform-specific smart templates */
+const PLAT_TMPL = {
+  twitter: (hl, url, exc, out) => {
+    const hook = exc ? `"${exc.substring(0,90)}…"` : hl.substring(0,120);
+    const src  = out ? ` · ${out}` : '';
+    return {
+      es: `🎬 ${hook}${src}\n\n#LasAzulesS2 #MujeresDeAzul #LasAzules${url?'\n'+url:''}`,
+      en: `🎬 ${hook}${src}\n\n#WomenInBlue #LasAzules #AppleTV${url?'\n'+url:''}`
+    };
+  },
+  instagram: (hl, url, exc, out) => {
+    const q  = exc ? `\n\n"${exc.substring(0,200)}"\n\n` : '\n\n';
+    const src = out ? `${out} · ` : '';
+    return {
+      es: `🎬 ${hl}${q}${src}La temporada 2 de #LasAzules ya disponible en @AppleTVMX ✨\n\nDesafía el sistema. Descubre la verdad.\n\n.\n.\n.\n#LasAzulesS2 #MujeresDeAzul #BarbaraMori #XimenaSarinana #FernandoRovzar #DraMex #AppleTVPlus #Mexico1971 #Tlatelolco`,
+      en: `🎬 ${hl}${q}${src}Las Azules Season 2 is now streaming on @AppleTV ✨\n\nChallenge the system. Discover the truth.\n\n.\n.\n.\n#WomenInBlue #LasAzules #LasAzulesS2 #BarbaraMori #AppleTVPlus #FernandoRovzar #MexicanDrama #Tlatelolco`
+    };
+  },
+  linkedin: (hl, url, exc, out) => {
+    const src = out ? ` · ${out}` : '';
+    const q   = exc ? `\n\n"${exc.substring(0,250)}"` : '';
+    return {
+      es: `La historia que México necesitaba contar.\n\n${hl}${src}${q}\n\nLas Azules — temporada 2 ya disponible en Apple TV+. Una investigación policial en el México de 1971 que desafía el sistema desde adentro.\n\nCreada por Fernando Rovzar. Producida por Lemon Studios.\n\n#LasAzules #AppleTVPlus #CineLatino #FernandoRovzar #ProduccionMexicana${url?'\n\n'+url:''}`,
+      en: `The story Mexico needed to tell.\n\n${hl}${src}${q}\n\nLas Azules (Women in Blue) Season 2 is streaming on Apple TV+. A police procedural set in 1971 Mexico City — challenging the system from within.\n\nCreated by Fernando Rovzar. Produced by Lemon Studios.\n\n#WomenInBlue #LasAzules #AppleTVPlus #MexicanDrama #LemonStudios${url?'\n\n'+url:''}`
+    };
+  },
+  facebook: (hl, url, exc, out) => {
+    const src = out ? ` — ${out}` : '';
+    const q   = exc ? `\n\n"${exc.substring(0,180)}"\n\n` : '\n\n';
+    return {
+      es: `✨ ${hl}${src}${q}¿Ya viste la segunda temporada de Las Azules en Apple TV+? Comparte con quien debería verla 👇\n\n#LasAzulesS2 #MujeresDeAzul${url?'\n\n'+url:''}`,
+      en: `✨ ${hl}${src}${q}Have you watched Las Azules Season 2 on Apple TV+ yet? Tag someone who needs to see it 👇\n\n#WomenInBlue #LasAzulesS2${url?'\n\n'+url:''}`
+    };
+  },
+  tiktok: (hl, url, exc, out) => {
+    const hook = exc ? exc.substring(0,80) : hl.substring(0,70);
+    const src  = out ? `(${out}) ` : '';
+    return {
+      es: `¿Ya viste esto? 👀 ${src}\n\n${hook}\n\nMujeres de Azul S2 ya en @appletv 🎬\nMéxico 1971 🇲🇽 crimen + poder + verdad\n\n#MujeresDeAzul #LasAzulesS2 #SeriesMexicanas #AppleTV #fyp #parati`,
+      en: `Did you see this? 👀 ${src}\n\n${hook}\n\nWomen in Blue S2 now on @appletv 🎬\nMexico 1971 🇲🇽 crime + power + truth\n\n#WomenInBlue #LasAzules #LasAzulesS2 #AppleTV #fyp #foryou`
+    };
+  }
+};
+
+/* Quick-generate presets — no typing needed */
+const QUICK_TOPICS = [
+  { label:'Premiere', hl:"Las Azules Season 2 — Now Streaming on Apple TV+", url:'https://tv.apple.com/show/women-in-blue/umc.cmc.4y2zk4k6eivf3owasidgxakqb', out:'Apple TV+', exc:"Desafía el sistema. Descubre la verdad. The most anticipated Latin American drama returns." },
+  { label:'Screen Anarchy 4/5', hl:"Women in Blue S2 Review — Screen Anarchy 4/5 ★", url:'https://screenanarchy.com/2026/08/women-in-blue-las-azules-s2-review.html', out:'Screen Anarchy', exc:"Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico's borders." },
+  { label:'Fernando Quote', hl:"Fernando Rovzar on Las Azules Season 2", url:'', out:'Fernando Rovzar', exc:"If in the first season the enemy was a serial killer, in this season it's an entire system." },
+  { label:'Barbara Mori', hl:"Barbara Mori on playing Lt. María in Season 2", url:'', out:'Barbara Mori', exc:"Now she's a woman giving herself permission to be. The entire season treats discovering who she really is." },
+  { label:'Episode 1 Live', hl:"Las Azules S2 Capítulo 1 — Now Streaming", url:'https://tv.apple.com/show/women-in-blue/umc.cmc.4y2zk4k6eivf3owasidgxakqb', out:'Apple TV+', exc:"Mexico City, 1971. Lieutenant María and the Azules investigate a student activist's murder — uncovering a conspiracy reaching back to the Halconazo massacre." },
+  { label:'Latest Article', dynamic:'latest' }
+];
+
 let currentPlatform = 'twitter';
+let activeTopic = -1;
 
 function openPostBuilder(article) {
   if (article) {
-    document.getElementById('pb-headline').value = article.headline;
-    document.getElementById('pb-url').value      = article.url;
-    document.getElementById('pb-outlet').value   = article.outlet;
-    document.getElementById('pb-excerpt').value  = article.excerpt || '';
-    syncPbUrlLink();
+    const hl = document.getElementById('pb-headline');
+    if (hl) {
+      hl.value = article.headline;
+      document.getElementById('pb-url').value    = article.url;
+      document.getElementById('pb-outlet').value = article.outlet;
+      document.getElementById('pb-excerpt').value = article.excerpt || '';
+      syncPbUrlLink();
+      showPbCustom(true);
+      generatePost();
+    }
   }
   nav('social');
   setTimeout(() => {
@@ -1330,12 +1554,84 @@ function closePostBuilder() {}
 function selectPlatform(p) {
   currentPlatform = p;
   document.querySelectorAll('.plat-btn').forEach(t => t.classList.toggle('active', t.id === 'pb-btn-' + p));
-  document.getElementById('pb-limit-note').textContent = 'Character limit: ' + PLAT_LIMITS[p];
+  const guide = PLATFORM_GUIDE[p];
+  if (guide) {
+    document.getElementById('pb-img-text').textContent = guide.imgText;
+    document.getElementById('pb-limit-note').textContent = 'Character limit: ' + guide.limit;
+    // Update visual aspect-ratio box
+    const box = document.getElementById('pb-spec-box');
+    if (box) {
+      box.style.width  = guide.w + 'px';
+      box.style.height = guide.h + 'px';
+      box.textContent  = guide.ratio;
+    }
+  }
+  updateCC('es'); updateCC('en');
+  if (activeTopic >= 0) _runGenerate(activeTopic);
+  else if (document.getElementById('pb-headline').value.trim()) generatePost();
+}
+
+function copyImgSpec() {
+  const guide = PLATFORM_GUIDE[currentPlatform];
+  if (!guide) return;
+  navigator.clipboard.writeText(guide.imgText).then(() => showToast('Image spec copied!'));
+}
+
+function quickGenerate(idx) {
+  activeTopic = idx;
+  document.querySelectorAll('.quick-chip').forEach((b, i) => b.classList.toggle('active-chip', i === idx));
+
+  let topic = QUICK_TOPICS[idx];
+  if (topic.dynamic === 'latest') {
+    const latest = MEDIA.slice().sort((a,b)=>b.ts-a.ts)[0];
+    topic = { hl: latest.headline, url: latest.url, out: latest.outlet, exc: latest.excerpt||'' };
+  }
+  _runGenerate(idx, topic);
+}
+
+function _runGenerate(idx, overrideTopic) {
+  const topic = overrideTopic || (QUICK_TOPICS[idx].dynamic === 'latest'
+    ? (() => { const l=MEDIA.slice().sort((a,b)=>b.ts-a.ts)[0]; return {hl:l.headline,url:l.url,out:l.outlet,exc:l.excerpt||''}; })()
+    : QUICK_TOPICS[idx]);
+  const tmpl = PLAT_TMPL[currentPlatform];
+  if (!tmpl) return;
+  const result = tmpl(topic.hl, topic.url, topic.exc, topic.out);
+  document.getElementById('pb-out-es').value = result.es;
+  document.getElementById('pb-out-en').value = result.en;
   updateCC('es'); updateCC('en');
 }
 
+function generatePost() {
+  activeTopic = -1;
+  document.querySelectorAll('.quick-chip').forEach(b => b.classList.remove('active-chip'));
+  const hl  = document.getElementById('pb-headline').value.trim();
+  const url = document.getElementById('pb-url').value.trim();
+  const out = document.getElementById('pb-outlet').value.trim();
+  const exc = document.getElementById('pb-excerpt').value.trim();
+  const tmpl = PLAT_TMPL[currentPlatform];
+  if (!tmpl) return;
+  const result = tmpl(hl||'Las Azules S2', url, exc, out);
+  document.getElementById('pb-out-es').value = result.es;
+  document.getElementById('pb-out-en').value = result.en;
+  updateCC('es'); updateCC('en');
+}
+
+function generatePosts() { generatePost(); }
+
+function togglePbCustom() {
+  const wrap = document.getElementById('pb-custom-wrap');
+  const arrow = document.getElementById('pb-custom-arrow');
+  const open = wrap.style.display !== 'none';
+  showPbCustom(!open);
+}
+
+function showPbCustom(show) {
+  document.getElementById('pb-custom-wrap').style.display = show ? 'block' : 'none';
+  document.getElementById('pb-custom-arrow').textContent = show ? '−' : '+';
+}
+
 function updateCC(lang) {
-  const lim = PLAT_LIMITS[currentPlatform]||280;
+  const lim = (PLATFORM_GUIDE[currentPlatform]||{}).limit||280;
   const ta  = document.getElementById('pb-out-'+lang);
   const sp  = document.getElementById('cc-'+lang);
   if (!ta||!sp) return;
@@ -1344,25 +1640,10 @@ function updateCC(lang) {
   sp.className = len>lim ? 'cc-over' : len>lim*.9 ? 'cc-warn' : 'cc-ok';
 }
 
-function generatePost() {
-  const hl  = document.getElementById('pb-headline').value.trim();
-  const url = document.getElementById('pb-url').value.trim();
-  const out = document.getElementById('pb-outlet').value.trim();
-  const exc = document.getElementById('pb-excerpt').value.trim();
-  const src = out ? ` vía ${out}` : '';
-  const esOut = `🎬 ${hl}\n\n${exc?'"'+exc.substring(0,120)+'…"\n\n':''}#LasAzulesS2 #MujeresDeAzul #LasAzules${url?'\n\n'+url:''}`;
-  const enOut = `🎬 ${hl}\n\n${exc?'"'+exc.substring(0,120)+'…"\n\n':''}#WomenInBlue #LasAzules #AppleTV${src}${url?'\n\n'+url:''}`;
-  document.getElementById('pb-out-es').value = esOut;
-  document.getElementById('pb-out-en').value = enOut;
-  updateCC('es'); updateCC('en');
-}
-
-function generatePosts() { generatePost(); }
-
 function copyPost(lang) {
   const ta = document.getElementById('pb-out-'+lang);
   if (!ta.value) return;
-  navigator.clipboard.writeText(ta.value).then(() => showToast('Copied '+lang.toUpperCase()+' post!'));
+  navigator.clipboard.writeText(ta.value).then(() => showToast('Copied ' + (lang==='es'?'Spanish':'English') + ' post — paste into your platform!'));
 }
 
 function copyPbUrl() {
@@ -1374,7 +1655,7 @@ function copyPbUrl() {
 function syncPbUrlLink() {
   const val = document.getElementById('pb-url').value;
   const lnk = document.getElementById('pb-url-link');
-  lnk.href = (val && val.startsWith('http')) ? val : '#';
+  if (lnk) lnk.href = (val && val.startsWith('http')) ? val : '#';
 }
 
 function addHashtagToPost(tag) {
