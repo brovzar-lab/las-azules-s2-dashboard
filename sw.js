@@ -1,10 +1,10 @@
-const CACHE = 'las-azules-s2-v1';
+const CACHE = 'las-azules-s2-v2';
 const ASSETS = [
-  '/las-azules-s2-dashboard/',
-  '/las-azules-s2-dashboard/index.html',
-  '/las-azules-s2-dashboard/manifest.json',
-  '/las-azules-s2-dashboard/icons/icon.svg',
-  '/las-azules-s2-dashboard/icons/icon-maskable.svg',
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/icons/icon.svg',
+  '/icons/icon-maskable.svg',
 ];
 
 self.addEventListener('install', e => {
