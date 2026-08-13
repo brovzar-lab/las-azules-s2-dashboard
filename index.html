@@ -866,23 +866,24 @@ function badge(text, cls) {
   if (dDelta) dDelta.textContent = days === 1 ? 'Launch day' : 'Day ' + days;
 })();
 
-/* ─── TODAY'S COVERAGE ─── */
+/* ─── LATEST COVERAGE ─── */
 (function(){
-  const today = MEDIA.filter(a => a.ts === 20260812);
-  const badge = document.getElementById('today-badge');
-  if (badge) badge.textContent = today.length + ' articles on premiere day';
-  document.getElementById('today-feed').innerHTML = today.slice(0,5).map(a => `
+  const sorted = MEDIA.slice().sort((a,b) => b.ts - a.ts);
+  const badgeEl = document.getElementById('today-badge');
+  if (badgeEl) badgeEl.textContent = MEDIA.length + ' articles tracked';
+  document.getElementById('today-feed').innerHTML = sorted.slice(0,8).map(a => `
     <a href="${a.url}" target="_blank" rel="noopener" class="list-row">
       <div style="flex:1;min-width:0">
         <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px">
           <span style="font-size:13px;font-weight:600;color:var(--ink1)">${a.outlet}</span>
           ${badge(a.market, MARKET_CH[a.market])}
+          <span style="font-size:10px;color:var(--ink3)">${a.date}</span>
         </div>
         <p style="font-size:12px;color:var(--ink2);line-height:1.45">${a.headline}</p>
       </div>
       <svg style="color:var(--ink3);flex-shrink:0;margin-top:2px" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>
     </a>`).join('') +
-    (today.length > 5 ? `<div style="padding:12px 16px;text-align:center"><button onclick="nav('coverage')" style="font-size:13px;color:var(--blue);font-weight:500;border:none;background:none;cursor:pointer;font-family:inherit">View all ${today.length} articles ›</button></div>` : '');
+    `<div style="padding:12px 16px;text-align:center"><button onclick="nav('coverage')" style="font-size:13px;color:var(--blue);font-weight:500;border:none;background:none;cursor:pointer;font-family:inherit">View all ${MEDIA.length} articles ›</button></div>`;
 })();
 
 
