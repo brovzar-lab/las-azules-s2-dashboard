@@ -1129,7 +1129,15 @@ function nav(page) {
   });
   window.location.hash = '/' + (page === 'home' ? '' : page);
   window.scrollTo(0, 0);
-  if (page === 'coverage') renderCoverage();
+  if (page === 'coverage') {
+    if (window._covFilter) {
+      const {field, value} = window._covFilter;
+      const sel = {market:'cov-market',type:'cov-type',lang:'cov-lang'}[field];
+      if (sel) document.getElementById(sel).value = value;
+      delete window._covFilter;
+    }
+    renderCoverage();
+  }
 }
 
 function routeFromHash() {
@@ -1490,18 +1498,6 @@ function showToast(msg) {
 
 /* ─── INIT ─── */
 selectPlatform('twitter');
-
-const _origNav = nav;
-function nav(page) {
-  _origNav(page);
-  if (page === 'coverage' && window._covFilter) {
-    const {field, value} = window._covFilter;
-    const sel = {market:'cov-market',type:'cov-type',lang:'cov-lang'}[field];
-    if (sel) document.getElementById(sel).value = value;
-    delete window._covFilter;
-    renderCoverage();
-  }
-}
 
 routeFromHash();
 </script>
