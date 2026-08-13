@@ -396,151 +396,46 @@
 
 <!-- ─── SIGNAL (HOME) ─── -->
 <section id="page-home" class="page">
-  <div class="container" style="padding-top:28px;padding-bottom:48px">
+  <div class="container" style="padding-top:24px;padding-bottom:48px">
 
-    <!-- Page title row -->
-    <div style="margin-bottom:20px">
-      <p style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2);margin-bottom:4px">Apple TV+ · Aug 12 – Sep 30, 2026</p>
-      <h1 style="font-size:32px;font-weight:700;letter-spacing:-.02em;color:var(--ink1);line-height:1.1">Las Azules · Season 2</h1>
-    </div>
-
-    <!-- ── SCORE GRID (Tier 1: hero) ── -->
-    <div class="score-grid">
-      <!-- S2 RT — awaiting -->
-      <div class="score-card">
-        <div class="score-number awaiting">—</div>
-        <p class="score-label">RT Score · S2</p>
-        <p class="score-trend awaiting">— Awaiting S2 reviews</p>
+    <!-- KPI strip -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:28px">
+      <div class="card" style="padding:16px 18px">
+        <p style="font-size:26px;font-weight:700;letter-spacing:-.03em;color:var(--ink1)" id="kpi-articles">27</p>
+        <p style="font-size:11px;color:var(--ink2);margin-top:2px">Articles tracked</p>
+        <p style="font-size:11px;color:var(--ink3);margin-top:1px" id="kpi-today-delta">Launch day</p>
       </div>
-      <!-- S2 IMDb — awaiting -->
-      <div class="score-card">
-        <div class="score-number awaiting">—</div>
-        <p class="score-label">IMDb · S2</p>
-        <p class="score-trend awaiting">— Awaiting S2 reviews</p>
+      <div class="card" style="padding:16px 18px">
+        <p style="font-size:26px;font-weight:700;letter-spacing:-.03em;color:var(--green)">100%</p>
+        <p style="font-size:11px;color:var(--ink2);margin-top:2px">RT Score · S1</p>
+        <p style="font-size:11px;color:var(--green);margin-top:1px">Certified Fresh</p>
       </div>
-      <!-- S1 RT — baseline -->
-      <div class="score-card baseline">
-        <div class="score-number green baseline-size">100%</div>
-        <p class="score-label">RT Score · S1 Baseline</p>
-        <p class="score-trend green">▲ Certified Fresh</p>
+      <div class="card" style="padding:16px 18px">
+        <p style="font-size:26px;font-weight:700;letter-spacing:-.03em;color:var(--brand)">4/5</p>
+        <p style="font-size:11px;color:var(--ink2);margin-top:2px">Screen Anarchy · S2</p>
+        <p style="font-size:11px;color:var(--ink3);margin-top:1px">First S2 review</p>
       </div>
-      <!-- S1 IMDb — baseline -->
-      <div class="score-card baseline">
-        <div class="score-number baseline-size" style="color:var(--ink1)">7.3</div>
-        <p class="score-label">IMDb · S1 Baseline</p>
-        <p class="score-trend" style="color:var(--ink2)"><a href="https://www.imdb.com/title/tt20516590/" target="_blank" rel="noopener" style="color:var(--blue);text-decoration:none">View on IMDb ↗</a></p>
+      <div class="card" style="padding:16px 18px">
+        <p style="font-size:26px;font-weight:700;letter-spacing:-.03em;color:var(--ink1)" id="kpi-days">1</p>
+        <p style="font-size:11px;color:var(--ink2);margin-top:2px">Days streaming</p>
+        <p style="font-size:11px;color:var(--ink3);margin-top:1px">Aug 12 – Sep 30</p>
       </div>
     </div>
 
-    <!-- Velocity pill -->
-    <div class="velocity-pill" id="velocity-pill">
-      <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/><polyline points="17,6 23,6 23,12"/></svg>
-      <span id="velocity-text">27 articles · +12 today ▲</span>
-    </div>
-
-    <!-- Alert strip -->
+    <!-- Today's articles -->
     <div class="section">
       <div class="sec-header">
-        <h2 class="sec-title">Today's Signal</h2>
+        <h2 class="sec-title">Latest Coverage</h2>
         <span id="today-badge" style="font-size:12px;color:var(--ink3)"></span>
-      </div>
-      <div class="alert-strip" id="alert-strip" style="margin-bottom:0">
-        <div class="alert-card ac-amber">
-          <div class="alert-icon ai-amber">⚠️</div>
-          <div class="alert-body">
-            <p class="alert-head ah-amber">Coverage Gap</p>
-            <p class="alert-text">Reforma, El Universal, Milenio — 0 articles from Mexican premium press</p>
-          </div>
-        </div>
-        <div class="alert-card ac-blue" id="ep-alert">
-          <div class="alert-icon ai-blue">📅</div>
-          <div class="alert-body">
-            <p class="alert-head ah-blue">Next Episode</p>
-            <p class="alert-text" id="ep-alert-text">Ep. 2 drops Aug 19 — activate cast for social push</p>
-          </div>
-        </div>
-        <div class="alert-card ac-green">
-          <div class="alert-icon ai-green">✅</div>
-          <div class="alert-body">
-            <p class="alert-head ah-green">Reuters Syndicated</p>
-            <p class="alert-text">Wire feature picked up by 7+ US radio station websites</p>
-          </div>
-        </div>
-        <div class="alert-card ac-red">
-          <div class="alert-icon ai-red">🎬</div>
-          <div class="alert-body">
-            <p class="alert-head ah-red">First Review</p>
-            <p class="alert-text">Screen Anarchy 4/5 ★ — share immediately for credibility</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Key quotes (Tier 3: critic signal) -->
-    <div class="section">
-      <div class="sec-header">
-        <h2 class="sec-title">Key Quotes</h2>
-        <p style="font-size:13px;color:var(--ink3)">Critics are saying</p>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-        <div class="card" style="padding:16px 18px;border-left:4px solid var(--brand)">
-          <p style="font-size:15px;color:var(--ink1);line-height:1.6;font-style:italic;margin-bottom:10px">"Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico's borders."</p>
-          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-            <p style="font-size:12px;font-weight:700;color:var(--ink1)">Screen Anarchy</p>
-            <p style="font-size:12px;color:var(--brand);font-weight:600">4/5 ★</p>
-            <span class="chip chip-grey">REVIEW</span>
-          </div>
-        </div>
-        <div class="card" style="padding:16px 18px;border-left:4px solid var(--blue)">
-          <p style="font-size:15px;color:var(--ink1);line-height:1.6;font-style:italic;margin-bottom:10px">"If in the first season the enemy was a serial killer, in this season it's an entire system."</p>
-          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-            <p style="font-size:12px;font-weight:700;color:var(--ink1)">Fernando Rovzar</p>
-            <p style="font-size:12px;color:var(--ink2)">Creator</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Coverage gap radar -->
-    <div class="section">
-      <div class="sec-header">
-        <h2 class="sec-title">Coverage Gap Radar</h2>
-        <button class="sec-more" onclick="nav('coverage')">See all ›</button>
-      </div>
-      <div class="card" style="border-left:4px solid var(--amber)">
-        <div style="display:flex;align-items:center;gap:8px;padding:14px 16px;border-bottom:0.5px solid rgba(0,0,0,0.07)">
-          <p class="sec-label" style="flex:1">Outlet</p>
-          <span style="font-size:10px;font-weight:700;color:var(--amber);background:rgba(255,159,10,0.10);padding:2px 8px;border-radius:100px">3 uncovered ⚠</span>
-        </div>
-        <div class="list-row" style="align-items:center">
-          <div style="flex:1"><p style="font-size:14px;font-weight:600;color:var(--ink1)">Reforma</p><p style="font-size:12px;color:var(--ink2)">Mexico · Print</p></div>
-          <span style="font-size:12px;color:var(--blue);font-weight:500">→ Outreach needed</span>
-        </div>
-        <div class="list-row" style="align-items:center">
-          <div style="flex:1"><p style="font-size:14px;font-weight:600;color:var(--ink1)">El Universal</p><p style="font-size:12px;color:var(--ink2)">Mexico · Print</p></div>
-          <span style="font-size:12px;color:var(--blue);font-weight:500">→ Outreach needed</span>
-        </div>
-        <div class="list-row" style="align-items:center">
-          <div style="flex:1"><p style="font-size:14px;font-weight:600;color:var(--ink1)">Milenio</p><p style="font-size:12px;color:var(--ink2)">Mexico · Print</p></div>
-          <span style="font-size:12px;color:var(--blue);font-weight:500">→ Outreach needed</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Today's coverage (Tier 4: activity) -->
-    <div class="section">
-      <div class="sec-header">
-        <h2 class="sec-title">Today's Coverage</h2>
-        <button class="sec-more" onclick="nav('coverage')">View all ›</button>
+        <button class="sec-more" onclick="nav('coverage')">All articles ›</button>
       </div>
       <div class="card" id="today-feed"></div>
     </div>
 
-    <!-- Market breakdown (Tier 2: reach) -->
+    <!-- Charts -->
     <div class="section">
       <div class="sec-header">
-        <h2 class="sec-title">Market Reach</h2>
-        <button class="sec-more" onclick="nav('coverage')">Details ›</button>
+        <h2 class="sec-title">Coverage Breakdown</h2>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
         <div class="card" style="padding:18px">
@@ -556,26 +451,6 @@
           <div id="chart-lang"></div>
         </div>
       </div>
-    </div>
-
-    <!-- Season progress -->
-    <div class="section">
-      <div class="sec-header">
-        <h2 class="sec-title">Season Progress</h2>
-        <span id="season-sub" style="font-size:12px;color:var(--ink3)"></span>
-      </div>
-      <div class="card" style="padding:18px">
-        <div id="ep-timeline"></div>
-      </div>
-    </div>
-
-    <!-- Geo map -->
-    <div class="section">
-      <div class="sec-header">
-        <h2 class="sec-title">Coverage Map</h2>
-        <div style="display:flex;gap:12px;flex-wrap:wrap" id="geo-legend"></div>
-      </div>
-      <div class="card" style="padding:16px"><div id="geo-map"></div></div>
     </div>
 
   </div>
@@ -618,28 +493,12 @@
     <div class="container">
       <div>
         <p class="ph-title">Amplification</p>
-        <p class="ph-sub">Social strategy · PR checklist · Post builder</p>
+        <p class="ph-sub">Social sharing · Post builder</p>
       </div>
     </div>
   </div>
 
   <div class="container" style="padding-top:24px;padding-bottom:48px">
-
-    <div class="section">
-      <div class="sec-header">
-        <h2 class="sec-title">Free Strategies</h2>
-        <span id="free-progress" style="font-size:12px;color:var(--ink3)"></span>
-      </div>
-      <div class="card" id="free-strategies"></div>
-    </div>
-
-    <div class="section">
-      <div class="sec-header">
-        <h2 class="sec-title">Paid Strategies</h2>
-        <span id="paid-progress" style="font-size:12px;color:var(--ink3)"></span>
-      </div>
-      <div class="card" id="paid-strategies"></div>
-    </div>
 
     <div class="section">
       <div class="sec-header"><h2 class="sec-title">Hashtags</h2><p style="font-size:12px;color:var(--ink3)">Click to search</p></div>
@@ -996,10 +855,22 @@ function badge(text, cls) {
   return `<span class="chip ${cls||'chip-grey'}" style="white-space:nowrap">${text}</span>`;
 }
 
+/* ─── KPI UPDATES ─── */
+(function(){
+  const el = document.getElementById('kpi-articles');
+  if (el) el.textContent = MEDIA.length;
+  const days = Math.max(1, Math.ceil((new Date() - new Date('2026-08-12')) / 86400000));
+  const dEl = document.getElementById('kpi-days');
+  if (dEl) dEl.textContent = days;
+  const dDelta = document.getElementById('kpi-today-delta');
+  if (dDelta) dDelta.textContent = days === 1 ? 'Launch day' : 'Day ' + days;
+})();
+
 /* ─── TODAY'S COVERAGE ─── */
 (function(){
   const today = MEDIA.filter(a => a.ts === 20260812);
-  document.getElementById('today-badge').textContent = today.length + ' articles on premiere day';
+  const badge = document.getElementById('today-badge');
+  if (badge) badge.textContent = today.length + ' articles on premiere day';
   document.getElementById('today-feed').innerHTML = today.slice(0,5).map(a => `
     <a href="${a.url}" target="_blank" rel="noopener" class="list-row">
       <div style="flex:1;min-width:0">
@@ -1014,42 +885,6 @@ function badge(text, cls) {
     (today.length > 5 ? `<div style="padding:12px 16px;text-align:center"><button onclick="nav('coverage')" style="font-size:13px;color:var(--blue);font-weight:500;border:none;background:none;cursor:pointer;font-family:inherit">View all ${today.length} articles ›</button></div>` : '');
 })();
 
-/* ─── EPISODE COUNTDOWN ─── */
-(function(){
-  const today = new Date();
-  const nextEp = EPISODES.find(e => new Date(e.iso) > today);
-  if (nextEp) {
-    const daysUntil = Math.ceil((new Date(nextEp.iso) - today) / 86400000);
-    document.getElementById('ep-alert-text').textContent =
-      `Ep. ${nextEp.ep} drops in ${daysUntil} day${daysUntil===1?'':'s'} — activate cast for social push`;
-  }
-})();
-
-/* ─── SEASON PROGRESS STRIP ─── */
-(function(){
-  const today = new Date();
-  const aired = EPISODES.filter(e => new Date(e.iso) <= today).length;
-  const nextEp = EPISODES.find(e => new Date(e.iso) > today);
-  document.getElementById('season-sub').textContent = `${aired} of ${EPISODES.length} aired`;
-  document.getElementById('ep-timeline').innerHTML =
-    `<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">` +
-    EPISODES.map(e => {
-      const d = new Date(e.iso);
-      const isAired = d <= today;
-      const isNext = nextEp && e.ep === nextEp.ep;
-      return `<div style="display:flex;flex-direction:column;align-items:center;gap:4px;cursor:default" title="${e.title} · ${e.date}">
-        <div style="width:28px;height:28px;border-radius:50%;
-          background:${isAired?'var(--ink1)':isNext?'var(--blue)':'transparent'};
-          border:2px solid ${isAired?'var(--ink1)':isNext?'var(--blue)':'var(--ink3)'};
-          display:flex;align-items:center;justify-content:center;
-          font-size:10px;font-weight:700;
-          color:${isAired||isNext?'#fff':'var(--ink3)'}">
-          ${e.ep}
-        </div>
-        <span style="font-size:9px;color:${isNext?'var(--blue)':'var(--ink3)'};font-weight:${isNext?'700':'400'};white-space:nowrap">${isNext?'Next':'Aug '+e.date.split(' ')[1]}</span>
-      </div>`;
-    }).join('') + `</div>`;
-})();
 
 /* ─── CHARTS ─── */
 const MARKET_COLOR = {US:'#0071E3',Mexico:'#30B0C7',International:'#AF52DE',Spain:'#E8402A'};
@@ -1091,36 +926,6 @@ buildChart('chart-market', tally('market'), MARKET_COLOR, 'market');
 buildChart('chart-type',   tally('type'),   TYPE_COLOR,   'type');
 buildChart('chart-lang',   tally('lang'),   LANG_COLOR,   'lang');
 
-/* ─── GEO MAP ─── */
-(function(){
-  const GEO = [
-    {market:'US',cx:200,cy:155,color:'#0071E3'},
-    {market:'Mexico',cx:178,cy:190,color:'#30B0C7'},
-    {market:'Spain',cx:445,cy:135,color:'#E8402A'},
-    {market:'International',cx:485,cy:115,color:'#AF52DE'},
-  ];
-  const mc = {}; MEDIA.forEach(a=>{mc[a.market]=(mc[a.market]||0)+1;});
-  const maxC = Math.max(...Object.values(mc));
-  document.getElementById('geo-map').innerHTML = `
-    <svg viewBox="0 0 740 260" style="width:100%;height:auto;display:block">
-      <rect width="740" height="260" fill="#F5F5F7" rx="0"/>
-      <path d="M120,55 Q135,46 165,52 L192,68 202,108 212,156 217,215 200,248 178,250 155,244 135,232 122,205 112,170 108,126 113,88Z" fill="#E5E5EA" opacity=".8"/>
-      <path d="M425,46 Q458,40 488,56 L508,86 503,138 486,170 465,174 444,162 428,142 420,112 416,80 422,58Z" fill="#E5E5EA" opacity=".8"/>
-      <path d="M442,174 L462,179 472,203 458,232 438,240 424,229 420,207 428,180Z" fill="#E5E5EA" opacity=".7"/>
-      <path d="M510,46 Q558,36 618,52 L648,78 638,122 606,148 556,140 526,120 508,94 503,66Z" fill="#E5E5EA" opacity=".8"/>
-      <path d="M592,182 Q620,175 640,188 L643,222 622,234 596,230 584,215Z" fill="#E5E5EA" opacity=".7"/>
-      ${GEO.map(d=>{
-        const c=mc[d.market]||0, r=Math.max(9,Math.min(26,9+(c/maxC)*18));
-        return `<circle cx="${d.cx}" cy="${d.cy}" r="${r}" fill="${d.color}" opacity=".15"/>
-                <circle cx="${d.cx}" cy="${d.cy}" r="${r*.55}" fill="${d.color}" opacity=".55"/>
-                <text x="${d.cx}" y="${d.cy+1}" text-anchor="middle" dominant-baseline="middle" fill="${d.color}" font-size="9" font-weight="700" font-family="-apple-system,sans-serif">${c}</text>`;
-      }).join('')}
-    </svg>`;
-  document.getElementById('geo-legend').innerHTML = GEO.map(d=>`
-    <span style="display:flex;align-items:center;gap:4px;font-size:11px;color:var(--ink2)">
-      <span style="width:7px;height:7px;border-radius:50%;background:${d.color}"></span>${d.market} (${mc[d.market]||0})
-    </span>`).join('');
-})();
 
 /* ─── HASHTAG CLOUD ─── */
 (function(){
@@ -1194,8 +999,6 @@ function updateProgress(progressId, items) {
   if (el) el.textContent = `${done} / ${items.length} activated`;
 }
 
-renderAmpList('free-strategies', FREE_STRATS, 'free-progress');
-renderAmpList('paid-strategies', PAID_STRATS, 'paid-progress');
 
 /* ─── EPISODE LIST ─── */
 (function(){
