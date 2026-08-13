@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Las Azules Dashboard to Your iPhone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #070e1e;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    .card {
+      background: #0c1a32;
+      border: 1px solid rgba(91,195,232,0.2);
+      border-radius: 20px;
+      max-width: 390px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #0c1a32 0%, #071228 100%);
+      border-bottom: 1px solid rgba(91,195,232,0.15);
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .app-icon {
+      width: 72px; height: 72px;
+      background: #070e1e;
+      border: 2px solid rgba(91,195,232,0.4);
+      border-radius: 18px;
+      margin: 0 auto 14px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 4px rgba(27,123,196,0.15), 0 8px 24px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+    .app-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .header-eyebrow {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: #5BC3E8; margin-bottom: 6px;
+    }
+    .header-title {
+      font-size: 22px; font-weight: 900; color: #fff; letter-spacing: -.01em;
+      line-height: 1.1; margin-bottom: 6px;
+    }
+    .header-sub {
+      font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 500;
+    }
+
+    /* Steps */
+    .steps { padding: 24px 24px 8px; }
+    .steps-label {
+      font-size: 9px; font-weight: 800; letter-spacing: .16em;
+      text-transform: uppercase; color: rgba(255,255,255,0.3);
+      margin-bottom: 16px;
+    }
+    .step {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      background: rgba(27,123,196,0.18);
+      border: 1.5px solid rgba(91,195,232,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 800; color: #5BC3E8;
+      margin-top: 1px;
+    }
+    .step-body { flex: 1; }
+    .step-title {
+      font-size: 14px; font-weight: 700; color: #fff;
+      line-height: 1.3; margin-bottom: 3px;
+    }
+    .step-desc {
+      font-size: 12px; color: rgba(255,255,255,0.45);
+      line-height: 1.5;
+    }
+    .step-icon {
+      display: inline-block;
+      background: rgba(91,195,232,0.12);
+      border: 1px solid rgba(91,195,232,0.25);
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 11px; font-weight: 700; color: #5BC3E8;
+      margin-top: 5px;
+    }
+
+    /* Safari callout */
+    .safari-note {
+      margin: 0 24px;
+      background: rgba(255,200,0,0.07);
+      border: 1px solid rgba(255,200,0,0.2);
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .safari-note-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .safari-note-text { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+    .safari-note-text strong { color: rgba(255,200,0,0.8); }
+
+    /* URL bar */
+    .url-box {
+      margin: 16px 24px 0;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 11px 14px;
+      display: flex; gap: 10px; align-items: center;
+    }
+    .url-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #1B7BC4; flex-shrink: 0;
+    }
+    .url-text {
+      font-size: 12px; color: rgba(255,255,255,0.6);
+      font-weight: 500; letter-spacing: -.01em; flex: 1;
+    }
+    .url-text em { color: #5BC3E8; font-style: normal; font-weight: 700; }
+
+    /* Footer */
+    .footer {
+      padding: 18px 24px 24px;
+      text-align: center;
+    }
+    .footer-text {
+      font-size: 10px; color: rgba(255,255,255,0.2);
+      font-weight: 500; letter-spacing: .04em;
+    }
+    .footer-brand {
+      font-size: 11px; font-weight: 700; color: rgba(91,195,232,0.4);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Header -->
+    <div class="header">
+      <div class="app-icon">
+        <img src="apple-touch-icon.png" alt="Las Azules" onerror="this.parentElement.innerHTML='<span style=\'color:#5BC3E8;font-size:28px;font-weight:900;font-family:serif\'>A</span>'" />
+      </div>
+      <p class="header-eyebrow">Las Azules · Season 2</p>
+      <h1 class="header-title">Add to Your iPhone</h1>
+      <p class="header-sub">Works like an app — no download needed</p>
+    </div>
+
+    <!-- URL -->
+    <div class="url-box">
+      <div class="url-dot"></div>
+      <p class="url-text"><em>brovzar-lab.github.io</em>/las-azules-s2-dashboard</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="steps">
+      <p class="steps-label">3 steps · takes 20 seconds</p>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <p class="step-title">Open the link in Safari</p>
+          <p class="step-desc">Must be Safari — Chrome and other browsers don't support "Add to Home Screen."</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <p class="step-title">Tap the Share button</p>
+          <p class="step-desc">The square with an arrow pointing up — at the bottom of the screen.</p>
+          <span class="step-icon">⎋ Share</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <p class="step-title">Tap "Add to Home Screen"</p>
+          <p class="step-desc">Scroll down in the share sheet, tap it, then tap <strong style="color:#fff">Add</strong> in the top right.</p>
+          <span class="step-icon">+ Add to Home Screen</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Safari note -->
+    <div class="safari-note">
+      <span class="safari-note-icon">⚠️</span>
+      <p class="safari-note-text"><strong>iPhone only:</strong> Open this page in <strong>Safari</strong>, not Chrome or WhatsApp's browser. If you opened it from WhatsApp, tap <strong>Open in Safari</strong> at the bottom of the screen first.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p class="footer-text">Las Azules S2 · Media Intelligence Room</p>
+      <p class="footer-brand">Lemon Virtual Studios</p>
+    </div>
+  </div>
+</body>
+</html>
