@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Azules S2 — Media Intelligence Room V4.5 | Lemon Studios</title>
+  <title>Las Azules S2 — Media Intelligence Room V5 | Lemon Studios</title>
   <meta name="description" content="Media intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#111111">
@@ -16,28 +16,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════════════════════
-       V4 DESIGN SYSTEM — Lemon Intelligence Room
-       Warm editorial light mode · Playfair Display serif
+       V5 DESIGN SYSTEM — Apple-style · Producer-First
+       Light mode · SF Pro · Rounded cards · Shadow depth
     ═══════════════════════════════════════════════════════ */
     :root {
-      --cream:  #edead4;
+      --cream:  #f5f5f7;       /* Apple page bg */
       --white:  #ffffff;
-      --smoke:  #f5f2e8;
-      --bd:     #dbd6c5;
-      --bd2:    #c8c2b0;
-      --ink1:   #1a1a1a;
-      --ink2:   #555046;
-      --ink3:   #9a9080;
-      --coral:  #c8422a;
-      --teal:   #3d9688;
-      --gold:   #b5832a;
-      --blue:   #3a60a8;
-      --green:  #2a7a58;
-      --amber:  #b5832a;
-      --red:    #c8422a;
-      --nav-bg: #111111;
-      --nav-h:  52px;
-      /* Apple/Emil Kowalski spring easing */
+      --smoke:  #f2f2f7;       /* Apple secondary bg */
+      --bd:     rgba(0,0,0,0.09);
+      --bd2:    rgba(0,0,0,0.15);
+      --ink1:   #1d1d1f;       /* Apple primary text */
+      --ink2:   #6e6e73;       /* Apple secondary text */
+      --ink3:   #aeaeb2;       /* Apple tertiary text */
+      --coral:  #e8402a;       /* Action / alert */
+      --teal:   #28a060;       /* Success / positive */
+      --gold:   #f0a500;       /* Warning / pending */
+      --blue:   #0071e3;       /* Apple blue */
+      --green:  #28a060;
+      --amber:  #f0a500;
+      --red:    #e8402a;
+      --nav-bg: rgba(255,255,255,0.88);
+      --nav-h:  56px;
+      --radius: 16px;
+      --shadow:    0 2px 8px rgba(0,0,0,0.06), 0 8px 28px rgba(0,0,0,0.05);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+      /* Spring easing (Emil Kowalski) */
       --spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
       --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
       --ease-in:  cubic-bezier(0.55, 0, 1, 0.45);
@@ -48,29 +51,29 @@
 
     body {
       background: var(--cream);
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
       color: var(--ink1);
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Top Nav ── */
+    /* ── Top Nav (V5: Apple light chrome) ── */
     #topnav {
       position: fixed;
       top: 0; left: 0; right: 0;
       height: var(--nav-h);
       background: var(--nav-bg);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border-bottom: 1px solid rgba(0,0,0,0.07);
       z-index: 40;
       display: flex;
       align-items: center;
       padding: 0 28px;
-      transition: background 0.3s var(--ease), backdrop-filter 0.3s var(--ease);
-      will-change: background;
     }
     #topnav.scrolled {
-      background: rgba(17,17,17,0.8);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.08);
     }
 
     .tnav-brand {
@@ -99,9 +102,9 @@
     .tnav-title {
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: .12em;
+      letter-spacing: .08em;
       text-transform: uppercase;
-      color: #ffffff;
+      color: var(--ink1);
       white-space: nowrap;
     }
 
@@ -113,22 +116,21 @@
     }
 
     .tnav-link {
-      padding: 6px 12px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: .06em;
-      color: rgba(255,255,255,0.42);
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .01em;
+      color: var(--ink3);
       cursor: pointer;
       border: none;
       background: none;
       transition: color .15s var(--ease-out), transform 80ms var(--ease);
-      text-transform: uppercase;
       white-space: nowrap;
       font-family: inherit;
     }
 
-    .tnav-link:hover { color: rgba(255,255,255,0.8); }
-    .tnav-link.active { color: #ffffff; }
+    .tnav-link:hover { color: var(--ink2); }
+    .tnav-link.active { color: var(--ink1); font-weight: 600; }
     .tnav-link:active { transform: scale(0.95); transition-duration: 60ms; }
 
     .tnav-right {
@@ -140,19 +142,19 @@
     }
 
     .tnav-date {
-      font-size: 10px;
-      color: rgba(255,255,255,0.35);
-      letter-spacing: .08em;
-      text-transform: uppercase;
+      font-size: 11px;
+      color: var(--ink3);
+      letter-spacing: .01em;
     }
 
     .v4-badge {
-      padding: 3px 8px;
-      border: 1px solid rgba(255,255,255,0.22);
+      padding: 3px 9px;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.06);
       font-size: 10px;
       font-weight: 700;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: .1em;
+      color: var(--ink2);
+      letter-spacing: .06em;
     }
 
     /* ── Bottom Nav (mobile) ── */
@@ -163,9 +165,12 @@
         display: flex;
         position: fixed; bottom: 0; left: 0; right: 0;
         z-index: 40;
-        background: var(--nav-bg);
-        border-top: 1px solid rgba(255,255,255,0.06);
-        height: 56px;
+        background: rgba(255,255,255,0.88);
+        backdrop-filter: blur(24px) saturate(180%);
+        -webkit-backdrop-filter: blur(24px) saturate(180%);
+        border-top: 1px solid rgba(0,0,0,0.08);
+        height: 60px;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
       }
       .tnav-links { display: none; }
       .tnav-date  { display: none; }
@@ -177,19 +182,18 @@
       align-items: center; justify-content: center;
       gap: 3px;
       cursor: pointer;
-      color: rgba(255,255,255,0.3);
-      font-size: 9px; font-weight: 600;
-      transition: color .12s;
+      color: var(--ink3);
+      font-size: 9px; font-weight: 500;
+      transition: color .12s var(--ease-out);
       border: none; background: none;
       padding: 0;
-      letter-spacing: .05em;
-      text-transform: uppercase;
+      letter-spacing: .01em;
       font-family: inherit;
     }
-    .bnav-link:hover { color: rgba(255,255,255,0.65); }
-    .bnav-link.active { color: #ffffff; }
+    .bnav-link:hover { color: var(--ink2); }
+    .bnav-link.active { color: var(--coral); }
     .bnav-link:active { transform: scale(0.9); transition: transform 60ms var(--ease), color .12s; }
-    .bnav-icon { width: 18px; height: 18px; }
+    .bnav-icon { width: 20px; height: 20px; }
 
     /* ── Content ── */
     #content {
@@ -204,10 +208,10 @@
     .page.active { display: block; animation: pageIn .32s var(--ease-out) both; }
     @keyframes pageIn { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:none } }
 
-    /* ── Responsive grids ── */
-    .grid-3col   { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--bd); border:1px solid var(--bd); }
-    .grid-scores { display:grid; grid-template-columns:1fr 240px;     gap:1px; background:var(--bd); border:1px solid var(--bd); }
-    .grid-2col   { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--bd); border:1px solid var(--bd); }
+    /* ── Responsive grids (V5: gap-based, no shared border) ── */
+    .grid-3col   { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+    .grid-scores { display:grid; grid-template-columns:1fr 240px;     gap:12px; }
+    .grid-2col   { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
     @media (max-width: 600px) {
       .grid-3col, .grid-scores, .grid-2col { grid-template-columns: 1fr; }
     }
@@ -221,10 +225,10 @@
 
     @media (max-width: 767px) { .container { padding: 0 20px; } }
 
-    /* ── Hero Panel ── */
+    /* ── Hero Panel (V5: Apple compact score panel) ── */
     .hero {
-      background: var(--nav-bg);
-      padding: 60px 0 48px;
+      background: #1d1d1f;
+      padding: 36px 0 32px;
     }
 
     .hero-inner {
@@ -233,65 +237,66 @@
       padding: 0 40px;
       display: grid;
       grid-template-columns: 1fr 300px;
-      gap: 48px;
+      gap: 40px;
       align-items: center;
     }
 
     @media (max-width: 767px) {
-      .hero-inner { grid-template-columns: 1fr; padding: 0 20px; gap: 28px; }
-      .hero { padding: 40px 0 32px; }
+      .hero-inner { grid-template-columns: 1fr; padding: 0 20px; gap: 20px; }
+      .hero { padding: 28px 0 24px; }
     }
 
     .hero-eyebrow {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .16em;
-      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .04em;
       color: var(--coral);
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
 
     .hero-headline {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      font-weight: 900;
-      line-height: 1.05;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -.02em;
       color: #ffffff;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
 
-    .hero-em { color: var(--teal); font-style: italic; }
+    .hero-em { color: var(--teal); font-style: normal; }
 
     .hero-sub {
       font-size: 13px;
       color: rgba(255,255,255,0.45);
-      line-height: 1.65;
+      line-height: 1.5;
     }
 
     .hero-thesis {
-      border-left: 2px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      border-radius: 12px;
       padding: 16px 20px;
     }
 
     .hero-thesis-label {
-      font-size: 9px;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: .14em;
+      letter-spacing: .06em;
       text-transform: uppercase;
       color: rgba(255,255,255,0.35);
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
 
     .hero-thesis-body {
       font-size: 13px;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.65;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
     }
 
     /* ── Mini Hero (inner pages) ── */
     .mini-hero {
-      background: var(--nav-bg);
-      padding: 36px 0 28px;
+      background: #1d1d1f;
+      padding: 28px 0 22px;
     }
 
     /* ── Section Header (editorial) ── */
@@ -306,20 +311,21 @@
     .sec-header-left { flex: 1; }
 
     .sec-eyebrow {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .16em;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .04em;
       text-transform: uppercase;
       color: var(--coral);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .sec-h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
-      font-weight: 800;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
       color: var(--ink1);
-      line-height: 1.1;
+      line-height: 1.15;
     }
 
     .sec-rule {
@@ -342,18 +348,20 @@
       .sec-caption { text-align: left; max-width: 100%; }
     }
 
-    /* ── Stat grid ── */
+    /* ── Stat grid (V5: Apple card style) ── */
     .stat-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       background: var(--white);
-      border: 1px solid var(--bd);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
 
     @media (max-width: 600px) { .stat-grid { grid-template-columns: repeat(2,1fr); } }
 
     .stat-cell {
-      padding: 28px 24px;
+      padding: 24px 22px;
       border-right: 1px solid var(--bd);
     }
     .stat-cell:last-child { border-right: none; }
@@ -365,11 +373,11 @@
     }
 
     .stat-num {
-      font-family: 'Playfair Display', serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
       font-size: 2.8rem;
-      font-weight: 800;
+      font-weight: 700;
       line-height: 1;
-      letter-spacing: -.02em;
+      letter-spacing: -.03em;
       color: var(--ink1);
     }
 
@@ -395,9 +403,9 @@
     .delta-dn  { background: rgba(200,66,42,0.1);   color: var(--coral); }
     .delta-neu { background: rgba(154,144,128,0.12); color: var(--ink3); }
 
-    /* ── Cards ── */
-    .card { background: var(--white); border: 1px solid var(--bd); transition: box-shadow 0.2s var(--ease-out); }
-    .card:hover { box-shadow: 0 2px 14px rgba(0,0,0,0.07); }
+    /* ── Cards (V5: Apple rounded + shadow) ── */
+    .card { background: var(--white); border: none; border-radius: var(--radius); box-shadow: var(--shadow); transition: box-shadow 0.25s var(--ease-out), transform 0.2s var(--ease-out); }
+    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09), 0 16px 40px rgba(0,0,0,0.07); transform: translateY(-1px); }
 
     /* ── Section label (small) ── */
     .sec-label {
@@ -432,15 +440,16 @@
     .chart-bar:active { opacity: 0.7; }
     .chart-bar:hover .bar-track { background: rgba(0,0,0,0.14); }
 
-    /* ── Coverage table ── */
+    /* ── Coverage table (V5: Apple light table) ── */
     .cov-table { width: 100%; border-collapse: collapse; }
-    .cov-table thead tr { background: var(--ink1); }
+    .cov-table thead tr { background: var(--smoke); }
     .cov-table thead th {
       padding: 10px 14px;
-      font-size: 9px; font-weight: 700;
-      letter-spacing: .1em; text-transform: uppercase;
-      color: rgba(255,255,255,0.6); text-align: left;
+      font-size: 10px; font-weight: 600;
+      letter-spacing: .04em; text-transform: uppercase;
+      color: var(--ink3); text-align: left;
       white-space: nowrap;
+      border-bottom: 1px solid var(--bd);
     }
     .cov-table tbody tr {
       border-bottom: 1px solid var(--bd);
@@ -605,7 +614,7 @@
 
   <div class="tnav-right">
     <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
-    <span class="v4-badge">V4.5</span>
+    <span class="v4-badge">V5</span>
   </div>
 </nav>
 
@@ -639,13 +648,13 @@
 <!-- ─── PAGE: COMMAND CENTER ─── -->
 <section id="page-home" class="page">
 
-  <!-- Hero -->
+  <!-- Hero: Producer Score Panel (V5) -->
   <div class="hero">
     <div class="hero-inner">
       <div>
-        <p class="hero-eyebrow">Media Intelligence · Premiere Day — August 12, 2026</p>
-        <h1 class="hero-headline">Season 2 is<br><em class="hero-em">streaming</em> now.</h1>
-        <p class="hero-sub">27 articles tracked · 4 key markets · Reuters syndicated to 7+ US stations · Screen Anarchy 4/5 ★</p>
+        <p class="hero-eyebrow">Las Azules S2 · Apple TV+ · Streaming Now</p>
+        <h1 class="hero-headline">Season 2 is <span class="hero-em">live.</span><br>Here's how it's landing.</h1>
+        <p class="hero-sub">Track critical reception, coverage velocity, and market reach — updated daily.</p>
       </div>
       <div class="hero-thesis">
         <p class="hero-thesis-label">Today's Signal</p>
@@ -655,17 +664,21 @@
   </div>
 
   <!-- Stats + body -->
-  <div class="container" style="padding-top:0;padding-bottom:48px">
+  <div class="container" style="padding-top:28px;padding-bottom:48px">
 
-    <div class="stat-grid" style="margin-bottom:48px">
-      <div class="stat-cell">
-        <p class="stat-num" id="stat-articles">27</p>
-        <p class="stat-label">Articles</p>
-        <p class="stat-sub" id="stat-articles-delta">Launch day</p>
+    <!-- Producer Priority #1: Critical Reception -->
+    <div class="sec-header" style="margin-bottom:14px">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Critical Reception</p>
+        <h2 class="sec-h2">How is the show landing?</h2>
+        <hr class="sec-rule">
       </div>
+      <p class="sec-caption">S2 scores accumulate through Sep 30.</p>
+    </div>
+    <div class="stat-grid" style="margin-bottom:10px">
       <div class="stat-cell">
         <p class="stat-num" style="color:var(--teal)">100%</p>
-        <p class="stat-label">RT Score · S1</p>
+        <p class="stat-label">Rotten Tomatoes · S1</p>
         <p class="stat-sub"><span class="delta delta-up">▲ Certified Fresh</span></p>
       </div>
       <div class="stat-cell">
@@ -674,14 +687,94 @@
         <p class="stat-sub"><span class="delta delta-up">▲ Above 7.0</span></p>
       </div>
       <div class="stat-cell">
+        <p class="stat-num" style="color:var(--gold)">4/5</p>
+        <p class="stat-label">Screen Anarchy · S2</p>
+        <p class="stat-sub" style="font-size:11px;color:var(--ink2)">"More on-point, more relevant"</p>
+      </div>
+      <div class="stat-cell">
+        <p class="stat-num" style="color:var(--ink3);font-size:2rem">—</p>
+        <p class="stat-label">Metacritic · S2</p>
+        <p class="stat-sub" style="color:var(--ink3)">Accumulating…</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:36px">
+      <a href="https://www.rottentomatoes.com/tv/women_in_blue_2024/s02" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;padding:6px 14px;background:rgba(232,64,42,0.07);border-radius:20px;font-size:11px;font-weight:600;color:var(--coral);text-decoration:none;transition:background .15s">RT ↗</a>
+      <a href="https://www.metacritic.com/tv/women-in-blue/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;padding:6px 14px;background:rgba(240,165,0,0.07);border-radius:20px;font-size:11px;font-weight:600;color:var(--gold);text-decoration:none;transition:background .15s">Metacritic ↗</a>
+      <a href="https://www.imdb.com/title/tt20516590/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;padding:6px 14px;background:rgba(240,165,0,0.07);border-radius:20px;font-size:11px;font-weight:600;color:var(--gold);text-decoration:none;transition:background .15s">IMDb ↗</a>
+    </div>
+
+    <!-- Producer Priority #2: Coverage Velocity -->
+    <div class="sec-header" style="margin-bottom:14px">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Coverage Velocity</p>
+        <h2 class="sec-h2">Volume &amp; momentum</h2>
+        <hr class="sec-rule">
+      </div>
+    </div>
+    <div class="stat-grid" style="margin-bottom:32px">
+      <div class="stat-cell">
+        <p class="stat-num" id="stat-articles">27</p>
+        <p class="stat-label">Total Articles</p>
+        <p class="stat-sub" id="stat-articles-delta">Launch day</p>
+      </div>
+      <div class="stat-cell">
+        <p class="stat-num">4</p>
+        <p class="stat-label">Markets</p>
+        <p class="stat-sub">US · MX · ES · Intl</p>
+      </div>
+      <div class="stat-cell">
+        <p class="stat-num">7+</p>
+        <p class="stat-label">Reuters Syndications</p>
+        <p class="stat-sub">US stations + web</p>
+      </div>
+      <div class="stat-cell">
         <p class="stat-num" style="color:var(--coral)" id="stat-days">1</p>
         <p class="stat-label">Days Live</p>
-        <p class="stat-sub"><span class="delta delta-up">▲ Launch Day</span></p>
+        <p class="stat-sub"><span class="delta delta-up">▲ Streaming Now</span></p>
+      </div>
+    </div>
+
+    <!-- Producer Priority #3: Gap Alert + Episode Tracker -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px">
+
+      <!-- Coverage Gap Radar -->
+      <div class="card" style="padding:22px 24px">
+        <p style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--coral);margin-bottom:4px">Coverage Gap Radar</p>
+        <p style="font-size:12px;color:var(--ink3);margin-bottom:14px">Priority outlets not yet covered</p>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(232,64,42,0.05);border-radius:10px">
+            <span style="font-size:13px;font-weight:600;color:var(--ink1)">Reforma</span>
+            <span style="font-size:10px;font-weight:700;color:var(--coral);background:rgba(232,64,42,0.1);padding:2px 9px;border-radius:10px">GAP</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(232,64,42,0.05);border-radius:10px">
+            <span style="font-size:13px;font-weight:600;color:var(--ink1)">El Universal</span>
+            <span style="font-size:10px;font-weight:700;color:var(--coral);background:rgba(232,64,42,0.1);padding:2px 9px;border-radius:10px">GAP</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(232,64,42,0.05);border-radius:10px">
+            <span style="font-size:13px;font-weight:600;color:var(--ink1)">Milenio</span>
+            <span style="font-size:10px;font-weight:700;color:var(--coral);background:rgba(232,64,42,0.1);padding:2px 9px;border-radius:10px">GAP</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(40,160,96,0.05);border-radius:10px">
+            <span style="font-size:13px;font-weight:600;color:var(--ink2)">Heraldo de Mexico</span>
+            <span style="font-size:10px;font-weight:700;color:var(--teal);background:rgba(40,160,96,0.1);padding:2px 9px;border-radius:10px">✓ COVERED</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(40,160,96,0.05);border-radius:10px">
+            <span style="font-size:13px;font-weight:600;color:var(--ink2)">El Informador</span>
+            <span style="font-size:10px;font-weight:700;color:var(--teal);background:rgba(40,160,96,0.1);padding:2px 9px;border-radius:10px">✓ COVERED</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Episode Progress Tracker -->
+      <div class="card" style="padding:22px 24px">
+        <p style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--teal);margin-bottom:4px">Season Progress</p>
+        <p style="font-size:12px;color:var(--ink3);margin-bottom:14px">Aug 12 — Sep 30 · 8 episodes</p>
+        <div id="episode-tracker" style="display:flex;flex-direction:column;gap:6px"></div>
       </div>
     </div>
 
     <!-- Season Narrative -->
-    <div id="season-narrative" class="card" style="padding:20px 24px;margin-bottom:48px"></div>
+    <div id="season-narrative" class="card" style="padding:20px 24px;margin-bottom:32px"></div>
 
     <!-- Charts -->
     <div class="sec-header">
@@ -1271,6 +1364,33 @@ buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
     <p style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--ink1);line-height:1.45;margin-bottom:7px">${MEDIA.length} articles at launch · Reuters wire active · US tech press fully engaged</p>
     <p style="font-size:13px;color:var(--ink2);line-height:1.68">Launch day coverage spans 4 markets with <strong style="color:var(--ink1)">${top.k}</strong> leading volume (${top.v} articles). Priority gap: premium Mexican outlets — Reforma, El Universal, and Milenio have not yet published.</p>
   `;
+})();
+
+/* ─── EPISODE TRACKER ─── */
+(function(){
+  const eps = [
+    { num: 1, title: 'Ep 1',  date: '2026-08-12', live: true  },
+    { num: 2, title: 'Ep 2',  date: '2026-08-19', live: false },
+    { num: 3, title: 'Ep 3',  date: '2026-08-26', live: false },
+    { num: 4, title: 'Ep 4',  date: '2026-09-02', live: false },
+    { num: 5, title: 'Ep 5',  date: '2026-09-09', live: false },
+    { num: 6, title: 'Ep 6',  date: '2026-09-16', live: false },
+    { num: 7, title: 'Ep 7',  date: '2026-09-23', live: false },
+    { num: 8, title: 'Ep 8',  date: '2026-09-30', live: false },
+  ];
+  const el = document.getElementById('episode-tracker');
+  if (!el) return;
+  el.innerHTML = eps.map(e => {
+    const liveStyle  = 'background:rgba(232,64,42,0.07);border:1px solid rgba(232,64,42,0.18)';
+    const plainStyle = 'background:rgba(0,0,0,0.025);border:1px solid transparent';
+    const badge = e.live
+      ? `<span style="font-size:10px;font-weight:700;color:var(--coral);background:rgba(232,64,42,0.1);padding:2px 9px;border-radius:10px">LIVE</span>`
+      : `<span style="font-size:10px;color:var(--ink3)">${e.date.slice(5).replace('-','/')}</span>`;
+    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;border-radius:9px;${e.live ? liveStyle : plainStyle}">
+      <span style="font-size:13px;font-weight:${e.live ? 700 : 500};color:${e.live ? 'var(--ink1)' : 'var(--ink3)'}">Episode ${e.num}</span>
+      ${badge}
+    </div>`;
+  }).join('');
 })();
 
 /* ─── TODAY'S PULSE ─── */
