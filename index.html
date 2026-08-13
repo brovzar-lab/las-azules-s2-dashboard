@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Azules S2 — Media Intelligence Room V6 | Lemon Studios</title>
+  <title>Las Azules S2 — Media Intelligence Room V7 | Lemon Studios</title>
   <meta name="description" content="Media intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════════════════════
-       V6 DESIGN SYSTEM — Las Azules Show Poster Mood
-       V4 editorial base · Cinematic navy · Gold title treatment
+       V7 DESIGN SYSTEM — Las Azules Show Poster Mood
+       V4 editorial base · Cerulean police blue · Gold accents
     ═══════════════════════════════════════════════════════ */
     :root {
       --cream:  #ede8d6;
@@ -26,13 +26,15 @@
       --teal:   #2e7f74;
       --gold:   #c49a28;
       --gold2:  #e8c060;
-      --blue:   #2e5490;
-      --show-blue: #142544;
+      --blue:   #1B7BC4;
+      --show-blue: #1B7BC4;
+      --poster-blue:  #1B7BC4;
+      --poster-blue2: #5BC3E8;
       --green:  #2a7a58;
       --amber:  #c49a28;
       --red:    #c23926;
-      --nav-bg: #080d12;
-      --hero-bg: #060c16;
+      --nav-bg: #081628;
+      --hero-bg: #070e1e;
       --nav-h:  52px;
     }
 
@@ -73,13 +75,13 @@
     .tnav-logo {
       width: 30px; height: 30px;
       border-radius: 50%;
-      background: var(--coral);
+      background: var(--poster-blue);
       display: flex; align-items: center; justify-content: center;
       font-size: 10px; font-weight: 800;
       color: #fff;
       letter-spacing: -.5px;
       flex-shrink: 0;
-      box-shadow: 0 0 0 1.5px rgba(196,154,40,0.6), 0 0 0 3.5px rgba(196,154,40,0.15), 0 0 12px rgba(196,154,40,0.2);
+      box-shadow: 0 0 0 1.5px rgba(91,195,232,0.7), 0 0 0 3.5px rgba(27,123,196,0.2), 0 0 14px rgba(27,123,196,0.35);
     }
 
     .tnav-title {
@@ -133,10 +135,10 @@
 
     .v4-badge {
       padding: 3px 8px;
-      border: 1px solid rgba(196,154,40,0.4);
+      border: 1px solid rgba(91,195,232,0.45);
       font-size: 10px;
       font-weight: 700;
-      color: rgba(196,154,40,0.7);
+      color: rgba(91,195,232,0.8);
       letter-spacing: .1em;
     }
 
@@ -197,13 +199,13 @@
 
     @media (max-width: 767px) { .container { padding: 0 20px; } }
 
-    /* ── Hero Panel — show poster cinematic dark ── */
+    /* ── Hero Panel — show poster cinematic blue-dark ── */
     .hero {
-      background: linear-gradient(158deg, #070f1c 0%, #060c16 35%, #0a1020 70%, #060a12 100%);
+      background: linear-gradient(158deg, #070e1e 0%, #0c1a32 35%, #071228 70%, #060c1a 100%);
       padding: 68px 0 56px;
       position: relative;
       overflow: hidden;
-      border-bottom: 1px solid rgba(196,154,40,0.22);
+      border-bottom: 1px solid rgba(27,123,196,0.28);
     }
     /* subtle scan-line grain — vintage film mood */
     .hero::after {
@@ -219,12 +221,12 @@
       );
       pointer-events: none;
     }
-    /* gold-tinted vignette edge */
+    /* blue-tinted vignette edge */
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, rgba(6,10,18,0.55) 100%);
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, rgba(6,12,22,0.60) 100%);
       pointer-events: none;
     }
 
@@ -248,7 +250,7 @@
       font-weight: 700;
       letter-spacing: .22em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--poster-blue2);
       margin-bottom: 20px;
       opacity: 0.9;
     }
@@ -264,19 +266,19 @@
     }
 
     .hero-em {
-      color: var(--gold2);
+      color: var(--poster-blue2);
       font-style: italic;
-      text-shadow: 0 0 48px rgba(232,192,96,0.4), 0 0 16px rgba(232,192,96,0.2);
+      text-shadow: 0 0 48px rgba(91,195,232,0.45), 0 0 16px rgba(27,123,196,0.3);
     }
 
-    /* show poster decorative rule: badge gold to police blue to coral */
+    /* show poster decorative rule: police blue to gold to coral */
     .show-rule {
       display: block;
       height: 2px;
-      background: linear-gradient(90deg, var(--gold) 0%, var(--show-blue) 35%, var(--teal) 65%, var(--coral) 100%);
+      background: linear-gradient(90deg, var(--poster-blue) 0%, var(--poster-blue2) 30%, var(--gold) 65%, var(--coral) 100%);
       border: none;
       margin: 0 0 36px;
-      opacity: 0.75;
+      opacity: 0.8;
     }
 
     .hero-sub {
@@ -286,9 +288,9 @@
     }
 
     .hero-thesis {
-      border-left: 2px solid rgba(196,154,40,0.45);
+      border-left: 2px solid rgba(27,123,196,0.5);
       padding: 16px 20px;
-      background: rgba(196,154,40,0.04);
+      background: rgba(27,123,196,0.06);
     }
 
     .hero-thesis-label {
@@ -296,7 +298,7 @@
       font-weight: 700;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: rgba(196,154,40,0.55);
+      color: rgba(91,195,232,0.7);
       margin-bottom: 8px;
     }
 
@@ -310,7 +312,7 @@
     .mini-hero {
       background: var(--nav-bg);
       padding: 36px 0 28px;
-      border-bottom: 1px solid rgba(196,154,40,0.15);
+      border-bottom: 1px solid rgba(27,123,196,0.22);
     }
 
     /* ── Section Header (editorial) ── */
@@ -329,7 +331,7 @@
       font-weight: 700;
       letter-spacing: .20em;
       text-transform: uppercase;
-      color: var(--amber);
+      color: var(--poster-blue);
       margin-bottom: 6px;
     }
 
@@ -471,42 +473,9 @@
       .cov-table { min-width: 560px; }
     }
 
-    /* ── Post builder ── */
-    #post-overlay {
-      position: fixed; inset: 0; z-index: 48;
-      background: rgba(0,0,0,0.35);
-      opacity: 0; pointer-events: none; transition: opacity .22s;
-    }
-    #post-overlay.open { opacity: 1; pointer-events: all; }
-    #post-panel {
-      position: fixed; top: 0; right: 0; bottom: 0; z-index: 49;
-      width: 480px; max-width: 100vw;
-      background: var(--white); border-left: 1px solid var(--bd);
-      transform: translateX(100%);
-      transition: transform .28s cubic-bezier(.4,0,.2,1);
-      overflow-y: auto; display: flex; flex-direction: column;
-    }
-    #post-panel.open { transform: translateX(0); }
-    @media (max-width: 767px) { #post-panel { width: 100vw; border-left: none; } }
-
     .cc-ok   { color: var(--ink3); }
     .cc-warn { color: var(--gold); }
     .cc-over { color: var(--coral); font-weight: 700; }
-
-    /* ── Platform tab ── */
-    .platform-tab { transition: background .12s, color .12s, border-color .12s; cursor: pointer; }
-    .platform-tab.active {
-      background: var(--ink1) !important;
-      border-color: var(--ink1) !important;
-      color: #fff !important;
-    }
-
-    /* ── Hashtag chip ── */
-    .hashtag-chip { cursor: pointer; transition: background .12s, border-color .12s; }
-    .hashtag-chip:hover {
-      background: rgba(200,66,42,0.1) !important;
-      border-color: rgba(200,66,42,0.3) !important;
-    }
 
     /* ── Toast ── */
     .toast {
@@ -542,13 +511,34 @@
     }
     .url-btn:hover { background: var(--bd); color: var(--ink1); }
 
+    /* ── Platform buttons ── */
+    .plat-btn {
+      padding: 5px 11px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      border: 1px solid var(--bd);
+      background: var(--white);
+      color: var(--ink3);
+      cursor: pointer;
+      transition: all .1s;
+    }
+    .plat-btn.active {
+      background: var(--poster-blue);
+      color: #fff;
+      border-color: var(--poster-blue);
+    }
+
+    @media (max-width: 600px) { #pb-columns { grid-template-columns: 1fr !important; } }
+
     /* ── Scrollbar ── */
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: var(--bd2); border-radius: 2px; }
 
     /* ── Narrative accent ── */
-    #season-narrative { border-left: 3px solid var(--coral); background: var(--smoke); }
+    #season-narrative { border-left: 3px solid var(--poster-blue); background: var(--smoke); }
 
     .hidden { display: none !important; }
   </style>
@@ -572,7 +562,7 @@
 
   <div class="tnav-right">
     <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
-    <span class="v4-badge">V6</span>
+    <span class="v4-badge">V7</span>
   </div>
 </nav>
 
@@ -675,19 +665,6 @@
         <p class="sec-label" style="margin-bottom:14px">Language Split</p>
         <div id="chart-lang"></div>
       </div>
-    </div>
-
-    <!-- Geo map -->
-    <div class="sec-header">
-      <div class="sec-header-left">
-        <p class="sec-eyebrow">Acquisition Geography</p>
-        <h2 class="sec-h2">The coverage map</h2>
-        <hr class="sec-rule">
-      </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;padding-bottom:1px" id="geo-legend"></div>
-    </div>
-    <div class="card" style="padding:20px;margin-bottom:48px">
-      <div id="geo-map"></div>
     </div>
 
     <!-- Today's Pulse -->
@@ -799,18 +776,62 @@
 <section id="page-social" class="page">
   <div class="mini-hero">
     <div class="container">
-      <p class="hero-eyebrow">Social Media Hub</p>
-      <h1 style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1.05;margin-bottom:8px">Amplification</h1>
-      <p style="font-size:13px;color:rgba(255,255,255,0.4)">Build bilingual posts, track hashtags, coordinate the PR strategy</p>
+      <p class="hero-eyebrow">Social Media</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1.05;margin-bottom:8px">Post Generator</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.4)">Build bilingual posts in English and Spanish, track hashtags and mentions</p>
     </div>
   </div>
 
   <div class="container" style="padding-top:40px;padding-bottom:48px">
-    <div style="display:flex;justify-content:flex-end;margin-bottom:32px">
-      <button onclick="openPostBuilder(null)" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--coral);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit" onmouseover="this.style.opacity='.82'" onmouseout="this.style.opacity='1'">
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-        Build Post
-      </button>
+
+    <!-- Inline Bilingual Post Builder -->
+    <div class="card" style="padding:28px 32px;margin-bottom:48px;border-left:3px solid var(--poster-blue)">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap">
+        <div>
+          <p class="sec-label" style="margin-bottom:3px">Bilingual Post Builder</p>
+          <p style="font-size:11px;color:var(--ink3)">Paste an article headline + URL and generate ready-to-post copy in both languages</p>
+        </div>
+        <div style="display:flex;gap:5px;flex-wrap:wrap" id="pb-plat-btns">
+          <button onclick="selectPlatform('twitter')"   id="pb-btn-twitter"   class="plat-btn" style="font-family:inherit">Twitter / X</button>
+          <button onclick="selectPlatform('instagram')" id="pb-btn-instagram" class="plat-btn" style="font-family:inherit">Instagram</button>
+          <button onclick="selectPlatform('linkedin')"  id="pb-btn-linkedin"  class="plat-btn" style="font-family:inherit">LinkedIn</button>
+          <button onclick="selectPlatform('facebook')"  id="pb-btn-facebook"  class="plat-btn" style="font-family:inherit">Facebook</button>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
+        <input id="pb-headline" type="text" placeholder="Article headline or topic…" class="field" style="width:100%" />
+        <div style="display:flex;gap:6px">
+          <input id="pb-url" type="text" placeholder="Article URL (https://…)" class="field" style="flex:1" oninput="syncPbUrlLink()" />
+          <a id="pb-url-link" href="#" target="_blank" rel="noopener noreferrer" class="url-btn" title="Open URL">↗</a>
+        </div>
+        <div style="display:flex;gap:6px">
+          <input id="pb-outlet" type="text" placeholder="Outlet / publication name…" class="field" style="flex:1" />
+          <button onclick="generatePost()" style="padding:8px 18px;background:var(--poster-blue);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit;white-space:nowrap" onmouseover="this.style.opacity='.82'" onmouseout="this.style.opacity='1'">Generate ↗</button>
+        </div>
+        <textarea id="pb-excerpt" rows="2" placeholder="Key quote or excerpt (optional)…" class="field" style="width:100%;resize:vertical"></textarea>
+      </div>
+
+      <p id="pb-limit-note" style="font-size:10px;color:var(--ink3);margin-bottom:10px"></p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px" id="pb-columns">
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
+            <p style="font-size:10px;font-weight:700;color:var(--poster-blue);letter-spacing:.08em;text-transform:uppercase">Español</p>
+            <button onclick="copyPost('es')" style="font-size:10px;font-weight:600;padding:3px 9px;border:1px solid var(--bd);background:none;cursor:pointer;color:var(--ink2);font-family:inherit">Copiar</button>
+          </div>
+          <textarea id="pb-out-es" rows="6" class="field" style="width:100%;resize:vertical" oninput="updateCC('es')" placeholder="Post en español…"></textarea>
+          <p id="cc-es" style="font-size:10px;color:var(--ink3);text-align:right;margin-top:3px"></p>
+        </div>
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
+            <p style="font-size:10px;font-weight:700;color:var(--poster-blue);letter-spacing:.08em;text-transform:uppercase">English</p>
+            <button onclick="copyPost('en')" style="font-size:10px;font-weight:600;padding:3px 9px;border:1px solid var(--bd);background:none;cursor:pointer;color:var(--ink2);font-family:inherit">Copy</button>
+          </div>
+          <textarea id="pb-out-en" rows="6" class="field" style="width:100%;resize:vertical" oninput="updateCC('en')" placeholder="Post in English…"></textarea>
+          <p id="cc-en" style="font-size:10px;color:var(--ink3);text-align:right;margin-top:3px"></p>
+        </div>
+      </div>
     </div>
 
     <!-- Hashtag cloud -->
@@ -865,23 +886,6 @@
       <div id="social-mentions-feed"></div>
     </div>
 
-    <!-- Team Discussion -->
-    <div class="sec-header">
-      <div class="sec-header-left">
-        <p class="sec-eyebrow">Team Coordination</p>
-        <h2 class="sec-h2">Discussion thread</h2>
-        <hr class="sec-rule">
-      </div>
-    </div>
-    <div class="card" style="padding:26px">
-      <p style="font-size:13px;color:var(--ink2);line-height:1.65;margin-bottom:18px">Campaign decisions, social feedback, and coordination live in the main issue thread on Paperclip.</p>
-      <a href="https://paperclip.billyrovzar.com/LEMA/issues/LEMA-8461" target="_blank" rel="noopener noreferrer"
-         style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid var(--coral);color:var(--coral);font-size:11px;font-weight:700;text-decoration:none;letter-spacing:.07em;text-transform:uppercase"
-         onmouseover="this.style.background='rgba(200,66,42,0.05)'" onmouseout="this.style.background='transparent'">
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Open LEMA-8461 Discussion ↗
-      </a>
-    </div>
   </div>
 </section>
 
@@ -976,81 +980,6 @@
 </section>
 
 </div><!-- end #content -->
-
-<!-- ═══ POST BUILDER SLIDE-OVER ═══ -->
-<div id="post-overlay" onclick="closePostBuilder()"></div>
-<div id="post-panel">
-  <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--bd);flex-shrink:0">
-    <div>
-      <h2 style="font-size:13px;font-weight:700;color:var(--ink1)">Post Builder</h2>
-      <p style="font-size:11px;color:var(--ink3);margin-top:1px">Bilingual · Template-based</p>
-    </div>
-    <button onclick="closePostBuilder()" style="width:30px;height:30px;background:none;border:1px solid var(--bd);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink2)" onmouseover="this.style.background='var(--smoke)'" onmouseout="this.style.background='none'">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-  </div>
-
-  <div style="flex:1;overflow-y:auto;padding:18px 20px;display:flex;flex-direction:column;gap:14px">
-    <div>
-      <label style="font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:6px">Article / Source</label>
-      <input id="pb-headline" type="text" placeholder="Headline or topic…" class="field" style="width:100%;margin-bottom:5px" />
-      <div class="url-row" style="margin-bottom:5px">
-        <input id="pb-url" type="text" placeholder="https://…" class="field" oninput="syncPbUrlLink()" />
-        <button onclick="copyPbUrl()" class="url-btn" title="Copy URL">Copy</button>
-        <a id="pb-url-link" href="#" target="_blank" rel="noopener noreferrer" class="url-btn" title="Open URL">↗</a>
-      </div>
-      <input id="pb-outlet" type="text" placeholder="Outlet / source name…" class="field" style="width:100%;margin-bottom:5px" />
-      <textarea id="pb-excerpt" rows="2" placeholder="Excerpt / key quote (optional)…" class="field" style="width:100%;resize:vertical"></textarea>
-    </div>
-
-    <div>
-      <label style="font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:6px">Platform</label>
-      <div style="display:flex;flex-wrap:wrap;gap:5px" id="platform-tabs">
-        <button onclick="selectPlatform('instagram')" class="platform-tab" data-plat="instagram" style="padding:6px 11px;font-size:11px;font-weight:600;border:1px solid var(--bd);color:var(--ink2);background:none;cursor:pointer;font-family:inherit">Instagram</button>
-        <button onclick="selectPlatform('twitter')"   class="platform-tab" data-plat="twitter"   style="padding:6px 11px;font-size:11px;font-weight:600;border:1px solid var(--bd);color:var(--ink2);background:none;cursor:pointer;font-family:inherit">Twitter/X</button>
-        <button onclick="selectPlatform('linkedin')"  class="platform-tab" data-plat="linkedin"  style="padding:6px 11px;font-size:11px;font-weight:600;border:1px solid var(--bd);color:var(--ink2);background:none;cursor:pointer;font-family:inherit">LinkedIn</button>
-        <button onclick="selectPlatform('facebook')"  class="platform-tab" data-plat="facebook"  style="padding:6px 11px;font-size:11px;font-weight:600;border:1px solid var(--bd);color:var(--ink2);background:none;cursor:pointer;font-family:inherit">Facebook</button>
-        <button onclick="selectPlatform('tiktok')"    class="platform-tab" data-plat="tiktok"    style="padding:6px 11px;font-size:11px;font-weight:600;border:1px solid var(--bd);color:var(--ink2);background:none;cursor:pointer;font-family:inherit">TikTok</button>
-      </div>
-      <p id="pb-limit-note" style="font-size:11px;color:var(--ink3);margin-top:6px"></p>
-    </div>
-
-    <button onclick="generatePosts()" style="width:100%;padding:11px;background:var(--coral);color:#fff;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Generate Posts</button>
-
-    <div style="display:flex;gap:10px" id="pb-columns">
-      <div style="flex:1;min-width:0">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
-          <label style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3)">🇲🇽 Español</label>
-          <span id="cc-es" style="font-size:11px;font-family:monospace" class="cc-ok"></span>
-        </div>
-        <textarea id="pb-out-es" rows="6" class="field" style="width:100%;margin-bottom:5px;resize:vertical" oninput="updateCC('es')" placeholder="Post en español…"></textarea>
-        <button onclick="copyPost('es')" style="width:100%;padding:8px;background:var(--smoke);border:1px solid var(--bd);color:var(--ink2);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit" onmouseover="this.style.background='var(--bd)'" onmouseout="this.style.background='var(--smoke)'">Copy ES</button>
-      </div>
-      <div style="flex:1;min-width:0">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
-          <label style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3)">🇺🇸 English</label>
-          <span id="cc-en" style="font-size:11px;font-family:monospace" class="cc-ok"></span>
-        </div>
-        <textarea id="pb-out-en" rows="6" class="field" style="width:100%;margin-bottom:5px;resize:vertical" oninput="updateCC('en')" placeholder="Post in English…"></textarea>
-        <button onclick="copyPost('en')" style="width:100%;padding:8px;background:var(--smoke);border:1px solid var(--bd);color:var(--ink2);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit" onmouseover="this.style.background='var(--bd)'" onmouseout="this.style.background='var(--smoke)'">Copy EN</button>
-      </div>
-    </div>
-
-    <div>
-      <label style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:6px">Add Hashtag to Post</label>
-      <div style="display:flex;flex-wrap:wrap;gap:4px">
-        <span onclick="addHashtagToPost('#MujeresDeAzul')"  class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#MujeresDeAzul</span>
-        <span onclick="addHashtagToPost('#LasAzules')"      class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#LasAzules</span>
-        <span onclick="addHashtagToPost('#LasAzulesS2')"    class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#LasAzulesS2</span>
-        <span onclick="addHashtagToPost('#WomenInBlue')"    class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#WomenInBlue</span>
-        <span onclick="addHashtagToPost('#AppleTV')"        class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#AppleTV</span>
-        <span onclick="addHashtagToPost('#BarbaraMori')"    class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#BarbaraMori</span>
-        <span onclick="addHashtagToPost('#FernandoRovzar')" class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#FernandoRovzar</span>
-        <span onclick="addHashtagToPost('#DraMex')"         class="hashtag-chip" style="padding:3px 7px;background:rgba(200,66,42,0.06);color:var(--coral);font-size:11px;font-family:monospace;font-weight:600;border:1px solid rgba(200,66,42,0.2)">#DraMex</span>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ═══ JAVASCRIPT ═══ -->
 <script>
@@ -1252,40 +1181,6 @@ buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
   `).join('');
 })();
 
-/* ─── GEO MAP ─── */
-(function(){
-  const GEO_DOTS = [
-    { market:'US',            cx:210, cy:160, color:'#3a60a8' },
-    { market:'Mexico',        cx:185, cy:195, color:'#3d9688' },
-    { market:'Spain',         cx:450, cy:140, color:'#c8422a' },
-    { market:'International', cx:490, cy:120, color:'#7a4aa8' },
-  ];
-  const mc = {};
-  MEDIA.forEach(a => { mc[a.market] = (mc[a.market]||0) + 1; });
-  const maxC = Math.max(...Object.values(mc));
-
-  document.getElementById('geo-map').innerHTML = `
-    <svg viewBox="0 0 760 280" style="width:100%;height:auto;display:block">
-      <rect x="0" y="0" width="760" height="280" fill="var(--smoke)"/>
-      <path d="M120,60 Q130,50 160,55 L190,70 200,110 210,160 215,220 200,250 180,255 160,250 140,238 130,210 120,175 110,130 115,90Z" fill="var(--bd)" opacity=".6"/>
-      <path d="M430,50 Q460,45 490,60 L510,90 505,140 490,170 470,175 450,165 435,148 425,118 420,85 425,63Z" fill="var(--bd)" opacity=".6"/>
-      <path d="M445,175 L465,180 475,205 462,238 442,245 428,232 424,210 432,185Z" fill="var(--bd)" opacity=".5"/>
-      <path d="M510,50 Q560,40 620,55 L650,80 640,125 610,150 560,142 530,122 510,95 505,68Z" fill="var(--bd)" opacity=".6"/>
-      <path d="M595,185 Q625,178 645,192 L648,225 628,237 600,234 588,218Z" fill="var(--bd)" opacity=".5"/>
-      ${GEO_DOTS.map(d => {
-        const count = mc[d.market] || 0;
-        const r = Math.max(10, Math.min(28, 10 + (count/maxC)*20));
-        return `<circle cx="${d.cx}" cy="${d.cy}" r="${r}" fill="${d.color}" opacity=".16"/>
-                <circle cx="${d.cx}" cy="${d.cy}" r="${r*.55}" fill="${d.color}" opacity=".5"/>
-                <text x="${d.cx}" y="${d.cy+1}" text-anchor="middle" dominant-baseline="middle" fill="${d.color}" font-size="10" font-weight="800" font-family="Inter,sans-serif">${count}</text>`;
-      }).join('')}
-    </svg>`;
-
-  document.getElementById('geo-legend').innerHTML = GEO_DOTS.map(d => `
-    <span style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--ink2)">
-      <span style="width:8px;height:8px;border-radius:50%;background:${d.color};flex-shrink:0"></span>${d.market} (${mc[d.market]||0})
-    </span>`).join('');
-})();
 
 /* ─── HASHTAG CLOUD ─── */
 (function(){
@@ -1423,18 +1318,18 @@ function openPostBuilder(article) {
     document.getElementById('pb-excerpt').value  = article.excerpt || '';
     syncPbUrlLink();
   }
-  document.getElementById('post-overlay').classList.add('open');
-  document.getElementById('post-panel').classList.add('open');
+  nav('social');
+  setTimeout(() => {
+    const el = document.querySelector('#page-social .card');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 80);
 }
 
-function closePostBuilder() {
-  document.getElementById('post-overlay').classList.remove('open');
-  document.getElementById('post-panel').classList.remove('open');
-}
+function closePostBuilder() {}
 
 function selectPlatform(p) {
   currentPlatform = p;
-  document.querySelectorAll('.platform-tab').forEach(t => t.classList.toggle('active', t.dataset.plat===p));
+  document.querySelectorAll('.plat-btn').forEach(t => t.classList.toggle('active', t.id === 'pb-btn-' + p));
   document.getElementById('pb-limit-note').textContent = 'Character limit: ' + PLAT_LIMITS[p];
   updateCC('es'); updateCC('en');
 }
@@ -1449,7 +1344,7 @@ function updateCC(lang) {
   sp.className = len>lim ? 'cc-over' : len>lim*.9 ? 'cc-warn' : 'cc-ok';
 }
 
-function generatePosts() {
+function generatePost() {
   const hl  = document.getElementById('pb-headline').value.trim();
   const url = document.getElementById('pb-url').value.trim();
   const out = document.getElementById('pb-outlet').value.trim();
@@ -1461,6 +1356,8 @@ function generatePosts() {
   document.getElementById('pb-out-en').value = enOut;
   updateCC('es'); updateCC('en');
 }
+
+function generatePosts() { generatePost(); }
 
 function copyPost(lang) {
   const ta = document.getElementById('pb-out-'+lang);
