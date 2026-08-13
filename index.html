@@ -1056,6 +1056,8 @@
       <!-- Output -->
       <div style="padding:18px 26px">
         <p id="pb-limit-note" style="font-size:10px;color:var(--ink3);margin-bottom:12px"></p>
+        <!-- Source verification badge — appears after every generation -->
+        <div id="pb-source-badge" style="display:none;align-items:center;gap:0;padding:7px 12px;background:rgba(61,150,136,0.07);border:1px solid rgba(61,150,136,0.28);margin-bottom:12px;font-family:inherit;overflow:hidden"></div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px" id="pb-columns">
           <div>
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
@@ -1326,7 +1328,7 @@ const EPISODES = [
 ];
 
 const CAST = [
-  { name:'Barbara Mori',         role:'Lt. María',    note:'Lead · co-wrote scripts',  link:'https://www.instagram.com/barbaramori/',     initials:'BM' },
+  { name:'Barbara Mori',         role:'Lt. María',    note:'Lead',                     link:'https://www.instagram.com/barbaramori/',     initials:'BM' },
   { name:'Ximena Sarinana',      role:'Ángeles',      note:'',                          link:'https://www.instagram.com/ximena_s/',        initials:'XS' },
   { name:'Natalia Téllez',       role:'Valentina',    note:'',                          link:'https://www.instagram.com/nataliatellezweb/', initials:'NT' },
   { name:'Amorita Rasgado',      role:'Gabina',       note:'',                          link:'https://www.instagram.com/amoritarasgado/',  initials:'AR' },
@@ -1342,6 +1344,73 @@ const CREW = [
   { role:'Executive Producer',   name:'Erica Sanchez Su', note:'Monarca',                       link:'' },
   { role:'Production',           name:'Lemon Studios',    note:'Mexico City',                   link:'https://www.lemon.la/' },
 ];
+
+/* ─── SOURCE-VERIFICATION REGISTRY ─── */
+// Canonical verified credits derived from CREW + production data.
+// Any generated post claim about a person + guild role MUST match this registry.
+const VERIFIED_CREDITS = {
+  'Fernando Rovzar':    ['creator', 'showrunner', 'director'],
+  'Pablo Aramendi':     ['creator'],
+  'Billy Rovzar':       ['producer'],
+  'Wendy Riss':         ['producer'],
+  'Alejandro Lozano':   ['producer'],
+  'Erica Sanchez Su':   ['producer'],
+  'Lemon Studios':      ['producer'],
+};
+
+// Guild-role verbs (EN + ES) mapped to canonical role categories
+const GUILD_CLAIM_MAP = {
+  'wrote':        'writer',
+  'co-wrote':     'writer',
+  'scripted':     'writer',
+  'screenplay':   'writer',
+  'directed':     'director',
+  'produced':     'producer',
+  'created':      'creator',
+  'co-created':   'creator',
+  // Spanish forms
+  'escribió':     'writer',
+  'co-escribió':  'writer',
+  'guionista':    'writer',
+  'guión':        'writer',
+  'dirigió':      'director',
+  'producida por':'producer',
+  'producido por':'producer',
+  'creada por':   'creator',
+  'creado por':   'creator',
+};
+
+// Scan post text line-by-line; strip any line containing an unverified
+// guild-role claim about a named person. Returns cleaned text + stripped lines.
+function verifyClaims(text) {
+  if (!text) return { clean: text, stripped: [] };
+  const stripped = [];
+  const cleanLines = text.split('\n').map(line => {
+    const lower = line.toLowerCase();
+    const matchedVerb = Object.keys(GUILD_CLAIM_MAP).find(v => lower.includes(v));
+    if (!matchedVerb) return line;
+    const matchedPerson = Object.keys(VERIFIED_CREDITS).find(name =>
+      lower.includes(name.toLowerCase())
+    );
+    if (!matchedPerson) return line;
+    const claimedRole = GUILD_CLAIM_MAP[matchedVerb];
+    if ((VERIFIED_CREDITS[matchedPerson] || []).includes(claimedRole)) return line;
+    stripped.push(line.trim());
+    return null;
+  });
+  return { clean: cleanLines.filter(l => l !== null).join('\n'), stripped };
+}
+
+function showSourceBadge(sourceLabel, strippedLines) {
+  const el = document.getElementById('pb-source-badge');
+  if (!el) return;
+  if (!sourceLabel) { el.style.display = 'none'; return; }
+  const warnPart = strippedLines && strippedLines.length
+    ? `<span style="color:var(--coral);font-weight:700;margin-left:12px">⚠ ${strippedLines.length} unverified claim${strippedLines.length>1?'s':''} removed</span>`
+    : '';
+  el.style.display = 'flex';
+  el.innerHTML = `<span style="font-size:10px;font-weight:800;letter-spacing:.06em;color:#3d9688;text-transform:uppercase;white-space:nowrap">✓ Source verified</span><span style="font-size:11px;color:var(--ink2);margin-left:8px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Based on: ${sourceLabel}</span>${warnPart}`;
+}
 
 /* ─── ROUTER ─── */
 const PAGES = ['home','coverage','social','show','updates'];
@@ -1814,10 +1883,14 @@ function _runGenerate(idx, overrideTopic) {
     : QUICK_TOPICS[idx]);
   const tmpl = PLAT_TMPL[currentPlatform];
   if (!tmpl) return;
-  const result = tmpl(topic.hl, topic.url, topic.exc, topic.out);
-  document.getElementById('pb-out-es').value = result.es;
-  document.getElementById('pb-out-en').value = result.en;
+  const raw = tmpl(topic.hl, topic.url, topic.exc, topic.out);
+  const esV = verifyClaims(raw.es);
+  const enV = verifyClaims(raw.en);
+  document.getElementById('pb-out-es').value = esV.clean;
+  document.getElementById('pb-out-en').value = enV.clean;
   updateCC('es'); updateCC('en');
+  const allStripped = [...esV.stripped, ...enV.stripped];
+  showSourceBadge(topic.out || topic.hl || 'Las Azules S2', allStripped);
 }
 
 function generatePost() {
@@ -1829,10 +1902,15 @@ function generatePost() {
   const exc = document.getElementById('pb-excerpt').value.trim();
   const tmpl = PLAT_TMPL[currentPlatform];
   if (!tmpl) return;
-  const result = tmpl(hl||'Las Azules S2', url, exc, out);
-  document.getElementById('pb-out-es').value = result.es;
-  document.getElementById('pb-out-en').value = result.en;
+  const raw = tmpl(hl||'Las Azules S2', url, exc, out);
+  const esV = verifyClaims(raw.es);
+  const enV = verifyClaims(raw.en);
+  document.getElementById('pb-out-es').value = esV.clean;
+  document.getElementById('pb-out-en').value = enV.clean;
   updateCC('es'); updateCC('en');
+  const sourceLabel = out ? (hl ? `${out} — ${hl.substring(0,60)}` : out) : (hl || 'Custom input');
+  const allStripped = [...esV.stripped, ...enV.stripped];
+  showSourceBadge(sourceLabel, allStripped);
 }
 
 function generatePosts() { generatePost(); }
