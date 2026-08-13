@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Azules S2 — Media Intelligence Room V8.2 | Lemon Studios</title>
+  <title>Las Azules S2 — Media Intelligence Room V8.3 | Lemon Studios</title>
   <meta name="description" content="Media intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <!-- PWA / Add to Home Screen -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -636,6 +636,52 @@
       .stat-grid { grid-template-columns: repeat(2,1fr) !important; }
     }
 
+    /* ── In-app article reader (PWA back-navigation) ── */
+    #reader-overlay {
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; flex-direction: column;
+      background: #070e1e;
+      transform: translateY(100%);
+      transition: transform 0.28s cubic-bezier(.32,.72,0,1);
+      pointer-events: none;
+    }
+    #reader-overlay.open { transform: translateY(0); pointer-events: all; }
+    #reader-bar {
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px 14px 12px;
+      padding-top: max(env(safe-area-inset-top, 0px), 48px);
+      background: #081628;
+      border-bottom: 1px solid rgba(91,195,232,0.15);
+      flex-shrink: 0;
+    }
+    #reader-back {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 14px; font-weight: 700; color: #5BC3E8;
+      background: none; border: none; cursor: pointer;
+      padding: 6px 8px 6px 0; flex-shrink: 0; font-family: inherit;
+    }
+    #reader-domain {
+      flex: 1; font-size: 11px; color: rgba(255,255,255,0.38);
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0;
+    }
+    #reader-safari {
+      flex-shrink: 0; font-size: 11px; font-weight: 700; color: #5BC3E8;
+      text-decoration: none; padding: 7px 11px;
+      border: 1px solid rgba(91,195,232,0.3); white-space: nowrap;
+    }
+    #reader-frame { flex: 1; border: none; width: 100%; background: #fff; }
+    #reader-fallback {
+      display: none; flex: 1;
+      flex-direction: column; align-items: center; justify-content: center;
+      gap: 16px; padding: 40px 28px; text-align: center;
+    }
+    #reader-fallback p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.65; }
+    #reader-fallback a {
+      display: inline-block; padding: 13px 28px;
+      background: #1B7BC4; color: #fff; font-weight: 700;
+      font-size: 14px; text-decoration: none; font-family: inherit;
+    }
+
     /* ── Scrollbar ── */
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: transparent; }
@@ -666,7 +712,7 @@
 
   <div class="tnav-right">
     <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
-    <span class="v4-badge">V8.2</span>
+    <span class="v4-badge">V8.3</span>
   </div>
 </nav>
 
@@ -1487,7 +1533,7 @@ function renderCoverage() {
   }
   empty.classList.add('hidden');
   tbody.innerHTML = filtered.map(a => `
-    <tr onclick="window.open('${a.url}','_blank','noopener')" style="cursor:pointer">
+    <tr onclick="openArticle('${a.url}')" style="cursor:pointer">
       <td style="font-size:12px;font-weight:700;color:var(--ink1);max-width:130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${a.outlet}</td>
       <td style="max-width:340px">
         <p style="font-size:13px;color:var(--ink1);font-weight:500;line-height:1.4;margin-bottom:2px">${a.headline}</p>
@@ -1720,6 +1766,95 @@ function showToast(msg) {
 selectPlatform('twitter');
 
 routeFromHash();
+
+/* ─── IN-APP ARTICLE READER (PWA back-navigation) ─── */
+function isPWA() {
+  return !!(window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches);
+}
+
+function openArticle(url) {
+  if (!url || url === '#' || url.startsWith('javascript')) return;
+  if (isPWA()) {
+    const overlay   = document.getElementById('reader-overlay');
+    const frame     = document.getElementById('reader-frame');
+    const fallback  = document.getElementById('reader-fallback');
+    const domainEl  = document.getElementById('reader-domain');
+    const safariBtn = document.getElementById('reader-safari');
+    const fbLink    = document.getElementById('reader-fallback-link');
+    try { domainEl.textContent = new URL(url).hostname.replace(/^www\./,''); } catch(e) {}
+    safariBtn.href = url;
+    fbLink.href    = url;
+    fallback.style.display = 'none';
+    frame.style.display = 'block';
+    frame.src = url;
+    /* Detect iframe block: cross-origin loads throw SecurityError on
+       contentWindow.location access; blocked/empty pages do not */
+    frame.onload = function() {
+      setTimeout(function() {
+        try {
+          const loc = frame.contentWindow.location.href;
+          if (!loc || loc === 'about:blank') {
+            frame.style.display = 'none';
+            fallback.style.display = 'flex';
+          }
+        } catch(e) { /* SecurityError = page loaded fine, cross-origin */ }
+      }, 300);
+    };
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  } else {
+    window.open(url, '_blank', 'noopener');
+  }
+}
+
+function closeReader() {
+  const overlay = document.getElementById('reader-overlay');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(function() {
+    const frame = document.getElementById('reader-frame');
+    frame.src = '';
+    frame.style.display = 'block';
+    document.getElementById('reader-fallback').style.display = 'none';
+  }, 300);
+}
+
+/* Intercept all target="_blank" external link clicks in PWA mode */
+document.addEventListener('click', function(e) {
+  if (!isPWA()) return;
+  const a = e.target.closest('a[href]');
+  if (!a || a.getAttribute('target') !== '_blank') return;
+  const href = a.href;
+  if (!href) return;
+  try {
+    if (new URL(href).hostname === location.hostname) return;
+  } catch(ex) { return; }
+  e.preventDefault();
+  openArticle(href);
+}, true);
+
+/* Close reader on Escape */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeReader();
+});
 </script>
+
+<!-- In-app article reader overlay -->
+<div id="reader-overlay">
+  <div id="reader-bar">
+    <button id="reader-back" onclick="closeReader()">
+      <svg viewBox="0 0 10 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1 L2 8 L8 15"/></svg>
+      Las Azules
+    </button>
+    <span id="reader-domain"></span>
+    <a id="reader-safari" href="#" target="_blank" rel="noopener">Safari ↗</a>
+  </div>
+  <iframe id="reader-frame" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+  <div id="reader-fallback">
+    <p>This site can't be shown in-app.<br>Tap below to open in Safari.</p>
+    <a id="reader-fallback-link" href="#" target="_blank" rel="noopener">Open in Safari ↗</a>
+  </div>
+</div>
+
 </body>
 </html>

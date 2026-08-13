@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Add Las Azules Dashboard to Your iPhone</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,900;1,800&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -27,34 +27,72 @@
       box-shadow: 0 32px 80px rgba(0,0,0,0.6);
     }
 
-    /* Header */
+    /* Hero banner */
+    .hero {
+      position: relative; height: 200px; overflow: hidden;
+      background: #040b16;
+    }
+    .hero-img {
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: center 25%; opacity: 0.55; display: block;
+    }
+    .hero-gradient {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom,
+        rgba(4,11,22,0.1) 0%,
+        rgba(4,11,22,0.5) 50%,
+        rgba(12,26,50,1) 100%);
+    }
+    .hero-content {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 20px 24px 0;
+    }
+    .hero-eyebrow {
+      font-size: 9px; font-weight: 800; letter-spacing: .2em;
+      text-transform: uppercase; color: #5BC3E8; margin-bottom: 6px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 34px; font-weight: 900; color: #fff;
+      line-height: 1; letter-spacing: -.01em;
+    }
+    .hero-title em {
+      font-style: italic; color: #5BC3E8;
+    }
+    .hero-season {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: rgba(255,255,255,0.45);
+      margin-top: 5px;
+    }
+
+    /* Header below hero */
     .header {
-      background: linear-gradient(135deg, #0c1a32 0%, #071228 100%);
-      border-bottom: 1px solid rgba(91,195,232,0.15);
-      padding: 28px 28px 24px;
-      text-align: center;
+      background: #0c1a32;
+      border-bottom: 1px solid rgba(91,195,232,0.12);
+      padding: 20px 24px 20px;
+      display: flex; align-items: center; gap: 16px;
     }
     .app-icon {
-      width: 72px; height: 72px;
+      width: 60px; height: 60px; flex-shrink: 0;
       background: #070e1e;
-      border: 2px solid rgba(91,195,232,0.4);
-      border-radius: 18px;
-      margin: 0 auto 14px;
+      border: 1.5px solid rgba(91,195,232,0.4);
+      border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 0 0 4px rgba(27,123,196,0.15), 0 8px 24px rgba(0,0,0,0.4);
+      box-shadow: 0 0 0 3px rgba(27,123,196,0.15), 0 6px 18px rgba(0,0,0,0.4);
       overflow: hidden;
     }
     .app-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .header-text {}
     .header-eyebrow {
-      font-size: 10px; font-weight: 700; letter-spacing: .14em;
-      text-transform: uppercase; color: #5BC3E8; margin-bottom: 6px;
+      font-size: 9px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: #5BC3E8; margin-bottom: 3px;
     }
     .header-title {
-      font-size: 22px; font-weight: 900; color: #fff; letter-spacing: -.01em;
-      line-height: 1.1; margin-bottom: 6px;
+      font-size: 16px; font-weight: 800; color: #fff; letter-spacing: -.01em;
+      line-height: 1.2; margin-bottom: 2px;
     }
     .header-sub {
-      font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 500;
+      font-size: 11px; color: rgba(255,255,255,0.38); font-weight: 500;
     }
 
     /* Steps */
@@ -148,14 +186,30 @@
 </head>
 <body>
   <div class="card">
-    <!-- Header -->
+    <!-- Hero banner with show title -->
+    <div class="hero">
+      <img class="hero-img"
+           src="https://img.youtube.com/vi/1lVJ96Oi9UY/maxresdefault.jpg"
+           alt="Las Azules S2"
+           onerror="this.style.display='none'" />
+      <div class="hero-gradient"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Apple TV+ · Temporada 2</p>
+        <h1 class="hero-title">Las <em>Azules</em></h1>
+        <p class="hero-season">Women in Blue · Season 2 · 2026</p>
+      </div>
+    </div>
+
+    <!-- App icon + install header -->
     <div class="header">
       <div class="app-icon">
-        <img src="apple-touch-icon.png" alt="Las Azules" onerror="this.parentElement.innerHTML='<span style=\'color:#5BC3E8;font-size:28px;font-weight:900;font-family:serif\'>A</span>'" />
+        <img src="apple-touch-icon.png" alt="Las Azules" onerror="this.parentElement.innerHTML='<span style=\'color:#5BC3E8;font-size:24px;font-weight:900;font-family:serif\'>A</span>'" />
       </div>
-      <p class="header-eyebrow">Las Azules · Season 2</p>
-      <h1 class="header-title">Add to Your iPhone</h1>
-      <p class="header-sub">Works like an app — no download needed</p>
+      <div class="header-text">
+        <p class="header-eyebrow">Media Intelligence Room</p>
+        <p class="header-title">Add to Your iPhone</p>
+        <p class="header-sub">Works like an app — no download needed</p>
+      </div>
     </div>
 
     <!-- URL -->
