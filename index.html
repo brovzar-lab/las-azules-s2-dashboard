@@ -4,33 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Las Azules S2 — Media Intelligence V5 | Lemon Studios</title>
-  <meta name="description" content="Producer intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+." />
+  <meta name="description" content="Producer intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════════════════════
-       V5 DESIGN — Apple product aesthetic
-       -apple-system font · F5F5F7 bg · 12px radius · blur nav
+       V5 — Producer-first UX · Apple aesthetic
+       White frosted nav · 16px radius · DM Serif score numbers
     ═══════════════════════════════════════════════════════ */
     :root {
       --bg:      #F5F5F7;
       --surf:    #FFFFFF;
-      --bd:      rgba(0,0,0,0.08);
+      --bd:      rgba(0,0,0,0.06);
       --ink1:    #1D1D1F;
-      --ink2:    #6E6E73;
+      --ink2:    #86868B;
       --ink3:    #AEAEB2;
-      --accent:  #E8402A;
+      --blue:    #0071E3;
+      --blue-h:  #0077ED;
       --green:   #34C759;
-      --blue:    #007AFF;
       --amber:   #FF9F0A;
       --red:     #FF3B30;
       --teal:    #30B0C7;
       --purple:  #AF52DE;
-      --r:       12px;
+      --brand:   #E8402A;
+      --r:       16px;
       --r-sm:    8px;
-      --sh:      0 1px 3px rgba(0,0,0,0.05), 0 4px 16px rgba(0,0,0,0.05);
-      --nav-h:   48px;
+      --sh:      0 2px 8px rgba(0,0,0,0.08);
+      --nav-h:   52px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,20 +39,24 @@
 
     body {
       background: var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Inter, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
       color: var(--ink1);
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── TOP NAV — Apple frosted glass ── */
+    /* ── TOP NAV — Apple white frosted glass ── */
     #topnav {
       position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index: 40;
-      background: rgba(29,29,31,0.88);
+      background: rgba(255,255,255,0.80);
       -webkit-backdrop-filter: blur(20px) saturate(180%);
       backdrop-filter: blur(20px) saturate(180%);
       display: flex; align-items: center; padding: 0 20px;
-      border-bottom: 0.5px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.40);
+      transition: box-shadow .2s;
+    }
+    #topnav.scrolled {
+      box-shadow: 0 1px 0 rgba(0,0,0,0.10);
     }
 
     .tnav-brand {
@@ -60,39 +65,42 @@
     }
     .tnav-logo {
       width: 26px; height: 26px; border-radius: 6px;
-      background: var(--accent); display: flex; align-items: center; justify-content: center;
+      background: var(--brand); display: flex; align-items: center; justify-content: center;
       font-size: 10px; font-weight: 800; color: #fff; letter-spacing: -.3px;
     }
     .tnav-title {
-      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.92);
+      font-size: 13px; font-weight: 700; color: var(--ink1);
       letter-spacing: -.01em; white-space: nowrap;
     }
 
     .tnav-links { display: flex; align-items: center; flex: 1; }
 
     .tnav-link {
-      padding: 5px 10px; font-size: 12px; font-weight: 500;
-      color: rgba(255,255,255,0.42); cursor: pointer; border: none; background: none;
+      padding: 5px 10px; font-size: 13px; font-weight: 500;
+      color: var(--ink2); cursor: pointer; border: none; background: none;
       transition: color .12s; white-space: nowrap; font-family: inherit;
-      border-radius: 6px; letter-spacing: -.01em;
+      letter-spacing: -.01em; position: relative;
     }
-    .tnav-link:hover { color: rgba(255,255,255,0.72); background: rgba(255,255,255,0.06); }
-    .tnav-link.active { color: rgba(255,255,255,0.95); }
+    .tnav-link:hover { color: var(--ink1); }
+    .tnav-link.active { color: var(--ink1); }
+    .tnav-link.active::after {
+      content: ''; position: absolute; bottom: -1px; left: 10px; right: 10px;
+      height: 2px; background: var(--blue); border-radius: 1px;
+    }
 
     .tnav-right { display: flex; align-items: center; gap: 10px; margin-left: auto; flex-shrink: 0; }
 
-    .live-pill {
+    .demo-badge {
       display: flex; align-items: center; gap: 5px;
-      padding: 3px 9px; border-radius: 100px;
-      background: rgba(52,199,89,0.14); border: 0.5px solid rgba(52,199,89,0.3);
+      padding: 3px 10px; border-radius: 100px;
+      background: rgba(255,159,10,0.12); border: 1px solid rgba(255,159,10,0.30);
     }
-    .live-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
-    .live-text { font-size: 10px; font-weight: 700; color: var(--green); }
+    .demo-text { font-size: 10px; font-weight: 700; color: var(--amber); letter-spacing: .02em; text-transform: uppercase; }
 
     .v5-chip {
       padding: 2px 8px; border-radius: 4px;
-      border: 0.5px solid rgba(255,255,255,0.16);
-      font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.38);
+      border: 1px solid var(--bd);
+      font-size: 10px; font-weight: 700; color: var(--ink3);
     }
 
     /* ── BOTTOM NAV ── */
@@ -100,26 +108,26 @@
     @media (max-width: 767px) {
       #bottomnav {
         display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 40;
-        height: 56px; padding-bottom: env(safe-area-inset-bottom, 0);
-        background: rgba(29,29,31,0.92);
+        height: 49px; padding-bottom: env(safe-area-inset-bottom, 0);
+        background: rgba(255,255,255,0.90);
         -webkit-backdrop-filter: blur(20px) saturate(180%);
         backdrop-filter: blur(20px) saturate(180%);
-        border-top: 0.5px solid rgba(255,255,255,0.1);
+        border-top: 1px solid rgba(0,0,0,0.06);
       }
       .tnav-links { display: none; }
     }
     .bnav-link {
       flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
-      cursor: pointer; color: rgba(255,255,255,0.32); font-size: 9px; font-weight: 600;
+      cursor: pointer; color: var(--ink3); font-size: 10px; font-weight: 600;
       transition: color .12s; border: none; background: none; padding: 0; font-family: inherit;
     }
-    .bnav-link.active { color: var(--accent); }
-    .bnav-link:hover { color: rgba(255,255,255,0.65); }
+    .bnav-link.active { color: var(--blue); }
+    .bnav-link:hover { color: var(--ink1); }
     .bnav-icon { width: 20px; height: 20px; }
 
     /* ── LAYOUT ── */
     #content { padding-top: var(--nav-h); min-height: 100vh; }
-    @media (max-width: 767px) { #content { padding-bottom: 60px; } }
+    @media (max-width: 767px) { #content { padding-bottom: calc(49px + env(safe-area-inset-bottom, 0)); } }
 
     .page { display: none; }
     .page.active { display: block; animation: pgIn .18s ease; }
@@ -136,13 +144,72 @@
       color: var(--ink1); margin-bottom: 12px;
     }
     .sec-label {
-      font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--ink2);
+      font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--ink2);
     }
     .sec-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 12px; gap: 12px; }
     .sec-more { font-size: 13px; font-weight: 500; color: var(--blue); cursor: pointer; white-space: nowrap; border: none; background: none; font-family: inherit; }
+    .sec-more:hover { color: var(--blue-h); }
 
     /* ── APPLE CARD ── */
     .card { background: var(--surf); border-radius: var(--r); box-shadow: var(--sh); overflow: hidden; }
+
+    /* ── SCORE GRID (HERO) ── */
+    .score-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+      margin-bottom: 14px;
+    }
+    .score-card {
+      background: var(--surf); border-radius: var(--r);
+      box-shadow: var(--sh); padding: 20px 20px 16px;
+      display: flex; flex-direction: column;
+    }
+    .score-card.baseline {
+      opacity: 1;
+    }
+    .score-number {
+      font-family: "DM Serif Display", "SF Pro Display", system-ui, serif;
+      font-size: 88px; font-weight: 700; line-height: 0.95;
+      letter-spacing: -0.03em; color: var(--ink1);
+      margin-bottom: 8px;
+    }
+    .score-number.green  { color: var(--green); }
+    .score-number.amber  { color: var(--amber); }
+    .score-number.red    { color: var(--red); }
+    .score-number.awaiting { color: var(--ink3); }
+    .score-number.baseline-size {
+      font-size: 64px;
+    }
+    @media (max-width: 767px) {
+      .score-number { font-size: 72px; }
+      .score-number.baseline-size { font-size: 56px; }
+    }
+    @media (max-width: 375px) {
+      .score-number { font-size: 60px; }
+      .score-number.baseline-size { font-size: 48px; }
+    }
+    .score-label {
+      font-size: 11px; font-weight: 600; color: var(--ink2);
+      letter-spacing: .06em; text-transform: uppercase; margin-bottom: 4px;
+    }
+    .score-trend {
+      font-size: 13px; font-weight: 500;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .score-trend.green  { color: var(--green); }
+    .score-trend.awaiting { color: var(--ink3); }
+    .score-trend.red    { color: var(--red); }
+
+    /* ── VELOCITY PILL ── */
+    .velocity-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 14px; border-radius: 100px;
+      background: rgba(52,199,89,0.10); border: 1px solid rgba(52,199,89,0.25);
+      font-size: 13px; font-weight: 600; color: var(--green);
+      margin-bottom: 28px;
+    }
+    .velocity-pill.cooling {
+      background: rgba(255,159,10,0.10); border-color: rgba(255,159,10,0.25); color: var(--amber);
+    }
 
     /* ── ALERT STRIP ── */
     .alert-strip {
@@ -156,7 +223,7 @@
       min-width: 200px; max-width: 240px;
     }
     .ac-amber { background: rgba(255,159,10,0.09); border: 1px solid rgba(255,159,10,0.22); }
-    .ac-blue  { background: rgba(0,122,255,0.07);  border: 1px solid rgba(0,122,255,0.2); }
+    .ac-blue  { background: rgba(0,113,227,0.07);  border: 1px solid rgba(0,113,227,0.2); }
     .ac-green { background: rgba(52,199,89,0.07);  border: 1px solid rgba(52,199,89,0.2); }
     .ac-red   { background: rgba(255,59,48,0.07);  border: 1px solid rgba(255,59,48,0.2); }
     .alert-icon {
@@ -165,7 +232,7 @@
       font-size: 13px; flex-shrink: 0;
     }
     .ai-amber { background: rgba(255,159,10,0.15); }
-    .ai-blue  { background: rgba(0,122,255,0.12); }
+    .ai-blue  { background: rgba(0,113,227,0.12); }
     .ai-green { background: rgba(52,199,89,0.12); }
     .ai-red   { background: rgba(255,59,48,0.12); }
     .alert-body { min-width: 0; }
@@ -177,29 +244,22 @@
     .ah-red   { color: var(--red); }
 
     /* ── STAT ROW ── */
-    .stat-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 28px; }
+    .stat-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 28px; }
     @media (max-width: 600px) { .stat-row { grid-template-columns: repeat(2,1fr); } }
     .stat-card { background: var(--surf); border-radius: var(--r); box-shadow: var(--sh); padding: 16px 18px; }
     .stat-num  { font-size: 2.2rem; font-weight: 700; letter-spacing: -.03em; line-height: 1; color: var(--ink1); margin-bottom: 4px; }
-    .stat-lbl  { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--ink2); }
+    .stat-lbl  { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--ink2); }
     .stat-sub  { font-size: 11px; color: var(--ink3); margin-top: 5px; }
 
     /* ── APPLE CHIP ── */
     .chip { display: inline-flex; align-items: center; padding: 2px 9px; border-radius: 100px; font-size: 10px; font-weight: 600; }
-    .chip-green  { background: rgba(52,199,89,0.12);  color: #25a244; }
-    .chip-blue   { background: rgba(0,122,255,0.1);   color: var(--blue); }
-    .chip-red    { background: rgba(232,64,42,0.1);   color: var(--accent); }
+    .chip-green  { background: rgba(52,199,89,0.12);  color: #1d9137; }
+    .chip-blue   { background: rgba(0,113,227,0.10);  color: var(--blue); }
+    .chip-red    { background: rgba(232,64,42,0.10);  color: var(--brand); }
     .chip-amber  { background: rgba(255,159,10,0.12); color: #c9780a; }
     .chip-grey   { background: rgba(0,0,0,0.06);      color: var(--ink2); }
     .chip-teal   { background: rgba(48,176,199,0.12); color: #1c8ca8; }
-    .chip-purple { background: rgba(175,82,222,0.1);  color: var(--purple); }
-
-    /* ── SCORE TILE ── */
-    .score-tile {
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      padding: 20px 14px; text-align: center;
-    }
-    .score-big { font-size: 2.8rem; font-weight: 800; letter-spacing: -.035em; line-height: 1; color: var(--ink1); }
+    .chip-purple { background: rgba(175,82,222,0.10); color: var(--purple); }
 
     /* ── LIST ROWS ── */
     .list-row {
@@ -213,7 +273,7 @@
 
     /* ── COV TABLE ── */
     .cov-table { width: 100%; border-collapse: collapse; }
-    .cov-table thead tr { background: #1D1D1F; }
+    .cov-table thead tr { background: var(--ink1); }
     .cov-table thead th {
       padding: 9px 12px; font-size: 10px; font-weight: 600; letter-spacing: .06em;
       text-transform: uppercase; color: rgba(255,255,255,0.5); text-align: left; white-space: nowrap;
@@ -231,7 +291,7 @@
     .bar-track { background: rgba(0,0,0,0.06); height: 18px; overflow: hidden; flex: 1; border-radius: 4px; }
     .bar-fill  { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 7px; border-radius: 4px; transition: width .7s cubic-bezier(.4,0,.2,1); }
     .chart-bar { cursor: pointer; margin-bottom: 7px; }
-    .chart-bar:hover .bar-track { background: rgba(0,0,0,0.1); }
+    .chart-bar:hover .bar-track { background: rgba(0,0,0,0.10); }
 
     /* ── AMPLIFICATION ── */
     .amp-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; border-bottom: 0.5px solid rgba(0,0,0,0.07); cursor: pointer; transition: background .1s; }
@@ -243,7 +303,7 @@
 
     /* ── HASHTAG ── */
     .htag { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 100px; background: rgba(0,0,0,0.05); font-size: 12px; font-weight: 600; color: var(--ink1); cursor: pointer; transition: background .12s; font-family: "SF Mono", "Fira Code", monospace; }
-    .htag:hover { background: rgba(232,64,42,0.1); color: var(--accent); }
+    .htag:hover { background: rgba(232,64,42,0.10); color: var(--brand); }
 
     /* ── FIELDS ── */
     .field { padding: 9px 12px; font-size: 14px; background: var(--bg); border: 1px solid rgba(0,0,0,0.12); color: var(--ink1); font-family: inherit; border-radius: var(--r-sm); transition: border-color .15s; }
@@ -278,20 +338,26 @@
     ::-webkit-scrollbar-thumb { background: var(--bd); border-radius: 2px; }
     .hidden { display: none !important; }
 
-    /* ── MINI PAGE HEADER ── */
+    /* ── SUB-PAGE HEADER ── */
     .page-header {
-      background: linear-gradient(180deg, rgba(29,29,31,0.96) 0%, rgba(29,29,31,0.88) 100%);
       padding: 28px 0 22px;
+      background: var(--surf);
+      border-bottom: 1px solid var(--bd);
       margin-bottom: 0;
     }
     .page-header .container { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    .ph-title { font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -.025em; }
-    .ph-sub { font-size: 13px; color: rgba(255,255,255,0.42); margin-top: 3px; }
+    .ph-title { font-size: 26px; font-weight: 800; color: var(--ink1); letter-spacing: -.025em; }
+    .ph-sub { font-size: 13px; color: var(--ink2); margin-top: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .page.active { animation: none; }
+      * { transition: none !important; }
+    }
   </style>
 </head>
 <body>
 
-<!-- ═══ TOP NAV ═══ -->
+<!-- ═══ TOP NAV — White frosted glass ═══ -->
 <nav id="topnav">
   <button class="tnav-brand" onclick="nav('home')">
     <div class="tnav-logo">LA</div>
@@ -307,7 +373,7 @@
   </div>
 
   <div class="tnav-right">
-    <div class="live-pill"><span class="live-dot"></span><span class="live-text">LIVE</span></div>
+    <div class="demo-badge"><span class="demo-text">Demo Mode</span></div>
     <span class="v5-chip">V5</span>
   </div>
 </nav>
@@ -333,125 +399,149 @@
 <section id="page-home" class="page">
   <div class="container" style="padding-top:28px;padding-bottom:48px">
 
-    <!-- Show identity + live badge -->
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px">
-      <div>
-        <h1 style="font-size:28px;font-weight:800;letter-spacing:-.025em;color:var(--ink1);line-height:1.1">Las Azules · Season 2</h1>
-        <p style="font-size:13px;color:var(--ink2);margin-top:3px">Apple TV+ · Aug 12 – Sep 30, 2026 · 8 episodes</p>
+    <!-- Page title row -->
+    <div style="margin-bottom:20px">
+      <p style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2);margin-bottom:4px">Apple TV+ · Aug 12 – Sep 30, 2026</p>
+      <h1 style="font-size:32px;font-weight:700;letter-spacing:-.02em;color:var(--ink1);line-height:1.1">Las Azules · Season 2</h1>
+    </div>
+
+    <!-- ── SCORE GRID (Tier 1: hero) ── -->
+    <div class="score-grid">
+      <!-- S2 RT — awaiting -->
+      <div class="score-card">
+        <div class="score-number awaiting">—</div>
+        <p class="score-label">RT Score · S2</p>
+        <p class="score-trend awaiting">— Awaiting S2 reviews</p>
       </div>
-      <div style="display:flex;align-items:center;gap:8px">
-        <div class="live-pill" style="background:rgba(52,199,89,0.12);border:1px solid rgba(52,199,89,0.28)"><span class="live-dot"></span><span class="live-text">STREAMING</span></div>
-        <span id="home-days" style="font-size:12px;color:var(--ink2);font-weight:500"></span>
+      <!-- S2 IMDb — awaiting -->
+      <div class="score-card">
+        <div class="score-number awaiting">—</div>
+        <p class="score-label">IMDb · S2</p>
+        <p class="score-trend awaiting">— Awaiting S2 reviews</p>
       </div>
+      <!-- S1 RT — baseline -->
+      <div class="score-card baseline">
+        <div class="score-number green baseline-size">100%</div>
+        <p class="score-label">RT Score · S1 Baseline</p>
+        <p class="score-trend green">▲ Certified Fresh</p>
+      </div>
+      <!-- S1 IMDb — baseline -->
+      <div class="score-card baseline">
+        <div class="score-number baseline-size" style="color:var(--ink1)">7.3</div>
+        <p class="score-label">IMDb · S1 Baseline</p>
+        <p class="score-trend" style="color:var(--ink2)"><a href="https://www.imdb.com/title/tt20516590/" target="_blank" rel="noopener" style="color:var(--blue);text-decoration:none">View on IMDb ↗</a></p>
+      </div>
+    </div>
+
+    <!-- Velocity pill -->
+    <div class="velocity-pill" id="velocity-pill">
+      <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/><polyline points="17,6 23,6 23,12"/></svg>
+      <span id="velocity-text">27 articles · +12 today ▲</span>
     </div>
 
     <!-- Alert strip -->
-    <div class="alert-strip" style="margin-bottom:24px" id="alert-strip">
-      <div class="alert-card ac-amber">
-        <div class="alert-icon ai-amber">⚠️</div>
-        <div class="alert-body">
-          <p class="alert-head ah-amber">Coverage Gap</p>
-          <p class="alert-text">Reforma, El Universal, Milenio — 0 articles from Mexican premium press</p>
-        </div>
-      </div>
-      <div class="alert-card ac-blue" id="ep-alert">
-        <div class="alert-icon ai-blue">📅</div>
-        <div class="alert-body">
-          <p class="alert-head ah-blue">Next Episode</p>
-          <p class="alert-text" id="ep-alert-text">Ep. 2 drops Aug 19 — activate cast for social push</p>
-        </div>
-      </div>
-      <div class="alert-card ac-green">
-        <div class="alert-icon ai-green">✅</div>
-        <div class="alert-body">
-          <p class="alert-head ah-green">Reuters Syndicated</p>
-          <p class="alert-text">Wire feature picked up by 7+ US radio station websites</p>
-        </div>
-      </div>
-      <div class="alert-card ac-red">
-        <div class="alert-icon ai-red">🎬</div>
-        <div class="alert-body">
-          <p class="alert-head ah-red">First Review</p>
-          <p class="alert-text">Screen Anarchy 4/5 ★ — share immediately for credibility</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Stat row -->
-    <div class="stat-row" style="margin-bottom:32px">
-      <div class="stat-card">
-        <p class="stat-num" id="stat-articles">27</p>
-        <p class="stat-lbl">Articles</p>
-        <p class="stat-sub">Launch day</p>
-      </div>
-      <div class="stat-card">
-        <p class="stat-num" style="color:var(--accent)">4/5 ★</p>
-        <p class="stat-lbl">Screen Anarchy</p>
-        <p class="stat-sub">First S2 review</p>
-      </div>
-      <div class="stat-card">
-        <p class="stat-num" style="color:var(--green)">100%</p>
-        <p class="stat-lbl">RT Score · S1</p>
-        <p class="stat-sub"><span class="chip chip-green">Certified Fresh</span></p>
-      </div>
-      <div class="stat-card">
-        <p class="stat-num" id="stat-days">1</p>
-        <p class="stat-lbl">Days Live</p>
-        <p class="stat-sub">Through Sep 30</p>
-      </div>
-    </div>
-
-    <!-- Critical reception — ELEVATED (prestige signal) -->
     <div class="section">
       <div class="sec-header">
-        <h2 class="sec-title">Critical Reception</h2>
-        <p style="font-size:13px;color:var(--ink3)">S2 scores accumulate through Sep 30</p>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px">
-        <div class="card" style="padding:18px;text-align:center">
-          <p class="stat-lbl" style="margin-bottom:8px">Screen Anarchy</p>
-          <p style="font-size:2rem;font-weight:800;letter-spacing:-.03em;color:var(--accent)">4/5 ★</p>
-          <p style="font-size:11px;color:var(--ink3);margin-top:4px">First S2 review · confirmed</p>
-        </div>
-        <div class="card" style="padding:18px;text-align:center">
-          <p class="stat-lbl" style="margin-bottom:8px">RT Score · S1</p>
-          <p style="font-size:2rem;font-weight:800;letter-spacing:-.03em;color:var(--green)">100%</p>
-          <a href="https://www.rottentomatoes.com/tv/women_in_blue_2024/s02" target="_blank" rel="noopener" style="font-size:11px;color:var(--blue);margin-top:4px;display:block">S2 accumulating ↗</a>
-        </div>
-        <div class="card" style="padding:18px;text-align:center">
-          <p class="stat-lbl" style="margin-bottom:8px">IMDb · S1</p>
-          <p style="font-size:2rem;font-weight:800;letter-spacing:-.03em;color:var(--ink1)">7.3</p>
-          <a href="https://www.imdb.com/title/tt20516590/" target="_blank" rel="noopener" style="font-size:11px;color:var(--blue);margin-top:4px;display:block">View on IMDb ↗</a>
-        </div>
-      </div>
-
-      <!-- Key quotes -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-        <div class="card" style="padding:16px 18px;border-left:3px solid var(--accent)">
-          <p style="font-size:13px;color:var(--ink1);line-height:1.6;font-style:italic;margin-bottom:8px">"Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico's borders."</p>
-          <p class="stat-lbl" style="color:var(--accent)">Screen Anarchy · 4/5 ★</p>
-        </div>
-        <div class="card" style="padding:16px 18px;border-left:3px solid var(--blue)">
-          <p style="font-size:13px;color:var(--ink1);line-height:1.6;font-style:italic;margin-bottom:8px">"If in the first season the enemy was a serial killer, in this season it's an entire system."</p>
-          <p class="stat-lbl" style="color:var(--blue)">Fernando Rovzar · Creator</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Today's pulse -->
-    <div class="section">
-      <div class="sec-header">
-        <h2 class="sec-title">Today's Pulse</h2>
+        <h2 class="sec-title">Today's Signal</h2>
         <span id="today-badge" style="font-size:12px;color:var(--ink3)"></span>
+      </div>
+      <div class="alert-strip" id="alert-strip" style="margin-bottom:0">
+        <div class="alert-card ac-amber">
+          <div class="alert-icon ai-amber">⚠️</div>
+          <div class="alert-body">
+            <p class="alert-head ah-amber">Coverage Gap</p>
+            <p class="alert-text">Reforma, El Universal, Milenio — 0 articles from Mexican premium press</p>
+          </div>
+        </div>
+        <div class="alert-card ac-blue" id="ep-alert">
+          <div class="alert-icon ai-blue">📅</div>
+          <div class="alert-body">
+            <p class="alert-head ah-blue">Next Episode</p>
+            <p class="alert-text" id="ep-alert-text">Ep. 2 drops Aug 19 — activate cast for social push</p>
+          </div>
+        </div>
+        <div class="alert-card ac-green">
+          <div class="alert-icon ai-green">✅</div>
+          <div class="alert-body">
+            <p class="alert-head ah-green">Reuters Syndicated</p>
+            <p class="alert-text">Wire feature picked up by 7+ US radio station websites</p>
+          </div>
+        </div>
+        <div class="alert-card ac-red">
+          <div class="alert-icon ai-red">🎬</div>
+          <div class="alert-body">
+            <p class="alert-head ah-red">First Review</p>
+            <p class="alert-text">Screen Anarchy 4/5 ★ — share immediately for credibility</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key quotes (Tier 3: critic signal) -->
+    <div class="section">
+      <div class="sec-header">
+        <h2 class="sec-title">Key Quotes</h2>
+        <p style="font-size:13px;color:var(--ink3)">Critics are saying</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="card" style="padding:16px 18px;border-left:4px solid var(--brand)">
+          <p style="font-size:15px;color:var(--ink1);line-height:1.6;font-style:italic;margin-bottom:10px">"Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico's borders."</p>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <p style="font-size:12px;font-weight:700;color:var(--ink1)">Screen Anarchy</p>
+            <p style="font-size:12px;color:var(--brand);font-weight:600">4/5 ★</p>
+            <span class="chip chip-grey">REVIEW</span>
+          </div>
+        </div>
+        <div class="card" style="padding:16px 18px;border-left:4px solid var(--blue)">
+          <p style="font-size:15px;color:var(--ink1);line-height:1.6;font-style:italic;margin-bottom:10px">"If in the first season the enemy was a serial killer, in this season it's an entire system."</p>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <p style="font-size:12px;font-weight:700;color:var(--ink1)">Fernando Rovzar</p>
+            <p style="font-size:12px;color:var(--ink2)">Creator</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coverage gap radar -->
+    <div class="section">
+      <div class="sec-header">
+        <h2 class="sec-title">Coverage Gap Radar</h2>
+        <button class="sec-more" onclick="nav('coverage')">See all ›</button>
+      </div>
+      <div class="card" style="border-left:4px solid var(--amber)">
+        <div style="display:flex;align-items:center;gap:8px;padding:14px 16px;border-bottom:0.5px solid rgba(0,0,0,0.07)">
+          <p class="sec-label" style="flex:1">Outlet</p>
+          <span style="font-size:10px;font-weight:700;color:var(--amber);background:rgba(255,159,10,0.10);padding:2px 8px;border-radius:100px">3 uncovered ⚠</span>
+        </div>
+        <div class="list-row" style="align-items:center">
+          <div style="flex:1"><p style="font-size:14px;font-weight:600;color:var(--ink1)">Reforma</p><p style="font-size:12px;color:var(--ink2)">Mexico · Print</p></div>
+          <span style="font-size:12px;color:var(--blue);font-weight:500">→ Outreach needed</span>
+        </div>
+        <div class="list-row" style="align-items:center">
+          <div style="flex:1"><p style="font-size:14px;font-weight:600;color:var(--ink1)">El Universal</p><p style="font-size:12px;color:var(--ink2)">Mexico · Print</p></div>
+          <span style="font-size:12px;color:var(--blue);font-weight:500">→ Outreach needed</span>
+        </div>
+        <div class="list-row" style="align-items:center">
+          <div style="flex:1"><p style="font-size:14px;font-weight:600;color:var(--ink1)">Milenio</p><p style="font-size:12px;color:var(--ink2)">Mexico · Print</p></div>
+          <span style="font-size:12px;color:var(--blue);font-weight:500">→ Outreach needed</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Today's coverage (Tier 4: activity) -->
+    <div class="section">
+      <div class="sec-header">
+        <h2 class="sec-title">Today's Coverage</h2>
+        <button class="sec-more" onclick="nav('coverage')">View all ›</button>
       </div>
       <div class="card" id="today-feed"></div>
     </div>
 
-    <!-- Coverage breakdown -->
+    <!-- Market breakdown (Tier 2: reach) -->
     <div class="section">
       <div class="sec-header">
-        <h2 class="sec-title">Coverage Breakdown</h2>
-        <button class="sec-more" onclick="nav('coverage')">See all ›</button>
+        <h2 class="sec-title">Market Reach</h2>
+        <button class="sec-more" onclick="nav('coverage')">Details ›</button>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
         <div class="card" style="padding:18px">
@@ -466,6 +556,17 @@
           <p class="sec-label" style="margin-bottom:12px">Language</p>
           <div id="chart-lang"></div>
         </div>
+      </div>
+    </div>
+
+    <!-- Season progress -->
+    <div class="section">
+      <div class="sec-header">
+        <h2 class="sec-title">Season Progress</h2>
+        <span id="season-sub" style="font-size:12px;color:var(--ink3)"></span>
+      </div>
+      <div class="card" style="padding:18px">
+        <div id="ep-timeline"></div>
       </div>
     </div>
 
@@ -485,8 +586,10 @@
 <section id="page-coverage" class="page">
   <div class="page-header">
     <div class="container">
-      <p class="ph-title">Coverage Ledger</p>
-      <p class="ph-sub">27 articles tracked · Aug 12 – Sep 30, 2026</p>
+      <div>
+        <p class="ph-title">Coverage Ledger</p>
+        <p class="ph-sub">27 articles tracked · Aug 12 – Sep 30, 2026</p>
+      </div>
     </div>
   </div>
 
@@ -514,14 +617,15 @@
 <section id="page-amplify" class="page">
   <div class="page-header">
     <div class="container">
-      <p class="ph-title">Amplification</p>
-      <p class="ph-sub">Social strategy · PR checklist · Post builder</p>
+      <div>
+        <p class="ph-title">Amplification</p>
+        <p class="ph-sub">Social strategy · PR checklist · Post builder</p>
+      </div>
     </div>
   </div>
 
   <div class="container" style="padding-top:24px;padding-bottom:48px">
 
-    <!-- Free strategies -->
     <div class="section">
       <div class="sec-header">
         <h2 class="sec-title">Free Strategies</h2>
@@ -530,7 +634,6 @@
       <div class="card" id="free-strategies"></div>
     </div>
 
-    <!-- Paid strategies -->
     <div class="section">
       <div class="sec-header">
         <h2 class="sec-title">Paid Strategies</h2>
@@ -539,7 +642,6 @@
       <div class="card" id="paid-strategies"></div>
     </div>
 
-    <!-- Hashtags -->
     <div class="section">
       <div class="sec-header"><h2 class="sec-title">Hashtags</h2><p style="font-size:12px;color:var(--ink3)">Click to search</p></div>
       <div class="card" style="padding:18px">
@@ -547,44 +649,41 @@
       </div>
     </div>
 
-    <!-- Trailers -->
     <div class="section">
       <h2 class="sec-title" style="margin-bottom:12px">Trailers</h2>
       <div class="card">
         <a href="https://www.youtube.com/watch?v=1lVJ96Oi9UY" target="_blank" rel="noopener noreferrer" class="list-row">
-          <div style="width:32px;height:32px;border-radius:8px;background:rgba(232,64,42,0.1);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--accent);flex-shrink:0">YT</div>
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(232,64,42,0.10);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--brand);flex-shrink:0">YT</div>
           <div><p style="font-size:13px;font-weight:600;color:var(--ink1)">Official Trailer (English)</p><p style="font-size:11px;color:var(--ink3)">Apple TV+</p></div>
           <svg style="margin-left:auto;color:var(--ink3);flex-shrink:0" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>
         </a>
         <a href="https://www.youtube.com/watch?v=6PM90l-KLyc" target="_blank" rel="noopener noreferrer" class="list-row">
-          <div style="width:32px;height:32px;border-radius:8px;background:rgba(232,64,42,0.1);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--accent);flex-shrink:0">YT</div>
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(232,64,42,0.10);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--brand);flex-shrink:0">YT</div>
           <div><p style="font-size:13px;font-weight:600;color:var(--ink1)">Tráiler Español Latino</p><p style="font-size:11px;color:var(--ink3)">Apple TV+</p></div>
           <svg style="margin-left:auto;color:var(--ink3);flex-shrink:0" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>
         </a>
         <a href="https://www.youtube.com/watch?v=lojkAQw_Bro" target="_blank" rel="noopener noreferrer" class="list-row">
-          <div style="width:32px;height:32px;border-radius:8px;background:rgba(232,64,42,0.1);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--accent);flex-shrink:0">YT</div>
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(232,64,42,0.10);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--brand);flex-shrink:0">YT</div>
           <div><p style="font-size:13px;font-weight:600;color:var(--ink1)">Tráiler S2 en Español</p><p style="font-size:11px;color:var(--ink3)">Apple TV+ MX</p></div>
           <svg style="margin-left:auto;color:var(--ink3);flex-shrink:0" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>
         </a>
         <a href="https://www.youtube.com/watch?v=vqV6S2Y-ZAw" target="_blank" rel="noopener noreferrer" class="list-row">
-          <div style="width:32px;height:32px;border-radius:8px;background:rgba(232,64,42,0.1);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--accent);flex-shrink:0">YT</div>
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(232,64,42,0.10);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--brand);flex-shrink:0">YT</div>
           <div><p style="font-size:13px;font-weight:600;color:var(--ink1)">Trailer Italiano</p><p style="font-size:11px;color:var(--ink3)">Apple TV+ Italia</p></div>
           <svg style="margin-left:auto;color:var(--ink3);flex-shrink:0" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>
         </a>
       </div>
     </div>
 
-    <!-- Social mentions -->
     <div class="section">
       <h2 class="sec-title" style="margin-bottom:12px">Social Mentions</h2>
       <div class="card" id="social-mentions-feed"></div>
     </div>
 
-    <!-- Post builder -->
     <div class="section">
       <div class="sec-header">
         <h2 class="sec-title">Post Builder</h2>
-        <button onclick="openPostBuilder(null)" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;border:none;border-radius:100px;cursor:pointer;font-family:inherit">
+        <button onclick="openPostBuilder(null)" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--blue);color:#fff;font-size:12px;font-weight:700;border:none;border-radius:100px;cursor:pointer;font-family:inherit">
           <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>New Post
         </button>
       </div>
@@ -593,7 +692,6 @@
       </div>
     </div>
 
-    <!-- Team link -->
     <div class="card" style="padding:18px 20px;display:flex;align-items:center;gap:14px">
       <div style="flex:1"><p style="font-size:13px;font-weight:600;color:var(--ink1)">Campaign discussion on Paperclip</p><p style="font-size:12px;color:var(--ink3);margin-top:2px">LEMA-8461 thread</p></div>
       <a href="https://paperclip.billyrovzar.com/LEMA/issues/LEMA-8461" target="_blank" rel="noopener noreferrer" style="padding:8px 14px;background:var(--blue);color:#fff;font-size:12px;font-weight:600;border-radius:8px;text-decoration:none">Open ↗</a>
@@ -605,13 +703,14 @@
 <section id="page-show" class="page">
   <div class="page-header">
     <div class="container">
-      <p class="ph-title">Show Universe</p>
-      <p class="ph-sub">Episodes · Cast · Crew · Context</p>
+      <div>
+        <p class="ph-title">Show Universe</p>
+        <p class="ph-sub">Episodes · Cast · Crew · Context</p>
+      </div>
     </div>
   </div>
 
   <div class="container" style="padding-top:24px;padding-bottom:48px">
-    <!-- Show card -->
     <div class="card" style="padding:22px 24px;margin-bottom:16px">
       <div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px">
         <span class="chip chip-blue">Apple TV+ Original</span>
@@ -619,7 +718,7 @@
         <span class="chip chip-green">Streaming Now</span>
       </div>
       <h2 style="font-size:22px;font-weight:800;letter-spacing:-.02em;color:var(--ink1);margin-bottom:2px">Las Azules</h2>
-      <p style="font-size:15px;font-weight:600;color:var(--accent);margin-bottom:10px">Women in Blue</p>
+      <p style="font-size:15px;font-weight:600;color:var(--brand);margin-bottom:10px">Women in Blue</p>
       <p style="font-size:13px;color:var(--ink2);line-height:1.68;max-width:600px">Mexico City, 1971. Lieutenant María and the Azules investigate a student activist's murder — uncovering a conspiracy reaching back to the Halconazo massacre. Created by <strong style="color:var(--ink1)">Fernando Rovzar</strong>, produced by <strong style="color:var(--ink1)">Lemon Studios</strong>.</p>
     </div>
 
@@ -641,7 +740,7 @@
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <div class="card" style="padding:20px">
-        <p class="sec-label" style="color:var(--accent);margin-bottom:8px">Historical Context</p>
+        <p class="sec-label" style="color:var(--brand);margin-bottom:8px">Historical Context</p>
         <p style="font-size:13px;color:var(--ink2);line-height:1.65">Set in June 1971, centered on the <a href="https://en.wikipedia.org/wiki/Corpus_Christi_massacre" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600;text-decoration:none">Halconazo (Corpus Christi Massacre) ↗</a> — paramilitary attack on student protesters.</p>
       </div>
       <div class="card" style="padding:20px;background:var(--bg)">
@@ -656,25 +755,27 @@
 <section id="page-updates" class="page">
   <div class="page-header">
     <div class="container">
-      <p class="ph-title">Daily Updates</p>
-      <p class="ph-sub">Research Specialist appends each morning · Aug 12 – Sep 30</p>
+      <div>
+        <p class="ph-title">Daily Updates</p>
+        <p class="ph-sub">Research Specialist appends each morning · Aug 12 – Sep 30</p>
+      </div>
     </div>
   </div>
 
   <div class="container" style="padding-top:24px;padding-bottom:48px">
-    <div class="card" style="border-left:3px solid var(--green);padding:22px 24px;margin-bottom:10px">
+    <div class="card" style="border-left:4px solid var(--blue);padding:22px 24px;margin-bottom:10px">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
-        <div style="width:6px;height:6px;border-radius:50%;background:var(--green)"></div>
-        <p style="font-size:10px;font-weight:700;color:var(--green);letter-spacing:.08em;text-transform:uppercase">Aug 12, 2026 — Premiere Day</p>
+        <div style="width:6px;height:6px;border-radius:50%;background:var(--blue)"></div>
+        <p style="font-size:10px;font-weight:700;color:var(--blue);letter-spacing:.08em;text-transform:uppercase">Aug 12, 2026 — Premiere Day</p>
       </div>
       <div style="font-size:13px;color:var(--ink2);line-height:1.75;display:flex;flex-direction:column;gap:9px">
         <p>Season 2 launched globally on Apple TV+. Research Specialist compiled comprehensive launch-day coverage analysis.</p>
         <div style="display:flex;flex-direction:column;gap:7px">
-          <div style="display:flex;gap:10px"><span style="color:var(--accent);flex-shrink:0;font-weight:700">—</span><span>27 articles tracked across US, Mexico, Spain, and International</span></div>
-          <div style="display:flex;gap:10px"><span style="color:var(--accent);flex-shrink:0;font-weight:700">—</span><span>Screen Anarchy first S2 review: 4/5 ★ — "More relevant today, far beyond Mexico's borders"</span></div>
-          <div style="display:flex;gap:10px"><span style="color:var(--accent);flex-shrink:0;font-weight:700">—</span><span>Reuters wire feature syndicated to 7+ US radio station websites</span></div>
-          <div style="display:flex;gap:10px"><span style="color:var(--accent);flex-shrink:0;font-weight:700">—</span><span>Heraldo de Mexico + El Informador: premiere-day features in Spanish</span></div>
-          <div style="display:flex;gap:10px"><span style="color:var(--accent);flex-shrink:0;font-weight:700">—</span><span>MacObserver, 9to5Mac, MacDailyNews: full Apple tech press coverage</span></div>
+          <div style="display:flex;gap:10px"><span style="color:var(--brand);flex-shrink:0;font-weight:700">—</span><span>27 articles tracked across US, Mexico, Spain, and International</span></div>
+          <div style="display:flex;gap:10px"><span style="color:var(--brand);flex-shrink:0;font-weight:700">—</span><span>Screen Anarchy first S2 review: 4/5 ★ — "More relevant today, far beyond Mexico's borders"</span></div>
+          <div style="display:flex;gap:10px"><span style="color:var(--brand);flex-shrink:0;font-weight:700">—</span><span>Reuters wire feature syndicated to 7+ US radio station websites</span></div>
+          <div style="display:flex;gap:10px"><span style="color:var(--brand);flex-shrink:0;font-weight:700">—</span><span>Heraldo de Mexico + El Informador: premiere-day features in Spanish</span></div>
+          <div style="display:flex;gap:10px"><span style="color:var(--brand);flex-shrink:0;font-weight:700">—</span><span>MacObserver, 9to5Mac, MacDailyNews: full Apple tech press coverage</span></div>
         </div>
         <p style="font-size:11px;color:var(--ink3);border-top:0.5px solid rgba(0,0,0,0.08);padding-top:10px;font-style:italic">Fernando Rovzar: "If in the first season the enemy was a serial killer, in this season it's an entire system."</p>
       </div>
@@ -693,7 +794,7 @@
   <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:0.5px solid rgba(0,0,0,0.08);flex-shrink:0">
     <div>
       <h2 style="font-size:16px;font-weight:700;color:var(--ink1)">Post Builder</h2>
-      <p style="font-size:11px;color:var(--ink3);margin-top:1px">Bilingual · Template-based</p>
+      <p style="font-size:11px;color:var(--ink3);margin-top:1px">Bilingual · Template-based · Demo mode</p>
     </div>
     <button onclick="closePostBuilder()" style="width:30px;height:30px;background:var(--bg);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink2)">
       <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -725,7 +826,7 @@
       <p id="pb-limit-note" style="font-size:11px;color:var(--ink3);margin-top:6px"></p>
     </div>
 
-    <button onclick="generatePosts()" style="width:100%;padding:12px;background:var(--accent);color:#fff;font-size:13px;font-weight:700;border:none;border-radius:var(--r);cursor:pointer;font-family:inherit">Generate Posts</button>
+    <button onclick="generatePosts()" style="width:100%;padding:12px;background:var(--blue);color:#fff;font-size:13px;font-weight:700;border:none;border-radius:var(--r);cursor:pointer;font-family:inherit">Generate Posts</button>
 
     <div style="display:flex;gap:10px">
       <div style="flex:1;min-width:0">
@@ -734,7 +835,7 @@
           <span id="cc-es" class="cc-ok" style="font-size:11px;font-family:monospace"></span>
         </div>
         <textarea id="pb-out-es" rows="6" class="field" style="width:100%;margin-bottom:6px;resize:vertical" oninput="updateCC('es')" placeholder="Post en español…"></textarea>
-        <button onclick="copyPost('es')" style="width:100%;padding:9px;background:var(--bg);border:1px solid rgba(0,0,0,0.12);color:var(--ink2);font-size:12px;font-weight:600;cursor:pointer;border-radius:var(--r-sm);font-family:inherit" onmouseover="this.style.background='rgba(0,0,0,0.06)'" onmouseout="this.style.background='var(--bg)'">Copy ES</button>
+        <button onclick="copyPost('es')" style="width:100%;padding:9px;background:var(--bg);border:1px solid rgba(0,0,0,0.12);color:var(--ink2);font-size:12px;font-weight:600;cursor:pointer;border-radius:var(--r-sm);font-family:inherit">Copy ES</button>
       </div>
       <div style="flex:1;min-width:0">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
@@ -742,7 +843,7 @@
           <span id="cc-en" class="cc-ok" style="font-size:11px;font-family:monospace"></span>
         </div>
         <textarea id="pb-out-en" rows="6" class="field" style="width:100%;margin-bottom:6px;resize:vertical" oninput="updateCC('en')" placeholder="Post in English…"></textarea>
-        <button onclick="copyPost('en')" style="width:100%;padding:9px;background:var(--bg);border:1px solid rgba(0,0,0,0.12);color:var(--ink2);font-size:12px;font-weight:600;cursor:pointer;border-radius:var(--r-sm);font-family:inherit" onmouseover="this.style.background='rgba(0,0,0,0.06)'" onmouseout="this.style.background='var(--bg)'">Copy EN</button>
+        <button onclick="copyPost('en')" style="width:100%;padding:9px;background:var(--bg);border:1px solid rgba(0,0,0,0.12);color:var(--ink2);font-size:12px;font-weight:600;cursor:pointer;border-radius:var(--r-sm);font-family:inherit">Copy EN</button>
       </div>
     </div>
 
@@ -873,6 +974,11 @@ function routeFromHash() {
 }
 window.addEventListener('hashchange', routeFromHash);
 
+/* ─── SCROLL SHADOW ON NAV ─── */
+window.addEventListener('scroll', function() {
+  document.getElementById('topnav').classList.toggle('scrolled', window.scrollY > 4);
+}, {passive: true});
+
 /* ─── BADGE HELPERS ─── */
 const MARKET_CH = {US:'chip-blue',Mexico:'chip-teal',Spain:'chip-red',International:'chip-purple'};
 const TYPE_CH   = {Trade:'chip-blue',Entertainment:'chip-red',Tech:'chip-teal',Regional:'chip-amber',Review:'chip-amber'};
@@ -882,13 +988,22 @@ function badge(text, cls) {
   return `<span class="chip ${cls||'chip-grey'}" style="white-space:nowrap">${text}</span>`;
 }
 
-/* ─── STATS & DAYS ─── */
-document.getElementById('stat-articles').textContent = MEDIA.length;
+/* ─── TODAY'S COVERAGE ─── */
 (function(){
-  const premiere = new Date('2026-08-12');
-  const days = Math.max(1, Math.floor((new Date() - premiere) / 86400000) + 1);
-  document.getElementById('stat-days').textContent = days;
-  document.getElementById('home-days').textContent = 'Day ' + days + ' of 50';
+  const today = MEDIA.filter(a => a.ts === 20260812);
+  document.getElementById('today-badge').textContent = today.length + ' articles on premiere day';
+  document.getElementById('today-feed').innerHTML = today.slice(0,5).map(a => `
+    <a href="${a.url}" target="_blank" rel="noopener" class="list-row">
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px">
+          <span style="font-size:13px;font-weight:600;color:var(--ink1)">${a.outlet}</span>
+          ${badge(a.market, MARKET_CH[a.market])}
+        </div>
+        <p style="font-size:12px;color:var(--ink2);line-height:1.45">${a.headline}</p>
+      </div>
+      <svg style="color:var(--ink3);flex-shrink:0;margin-top:2px" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>`).join('') +
+    (today.length > 5 ? `<div style="padding:12px 16px;text-align:center"><button onclick="nav('coverage')" style="font-size:13px;color:var(--blue);font-weight:500;border:none;background:none;cursor:pointer;font-family:inherit">View all ${today.length} articles ›</button></div>` : '');
 })();
 
 /* ─── EPISODE COUNTDOWN ─── */
@@ -902,10 +1017,36 @@ document.getElementById('stat-articles').textContent = MEDIA.length;
   }
 })();
 
+/* ─── SEASON PROGRESS STRIP ─── */
+(function(){
+  const today = new Date();
+  const aired = EPISODES.filter(e => new Date(e.iso) <= today).length;
+  const nextEp = EPISODES.find(e => new Date(e.iso) > today);
+  document.getElementById('season-sub').textContent = `${aired} of ${EPISODES.length} aired`;
+  document.getElementById('ep-timeline').innerHTML =
+    `<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">` +
+    EPISODES.map(e => {
+      const d = new Date(e.iso);
+      const isAired = d <= today;
+      const isNext = nextEp && e.ep === nextEp.ep;
+      return `<div style="display:flex;flex-direction:column;align-items:center;gap:4px;cursor:default" title="${e.title} · ${e.date}">
+        <div style="width:28px;height:28px;border-radius:50%;
+          background:${isAired?'var(--ink1)':isNext?'var(--blue)':'transparent'};
+          border:2px solid ${isAired?'var(--ink1)':isNext?'var(--blue)':'var(--ink3)'};
+          display:flex;align-items:center;justify-content:center;
+          font-size:10px;font-weight:700;
+          color:${isAired||isNext?'#fff':'var(--ink3)'}">
+          ${e.ep}
+        </div>
+        <span style="font-size:9px;color:${isNext?'var(--blue)':'var(--ink3)'};font-weight:${isNext?'700':'400'};white-space:nowrap">${isNext?'Next':'Aug '+e.date.split(' ')[1]}</span>
+      </div>`;
+    }).join('') + `</div>`;
+})();
+
 /* ─── CHARTS ─── */
-const MARKET_COLOR = {US:'#007AFF',Mexico:'#30B0C7',International:'#AF52DE',Spain:'#E8402A'};
-const TYPE_COLOR   = {Entertainment:'#E8402A',Tech:'#30B0C7',Trade:'#007AFF',Regional:'#FF9F0A',Review:'#FF9F0A'};
-const LANG_COLOR   = {EN:'#007AFF',ES:'#30B0C7'};
+const MARKET_COLOR = {US:'#0071E3',Mexico:'#30B0C7',International:'#AF52DE',Spain:'#E8402A'};
+const TYPE_COLOR   = {Entertainment:'#E8402A',Tech:'#30B0C7',Trade:'#0071E3',Regional:'#FF9F0A',Review:'#FF9F0A'};
+const LANG_COLOR   = {EN:'#0071E3',ES:'#30B0C7'};
 
 function tally(field) {
   const m = {};
@@ -918,7 +1059,7 @@ function buildChart(id, data, colors, filterField) {
   const el = document.getElementById(id);
   if (!el) return;
   el.innerHTML = data.map(d => {
-    const color = colors[d.k]||'#007AFF';
+    const color = colors[d.k]||'#0071E3';
     const pct = Math.max(12, (d.v/max)*100);
     return `<div class="chart-bar" onclick="navWithFilter('${filterField}','${d.k}')">
       <div style="display:flex;align-items:center;gap:8px">
@@ -942,27 +1083,10 @@ buildChart('chart-market', tally('market'), MARKET_COLOR, 'market');
 buildChart('chart-type',   tally('type'),   TYPE_COLOR,   'type');
 buildChart('chart-lang',   tally('lang'),   LANG_COLOR,   'lang');
 
-/* ─── TODAY'S PULSE ─── */
-(function(){
-  const today = MEDIA.filter(a => a.ts === 20260812);
-  document.getElementById('today-badge').textContent = today.length + ' articles on premiere day';
-  document.getElementById('today-feed').innerHTML = today.map(a => `
-    <a href="${a.url}" target="_blank" rel="noopener" class="list-row">
-      <div style="flex:1;min-width:0">
-        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px">
-          <span style="font-size:13px;font-weight:600;color:var(--ink1)">${a.outlet}</span>
-          ${badge(a.market, MARKET_CH[a.market])}
-        </div>
-        <p style="font-size:12px;color:var(--ink2);line-height:1.45">${a.headline}</p>
-      </div>
-      <svg style="color:var(--ink3);flex-shrink:0;margin-top:2px" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>
-    </a>`).join('');
-})();
-
 /* ─── GEO MAP ─── */
 (function(){
   const GEO = [
-    {market:'US',cx:200,cy:155,color:'#007AFF'},
+    {market:'US',cx:200,cy:155,color:'#0071E3'},
     {market:'Mexico',cx:178,cy:190,color:'#30B0C7'},
     {market:'Spain',cx:445,cy:135,color:'#E8402A'},
     {market:'International',cx:485,cy:115,color:'#AF52DE'},
@@ -999,9 +1123,9 @@ buildChart('chart-lang',   tally('lang'),   LANG_COLOR,   'lang');
     {t:'#Halconazo',v:28},{t:'#XimenaSarinana',v:22},{t:'#LemonStudios',v:18},
   ];
   const maxV=tags[0].v;
+  const colors=['#E8402A','#30B0C7','#0071E3','#FF9F0A','#AF52DE'];
   document.getElementById('hashtag-cloud').innerHTML=tags.map((t,i)=>{
     const size=12+((t.v/maxV)*12);
-    const colors=['#E8402A','#30B0C7','#007AFF','#FF9F0A','#AF52DE'];
     return `<span class="htag" style="font-size:${size}px;color:${colors[i%colors.length]};background:transparent;padding:0"
       onclick="window.open('https://twitter.com/search?q=${encodeURIComponent(t.t)}','_blank','noopener')">${t.t}</span>`;
   }).join('');
@@ -1016,7 +1140,7 @@ buildChart('chart-lang',   tally('lang'),   LANG_COLOR,   'lang');
     {handle:'@FernandoRovzar',platform:'Twitter/X',text:'Si en la primera temporada el enemigo era un asesino serial, en esta temporada es todo un sistema. #LasAzules',date:'Aug 12'},
     {handle:'@LemonStudios',platform:'Twitter/X',text:'Las Azules S2 is LIVE. 8 episodes of the most powerful story we\'ve ever told. @AppleTV #WomenInBlue',date:'Aug 12'},
   ];
-  const pcolor={'Twitter/X':'#007AFF',Instagram:'#E8402A'};
+  const pcolor={'Twitter/X':'#0071E3',Instagram:'#E8402A'};
   document.getElementById('social-mentions-feed').innerHTML=mentions.map((m,i)=>`
     <div style="display:flex;align-items:flex-start;gap:12px;padding:14px 16px;${i<mentions.length-1?'border-bottom:0.5px solid rgba(0,0,0,0.07)':''}">
       <div style="width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,0.05);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:${pcolor[m.platform]||'var(--ink3)'};flex-shrink:0">${m.platform.slice(0,2).toUpperCase()}</div>
@@ -1073,11 +1197,11 @@ renderAmpList('paid-strategies', PAID_STRATS, 'paid-progress');
     const aired = d <= today;
     const isNext = !aired && EPISODES.find(ep=>new Date(ep.iso)>today)?.ep===e.ep;
     return `<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:0.5px solid rgba(0,0,0,0.07)">
-      <span style="font-size:10px;font-weight:800;color:${aired?'var(--green)':isNext?'var(--accent)':'var(--ink3)'};width:18px;flex-shrink:0">E${e.ep}</span>
+      <span style="font-size:10px;font-weight:800;color:${aired?'var(--green)':isNext?'var(--blue)':'var(--ink3)'};width:18px;flex-shrink:0">E${e.ep}</span>
       <span style="font-size:12px;color:${aired?'var(--ink1)':'var(--ink3)'};flex:1;font-weight:${aired?'600':'400'}">${e.title}</span>
       <span style="font-size:10px;color:var(--ink3);white-space:nowrap">${e.date}</span>
       ${aired?'<span class="chip chip-green" style="padding:1px 7px">Live</span>':''}
-      ${isNext?'<span class="chip chip-red" style="padding:1px 7px">Next</span>':''}
+      ${isNext?'<span class="chip chip-blue" style="padding:1px 7px">Next</span>':''}
     </div>`;
   }).join('');
 })();
@@ -1088,7 +1212,7 @@ document.getElementById('cast-list').innerHTML = CAST.map(c => `
     <div style="width:36px;height:36px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--ink2);flex-shrink:0">${c.initials}</div>
     <div style="min-width:0">
       <p style="font-size:13px;font-weight:700;color:var(--ink1)">${c.name}</p>
-      <p style="font-size:11px;color:var(--accent);font-weight:600">${c.role}</p>
+      <p style="font-size:11px;color:var(--brand);font-weight:600">${c.role}</p>
       ${c.note?`<p style="font-size:10px;color:var(--ink3)">${c.note}</p>`:''}
     </div>
   </a>`).join('');
@@ -1187,6 +1311,7 @@ function generatePosts() {
   document.getElementById('pb-out-es').value=esOut;
   document.getElementById('pb-out-en').value=enOut;
   updateCC('es'); updateCC('en');
+  showToast('Demo mode — not saved');
 }
 function copyPost(lang) {
   const ta=document.getElementById('pb-out-'+lang);
