@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Azules S2 — Media Intelligence Room V8.9 | Lemon Studios</title>
+  <title>Las Azules S2 — Media Intelligence Room V9.0 | Lemon Studios</title>
   <meta name="description" content="Media intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <!-- PWA / Add to Home Screen -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════════════════════
-       V8 DESIGN SYSTEM — Las Azules Show Poster Mood
+       V9 DESIGN SYSTEM — Las Azules Show Poster Mood
        V4 editorial base · Cerulean police blue · Gold accents
     ═══════════════════════════════════════════════════════ */
     :root {
@@ -781,13 +781,14 @@
     <button onclick="nav('home')"     class="tnav-link" id="nl-home">Command Center</button>
     <button onclick="nav('coverage')" class="tnav-link" id="nl-coverage">Coverage</button>
     <button onclick="nav('social')"   class="tnav-link" id="nl-social">Social</button>
+    <button onclick="nav('assets')"   class="tnav-link" id="nl-assets">Assets</button>
     <button onclick="nav('show')"     class="tnav-link" id="nl-show">Show Universe</button>
     <button onclick="nav('updates')"  class="tnav-link" id="nl-updates">Daily Updates</button>
   </div>
 
   <div class="tnav-right">
     <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
-    <span class="v4-badge">V8.9</span>
+    <span class="v4-badge">V9.0</span>
   </div>
 </nav>
 
@@ -805,6 +806,10 @@
     <svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
     Social
   </button>
+  <button onclick="nav('assets')"   class="bnav-link" id="bn-assets">
+    <svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+    Assets
+  </button>
   <button onclick="nav('show')"     class="bnav-link" id="bn-show">
     <svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
     Show
@@ -812,6 +817,10 @@
   <button onclick="nav('updates')"  class="bnav-link" id="bn-updates">
     <svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
     Updates
+  </button>
+  <button onclick="nav('assets')"   class="bnav-link" id="bn-assets">
+    <svg class="bnav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+    Assets
   </button>
 </nav>
 
@@ -1008,14 +1017,6 @@
           <button onclick="selectPlatform('facebook')"  id="pb-btn-facebook"  class="plat-btn" style="font-family:inherit">Facebook</button>
           <button onclick="selectPlatform('tiktok')"    id="pb-btn-tiktok"    class="plat-btn" style="font-family:inherit">TikTok</button>
         </div>
-        <!-- Visual image spec card -->
-        <div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:rgba(27,123,196,0.06);border:1px solid rgba(27,123,196,0.16)">
-          <div id="pb-spec-box" style="flex-shrink:0;border:1.5px solid rgba(27,123,196,0.35);display:flex;align-items:center;justify-content:center;font-size:6px;font-weight:800;color:var(--poster-blue);letter-spacing:.04em;text-align:center;line-height:1.3;width:48px;height:36px"></div>
-          <div style="flex:1;min-width:0">
-            <p id="pb-img-text" style="font-size:11px;font-weight:600;color:var(--poster-blue);line-height:1.5"></p>
-          </div>
-          <button onclick="copyImgSpec()" style="flex-shrink:0;font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 10px;border:1px solid rgba(27,123,196,0.3);background:var(--white);color:var(--poster-blue);cursor:pointer;font-family:inherit;white-space:nowrap" onmouseover="this.style.background='rgba(27,123,196,0.07)'" onmouseout="this.style.background='var(--white)'">Copy</button>
-        </div>
       </div>
 
       <!-- Quick Generate — one tap, no typing -->
@@ -1078,111 +1079,6 @@
         </div>
       </div>
     </div>
-
-    <!-- ──────────────────────────────────────────
-         APPLE TV OFFICIAL SOCIAL ASSETS KIT
-    ────────────────────────────────────────── -->
-    <div class="sec-header">
-      <div class="sec-header-left">
-        <p class="sec-eyebrow">Apple TV Social Team</p>
-        <h2 class="sec-h2">Official assets kit</h2>
-        <hr class="sec-rule">
-      </div>
-      <p class="sec-caption">Official materials from Apple TV for social media activation.</p>
-    </div>
-
-    <!-- Download card -->
-    <div class="card" style="overflow:hidden;margin-bottom:16px;border-left:3px solid #555e6c">
-      <!-- Header row -->
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:20px 24px;border-bottom:1px solid var(--bd);background:rgba(27,123,196,0.04)">
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:40px;height:40px;background:#000;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
-            <svg width="22" height="22" viewBox="0 0 814 1000" fill="white"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-43.4-150.3-96.7L0 810v-285C0 395.7 73.7 310.9 73.7 310.9s35.1-72.4 35.1-157.9c0-62.3-15.6-108.2-31.6-108.2C66.2 44.8 2.2 70.3 2.2 70.3 2.2 70.3 0 0 0 0c85.6 0 171.8 44.6 228.3 111.3 56.7-64.3 142.4-111.3 228.3-111.3 0 0-1.9 70.3-1.9 70.3s-64 25.5-75 25.5c-16 0-31.6 45.9-31.6 108.2 0 85.5 35.1 157.9 35.1 157.9s73.7 84.8 73.7 213.8v285l-150.3 210.6c-45.3 53.3-88.3 96.7-150.3 96.7s-97.9-40.8-165.9-40.8C114.3 927.2 0 967 0 967L0 967z"/></svg>
-          </div>
-          <div>
-            <p style="font-size:14px;font-weight:700;color:var(--ink1);margin-bottom:2px">Apple TV+ Official Social Assets — Las Azules S2</p>
-            <p style="font-size:11px;color:var(--ink3)">Provided by Daniel · Apple TV Social Team</p>
-          </div>
-        </div>
-        <a href="https://apple.box.com/s/k83vmf10m94932622wlenbf650k59l2g" target="_blank" rel="noopener noreferrer"
-           style="display:inline-flex;align-items:center;gap:7px;padding:9px 18px;background:var(--poster-blue);color:#fff;font-size:12px;font-weight:700;letter-spacing:.04em;text-decoration:none;white-space:nowrap"
-           onmouseover="this.style.opacity='.82'" onmouseout="this.style.opacity='1'">
-          ↓ Download Assets
-        </a>
-      </div>
-      <!-- Password row -->
-      <div style="display:flex;align-items:center;gap:10px;padding:10px 24px;background:rgba(255,209,0,0.06);border-bottom:1px solid var(--bd)">
-        <span style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Password</span>
-        <code id="box-pw" style="font-size:13px;font-weight:600;color:var(--ink1);background:rgba(255,255,255,0.06);padding:3px 10px;letter-spacing:.05em">L@sBlue2</code>
-        <button onclick="navigator.clipboard.writeText('L@sBlue2').then(()=>{const b=this;b.textContent='Copied!';setTimeout(()=>b.textContent='Copy',1400)})"
-          style="font-size:10px;font-weight:600;padding:3px 9px;border:1px solid rgba(255,209,0,0.3);background:none;color:var(--gold);cursor:pointer;font-family:inherit"
-          onmouseover="this.style.background='rgba(255,209,0,0.07)'" onmouseout="this.style.background='none'">Copy</button>
-      </div>
-      <!-- Asset list -->
-      <div style="padding:16px 24px;border-bottom:1px solid var(--bd)">
-        <p style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:12px">Included assets</p>
-        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">
-          <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;background:var(--smoke);border:1px solid var(--bd)">
-            <span style="font-size:15px;flex-shrink:0">🎬</span>
-            <div>
-              <p style="font-size:12px;font-weight:700;color:var(--ink1);margin-bottom:3px">Trailer</p>
-              <p style="font-size:10px;color:var(--ink3);line-height:1.5">Spanish &amp; English<br>16×9 · 9×16 (vertical)</p>
-            </div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;background:var(--smoke);border:1px solid var(--bd)">
-            <span style="font-size:15px;flex-shrink:0">🖼</span>
-            <div>
-              <p style="font-size:12px;font-weight:700;color:var(--ink1);margin-bottom:3px">Key Art</p>
-              <p style="font-size:10px;color:var(--ink3);line-height:1.5">Spanish &amp; English<br>16×9 · 4×5 · 1×1 · 9×16</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Posting guidelines -->
-      <div style="padding:16px 24px;border-bottom:1px solid var(--bd)">
-        <p style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:12px">Posting guidelines</p>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="display:flex;align-items:center;gap:10px">
-            <span style="font-size:10px;font-weight:700;color:var(--poster-blue);background:rgba(27,123,196,0.08);padding:3px 8px;white-space:nowrap">#LasAzules</span>
-            <p style="font-size:12px;color:var(--ink2)">Use the official hashtag on every post</p>
-          </div>
-          <div style="display:flex;align-items:center;gap:10px">
-            <span style="font-size:10px;font-weight:700;color:var(--poster-blue);background:rgba(27,123,196,0.08);padding:3px 8px;white-space:nowrap">@AppleTV</span>
-            <p style="font-size:12px;color:var(--ink2)">Tag on Instagram, Facebook, TikTok, X, YouTube</p>
-          </div>
-          <div style="display:flex;align-items:center;gap:10px">
-            <span style="font-size:10px;font-weight:700;color:var(--poster-blue);background:rgba(27,123,196,0.08);padding:3px 8px;white-space:nowrap">Show link</span>
-            <a href="https://apple.co/LasAzules" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:var(--poster-blue);font-weight:600">apple.co/LasAzules ↗</a>
-          </div>
-        </div>
-      </div>
-      <!-- Sample copy -->
-      <div style="padding:16px 24px">
-        <p style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:12px">Apple TV sample copy</p>
-        <div style="display:flex;flex-direction:column;gap:8px" id="apple-sample-posts">
-          <div style="padding:10px 14px;background:var(--smoke);border:1px solid var(--bd);position:relative">
-            <p style="font-size:12px;color:var(--ink1);line-height:1.6">Another case, another day to defy the system. Las Azules are back August 12.</p>
-            <button onclick="navigator.clipboard.writeText('Another case, another day to defy the system. Las Azules are back August 12. #LasAzules @AppleTV apple.co/LasAzules').then(()=>{const b=this;b.textContent='Copied!';setTimeout(()=>b.textContent='Copy',1400)})"
-              style="position:absolute;top:8px;right:10px;font-size:9px;font-weight:600;padding:3px 7px;border:1px solid var(--bd);background:var(--white);color:var(--ink3);cursor:pointer;font-family:inherit">Copy</button>
-          </div>
-          <div style="padding:10px 14px;background:var(--smoke);border:1px solid var(--bd);position:relative">
-            <p style="font-size:12px;color:var(--ink1);line-height:1.6">Welcome to 1970s Mexico. Las Azules return to solve a case inspired by true events. Streaming August 12.</p>
-            <button onclick="navigator.clipboard.writeText('Welcome to 1970s Mexico. Las Azules return to solve a case inspired by true events. Streaming August 12. #LasAzules @AppleTV apple.co/LasAzules').then(()=>{const b=this;b.textContent='Copied!';setTimeout(()=>b.textContent='Copy',1400)})"
-              style="position:absolute;top:8px;right:10px;font-size:9px;font-weight:600;padding:3px 7px;border:1px solid var(--bd);background:var(--white);color:var(--ink3);cursor:pointer;font-family:inherit">Copy</button>
-          </div>
-          <div style="padding:10px 14px;background:var(--smoke);border:1px solid var(--bd);position:relative">
-            <p style="font-size:12px;color:var(--ink1);line-height:1.6">In 1970s Mexico, never underestimate a woman in blue. Las Azules — Reporting for duty August 12.</p>
-            <button onclick="navigator.clipboard.writeText('In 1970s Mexico, never underestimate a woman in blue. Las Azules — Reporting for duty August 12. #LasAzules @AppleTV apple.co/LasAzules').then(()=>{const b=this;b.textContent='Copied!';setTimeout(()=>b.textContent='Copy',1400)})"
-              style="position:absolute;top:8px;right:10px;font-size:9px;font-weight:600;padding:3px 7px;border:1px solid var(--bd);background:var(--white);color:var(--ink3);cursor:pointer;font-family:inherit">Copy</button>
-          </div>
-        </div>
-        <p style="font-size:10px;color:var(--ink3);margin-top:10px">Feel free to craft posts in your own words. Samples above auto-append hashtag + tag + show link when copied.</p>
-      </div>
-    </div>
-    <p style="font-size:10px;color:var(--ink3);margin-bottom:40px">
-      Need the step-by-step download guide?
-      <a href="https://jellyfish-corp.app.box.com/folder/231576448445?s=byc30d9uva7f6afqkuw2qqztwso3jpfr" target="_blank" rel="noopener noreferrer" style="color:var(--poster-blue);font-weight:600">Apple TV asset download guide ↗</a>
-    </p>
 
     <!-- Hashtag cloud -->
     <div class="sec-header">
@@ -1529,6 +1425,115 @@
   </div>
 </section>
 
+<!-- ─── PAGE: SOCIAL MEDIA ASSETS ─── -->
+<section id="page-assets" class="page">
+  <div class="page-inner">
+
+    <div class="sec-header">
+      <div class="sec-header-left">
+        <p class="sec-eyebrow">Apple TV Social Team</p>
+        <h2 class="sec-h2">Official assets kit</h2>
+        <hr class="sec-rule">
+      </div>
+      <p class="sec-caption">Official materials from Apple TV for social media activation.</p>
+    </div>
+
+    <!-- Download card -->
+    <div class="card" style="overflow:hidden;margin-bottom:16px;border-left:3px solid #555e6c">
+      <!-- Header row -->
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:20px 24px;border-bottom:1px solid var(--bd);background:rgba(27,123,196,0.04)">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:40px;height:40px;background:#000;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="22" height="22" viewBox="0 0 814 1000" fill="white"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-43.4-150.3-96.7L0 810v-285C0 395.7 73.7 310.9 73.7 310.9s35.1-72.4 35.1-157.9c0-62.3-15.6-108.2-31.6-108.2C66.2 44.8 2.2 70.3 2.2 70.3 2.2 70.3 0 0 0 0c85.6 0 171.8 44.6 228.3 111.3 56.7-64.3 142.4-111.3 228.3-111.3 0 0-1.9 70.3-1.9 70.3s-64 25.5-75 25.5c-16 0-31.6 45.9-31.6 108.2 0 85.5 35.1 157.9 35.1 157.9s73.7 84.8 73.7 213.8v285l-150.3 210.6c-45.3 53.3-88.3 96.7-150.3 96.7s-97.9-40.8-165.9-40.8C114.3 927.2 0 967 0 967L0 967z"/></svg>
+          </div>
+          <div>
+            <p style="font-size:14px;font-weight:700;color:var(--ink1);margin-bottom:2px">Apple TV+ Official Social Assets — Las Azules S2</p>
+            <p style="font-size:11px;color:var(--ink3)">Provided by Daniel · Apple TV Social Team</p>
+          </div>
+        </div>
+        <a href="https://apple.box.com/s/k83vmf10m94932622wlenbf650k59l2g" target="_blank" rel="noopener noreferrer"
+           style="display:inline-flex;align-items:center;gap:7px;padding:9px 18px;background:var(--poster-blue);color:#fff;font-size:12px;font-weight:700;letter-spacing:.04em;text-decoration:none;white-space:nowrap"
+           onmouseover="this.style.opacity='.82'" onmouseout="this.style.opacity='1'">
+          ↓ Download Assets
+        </a>
+      </div>
+      <!-- Password row -->
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 24px;background:rgba(255,209,0,0.06);border-bottom:1px solid var(--bd)">
+        <span style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Password</span>
+        <code style="font-size:13px;font-weight:600;color:var(--ink1);background:rgba(255,255,255,0.06);padding:3px 10px;letter-spacing:.05em">L@sBlue2</code>
+        <button onclick="navigator.clipboard.writeText('L@sBlue2').then(()=>{const b=this;b.textContent='Copied!';setTimeout(()=>b.textContent='Copy',1400)})"
+          style="font-size:10px;font-weight:600;padding:3px 9px;border:1px solid rgba(255,209,0,0.3);background:none;color:var(--gold);cursor:pointer;font-family:inherit"
+          onmouseover="this.style.background='rgba(255,209,0,0.07)'" onmouseout="this.style.background='none'">Copy</button>
+      </div>
+      <!-- Asset list -->
+      <div style="padding:16px 24px;border-bottom:1px solid var(--bd)">
+        <p style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:12px">Included assets</p>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">
+          <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;background:var(--smoke);border:1px solid var(--bd)">
+            <span style="font-size:15px;flex-shrink:0">🎬</span>
+            <div>
+              <p style="font-size:12px;font-weight:700;color:var(--ink1);margin-bottom:3px">Trailer</p>
+              <p style="font-size:10px;color:var(--ink3);line-height:1.5">Spanish &amp; English<br>16×9 · 9×16 (vertical)</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;background:var(--smoke);border:1px solid var(--bd)">
+            <span style="font-size:15px;flex-shrink:0">🖼</span>
+            <div>
+              <p style="font-size:12px;font-weight:700;color:var(--ink1);margin-bottom:3px">Key Art</p>
+              <p style="font-size:10px;color:var(--ink3);line-height:1.5">Spanish &amp; English<br>16×9 · 4×5 · 1×1 · 9×16</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Posting guidelines -->
+      <div style="padding:16px 24px;border-bottom:1px solid var(--bd)">
+        <p style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:12px">Posting guidelines</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:10px;font-weight:700;color:var(--poster-blue);background:rgba(27,123,196,0.08);padding:3px 8px;white-space:nowrap">#LasAzules</span>
+            <p style="font-size:12px;color:var(--ink2)">Use the official hashtag on every post</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:10px;font-weight:700;color:var(--poster-blue);background:rgba(27,123,196,0.08);padding:3px 8px;white-space:nowrap">@AppleTV</span>
+            <p style="font-size:12px;color:var(--ink2)">Tag on Instagram, Facebook, TikTok, X, YouTube</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:10px;font-weight:700;color:var(--poster-blue);background:rgba(27,123,196,0.08);padding:3px 8px;white-space:nowrap">Show link</span>
+            <a href="https://apple.co/LasAzules" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:var(--poster-blue);font-weight:600">apple.co/LasAzules ↗</a>
+          </div>
+        </div>
+      </div>
+      <!-- Sample copy -->
+      <div style="padding:16px 24px">
+        <p style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:12px">Apple TV sample copy</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="padding:10px 14px;background:var(--smoke);border:1px solid var(--bd);position:relative">
+            <p style="font-size:12px;color:var(--ink1);line-height:1.6">Another case, another day to defy the system. Las Azules are back August 12.</p>
+            <button onclick="navigator.clipboard.writeText('Another case, another day to defy the system. Las Azules are back August 12. #LasAzules @AppleTV apple.co/LasAzules').then(()=>{const b=this;b.textContent='Copied!';setTimeout(()=>b.textContent='Copy',1400)})"
+              style="position:absolute;top:8px;right:10px;font-size:9px;font-weight:600;padding:3px 7px;border:1px solid var(--bd);background:var(--white);color:var(--ink3);cursor:pointer;font-family:inherit">Copy</button>
+          </div>
+          <div style="padding:10px 14px;background:var(--smoke);border:1px solid var(--bd);position:relative">
+            <p style="font-size:12px;color:var(--ink1);line-height:1.6">Welcome to 1970s Mexico. Las Azules return to solve a case inspired by true events. Streaming August 12.</p>
+            <button onclick="navigator.clipboard.writeText('Welcome to 1970s Mexico. Las Azules return to solve a case inspired by true events. Streaming August 12. #LasAzules @AppleTV apple.co/LasAzules').then(()=>{const b=this;b.textContent='Copied!';setTimeout(()=>b.textContent='Copy',1400)})"
+              style="position:absolute;top:8px;right:10px;font-size:9px;font-weight:600;padding:3px 7px;border:1px solid var(--bd);background:var(--white);color:var(--ink3);cursor:pointer;font-family:inherit">Copy</button>
+          </div>
+          <div style="padding:10px 14px;background:var(--smoke);border:1px solid var(--bd);position:relative">
+            <p style="font-size:12px;color:var(--ink1);line-height:1.6">In 1970s Mexico, never underestimate a woman in blue. Las Azules — Reporting for duty August 12.</p>
+            <button onclick="navigator.clipboard.writeText('In 1970s Mexico, never underestimate a woman in blue. Las Azules — Reporting for duty August 12. #LasAzules @AppleTV apple.co/LasAzules').then(()=>{const b=this;b.textContent='Copied!';setTimeout(()=>b.textContent='Copy',1400)})"
+              style="position:absolute;top:8px;right:10px;font-size:9px;font-weight:600;padding:3px 7px;border:1px solid var(--bd);background:var(--white);color:var(--ink3);cursor:pointer;font-family:inherit">Copy</button>
+          </div>
+        </div>
+        <p style="font-size:10px;color:var(--ink3);margin-top:10px">Feel free to craft posts in your own words. Samples above auto-append hashtag + tag + show link when copied.</p>
+      </div>
+    </div>
+    <p style="font-size:10px;color:var(--ink3);margin-bottom:40px">
+      Need the step-by-step download guide?
+      <a href="https://jellyfish-corp.app.box.com/folder/231576448445?s=byc30d9uva7f6afqkuw2qqztwso3jpfr" target="_blank" rel="noopener noreferrer" style="color:var(--poster-blue);font-weight:600">Apple TV asset download guide ↗</a>
+    </p>
+
+  </div>
+</section>
+
 </div><!-- end #content -->
 
 <!-- ═══ JAVASCRIPT ═══ -->
@@ -1661,7 +1666,7 @@ function showSourceBadge(sourceLabel, strippedLines) {
 }
 
 /* ─── ROUTER ─── */
-const PAGES = ['home','coverage','social','show','updates'];
+const PAGES = ['home','coverage','social','assets','show','updates'];
 
 function nav(page) {
   if (!PAGES.includes(page)) page = 'home';
@@ -2012,57 +2017,101 @@ const PLATFORM_GUIDE = {
 /* Official Apple TV posting defaults (from Daniel, Apple TV Social Team) */
 const APPLE_DEFAULTS = { hashtag: '#LasAzules', handle: '@AppleTV', link: 'apple.co/LasAzules' };
 
-/* Platform-specific smart templates */
+/* Platform-specific smart templates — 6th param esExc, 7th param esHl for verified Spanish overrides */
 const PLAT_TMPL = {
-  twitter: (hl, url, exc, out) => {
-    const hook = exc ? `"${exc.substring(0,90)}…"` : hl.substring(0,120);
+  twitter: (hl, url, exc, out, esExc, esHl) => {
+    const src    = out ? ` · ${out}` : '';
+    const enHook = exc ? `"${exc.substring(0,90)}…"` : hl.substring(0,120);
+    const esHook = esExc ? `"${esExc.substring(0,90)}…"` : (esHl || hl).substring(0,120);
+    return {
+      es: `🎬 ${esHook}${src}\n\n#LasAzules #LasAzulesS2 #MujeresDeAzul @AppleTV\napple.co/LasAzules${url?'\n'+url:''}`,
+      en: `🎬 ${enHook}${src}\n\n#LasAzules #WomenInBlue @AppleTV\napple.co/LasAzules${url?'\n'+url:''}`
+    };
+  },
+  instagram: (hl, url, exc, out, esExc, esHl) => {
+    const enQ  = exc ? `\n\n"${exc.substring(0,200)}"\n\n` : '\n\n';
+    const esQ  = esExc ? `\n\n"${esExc.substring(0,200)}"\n\n` : '\n\n';
+    const src  = out ? `${out} · ` : '';
+    const esTitle = esHl || hl;
+    return {
+      es: `🎬 ${esTitle}${esQ}${src}La temporada 2 de #LasAzules ya disponible en @AppleTV ✨\napple.co/LasAzules\n\nNunca subestimes a una mujer de azul.\n\n.\n.\n.\n#LasAzules #LasAzulesS2 #MujeresDeAzul #BarbaraMori #XimenaSarinana #FernandoRovzar #DraMex #AppleTVPlus #Mexico1971 #Tlatelolco`,
+      en: `🎬 ${hl}${enQ}${src}Las Azules Season 2 is now streaming on @AppleTV ✨\napple.co/LasAzules\n\nNever underestimate a woman in blue.\n\n.\n.\n.\n#LasAzules #WomenInBlue #LasAzulesS2 #BarbaraMori #AppleTVPlus #FernandoRovzar #MexicanDrama #Tlatelolco`
+    };
+  },
+  linkedin: (hl, url, exc, out, esExc, esHl) => {
     const src  = out ? ` · ${out}` : '';
+    const enQ  = exc ? `\n\n"${exc.substring(0,250)}"` : '';
+    const esQ  = esExc ? `\n\n"${esExc.substring(0,250)}"` : (exc ? `\n\n"${exc.substring(0,250)}"` : '');
+    const esTitle = esHl || hl;
     return {
-      es: `🎬 ${hook}${src}\n\n#LasAzules #LasAzulesS2 #MujeresDeAzul @AppleTV\napple.co/LasAzules${url?'\n'+url:''}`,
-      en: `🎬 ${hook}${src}\n\n#LasAzules #WomenInBlue @AppleTV\napple.co/LasAzules${url?'\n'+url:''}`
+      es: `La historia que México necesitaba contar.\n\n${esTitle}${src}${esQ}\n\nLas Azules — temporada 2 ya disponible en Apple TV+. Una investigación policial en el México de 1971 que desafía el sistema desde adentro.\n\nCreada por Fernando Rovzar. Producida por Lemon Studios.\n@AppleTV apple.co/LasAzules\n\n#LasAzules #AppleTVPlus #CineLatino #FernandoRovzar #ProduccionMexicana${url?'\n\n'+url:''}`,
+      en: `The story Mexico needed to tell.\n\n${hl}${src}${enQ}\n\nLas Azules (Women in Blue) Season 2 is streaming on Apple TV+. A police procedural set in 1971 Mexico City — challenging the system from within.\n\nCreated by Fernando Rovzar. Produced by Lemon Studios.\n@AppleTV apple.co/LasAzules\n\n#LasAzules #WomenInBlue #AppleTVPlus #MexicanDrama #LemonStudios${url?'\n\n'+url:''}`
     };
   },
-  instagram: (hl, url, exc, out) => {
-    const q  = exc ? `\n\n"${exc.substring(0,200)}"\n\n` : '\n\n';
-    const src = out ? `${out} · ` : '';
+  facebook: (hl, url, exc, out, esExc, esHl) => {
+    const src  = out ? ` — ${out}` : '';
+    const enQ  = exc ? `\n\n"${exc.substring(0,180)}"\n\n` : '\n\n';
+    const esQ  = esExc ? `\n\n"${esExc.substring(0,180)}"\n\n` : '\n\n';
+    const esTitle = esHl || hl;
     return {
-      es: `🎬 ${hl}${q}${src}La temporada 2 de #LasAzules ya disponible en @AppleTV ✨\napple.co/LasAzules\n\nNunca subestimes a una mujer de azul.\n\n.\n.\n.\n#LasAzules #LasAzulesS2 #MujeresDeAzul #BarbaraMori #XimenaSarinana #FernandoRovzar #DraMex #AppleTVPlus #Mexico1971 #Tlatelolco`,
-      en: `🎬 ${hl}${q}${src}Las Azules Season 2 is now streaming on @AppleTV ✨\napple.co/LasAzules\n\nNever underestimate a woman in blue.\n\n.\n.\n.\n#LasAzules #WomenInBlue #LasAzulesS2 #BarbaraMori #AppleTVPlus #FernandoRovzar #MexicanDrama #Tlatelolco`
+      es: `✨ ${esTitle}${src}${esQ}¿Ya viste la segunda temporada de Las Azules en Apple TV+? Comparte con quien debería verla 👇\n@AppleTV apple.co/LasAzules\n\n#LasAzules #LasAzulesS2 #MujeresDeAzul${url?'\n\n'+url:''}`,
+      en: `✨ ${hl}${src}${enQ}Have you watched Las Azules Season 2 on Apple TV+ yet? Tag someone who needs to see it 👇\n@AppleTV apple.co/LasAzules\n\n#LasAzules #WomenInBlue #LasAzulesS2${url?'\n\n'+url:''}`
     };
   },
-  linkedin: (hl, url, exc, out) => {
-    const src = out ? ` · ${out}` : '';
-    const q   = exc ? `\n\n"${exc.substring(0,250)}"` : '';
+  tiktok: (hl, url, exc, out, esExc, esHl) => {
+    const enHook = exc ? exc.substring(0,80) : hl.substring(0,70);
+    const esHook = esExc ? esExc.substring(0,80) : (esHl || hl).substring(0,70);
+    const src    = out ? `(${out}) ` : '';
     return {
-      es: `La historia que México necesitaba contar.\n\n${hl}${src}${q}\n\nLas Azules — temporada 2 ya disponible en Apple TV+. Una investigación policial en el México de 1971 que desafía el sistema desde adentro.\n\nCreada por Fernando Rovzar. Producida por Lemon Studios.\n@AppleTV apple.co/LasAzules\n\n#LasAzules #AppleTVPlus #CineLatino #FernandoRovzar #ProduccionMexicana${url?'\n\n'+url:''}`,
-      en: `The story Mexico needed to tell.\n\n${hl}${src}${q}\n\nLas Azules (Women in Blue) Season 2 is streaming on Apple TV+. A police procedural set in 1971 Mexico City — challenging the system from within.\n\nCreated by Fernando Rovzar. Produced by Lemon Studios.\n@AppleTV apple.co/LasAzules\n\n#LasAzules #WomenInBlue #AppleTVPlus #MexicanDrama #LemonStudios${url?'\n\n'+url:''}`
-    };
-  },
-  facebook: (hl, url, exc, out) => {
-    const src = out ? ` — ${out}` : '';
-    const q   = exc ? `\n\n"${exc.substring(0,180)}"\n\n` : '\n\n';
-    return {
-      es: `✨ ${hl}${src}${q}¿Ya viste la segunda temporada de Las Azules en Apple TV+? Comparte con quien debería verla 👇\n@AppleTV apple.co/LasAzules\n\n#LasAzules #LasAzulesS2 #MujeresDeAzul${url?'\n\n'+url:''}`,
-      en: `✨ ${hl}${src}${q}Have you watched Las Azules Season 2 on Apple TV+ yet? Tag someone who needs to see it 👇\n@AppleTV apple.co/LasAzules\n\n#LasAzules #WomenInBlue #LasAzulesS2${url?'\n\n'+url:''}`
-    };
-  },
-  tiktok: (hl, url, exc, out) => {
-    const hook = exc ? exc.substring(0,80) : hl.substring(0,70);
-    const src  = out ? `(${out}) ` : '';
-    return {
-      es: `¿Ya viste esto? 👀 ${src}\n\n${hook}\n\nMujeres de Azul S2 ya en @AppleTV 🎬\napple.co/LasAzules\nMéxico 1971 🇲🇽 crimen + poder + verdad\n\n#LasAzules #MujeresDeAzul #LasAzulesS2 #SeriesMexicanas #fyp #parati`,
-      en: `Did you see this? 👀 ${src}\n\n${hook}\n\nWomen in Blue S2 now on @AppleTV 🎬\napple.co/LasAzules\nMexico 1971 🇲🇽 crime + power + truth\n\n#LasAzules #WomenInBlue #LasAzulesS2 #fyp #foryou`
+      es: `¿Ya viste esto? 👀 ${src}\n\n${esHook}\n\nMujeres de Azul S2 ya en @AppleTV 🎬\napple.co/LasAzules\nMéxico 1971 🇲🇽 crimen + poder + verdad\n\n#LasAzules #MujeresDeAzul #LasAzulesS2 #SeriesMexicanas #fyp #parati`,
+      en: `Did you see this? 👀 ${src}\n\n${enHook}\n\nWomen in Blue S2 now on @AppleTV 🎬\napple.co/LasAzules\nMexico 1971 🇲🇽 crime + power + truth\n\n#LasAzules #WomenInBlue #LasAzulesS2 #fyp #foryou`
     };
   }
 };
 
 /* Quick-generate presets — no typing needed */
 const QUICK_TOPICS = [
-  { label:'Premiere', hl:"Las Azules Season 2 — Now Streaming on Apple TV+", url:'https://apple.co/LasAzules', out:'Apple TV+', exc:"Another case, another day to defy the system. Las Azules are back." },
-  { label:'Screen Anarchy 4/5', hl:"Women in Blue S2 Review — Screen Anarchy 4/5 ★", url:'https://screenanarchy.com/2026/08/women-in-blue-las-azules-s2-review-two-steps-forward-one-step-back.html', out:'Screen Anarchy', exc:"Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico's borders." },
-  { label:'Fernando Quote', hl:"Fernando Rovzar on Las Azules Season 2", url:'', out:'Fernando Rovzar', exc:"If in the first season the enemy was a serial killer, in this season it's an entire system." },
-  { label:'Barbara Mori', hl:"Barbara Mori on playing Lt. María in Season 2", url:'', out:'Barbara Mori', exc:"Now she's a woman giving herself permission to be. The entire season treats discovering who she really is." },
-  { label:'Episode 1 Live', hl:"Las Azules S2 Capítulo 1 — Now Streaming", url:'https://apple.co/LasAzules', out:'Apple TV+', exc:"Mexico City, 1971. Welcome to 1970s Mexico — Lieutenant María and the Azules are back on the case." },
+  {
+    label:'Premiere',
+    hl:"Las Azules Season 2 — Now Streaming on Apple TV+",
+    esHl:"Las Azules Temporada 2 — Ya disponible en Apple TV+",
+    url:'https://apple.co/LasAzules', out:'Apple TV+',
+    exc:"Another case, another day to defy the system. Las Azules are back.",
+    esExc:"Otro caso, otro día para desafiar el sistema. Las Azules han vuelto."
+  },
+  {
+    label:'Screen Anarchy 4/5',
+    hl:"Women in Blue S2 Review — Screen Anarchy 4/5 ★",
+    esHl:"Crítica de Mujeres de Azul T2 — Screen Anarchy 4/5 ★",
+    url:'https://screenanarchy.com/2026/08/women-in-blue-las-azules-s2-review-two-steps-forward-one-step-back.html',
+    out:'Screen Anarchy',
+    exc:"Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico's borders.",
+    esExc:"La 2ª temporada es más segura de su tono. Más relevante hoy que nunca, mucho más allá de las fronteras de México."
+  },
+  {
+    label:'Fernando Quote',
+    hl:"Fernando Rovzar on Las Azules Season 2",
+    esHl:"Fernando Rovzar sobre Las Azules Temporada 2",
+    url:'', out:'Fernando Rovzar',
+    exc:"If in the first season the enemy was a serial killer, in this season it's an entire system.",
+    esExc:"Si en la primera temporada el enemigo era un asesino serial, en esta temporada es todo un sistema."
+  },
+  {
+    label:'Barbara Mori',
+    hl:"Barbara Mori on playing Lt. María in Season 2",
+    esHl:"Barbara Mori sobre interpretar a la Tte. María en la Temporada 2",
+    url:'', out:'Barbara Mori',
+    exc:"Now she's a woman giving herself permission to be. The entire season treats discovering who she really is.",
+    esExc:"Ahora es una mujer que se está dando permiso de ser. Toda la temporada la trata descubriendo quién es realmente."
+  },
+  {
+    label:'Episode 1 Live',
+    hl:"Las Azules S2 Capítulo 1 — Now Streaming",
+    esHl:"Las Azules T2 Capítulo 1 — Ya disponible",
+    url:'https://apple.co/LasAzules', out:'Apple TV+',
+    exc:"Mexico City, 1971. Welcome to 1970s Mexico — Lieutenant María and the Azules are back on the case.",
+    esExc:"Ciudad de México, 1971. Bienvenidos al México de los 70 — la Teniente María y Las Azules están de vuelta en el caso."
+  },
   { label:'Latest Article', dynamic:'latest' }
 ];
 
@@ -2096,25 +2145,11 @@ function selectPlatform(p) {
   document.querySelectorAll('.plat-btn').forEach(t => t.classList.toggle('active', t.id === 'pb-btn-' + p));
   const guide = PLATFORM_GUIDE[p];
   if (guide) {
-    document.getElementById('pb-img-text').textContent = guide.imgText;
     document.getElementById('pb-limit-note').textContent = 'Character limit: ' + guide.limit;
-    // Update visual aspect-ratio box
-    const box = document.getElementById('pb-spec-box');
-    if (box) {
-      box.style.width  = guide.w + 'px';
-      box.style.height = guide.h + 'px';
-      box.textContent  = guide.ratio;
-    }
   }
   updateCC('es'); updateCC('en');
   if (activeTopic >= 0) _runGenerate(activeTopic);
   else if (document.getElementById('pb-headline').value.trim()) generatePost();
-}
-
-function copyImgSpec() {
-  const guide = PLATFORM_GUIDE[currentPlatform];
-  if (!guide) return;
-  navigator.clipboard.writeText(guide.imgText).then(() => showToast('Image spec copied!'));
 }
 
 function quickGenerate(idx) {
@@ -2135,7 +2170,7 @@ function _runGenerate(idx, overrideTopic) {
     : QUICK_TOPICS[idx]);
   const tmpl = PLAT_TMPL[currentPlatform];
   if (!tmpl) return;
-  const raw = tmpl(topic.hl, topic.url, topic.exc, topic.out);
+  const raw = tmpl(topic.hl, topic.url, topic.exc, topic.out, topic.esExc, topic.esHl);
   const esV = verifyClaims(raw.es);
   const enV = verifyClaims(raw.en);
   document.getElementById('pb-out-es').value = esV.clean;
