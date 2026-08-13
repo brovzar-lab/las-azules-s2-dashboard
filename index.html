@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Azules S2 — Media Intelligence Room V8.4 | Lemon Studios</title>
+  <title>Las Azules S2 — Media Intelligence Room V8.5 | Lemon Studios</title>
   <meta name="description" content="Media intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <!-- PWA / Add to Home Screen -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -794,7 +794,7 @@
 
   <div class="tnav-right">
     <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
-    <span class="v4-badge">V8.4</span>
+    <span class="v4-badge">V8.5</span>
   </div>
 </nav>
 
@@ -1407,13 +1407,7 @@ function badge(text, style) {
   return `<span style="display:inline-block;padding:1px 6px;font-size:9px;font-weight:700;letter-spacing:.04em;${style || 'background:rgba(154,144,128,0.1);color:#9a9080;border:1px solid rgba(154,144,128,0.2)'}">${text}</span>`;
 }
 
-/* ─── INIT STATS ─── */
-document.getElementById('stat-articles').textContent = MEDIA.length;
-(function(){
-  const premiere = new Date('2026-08-12');
-  const days = Math.max(1, Math.floor((new Date() - premiere) / 86400000) + 1);
-  document.getElementById('stat-days').textContent = days;
-})();
+/* stat-articles / stat-days elements removed in V8.5 — home is now fully dynamic */
 
 /* ─── CHARTS ─── */
 const MARKET_BAR = { US:'#3a60a8', Mexico:'#3d9688', International:'#7a4aa8', Spain:'#c8422a' };
