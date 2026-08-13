@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Azules S2 — Media Intelligence Room V8.5 | Lemon Studios</title>
+  <title>Las Azules S2 — Media Intelligence Room V8.6 | Lemon Studios</title>
   <meta name="description" content="Media intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <!-- PWA / Add to Home Screen -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -369,19 +369,12 @@
       .sec-caption { text-align: left; max-width: 100%; }
     }
 
-    /* ── Stat grid ── */
-    /* ── Signal strip (replaces stat tiles) ── */
+    /* ── Signal stack (vertical, full-width) ── */
     .signal-strip {
-      display: flex; gap: 12px;
-      overflow-x: auto; scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      padding: 0 20px 4px; scrollbar-width: none;
-      margin: 0 -20px;
+      display: flex; flex-direction: column; gap: 12px;
     }
-    .signal-strip::-webkit-scrollbar { display: none; }
     .signal-card {
-      flex-shrink: 0; scroll-snap-align: start;
-      width: min(82vw, 300px);
+      width: 100%;
       border: 1px solid var(--bd); background: var(--white);
       padding: 20px 22px; position: relative; overflow: hidden;
     }
@@ -794,7 +787,7 @@
 
   <div class="tnav-right">
     <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
-    <span class="v4-badge">V8.5</span>
+    <span class="v4-badge">V8.6</span>
   </div>
 </nav>
 
@@ -848,8 +841,8 @@
 
     <hr class="show-rule" style="margin-top:0">
 
-    <!-- Signal Cards strip (replaces static stat tiles) -->
-    <div class="signal-strip" id="signal-strip" style="margin-bottom:36px"></div>
+    <!-- Signal Cards (vertical stacked, full-width) -->
+    <div class="signal-strip" id="signal-strip" style="margin-bottom:32px"></div>
 
     <!-- Morning Briefing (auto-generated from MEDIA data) -->
     <div class="briefing-card" id="home-briefing"></div>
@@ -1407,7 +1400,7 @@ function badge(text, style) {
   return `<span style="display:inline-block;padding:1px 6px;font-size:9px;font-weight:700;letter-spacing:.04em;${style || 'background:rgba(154,144,128,0.1);color:#9a9080;border:1px solid rgba(154,144,128,0.2)'}">${text}</span>`;
 }
 
-/* stat-articles / stat-days elements removed in V8.5 — home is now fully dynamic */
+/* stat-articles / stat-days elements removed in V8.6 — home is now fully dynamic */
 
 /* ─── CHARTS ─── */
 const MARKET_BAR = { US:'#3a60a8', Mexico:'#3d9688', International:'#7a4aa8', Spain:'#c8422a' };
@@ -1487,7 +1480,7 @@ buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
     <div class="signal-card sc-dark" onclick="openArticle('${bestReview.url}')" style="cursor:pointer">
       <p class="sc-eyebrow">⭐ Best Review</p>
       <p class="sc-score">${bestReview.outlet}</p>
-      <p class="sc-body" style="margin-top:8px">"${(bestReview.excerpt||bestReview.headline).substring(0,110)}…"</p>
+      <p class="sc-body" style="margin-top:8px">"${(bestReview.excerpt||bestReview.headline).substring(0,160)}…"</p>
       <div class="sc-footer">
         <span class="sc-action">Read review →</span>
         <span style="font-size:11px;color:rgba(255,255,255,0.35)">${bestReview.date}</span>
@@ -1508,7 +1501,7 @@ buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
     /* Card 3 — Newest article */
     `<div class="signal-card" style="">
       <p class="sc-eyebrow">🔴 Just In</p>
-      <p class="sc-headline" style="font-size:13px">${newest.headline.substring(0,70)}${newest.headline.length>70?'…':''}</p>
+      <p class="sc-headline">${newest.headline.substring(0,90)}${newest.headline.length>90?'…':''}</p>
       <p class="sc-body" style="margin-top:6px">${newest.outlet} · ${newest.market} · ${newest.date}</p>
       <div class="sc-footer">
         <button class="sc-action" onclick="openArticle('${newest.url}')">Read →</button>
