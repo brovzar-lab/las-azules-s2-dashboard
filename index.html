@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Azules S2 — Media Intelligence Room V8 | Lemon Studios</title>
+  <title>Las Azules S2 — Media Intelligence Room V8.1 | Lemon Studios</title>
   <meta name="description" content="Media intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -468,9 +468,45 @@
     .cov-table tbody tr:hover { background: var(--smoke); }
     .cov-table tbody td { padding: 11px 14px; vertical-align: top; }
 
-    @media (max-width: 767px) {
+    /* Tablet: horizontal scroll is fine */
+    @media (min-width: 601px) and (max-width: 767px) {
       .cov-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
       .cov-table { min-width: 560px; }
+    }
+    /* Mobile portrait: card layout — no horizontal scroll */
+    @media (max-width: 600px) {
+      .cov-table-wrap { overflow-x: visible; }
+      .cov-table { min-width: 0 !important; display: block; }
+      .cov-table thead { display: none; }
+      .cov-table tbody { display: block; }
+      .cov-table tbody tr {
+        display: block;
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--bd);
+      }
+      .cov-table tbody tr:last-child { border-bottom: none; }
+      .cov-table tbody td {
+        display: block;
+        padding: 0;
+        max-width: 100% !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+      }
+      .cov-table tbody td:nth-child(1) {
+        font-size: 10px; font-weight: 700;
+        letter-spacing: .06em; text-transform: uppercase;
+        color: var(--poster-blue); margin-bottom: 4px;
+      }
+      .cov-table tbody td:nth-child(2) { margin-bottom: 8px; }
+      .cov-table tbody td:nth-child(3),
+      .cov-table tbody td:nth-child(4),
+      .cov-table tbody td:nth-child(5) {
+        display: inline-block; margin-right: 4px; margin-top: 2px;
+      }
+      .cov-table tbody td:nth-child(6) {
+        display: inline-block; margin-top: 4px; padding-left: 6px;
+      }
     }
 
     .cc-ok   { color: var(--ink3); }
@@ -624,7 +660,7 @@
 
   <div class="tnav-right">
     <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
-    <span class="v4-badge">V8</span>
+    <span class="v4-badge">V8.1</span>
   </div>
 </nav>
 
@@ -815,7 +851,7 @@
       <select id="cov-sort"   class="field" style="width:auto"><option value="newest">Newest First</option><option value="oldest">Oldest First</option></select>
     </div>
 
-    <div class="card cov-table-wrap" style="overflow:hidden">
+    <div class="card cov-table-wrap">
       <table class="cov-table">
         <thead>
           <tr>
