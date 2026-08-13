@@ -1879,11 +1879,11 @@ buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
 /* ─── SOCIAL MENTIONS ─── */
 (function(){
   const mentions = [
-    {handle:'@AppleTV',          platform:'Twitter/X', text:'Season 2 of Women in Blue (Las Azules) is now streaming on Apple TV+. #LasAzules',             date:'Aug 12'},
-    {handle:'@BarbaraMori_Ofic', platform:'Instagram', text:'Estamos de vuelta. Segunda temporada de Las Azules ya disponible en Apple TV+. ¡Gracias al equipo!', date:'Aug 12'},
-    {handle:'@ximena_s',         platform:'Instagram', text:'Temporada 2 de Las Azules streaming NOW on @AppleTVMX. #MujeresDeAzul',                        date:'Aug 12'},
-    {handle:'@FernandoRovzar',   platform:'Twitter/X', text:'Si en la primera temporada el enemigo era un asesino serial, en esta temporada es todo un sistema. #LasAzules', date:'Aug 12'},
-    {handle:'@LemonStudios',     platform:'Twitter/X', text:'Las Azules S2 is LIVE. 8 episodes of the most powerful story we\'ve ever told. @AppleTV #WomenInBlue', date:'Aug 12'},
+    {handle:'@AppleTV',          platform:'Twitter/X', text:'Season 2 of Women in Blue (Las Azules) is now streaming on Apple TV+. #LasAzules apple.co/LasAzules',             date:'Aug 12'},
+    {handle:'@BarbaraMori_Ofic', platform:'Instagram', text:'Estamos de vuelta. Segunda temporada de Las Azules ya disponible en @AppleTV. ¡Gracias al equipo! #LasAzules apple.co/LasAzules', date:'Aug 12'},
+    {handle:'@ximena_s',         platform:'Instagram', text:'Temporada 2 de Las Azules streaming NOW en @AppleTV. #LasAzules #MujeresDeAzul apple.co/LasAzules',  date:'Aug 12'},
+    {handle:'@FernandoRovzar',   platform:'Twitter/X', text:'Si en la primera temporada el enemigo era un asesino serial, en esta temporada es todo un sistema. @AppleTV #LasAzules apple.co/LasAzules', date:'Aug 12'},
+    {handle:'@LemonStudios',     platform:'Twitter/X', text:'Las Azules S2 is LIVE. 8 episodes of the most powerful story we\'ve ever told. @AppleTV #LasAzules #WomenInBlue apple.co/LasAzules', date:'Aug 12'},
   ];
   const platColor = {'Twitter/X':'#3a60a8',Instagram:'#c8422a'};
   document.getElementById('social-mentions-feed').innerHTML = mentions.map((m,i) => `
@@ -1992,57 +1992,60 @@ const PLATFORM_GUIDE = {
   tiktok:    { limit: 2200, ratio: '9:16',  w: 20, h: 36, imgText: '1080 × 1920 px (9:16 vertical) · cover frame · also: 1080 × 1080 for square feed' },
 };
 
+/* Official Apple TV posting defaults (from Daniel, Apple TV Social Team) */
+const APPLE_DEFAULTS = { hashtag: '#LasAzules', handle: '@AppleTV', link: 'apple.co/LasAzules' };
+
 /* Platform-specific smart templates */
 const PLAT_TMPL = {
   twitter: (hl, url, exc, out) => {
     const hook = exc ? `"${exc.substring(0,90)}…"` : hl.substring(0,120);
     const src  = out ? ` · ${out}` : '';
     return {
-      es: `🎬 ${hook}${src}\n\n#LasAzulesS2 #MujeresDeAzul #LasAzules${url?'\n'+url:''}`,
-      en: `🎬 ${hook}${src}\n\n#WomenInBlue #LasAzules #AppleTV${url?'\n'+url:''}`
+      es: `🎬 ${hook}${src}\n\n#LasAzules #LasAzulesS2 #MujeresDeAzul @AppleTV\napple.co/LasAzules${url?'\n'+url:''}`,
+      en: `🎬 ${hook}${src}\n\n#LasAzules #WomenInBlue @AppleTV\napple.co/LasAzules${url?'\n'+url:''}`
     };
   },
   instagram: (hl, url, exc, out) => {
     const q  = exc ? `\n\n"${exc.substring(0,200)}"\n\n` : '\n\n';
     const src = out ? `${out} · ` : '';
     return {
-      es: `🎬 ${hl}${q}${src}La temporada 2 de #LasAzules ya disponible en @AppleTVMX ✨\n\nDesafía el sistema. Descubre la verdad.\n\n.\n.\n.\n#LasAzulesS2 #MujeresDeAzul #BarbaraMori #XimenaSarinana #FernandoRovzar #DraMex #AppleTVPlus #Mexico1971 #Tlatelolco`,
-      en: `🎬 ${hl}${q}${src}Las Azules Season 2 is now streaming on @AppleTV ✨\n\nChallenge the system. Discover the truth.\n\n.\n.\n.\n#WomenInBlue #LasAzules #LasAzulesS2 #BarbaraMori #AppleTVPlus #FernandoRovzar #MexicanDrama #Tlatelolco`
+      es: `🎬 ${hl}${q}${src}La temporada 2 de #LasAzules ya disponible en @AppleTV ✨\napple.co/LasAzules\n\nNunca subestimes a una mujer de azul.\n\n.\n.\n.\n#LasAzules #LasAzulesS2 #MujeresDeAzul #BarbaraMori #XimenaSarinana #FernandoRovzar #DraMex #AppleTVPlus #Mexico1971 #Tlatelolco`,
+      en: `🎬 ${hl}${q}${src}Las Azules Season 2 is now streaming on @AppleTV ✨\napple.co/LasAzules\n\nNever underestimate a woman in blue.\n\n.\n.\n.\n#LasAzules #WomenInBlue #LasAzulesS2 #BarbaraMori #AppleTVPlus #FernandoRovzar #MexicanDrama #Tlatelolco`
     };
   },
   linkedin: (hl, url, exc, out) => {
     const src = out ? ` · ${out}` : '';
     const q   = exc ? `\n\n"${exc.substring(0,250)}"` : '';
     return {
-      es: `La historia que México necesitaba contar.\n\n${hl}${src}${q}\n\nLas Azules — temporada 2 ya disponible en Apple TV+. Una investigación policial en el México de 1971 que desafía el sistema desde adentro.\n\nCreada por Fernando Rovzar. Producida por Lemon Studios.\n\n#LasAzules #AppleTVPlus #CineLatino #FernandoRovzar #ProduccionMexicana${url?'\n\n'+url:''}`,
-      en: `The story Mexico needed to tell.\n\n${hl}${src}${q}\n\nLas Azules (Women in Blue) Season 2 is streaming on Apple TV+. A police procedural set in 1971 Mexico City — challenging the system from within.\n\nCreated by Fernando Rovzar. Produced by Lemon Studios.\n\n#WomenInBlue #LasAzules #AppleTVPlus #MexicanDrama #LemonStudios${url?'\n\n'+url:''}`
+      es: `La historia que México necesitaba contar.\n\n${hl}${src}${q}\n\nLas Azules — temporada 2 ya disponible en Apple TV+. Una investigación policial en el México de 1971 que desafía el sistema desde adentro.\n\nCreada por Fernando Rovzar. Producida por Lemon Studios.\n@AppleTV apple.co/LasAzules\n\n#LasAzules #AppleTVPlus #CineLatino #FernandoRovzar #ProduccionMexicana${url?'\n\n'+url:''}`,
+      en: `The story Mexico needed to tell.\n\n${hl}${src}${q}\n\nLas Azules (Women in Blue) Season 2 is streaming on Apple TV+. A police procedural set in 1971 Mexico City — challenging the system from within.\n\nCreated by Fernando Rovzar. Produced by Lemon Studios.\n@AppleTV apple.co/LasAzules\n\n#LasAzules #WomenInBlue #AppleTVPlus #MexicanDrama #LemonStudios${url?'\n\n'+url:''}`
     };
   },
   facebook: (hl, url, exc, out) => {
     const src = out ? ` — ${out}` : '';
     const q   = exc ? `\n\n"${exc.substring(0,180)}"\n\n` : '\n\n';
     return {
-      es: `✨ ${hl}${src}${q}¿Ya viste la segunda temporada de Las Azules en Apple TV+? Comparte con quien debería verla 👇\n\n#LasAzulesS2 #MujeresDeAzul${url?'\n\n'+url:''}`,
-      en: `✨ ${hl}${src}${q}Have you watched Las Azules Season 2 on Apple TV+ yet? Tag someone who needs to see it 👇\n\n#WomenInBlue #LasAzulesS2${url?'\n\n'+url:''}`
+      es: `✨ ${hl}${src}${q}¿Ya viste la segunda temporada de Las Azules en Apple TV+? Comparte con quien debería verla 👇\n@AppleTV apple.co/LasAzules\n\n#LasAzules #LasAzulesS2 #MujeresDeAzul${url?'\n\n'+url:''}`,
+      en: `✨ ${hl}${src}${q}Have you watched Las Azules Season 2 on Apple TV+ yet? Tag someone who needs to see it 👇\n@AppleTV apple.co/LasAzules\n\n#LasAzules #WomenInBlue #LasAzulesS2${url?'\n\n'+url:''}`
     };
   },
   tiktok: (hl, url, exc, out) => {
     const hook = exc ? exc.substring(0,80) : hl.substring(0,70);
     const src  = out ? `(${out}) ` : '';
     return {
-      es: `¿Ya viste esto? 👀 ${src}\n\n${hook}\n\nMujeres de Azul S2 ya en @appletv 🎬\nMéxico 1971 🇲🇽 crimen + poder + verdad\n\n#MujeresDeAzul #LasAzulesS2 #SeriesMexicanas #AppleTV #fyp #parati`,
-      en: `Did you see this? 👀 ${src}\n\n${hook}\n\nWomen in Blue S2 now on @appletv 🎬\nMexico 1971 🇲🇽 crime + power + truth\n\n#WomenInBlue #LasAzules #LasAzulesS2 #AppleTV #fyp #foryou`
+      es: `¿Ya viste esto? 👀 ${src}\n\n${hook}\n\nMujeres de Azul S2 ya en @AppleTV 🎬\napple.co/LasAzules\nMéxico 1971 🇲🇽 crimen + poder + verdad\n\n#LasAzules #MujeresDeAzul #LasAzulesS2 #SeriesMexicanas #fyp #parati`,
+      en: `Did you see this? 👀 ${src}\n\n${hook}\n\nWomen in Blue S2 now on @AppleTV 🎬\napple.co/LasAzules\nMexico 1971 🇲🇽 crime + power + truth\n\n#LasAzules #WomenInBlue #LasAzulesS2 #fyp #foryou`
     };
   }
 };
 
 /* Quick-generate presets — no typing needed */
 const QUICK_TOPICS = [
-  { label:'Premiere', hl:"Las Azules Season 2 — Now Streaming on Apple TV+", url:'https://tv.apple.com/show/women-in-blue/umc.cmc.4y2zk4k6eivf3owasidgxakqb', out:'Apple TV+', exc:"Desafía el sistema. Descubre la verdad. The most anticipated Latin American drama returns." },
+  { label:'Premiere', hl:"Las Azules Season 2 — Now Streaming on Apple TV+", url:'https://apple.co/LasAzules', out:'Apple TV+', exc:"Another case, another day to defy the system. Las Azules are back." },
   { label:'Screen Anarchy 4/5', hl:"Women in Blue S2 Review — Screen Anarchy 4/5 ★", url:'https://screenanarchy.com/2026/08/women-in-blue-las-azules-s2-review-two-steps-forward-one-step-back.html', out:'Screen Anarchy', exc:"Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico's borders." },
   { label:'Fernando Quote', hl:"Fernando Rovzar on Las Azules Season 2", url:'', out:'Fernando Rovzar', exc:"If in the first season the enemy was a serial killer, in this season it's an entire system." },
   { label:'Barbara Mori', hl:"Barbara Mori on playing Lt. María in Season 2", url:'', out:'Barbara Mori', exc:"Now she's a woman giving herself permission to be. The entire season treats discovering who she really is." },
-  { label:'Episode 1 Live', hl:"Las Azules S2 Capítulo 1 — Now Streaming", url:'https://tv.apple.com/show/women-in-blue/umc.cmc.4y2zk4k6eivf3owasidgxakqb', out:'Apple TV+', exc:"Mexico City, 1971. Lieutenant María and the Azules investigate a student activist's murder — uncovering a conspiracy reaching back to the Halconazo massacre." },
+  { label:'Episode 1 Live', hl:"Las Azules S2 Capítulo 1 — Now Streaming", url:'https://apple.co/LasAzules', out:'Apple TV+', exc:"Mexico City, 1971. Welcome to 1970s Mexico — Lieutenant María and the Azules are back on the case." },
   { label:'Latest Article', dynamic:'latest' }
 ];
 
