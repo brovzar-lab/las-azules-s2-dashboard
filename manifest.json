@@ -1,0 +1,26 @@
+{
+  "name": "Las Azules · S2",
+  "short_name": "Las Azules",
+  "description": "Media Intelligence Room — Women in Blue Season 2, Apple TV+. Lemon Studios.",
+  "start_url": "/las-azules-s2-dashboard/",
+  "scope": "/las-azules-s2-dashboard/",
+  "display": "standalone",
+  "background_color": "#edead4",
+  "theme_color": "#111111",
+  "orientation": "any",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
