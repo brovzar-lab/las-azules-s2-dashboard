@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Azules S2 — Media Intelligence Room V8.3 | Lemon Studios</title>
+  <title>Las Azules S2 — Media Intelligence Room V8.4 | Lemon Studios</title>
   <meta name="description" content="Media intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <!-- PWA / Add to Home Screen -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -370,25 +370,107 @@
     }
 
     /* ── Stat grid ── */
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      background: var(--white);
-      border: 1px solid var(--bd);
+    /* ── Signal strip (replaces stat tiles) ── */
+    .signal-strip {
+      display: flex; gap: 12px;
+      overflow-x: auto; scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 20px 4px; scrollbar-width: none;
+      margin: 0 -20px;
+    }
+    .signal-strip::-webkit-scrollbar { display: none; }
+    .signal-card {
+      flex-shrink: 0; scroll-snap-align: start;
+      width: min(82vw, 300px);
+      border: 1px solid var(--bd); background: var(--white);
+      padding: 20px 22px; position: relative; overflow: hidden;
+    }
+    .signal-card.sc-dark {
+      background: var(--nav-bg); border-color: rgba(91,195,232,0.2);
+      color: #fff;
+    }
+    .signal-card.sc-accent {
+      background: var(--poster-blue); border-color: var(--poster-blue);
+      color: #fff;
+    }
+    .sc-eyebrow {
+      font-size: 9px; font-weight: 800; letter-spacing: .15em;
+      text-transform: uppercase; margin-bottom: 10px;
+    }
+    .sc-dark .sc-eyebrow { color: rgba(91,195,232,0.7); }
+    .sc-accent .sc-eyebrow { color: rgba(255,255,255,0.7); }
+    .signal-card:not(.sc-dark):not(.sc-accent) .sc-eyebrow { color: var(--poster-blue); }
+    .sc-headline { font-size: 15px; font-weight: 800; line-height: 1.3; margin-bottom: 6px; }
+    .sc-dark .sc-headline, .sc-accent .sc-headline { color: #fff; }
+    .signal-card:not(.sc-dark):not(.sc-accent) .sc-headline { color: var(--ink1); }
+    .sc-body { font-size: 12px; line-height: 1.6; }
+    .sc-dark .sc-body { color: rgba(255,255,255,0.5); }
+    .sc-accent .sc-body { color: rgba(255,255,255,0.75); }
+    .signal-card:not(.sc-dark):not(.sc-accent) .sc-body { color: var(--ink3); }
+    .sc-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .signal-card:not(.sc-dark):not(.sc-accent) .sc-footer { border-color: var(--bd); }
+    .sc-action {
+      font-size: 11px; font-weight: 700; letter-spacing: .04em;
+      background: none; border: none; cursor: pointer; font-family: inherit;
+      padding: 0; text-decoration: none;
+    }
+    .sc-dark .sc-action, .sc-accent .sc-action { color: #fff; }
+    .signal-card:not(.sc-dark):not(.sc-accent) .sc-action { color: var(--poster-blue); }
+    .sc-score {
+      font-size: 22px; font-weight: 900; line-height: 1;
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .sc-dark .sc-score { color: var(--gold2); }
+
+    /* ── Briefing card ── */
+    .briefing-card {
+      background: var(--white); border: 1px solid var(--bd);
+      padding: 22px 24px; margin-bottom: 36px;
+      border-left: 3px solid var(--poster-blue);
+    }
+    .briefing-date {
+      font-size: 9px; font-weight: 800; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--poster-blue); margin-bottom: 10px;
+    }
+    .briefing-body {
+      font-size: 14px; line-height: 1.75; color: var(--ink2);
+    }
+    .briefing-body strong { color: var(--ink1); font-weight: 700; }
+    .briefing-body .focus-item {
+      display: flex; gap: 8px; align-items: baseline;
+      margin-top: 6px; font-size: 13px;
+    }
+    .briefing-body .focus-bullet {
+      flex-shrink: 0; font-weight: 800; color: var(--poster-blue);
     }
 
-    @media (max-width: 600px) { .stat-grid { grid-template-columns: repeat(2,1fr); } }
-
-    .stat-cell {
-      padding: 28px 24px;
-      border-right: 1px solid var(--bd);
+    /* ── Home top-3 editorial feed ── */
+    .home-article {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 16px 0; border-bottom: 1px solid var(--bd);
+      cursor: pointer; text-decoration: none;
     }
-    .stat-cell:last-child { border-right: none; }
-
-    @media (max-width: 600px) {
-      .stat-cell:nth-child(even) { border-right: none; }
-      .stat-cell { border-bottom: 1px solid var(--bd); }
-      .stat-cell:nth-last-child(-n+2) { border-bottom: none; }
+    .home-article:last-child { border-bottom: none; }
+    .home-art-num {
+      flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+      background: rgba(27,123,196,0.08); border: 1.5px solid rgba(27,123,196,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 800; color: var(--poster-blue); margin-top: 2px;
+    }
+    .home-art-body { flex: 1; min-width: 0; }
+    .home-art-outlet {
+      font-size: 9px; font-weight: 800; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--poster-blue); margin-bottom: 3px;
+    }
+    .home-art-hed {
+      font-size: 14px; font-weight: 700; color: var(--ink1);
+      line-height: 1.35; margin-bottom: 4px;
+    }
+    .home-art-meta {
+      display: flex; gap: 6px; flex-wrap: wrap; align-items: center;
     }
 
     .stat-num {
@@ -712,7 +794,7 @@
 
   <div class="tnav-right">
     <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
-    <span class="v4-badge">V8.3</span>
+    <span class="v4-badge">V8.4</span>
   </div>
 </nav>
 
@@ -746,17 +828,17 @@
 <!-- ─── PAGE: COMMAND CENTER ─── -->
 <section id="page-home" class="page">
 
-  <!-- Hero -->
+  <!-- Hero — dynamic, date-aware -->
   <div class="hero">
     <div class="hero-inner">
       <div>
-        <p class="hero-eyebrow">Media Intelligence · Premiere Day — August 12, 2026</p>
-        <h1 class="hero-headline">Season 2 is<br><em class="hero-em">streaming</em> now.</h1>
-        <p class="hero-sub">27 articles tracked · 4 key markets · Reuters syndicated to 7+ US stations · Screen Anarchy 4/5 ★</p>
+        <p class="hero-eyebrow" id="home-eyebrow">Media Intelligence · Las Azules S2</p>
+        <h1 class="hero-headline">Las <em class="hero-em">Azules</em><br>on Apple TV+</h1>
+        <p class="hero-sub" id="home-sub">Loading…</p>
       </div>
       <div class="hero-thesis">
-        <p class="hero-thesis-label">Today's Signal</p>
-        <p class="hero-thesis-body">Launch day coverage is strong across trade, tech, and Latin American press. Major Mexican press (Reforma, El Universal, Milenio) remain the key gap to close this week.</p>
+        <p class="hero-thesis-label" id="home-signal-label">Today's Signal</p>
+        <p class="hero-thesis-body" id="home-signal-body">Loading coverage signal…</p>
       </div>
     </div>
   </div>
@@ -766,31 +848,11 @@
 
     <hr class="show-rule" style="margin-top:0">
 
-    <div class="stat-grid" style="margin-bottom:48px">
-      <div class="stat-cell">
-        <p class="stat-num" id="stat-articles">27</p>
-        <p class="stat-label">Articles</p>
-        <p class="stat-sub" id="stat-articles-delta">Launch day</p>
-      </div>
-      <div class="stat-cell">
-        <p class="stat-num" style="color:var(--teal)">100%</p>
-        <p class="stat-label">RT Score · S1</p>
-        <p class="stat-sub"><span class="delta delta-up">▲ Certified Fresh</span></p>
-      </div>
-      <div class="stat-cell">
-        <p class="stat-num">7.3</p>
-        <p class="stat-label">IMDb · S1</p>
-        <p class="stat-sub"><span class="delta delta-up">▲ Above 7.0</span></p>
-      </div>
-      <div class="stat-cell">
-        <p class="stat-num" style="color:var(--coral)" id="stat-days">1</p>
-        <p class="stat-label">Days Live</p>
-        <p class="stat-sub"><span class="delta delta-up">▲ Launch Day</span></p>
-      </div>
-    </div>
+    <!-- Signal Cards strip (replaces static stat tiles) -->
+    <div class="signal-strip" id="signal-strip" style="margin-bottom:36px"></div>
 
-    <!-- Season Narrative -->
-    <div id="season-narrative" class="card" style="padding:20px 24px;margin-bottom:48px"></div>
+    <!-- Morning Briefing (auto-generated from MEDIA data) -->
+    <div class="briefing-card" id="home-briefing"></div>
 
     <!-- Charts -->
     <div class="sec-header">
@@ -817,16 +879,16 @@
       </div>
     </div>
 
-    <!-- Today's Pulse -->
+    <!-- Latest Coverage — top 3 editorial -->
     <div class="sec-header">
       <div class="sec-header-left">
-        <p class="sec-eyebrow">Evidence Ledger</p>
-        <h2 class="sec-h2">Today's pulse</h2>
+        <p class="sec-eyebrow">Latest Coverage</p>
+        <h2 class="sec-h2" id="today-badge">Recent articles</h2>
         <hr class="sec-rule">
       </div>
-      <p class="sec-caption" id="today-badge"></p>
+      <button onclick="nav('coverage')" style="font-size:11px;font-weight:700;color:var(--poster-blue);background:none;border:none;cursor:pointer;font-family:inherit;padding:0">See all →</button>
     </div>
-    <div id="today-feed" style="display:flex;flex-direction:column;gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:48px"></div>
+    <div id="today-feed" style="margin-bottom:48px"></div>
 
     <!-- Scores -->
     <div class="sec-header">
@@ -1393,37 +1455,119 @@ buildChart('chart-market', tally('market'), MARKET_BAR, 'market');
 buildChart('chart-type',   tally('type'),   TYPE_BAR,   'type');
 buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
 
-/* ─── SEASON NARRATIVE ─── */
+/* ─── HOME — dynamic editorial briefing ─── */
 (function(){
-  const byMarket = tally('market');
-  const top = byMarket[0];
-  document.getElementById('season-narrative').innerHTML = `
-    <p style="font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:8px">Season Narrative</p>
-    <p style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--ink1);line-height:1.45;margin-bottom:7px">${MEDIA.length} articles at launch · Reuters wire active · US tech press fully engaged</p>
-    <p style="font-size:13px;color:var(--ink2);line-height:1.68">Launch day coverage spans 4 markets with <strong style="color:var(--ink1)">${top.k}</strong> leading volume (${top.v} articles). Priority gap: premium Mexican outlets — Reforma, El Universal, and Milenio have not yet published.</p>
-  `;
-})();
+  const LAUNCH_TS = new Date('2026-08-12T00:00:00').getTime();
+  const now       = new Date();
+  const dayN      = Math.max(1, Math.ceil((now.getTime() - LAUNCH_TS) / 86400000));
+  const dateStr   = now.toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'});
 
-/* ─── TODAY'S PULSE ─── */
-(function(){
-  const sorted = MEDIA.slice().sort((a,b) => b.ts - a.ts);
-  document.getElementById('today-badge').textContent = MEDIA.length + ' articles tracked — newest first';
-  document.getElementById('today-feed').innerHTML = sorted.map(a => `
-    <a href="${a.url}" target="_blank" rel="noopener noreferrer"
-       style="display:flex;align-items:flex-start;gap:14px;padding:14px 18px;background:var(--white);text-decoration:none;transition:background .1s"
-       onmouseover="this.style.background='var(--smoke)'" onmouseout="this.style.background='var(--white)'">
-      <div style="flex:1;min-width:0">
-        <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:4px">
-          <span style="font-size:12px;font-weight:700;color:var(--ink1)">${a.outlet}</span>
+  /* Derived signals from MEDIA array */
+  const sorted     = MEDIA.slice().sort((a,b) => b.ts - a.ts);
+  const newest     = sorted[0];
+  const byMarket   = tally('market');
+  const byType     = tally('type');
+  const reviews    = MEDIA.filter(a => a.type === 'Review');
+  const bestReview = reviews[0];
+  const topMarket  = byMarket[0];
+  const markets    = new Set(MEDIA.map(a=>a.market));
+
+  /* Hero */
+  document.getElementById('home-eyebrow').textContent =
+    `${dateStr} · Season 2 · Day ${dayN}`;
+  document.getElementById('home-sub').textContent =
+    `${MEDIA.length} articles · ${markets.size} markets · Newest: ${newest.outlet}`;
+
+  /* Signal — best one-line summary */
+  const signalLines = [];
+  if (bestReview) signalLines.push(`${bestReview.outlet} gives ${dayN <= 3 ? 'the first major review' : 'a key review'}: ${bestReview.excerpt ? '"' + bestReview.excerpt.substring(0,90) + '…"' : bestReview.headline}.`);
+  signalLines.push(`${topMarket.k} leads coverage volume with ${topMarket.v} of ${MEDIA.length} articles. Priority gap: major Mexican print (Reforma, El Universal, Milenio) not yet in.`);
+  document.getElementById('home-signal-label').textContent = `Day ${dayN} Signal`;
+  document.getElementById('home-signal-body').textContent = signalLines.join(' ');
+
+  /* ── Signal Cards strip ── */
+  const typeBreakdown = byType.slice(0,3).map(t=>`${t.v} ${t.k}`).join(' · ');
+  const cards = [
+    /* Card 1 — Best review */
+    bestReview ? `
+    <div class="signal-card sc-dark" onclick="openArticle('${bestReview.url}')" style="cursor:pointer">
+      <p class="sc-eyebrow">⭐ Best Review</p>
+      <p class="sc-score">${bestReview.outlet}</p>
+      <p class="sc-body" style="margin-top:8px">"${(bestReview.excerpt||bestReview.headline).substring(0,110)}…"</p>
+      <div class="sc-footer">
+        <span class="sc-action">Read review →</span>
+        <span style="font-size:11px;color:rgba(255,255,255,0.35)">${bestReview.date}</span>
+      </div>
+    </div>` : '',
+
+    /* Card 2 — Coverage snapshot */
+    `<div class="signal-card" style="">
+      <p class="sc-eyebrow">📰 Coverage · Day ${dayN}</p>
+      <p class="sc-headline">${MEDIA.length} articles tracked</p>
+      <p class="sc-body">${typeBreakdown}<br>across ${markets.size} markets · ${MEDIA.filter(a=>a.lang==='ES').length} in Spanish · ${MEDIA.filter(a=>a.lang==='EN').length} in English</p>
+      <div class="sc-footer">
+        <button class="sc-action" onclick="nav('coverage')">Full coverage →</button>
+        <span style="font-size:10px;color:var(--ink3)">${topMarket.k} leading</span>
+      </div>
+    </div>`,
+
+    /* Card 3 — Newest article */
+    `<div class="signal-card" style="">
+      <p class="sc-eyebrow">🔴 Just In</p>
+      <p class="sc-headline" style="font-size:13px">${newest.headline.substring(0,70)}${newest.headline.length>70?'…':''}</p>
+      <p class="sc-body" style="margin-top:6px">${newest.outlet} · ${newest.market} · ${newest.date}</p>
+      <div class="sc-footer">
+        <button class="sc-action" onclick="openArticle('${newest.url}')">Read →</button>
+        ${badge(newest.lang, LANG_STYLE[newest.lang])}
+      </div>
+    </div>`,
+
+    /* Card 4 — Apple TV+ streaming */
+    `<div class="signal-card sc-accent" onclick="openArticle('https://tv.apple.com/show/women-in-blue/umc.cmc.4y2zk4k6eivf3owasidgxakqb')" style="cursor:pointer">
+      <p class="sc-eyebrow"> Now Streaming</p>
+      <p class="sc-headline">Las Azules S2 is live on Apple TV+</p>
+      <p class="sc-body">Episodes 1–8 · Aug 12 – Sep 30, 2026<br>All 8 episodes releasing weekly</p>
+      <div class="sc-footer">
+        <span class="sc-action">Watch on Apple TV+ →</span>
+      </div>
+    </div>`,
+  ].filter(Boolean);
+  document.getElementById('signal-strip').innerHTML = cards.join('');
+
+  /* ── Morning Briefing ── */
+  const mktLines = byMarket.slice(0,3).map(m=>`
+    <div class="focus-item">
+      <span class="focus-bullet">→</span>
+      <span><strong>${m.k}</strong>: ${m.v} article${m.v!==1?'s':''} — ${MEDIA.filter(a=>a.market===m.k).map(a=>a.outlet).slice(0,2).join(', ')}${MEDIA.filter(a=>a.market===m.k).length>2?' +more':''}</span>
+    </div>`).join('');
+
+  document.getElementById('home-briefing').innerHTML = `
+    <p class="briefing-date">${dateStr} · Season 2 Day ${dayN} · Las Azules Coverage Brief</p>
+    <div class="briefing-body">
+      <p>Season 2 has <strong>${MEDIA.length} pieces of coverage</strong> across ${markets.size} markets after ${dayN} day${dayN!==1?'s':''}. ${byType[0] ? `<strong>${byType[0].k}</strong> is the leading coverage type (${byType[0].v} pieces).` : ''} ${reviews.length > 0 ? `Critical reception led by ${bestReview.outlet}.` : 'Critical reviews are incoming.'}</p>
+      ${mktLines}
+      <div class="focus-item" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bd)">
+        <span class="focus-bullet" style="color:var(--coral)">!</span>
+        <span><strong>Priority gap:</strong> Reforma, El Universal, and Milenio (major Mexican print) have not yet published. Target this week.</span>
+      </div>
+    </div>`;
+
+  /* ── Top 3 latest articles ── */
+  document.getElementById('today-badge').textContent = `${MEDIA.length} articles tracked — newest first`;
+  document.getElementById('today-feed').innerHTML = sorted.slice(0,3).map((a,i) => `
+    <div class="home-article" onclick="openArticle('${a.url}')">
+      <div class="home-art-num">${i+1}</div>
+      <div class="home-art-body">
+        <p class="home-art-outlet">${a.outlet}</p>
+        <p class="home-art-hed">${a.headline}</p>
+        <div class="home-art-meta">
           ${badge(a.market, MARKET_STYLE[a.market])}
-          ${badge(a.lang,   LANG_STYLE[a.lang])}
+          ${badge(a.lang, LANG_STYLE[a.lang])}
           <span style="font-size:10px;color:var(--ink3)">${a.date}</span>
         </div>
-        <p style="font-size:13px;color:var(--ink2);line-height:1.5">${a.headline}</p>
       </div>
-      <span style="font-size:10px;color:var(--ink3);flex-shrink:0;margin-top:2px;white-space:nowrap">${a.type} ↗</span>
-    </a>
-  `).join('');
+      <span style="font-size:18px;color:var(--poster-blue);align-self:center;flex-shrink:0">›</span>
+    </div>`).join('');
 })();
 
 
