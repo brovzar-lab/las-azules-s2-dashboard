@@ -125,6 +125,7 @@
       margin-left: auto;
       flex-shrink: 0;
     }
+    #refresh-icon { transition: transform .4s ease; }
 
     .tnav-date {
       font-size: 10px;
@@ -623,6 +624,12 @@
   </div>
 
   <div class="tnav-right">
+    <button id="refresh-btn" onclick="refreshData()" title="Re-fetch latest articles from data.json"
+      style="display:inline-flex;align-items:center;gap:5px;padding:4px 11px;background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.72);font-size:11px;font-weight:600;border-radius:5px;cursor:pointer;font-family:inherit;transition:all .12s;letter-spacing:.01em"
+      onmouseover="this.style.background='rgba(255,255,255,0.13)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">
+      <svg id="refresh-icon" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+      Refresh
+    </button>
     <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
     <span class="v4-badge">V8</span>
   </div>
@@ -664,7 +671,7 @@
       <div>
         <p class="hero-eyebrow">Media Intelligence · Premiere Day — August 12, 2026</p>
         <h1 class="hero-headline">Season 2 is<br><em class="hero-em">streaming</em> now.</h1>
-        <p class="hero-sub">27 articles tracked · 4 key markets · Reuters syndicated to 7+ US stations · Screen Anarchy 4/5 ★</p>
+        <p class="hero-sub" id="hero-sub">27 articles tracked · 4 key markets · Reuters syndicated to 7+ US stations · Screen Anarchy 4/5 ★</p>
       </div>
       <div class="hero-thesis">
         <p class="hero-thesis-label">Today's Signal</p>
@@ -1171,6 +1178,19 @@ const MEDIA = [
   { outlet:'ChicMagazine.com.mx', headline:'Las Azules temporada 2 — cuántos capítulos y cuándo salen', url:'https://www.chicmagazine.com.mx/personajes/las-azules-temporada-2-cuandos-capitulos-tendra-y-cuando-salen', date:'2026', ts:20260101, lang:'ES', market:'Mexico', type:'Regional', excerpt:'Mexican lifestyle magazine episode count and release schedule guide.' },
 ];
 
+/* ─── REMOTE MEDIA (populated via data.json fetched at startup and on Refresh) ─── */
+let MEDIA_REMOTE = [];
+
+function getMergedMedia() {
+  const seen = new Set();
+  const out = [];
+  [...MEDIA, ...MEDIA_REMOTE].forEach(a => {
+    const key = a.url || a.headline;
+    if (!seen.has(key)) { seen.add(key); out.push(a); }
+  });
+  return out.sort((a, b) => b.ts - a.ts);
+}
+
 const EPISODES = [
   { ep:1, title:'Capítulo 1',          date:'August 12, 2026',    iso:'2026-08-12' },
   { ep:2, title:'Capítulo 2',          date:'August 19, 2026',    iso:'2026-08-19' },
@@ -1258,7 +1278,7 @@ function badge(text, style) {
 }
 
 /* ─── INIT STATS ─── */
-document.getElementById('stat-articles').textContent = MEDIA.length;
+document.getElementById('stat-articles').textContent = getMergedMedia().length;
 (function(){
   const premiere = new Date('2026-08-12');
   const days = Math.max(1, Math.floor((new Date() - premiere) / 86400000) + 1);
@@ -1272,7 +1292,7 @@ const LANG_BAR   = { EN:'#3a60a8', ES:'#3d9688' };
 
 function tally(field) {
   const m = {};
-  MEDIA.forEach(a => { m[a[field]] = (m[a[field]] || 0) + 1; });
+  getMergedMedia().forEach(a => { m[a[field]] = (m[a[field]] || 0) + 1; });
   return Object.entries(m).sort((a,b) => b[1]-a[1]).map(([k,v]) => ({k,v}));
 }
 
@@ -1306,20 +1326,22 @@ buildChart('chart-type',   tally('type'),   TYPE_BAR,   'type');
 buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
 
 /* ─── SEASON NARRATIVE ─── */
-(function(){
+function renderSeasonNarrative() {
+  const merged = getMergedMedia();
   const byMarket = tally('market');
   const top = byMarket[0];
   document.getElementById('season-narrative').innerHTML = `
     <p style="font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:8px">Season Narrative</p>
-    <p style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--ink1);line-height:1.45;margin-bottom:7px">${MEDIA.length} articles at launch · Reuters wire active · US tech press fully engaged</p>
-    <p style="font-size:13px;color:var(--ink2);line-height:1.68">Launch day coverage spans 4 markets with <strong style="color:var(--ink1)">${top.k}</strong> leading volume (${top.v} articles). Priority gap: premium Mexican outlets — Reforma, El Universal, and Milenio have not yet published.</p>
+    <p style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--ink1);line-height:1.45;margin-bottom:7px">${merged.length} articles tracked · Reuters wire active · US tech press fully engaged</p>
+    <p style="font-size:13px;color:var(--ink2);line-height:1.68">Coverage spans 4 markets with <strong style="color:var(--ink1)">${top.k}</strong> leading volume (${top.v} articles). Priority gap: premium Mexican outlets — Reforma, El Universal, and Milenio have not yet published.</p>
   `;
-})();
+}
+renderSeasonNarrative();
 
 /* ─── TODAY'S PULSE ─── */
-(function(){
-  const sorted = MEDIA.slice().sort((a,b) => b.ts - a.ts);
-  document.getElementById('today-badge').textContent = MEDIA.length + ' articles tracked — newest first';
+function renderTodaysPulse() {
+  const sorted = getMergedMedia();
+  document.getElementById('today-badge').textContent = sorted.length + ' articles tracked — newest first';
   document.getElementById('today-feed').innerHTML = sorted.map(a => `
     <a href="${a.url}" target="_blank" rel="noopener noreferrer"
        style="display:flex;align-items:flex-start;gap:14px;padding:14px 18px;background:var(--white);text-decoration:none;transition:background .1s"
@@ -1336,7 +1358,8 @@ buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
       <span style="font-size:10px;color:var(--ink3);flex-shrink:0;margin-top:2px;white-space:nowrap">${a.type} ↗</span>
     </a>
   `).join('');
-})();
+}
+renderTodaysPulse();
 
 
 /* ─── HASHTAG CLOUD ─── */
@@ -1426,7 +1449,8 @@ function renderCoverage() {
   const lng = document.getElementById('cov-lang').value||'';
   const srt = document.getElementById('cov-sort').value||'newest';
 
-  let filtered = MEDIA.filter(a =>
+  const allMedia = getMergedMedia();
+  let filtered = allMedia.filter(a =>
     (!q   || a.outlet.toLowerCase().includes(q) || a.headline.toLowerCase().includes(q) || (a.excerpt||'').toLowerCase().includes(q)) &&
     (!mkt || a.market === mkt) &&
     (!typ || a.type   === typ) &&
@@ -1434,7 +1458,7 @@ function renderCoverage() {
   );
   filtered.sort((a,b) => srt==='newest' ? b.ts-a.ts : a.ts-b.ts);
 
-  document.getElementById('cov-count').textContent = filtered.length + ' of ' + MEDIA.length + ' articles';
+  document.getElementById('cov-count').textContent = filtered.length + ' of ' + allMedia.length + ' articles';
   const tbody = document.getElementById('cov-feed');
   const empty = document.getElementById('cov-empty');
 
@@ -1583,7 +1607,7 @@ function quickGenerate(idx) {
 
   let topic = QUICK_TOPICS[idx];
   if (topic.dynamic === 'latest') {
-    const latest = MEDIA.slice().sort((a,b)=>b.ts-a.ts)[0];
+    const latest = getMergedMedia()[0];
     topic = { hl: latest.headline, url: latest.url, out: latest.outlet, exc: latest.excerpt||'' };
   }
   _runGenerate(idx, topic);
@@ -1591,7 +1615,7 @@ function quickGenerate(idx) {
 
 function _runGenerate(idx, overrideTopic) {
   const topic = overrideTopic || (QUICK_TOPICS[idx].dynamic === 'latest'
-    ? (() => { const l=MEDIA.slice().sort((a,b)=>b.ts-a.ts)[0]; return {hl:l.headline,url:l.url,out:l.outlet,exc:l.excerpt||''}; })()
+    ? (() => { const l=getMergedMedia()[0]; return {hl:l.headline,url:l.url,out:l.outlet,exc:l.excerpt||''}; })()
     : QUICK_TOPICS[idx]);
   const tmpl = PLAT_TMPL[currentPlatform];
   if (!tmpl) return;
@@ -1674,10 +1698,50 @@ function showToast(msg) {
   t._tid = setTimeout(() => { t.style.opacity='0'; }, 1800);
 }
 
+/* ─── REMOTE DATA LOADING ─── */
+function refreshDashboard() {
+  const merged = getMergedMedia();
+  document.getElementById('stat-articles').textContent = merged.length;
+  const heroSub = document.getElementById('hero-sub');
+  if (heroSub) heroSub.textContent = merged.length + ' articles tracked · 4 key markets · Reuters syndicated to 7+ US stations · Screen Anarchy 4/5 ★';
+  buildChart('chart-market', tally('market'), MARKET_BAR, 'market');
+  buildChart('chart-type',   tally('type'),   TYPE_BAR,   'type');
+  buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
+  renderSeasonNarrative();
+  renderTodaysPulse();
+  if (document.getElementById('page-coverage') && document.getElementById('page-coverage').classList.contains('active')) {
+    renderCoverage();
+  }
+}
+
+async function loadRemoteData() {
+  const btn  = document.getElementById('refresh-btn');
+  const icon = document.getElementById('refresh-icon');
+  if (btn)  { btn.style.opacity = '.5'; btn.style.pointerEvents = 'none'; }
+  if (icon) icon.style.transform = 'rotate(360deg)';
+  try {
+    const res = await fetch('data.json?_=' + Date.now());
+    if (!res.ok) return;
+    const data = await res.json();
+    if (Array.isArray(data) && data.length > 0) {
+      MEDIA_REMOTE = data;
+      refreshDashboard();
+    }
+  } catch (_) {
+    /* graceful fallback: dashboard works with hardcoded MEDIA only */
+  } finally {
+    if (btn)  { btn.style.opacity = '1'; btn.style.pointerEvents = ''; }
+    if (icon) { setTimeout(() => { icon.style.transform = ''; }, 300); }
+  }
+}
+
+function refreshData() { loadRemoteData(); }
+
 /* ─── INIT ─── */
 selectPlatform('twitter');
 
 routeFromHash();
+loadRemoteData();
 </script>
 </body>
 </html>
