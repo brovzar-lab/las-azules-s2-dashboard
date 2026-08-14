@@ -1,1 +1,112 @@
-[]
+[
+  {
+    "outlet": "Nexus Point News",
+    "headline": "REVIEW: 'Women in Blue' Season 2 is a More Confident and Ambitious Crime Drama",
+    "url": "https://nexuspointnews.com/review-women-in-blue-season-2/",
+    "date": "Aug 13, 2026",
+    "ts": 20260813,
+    "lang": "EN",
+    "market": "International",
+    "type": "Review",
+    "excerpt": "Season 2 proves that Women in Blue has more to say than its initial premise suggested. Feels bigger, darker and more confident. By Isadora Wandermurem."
+  },
+  {
+    "outlet": "El Diario (VerTele)",
+    "headline": "'Las Azules' regresa a Apple TV con una segunda temporada marcada por la masacre estudiantil mexicana de 1968",
+    "url": "https://www.eldiario.es/vertele/series/azules-regresa-apple-tv-segunda-temporada-marcada-masacre-estudiantil-mexicana-1968-vt_1_13442067.html",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Entertainment",
+    "excerpt": "Maria, ya teniente, investiga el asesinato de una activista estudiantil que conecta con Tlatelolco 1968. Por Pau Mora, VerTele."
+  },
+  {
+    "outlet": "Fiction Horizon",
+    "headline": "'Las Azules' Recap Revisits a Defiant Season 1 Finale as Season 2 Arrives on Apple TV+",
+    "url": "https://fictionhorizon.com/las-azules-recap-revisits-a-defiant-season-1-finale-as-season-2-arrives-on-apple-tv/",
+    "date": "Aug 11, 2026",
+    "ts": 20260811,
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "S1 recap and S2 preview. Rovzar framed S2 as a chance to test characters against a genuinely difficult moral landscape. By Robert Milakovic."
+  },
+  {
+    "outlet": "VitalThrills",
+    "headline": "Women in Blue (Las Azules) Season 2 Trailer and Key Art",
+    "url": "https://www.vitalthrills.com/women-in-blue-las-azules-season-2-trailer-and-key-art/",
+    "date": "Jul 21, 2026",
+    "ts": 20260721,
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Official Season 2 trailer and key art reveal. Maria now lieutenant investigating student activist murder. Premieres August 12. By Mirko Parlevliet."
+  },
+  {
+    "outlet": "VitalThrills",
+    "headline": "Women in Blue (Las Azules) Season 2 Sets August Debut",
+    "url": "https://www.vitalthrills.com/women-in-blue-las-azules-season-2-sets-august-debut/",
+    "date": "Mar 26, 2026",
+    "ts": 20260326,
+    "lang": "EN",
+    "market": "International",
+    "type": "Trade",
+    "excerpt": "Apple TV confirms August 12, 2026 premiere date for Season 2 of the 100% RT crime drama. Eight weekly episodes through September 30."
+  },
+  {
+    "outlet": "Too Much TV",
+    "headline": "Show Guide: Women In Blue (aka Las Azules)",
+    "url": "https://toomuchtv.beehiiv.com/p/show-guide-women-in-blue-aka-las-azules",
+    "date": "Aug 8, 2026",
+    "ts": 20260808,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Comprehensive show guide for both seasons. S2 shifts to student activist murder connected to 1968 massacre. By Rick Ellis."
+  },
+  {
+    "outlet": "Milenio",
+    "headline": "Las Azules: la segunda temporada vuelve al Halconazo",
+    "url": "https://www.milenio.com/espectaculos/television/las-azules-la-segunda-temporada-vuelve-al-halconazo",
+    "date": "Aug 11, 2026",
+    "ts": 20260811,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Rovzar, Mori y Sarinana explican como retrataron el Halconazo de 1971 y la censura en la segunda temporada. Por Ivett Salgado Mendez."
+  },
+  {
+    "outlet": "Culturizando",
+    "headline": "Las Azules regresan con una segunda temporada que sacudira los cimientos de la historia",
+    "url": "https://culturizando.com/las-azules-temporada-2-estreno-apple-tv/",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "lang": "ES",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Entrevistas exclusivas con Rovzar y Mori. La segunda temporada arranca con una fuerza demoledora. Por Mavi Gangi."
+  },
+  {
+    "outlet": "Chilango",
+    "headline": "Las Azules temporada 2: Todo lo que necesitas saber",
+    "url": "https://www.chilango.com/cine-y-tv/series/las-azules-temporada-2/",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Regional",
+    "excerpt": "Entrevistas con Natalia Tellez y Ximena Sarinana. Tellez: Esta luchando por fuera todo lo que no puede luchar por dentro. Por Lucia Corona."
+  },
+  {
+    "outlet": "MacObserver",
+    "headline": "Women in Blue Season 2 Is Coming Next Week: Everything You Need to Know",
+    "url": "https://www.macobserver.com/entertainment/women-in-blue-season-2-is-coming-next-week-everything-you-need-to-know/",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "lang": "EN",
+    "market": "US",
+    "type": "Tech",
+    "excerpt": "Pre-premiere Apple ecosystem guide: plot, cast, release schedule, what to expect from Season 2. By Rajat Saini."
+  }
+]
