@@ -88,6 +88,28 @@
     "excerpt": "Video exclusive interview with creator and director Fernando Rovzar discussing the themes and message behind Season 2 of 'Women in Blue (Las Azules)' on Apple TV, starring Ximena Sariñana, Amorita Rasgado, and Bárbara Mori."
   },
   {
+    "outlet": "StreamingBetter",
+    "headline": "What to Watch This Weekend: Camp Rock 3, Lanterns, Reacher, and More Streaming (Aug 14, 2026)",
+    "url": "https://streamingbetter.com/what-to-watch-this-weekend-camp-rock-3-lanterns-reacher-and-more-streaming-aug-14-2026/",
+    "date": "Aug 14, 2026",
+    "ts": 20260814,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "StreamingBetter weekend streaming guide for August 14, 2026 features Women in Blue (Las Azules) Season 2 on Apple TV alongside Reacher Season 4, Camp Rock 3, and Lanterns. Azules investigate a student activist murder connecting to the 1968 student massacre."
+  },
+  {
+    "outlet": "Yahoo Entertainment / HOLA USA",
+    "headline": "What to Watch: 7 best movies and TV shows to stream this week -- Aug 14",
+    "url": "https://www.yahoo.com/entertainment/movies/articles/watch-7-best-movies-tv-235601261.html",
+    "date": "Aug 14, 2026",
+    "ts": 20260814,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Yahoo Entertainment / HOLA USA weekly streaming picks (Aug 14, 2026) feature Women in Blue Season 2 as a must-watch, describing the series following the first women in Mexico City police in the 1970s, with Season 2 exploring the student massacre known as El Halconazo."
+  },
+  {
     "outlet": "Nexus Point News",
     "headline": "REVIEW: 'Women in Blue' Season 2 is a More Confident and Ambitious Crime Drama",
     "url": "https://nexuspointnews.com/review-women-in-blue-season-2/",
@@ -317,6 +339,17 @@
     "market": "Mexico",
     "type": "Entertainment",
     "excerpt": "Interview with actor Luis Curiel on joining Season 2 of Las Azules, discussing how the series reclaims the voices of students vilified during the 1968 student movement and the 1971 Halconazo, making justice to historical memory."
+  },
+  {
+    "outlet": "Hollywood Reporter en Espanol",
+    "headline": "Renata Vaca se une al elenco de Las Azules",
+    "url": "https://es.hollywoodreporter.com/renata-vaca-se-une-al-elenco-de-las-azules/",
+    "date": "Aug 13, 2026",
+    "ts": 20260813,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Trade",
+    "excerpt": "Hollywood Reporter en Espanol reports actress Renata Vaca (Saw X, Rosario Tijeras) joins Las Azules Season 2 cast as part of La Brigada Marxista Narciso student group. Other new cast members include Alejandro de Hoyos, Luis Curiel, Elena del Rio, and David Montalvo. Season 2 premiered August 12 on Apple TV."
   },
   {
     "outlet": "El Diario (VerTele)",
@@ -999,6 +1032,50 @@
     "market": "US",
     "type": "Entertainment",
     "excerpt": "Mexico's female police force returns in the second season of the Apple TV series Las Azules, weaving together real historical events with fiction. Co-creator Fernando Rovzar noted 'one of the things I love about Mexico is that it's one big grey area,' using the season to explore moral dilemmas when institutional corruption conflicts with principles."
+  },
+  {
+    "outlet": "Froggy 99.9 KVOX",
+    "headline": "'Las Azules' Season 2 blends fact and fiction for tale of corruption and growth",
+    "url": "https://froggyweb.com/2026/08/10/las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth/",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Reuters wire report on Froggy 99.9 KVOX: Apple TV crime drama returns with Mexico first female police force investigating a murder connecting to historical student massacres. Season two starts streaming August 12 with weekly episodes through September 30."
+  },
+  {
+    "outlet": "103.7 The KRRO",
+    "headline": "'Las Azules' Season 2 blends fact and fiction for tale of corruption and growth",
+    "url": "https://krro.com/2026/08/10/las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth/",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Reuters wire report on Sioux Falls radio station KRRO: Las Azules Season 2 interweaves the 1971 Los Halcones attack with the 1968 Tlatelolco massacre, exploring themes of institutional corruption and personal growth among four women in 1970s Mexico City police."
+  },
+  {
+    "outlet": "106.5 The Buzz",
+    "headline": "'Las Azules' Season 2 blends fact and fiction for tale of corruption and growth",
+    "url": "https://1065thebuzz.com/2026/08/10/las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth/",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Reuters wire report on 106.5 The Buzz (Sheboygan, WI): Las Azules Season 2 premieres August 12 on Apple TV, with creator Fernando Rovzar and actress Barbara Mori discussing the series connection to the 1968 and 1971 student massacres in Mexico."
+  },
+  {
+    "outlet": "Mix 106.9",
+    "headline": "'Las Azules' Season 2 blends fact and fiction for tale of corruption and growth",
+    "url": "https://www.mix1069.com/2026/08/10/las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth/",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Reuters wire report on Mix 106.9 Peoria, IL: Season 2 follows four women in Mexico first female police unit navigating corruption and historical trauma. Byline Hanna Rantala, edited by Keith Weir. Series premieres August 12 with weekly episodes."
   },
   {
     "outlet": "Chic Magazine",
