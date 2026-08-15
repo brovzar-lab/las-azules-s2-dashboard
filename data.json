@@ -66,6 +66,28 @@
     "excerpt": "Le Figaro's TV Mag reviews Las Azules Season 2: when the body of a young militant is discovered, the Azules investigate a case connecting to Mexico's suppressed history. By Constance Jamet, published Aug 14, 2026."
   },
   {
+    "outlet": "Telemundo 52",
+    "headline": "Bárbara Mori y Ximena Sariñana hablan del regreso de Las Azules | Acceso Total | Telemundo 52",
+    "url": "https://www.youtube.com/watch?v=NTK_FJpRL2E",
+    "date": "Aug 14, 2026",
+    "ts": 20260814,
+    "lang": "ES",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Bárbara Mori and Ximena Sariñana discuss the return of Las Azules Season 2 in an interview for Telemundo 52's 'Acceso Total' entertainment news program, recorded around the Mexico City premiere event."
+  },
+  {
+    "outlet": "uInterview",
+    "headline": "VIDEO EXCLUSIVE: Director Fernando Rovzar On The Message Of Apple TV's 'Women In Blue (Las Azules)'",
+    "url": "https://uinterview.com/news/video-exclusive-director-fernando-rovzar-on-the-message-of-apple-tvs-women-in-blue-las-azules/",
+    "date": "Aug 14, 2026",
+    "ts": 20260814,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Video exclusive interview with creator and director Fernando Rovzar discussing the themes and message behind Season 2 of 'Women in Blue (Las Azules)' on Apple TV, starring Ximena Sariñana, Amorita Rasgado, and Bárbara Mori."
+  },
+  {
     "outlet": "Nexus Point News",
     "headline": "REVIEW: 'Women in Blue' Season 2 is a More Confident and Ambitious Crime Drama",
     "url": "https://nexuspointnews.com/review-women-in-blue-season-2/",
@@ -251,6 +273,50 @@
     "market": "International",
     "type": "Review",
     "excerpt": "Hindi/English language YouTube review of Women in Blue Season 2 (2026) covering the crime drama's second season debut on Apple TV."
+  },
+  {
+    "outlet": "WebWire",
+    "headline": "Apple TV celebrates the sophomore season of \"Women in Blue\" (\"Las Azules\") in Mexico City with premiere event",
+    "url": "https://www.webwire.com/ViewPressRel.asp?aId=358842",
+    "date": "Aug 13, 2026",
+    "ts": 20260813,
+    "lang": "EN",
+    "market": "International",
+    "type": "Trade",
+    "excerpt": "Apple TV held a blue carpet premiere event for the second season of 'Women in Blue' in Mexico City on August 11, 2026, featuring stars Bárbara Mori, Natalia Téllez, Ximena Sariñana, Amorita Rasgado, and co-creator Fernando Rovzar ahead of the global debut on August 12."
+  },
+  {
+    "outlet": "Telestar.fr",
+    "headline": "Las Azules saison 2 (Apple TV) : quand sortiront les prochains épisodes de la série ?",
+    "url": "https://www.telestar.fr/serie_tv/las-azules-saison-2-apple-tv-quand-sortiront-les-prochains-episodes-de-la-serie-1777487",
+    "date": "Aug 13, 2026",
+    "ts": 20260813,
+    "lang": "FR",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "French TV guide Telestar covers Las Azules Season 2 on Apple TV with episode release schedule, noting new episodes drop weekly through September 30 for French audiences."
+  },
+  {
+    "outlet": "Diario de Yucatán",
+    "headline": "\"Las Azules\" vuelven a la carga",
+    "url": "https://www.yucatan.com.mx/espectaculos/2026/08/13/las-azules-vuelven-a-la-carga.html",
+    "date": "Aug 13, 2026",
+    "ts": 20260813,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Regional",
+    "excerpt": "Mexican regional newspaper Diario de Yucatán covers the Season 2 premiere of Las Azules, detailing how the show depicts Mexico's first female police officers following the 1968 Tlatelolco massacre and the 1971 recruitment of women into the force."
+  },
+  {
+    "outlet": "The Editorial México",
+    "headline": "Luis Curiel en Las Azules: hacer justicia a la memoria",
+    "url": "https://theeditorialmexico.com/luis-curiel-las-azules-entrevista/",
+    "date": "Aug 13, 2026",
+    "ts": 20260813,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Interview with actor Luis Curiel on joining Season 2 of Las Azules, discussing how the series reclaims the voices of students vilified during the 1968 student movement and the 1971 Halconazo, making justice to historical memory."
   },
   {
     "outlet": "El Diario (VerTele)",
@@ -836,6 +902,17 @@
     "excerpt": "Official Season 2 trailer posted by Apple Australia's YouTube channel: 'Mexico's most courageous against corruption. Women in Blue — reporting for duty 12 August.' Bárbara Mori returns as Lieutenant María."
   },
   {
+    "outlet": "MacDailyNews (Substack)",
+    "headline": "Apple TV series 'Las Azules' Season 2 blends fact and fiction for tale of corruption and growth",
+    "url": "https://macdailynews.substack.com/p/apple-tv-series-las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth-reuters",
+    "date": "Aug 11, 2026",
+    "ts": 20260811,
+    "lang": "EN",
+    "market": "US",
+    "type": "Trade",
+    "excerpt": "Substack mirror of Reuters feature on Season 2. Season two follows Mexico's pioneering all-female police force in the 1970s as they confront institutional corruption and navigate complex moral dilemmas shaped by historical tragedy."
+  },
+  {
     "outlet": "MacObserver",
     "headline": "Women in Blue Season 2 Is Coming Next Week: Everything You Need to Know",
     "url": "https://www.macobserver.com/entertainment/women-in-blue-season-2-is-coming-next-week-everything-you-need-to-know/",
@@ -1021,6 +1098,17 @@
     "market": "US",
     "type": "Entertainment",
     "excerpt": "The Spanish-language crime drama returns on Apple TV August 12, 2026, with the four female officers investigating a murder connected to Mexico's 1968 student massacre while exploring themes of police corruption and political secrets."
+  },
+  {
+    "outlet": "El Blog de Yes",
+    "headline": "Estrenos Apple TV+ agosto 2026",
+    "url": "https://www.elblogdeyes.com/estrenos-apple-tv-agosto-2026/",
+    "date": "Jul 28, 2026",
+    "ts": 20260728,
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Entertainment",
+    "excerpt": "Spanish entertainment blog previews Apple TV+ August 2026 lineup, featuring Las Azules Season 2 premiering August 12 with María now a lieutenant investigating a case tied to the 1968 student massacre."
   },
   {
     "outlet": "Film Book",
