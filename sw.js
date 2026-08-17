@@ -1,4 +1,4 @@
-const CACHE = 'las-azules-s2-v4';
+const CACHE = 'las-azules-s2-v2';
 const ASSETS = [
   '/',
   '/index.html',
@@ -23,6 +23,11 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
+  // Always fetch data.json from network (never serve from cache)
+  if (e.request.url.includes('data.json')) {
+    e.respondWith(fetch(e.request));
+    return;
+  }
   e.respondWith(
     caches.match(e.request).then(cached => {
       if (cached) return cached;
