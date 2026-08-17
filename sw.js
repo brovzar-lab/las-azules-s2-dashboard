@@ -1,10 +1,10 @@
-const CACHE = 'las-azules-s2-v1';
+const CACHE = 'las-azules-s2-v3';
 const ASSETS = [
-  '/las-azules-s2-dashboard/',
-  '/las-azules-s2-dashboard/index.html',
-  '/las-azules-s2-dashboard/manifest.json',
-  '/las-azules-s2-dashboard/icons/icon.svg',
-  '/las-azules-s2-dashboard/icons/icon-maskable.svg',
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/icons/icon.svg',
+  '/icons/icon-maskable.svg',
 ];
 
 self.addEventListener('install', e => {
@@ -23,6 +23,11 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
+  // Always fetch data.json from network (never serve from cache)
+  if (e.request.url.includes('data.json')) {
+    e.respondWith(fetch(e.request));
+    return;
+  }
   e.respondWith(
     caches.match(e.request).then(cached => {
       if (cached) return cached;
