@@ -1,0 +1,26 @@
+name: Deploy to Vercel Production
+
+on:
+  push:
+    branches:
+      - lemon-virtual-studios
+    paths:
+      - 'data.json'
+      - 'index.html'
+      - 'sw.js'
+      - 'manifest.json'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Vercel (Production)
+        run: |
+          npx vercel deploy --prod \
+            --token "${{ secrets.VERCEL_TOKEN }}" \
+            --scope "${{ secrets.VERCEL_ORG_ID }}"
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
