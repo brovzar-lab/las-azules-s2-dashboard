@@ -1,0 +1,8 @@
+{
+  "name": "las-azules-s2-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.117.0"
+  }
+}

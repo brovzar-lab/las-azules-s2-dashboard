@@ -780,6 +780,160 @@
       opacity: 0; transition: opacity .15s;
     }
     .yt-overlay:hover .yt-play-btn { opacity: 1; }
+
+    /* ── Article Share Modal ── */
+    #share-modal {
+      position: fixed; inset: 0; z-index: 200;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      pointer-events: none;
+    }
+    #share-modal.open { pointer-events: all; }
+    #share-modal-backdrop {
+      position: absolute; inset: 0;
+      background: rgba(5, 10, 22, 0.75);
+      opacity: 0; transition: opacity .28s;
+    }
+    #share-modal.open #share-modal-backdrop { opacity: 1; }
+    #share-modal-panel {
+      position: relative; z-index: 1;
+      background: #0a1628;
+      border-top: 1px solid rgba(91,195,232,0.18);
+      border-radius: 16px 16px 0 0;
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: translateY(100%);
+      transition: transform .3s cubic-bezier(.32,.72,0,1);
+      -webkit-overflow-scrolling: touch;
+    }
+    #share-modal.open #share-modal-panel { transform: translateY(0); }
+    .sm-handle {
+      width: 36px; height: 4px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 2px;
+      margin: 10px auto 0;
+    }
+    .sm-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 20px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .sm-title {
+      font-size: 11px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: rgba(255,255,255,0.4);
+    }
+    .sm-close {
+      font-size: 22px; color: rgba(255,255,255,0.45); cursor: pointer;
+      background: none; border: none; line-height: 1; padding: 0;
+      font-family: inherit;
+    }
+    .sm-close:hover { color: #fff; }
+    .sm-article {
+      padding: 18px 20px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .sm-pub {
+      font-size: 9px; font-weight: 800; letter-spacing: .14em;
+      text-transform: uppercase; color: rgba(91,195,232,0.75); margin-bottom: 6px;
+    }
+    .sm-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; font-weight: 800;
+      color: #f2f0ea; line-height: 1.3; margin-bottom: 6px;
+    }
+    .sm-excerpt {
+      font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.55; margin-bottom: 10px;
+    }
+    .sm-meta {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    }
+    .sm-date { font-size: 10px; color: rgba(255,255,255,0.3); }
+    .sm-read-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 11px; font-weight: 700; color: #5BC3E8;
+      text-decoration: none; letter-spacing: .03em;
+    }
+    .sm-read-btn:hover { color: #fff; }
+    .sm-ai-section { padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .sm-ai-label {
+      font-size: 9px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 10px;
+    }
+    .sm-lang-toggle {
+      display: flex; gap: 4px; margin-bottom: 12px;
+    }
+    .sm-lang-btn {
+      padding: 5px 16px; font-size: 11px; font-weight: 700;
+      background: none; border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.4); cursor: pointer;
+      transition: all .1s; font-family: inherit; letter-spacing: .04em;
+    }
+    .sm-lang-btn.active {
+      background: #1B7BC4; border-color: #1B7BC4; color: #fff;
+    }
+    .sm-post-loader {
+      text-align: center; padding: 20px 0;
+      color: rgba(255,255,255,0.35); font-size: 12px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .sm-spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(91,195,232,0.25);
+      border-top-color: #5BC3E8;
+      border-radius: 50%;
+      animation: sm-spin .7s linear infinite;
+      flex-shrink: 0;
+    }
+    @keyframes sm-spin { to { transform: rotate(360deg); } }
+    .sm-post-textarea {
+      width: 100%; min-height: 90px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #e8e4d8;
+      font-size: 13px; line-height: 1.6;
+      padding: 12px 14px;
+      resize: vertical;
+      font-family: inherit;
+    }
+    .sm-post-textarea:focus { outline: none; border-color: rgba(91,195,232,0.45); }
+    .sm-post-textarea::placeholder { color: rgba(255,255,255,0.18); }
+    .sm-error-msg {
+      font-size: 12px; color: rgba(200,100,80,0.9); padding: 8px 0; text-align: center;
+    }
+    .sm-share-section { padding: 14px 20px 24px; }
+    .sm-share-label {
+      font-size: 9px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 10px;
+    }
+    .sm-share-btns {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+    }
+    .sm-share-btn {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 5px; padding: 10px 6px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.6);
+      cursor: pointer; font-family: inherit;
+      transition: all .12s;
+      font-size: 9px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    }
+    .sm-share-btn:hover { background: rgba(255,255,255,0.09); color: #fff; }
+    .sm-share-btn.wa { background: rgba(37,211,102,0.08); border-color: rgba(37,211,102,0.25); color: #25d366; }
+    .sm-share-btn.wa:hover { background: rgba(37,211,102,0.16); }
+    .sm-share-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .sm-native-row { margin-top: 10px; }
+    .sm-native-btn {
+      width: 100%; padding: 12px;
+      background: #1B7BC4; color: #fff;
+      font-size: 13px; font-weight: 700;
+      border: none; cursor: pointer; font-family: inherit;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      transition: opacity .12s;
+    }
+    .sm-native-btn:hover { opacity: .85; }
+    @media (max-width: 480px) {
+      .sm-share-btns { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 <body>
@@ -1953,7 +2107,7 @@ function buildHome() {
   /* ── Top 3 latest articles ── */
   document.getElementById('today-badge').textContent = `${MEDIA.length} articles tracked — newest first`;
   document.getElementById('today-feed').innerHTML = sorted.slice(0,3).map((a,i) => `
-    <div class="home-article" onclick="openArticle('${a.url}')">
+    <div class="home-article" onclick="openShareModal('${a.url}')">
       <div class="home-art-num">${i+1}</div>
       <div class="home-art-body">
         <p class="home-art-outlet">${a.outlet}${!MEDIA_ORIGINAL_URLS.has(a.url)?` <span style="display:inline-block;font-size:8px;font-weight:800;letter-spacing:.06em;padding:1px 5px;background:#d44;color:#fff;vertical-align:middle;margin-left:4px">NEW</span>`:''}</p>
@@ -2080,7 +2234,7 @@ function renderCoverage() {
     const isNew = !MEDIA_ORIGINAL_URLS.has(a.url);
     const newPill = isNew ? `<span style="display:inline-block;font-size:8px;font-weight:800;letter-spacing:.06em;padding:1px 5px;background:#d44;color:#fff;vertical-align:middle;margin-left:4px">NEW</span>` : '';
     return `
-    <tr onclick="openArticle('${a.url}')" style="cursor:pointer${isNew?';background:rgba(212,68,68,0.04)':''}">
+    <tr onclick="openShareModal('${a.url}')" style="cursor:pointer${isNew?';background:rgba(212,68,68,0.04)':''}">
       <td style="font-size:12px;font-weight:700;color:var(--ink1);max-width:130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${a.outlet}${newPill}</td>
       <td style="max-width:340px">
         <p style="font-size:13px;color:var(--ink1);font-weight:500;line-height:1.4;margin-bottom:2px">${a.headline}</p>
@@ -2442,7 +2596,239 @@ document.addEventListener('keydown', function(e) {
     renderCoverage();
   } catch(e) { /* fail silently — hardcoded MEDIA remains as fallback */ }
 })();
+
+/* ─── ARTICLE SHARE MODAL ─── */
+let _smArticle = null;
+let _smLang = 'es';
+let _smPostCache = {};
+
+function openShareModal(url) {
+  const art = MEDIA.find(a => a.url === url);
+  if (!art) {
+    window.open(url, '_blank', 'noopener');
+    return;
+  }
+  _smArticle = art;
+  _smLang = (art.lang || 'ES') === 'EN' ? 'en' : 'es';
+  _smPostCache = {};
+
+  document.getElementById('sm-pub').textContent = art.outlet || '';
+  document.getElementById('sm-headline').textContent = art.headline || '';
+
+  const excerptEl = document.getElementById('sm-excerpt');
+  excerptEl.textContent = art.excerpt || '';
+  excerptEl.style.display = art.excerpt ? '' : 'none';
+
+  document.getElementById('sm-date').textContent = art.date || '';
+  const readLink = document.getElementById('sm-read-link');
+  readLink.href = art.url || '#';
+
+  smSetLangUI(_smLang);
+
+  const nativeRow = document.getElementById('sm-native-row');
+  nativeRow.style.display = navigator.share ? '' : 'none';
+
+  document.getElementById('share-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  smGeneratePost();
+}
+
+function closeShareModal() {
+  document.getElementById('share-modal').classList.remove('open');
+  document.body.style.overflow = '';
+  _smArticle = null;
+  _smPostCache = {};
+}
+
+function smSetLang(lang) {
+  _smLang = lang;
+  smSetLangUI(lang);
+  if (_smPostCache[lang]) {
+    smShowPost(_smPostCache[lang]);
+  } else {
+    smGeneratePost();
+  }
+}
+
+function smSetLangUI(lang) {
+  document.getElementById('sm-btn-es').classList.toggle('active', lang === 'es');
+  document.getElementById('sm-btn-en').classList.toggle('active', lang === 'en');
+}
+
+async function smGeneratePost() {
+  if (!_smArticle) return;
+  const lang = _smLang;
+
+  document.getElementById('sm-loader').style.display = '';
+  document.getElementById('sm-post-text').style.display = 'none';
+  document.getElementById('sm-error').style.display = 'none';
+
+  try {
+    const res = await fetch('/api/generate-post', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        headline: _smArticle.headline || '',
+        excerpt:  _smArticle.excerpt  || '',
+        publication: _smArticle.outlet || '',
+        url:  _smArticle.url  || '',
+        language: lang,
+      }),
+    });
+    if (!res.ok) throw new Error('API ' + res.status);
+    const data = await res.json();
+    const post = data.post || '';
+    _smPostCache[lang] = post;
+    if (_smLang === lang) smShowPost(post);
+  } catch (err) {
+    if (_smLang === lang) smShowError();
+  }
+}
+
+function smShowPost(text) {
+  document.getElementById('sm-loader').style.display = 'none';
+  document.getElementById('sm-error').style.display = 'none';
+  const ta = document.getElementById('sm-post-text');
+  ta.value = text;
+  ta.style.display = '';
+}
+
+function smShowError() {
+  document.getElementById('sm-loader').style.display = 'none';
+  document.getElementById('sm-post-text').style.display = 'none';
+  const errEl = document.getElementById('sm-error');
+  errEl.textContent = 'Could not generate post. You can still share using the article link below.';
+  errEl.style.display = '';
+}
+
+function smGetShareText() {
+  const ta = document.getElementById('sm-post-text');
+  const post = (ta.style.display !== 'none' ? ta.value.trim() : '') || (_smArticle ? _smArticle.headline : '');
+  const url  = _smArticle ? _smArticle.url : '';
+  if (!post) return url;
+  if (url && !post.includes(url)) return post + '\n' + url;
+  return post;
+}
+
+function smShareWhatsApp() {
+  const text = smGetShareText();
+  if (!text) return;
+  window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank', 'noopener');
+}
+
+function smShareTwitter() {
+  const text = smGetShareText();
+  if (!text) return;
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank', 'noopener');
+}
+
+function smShareInstagram() {
+  const ta = document.getElementById('sm-post-text');
+  const text = (ta.style.display !== 'none' ? ta.value.trim() : '') || (_smArticle ? _smArticle.url : '');
+  if (!text) return;
+  navigator.clipboard.writeText(text)
+    .then(() => showToast('Copied! Paste in Instagram'))
+    .catch(() => showToast('Could not copy — select and copy manually'));
+}
+
+function smCopyText() {
+  const text = smGetShareText();
+  if (!text) return;
+  navigator.clipboard.writeText(text)
+    .then(() => showToast('Post text copied!'))
+    .catch(() => showToast('Could not copy'));
+}
+
+async function smNativeShare() {
+  if (!navigator.share || !_smArticle) return;
+  const ta = document.getElementById('sm-post-text');
+  const text = (ta.style.display !== 'none' ? ta.value.trim() : '') || _smArticle.headline;
+  try {
+    await navigator.share({
+      title: _smArticle.headline || 'Las Azules S2',
+      text,
+      url: _smArticle.url,
+    });
+  } catch (err) {
+    if (err.name !== 'AbortError') showToast('Could not open share sheet');
+  }
+}
+
+/* Close modal on Escape */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && document.getElementById('share-modal').classList.contains('open')) {
+    closeShareModal();
+  }
+});
 </script>
+
+<!-- ═══ ARTICLE SHARE MODAL ═══ -->
+<div id="share-modal">
+  <div id="share-modal-backdrop" onclick="closeShareModal()"></div>
+  <div id="share-modal-panel">
+    <div class="sm-handle"></div>
+    <div class="sm-header">
+      <span class="sm-title">Share article</span>
+      <button class="sm-close" onclick="closeShareModal()">×</button>
+    </div>
+
+    <!-- Article preview -->
+    <div class="sm-article">
+      <p class="sm-pub" id="sm-pub"></p>
+      <h2 class="sm-headline" id="sm-headline"></h2>
+      <p class="sm-excerpt" id="sm-excerpt"></p>
+      <div class="sm-meta">
+        <span class="sm-date" id="sm-date"></span>
+        <a class="sm-read-btn" id="sm-read-link" href="#" target="_blank" rel="noopener noreferrer">Read full article →</a>
+      </div>
+    </div>
+
+    <!-- AI post section -->
+    <div class="sm-ai-section">
+      <p class="sm-ai-label">AI-generated post — edit before sharing</p>
+      <div class="sm-lang-toggle">
+        <button class="sm-lang-btn active" id="sm-btn-es" onclick="smSetLang('es')">🇲🇽 ES</button>
+        <button class="sm-lang-btn" id="sm-btn-en" onclick="smSetLang('en')">🇺🇸 EN</button>
+      </div>
+      <div id="sm-loader" class="sm-post-loader">
+        <div class="sm-spinner"></div>
+        Generating post…
+      </div>
+      <textarea class="sm-post-textarea" id="sm-post-text" placeholder="AI-generated post appears here…" style="display:none"></textarea>
+      <p class="sm-error-msg" id="sm-error" style="display:none"></p>
+    </div>
+
+    <!-- Share buttons -->
+    <div class="sm-share-section">
+      <p class="sm-share-label">Share</p>
+      <div class="sm-share-btns">
+        <button class="sm-share-btn wa" onclick="smShareWhatsApp()">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.529 5.857L0 24l6.305-1.654A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.935 0-3.753-.531-5.301-1.452l-.38-.226-3.937 1.033 1.051-3.838-.248-.394A9.771 9.771 0 012.182 12c0-5.419 4.399-9.818 9.818-9.818S21.818 6.581 21.818 12 17.419 21.818 12 21.818z"/></svg>
+          WhatsApp
+        </button>
+        <button class="sm-share-btn" onclick="smShareTwitter()">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Twitter/X
+        </button>
+        <button class="sm-share-btn" onclick="smShareInstagram()">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+        </button>
+        <button class="sm-share-btn" onclick="smCopyText()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="1"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copy
+        </button>
+      </div>
+      <div class="sm-native-row" id="sm-native-row" style="display:none">
+        <button class="sm-native-btn" onclick="smNativeShare()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+          Share via…
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- In-app article reader overlay -->
 <div id="reader-overlay">
