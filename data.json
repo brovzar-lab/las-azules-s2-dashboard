@@ -2948,6 +2948,17 @@
     "excerpt": "Fan-compiled YouTube trailer video for Las Azules Season 2, featuring Bárbara Mori and Ximena Sariñana. Uploaded by the CircleX Creations channel ahead of the August 12 premiere on Apple TV."
   },
   {
+    "outlet": "PremiereDate.News",
+    "headline": "Las Azules Season 2 Will Be Released on August 12, 2026",
+    "url": "https://premieredate.news/tv-series/9052-las-azules.html",
+    "date": "Mar 26, 2026",
+    "ts": 20260326,
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Premiere date tracking site covers the Season 2 release of Las Azules (Women in Blue) on Apple TV+, confirming the August 12, 2026 global debut with weekly episodes through September 30."
+  },
+  {
     "outlet": "Hollywood Reporter en Español",
     "headline": "Las Azules: la serie mexicana nominada al Emmy Internacional",
     "url": "https://es.hollywoodreporter.com/?p=9808",
@@ -3036,6 +3047,17 @@
     "excerpt": "Deadline reports Apple TV+ has renewed the Spanish-language crime drama Women in Blue (Las Azules) for a second season, confirming the show's return after its acclaimed debut."
   },
   {
+    "outlet": "LAist",
+    "headline": "Serial killers, police badges and gogo boots: Meet the 'Women in Blue,' aka 'Las Azules'",
+    "url": "https://laist.com/news/arts-and-entertainment/serial-killers-police-badges-and-gogo-boots-meet-the-women-in-blue-aka-las-azules",
+    "date": "Aug 2, 2024",
+    "ts": 20240802,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "LAist profiles the Apple TV+ crime drama set in 1971 Mexico City following four women in the nation's first female police force investigating a serial killer, drawn from actual events and featuring vivid period detail."
+  },
+  {
     "outlet": "HeyUGuys",
     "headline": "Women in Blue (Las Azules) Interviews: The Creator and cast tell all about AppleTV+ police drama",
     "url": "https://www.heyuguys.com/women-in-blue-las-azules-interviews/",
@@ -3045,5 +3067,16 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "Creator Fernando Rovzar and the cast discuss bringing Mexico's first female police unit to Apple TV+, exploring 1970s patriarchal Mexico through historical fact and crime drama."
+  },
+  {
+    "outlet": "Mindies",
+    "headline": "Crítica de 'Las Azules', la nueva serie de Fernando Rovzar estrenada en Apple TV+",
+    "url": "https://www.mindies.es/pelicula/critica-de-las-azules-la-nueva-serie-de-fernando-rovzar-estrenada-en-apple-tv/",
+    "date": "Jul 30, 2024",
+    "ts": 20240730,
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Review",
+    "excerpt": "Spanish film site review of Las Azules season 1 on Apple TV+, examining the show's exploration of gender discrimination, institutional corruption, and historical events through Mexico's first female police force in 1970s."
   }
 ]
