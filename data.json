@@ -1,5 +1,16 @@
 [
   {
+    "outlet": "India Today",
+    "headline": "Bárbara Mori & Ximena Sariñana: We're in actual physical danger in Mexico | Las Azules",
+    "url": "https://www.youtube.com/watch?v=-bRFHIZw6lQ",
+    "date": "Aug 17, 2026",
+    "ts": 20260817,
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "India Today exclusive: filmmaker Fernando Rovzar and actors Bárbara Mori and Ximena Sariñana discuss Las Azules Season 2, sharing that those who speak out about systemic danger in Mexico face real physical risk."
+  },
+  {
     "outlet": "Amiga Mía",
     "headline": "Women in Blue (Las Azules): The Mexican Crime Drama You Need to Know",
     "url": "https://www.amigamia.com.au/film/women-in-blue-las-azules-apple-tv",
@@ -86,6 +97,39 @@
     "market": "US",
     "type": "Entertainment",
     "excerpt": "Video interview: director Fernando Rovzar breaks down the storytelling approach and real historical events behind Season 2 of Apple TV+'s Women in Blue (Las Azules)."
+  },
+  {
+    "outlet": "El Diario de Coahuila",
+    "headline": "Una nueva misión para 'Las Azules'",
+    "url": "https://eldiariodecoahuila.com.mx/2026/08/16/una-nueva-mision-para-las-azules/",
+    "date": "Aug 16, 2026",
+    "ts": 20260816,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Regional",
+    "excerpt": "Mexican regional newspaper El Diario de Coahuila covers the second season of Las Azules, featuring Fernando Rovzar discussing the new mission for the Azules as they investigate a case tied to the 1968 student massacre."
+  },
+  {
+    "outlet": "uInterview",
+    "headline": "Ximena Sariñana on researching the real-life first women cops in Mexico for 'Women In Blue'",
+    "url": "https://www.youtube.com/watch?v=xwPv1C22bmo",
+    "date": "Aug 16, 2026",
+    "ts": 20260816,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "uInterview exclusive: Ximena Sariñana discusses her deep research into the real-life first women police officers in Mexico City for her role in Apple TV+'s Women In Blue (Las Azules) Season 2."
+  },
+  {
+    "outlet": "iPhon.fr",
+    "headline": "«Women in Blue» revient pour une 2e saison, le 1er épisode est déjà disponible",
+    "url": "https://www.iphon.fr/post/women-in-blue-saison-2-apple-tv",
+    "date": "Aug 16, 2026",
+    "ts": 20260816,
+    "lang": "FR",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "French Apple-focused outlet iPhon.fr covers Women in Blue's return for Season 2, noting the first episode is already available on Apple TV with weekly releases through September 30."
   },
   {
     "outlet": "JustWatch",
