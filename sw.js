@@ -1,4 +1,4 @@
-const CACHE = 'las-azules-s2-v2';
+const CACHE = 'las-azules-s2-v3';
 const ASSETS = [
   '/',
   '/index.html',

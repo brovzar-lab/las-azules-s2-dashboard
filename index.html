@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Las Azules S2 — Media Intelligence Room V9.0 | Lemon Studios</title>
+  <title>Las Azules S2 — Media Intelligence Room V10.0 | Lemon Studios</title>
   <meta name="description" content="Media intelligence dashboard for Las Azules Season 2 (Women in Blue) — Apple TV+. Lemon Studios." />
   <!-- PWA / Add to Home Screen -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -802,7 +802,7 @@
 
   <div class="tnav-right">
     <span class="tnav-date">Aug 12 – Sep 30, 2026</span>
-    <span class="v4-badge">V9.0</span>
+    <span class="v4-badge">V10.0</span>
   </div>
 </nav>
 
@@ -1622,7 +1622,7 @@
 <!-- ═══ JAVASCRIPT ═══ -->
 <script>
 /* ─── DATA ─── */
-const MEDIA = [
+let MEDIA = [
   { outlet:'Screen Anarchy', headline:'Women in Blue (Las Azules) S2 Review: Two Steps Forward, One Step Back', url:'https://screenanarchy.com/2026/08/women-in-blue-las-azules-s2-review-two-steps-forward-one-step-back.html', date:'Aug 12, 2026', ts:20260812, lang:'EN', market:'International', type:'Review', excerpt:'4/5 stars — "Season 2 feels more on-point and certain of its tone. More relevant today, far beyond Mexico\'s borders."' },
   { outlet:'Deadline', headline:'Women in Blue Season 2 Premiere Date + First Look', url:'https://deadline.com/2026/03/women-in-blue-las-azules-season-2-premiere-date-apple-tv-1236766505/', date:'Mar 26, 2026', ts:20260326, lang:'EN', market:'US', type:'Trade', excerpt:'Season 2 of Apple TV\'s Spanish-language crime drama premieres August 12.' },
   { outlet:'Forbes', headline:'Women in Blue Las Azules Season 2 Gets August Premiere on Apple TV+', url:'https://www.forbes.com/sites/veronicavillafane/2026/03/26/women-in-blue-las-azules-season-2-gets-august-premiere-on-apple-tv/', date:'Mar 26, 2026', ts:20260326, lang:'EN', market:'US', type:'Trade', excerpt:'Veronica Villafane reports on S2 premiere date, cast, and full production details.' },
@@ -1651,6 +1651,9 @@ const MEDIA = [
   { outlet:'C21Media', headline:'Apple TV\'s Mexican Original Series Las Azules Given Second Season', url:'https://www.c21media.net/news/apple-tvs-mexican-original-series-las-azules-given-second-season/', date:'2025', ts:20250101, lang:'EN', market:'International', type:'Trade', excerpt:'International content industry renewal coverage.' },
   { outlet:'ChicMagazine.com.mx', headline:'Las Azules temporada 2 — cuántos capítulos y cuándo salen', url:'https://www.chicmagazine.com.mx/personajes/las-azules-temporada-2-cuandos-capitulos-tendra-y-cuando-salen', date:'2026', ts:20260101, lang:'ES', market:'Mexico', type:'Regional', excerpt:'Mexican lifestyle magazine episode count and release schedule guide.' },
 ];
+
+/* URLs from the original hardcoded set — used to mark sweep-added articles as NEW */
+const MEDIA_ORIGINAL_URLS = new Set(MEDIA.map(a => a.url));
 
 const EPISODES = [
   { ep:1, title:'Capítulo 1',          date:'August 12, 2026',    iso:'2026-08-12' },
@@ -1843,12 +1846,15 @@ function navWithFilter(field, value) {
   nav('coverage');
 }
 
-buildChart('chart-market', tally('market'), MARKET_BAR, 'market');
-buildChart('chart-type',   tally('type'),   TYPE_BAR,   'type');
-buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
+function buildCharts() {
+  buildChart('chart-market', tally('market'), MARKET_BAR, 'market');
+  buildChart('chart-type',   tally('type'),   TYPE_BAR,   'type');
+  buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
+}
+buildCharts();
 
 /* ─── HOME — dynamic editorial briefing ─── */
-(function(){
+function buildHome() {
   const LAUNCH_TS = new Date('2026-08-12T00:00:00').getTime();
   const now       = new Date();
   const dayN      = Math.max(1, Math.ceil((now.getTime() - LAUNCH_TS) / 86400000));
@@ -1950,7 +1956,7 @@ buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
     <div class="home-article" onclick="openArticle('${a.url}')">
       <div class="home-art-num">${i+1}</div>
       <div class="home-art-body">
-        <p class="home-art-outlet">${a.outlet}</p>
+        <p class="home-art-outlet">${a.outlet}${!MEDIA_ORIGINAL_URLS.has(a.url)?` <span style="display:inline-block;font-size:8px;font-weight:800;letter-spacing:.06em;padding:1px 5px;background:#d44;color:#fff;vertical-align:middle;margin-left:4px">NEW</span>`:''}</p>
         <p class="home-art-hed">${a.headline}</p>
         <div class="home-art-meta">
           ${badge(a.market, MARKET_STYLE[a.market])}
@@ -1960,7 +1966,8 @@ buildChart('chart-lang',   tally('lang'),   LANG_BAR,   'lang');
       </div>
       <span style="font-size:18px;color:var(--poster-blue);align-self:center;flex-shrink:0">›</span>
     </div>`).join('');
-})();
+}
+buildHome();
 
 
 /* ─── HASHTAG CLOUD ─── */
@@ -2069,9 +2076,12 @@ function renderCoverage() {
     return;
   }
   empty.classList.add('hidden');
-  tbody.innerHTML = filtered.map(a => `
-    <tr onclick="openArticle('${a.url}')" style="cursor:pointer">
-      <td style="font-size:12px;font-weight:700;color:var(--ink1);max-width:130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${a.outlet}</td>
+  tbody.innerHTML = filtered.map(a => {
+    const isNew = !MEDIA_ORIGINAL_URLS.has(a.url);
+    const newPill = isNew ? `<span style="display:inline-block;font-size:8px;font-weight:800;letter-spacing:.06em;padding:1px 5px;background:#d44;color:#fff;vertical-align:middle;margin-left:4px">NEW</span>` : '';
+    return `
+    <tr onclick="openArticle('${a.url}')" style="cursor:pointer${isNew?';background:rgba(212,68,68,0.04)':''}">
+      <td style="font-size:12px;font-weight:700;color:var(--ink1);max-width:130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${a.outlet}${newPill}</td>
       <td style="max-width:340px">
         <p style="font-size:13px;color:var(--ink1);font-weight:500;line-height:1.4;margin-bottom:2px">${a.headline}</p>
         ${a.excerpt?`<p style="font-size:11px;color:var(--ink3);line-height:1.45">${a.excerpt.substring(0,100)}${a.excerpt.length>100?'…':''}</p>`:''}
@@ -2080,7 +2090,8 @@ function renderCoverage() {
       <td style="white-space:nowrap">${badge(a.type,TYPE_STYLE[a.type])}</td>
       <td style="white-space:nowrap">${badge(a.lang,LANG_STYLE[a.lang])}</td>
       <td style="font-size:11px;color:var(--ink3);white-space:nowrap">${a.date}</td>
-    </tr>`).join('');
+    </tr>`;
+  }).join('');
 }
 
 ['cov-search','cov-market','cov-type','cov-lang','cov-sort'].forEach(id => {
@@ -2416,6 +2427,21 @@ document.addEventListener('click', function(e) {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeReader();
 });
+
+/* ─── REMOTE DATA LOADER ─── */
+/* Fetches data.json (populated by sweep routine) and refreshes all dynamic sections */
+(async function loadRemoteData() {
+  try {
+    const res = await fetch('./data.json?_=' + Date.now());
+    if (!res.ok) return;
+    const remote = await res.json();
+    if (!Array.isArray(remote) || remote.length <= MEDIA.length) return;
+    MEDIA = remote;
+    buildCharts();
+    buildHome();
+    renderCoverage();
+  } catch(e) { /* fail silently — hardcoded MEDIA remains as fallback */ }
+})();
 </script>
 
 <!-- In-app article reader overlay -->
