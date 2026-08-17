@@ -2079,6 +2079,39 @@
     "excerpt": "Reuters report syndicated to B93 Radio (Sheboygan, WI). Mexico's first female police force returns in Las Azules Season 2, with a storyline woven around the 1971 Halconazo student massacre and the 1968 Tlatelolco tragedy, as the four Azules investigate a young man found dead in murky circumstances."
   },
   {
+    "outlet": "mysangrelatina",
+    "headline": "Fernando Rovzar habla de la temporada 2 de Las Azules",
+    "url": "https://www.youtube.com/watch?v=MXq5RedQXR0",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "lang": "ES",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Exclusive interview with Fernando Rovzar, co-creator, executive producer, writer, and director of Las Azules (Women in Blue), discussing the vision and themes of Season 2 ahead of its Apple TV+ premiere."
+  },
+  {
+    "outlet": "Apple México (YouTube)",
+    "headline": "Las Azules — Resumen de la temporada 1 | Apple TV",
+    "url": "https://www.youtube.com/watch?v=5ZFqvglulwE",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Official Apple México recap of Las Azules Season 1, released to help audiences catch up before the Season 2 premiere on August 12, 2026 on Apple TV."
+  },
+  {
+    "outlet": "DRM News (YouTube)",
+    "headline": "'Las Azules' Season 2 Exposes Mexico's Dark Past With Crime, Corruption and Repression",
+    "url": "https://www.youtube.com/watch?v=40ZzNh_3ZpU",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Apple TV's Spanish-language crime drama Las Azules returns for Season 2, blending historical events with fiction as Mexico's pioneering female police force confronts state corruption and the legacy of the 1968 student massacre."
+  },
+  {
     "outlet": "Chic Magazine",
     "headline": "\"Las Azules\": Cuántos capítulos tendrá la segunda temporada y cuándo salen todos",
     "url": "https://www.chicmagazine.com.mx/personajes/las-azules-temporada-2-cuandos-capitulos-tendra-y-cuando-salen",
@@ -2110,6 +2143,17 @@
     "market": "Mexico",
     "type": "Regional",
     "excerpt": "El Universal's monthly streaming roundup highlights Las Azules Season 2 as a top Apple TV+ premiere for August 2026, starring Bárbara Mori in a new investigation connected to Mexico's 1968 student massacre."
+  },
+  {
+    "outlet": "POPTICULAR (YouTube)",
+    "headline": "\"México nunca ha afrontado lo que hizo\": Fernando Rovzar | Las Azules T2",
+    "url": "https://www.youtube.com/watch?v=qZVTEfXrSqc",
+    "date": "Aug 9, 2026",
+    "ts": 20260809,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Creator and director Fernando Rovzar speaks with Popticular's Mauricio Ginestra about the decision to set Las Azules Season 2 around the events of 1968 and the ongoing failure to reckon with that history."
   },
   {
     "outlet": "Too Much TV",
@@ -2156,6 +2200,28 @@
     "excerpt": "Interview by The Upcoming with Ximena Sariñana and Bárbara Mori discussing their roles in Women in Blue (Las Azules) Season 2, ahead of the August 12 Apple TV+ premiere."
   },
   {
+    "outlet": "Paltrocast With Darren Paltrowitz (YouTube)",
+    "headline": "Las Azules Stars Spill Behind-the-Scenes Details With Darren Paltrowitz",
+    "url": "https://www.youtube.com/watch?v=5sTwgcdv4iA",
+    "date": "Aug 7, 2026",
+    "ts": 20260807,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Bárbara Mori and Ximena Sariñana join the Paltrocast to discuss behind-the-scenes details of Las Azules Season 2, the highly anticipated second season of the Apple TV+ crime drama."
+  },
+  {
+    "outlet": "Paltrocast With Darren Paltrowitz (YouTube)",
+    "headline": "Fernando Rovzar on Creating Las Azules for Apple TV+",
+    "url": "https://www.youtube.com/watch?v=skZx67EdoCM",
+    "date": "Aug 7, 2026",
+    "ts": 20260807,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "International Emmy Award-winning showrunner and director Fernando Rovzar discusses the creation and second season of Las Azules for Apple TV+ with Darren Paltrowitz."
+  },
+  {
     "outlet": "El Universal",
     "headline": "\"Las Azules\" indagan en las sombras del 68",
     "url": "https://www.eluniversal.com.mx/espectaculos/las-azules-indagan-en-las-sombras-del-68/",
@@ -2176,6 +2242,17 @@
     "market": "Mexico",
     "type": "Entertainment",
     "excerpt": "Mexican political and cultural weekly Proceso announces Season 2 of Las Azules arriving August 12 on Apple TV+, covering the historically inspired story of Mexico's first female police force and producer Fernando Rovzar's vision."
+  },
+  {
+    "outlet": "Seat42F (YouTube)",
+    "headline": "Women in Blue (Las Azules) Season 2 Premiere Sneak Peek | Apple TV+",
+    "url": "https://www.youtube.com/watch?v=NwR1CR4ExtU",
+    "date": "Aug 6, 2026",
+    "ts": 20260806,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Official sneak peek from Women in Blue (Las Azules) Season 2 Episode 1 'Mauricio', shared by entertainment outlet Seat42F ahead of the August 12 premiere on Apple TV+."
   },
   {
     "outlet": "AM (Periódico AM)",
@@ -2242,6 +2319,17 @@
     "market": "Spain",
     "type": "Entertainment",
     "excerpt": "Spanish Apple technology and entertainment site previewing August 2026 on Apple TV+, with Las Azules Season 2 highlighted as a key premiere alongside Ted Lasso Season 4."
+  },
+  {
+    "outlet": "El Colombiano",
+    "headline": "Las películas y series que llegarán a Netflix, HBO Max, Prime Video y Apple TV en agosto 2026",
+    "url": "https://www.elcolombiano.com/entretenimiento/television/estrenos-netflix-max-prime-video-apple-tv-agosto-2026-AL39454501",
+    "date": "Jul 31, 2026",
+    "ts": 20260731,
+    "lang": "ES",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Colombian outlet El Colombiano previews August 2026 streaming releases, highlighting Las Azules Season 2 among the Apple TV+ debut titles, noting its August 12 premiere date and plot centered on the 1968 student massacre."
   },
   {
     "outlet": "AM (Periódico AM)",
