@@ -2046,6 +2046,28 @@
     "excerpt": "Local US outlet guide on how to stream the Women in Blue season 2 premiere, including free-trial options for Apple TV+."
   },
   {
+    "outlet": "UDGTV",
+    "headline": "'Las Azules' celebra el éxito de México en Apple TV",
+    "url": "https://udgtv.com/noticias/las-azules-celebra-el-exito-de-mexico-en-apple-tv/328006",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "El elenco de 'Las Azules' comienza su segunda temporada como un logro que \"pone a México en el mapa\" en Apple TV, asumiendo la responsabilidad de retratar un momento histórico para las mujeres del país."
+  },
+  {
+    "outlet": "Starry Constellation Magazine",
+    "headline": "Bárbara Mori & Ximena Sariñana - Women in Blue",
+    "url": "https://www.youtube.com/watch?v=2HE50CWeSv8",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "lang": "EN",
+    "market": "US",
+    "type": "Social",
+    "excerpt": "Bárbara Mori and Ximena Sariñana unite for an exclusive interview offering insights into Season 2 of Apple TV's 'Women in Blue'."
+  },
+  {
     "outlet": "Fiction Horizon",
     "headline": "'Las Azules' Recap Revisits a Defiant Season 1 Finale as Season 2 Arrives on Apple TV+",
     "url": "https://fictionhorizon.com/las-azules-recap-revisits-a-defiant-season-1-finale-as-season-2-arrives-on-apple-tv/",
@@ -3782,6 +3804,17 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "Brazilian entertainment press announcement that Season 2 of 'Las Azules' ('Mulheres de Azul') premieres August 12 with eight new episodes."
+  },
+  {
+    "outlet": "Correio de Venezuela",
+    "headline": "El actor luso-venezolano Albi De Abreu integra el elenco de «Las Azules», serie mexicana nominada al Emmy Internacional",
+    "url": "https://correiodevenezuela.org/espanol/el-actor-luso-venezolano-albi-de-abreu-integra-el-elenco-de-las-azules-serie-mexicana-nominada-al-emmy-internacional/",
+    "date": "Jan 2, 2026",
+    "ts": 20260102,
+    "lang": "ES",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "El actor luso-venezolano Albi De Abreu se une al elenco de 'Las Azules', serie que recibió una nominación a Mejor Serie Dramática en los 53 International Emmy Awards."
   },
   {
     "outlet": "Hollywood Reporter en Español",
