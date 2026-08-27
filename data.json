@@ -121,6 +121,17 @@
     "excerpt": "Analysis piece arguing that Las Azules Season 2 avoids being mere filler for its first season, instead standing as a historical reminder rooted in Mexican identity, weaving student movements, serial killers, and state secrets."
   },
   {
+    "outlet": "Cine Agora (YouTube)",
+    "headline": "Mulheres de Azul | Lançamento de 26/08/2026",
+    "url": "https://www.youtube.com/watch?v=URn1HXK1wRI",
+    "date": "Aug 26, 2026",
+    "ts": 20260826,
+    "lang": "ES",
+    "market": "International",
+    "type": "Social",
+    "excerpt": "Brazilian YouTube channel Cine Agora covers the August 26 episode launch of the series under its Portuguese-market title 'Mulheres de Azul' (Women in Blue)."
+  },
+  {
     "outlet": "Fuera de Series",
     "headline": "Crítica de Las Azules (Temporada 2): Sin Spoilers",
     "url": "https://fueradeseries.com/critica-de-las-azules-temporada-2-sin-spoilers-apple-tv",
@@ -4200,6 +4211,28 @@
     "market": "Mexico",
     "type": "Entertainment",
     "excerpt": "Barbara Mori y su pareja, el director Fernando Rovzar, participaron en una master class donde hablaron del proceso creativo y los retos detras de camaras de Las Azules."
+  },
+  {
+    "outlet": "AM (León, Guanajuato)",
+    "headline": "'Las Azules' lanza nueva temporada en el GIFF, más intensa y vigente",
+    "url": "https://www.am.com.mx/espectaculos/2026/07/30/las-azules-vuelve-con-una-temporada-mas-intensa-y-vigente-fernando-rovzar-barbara-mori-y-horacio-garcia-rojas-la-presenta-en-giff-1825613.html",
+    "date": "Jul 30, 2026",
+    "ts": 20260730,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Regional",
+    "excerpt": "Fernando Rovzar, Barbara Mori and Horacio Garcia Rojas presented Las Azules season 2 at the Guanajuato International Film Festival (GIFF), emphasizing how the new season tackles machismo and women's equality themes ahead of its August 12 premiere."
+  },
+  {
+    "outlet": "Dallas News (Al Dia)",
+    "headline": "La segunda temporada de la serie mexicana 'Las Azules' enfatiza la lucha por la libertad femenina",
+    "url": "https://www.dallasnews.com/espanol/al-dia/espectaculos/article/las-azules-segunda-temporada-estreno-apple-mori-22367802.php",
+    "date": "Jul 30, 2026",
+    "ts": 20260730,
+    "lang": "ES",
+    "market": "US",
+    "type": "Regional",
+    "excerpt": "Dallas News' Spanish-language section previews Las Azules season 2, noting the Apple TV+ series with Barbara Mori, Natalia Tellez, Amorita Rasgado and Ximena Sarinana premieres August 12 and emphasizes women's fight for freedom."
   },
   {
     "outlet": "Excelsior",
