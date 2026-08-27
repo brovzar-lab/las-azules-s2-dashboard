@@ -1,5 +1,16 @@
 [
   {
+    "outlet": "La Razón (Spain)",
+    "headline": "Fernando Rovzar: «México es como una persona que no quiere aceptar un error del pasado»",
+    "url": "https://www.larazon.es/television/fernando-rovzar-mexico-como-persona-que-quiere-aceptar-error-pasado_202608276a8f680d2bcaf82098eeffa1.html",
+    "date": "Aug 27, 2026",
+    "ts": 20260827,
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Trade",
+    "excerpt": "Interview with director Fernando Rovzar on researching the true story of Mexico's first women police officers, locating Atala (the first of these women), and shaping it into a story about a dark era in Mexican history."
+  },
+  {
     "outlet": "Spin-off.fr",
     "headline": "Las Azules saison 2 épisode 03",
     "url": "https://www.spin-off.fr/episode03-473876-26082026-saison2-Las-Azules.html",
@@ -75,6 +86,28 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "Machine-spun aggregator repost of the Women in Blue (Las Azules) Season 2 soundtrack story; garbles the show's title as \"Ladies In Blue\" but confirms cast and premise are correct."
+  },
+  {
+    "outlet": "Nerds That Geek",
+    "headline": "'Women in Blue (Las Azules)' Recap: 'Quintanilla'",
+    "url": "https://nerdsthatgeek.com/television/women-in-blue-las-azules-recap-quintanilla",
+    "date": "Aug 26, 2026",
+    "ts": 20260826,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Recap of Season 2 Episode 3 'Quintanilla': after learning former cop Filiberto was behind the killings of student activists, the Azules discover med student Damian was also involved and is now seeking revenge against the police system."
+  },
+  {
+    "outlet": "El Heraldo de Puebla",
+    "headline": "Las azules: memoria mexicana y arraigo cultural",
+    "url": "https://heraldodepuebla.com/2026/08/26/las-azules-memoria-mexicana-y-arraigo-cultural/",
+    "date": "Aug 26, 2026",
+    "ts": 20260826,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Regional",
+    "excerpt": "Analysis piece arguing that Las Azules Season 2 avoids being mere filler for its first season, instead standing as a historical reminder rooted in Mexican identity, weaving student movements, serial killers, and state secrets."
   },
   {
     "outlet": "Fuera de Series",
