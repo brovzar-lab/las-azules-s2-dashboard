@@ -308,6 +308,17 @@
     "excerpt": "Newsletter edition (Substack) review of Las Azules Season 2, describing it as 'más segura, política y ambiciosa' (safer, more political, and more ambitious) than season 1, with positive sentiment on character development and thematic depth."
   },
   {
+    "outlet": "Fuera de Series (Podcast/Spotify)",
+    "headline": "Crítica de LAS AZULES (Temporada 2) | SIN SPOILERS | Apple TV",
+    "url": "https://open.spotify.com/episode/3pRwThyHoGshXiyECXyLs6",
+    "date": "Aug 25, 2026",
+    "ts": 20260825,
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Review",
+    "excerpt": "Podcast companion to Fuera de Series' written review, discussing how Season 2 becomes 'more secure, political and ambitious,' examining institutional discrimination and the contradiction of protagonists questioning the police force they fought to join."
+  },
+  {
     "outlet": "lissettgarduno (Instagram)",
     "headline": "Un asesinato en 1971 empieza a llevar a Las Azules hacia 1968",
     "url": "https://www.instagram.com/reel/DcZw2k8AarY/",
@@ -3408,6 +3419,39 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "La plateforme Apple TV dévoile le premier épisode de la saison 2 de Las Azules ce mercredi 12 août ; guide de diffusion des épisodes jusqu'au 30 septembre."
+  },
+  {
+    "outlet": "Apple TV Press (ES)",
+    "headline": "Las azules — Official Series Page (Spain)",
+    "url": "https://www.apple.com/es/tv-pr/originals/women-in-blue-las-azules/",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Trade",
+    "excerpt": "Official Apple TV+ Spain press hub for Las Azules (Women in Blue), describing Season 2's plot: Maria, now promoted to lieutenant, torn between institutional rules and truth after a student activist's body is discovered, tied to the 1968 student massacre."
+  },
+  {
+    "outlet": "Apple TV Press (IT)",
+    "headline": "Las Azules — Official Series Page (Italy)",
+    "url": "https://www.apple.com/it/tv-pr/originals/women-in-blue-las-azules/",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "lang": "IT",
+    "market": "International",
+    "type": "Trade",
+    "excerpt": "Official Apple TV+ Italy press hub for Las Azules (Women in Blue) Season 2, covering Maria's promotion to lieutenant and the investigation linking a student activist's murder to the 1968 massacre and police corruption."
+  },
+  {
+    "outlet": "Facebook (Kirsten Clarkson)",
+    "headline": "Season 2 on Apple TV - Las Azules! Amorita Rasgado killing it!",
+    "url": "https://www.facebook.com/kirsten.clarkson/posts/season-2-on-apple-tv-las-azules-amorita-rasgado-killing-it/10239479792226578/",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "lang": "EN",
+    "market": "International",
+    "type": "Social",
+    "excerpt": "Personal social media post praising Amorita Rasgado's performance as Season 2 of Las Azules premieres on Apple TV."
   },
   {
     "outlet": "Fiction Horizon",
