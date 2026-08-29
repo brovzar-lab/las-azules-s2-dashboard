@@ -6094,6 +6094,17 @@
     "excerpt": "YouTube review of the Apple TV+ series Women in Blue (Las Azules), covering its 1970s Mexico City setting and central cast."
   },
   {
+    "outlet": "Variety",
+    "headline": "Apple TV+'s Spanish-Language Debut 'Women in Blue' Is a Deeply Unsettling Serial Killer Mystery: TV Review",
+    "url": "https://variety.com/2024/tv/reviews/women-in-blue-review-apple-tv-plus-series-1236088997/",
+    "date": "Jul 31, 2024",
+    "ts": 20240731,
+    "lang": "EN",
+    "market": "US",
+    "type": "Review",
+    "excerpt": "Variety's TV review of the Apple TV+ series about Mexico's first female police force, created by Fernando Rovzar and Pablo Aramendi, calling it a smart, reflective serial killer mystery."
+  },
+  {
     "outlet": "Mindies",
     "headline": "Crítica de 'Las Azules', la nueva serie de Fernando Rovzar estrenada en Apple TV+",
     "url": "https://www.mindies.es/pelicula/critica-de-las-azules-la-nueva-serie-de-fernando-rovzar-estrenada-en-apple-tv/",
@@ -6105,6 +6116,17 @@
     "excerpt": "Spanish film site review of Las Azules season 1 on Apple TV+, examining the show's exploration of gender discrimination, institutional corruption, and historical events through Mexico's first female police force in 1970s."
   },
   {
+    "outlet": "Los Lunes Seriefilos",
+    "headline": "[Series] Resenamos 'Las Azules' (Apple TV+): la astucia y la rebeldia de las primeras mujeres policia de Mexico",
+    "url": "https://www.loslunesseriefilos.com/2024/07/ciritca-las-azules-serie-apple-tv.html",
+    "date": "Jul 29, 2024",
+    "ts": 20240729,
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Review",
+    "excerpt": "Resena de la serie de Apple TV+ sobre la primera unidad de policia femenina de Mexico en 1971, y como cuatro mujeres pioneras enfrentan la discriminacion sistemica mientras persiguen a un asesino en serie en la Ciudad de Mexico."
+  },
+  {
     "outlet": "Audiovisual451",
     "headline": "'Las azules' - estreno 31 de julio en Apple TV+",
     "url": "https://www.audiovisual451.com/las-azules-estreno-31-de-julio-en-apple-tv/",
@@ -6114,5 +6136,16 @@
     "market": "Spain",
     "type": "Trade",
     "excerpt": "Spanish audiovisual industry trade coverage announcing the July 31, 2024 premiere of Las Azules on Apple TV+, a 10-episode series set in 1970s Mexico about the country first female police force secretly investigating a serial killer."
+  },
+  {
+    "outlet": "Milenio",
+    "headline": "Bárbara Mori, Ximena Sariñana, Natalia Téllez y Amorita Rasgado serán 'Las Azules', en AppleTV+",
+    "url": "https://www.milenio.com/espectaculos/television/las-azules-en-appletv",
+    "date": "May 9, 2024",
+    "ts": 20240509,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "AppleTV+ presenta una serie de 10 episodios sobre el primer cuerpo de policia femenino de Mexico, ambientada en la decada de 1970 e inspirada en hechos reales."
   }
 ]
