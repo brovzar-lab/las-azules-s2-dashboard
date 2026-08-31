@@ -42,6 +42,7 @@
       --nav-bg: #081628;
       --hero-bg: #070e1e;
       --nav-h:  52px;
+      --databar-h: 28px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -148,6 +149,31 @@
       letter-spacing: .1em;
     }
 
+    /* ── Data-as-of bar (sitewide, every tab) ── */
+    #databar {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      z-index: 39;
+      background: #0f2036;
+      border-bottom: 1px solid rgba(196,154,40,0.25);
+      padding: 6px 28px;
+    }
+    .databar-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 10px;
+      letter-spacing: .03em;
+    }
+    .databar-crit { color: rgba(196,154,40,0.95); font-weight: 600; }
+    .databar-crit strong { color: #fff; font-weight: 700; }
+    .databar-cov { color: rgba(255,255,255,0.45); display: flex; align-items: center; gap: 6px; }
+    .databar-sep { color: rgba(255,255,255,0.2); }
+
     /* ── Bottom Nav (mobile) ── */
     #bottomnav { display: none; }
 
@@ -162,6 +188,9 @@
       }
       .tnav-links { display: none; }
       .tnav-date  { display: none; }
+      #databar { padding: 5px 20px; }
+      .databar-inner { gap: 6px; }
+      .databar-sep { display: none; }
     }
 
     .bnav-link {
@@ -185,11 +214,11 @@
 
     /* ── Content ── */
     #content {
-      padding-top: var(--nav-h);
+      padding-top: calc(var(--nav-h) + var(--databar-h));
       min-height: 100vh;
     }
 
-    @media (max-width: 767px) { #content { padding-bottom: 56px; } }
+    @media (max-width: 767px) { #content { padding-bottom: 56px; padding-top: calc(var(--nav-h) + 44px); } }
 
     /* ── Pages ── */
     .page { display: none; }
@@ -694,7 +723,6 @@
       .chart-3col { grid-template-columns: 1fr !important; }
       .ep-cast-grid { grid-template-columns: 1fr !important; }
       .quote-grid { grid-template-columns: 1fr !important; }
-      .score-grid { grid-template-columns: 1fr !important; }
       .show-syn-grid { grid-template-columns: 1fr !important; }
       /* Platform tabs — horizontal scroll row, no wrap */
       #pb-plat-btns { flex-wrap: nowrap !important; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 3px; scrollbar-width: none; }
@@ -960,6 +988,15 @@
   </div>
 </nav>
 
+<!-- ═══ DATA-AS-OF BAR (sitewide, visible on every tab) ═══ -->
+<div id="databar">
+  <div class="databar-inner">
+    <span class="databar-crit">Critical reception data as of <strong>Aug 28, 2026</strong></span>
+    <span class="databar-sep">·</span>
+    <span class="databar-cov"><span class="live-dot"></span>Coverage feed: auto-updating</span>
+  </div>
+</div>
+
 <!-- ═══ BOTTOM NAV (mobile) ═══ -->
 <nav id="bottomnav">
   <button onclick="nav('home')"     class="bnav-link" id="bn-home">
@@ -1063,23 +1100,57 @@
         <h2 class="sec-h2">Scores &amp; reviews</h2>
         <hr class="sec-rule">
       </div>
-      <p class="sec-caption">Season 2 scores accumulate over the 8-week run through Sep 30.</p>
+      <p class="sec-caption">Season 2, as of Aug 28, 2026 — final tally of the Aug 12–28 monitoring arc. Links go to the live pages for anyone checking after this date.</p>
     </div>
-    <div class="score-grid" style="display:grid;grid-template-columns:1fr 240px;gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:48px">
-      <div style="background:var(--white);padding:26px">
-        <p style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Season 2 — Scores Accumulating</p>
-        <p style="font-size:13px;color:var(--ink2);line-height:1.65;margin-bottom:18px">Rotten Tomatoes, IMDb, and Metacritic scores build over the 8-week season. Season 1 baseline: <strong style="color:var(--ink1)">100% RT · 7.3 IMDb · 76 Metacritic</strong>.</p>
-        <div style="display:flex;gap:6px;flex-wrap:wrap">
-          <a href="https://www.rottentomatoes.com/tv/women_in_blue_2024/s02" target="_blank" rel="noopener noreferrer" style="padding:5px 11px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(200,66,42,0.3);color:var(--coral);text-decoration:none;background:rgba(200,66,42,0.05)">RT ↗</a>
-          <a href="https://www.metacritic.com/tv/women-in-blue/" target="_blank" rel="noopener noreferrer" style="padding:5px 11px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(181,131,42,0.3);color:var(--gold);text-decoration:none;background:rgba(181,131,42,0.05)">Metacritic ↗</a>
-          <a href="https://www.imdb.com/title/tt20516590/" target="_blank" rel="noopener noreferrer" style="padding:5px 11px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(181,131,42,0.3);color:var(--gold);text-decoration:none;background:rgba(181,131,42,0.05)">IMDb ↗</a>
+
+    <!-- Score tiles -->
+    <div class="chart-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-bottom:1px">
+      <div style="background:var(--white);padding:22px">
+        <p style="font-size:9px;font-weight:700;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">Rotten Tomatoes</p>
+        <p style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:800;color:var(--ink1);margin-bottom:4px">No Tomatometer yet</p>
+        <p style="font-size:11px;color:var(--ink3)">3 critic reviews counted — below the ~5-review minimum</p>
+        <a href="https://www.rottentomatoes.com/tv/women_in_blue_2024/s02" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--coral);text-decoration:none">RT ↗</a>
+      </div>
+      <div style="background:var(--white);padding:22px">
+        <p style="font-size:9px;font-weight:700;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">Metacritic</p>
+        <p style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:800;color:var(--ink1);margin-bottom:4px">No score yet</p>
+        <p style="font-size:11px;color:var(--ink3)">0 critic reviews — page states "Critic reviews are not available yet"</p>
+        <a href="https://www.metacritic.com/tv/women-in-blue/" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);text-decoration:none">Metacritic ↗</a>
+      </div>
+      <div style="background:var(--white);padding:22px">
+        <p style="font-size:9px;font-weight:700;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">IMDb</p>
+        <p style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:800;color:var(--ink1);margin-bottom:4px">S2 not confirmed</p>
+        <p style="font-size:11px;color:var(--ink3)">Direct access blocked on every monitoring run; S1 baseline 7.3/10</p>
+        <a href="https://www.imdb.com/title/tt20516590/" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);text-decoration:none">IMDb ↗</a>
+      </div>
+    </div>
+
+    <!-- S1 baseline context -->
+    <div style="background:var(--smoke);padding:12px 22px;border:1px solid var(--bd);border-top:none;margin-bottom:1px">
+      <p style="font-size:11px;color:var(--ink3)">Season 1 baseline — context only, not Season 2's current number: <strong style="color:var(--ink2)">100% Rotten Tomatoes · Metacritic 76 · IMDb 7.3</strong></p>
+    </div>
+
+    <!-- Review list -->
+    <div style="background:var(--white);border:1px solid var(--bd);border-top:none;padding:22px;margin-bottom:1px">
+      <p style="font-size:10px;font-weight:700;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px">Rotten Tomatoes-counted critic reviews (3)</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:22px">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-size:12px;color:var(--ink2)"><span>Peter Martin — ScreenAnarchy</span><span style="font-weight:700;color:var(--ink1);white-space:nowrap">4/5 · Aug 12</span></div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-size:12px;color:var(--ink2)"><span>Belén Prieto — Espinof</span><span style="font-weight:700;color:var(--ink1);white-space:nowrap">Positive, unscored · Aug 14</span></div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-size:12px;color:var(--ink2)"><span>Jared Richards — The Age (Australia)</span><span style="font-weight:700;color:var(--ink1);white-space:nowrap">3/5 · Aug 18</span></div>
+      </div>
+      <p style="font-size:10px;font-weight:700;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px">Additional reviews — not on RT's critic panel</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-size:12px;color:var(--ink2)"><span>Fuera de Series (ES) — full season, spoiler-free</span><span style="font-weight:700;color:var(--ink1);white-space:nowrap">Positive, unscored · Aug 25</span></div>
+          <p style="font-size:11px;color:var(--ink3);font-style:italic;margin-top:3px">"más segura, política y ambiciosa"</p>
         </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-size:12px;color:var(--ink2)"><span>Midgard Times / moviesr.net — Anjali Sharma (Episode 3)</span><span style="font-weight:700;color:var(--ink1);white-space:nowrap">7/10 · Aug 25</span></div>
       </div>
-      <div style="background:var(--smoke);padding:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
-        <p style="font-size:9px;font-weight:700;color:var(--ink3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Screen Anarchy</p>
-        <p style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;color:var(--ink1)">4/5 ★</p>
-        <p style="font-size:11px;color:var(--ink3);margin-top:5px">First published review · S2</p>
-      </div>
+      <p style="font-size:10px;color:var(--ink3);margin-top:14px">moviesr.net is an aggregator, not an RT-recognized trade outlet — not counted toward the Tomatometer.</p>
+    </div>
+
+    <div style="background:var(--white);border:1px solid var(--bd);border-top:none;padding:14px 22px;margin-bottom:48px">
+      <p style="font-size:11px;color:var(--ink3)">Despite the Aug 25 Variety / Hollywood Reporter trade-outreach push, no Variety or Hollywood Reporter Season 2 review has published as of Aug 28, 2026.</p>
     </div>
 
     <!-- Key Quotes -->
@@ -1539,13 +1610,13 @@
     <div class="container">
       <p class="hero-eyebrow">Morning Intelligence</p>
       <h1 style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1.05;margin-bottom:8px">Daily updates</h1>
-      <p style="font-size:13px;color:rgba(255,255,255,0.4)">Appended each morning by the Research Specialist routine · Aug 12 – Sep 30, 2026</p>
+      <p style="font-size:13px;color:rgba(255,255,255,0.4)">Compiled by the Research Specialist routine around episode drops · Aug 12 – 28, 2026 monitoring arc, complete</p>
     </div>
   </div>
 
   <div class="container" style="padding-top:40px;padding-bottom:48px">
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:28px">
-      <p style="font-size:12px;color:var(--ink3)">Last updated: <strong style="color:var(--ink2)">Aug 13, 2026 — 7:00 AM CDT</strong></p>
+      <p style="font-size:12px;color:var(--ink3)">Last updated: <strong style="color:var(--ink2)">Aug 28, 2026</strong> — final entry of the Aug 12–28 monitoring arc</p>
     </div>
 
     <div class="card" style="border-left:3px solid var(--teal);padding:28px 32px;margin-bottom:8px">
@@ -1583,8 +1654,52 @@
         </div>
       </div>
     </div>
+    <div class="card" style="border-left:3px solid var(--coral);padding:28px 32px;margin-bottom:8px">
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px">
+        <span class="live-dot"></span>
+        <p style="font-size:9px;font-weight:700;color:var(--coral);letter-spacing:.12em;text-transform:uppercase">Aug 14, 2026 — Reviews &amp; Press Roundup</p>
+      </div>
+      <div style="font-size:13px;color:var(--ink2);line-height:1.75;display:flex;flex-direction:column;gap:10px">
+        <p>Espinof (Spain) becomes the 2nd Rotten-Tomatoes-counted critic review, and Nexus Point News publishes a positive (unscored) review. Domestic press gap continues to close: El Universal and Milenio — two of Mexico's three highest-circulation papers — now on record.</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;gap:11px"><span style="color:var(--coral);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Belén Prieto / Espinof files a positive, unscored review — RT now at 2 counted reviews, still below the Tomatometer threshold</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--coral);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Nexus Point News publishes a positive (unscored) review</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--coral);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>El Universal and Milenio now on record, closing part of the Mexican-press coverage gap</span></div>
+        </div>
+        <p style="font-size:11px;color:var(--ink3);border-top:1px solid var(--bd);padding-top:12px;margin-top:4px;font-style:italic">Fernando Rovzar publicly signals he's already conceptualizing a Season 3, contingent on audience response (El Universal, Aug 12): "A mí me encantaría tener una tercera temporada, pero depende de la audiencia... ya tengo una idea."</p>
+      </div>
+    </div>
+    <div class="card" style="border-left:3px solid var(--gold);padding:28px 32px;margin-bottom:8px">
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px">
+        <span class="live-dot"></span>
+        <p style="font-size:9px;font-weight:700;color:var(--gold);letter-spacing:.12em;text-transform:uppercase">Aug 19, 2026 — Episode 2 "Filiberto" Drop</p>
+      </div>
+      <div style="font-size:13px;color:var(--ink2);line-height:1.75;display:flex;flex-direction:column;gap:10px">
+        <p>Episode 2 released, triggering the expected review-cycle restart. Jared Richards / The Age (Australia) confirmed as the 3rd Rotten-Tomatoes-counted critic — RT now at 3 reviews, still below the ~5-review Tomatometer threshold.</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;gap:11px"><span style="color:var(--gold);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Midgard Times posts an 8/10 Episode 2 review</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--gold);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Jared Richards / The Age (Australia) confirmed as the 3rd RT-counted critic (3/5, later confirmed)</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--gold);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Reforma confirmed (backfilled) to have covered the premiere — closing the gap on all three major Mexican newspapers (Reforma, El Universal, Milenio)</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="border-left:3px solid var(--teal);padding:28px 32px;margin-bottom:8px">
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px">
+        <span class="live-dot"></span>
+        <p style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:.12em;text-transform:uppercase">Aug 26–28, 2026 — Episode 3 "Quintanilla" Window (Final Entry)</p>
+      </div>
+      <div style="font-size:13px;color:var(--ink2);line-height:1.75;display:flex;flex-direction:column;gap:10px">
+        <p>Episode 3 released Aug 26. Two previously-uncounted reviews surfaced; RT and Metacritic status is unchanged through Aug 28. This is the final entry of this monitoring arc — the underlying routine was archived after the Aug 28 run per the Studio Boss's decision.</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;gap:11px"><span style="color:var(--teal);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Fuera de Series (ES, full season) and Midgard Times (Episode 3, 7/10) reviews surfaced — both outside Rotten Tomatoes' critic panel</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--teal);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Episode 4 "Arizmendi" confirmed for Sept 2, 2026 (BroadwayWorld, Aug 27)</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--teal);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Despite the Aug 25 Variety/Hollywood Reporter outreach push, no Variety or Hollywood Reporter Season 2 review has published</span></div>
+          <div style="display:flex;gap:11px"><span style="color:var(--teal);flex-shrink:0;font-weight:700;margin-top:1px">—</span><span>Rotten Tomatoes still at 3 counted reviews (no Tomatometer); Metacritic still at 0 critic reviews — no change since Day 8</span></div>
+        </div>
+      </div>
+    </div>
     <div class="card" style="padding:14px 24px;text-align:center;color:var(--ink3);font-size:12px">
-      Future updates appear here each morning at 7am Mexico City time.
+      The daily 7am monitoring cadence ended after the Aug 28, 2026 entry above. Updates now run around episode drops at the Studio Boss's discretion — the next check is expected around the Sept 2, 2026 Episode 4 "Arizmendi" release.
     </div>
   </div>
 </section>
