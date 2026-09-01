@@ -1,5 +1,16 @@
 [
   {
+    "outlet": "JustWatch",
+    "headline": "Las Azules Temporada 2 - JustWatch España",
+    "url": "https://www.justwatch.com/es/serie/las-azules/temporada-2",
+    "date": "Sep 1, 2026",
+    "ts": 20260901,
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Tech",
+    "excerpt": "JustWatch Spain listing for Las Azules Season 2: available on Apple TV+ (3 episodes, 7-day free trial then 9.99 euros/month) and Apple TV Amazon Channel. JustWatch rating 61% (106 votes), IMDb 7.3 (1.9k), Rotten Tomatoes 100%. Ranked number 563 in daily streaming charts."
+  },
+  {
     "outlet": "MijnSerie.nl",
     "headline": "Las Azules - Seizoen 2, Aflevering 4: 'Arizmendi'",
     "url": "https://www.mijnserie.nl/las-azules/afleveringen/seizoen_2/aflevering_4/",
@@ -97,6 +108,17 @@
     "market": "US",
     "type": "Entertainment",
     "excerpt": "Yahoo Noticias US Spanish-language syndication of coverage on Las Azules Season 2's exploration of institutional repression and memory tied to Mexico's historical violence, via the murdered-activist storyline."
+  },
+  {
+    "outlet": "que.es",
+    "headline": "Bárbara Mori arrasa con 'Las Azules' en Apple TV y ya es un fenómeno feminista global",
+    "url": "https://www.que.es/2026/08/31/las-azules-apple-tv-barbara-mori/",
+    "date": "Aug 31, 2026",
+    "ts": 20260831,
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Entertainment",
+    "excerpt": "Feature on Bárbara Mori leading Las Azules Season 2 on Apple TV+, framing the crime drama as a global feminist streaming phenomenon blending true crime with the story of Mexico's first female police unit."
   },
   {
     "outlet": "ComingSoon.net",
