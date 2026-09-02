@@ -1,0 +1,20 @@
+{
+  "_readme": "Persistent fetch-failure ledger for the Las Azules S2 media sweep routine. Sweeps must read this before attempting any body fetch on a candidate URL and skip anything currently in cooldown, rendering the skip on the sweep evidence line. failCount tracks consecutive full fallback-chain failures (WebFetch AND Firecrawl scrape both failed in the same attempt). Three consecutive full-chain failures sets cooldownUntil to 30 days out. After cooldown expires, the URL gets one retry (WebFetch then Firecrawl); success resets failCount to 0 and clears cooldownUntil, failure restarts the 30-day cooldown. See LEMA-9620 for origin and LEMA-9619 for the incident that motivated this file.",
+  "entries": [
+    {
+      "url": "https://www.imdb.com/news/ni65294281/",
+      "firstSeen": "2026-09-02T10:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-02T16:11:03Z",
+      "cooldownUntil": null,
+      "history": [
+        { "attempt": "2026-09-02T10:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-9608" },
+        { "attempt": "2026-09-02T12:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-9609" },
+        { "attempt": "2026-09-02T14:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-9614" },
+        { "attempt": "2026-09-02T16:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-9618" },
+        { "attempt": "2026-09-02T16:11:03Z", "method": "Firecrawl scrape", "status": 200, "issue": "LEMA-9620", "note": "Fallback chain resolved it. Firecrawl returned the real article body (a syndicated Variety renewal story, byline Joe Otterson, dated 2025-05-20). WebFetch alone still fails (403/202 zero-byte bot wall) but the standing fallback now succeeds, so this URL is not placed in cooldown. See LEMA-9620 deliverable for the decision reasoning." }
+      ]
+    }
+  ]
+}
