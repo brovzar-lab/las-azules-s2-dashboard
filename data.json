@@ -1,5 +1,38 @@
 [
   {
+    "outlet": "TheTVDB",
+    "headline": "Las Azules - All Seasons Episode Guide",
+    "url": "https://thetvdb.com/series/las-azules/allseasons/official",
+    "date": "Sep 2, 2026",
+    "ts": 20260902,
+    "lang": "EN",
+    "market": "International",
+    "type": "Tech",
+    "excerpt": "TheTVDB aired-order guide listing Season 1 (10 episodes, 2024) and Season 2 (8 episodes, Aug 12-Sep 30, 2026); episodes S02E05-E08 still listed as TBA."
+  },
+  {
+    "outlet": "IMDb (Espana)",
+    "headline": "Las Azules (Miniserie de TV 2024-2026) - IMDb",
+    "url": "https://www.imdb.com/es/title/tt20516590/",
+    "date": "Sep 2, 2026",
+    "ts": 20260902,
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Tech",
+    "excerpt": "Spanish-language IMDb listing for Las Azules, rated 7.3/10 from over 1,800 ratings; four women join Mexico's first female police force."
+  },
+  {
+    "outlet": "IMDb (Italia)",
+    "headline": "Las Azules (Mini serie TV 2024-2026) - IMDb",
+    "url": "https://www.imdb.com/it/title/tt20516590/",
+    "date": "Sep 2, 2026",
+    "ts": 20260902,
+    "lang": "IT",
+    "market": "International",
+    "type": "Tech",
+    "excerpt": "Italian-language IMDb listing for Las Azules, rated 7.3/10 from over 1,800 ratings."
+  },
+  {
     "outlet": "JustWatch",
     "headline": "Las Azules Temporada 2 - JustWatch España",
     "url": "https://www.justwatch.com/es/serie/las-azules/temporada-2",
@@ -3650,6 +3683,17 @@
     "market": "International",
     "type": "Social",
     "excerpt": "Personal social media post praising Amorita Rasgado's performance as Season 2 of Las Azules premieres on Apple TV."
+  },
+  {
+    "outlet": "TheTVDB",
+    "headline": "Las Azules Season 2 Episode 1 \"Mauricio\" - Episode Guide",
+    "url": "https://www.thetvdb.com/series/las-azules/episodes/10512996",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "lang": "EN",
+    "market": "International",
+    "type": "Tech",
+    "excerpt": "TheTVDB episode listing for the Season 2 premiere \"Mauricio\": new lieutenant Maria and the Azules investigate the murder of a college student."
   },
   {
     "outlet": "Fiction Horizon",
