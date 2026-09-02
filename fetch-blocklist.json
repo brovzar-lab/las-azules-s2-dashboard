@@ -18,6 +18,54 @@
         { "attempt": "2026-09-02T16:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-9618" },
         { "attempt": "2026-09-02T16:11:03Z", "method": "Firecrawl scrape", "status": 200, "issue": "LEMA-9620", "note": "Fallback chain resolved it. Firecrawl returned the real article body (a syndicated Variety renewal story, byline Joe Otterson, dated 2025-05-20). WebFetch alone still fails (403/202 zero-byte bot wall) but the standing fallback now succeeds, so this URL is not placed in cooldown. See LEMA-9620 deliverable for the decision reasoning." }
       ]
+    },
+    {
+      "url": "https://www.aol.com/entertainment/women-blue-renewed-season-2-190000238.html",
+      "firstSeen": "2026-09-02T18:06:40Z",
+      "failCount": 1,
+      "lastStatus": 404,
+      "lastAttempt": "2026-09-02T18:06:40Z",
+      "cooldownUntil": null,
+      "history": [
+        { "attempt": "2026-09-02T18:06:40Z", "method": "WebFetch", "status": 404, "issue": "LEMA-9631" },
+        { "attempt": "2026-09-02T18:06:40Z", "method": "Firecrawl scrape", "status": 200, "issue": "LEMA-9631", "note": "Firecrawl returned 200 but the body is AOL's generic page-not-found placeholder, not the article. Dead link, treated as a full-chain failure." }
+      ]
+    },
+    {
+      "url": "https://procine.cdmx.gob.mx/comunicacion/nota/las-azules-el-nuevo-drama-criminal-de-apple-tv-protagonizado-por-barbara-mori-y-ximena-sarinana",
+      "firstSeen": "2026-09-02T18:06:40Z",
+      "failCount": 1,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-02T18:06:40Z",
+      "cooldownUntil": null,
+      "history": [
+        { "attempt": "2026-09-02T18:06:40Z", "method": "WebFetch", "status": null, "issue": "LEMA-9631", "note": "ECONNREFUSED" },
+        { "attempt": "2026-09-02T18:06:40Z", "method": "Firecrawl scrape", "status": 408, "issue": "LEMA-9631", "note": "SCRAPE_TIMEOUT" }
+      ]
+    },
+    {
+      "url": "https://www.aol.com/perfect-crime-series-branded-simply-222400629.html",
+      "firstSeen": "2026-09-02T18:06:40Z",
+      "failCount": 1,
+      "lastStatus": 404,
+      "lastAttempt": "2026-09-02T18:06:40Z",
+      "cooldownUntil": null,
+      "history": [
+        { "attempt": "2026-09-02T18:06:40Z", "method": "WebFetch", "status": 404, "issue": "LEMA-9631" },
+        { "attempt": "2026-09-02T18:06:40Z", "method": "Firecrawl scrape", "status": 200, "issue": "LEMA-9631", "note": "Firecrawl returned 200 but the body is AOL's generic page-not-found placeholder, not the article. Dead link, treated as a full-chain failure." }
+      ]
+    },
+    {
+      "url": "https://stripe.jhu.edu/news/women-in-blue-the-inspiring-journey-of-female-tenn-cop",
+      "firstSeen": "2026-09-02T18:06:40Z",
+      "failCount": 1,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-02T18:06:40Z",
+      "cooldownUntil": null,
+      "history": [
+        { "attempt": "2026-09-02T18:06:40Z", "method": "WebFetch", "status": null, "issue": "LEMA-9631", "note": "ENOTFOUND (DNS resolution failed)" },
+        { "attempt": "2026-09-02T18:06:40Z", "method": "Firecrawl scrape", "status": null, "issue": "LEMA-9631", "note": "SCRAPE_DNS_RESOLUTION_ERROR" }
+      ]
     }
   ]
 }
