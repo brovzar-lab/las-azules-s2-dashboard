@@ -12,23 +12,73 @@
       "skipReason": "editorial_redundant_syndication",
       "skipNote": "Syndicated Variety wire story ('Women in Blue' Renewed for Season 2 at Apple TV+, byline Joe Otterson, dated 2025-05-20) republished by IMDb news. The same renewal announcement is already present in data.json from the Variety original (https://variety.com/2025/tv/news/women-in-blue-renewed-season-2-apple-tv-1236404908/) plus 15 other outlets covering the same event. Not a fetch failure, the URL is fetchable via the Firecrawl fallback (see history). Excluded on editorial grounds: adding it would be a duplicate-story entry, not new coverage. See LEMA-9621.",
       "history": [
-        { "attempt": "2026-09-02T10:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-9608" },
-        { "attempt": "2026-09-02T12:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-9609" },
-        { "attempt": "2026-09-02T14:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-9614" },
-        { "attempt": "2026-09-02T16:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-9618" },
-        { "attempt": "2026-09-02T16:11:03Z", "method": "Firecrawl scrape", "status": 200, "issue": "LEMA-9620", "note": "Fallback chain resolved it. Firecrawl returned the real article body (a syndicated Variety renewal story, byline Joe Otterson, dated 2025-05-20). WebFetch alone still fails (403/202 zero-byte bot wall) but the standing fallback now succeeds, so this URL is not placed in cooldown. See LEMA-9620 deliverable for the decision reasoning." }
+        {
+          "attempt": "2026-09-02T10:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9608"
+        },
+        {
+          "attempt": "2026-09-02T12:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9609"
+        },
+        {
+          "attempt": "2026-09-02T14:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9614"
+        },
+        {
+          "attempt": "2026-09-02T16:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9618"
+        },
+        {
+          "attempt": "2026-09-02T16:11:03Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9620",
+          "note": "Fallback chain resolved it. Firecrawl returned the real article body (a syndicated Variety renewal story, byline Joe Otterson, dated 2025-05-20). WebFetch alone still fails (403/202 zero-byte bot wall) but the standing fallback now succeeds, so this URL is not placed in cooldown. See LEMA-9620 deliverable for the decision reasoning."
+        }
       ]
     },
     {
       "url": "https://www.aol.com/entertainment/women-blue-renewed-season-2-190000238.html",
       "firstSeen": "2026-09-02T18:06:40Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-02T18:06:40Z",
+      "lastAttempt": "2026-09-02T22:10:00Z",
       "cooldownUntil": null,
       "history": [
-        { "attempt": "2026-09-02T18:06:40Z", "method": "WebFetch", "status": 404, "issue": "LEMA-9631" },
-        { "attempt": "2026-09-02T18:06:40Z", "method": "Firecrawl scrape", "status": 200, "issue": "LEMA-9631", "note": "Firecrawl returned 200 but the body is AOL's generic page-not-found placeholder, not the article. Dead link, treated as a full-chain failure." }
+        {
+          "attempt": "2026-09-02T18:06:40Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9631"
+        },
+        {
+          "attempt": "2026-09-02T18:06:40Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9631",
+          "note": "Firecrawl returned 200 but the body is AOL's generic page-not-found placeholder, not the article. Dead link, treated as a full-chain failure."
+        },
+        {
+          "attempt": "2026-09-02T22:10:00Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9634"
+        },
+        {
+          "attempt": "2026-09-02T22:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9634",
+          "note": "Firecrawl returned 200 but body is AOL's generic page-not-found placeholder again. Full-chain failure, failCount now 2."
+        }
       ]
     },
     {
@@ -39,8 +89,20 @@
       "lastAttempt": "2026-09-02T18:06:40Z",
       "cooldownUntil": null,
       "history": [
-        { "attempt": "2026-09-02T18:06:40Z", "method": "WebFetch", "status": null, "issue": "LEMA-9631", "note": "ECONNREFUSED" },
-        { "attempt": "2026-09-02T18:06:40Z", "method": "Firecrawl scrape", "status": 408, "issue": "LEMA-9631", "note": "SCRAPE_TIMEOUT" }
+        {
+          "attempt": "2026-09-02T18:06:40Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9631",
+          "note": "ECONNREFUSED"
+        },
+        {
+          "attempt": "2026-09-02T18:06:40Z",
+          "method": "Firecrawl scrape",
+          "status": 408,
+          "issue": "LEMA-9631",
+          "note": "SCRAPE_TIMEOUT"
+        }
       ]
     },
     {
@@ -51,8 +113,19 @@
       "lastAttempt": "2026-09-02T18:06:40Z",
       "cooldownUntil": null,
       "history": [
-        { "attempt": "2026-09-02T18:06:40Z", "method": "WebFetch", "status": 404, "issue": "LEMA-9631" },
-        { "attempt": "2026-09-02T18:06:40Z", "method": "Firecrawl scrape", "status": 200, "issue": "LEMA-9631", "note": "Firecrawl returned 200 but the body is AOL's generic page-not-found placeholder, not the article. Dead link, treated as a full-chain failure." }
+        {
+          "attempt": "2026-09-02T18:06:40Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9631"
+        },
+        {
+          "attempt": "2026-09-02T18:06:40Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9631",
+          "note": "Firecrawl returned 200 but the body is AOL's generic page-not-found placeholder, not the article. Dead link, treated as a full-chain failure."
+        }
       ]
     },
     {
@@ -63,8 +136,43 @@
       "lastAttempt": "2026-09-02T18:06:40Z",
       "cooldownUntil": null,
       "history": [
-        { "attempt": "2026-09-02T18:06:40Z", "method": "WebFetch", "status": null, "issue": "LEMA-9631", "note": "ENOTFOUND (DNS resolution failed)" },
-        { "attempt": "2026-09-02T18:06:40Z", "method": "Firecrawl scrape", "status": null, "issue": "LEMA-9631", "note": "SCRAPE_DNS_RESOLUTION_ERROR" }
+        {
+          "attempt": "2026-09-02T18:06:40Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9631",
+          "note": "ENOTFOUND (DNS resolution failed)"
+        },
+        {
+          "attempt": "2026-09-02T18:06:40Z",
+          "method": "Firecrawl scrape",
+          "status": null,
+          "issue": "LEMA-9631",
+          "note": "SCRAPE_DNS_RESOLUTION_ERROR"
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/thefemalelead/videos/when-filming-las-azules-the-series-inspired-by-the-true-story-of-mexicos-first-f/1370329548535537/",
+      "firstSeen": "2026-09-02T22:10:00Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-02T22:10:00Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-02T22:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9634",
+          "note": "WebFetch returned 200 but body contained only the word 'Facebook' with no post content (bot wall / login gate), treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-02T22:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9634"
+        }
       ]
     }
   ]
