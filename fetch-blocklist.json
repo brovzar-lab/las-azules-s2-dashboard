@@ -1,5 +1,5 @@
 {
-  "_readme": "Persistent fetch-failure ledger for the Las Azules S2 media sweep routine. Sweeps must read this before attempting any body fetch on a candidate URL and skip anything currently in cooldown, rendering the skip on the sweep evidence line. failCount tracks consecutive full fallback-chain failures (WebFetch AND Firecrawl scrape both failed in the same attempt). Three consecutive full-chain failures sets cooldownUntil to 30 days out. After cooldown expires, the URL gets one retry (WebFetch then Firecrawl); success resets failCount to 0 and clears cooldownUntil, failure restarts the 30-day cooldown. See LEMA-9620 for origin and LEMA-9619 for the incident that motivated this file.",
+  "_readme": "Persistent fetch-failure ledger for the Las Azules S2 media sweep routine. Sweeps must read this before attempting any body fetch on a candidate URL and skip anything currently in cooldown, rendering the skip on the sweep evidence line. failCount tracks consecutive full fallback-chain failures (WebFetch AND Firecrawl scrape both failed in the same attempt). Three consecutive full-chain failures sets cooldownUntil to 30 days out. After cooldown expires, the URL gets one retry (WebFetch then Firecrawl); success resets failCount to 0 and clears cooldownUntil, failure restarts the 30-day cooldown. A separate category, permanentSkip with a skipReason, marks URLs that are fetchable but excluded for an editorial reason (for example a syndicated republication of a story already in data.json under a primary outlet). permanentSkip entries are skipped regardless of cooldownUntil and must never be treated as, or logged as, a fetch failure. See LEMA-9620 for origin, LEMA-9619 for the incident that motivated this file, and LEMA-9621 for the permanentSkip category.",
   "entries": [
     {
       "url": "https://www.imdb.com/news/ni65294281/",
@@ -8,6 +8,9 @@
       "lastStatus": 200,
       "lastAttempt": "2026-09-02T16:11:03Z",
       "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Syndicated Variety wire story ('Women in Blue' Renewed for Season 2 at Apple TV+, byline Joe Otterson, dated 2025-05-20) republished by IMDb news. The same renewal announcement is already present in data.json from the Variety original (https://variety.com/2025/tv/news/women-in-blue-renewed-season-2-apple-tv-1236404908/) plus 15 other outlets covering the same event. Not a fetch failure, the URL is fetchable via the Firecrawl fallback (see history). Excluded on editorial grounds: adding it would be a duplicate-story entry, not new coverage. See LEMA-9621.",
       "history": [
         { "attempt": "2026-09-02T10:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-9608" },
         { "attempt": "2026-09-02T12:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-9609" },
