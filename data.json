@@ -33,6 +33,39 @@
     "excerpt": "Italian-language IMDb listing for Las Azules, rated 7.3/10 from over 1,800 ratings."
   },
   {
+    "outlet": "Apple TV (Luxembourg)",
+    "headline": "Las Azules - Apple TV show page (Luxembourg)",
+    "url": "https://tv.apple.com/lu/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+    "date": "Sep 2, 2026",
+    "ts": 20260902,
+    "lang": "EN",
+    "market": "International",
+    "type": "Tech",
+    "excerpt": "Apple TV Luxembourg show page for Las Azules with Season 1 and Season 2 tabs, episode descriptions, cast info (Barbara Mori, Ximena Sarinana), and pricing (7-day free trial then EUR 9.99/month)."
+  },
+  {
+    "outlet": "TVmaze",
+    "headline": "Las Azules / Women in Blue - TVmaze show page",
+    "url": "https://www.tvmaze.com/shows/62238/show-slug",
+    "date": "Sep 2, 2026",
+    "ts": 20260902,
+    "lang": "EN",
+    "market": "International",
+    "type": "Tech",
+    "excerpt": "TVmaze official show listing: cast (Barbara Mori, Ximena Sarinana, Natalia Tellez, Amorita Rasgado), episode schedule, and Apple TV+ streaming availability for the Spanish-language drama created by Fernando Rovzar and Pablo Aramendi."
+  },
+  {
+    "outlet": "IMDb",
+    "headline": "Women in Blue (TV Mini Series 2024) - IMDb",
+    "url": "https://www.imdb.com/title/tt20516590/",
+    "date": "Sep 2, 2026",
+    "ts": 20260902,
+    "lang": "EN",
+    "market": "US",
+    "type": "Tech",
+    "excerpt": "Main English-language IMDb listing for Las Azules / Women in Blue, rated 7.3/10 from over 1,800 ratings."
+  },
+  {
     "outlet": "JustWatch",
     "headline": "Las Azules Temporada 2 - JustWatch España",
     "url": "https://www.justwatch.com/es/serie/las-azules/temporada-2",
@@ -6268,6 +6301,17 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "Fernando Rovzar discusses directing his wife Barbara Mori as the lead in Las Azules, his first collaboration with her, in this Peru-based entertainment feature."
+  },
+  {
+    "outlet": "Axios",
+    "headline": "AppleTV's Las Azules portrays Mexico's first women police",
+    "url": "https://www.axios.com/2024/08/08/las-azules-apple-tv-women-in-blue",
+    "date": "Aug 8, 2024",
+    "ts": 20240808,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Axios coverage of the Season 1 premiere of Las Azules (Women in Blue), the AppleTV+ series depicting Mexico's first female police force."
   },
   {
     "outlet": "Collider",
