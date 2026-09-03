@@ -121,6 +121,17 @@
     "excerpt": "JustWatch South Africa streaming listing for Las Azules: available on Apple TV+. JustWatch rating 68% (386 votes)."
   },
   {
+    "outlet": "Patch (Los Angeles)",
+    "headline": "2026–2027 TV Show Renewals, Cancellations, And Premieres: The Complete Guide",
+    "url": "https://patch.com/california/los-angeles/2026-2027-tv-show-renewals-cancellations-premieres-complete-guide",
+    "date": "Sep 2, 2026",
+    "ts": 20260902,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Los Angeles Patch's comprehensive 2026-2027 TV renewals/cancellations/premieres guide lists Apple TV+'s \"Women in Blue\" as renewed for Season 2."
+  },
+  {
     "outlet": "JustWatch",
     "headline": "Las Azules Temporada 2 - JustWatch España",
     "url": "https://www.justwatch.com/es/serie/las-azules/temporada-2",
@@ -6316,6 +6327,18 @@
     "storyGroup": "deadline-s2-renewal-20250501"
   },
   {
+    "outlet": "IMDb",
+    "headline": "Women in Blue (Las Azules) Renewed for a Second Season",
+    "url": "https://www.imdb.com/news/ni65294704/",
+    "date": "May 21, 2025",
+    "ts": 20250521,
+    "lang": "EN",
+    "market": "International",
+    "type": "Trade",
+    "excerpt": "IMDb syndicates Vital Thrills' report that Apple TV+ has renewed the Spanish-language crime series for an eight-episode second season, with the original cast returning to investigate a murder tied to a deeper conspiracy.",
+    "storyGroup": "deadline-s2-renewal-20250501"
+  },
+  {
     "outlet": "Apple TV Press",
     "headline": "Apple's critically acclaimed Spanish-language drama 'Women in Blue' ('Las Azules') lands season two renewal",
     "url": "https://www.apple.com/tv-pr/news/2025/05/apples-critically-acclaimed-spanish-language-drama-women-in-blue-las-azules-lands-season-two-renewal/",
@@ -6596,7 +6619,8 @@
     "lang": "EN",
     "market": "International",
     "type": "Entertainment",
-    "excerpt": "Creator Fernando Rovzar and the cast discuss bringing Mexico's first female police unit to Apple TV+, exploring 1970s patriarchal Mexico through historical fact and crime drama."
+    "excerpt": "Creator Fernando Rovzar and the cast discuss bringing Mexico's first female police unit to Apple TV+, exploring 1970s patriarchal Mexico through historical fact and crime drama.",
+    "storyGroup": "heyuguys-s2-cast-interviews-20240731"
   },
   {
     "outlet": "Screen Anarchy",
@@ -6652,6 +6676,18 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "Cast of Apple TV+'s Women in Blue (Las Azules) discuss what drew them to the project chronicling Mexico City's first female-led police force in 1971, and the show's themes of female empowerment and sisterhood."
+  },
+  {
+    "outlet": "IMDb",
+    "headline": "Women in Blue (Las Azules) Interviews: The Creator & cast tell all about AppleTV+'s latest police drama",
+    "url": "https://www.imdb.com/news/ni64735557/",
+    "date": "Jul 31, 2024",
+    "ts": 20240731,
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "IMDb syndicates HeyUGuys' interview with creator Fernando Rovzar and cast about bringing Mexico's first female police unit to Apple TV+, exploring 1970s patriarchal Mexico through historical fact and crime drama.",
+    "storyGroup": "heyuguys-s2-cast-interviews-20240731"
   },
   {
     "outlet": "Mindies",
