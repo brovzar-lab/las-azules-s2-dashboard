@@ -48,10 +48,10 @@
     {
       "url": "https://www.aol.com/entertainment/women-blue-renewed-season-2-190000238.html",
       "firstSeen": "2026-09-02T18:06:40Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-02T22:10:00Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-03T00:15:00Z",
+      "cooldownUntil": "2026-10-03T00:15:00Z",
       "history": [
         {
           "attempt": "2026-09-02T18:06:40Z",
@@ -78,6 +78,19 @@
           "status": 200,
           "issue": "LEMA-9634",
           "note": "Firecrawl returned 200 but body is AOL's generic page-not-found placeholder again. Full-chain failure, failCount now 2."
+        },
+        {
+          "attempt": "2026-09-03T00:15:00Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9635"
+        },
+        {
+          "attempt": "2026-09-03T00:15:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9635",
+          "note": "Firecrawl returned 200 but body is AOL's generic page-not-found placeholder again. Full-chain failure, failCount now 3, cooldown set to 30 days."
         }
       ]
     },
@@ -131,9 +144,9 @@
     {
       "url": "https://stripe.jhu.edu/news/women-in-blue-the-inspiring-journey-of-female-tenn-cop",
       "firstSeen": "2026-09-02T18:06:40Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": null,
-      "lastAttempt": "2026-09-02T18:06:40Z",
+      "lastAttempt": "2026-09-03T00:15:00Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -149,15 +162,29 @@
           "status": null,
           "issue": "LEMA-9631",
           "note": "SCRAPE_DNS_RESOLUTION_ERROR"
+        },
+        {
+          "attempt": "2026-09-03T00:15:00Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9635",
+          "note": "ENOTFOUND (DNS resolution failed), same as prior attempt"
+        },
+        {
+          "attempt": "2026-09-03T00:15:00Z",
+          "method": "Firecrawl scrape",
+          "status": null,
+          "issue": "LEMA-9635",
+          "note": "SCRAPE_DNS_RESOLUTION_ERROR, same as prior attempt. failCount now 2, one more full-chain failure will trigger 30-day cooldown."
         }
       ]
     },
     {
       "url": "https://www.facebook.com/thefemalelead/videos/when-filming-las-azules-the-series-inspired-by-the-true-story-of-mexicos-first-f/1370329548535537/",
       "firstSeen": "2026-09-02T22:10:00Z",
-      "failCount": 1,
-      "lastStatus": 403,
-      "lastAttempt": "2026-09-02T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-03T00:15:00Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -172,6 +199,13 @@
           "method": "Firecrawl scrape",
           "status": 403,
           "issue": "LEMA-9634"
+        },
+        {
+          "attempt": "2026-09-03T00:15:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9635",
+          "note": "Retry succeeded: WebFetch returned real post content this time (cast meeting original female police officers), not the empty bot-wall body seen previously. Ledger reset per fallback-chain success rule. Not added to data.json this run: no publish date could be located anywhere in the fetched body or via corroborating search, and the schema requires a real ts/date -- fabricating one would violate the no-fabrication guardrail. Candidate remains available for a future run if a dateable source (e.g. a news pickup citing this post) surfaces."
         }
       ]
     }
