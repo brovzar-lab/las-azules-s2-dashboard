@@ -1,5 +1,16 @@
 [
   {
+    "outlet": "Apple TV (US, Spanish)",
+    "headline": "Las Azules - Apple TV show page (US, Spanish-language)",
+    "url": "https://tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39?l=es",
+    "date": "Sep 3, 2026",
+    "ts": 20260903,
+    "lang": "ES",
+    "market": "US",
+    "type": "Tech",
+    "excerpt": "Apple TV US show page (Spanish-language toggle) for Las Azules: Season 1 (6 episodes) and Season 2 listed, full cast (Barbara Mori, Ximena Sarinana, Natalia Tellez, Amorita Rasgado, Miguel Rodarte, Leonardo Sbaraglia), new episodes Wednesdays, 7-day free trial then $14.99/month, TV-MA rating."
+  },
+  {
     "outlet": "TheTVDB",
     "headline": "Las Azules - All Seasons Episode Guide",
     "url": "https://thetvdb.com/series/las-azules/allseasons/official",
