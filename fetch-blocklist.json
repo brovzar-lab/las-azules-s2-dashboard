@@ -1,5 +1,5 @@
 {
-  "_readme": "Persistent fetch-failure ledger for the Las Azules S2 media sweep routine. Sweeps must read this before attempting any body fetch on a candidate URL and skip anything currently in cooldown, rendering the skip on the sweep evidence line. failCount tracks consecutive full fallback-chain failures (WebFetch AND Firecrawl scrape both failed in the same attempt). Three consecutive full-chain failures sets cooldownUntil to 30 days out. After cooldown expires, the URL gets one retry (WebFetch then Firecrawl); success resets failCount to 0 and clears cooldownUntil, failure restarts the 30-day cooldown. A separate category, permanentSkip with a skipReason, marks URLs that are fetchable but excluded for an editorial reason (for example a syndicated republication of a story already in data.json under a primary outlet). permanentSkip entries are skipped regardless of cooldownUntil and must never be treated as, or logged as, a fetch failure. See LEMA-9620 for origin, LEMA-9619 for the incident that motivated this file, and LEMA-9621 for the permanentSkip category.",
+  "_readme": "Persistent fetch-failure ledger for the Las Azules S2 media sweep routine. Sweeps must read this before attempting any body fetch on a candidate URL and skip anything currently in cooldown, rendering the skip on the sweep evidence line. failCount tracks consecutive full fallback-chain failures (WebFetch AND Firecrawl scrape both failed in the same attempt). Three consecutive full-chain failures sets cooldownUntil to 30 days out. After cooldown expires, the URL gets one retry (WebFetch then Firecrawl); success resets failCount to 0 and clears cooldownUntil, failure restarts the 30-day cooldown. A separate category, permanentSkip with a skipReason, marks URLs that are fetchable but excluded for an editorial reason (for example a syndicated republication of a story already in data.json under a primary outlet). permanentSkip entries are skipped regardless of cooldownUntil and must never be treated as, or logged as, a fetch failure. See LEMA-9620 for origin, LEMA-9619 for the incident that motivated this file, and LEMA-9621 for the permanentSkip category. Two standing editorial rules, adopted LEMA-9642 (CEO ruling on LEMA-9641), apply to every sweep going forward and must not be re-escalated: (1) No proxy, inferred, or approximated dates ever enter data.json. A crawler artifact like this ledger's firstSeen timestamp is never a substitute for a real, sourced publish date -- not even with a disclaimer in the excerpt, because sorting and the dashboard KPIs read ts, not the excerpt. If no real publish date can be recovered (WebFetch AND Firecrawl both exhausted), the candidate is permanentSkip with skipReason \"editorial_undateable\" and reviewable: true, never added with a substitute date. (2) Social-candidate relevance gate, separate from and prior to any dateability check: vendor, supplier, crew-personal, and fan-repost accounts are not media coverage and must be skipped as permanentSkip on relevance grounds (skipReason \"editorial_vendor_promo\" for a vendor/supplier company account, \"editorial_personal_repost\" for an individual crew-personal or fan-repost account) regardless of whether a date could be found. Publisher, outlet, and editorial-brand accounts are media coverage and are evaluated normally, dateability included. reviewable: true (used on editorial_undateable entries only) marks a permanentSkip entry as genuine coverage omitted solely for lack of a real date, distinct from editorial_redundant_syndication (we already have the story) and editorial_vendor_promo/editorial_personal_repost (not coverage at all, dateability irrelevant). It is queryable only, for a future manual date lookup; it implies no dashboard or UI surfacing.",
   "entries": [
     {
       "url": "https://www.imdb.com/news/ni65294281/",
@@ -213,6 +213,10 @@
       "lastStatus": 200,
       "lastAttempt": "2026-09-03T06:00:25Z",
       "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Mandatory date-recovery gate (LEMA-9642, CEO ruling on LEMA-9641): prior six attempts (see history) all used WebFetch only, because the fallback chain fires only on failure and WebFetch kept returning 200 with real content. WebFetch summarizes the body and does not surface timestamp elements. On 2026-09-03 a targeted Firecrawl scrape was attempted, explicitly to check og:article:published_time, datePublished, and the rendered post timestamp: Firecrawl returned success:false, \"we do not support this site\" -- a blanket policy refusal for facebook.com, not a per-URL technical failure (consistent with the 403s Firecrawl has returned against every other facebook.com URL in this ledger). As supplementary diligence beyond the mandated Firecrawl attempt, the raw page HTML was also fetched directly and searched for date-bearing meta tags and JSON fields: og:type, og:description, og:image, og:url, og:locale are present, but no og:article:published_time, datePublished, publish_time, creation_time, or any other publish/creation timestamp field exists anywhere in the ~466KB page source. The only time-like values present are client-side request-timing telemetry (timeOfRequestStart/timeOfResponseStart), not a publication date. Both WebFetch and Firecrawl are now exhausted and no date is recoverable from the fetchable page. Per Ruling 1 (LEMA-9641), no proxy or approximated date may be substituted. Skipped as editorial_undateable, reviewable=true so this entry stays listable for a future manual date lookup (e.g. if a news pickup ever cites this post's exact date).",
       "history": [
         {
           "attempt": "2026-09-02T22:10:00Z",
@@ -254,6 +258,20 @@
           "status": 200,
           "issue": "LEMA-9638",
           "note": "Retried again per Pass 0 rule. Real post content returned (cast met original female officers). Still no publish date anywhere in body or via corroborating search. Not added to data.json."
+        },
+        {
+          "attempt": "2026-09-03T10:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": null,
+          "issue": "LEMA-9642",
+          "note": "success:false, error: \"We apologize for the inconvenience but we do not support this site.\" Facebook is not a supported scrape domain for Firecrawl -- a blanket policy block, not a URL-specific failure."
+        },
+        {
+          "attempt": "2026-09-03T10:10:00Z",
+          "method": "Raw HTML meta-tag inspection (supplementary, direct curl)",
+          "status": 200,
+          "issue": "LEMA-9642",
+          "note": "Fetched raw page source directly to check for date metadata beyond what WebFetch/Firecrawl surface. og:type, og:description, og:image, og:url, og:locale present and confirm this is the correct post (matches prior WebFetch content). No og:article:published_time, datePublished, publish_time, or creation_time field found anywhere in the page source. Confirms no date is recoverable from this page by any fetch method. permanentSkip applied, see skipNote."
         }
       ]
     },
@@ -338,6 +356,9 @@
       "lastStatus": 200,
       "lastAttempt": "2026-09-03T06:00:25Z",
       "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "CTT EXP & RENTALS is the camera/lighting rental vendor on the Las Azules S2 production. This post is supplier marketing that name-checks the show (equipment list: ARRI Alexa 35 4.6K, lighting rigs; credits DP Daniel Jacobs and Dariela Ludlow AMC; mentions cast Barbara Mori and Leonardo Sbaraglia). It is not media coverage of the show and would not belong on the dashboard even with a sourced publish date, so dateability was never resolved for it. Skipped on editorial relevance grounds per LEMA-9642 (CEO ruling on LEMA-9641), using the permanentSkip category established in LEMA-9621. Confirmed same underlying post as the /CTTEXPRENTALS/posts/.../1513668230800391/ entry below: identical caption text (verified via WebFetch on both URLs 2026-09-03), same account, same URL slug, different Facebook post-type IDs (one is the video permalink, one is the post permalink for the same upload).",
       "history": [
         {
           "attempt": "2026-09-03T02:00:00Z",
@@ -359,6 +380,13 @@
           "status": 200,
           "issue": "LEMA-9638",
           "note": "Retried again per Pass 0 rule. Real post content returned (equipment/crew details for S2 production). Still no publish date anywhere in body or via corroborating search. Not added to data.json."
+        },
+        {
+          "attempt": "2026-09-03T10:10:00Z",
+          "method": "WebFetch (relevance confirmation)",
+          "status": 200,
+          "issue": "LEMA-9642",
+          "note": "Fetched to confirm caption content matches the /posts/ variant below (same post). Content confirmed: CTT EXP & RENTALS vendor promo post. No further dating attempt made -- skipped on relevance, not dateability, per CEO ruling on LEMA-9641."
         }
       ]
     },
@@ -392,6 +420,9 @@
       "lastStatus": 200,
       "lastAttempt": "2026-09-03T04:00:17Z",
       "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "Same relevance disposition as the /CTTEXPRENTALS/videos/.../1538511670889680/ entry above: CTT EXP & RENTALS camera/lighting vendor supplier-marketing post, not media coverage. Confirmed via WebFetch (2026-09-03) that this is the same underlying post as that /videos/ entry -- identical caption text (\"Las azules Temporada 2 llego a Apple TV... equipo cinematografico de CTT Exp & Rentals... Direccion de Fotografia de Daniel Jacobs y Dariela Ludlow AMC\"), same account, same URL slug. This /posts/ URL is Facebook's post-permalink variant of the same upload the /videos/ URL addresses via its video-permalink variant; it is not a second, distinct post. This entry was not named in the original LEMA-9641 escalation, it was found in this ledger during LEMA-9642. Skipped on editorial relevance grounds, using the permanentSkip category from LEMA-9621.",
       "history": [
         {
           "attempt": "2026-09-03T04:00:17Z",
@@ -399,6 +430,13 @@
           "status": 200,
           "issue": "LEMA-9637",
           "note": "Real post content returned (CTT EXP & RENTALS BTS post about Las Azules S2 cinematography equipment, ARRI Alexa 35, cast including Bárbara Mori and Leonardo Sbaraglia). No publish date anywhere in the body or via corroborating search. Not added to data.json: schema requires a real ts/date, fabricating one would violate the no-fabrication guardrail. Candidate remains available for a future run if a dateable source surfaces."
+        },
+        {
+          "attempt": "2026-09-03T10:10:00Z",
+          "method": "WebFetch (relevance confirmation)",
+          "status": 200,
+          "issue": "LEMA-9642",
+          "note": "Fetched to confirm caption content matches the /videos/ variant above (same post, two permalink forms). Skipped on relevance, not dateability, per CEO ruling on LEMA-9641."
         }
       ]
     },
@@ -432,6 +470,9 @@
       "lastStatus": 403,
       "lastAttempt": "2026-09-03T10:00:39Z",
       "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "oscarurielcine is an individual crew/industry-personal account (not a publisher, outlet, or vendor company), reposting a clip about Las Azules S2 reaching Apple TV. Under the standing relevance rule adopted in LEMA-9642 (CEO ruling on LEMA-9641), crew-personal and fan-repost accounts are not media coverage, the same gate that disposes of the CTT vendor posts above. Skipped now on relevance rather than left to accrue fail counts behind the Facebook bot wall as though it were a source worth recovering (it was at failCount 1, 403 via Firecrawl, before this skip). Labelled editorial_personal_repost rather than reusing editorial_vendor_promo because this is an individual's repost, not a vendor/supplier company account -- a distinct sub-case of the same relevance rule; flagged in the LEMA-9642 deliverable as a naming judgment call for Studio Boss to confirm or override.",
       "history": [
         {
           "attempt": "2026-09-03T10:00:39Z",
@@ -445,6 +486,13 @@
           "method": "Firecrawl scrape",
           "status": 403,
           "issue": "LEMA-9640"
+        },
+        {
+          "attempt": "2026-09-03T10:10:00Z",
+          "method": "Editorial relevance skip (no further fetch)",
+          "status": null,
+          "issue": "LEMA-9642",
+          "note": "Marked permanentSkip on relevance grounds per CEO ruling on LEMA-9641 / LEMA-9642. Not attempted further; the bot-wall failure at failCount=1 (LEMA-9640) is now moot since the URL is excluded on relevance regardless of fetchability."
         }
       ]
     }
