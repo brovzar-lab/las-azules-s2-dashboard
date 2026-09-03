@@ -617,6 +617,34 @@
       "skipReason": "editorial_personal_repost",
       "skipNote": "Cast member Ximena Sarinana's personal TikTok music account (@ximenasarinanamusic) reposting show promo content ('El proximo 31 de julio se estrenara mi proxima serie #LasAzules en Apple TV+...'), referencing the original 2024 S1 premiere, not S2 coverage. Individual crew-personal account, not an outlet/publisher/official show account -- fails the Rule B relevance gate. No fetch-fallback-chain attempt made; dateability is irrelevant once the relevance gate fails.",
       "history": []
+    },
+    {
+      "url": "https://tv.apple.com/us/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-09-03T22:01:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-03T22:01:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "US Apple TV show landing page for Women in Blue (umc.cmc.73wmdmkfpta5ul1vbwckmme39), surfaced during Pass 2 general web sweep (LEMA-9653). WebFetch returned 200 with real page content but only 'Released in 2024' / '2024 - 57m' as time info, no day-level date. Firecrawl scrape confirmed: full metadata block retrieved (og:title, og:description, og:image, etc.) but no og:article:published_time, datePublished, or any other publish/update timestamp field present anywhere in metadata or body. This is an evergreen title/show landing page (still only lists Season 1 episode count in the fetched body), not a dated article. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted, so not added to data.json. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-03T22:01:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9653",
+          "note": "Real page content returned (Women in Blue show page, Season 1 episodes, cast, subscription info) but no day-level publish/update date, only 'Released in 2024'."
+        },
+        {
+          "attempt": "2026-09-03T22:01:04Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9653",
+          "note": "Full metadata block retrieved successfully, but no publish/update date field present anywhere (checked og:article:published_time, datePublished, and all other metadata keys). Undateable per Rule A."
+        }
+      ]
     }
   ]
 }
