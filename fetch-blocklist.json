@@ -278,10 +278,10 @@
     {
       "url": "https://www.tiktok.com/@ledcardenas/video/7398259345248488710?lang=es",
       "firstSeen": "2026-09-03T02:00:00Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-03T06:00:25Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-03T16:03:21Z",
+      "cooldownUntil": "2026-10-03T16:03:21Z",
       "history": [
         {
           "attempt": "2026-09-03T02:00:00Z",
@@ -310,16 +310,30 @@
           "status": 403,
           "issue": "LEMA-9638",
           "note": "Firecrawl: 'we do not support this site'. Full-chain failure, failCount now 2."
+        },
+        {
+          "attempt": "2026-09-03T16:03:21Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9649",
+          "note": "Returned only TikTok platform header/image URL, no caption, account, or date metadata -- empty-content failure."
+        },
+        {
+          "attempt": "2026-09-03T16:03:21Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9649",
+          "note": "Firecrawl returned a blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days."
         }
       ]
     },
     {
       "url": "https://guides.justwatch.com/gt/serie/las-azules",
       "firstSeen": "2026-09-03T02:00:00Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-03T06:00:25Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-03T16:03:21Z",
+      "cooldownUntil": "2026-10-03T16:03:21Z",
       "history": [
         {
           "attempt": "2026-09-03T02:00:00Z",
@@ -346,6 +360,19 @@
           "status": 404,
           "issue": "LEMA-9638",
           "note": "Confirmed 404 Not Found again. Full-chain failure, failCount now 2."
+        },
+        {
+          "attempt": "2026-09-03T16:03:21Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9649"
+        },
+        {
+          "attempt": "2026-09-03T16:03:21Z",
+          "method": "Firecrawl scrape",
+          "status": 404,
+          "issue": "LEMA-9649",
+          "note": "Real 404, page not found (not a bot-wall placeholder). Full-chain failure, failCount now 3, cooldown set to 30 days."
         }
       ]
     },
@@ -550,6 +577,46 @@
           "note": "Confirmed same content and metadata, no date field found in body or metadata block. Undateable per Rule A."
         }
       ]
+    },
+    {
+      "url": "https://www.facebook.com/appletv/videos/women-in-blue-las-azules-official-trailer-apple-tv/2197306593938999/",
+      "firstSeen": "2026-09-03T16:03:21Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-03T16:03:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Official Apple TV Facebook account (publisher/network account, media coverage per Rule B). Caption: 'Sometimes the best man for the job is a woman. Women in Blue (Las Azules) premieres July 31 on Apple TV+' -- WebFetch surfaced the caption but no year and no confirmed real publish date (ambiguous, could be the original 2024 S1 premiere promo, not new S2 coverage). Firecrawl scrape returned a blanket 'we do not support this site' refusal for facebook.com, a valid documented exhaustion of the method per Rule A. No real sourced publish date could be recovered after both methods -- not added to data.json per Rule A (no proxy/approximated dates). Flagged reviewable for a future manual date lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-03T16:03:21Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9649",
+          "note": "Got caption text but no confirmed year/date."
+        },
+        {
+          "attempt": "2026-09-03T16:03:21Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9649",
+          "note": "Blanket 'we do not support this site' refusal for facebook.com."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/@ximenasarinanamusic/video/7381500211820023046",
+      "firstSeen": "2026-09-03T16:03:21Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-03T16:03:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Cast member Ximena Sarinana's personal TikTok music account (@ximenasarinanamusic) reposting show promo content ('El proximo 31 de julio se estrenara mi proxima serie #LasAzules en Apple TV+...'), referencing the original 2024 S1 premiere, not S2 coverage. Individual crew-personal account, not an outlet/publisher/official show account -- fails the Rule B relevance gate. No fetch-fallback-chain attempt made; dateability is irrelevant once the relevance gate fails.",
+      "history": []
     }
   ]
 }
