@@ -121,9 +121,9 @@
     {
       "url": "https://www.aol.com/perfect-crime-series-branded-simply-222400629.html",
       "firstSeen": "2026-09-02T18:06:40Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-02T18:06:40Z",
+      "lastAttempt": "2026-09-03T04:00:17Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -138,16 +138,29 @@
           "status": 200,
           "issue": "LEMA-9631",
           "note": "Firecrawl returned 200 but the body is AOL's generic page-not-found placeholder, not the article. Dead link, treated as a full-chain failure."
+        },
+        {
+          "attempt": "2026-09-03T04:00:17Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9637"
+        },
+        {
+          "attempt": "2026-09-03T04:00:17Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9637",
+          "note": "Firecrawl returned 200 but body is AOL's generic page-not-found placeholder again. Full-chain failure, failCount now 2."
         }
       ]
     },
     {
       "url": "https://stripe.jhu.edu/news/women-in-blue-the-inspiring-journey-of-female-tenn-cop",
       "firstSeen": "2026-09-02T18:06:40Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": null,
-      "lastAttempt": "2026-09-03T00:15:00Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-03T04:00:17Z",
+      "cooldownUntil": "2026-10-03T04:00:17Z",
       "history": [
         {
           "attempt": "2026-09-02T18:06:40Z",
@@ -176,6 +189,20 @@
           "status": null,
           "issue": "LEMA-9635",
           "note": "SCRAPE_DNS_RESOLUTION_ERROR, same as prior attempt. failCount now 2, one more full-chain failure will trigger 30-day cooldown."
+        },
+        {
+          "attempt": "2026-09-03T04:00:17Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9637",
+          "note": "ENOTFOUND (DNS resolution failed), same as prior attempts"
+        },
+        {
+          "attempt": "2026-09-03T04:00:17Z",
+          "method": "Firecrawl scrape",
+          "status": null,
+          "issue": "LEMA-9637",
+          "note": "success:false, empty body. failCount now 3, cooldown set to 30 days."
         }
       ]
     },
@@ -184,7 +211,7 @@
       "firstSeen": "2026-09-02T22:10:00Z",
       "failCount": 0,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-03T02:00:00Z",
+      "lastAttempt": "2026-09-03T04:00:17Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -213,6 +240,13 @@
           "status": 200,
           "issue": "LEMA-9636",
           "note": "Retried per Pass 0 rule (cooldownUntil null). WebFetch returned real post content again (cast meeting original female police officers). Still no publish date anywhere in the body or via corroborating WebSearch this run. Not added to data.json: schema requires a real ts/date, fabricating one would violate the no-fabrication guardrail. Candidate remains available for a future run if a dateable source surfaces."
+        },
+        {
+          "attempt": "2026-09-03T04:00:17Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9637",
+          "note": "Retried again per Pass 0 rule. Real post content returned (cast met ~10 original female officers during filming). Still no publish date anywhere in body or via corroborating search. Not added to data.json."
         }
       ]
     },
@@ -268,7 +302,7 @@
       "firstSeen": "2026-09-03T02:00:00Z",
       "failCount": 0,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-03T02:00:00Z",
+      "lastAttempt": "2026-09-03T04:00:17Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -277,6 +311,53 @@
           "status": 200,
           "issue": "LEMA-9636",
           "note": "WebFetch returned real post content (CTT EXP & RENTALS equipment/BTS post about Las Azules S2 production, ARRI Alexa 35 camera package). No publish date anywhere in the body or via corroborating WebSearch this run. Not added to data.json: schema requires a real ts/date, fabricating one would violate the no-fabrication guardrail. Candidate remains available for a future run if a dateable source surfaces."
+        },
+        {
+          "attempt": "2026-09-03T04:00:17Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9637",
+          "note": "Retried again per Pass 0 rule. Real post content returned (CTT EXP & RENTALS BTS post, ARRI Alexa 35). Still no publish date anywhere in body or via corroborating search. Not added to data.json: schema requires a real ts/date, fabricating one would violate the no-fabrication guardrail."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.com/title/tt20516590/",
+      "firstSeen": "2026-09-03T04:00:17Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-03T04:00:17Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-03T04:00:17Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9637"
+        },
+        {
+          "attempt": "2026-09-03T04:00:17Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9637",
+          "note": "Firecrawl returned 200 but the body was an ad-blocker error page ('s.amazon-adsystem.com is blocked'), not the real IMDb title page content. Treated as a full-chain failure (empty/unusable body)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/CTTEXPRENTALS/posts/las-azules-temporada-2-lleg%C3%B3-a-apple-tv%EF%B8%8Festa-serie-producida-por-lemon-studios-f/1513668230800391/",
+      "firstSeen": "2026-09-03T04:00:17Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-03T04:00:17Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-03T04:00:17Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9637",
+          "note": "Real post content returned (CTT EXP & RENTALS BTS post about Las Azules S2 cinematography equipment, ARRI Alexa 35, cast including Bárbara Mori and Leonardo Sbaraglia). No publish date anywhere in the body or via corroborating search. Not added to data.json: schema requires a real ts/date, fabricating one would violate the no-fabrication guardrail. Candidate remains available for a future run if a dateable source surfaces."
         }
       ]
     }
