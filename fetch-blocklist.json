@@ -424,6 +424,29 @@
           "note": "Firecrawl returned 200 but the body was an ad-blocker error page ('s.amazon-adsystem.com is blocked'), not real IMDb publicity-listing content. Treated as a full-chain failure (unusable body), same pattern as the existing www.imdb.com/title/tt20516590/ ledger entry."
         }
       ]
+    },
+    {
+      "url": "https://www.facebook.com/oscarurielcine/videos/las-azules-llegan-a-apple-tv/1765768017163955/",
+      "firstSeen": "2026-09-03T10:00:39Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-03T10:00:39Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-03T10:00:39Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "WebFetch returned 200 but body had no usable post content (Facebook bot wall / login gate), treated as empty-body failure.",
+          "issue": "LEMA-9640"
+        },
+        {
+          "attempt": "2026-09-03T10:00:39Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9640"
+        }
+      ]
     }
   ]
 }
