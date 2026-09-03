@@ -211,7 +211,7 @@
       "firstSeen": "2026-09-02T22:10:00Z",
       "failCount": 0,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-03T04:00:17Z",
+      "lastAttempt": "2026-09-03T06:00:25Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -247,15 +247,22 @@
           "status": 200,
           "issue": "LEMA-9637",
           "note": "Retried again per Pass 0 rule. Real post content returned (cast met ~10 original female officers during filming). Still no publish date anywhere in body or via corroborating search. Not added to data.json."
+        },
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9638",
+          "note": "Retried again per Pass 0 rule. Real post content returned (cast met original female officers). Still no publish date anywhere in body or via corroborating search. Not added to data.json."
         }
       ]
     },
     {
       "url": "https://www.tiktok.com/@ledcardenas/video/7398259345248488710?lang=es",
       "firstSeen": "2026-09-03T02:00:00Z",
-      "failCount": 1,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-03T02:00:00Z",
+      "failCount": 2,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-03T06:00:25Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -271,15 +278,29 @@
           "status": null,
           "issue": "LEMA-9636",
           "note": "Firecrawl scrape returned success:false."
+        },
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9638",
+          "note": "WebFetch returned 200 but body contained only TikTok header boilerplate, no post caption/content (bot wall), treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9638",
+          "note": "Firecrawl: 'we do not support this site'. Full-chain failure, failCount now 2."
         }
       ]
     },
     {
       "url": "https://guides.justwatch.com/gt/serie/las-azules",
       "firstSeen": "2026-09-03T02:00:00Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-03T02:00:00Z",
+      "lastAttempt": "2026-09-03T06:00:25Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -294,6 +315,19 @@
           "status": 404,
           "issue": "LEMA-9636",
           "note": "Confirmed 404 Not Found."
+        },
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9638"
+        },
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "Firecrawl scrape",
+          "status": 404,
+          "issue": "LEMA-9638",
+          "note": "Confirmed 404 Not Found again. Full-chain failure, failCount now 2."
         }
       ]
     },
@@ -302,7 +336,7 @@
       "firstSeen": "2026-09-03T02:00:00Z",
       "failCount": 0,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-03T04:00:17Z",
+      "lastAttempt": "2026-09-03T06:00:25Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -318,6 +352,13 @@
           "status": 200,
           "issue": "LEMA-9637",
           "note": "Retried again per Pass 0 rule. Real post content returned (CTT EXP & RENTALS BTS post, ARRI Alexa 35). Still no publish date anywhere in body or via corroborating search. Not added to data.json: schema requires a real ts/date, fabricating one would violate the no-fabrication guardrail."
+        },
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9638",
+          "note": "Retried again per Pass 0 rule. Real post content returned (equipment/crew details for S2 production). Still no publish date anywhere in body or via corroborating search. Not added to data.json."
         }
       ]
     },
@@ -358,6 +399,29 @@
           "status": 200,
           "issue": "LEMA-9637",
           "note": "Real post content returned (CTT EXP & RENTALS BTS post about Las Azules S2 cinematography equipment, ARRI Alexa 35, cast including Bárbara Mori and Leonardo Sbaraglia). No publish date anywhere in the body or via corroborating search. Not added to data.json: schema requires a real ts/date, fabricating one would violate the no-fabrication guardrail. Candidate remains available for a future run if a dateable source surfaces."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.com/es/name/nm0746370/publicity",
+      "firstSeen": "2026-09-03T06:00:25Z",
+      "failCount": 1,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-03T06:00:25Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9638"
+        },
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9638",
+          "note": "Firecrawl returned 200 but the body was an ad-blocker error page ('s.amazon-adsystem.com is blocked'), not real IMDb publicity-listing content. Treated as a full-chain failure (unusable body), same pattern as the existing www.imdb.com/title/tt20516590/ ledger entry."
         }
       ]
     }
