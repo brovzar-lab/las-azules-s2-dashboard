@@ -184,7 +184,7 @@
       "firstSeen": "2026-09-02T22:10:00Z",
       "failCount": 0,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-03T00:15:00Z",
+      "lastAttempt": "2026-09-03T02:00:00Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -206,6 +206,77 @@
           "status": 200,
           "issue": "LEMA-9635",
           "note": "Retry succeeded: WebFetch returned real post content this time (cast meeting original female police officers), not the empty bot-wall body seen previously. Ledger reset per fallback-chain success rule. Not added to data.json this run: no publish date could be located anywhere in the fetched body or via corroborating search, and the schema requires a real ts/date -- fabricating one would violate the no-fabrication guardrail. Candidate remains available for a future run if a dateable source (e.g. a news pickup citing this post) surfaces."
+        },
+        {
+          "attempt": "2026-09-03T02:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9636",
+          "note": "Retried per Pass 0 rule (cooldownUntil null). WebFetch returned real post content again (cast meeting original female police officers). Still no publish date anywhere in the body or via corroborating WebSearch this run. Not added to data.json: schema requires a real ts/date, fabricating one would violate the no-fabrication guardrail. Candidate remains available for a future run if a dateable source surfaces."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/@ledcardenas/video/7398259345248488710?lang=es",
+      "firstSeen": "2026-09-03T02:00:00Z",
+      "failCount": 1,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-03T02:00:00Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-03T02:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9636",
+          "note": "WebFetch returned 200 but body contained only TikTok header boilerplate, no post caption/content (bot wall), treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-03T02:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": null,
+          "issue": "LEMA-9636",
+          "note": "Firecrawl scrape returned success:false."
+        }
+      ]
+    },
+    {
+      "url": "https://guides.justwatch.com/gt/serie/las-azules",
+      "firstSeen": "2026-09-03T02:00:00Z",
+      "failCount": 1,
+      "lastStatus": 404,
+      "lastAttempt": "2026-09-03T02:00:00Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-03T02:00:00Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9636"
+        },
+        {
+          "attempt": "2026-09-03T02:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 404,
+          "issue": "LEMA-9636",
+          "note": "Confirmed 404 Not Found."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/CTTEXPRENTALS/videos/las-azules-temporada-2-lleg%C3%B3-a-apple-tv%EF%B8%8Festa-serie-producida-por-lemon-studios-f/1538511670889680/",
+      "firstSeen": "2026-09-03T02:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-03T02:00:00Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-03T02:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9636",
+          "note": "WebFetch returned real post content (CTT EXP & RENTALS equipment/BTS post about Las Azules S2 production, ARRI Alexa 35 camera package). No publish date anywhere in the body or via corroborating WebSearch this run. Not added to data.json: schema requires a real ts/date, fabricating one would violate the no-fabrication guardrail. Candidate remains available for a future run if a dateable source surfaces."
         }
       ]
     }
