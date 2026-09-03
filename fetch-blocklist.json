@@ -495,6 +495,61 @@
           "note": "Marked permanentSkip on relevance grounds per CEO ruling on LEMA-9641 / LEMA-9642. Not attempted further; the bot-wall failure at failCount=1 (LEMA-9640) is now moot since the URL is excluded on relevance regardless of fetchability."
         }
       ]
+    },
+    {
+      "url": "https://www.imdb.com/de/title/tt20516590/",
+      "firstSeen": "2026-09-03T12:00:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-03T12:00:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "German-locale IMDb title page for Women in Blue (tt20516590), surfaced by the Exa EN pass (LEMA-9643). WebFetch failed with 403. Firecrawl scrape succeeded (200) and returned the full page (title, synopsis, rating, cast) but no date-bearing field anywhere: Firecrawl's metadata block has no og:article:published_time, datePublished, or any other publish/update timestamp, only og:locale/og:image/og:title. This is an evergreen title/database page, not a dated article. Per Rule A (LEMA-9642), no proxy date may be substituted (the ledger's own firstSeen crawl time is not a real publish date), so this candidate is not added to data.json. Both WebFetch and Firecrawl are exhausted. reviewable=true so it stays listable for a future manual lookup if IMDb ever adds a dateable field to this locale variant.",
+      "history": [
+        {
+          "attempt": "2026-09-03T12:00:23Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9643"
+        },
+        {
+          "attempt": "2026-09-03T12:00:23Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9643",
+          "note": "Full page content and metadata retrieved successfully, but no publish/update date field present anywhere in body or metadata. Undateable per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://www.primevideo.com/-/es/detail/0JFCKSNHTRBNJA50K5E6QG2HHN?tr=mx",
+      "firstSeen": "2026-09-03T12:00:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-03T12:00:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Prime Video (Mexico) detail page for Las Azules Season 2, surfaced during the Pass 2 web sweep (LEMA-9643) while checking Apple TV Amazon Channel availability. Both WebFetch and Firecrawl returned 200 with real page content (title, synopsis, cast), but neither surfaced a specific publish/last-updated date -- the page text only shows the air year ('2026, 2 temporadas') with no day-level date, and Firecrawl's metadata block has no date field either. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted, so this candidate is not added to data.json. Both fetch methods exhausted. reviewable=true so it stays listable for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-03T12:00:23Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9643",
+          "note": "Returned real page content (synopsis, cast, availability) but no specific publish/update date, only the air year."
+        },
+        {
+          "attempt": "2026-09-03T12:00:23Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9643",
+          "note": "Confirmed same content and metadata, no date field found in body or metadata block. Undateable per Rule A."
+        }
+      ]
     }
   ]
 }
