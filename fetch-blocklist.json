@@ -1001,6 +1001,30 @@
           "note": "Redirects to https://www.imdb.com/title/tt20516590/news/, an already permanentSkip/editorial_undateable entry in this ledger."
         }
       ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=GZyIgiga6Rs",
+      "firstSeen": "2026-09-04T22:00:30Z",
+      "failCount": 1,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-04T22:00:30Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-04T22:00:30Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9739",
+          "note": "WebFetch returned only YouTube page chrome/footer, no video content."
+        },
+        {
+          "attempt": "2026-09-04T22:00:30Z",
+          "method": "YouTube Data API v3 videos.list",
+          "status": "totalResults=0",
+          "issue": "LEMA-9739",
+          "note": "Video ID not found via YouTube Data API (deleted, private, or invalid link surfaced by web search synthesis). Full-chain failure."
+        }
+      ]
     }
   ]
 }
