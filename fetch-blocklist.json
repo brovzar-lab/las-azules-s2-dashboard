@@ -717,6 +717,59 @@
           "note": "Full markdown content retrieved successfully, but no publish/update date field present anywhere in body or metadata. Undateable per Rule A."
         }
       ]
+    },
+    {
+      "url": "https://www.tvmaze.com/shows/62238/las-azules/episodeguide",
+      "firstSeen": "2026-09-04T04:01:14Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-04T04:01:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "skipNote": "TVmaze episode-guide database page for Las Azules, surfaced during Pass 2 general web sweep (LEMA-9657). WebFetch returned 200 with real content (season 1 and season 2 episode listings, air dates per episode, synopses) but no page-level publish/update date anywhere on the page. Firecrawl scrape confirmed: 200, full markdown retrieved, metadata block has no publishedTime/modifiedTime/date field. This is an evergreen reference/database page (not a dated article), same pattern as the existing tvmaze.com/people/128458/barbara-mori ledger entry. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-04T04:01:14Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9657",
+          "note": "Episode listing content only, no page-level date field."
+        },
+        {
+          "attempt": "2026-09-04T04:01:14Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9657",
+          "note": "Confirmed no publishedTime/modifiedTime/date in metadata or body."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.com/es-es/title/tt20516590/",
+      "firstSeen": "2026-09-04T04:01:14Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-04T04:01:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "skipNote": "Spain-locale (es-es) IMDb title page for Las Azules (tt20516590), surfaced by Firecrawl BR-market pass (LEMA-9657). WebFetch failed with 403. Firecrawl scrape returned 200; body is largely an ad-blocker error page (s.amazon-adsystem.com is blocked) interleaved with real title/rating/popularity content, but no publish/update date field anywhere in body or metadata (only msvalidate.01 and timezone present). Same evergreen title/database-page pattern as the existing imdb.com/de/title/tt20516590/ ledger entry. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted; note that sibling locale variants (es/, it/, base) already in data.json were dated using the sweep crawl date under an earlier, looser standard and are not being retroactively corrected here. Both WebFetch and Firecrawl exhausted for this locale variant. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-04T04:01:14Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9657"
+        },
+        {
+          "attempt": "2026-09-04T04:01:14Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9657",
+          "note": "Ad-block error page mixed with real content; no dateable field in metadata."
+        }
+      ]
     }
   ]
 }
