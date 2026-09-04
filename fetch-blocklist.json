@@ -925,6 +925,82 @@
           "issue": "LEMA-9737"
         }
       ]
+    },
+    {
+      "url": "https://www.justwatch.com/it/serie-tv/las-azules",
+      "firstSeen": "2026-09-04T20:00:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-04T20:00:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9738. JustWatch Italy streaming-availability listing page for the show overall (distinct from the already-tracked /it/serie-tv/las-azules/stagione-2 season-2 page, which is a standalone entry already present in data.json). WebFetch succeeded (200) and confirmed this is a streaming catalog/database page with no publish date: only a 'last verified for streaming updates' data-verification timestamp, which is a crawler/DB artifact, not an editorial publish date. Firecrawl scrape also attempted per Rule A (LEMA-9642): succeeded (200), returned full page markdown (streaming service listings, season/episode tiles, cast/rating widgets), same result -- no publish/article date field anywhere in the body. Both methods exhausted, no date recoverable. Matches the same pattern as other already-permanentSkip JustWatch/database pages in this ledger (e.g. justwatch.com/gt/serie/las-azules cooldown, tvmaze, themoviedb, tv.apple.com). Skipped as editorial_undateable, reviewable=true.",
+      "history": [
+        {
+          "attempt": "2026-09-04T20:00:40Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9738",
+          "note": "Streaming availability page, no publish date found, only a data-verification timestamp."
+        },
+        {
+          "attempt": "2026-09-04T20:00:40Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9738",
+          "note": "Confirmed same content type (streaming/catalog listing), no date field present anywhere in body."
+        }
+      ]
+    },
+    {
+      "url": "https://pro.imdb.com/title/tt20516590/cast",
+      "firstSeen": "2026-09-04T20:00:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-04T20:00:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Pass 2 web sweep (YouTube/trade search cluster) on LEMA-9738. IMDbPro title overview/cast page (evergreen reference content, not a news article). WebFetch failed with HTTP 403 (IMDbPro login/paywall gate). Firecrawl scrape fallback succeeded (200) and returned the actual page body: title overview, release date (Jul 31, 2024, the SERIES premiere, not an article publish date), cast list, awards summary -- a database/reference page with no article publish date field anywhere. Same undateable pattern as the already-permanentSkip imdb.com title/name pages in this ledger. Skipped as editorial_undateable, reviewable=true.",
+      "history": [
+        {
+          "attempt": "2026-09-04T20:00:40Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9738"
+        },
+        {
+          "attempt": "2026-09-04T20:00:40Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9738",
+          "note": "Returned cast/overview database page content, no article publish date present, only the show's original release date."
+        }
+      ]
+    },
+    {
+      "url": "https://m.imdb.com/title/tt20516590/news/",
+      "firstSeen": "2026-09-04T20:00:40Z",
+      "failCount": 0,
+      "lastStatus": 302,
+      "lastAttempt": "2026-09-04T20:00:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Pass 2 web sweep (trade press search cluster) on LEMA-9738. Mobile-subdomain URL variant of https://www.imdb.com/title/tt20516590/news/, which is already permanentSkip=true / editorial_undateable in this ledger. WebFetch on this m. URL returned a 302 redirect to the canonical www. URL (the already-tracked, already-exhausted entry). Adding this variant as its own ledger entry so future sweeps recognize and skip it directly without needing to re-resolve the redirect. Skipped as editorial_undateable, reviewable=true, consistent with the canonical entry.",
+      "history": [
+        {
+          "attempt": "2026-09-04T20:00:40Z",
+          "method": "WebFetch",
+          "status": 302,
+          "issue": "LEMA-9738",
+          "note": "Redirects to https://www.imdb.com/title/tt20516590/news/, an already permanentSkip/editorial_undateable entry in this ledger."
+        }
+      ]
     }
   ]
 }
