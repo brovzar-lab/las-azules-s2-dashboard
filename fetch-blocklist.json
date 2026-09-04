@@ -661,6 +661,62 @@
       "lastAttempt": "2026-09-04T00:20:00.000Z",
       "cooldownUntil": null,
       "permanentSkip": false
+    },
+    {
+      "url": "https://www.themoviedb.org/tv/253983-las-azules/season/2",
+      "firstSeen": "2026-09-04T02:00:50Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-04T02:00:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "TMDB Season 2 database page for Women in Blue (Las Azules), surfaced during Pass 2 general web sweep (LEMA-9656). WebFetch returned 200 with real content (episode list, air dates for individual episodes e.g. Aug 11/18/2026, synopses) but no page-level publish/update date field. Firecrawl scrape confirmed: full markdown content retrieved (episode list with per-episode air dates) but no og:article:published_time, datePublished, or any other page-level publish/update timestamp anywhere in the body or metadata -- only individual episode air dates within an evergreen, continuously-updated database listing. Per Rule A (LEMA-9642), a per-episode air date embedded in an evergreen catalog page is not a substitute for a real sourced publish date for this URL as a candidate entry, and the ledger's own crawl timestamp may never be used as a proxy. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-04T02:00:50Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9656",
+          "note": "Real page content returned (Season 2 episode list with air dates, synopses) but no page-level publish/update date field."
+        },
+        {
+          "attempt": "2026-09-04T02:00:50Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9656",
+          "note": "Full markdown content retrieved successfully, but no publish/update date field present anywhere in body or metadata (only per-episode air dates within the evergreen listing). Undateable per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvmaze.com/people/128458/barbara-mori",
+      "firstSeen": "2026-09-04T02:00:50Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-04T02:00:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "TVmaze biography/filmography database page for Bárbara Mori, surfaced during Pass 2 general web sweep (LEMA-9656) while checking for new interview/coverage content. WebFetch returned 200 with real content (bio, filmography including Las Azules) but no publish/update date. Firecrawl scrape confirmed: full markdown retrieved (bio text plus cast-credit list with individual past episode air dates for Las Azules Season 1, e.g. Sep 25/18/11/4, 2024) but no page-level publish/update date field anywhere in body or metadata. This is an evergreen actor biography/database page, not a dated article, and its Las Azules credit references Season 1 (2024) episodes only, not new Season 2 coverage. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-04T02:00:50Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9656",
+          "note": "Real page content returned (actress bio, filmography) but no publish/update date field."
+        },
+        {
+          "attempt": "2026-09-04T02:00:50Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9656",
+          "note": "Full markdown content retrieved successfully, but no publish/update date field present anywhere in body or metadata. Undateable per Rule A."
+        }
+      ]
     }
   ]
 }
