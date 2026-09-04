@@ -770,6 +770,34 @@
           "note": "Ad-block error page mixed with real content; no dateable field in metadata."
         }
       ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/B%C3%A1rbara_Mori",
+      "firstSeen": "2026-09-04T06:01:30Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-04T06:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Surfaced as a candidate via Pass 2 EN sweep (#LasAzules Bárbara Mori query). This is Bárbara Mori's general Wikipedia biography, not a news article about Las Azules Season 2 specifically, and Wikipedia pages carry no fixed publish date -- the page footer only shows a last-edited timestamp (2026-08-24T01:22Z at time of check), which is a revision artifact, not a sourced publication date. WebFetch confirmed no news-event publish date exists on the page (continually-updated encyclopedia entry, filmography extends through 2026). Firecrawl scrape was also attempted per the Rule A mandate and returned the full page content (infobox, born 1978-02-02 Montevideo, etc.) with no article:published_time or equivalent field, confirming no dateable publish event exists by either method. Per LEMA-9641/9642 Rule A, no proxy/approximated date may be substituted, so this is not added to data.json. reviewable=true in case a specific dateable Las Azules S2 news item is later found citing this page.",
+      "history": [
+        {
+          "attempt": "2026-09-04T06:01:30Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9658",
+          "note": "Returned page content; confirmed only a last-edited revision timestamp exists, no article publish date."
+        },
+        {
+          "attempt": "2026-09-04T06:01:30Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9658",
+          "note": "Returned full page markdown (infobox etc.); no article:published_time or any publish-date field present in content or metadata."
+        }
+      ]
     }
   ]
 }
