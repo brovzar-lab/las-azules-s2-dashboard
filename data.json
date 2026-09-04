@@ -5688,6 +5688,17 @@
     "excerpt": "Apple TV released the official trailer for Season 2 of the acclaimed Mexican police procedural, premiering August 12 with weekly episodes through September 30, following detective Maria and her team as they investigate murders tied to Mexico's 1968 student massacre."
   },
   {
+    "outlet": "The TV Cave",
+    "headline": "Apple TV Unveils Intense Women in Blue Season 2 Trailer and Las Azules Is Ready to Dig Up the Past",
+    "url": "https://www.thetvcave.com/post/women-in-blue-season-2-trailer",
+    "date": "Jul 21, 2026",
+    "ts": 20260721,
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Apple TV has released the Season 2 trailer for the Spanish-language crime drama Women in Blue (Las Azules), premiering August 12. The new season follows Maria as she investigates a case connected to Mexico's 1968 student massacre, forcing her and her team to confront corruption within their own institution."
+  },
+  {
     "outlet": "Mexico News Daily",
     "headline": "Great Mexican television series that have returned in 2026 (and two more we can't wait to see)",
     "url": "https://mexiconewsdaily.com/culture/great-mexican-television-series-that-have-returned-in-2026-and-two-more-we-cant-wait-to-see/",
@@ -6908,7 +6919,8 @@
     "lang": "EN",
     "market": "US",
     "type": "Trade",
-    "excerpt": "Apple TV+ orders Spanish-language crime drama 'Las Azules' starring Bárbara Mori, the original series order announcement that preceded the show's 2024 premiere."
+    "excerpt": "Apple TV+ orders Spanish-language crime drama 'Las Azules' starring Bárbara Mori, the original series order announcement that preceded the show's 2024 premiere.",
+    "storyGroup": "deadline-s2-series-order-20220524"
   },
   {
     "outlet": "Variety",
@@ -6920,5 +6932,17 @@
     "market": "US",
     "type": "Trade",
     "excerpt": "Variety reports Apple TV+ has ordered ten episodes of “Las Azules,” a crime drama starring Bárbara Mori and created by Fernando Rovzar and Pablo Aramendi, following four women who join Mexico's first female police force only to discover their squad is a publicity stunt to distract from a serial killer investigation."
+  },
+  {
+    "outlet": "IMDb",
+    "headline": "Apple TV+ Orders Spanish-Language Crime Drama 'Las Azules' Starring Barbara Mori",
+    "url": "https://www.imdb.com/news/ni63638904/",
+    "date": "May 24, 2022",
+    "ts": 20220524,
+    "lang": "EN",
+    "market": "US",
+    "type": "Trade",
+    "excerpt": "IMDb syndication of Deadline's original series-order announcement: Apple TV+ orders the 10-episode Spanish-language crime drama Las Azules starring Barbara Mori, credited to Deadline Film + TV (Rosy Cordero, 5/24/2022).",
+    "storyGroup": "deadline-s2-series-order-20220524"
   }
 ]
