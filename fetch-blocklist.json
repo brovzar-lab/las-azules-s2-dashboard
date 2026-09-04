@@ -645,6 +645,22 @@
           "note": "Full metadata block retrieved successfully, but no publish/update date field present anywhere (checked og:article:published_time, datePublished, and all other metadata keys). Undateable per Rule A."
         }
       ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/cuando-sacan-la-temporada-2-de-las-azules",
+      "failCount": 1,
+      "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-04T00:20:00.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": false
+    },
+    {
+      "url": "https://www.tiktok.com/discover/segunda-temporada-de-las-azules?lang=en",
+      "failCount": 1,
+      "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-04T00:20:00.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": false
     }
   ]
 }
