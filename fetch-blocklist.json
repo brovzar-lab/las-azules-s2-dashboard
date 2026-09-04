@@ -814,6 +814,60 @@
       "lastAttempt": "2026-09-04T12:03:27.000Z",
       "cooldownUntil": null,
       "permanentSkip": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt20516590/news/",
+      "firstSeen": "2026-09-04T14:15:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-04T14:15:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "LEMA-9732 sweep: candidate surfaced via Pass 2 web sweep. WebFetch returned HTTP 403. Firecrawl scrape succeeded (200) but returned the IMDb news index/listing page for the show (an aggregator of many separate story links, ad/extension-block boilerplate, no single dated article body of its own). No og:article:published_time, datePublished, or any page-level publish timestamp exists for this listing page itself (each linked story has its own date, but this URL has none). Per Rule A (LEMA-9642), a listing page with no article-level publish date cannot be added with a substitute date. Distinct from https://www.imdb.com/title/tt20516590/ (the show's main title page, already in this ledger, failCount=1) and from individual imdb.com/news/ni<id>/ story permalinks (which do carry their own dates and are evaluated separately).",
+      "history": [
+        {
+          "attempt": "2026-09-04T14:15:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9732"
+        },
+        {
+          "attempt": "2026-09-04T14:15:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9732",
+          "note": "Success 200, but page is a news index/listing (no single article date). No publish-date field recoverable. Marked editorial_undateable per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://soundtrackwiki.com/tv-shows/women-in-blue-songs/",
+      "firstSeen": "2026-09-04T14:15:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-04T14:15:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "LEMA-9732 sweep: candidate surfaced via Pass 3 (Firecrawl DE market search). WebFetch returned HTTP 403. Firecrawl scrape succeeded (200): page is a soundtrack/episode-song reference wiki guide. Page metadata contains only the show's 'Release date: 2026-08-12' (a show-level field, not the article/page's own publish or last-updated timestamp) -- no og:article:published_time, datePublished, or similar field present anywhere in the scraped markdown or metadata. Per Rule A (LEMA-9642), the show release date is a proxy and must not be substituted for a real page publish date. Marked editorial_undateable; reviewable=true in case the site later exposes a dateable timestamp.",
+      "history": [
+        {
+          "attempt": "2026-09-04T14:15:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9732"
+        },
+        {
+          "attempt": "2026-09-04T14:15:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9732",
+          "note": "Success 200. No article-level publish date field found in markdown or metadata; only the show's release date (2026-08-12) is present, which is a proxy and cannot be used per Rule A. Marked editorial_undateable."
+        }
+      ]
     }
   ]
 }
