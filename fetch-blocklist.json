@@ -648,19 +648,51 @@
     },
     {
       "url": "https://www.tiktok.com/discover/cuando-sacan-la-temporada-2-de-las-azules",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-04T00:20:00.000Z",
+      "lastAttempt": "2026-09-04T18:05:15.000Z",
       "cooldownUntil": null,
-      "permanentSkip": false
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-04T18:05:15.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
+          "issue": "LEMA-9737"
+        },
+        {
+          "attempt": "2026-09-04T18:05:15.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 2.",
+          "issue": "LEMA-9737"
+        }
+      ]
     },
     {
       "url": "https://www.tiktok.com/discover/segunda-temporada-de-las-azules?lang=en",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-04T00:20:00.000Z",
+      "lastAttempt": "2026-09-04T18:05:15.000Z",
       "cooldownUntil": null,
-      "permanentSkip": false
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-04T18:05:15.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
+          "issue": "LEMA-9737"
+        },
+        {
+          "attempt": "2026-09-04T18:05:15.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 2.",
+          "issue": "LEMA-9737"
+        }
+      ]
     },
     {
       "url": "https://www.themoviedb.org/tv/253983-las-azules/season/2",
@@ -866,6 +898,31 @@
           "status": 200,
           "issue": "LEMA-9732",
           "note": "Success 200. No article-level publish date field found in markdown or metadata; only the show's release date (2026-08-12) is present, which is a proxy and cannot be used per Rule A. Marked editorial_undateable."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/la-serie-de-las-azules-tendr%C3%A1-segunda-temporada",
+      "firstSeen": "2026-09-04T18:05:15.000Z",
+      "failCount": 1,
+      "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-04T18:05:15.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-04T18:05:15.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
+          "issue": "LEMA-9737"
+        },
+        {
+          "attempt": "2026-09-04T18:05:15.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com.",
+          "issue": "LEMA-9737"
         }
       ]
     }
