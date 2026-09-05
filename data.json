@@ -6547,6 +6547,17 @@
   {
     "outlet": "Deadline",
     "headline": "'Women In Blue' Renewed For Season 2 By Apple",
+    "url": "https://deadline.com/2025/05/women-in-blue-renewed-season-2-apple-tv-1236406213/",
+    "date": "May 20, 2025",
+    "ts": 20250520,
+    "lang": "EN",
+    "market": "US",
+    "type": "Trade",
+    "excerpt": "Apple TV+ renewed its acclaimed Spanish-language crime series Women in Blue (Las Azules) for a second season, with Ariel Award nominee Barbara Mori reprising her lead role alongside Ximena Sarinana, Natalia Tellez and Amorita Rasgado; the eight-episode season was in production at the time."
+  },
+  {
+    "outlet": "Deadline",
+    "headline": "'Women In Blue' Renewed For Season 2 By Apple",
     "url": "https://deadline.com/2025/05/women-in-blue-renewed-season-2-apple-las-azules-1236406213/",
     "date": "May 2025",
     "ts": 20250501,
@@ -6624,6 +6635,17 @@
     "excerpt": "Spanish YouTube review channel Moobys covers Season 1 of Las Azules, recommending the new Apple TV+ series to viewers."
   },
   {
+    "outlet": "Infobae",
+    "headline": "Bárbara Mori habla sobre las problemáticas en 'Las Azules', una serie de época muy actual",
+    "url": "https://www.infobae.com/mexico/2024/08/31/barbara-mori-habla-sobre-las-problematicas-en-las-azules-una-serie-de-epoca-muy-actual/",
+    "date": "Aug 31, 2024",
+    "ts": 20240831,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Barbara Mori comenta que la serie 'Las Azules', sobre la primera unidad policial femenina de la Ciudad de Mexico en los setenta, revela problemas de desigualdad de genero que persisten hoy, senalando que temas como los feminicidios han empeorado."
+  },
+  {
     "outlet": "BroadwayWorld",
     "headline": "Video: Apple TV+ Shares WOMEN IN BLUE Sneak Peek Clip",
     "url": "https://www.broadwayworld.com/bwwtv/article/Video-Apple-TV-Shares-WOMEN-IN-BLUE-Sneak-Peek-Clip-20240829",
@@ -6687,7 +6709,20 @@
     "lang": "EN",
     "market": "US",
     "type": "Review",
-    "excerpt": "Set in 1971 Mexico City, this lively Apple TV+ drama focuses on four police women who discover that it's easier to capture a serial killer than to deal with the misogyny of the men around them."
+    "excerpt": "Set in 1971 Mexico City, this lively Apple TV+ drama focuses on four police women who discover that it's easier to capture a serial killer than to deal with the misogyny of the men around them.",
+    "storyGroup": "npr-s2-review-transcript-20240806"
+  },
+  {
+    "outlet": "NPR",
+    "headline": "'Women in Blue' fight sexism — and a serial killer — in this Mexican drama (Transcript)",
+    "url": "https://www.npr.org/transcripts/g-s1-15377",
+    "date": "Aug 6, 2024",
+    "ts": 20240806,
+    "lang": "EN",
+    "market": "US",
+    "type": "Review",
+    "excerpt": "Transcript of NPR's audio review: set in 1971 Mexico City, this Apple TV+ drama follows four police women who find it easier to capture a serial killer than deal with the misogyny of the men around them.",
+    "storyGroup": "npr-s2-review-transcript-20240806"
   },
   {
     "outlet": "EscribiendoCine",
@@ -6855,6 +6890,28 @@
     "market": "US",
     "type": "Entertainment",
     "excerpt": "What to Watch cast feature introducing the four leads of Apple TV+'s Women in Blue (Las Azules): Barbara Mori as Maria, Natalia Tellez as Valentina, Amorita Rasgado as Gabina, and Ximena Sarinana as Angeles, Mexico's first female police officers investigating a serial killer known as \"The Undresser\" in the 1970s."
+  },
+  {
+    "outlet": "El Universal",
+    "headline": "\"Las azules\": la serie que narra la historia de las primeras mujeres policías en la Ciudad de México",
+    "url": "https://www.eluniversal.com.mx/espectaculos/las-azules-la-serie-que-narra-la-historia-de-las-primeras-mujeres-policias-en-la-ciudad-de-mexico/",
+    "date": "Jul 31, 2024",
+    "ts": 20240731,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Apple TV+ estrena una serie sobre las primeras mujeres policia de la Ciudad de Mexico en los anos setenta, protagonizada por Barbara Mori y Natalia Tellez, basada en anecdotas reales de su entrenamiento con una trama criminal ficticia."
+  },
+  {
+    "outlet": "What to Watch",
+    "headline": "Women In Blue: release date, plot, cast, trailer, interviews and everything you need to know about the Las Azules crime drama",
+    "url": "https://www.whattowatch.com/watching-guides/women-in-blue-release-date-plot-cast-and-everything-we-know-about-the-las-azules-crime-drama",
+    "date": "Jul 31, 2024",
+    "ts": 20240731,
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "A comprehensive guide to Women In Blue (Las Azules), the Spanish-language crime drama on Apple TV+ following four female recruits who join Mexico's first female police force in 1970, only to discover their squad was a publicity stunt while a serial killer roams free."
   },
   {
     "outlet": "Mindies",
