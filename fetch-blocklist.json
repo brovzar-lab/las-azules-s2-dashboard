@@ -672,10 +672,10 @@
     },
     {
       "url": "https://www.tiktok.com/discover/segunda-temporada-de-las-azules?lang=en",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-04T18:05:15.000Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-05T02:05:44.000Z",
+      "cooldownUntil": "2026-10-05T02:05:44.000Z",
       "permanentSkip": false,
       "history": [
         {
@@ -691,6 +691,20 @@
           "status": 403,
           "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 2.",
           "issue": "LEMA-9737"
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
+          "issue": "LEMA-9741"
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days.",
+          "issue": "LEMA-9741"
         }
       ]
     },
@@ -904,9 +918,9 @@
     {
       "url": "https://www.tiktok.com/discover/la-serie-de-las-azules-tendr%C3%A1-segunda-temporada",
       "firstSeen": "2026-09-04T18:05:15.000Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-04T18:05:15.000Z",
+      "lastAttempt": "2026-09-05T02:05:44.000Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "history": [
@@ -923,6 +937,20 @@
           "status": 403,
           "note": "Blanket 'we do not support this site' refusal for tiktok.com.",
           "issue": "LEMA-9737"
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
+          "issue": "LEMA-9741"
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 2.",
+          "issue": "LEMA-9741"
         }
       ]
     },
@@ -1058,6 +1086,114 @@
           "status": 400,
           "issue": "LEMA-9740",
           "note": "Bot wall blocked the request outright (HTTP 400), no page source retrievable to check for date meta tags."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/do/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-09-05T02:05:44.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-05T02:05:44.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Dominican Republic-locale Apple TV show landing page for Las Azules, surfaced during Pass 2 general web sweep (LEMA-9741). WebFetch returned 200 with real page content (show description, episode listings, cast) but only 'Released in 2024' / no day-level publish date. Firecrawl scrape confirmed: full metadata block retrieved, no og:article:published_time, datePublished, or any other publish/update timestamp field present. Same evergreen title/show-landing-page pattern as the already-permanentSkip tv.apple.com/us/show/las-azules/... entry. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9741",
+          "note": "Real page content returned but no day-level publish/update date, only 'Released in 2024'."
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9741",
+          "note": "Full metadata retrieved, no publish/update date field present. Undateable per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/mx/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-09-05T02:05:44.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-05T02:05:44.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Mexico-locale Apple TV show landing page for Las Azules, surfaced during Pass 2 general web sweep (LEMA-9741). WebFetch returned 200 with real page content (Spanish-language description, episode listings, cast) but only 'Lanzamiento: 2024' / no day-level publish date. Firecrawl scrape confirmed: full metadata block retrieved, no og:article:published_time, datePublished, or any other publish/update timestamp field present. Same evergreen title/show-landing-page pattern as the already-permanentSkip tv.apple.com/us/show/las-azules/... entry. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9741",
+          "note": "Real page content returned but no day-level publish/update date, only 'Lanzamiento: 2024'."
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9741",
+          "note": "Full metadata retrieved, no publish/update date field present. Undateable per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.com/fr/title/tt20516590/",
+      "firstSeen": "2026-09-05T02:05:44.000Z",
+      "failCount": 1,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-05T02:05:44.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "French-locale IMDb title page for Las Azules (tt20516590), surfaced via Firecrawl FR-market pass (LEMA-9741). WebFetch failed with 403. Firecrawl scrape succeeded (200) and returned the full page (episode guide links, credits, IMDbPro links) but no date-bearing field anywhere in metadata (checked full metadata key set: og:*, twitter:*, imdb:*, msvalidate.01 -- no publish/update timestamp). Same evergreen title/database-page pattern as the already-permanentSkip imdb.com/de/title/tt20516590/, imdb.com/es-es/title/tt20516590/ ledger entries. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted; sibling locale variants (base, /es/, /it/) already in data.json were dated using the sweep crawl date under an earlier, looser standard and are not being retroactively corrected. Both WebFetch and Firecrawl exhausted for this locale variant. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9741"
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9741",
+          "note": "Full page content and metadata retrieved successfully (25350 chars), but no publish/update date field present anywhere. Undateable per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/reel/Db_4fwrjnTF/",
+      "firstSeen": "2026-09-05T02:05:44.000Z",
+      "failCount": 1,
+      "lastStatus": "webfetch_bot_wall_login_gate;firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-05T02:05:44.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9741",
+          "note": "WebFetch returned a summary describing caption/account/date content ('voguelatam', 'August 13, 2026'), but this could not be corroborated: a supplementary direct curl of the raw page (200, 618779 bytes) found no og:description, no datePublished, no 'voguelatam' string, and no 'Las Azules' string anywhere in the HTML -- the page is Instagram's login-gate bot wall (<title>Instagram</title>, login form only). Treated as an empty/fabricated-content failure, not a genuine successful fetch."
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9741",
+          "note": "Blanket 'we do not support this site' refusal for instagram.com, consistent with the facebook.com/tiktok.com pattern in this ledger. Full-chain failure, failCount now 1."
         }
       ]
     }
