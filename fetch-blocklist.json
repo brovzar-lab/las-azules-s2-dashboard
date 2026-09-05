@@ -869,9 +869,9 @@
     },
     {
       "url": "https://www.tiktok.com/discover/final-explicado-las-azules-serie",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-04T12:03:27.000Z",
+      "lastAttempt": "2026-09-05T22:00:36.000Z",
       "cooldownUntil": null,
       "permanentSkip": false
     },
