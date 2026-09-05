@@ -1175,9 +1175,9 @@
     {
       "url": "https://www.instagram.com/reel/Db_4fwrjnTF/",
       "firstSeen": "2026-09-05T02:05:44.000Z",
-      "failCount": 1,
-      "lastStatus": "webfetch_bot_wall_login_gate;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-05T02:05:44.000Z",
+      "failCount": 2,
+      "lastStatus": "webfetch_bot_wall_login_gate_repeat;firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-05T04:00:51.000Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "history": [
@@ -1194,6 +1194,20 @@
           "status": 403,
           "issue": "LEMA-9741",
           "note": "Blanket 'we do not support this site' refusal for instagram.com, consistent with the facebook.com/tiktok.com pattern in this ledger. Full-chain failure, failCount now 1."
+        },
+        {
+          "attempt": "2026-09-05T04:00:51.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9742",
+          "note": "WebFetch again returned the identical hallucinated summary content ('voguelatam', 'August 13, 2026') already documented as fabricated bot-wall output in the LEMA-9741 history entry for this URL. Not trusted. Treated as a repeat failure, not a genuine fetch."
+        },
+        {
+          "attempt": "2026-09-05T04:00:51.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9742",
+          "note": "Blanket 'we do not support this site' refusal for instagram.com, same as prior attempt. Full-chain failure, failCount now 2."
         }
       ]
     }
