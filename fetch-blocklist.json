@@ -648,10 +648,10 @@
     },
     {
       "url": "https://www.tiktok.com/discover/cuando-sacan-la-temporada-2-de-las-azules",
-      "failCount": 2,
-      "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-04T18:05:15.000Z",
-      "cooldownUntil": null,
+      "failCount": 3,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-05T12:05:48Z",
+      "cooldownUntil": "2026-10-05T12:05:48Z",
       "permanentSkip": false,
       "history": [
         {
@@ -667,6 +667,13 @@
           "status": 403,
           "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 2.",
           "issue": "LEMA-9737"
+        },
+        {
+          "attempt": "2026-09-05T12:05:48Z",
+          "method": "WebFetch+Firecrawl",
+          "status": 403,
+          "issue": "LEMA-9746",
+          "note": "WebFetch returned empty TikTok shell page; Firecrawl scrape refused with 403 'we do not support this site'. Full-chain failure #3, cooldown set."
         }
       ]
     },
@@ -1162,14 +1169,14 @@
     {
       "url": "https://www.imdb.com/fr/title/tt20516590/",
       "firstSeen": "2026-09-05T02:05:44.000Z",
-      "failCount": 1,
+      "failCount": 0,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-05T02:05:44.000Z",
+      "lastAttempt": "2026-09-05T12:05:48Z",
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "French-locale IMDb title page for Las Azules (tt20516590), surfaced via Firecrawl FR-market pass (LEMA-9741). WebFetch failed with 403. Firecrawl scrape succeeded (200) and returned the full page (episode guide links, credits, IMDbPro links) but no date-bearing field anywhere in metadata (checked full metadata key set: og:*, twitter:*, imdb:*, msvalidate.01 -- no publish/update timestamp). Same evergreen title/database-page pattern as the already-permanentSkip imdb.com/de/title/tt20516590/, imdb.com/es-es/title/tt20516590/ ledger entries. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted; sibling locale variants (base, /es/, /it/) already in data.json were dated using the sweep crawl date under an earlier, looser standard and are not being retroactively corrected. Both WebFetch and Firecrawl exhausted for this locale variant. reviewable=true for a future manual lookup.",
+      "skipNote": "French-locale IMDb title page for Las Azules (tt20516590). WebFetch failed (403); Firecrawl scrape succeeded (200) and returned the static show info page (rating, synopsis, cast) but no article publish date -- consistent with the imdb.com/de, /es-es, /it locale variants already in this ledger as editorial_undateable. Genuine on-topic reference, but not a dateable news item.",
       "history": [
         {
           "attempt": "2026-09-05T02:05:44.000Z",
@@ -1183,6 +1190,19 @@
           "status": 200,
           "issue": "LEMA-9741",
           "note": "Full page content and metadata retrieved successfully (25350 chars), but no publish/update date field present anywhere. Undateable per Rule A."
+        },
+        {
+          "attempt": "2026-09-05T12:05:48Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9746"
+        },
+        {
+          "attempt": "2026-09-05T12:05:48Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9746",
+          "note": "Succeeded, static title page, no publish date found -> editorial_undateable per Rule A."
         }
       ]
     },
@@ -1236,6 +1256,66 @@
           "status": 403,
           "issue": "LEMA-9743",
           "note": "Blanket 'we do not support this site' refusal for instagram.com, same as prior attempts. Full-chain failure, failCount now 3 -- cooldownUntil set to 30 days out per policy."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/Delamori/status/1788602906343518363",
+      "firstSeen": "2026-09-05T12:05:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-05T12:05:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Personal X/Twitter account of lead actress Barbara Mori (@Delamori) announcing the Season 1 premiere date. Cast-personal promotional account, not an editorial/publisher outlet. Excluded per Rule B (LEMA-9642) regardless of date availability. Fetched successfully via Firecrawl (200); this is a relevance exclusion, not a fetch failure.",
+      "history": [
+        {
+          "attempt": "2026-09-05T12:05:48Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9746",
+          "note": "Confirmed personal cast account post, applied Rule B relevance gate."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/GeekGK_/status/1788630296788869436",
+      "firstSeen": "2026-09-05T12:05:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-05T12:05:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Fan/aggregator account '@GeekGK_' (self-styled 'GEEK NEWS') resharing the official Las Azules Season 1 poster with hashtags, no original reporting, 2 likes. Fan-repost account per Rule B (LEMA-9642), not a verified editorial outlet. Fetched successfully via Firecrawl (200); relevance exclusion, not a fetch failure.",
+      "history": [
+        {
+          "attempt": "2026-09-05T12:05:48Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9746",
+          "note": "Confirmed fan-repost account, applied Rule B relevance gate."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/bostonherald/status/2086354920798576788",
+      "firstSeen": "2026-09-05T12:05:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-05T12:05:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Boston Herald's own X/Twitter account promoting its own already-tracked article (https://www.bostonherald.com/2026/08/09/women-in-blue-back-on-the-beat-for-s2/, already present in data.json). Not cross-outlet syndication in the literal sense, but functionally the same redundant-coverage principle: the tweet carries no content beyond a link to a story already captured under its original URL. Fetched successfully via Firecrawl (200); excluded as redundant, not a fetch failure.",
+      "history": [
+        {
+          "attempt": "2026-09-05T12:05:48Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9746",
+          "note": "Confirmed tweet links to already-tracked bostonherald.com article; treated as redundant."
         }
       ]
     }
