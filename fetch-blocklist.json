@@ -1025,6 +1025,41 @@
           "note": "Video ID not found via YouTube Data API (deleted, private, or invalid link surfaced by web search synthesis). Full-chain failure."
         }
       ]
+    },
+    {
+      "url": "https://www.facebook.com/appletv/posts/mexico-citys-finest-detectives-are-backlas-azules-season-2appletv-res-august-12l/1358447169661848/",
+      "firstSeen": "2026-09-05T00:01:12Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-05T00:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Official AppleTV Facebook post announcing S2 premiere ('Mexico City's finest detectives are back. Las Azules Season 2 #AppleTV res August 12'). Publisher/official-show account, so Rule B relevance gate does not apply -- this is media coverage. WebFetch succeeded (200, real post content: caption, promo image description, 387 reactions) but surfaced only a partial date ('March 26', no year); WebFetch summarizes bodies and routinely drops full timestamp/year data per LEMA-9642 guidance, so this alone is not sufficient to conclude undateable. Firecrawl scrape attempted per Rule A mandate: success:false, 'we do not support this site' -- the same blanket facebook.com policy refusal documented on every other facebook.com entry in this ledger (LEMA-9642), a valid exhaustion of the method. Supplementary direct curl of the raw page also attempted: returned HTTP 400 (bot wall, no HTML body retrievable) -- no date metadata recoverable by any available method. No proxy/approximated date substituted per Ruling 1 (LEMA-9642). Skipped as editorial_undateable, reviewable=true for a future manual date lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-05T00:01:12Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9740",
+          "note": "Returned real post content (caption, image description, 387 reactions) but only a partial date ('March 26', year not surfaced)."
+        },
+        {
+          "attempt": "2026-09-05T00:03:00Z",
+          "method": "Firecrawl scrape",
+          "status": null,
+          "issue": "LEMA-9740",
+          "note": "success:false, error: \"We apologize for the inconvenience but we do not support this site.\" Blanket facebook.com policy block, not URL-specific."
+        },
+        {
+          "attempt": "2026-09-05T00:03:30Z",
+          "method": "Raw HTML fetch (supplementary, direct curl)",
+          "status": 400,
+          "issue": "LEMA-9740",
+          "note": "Bot wall blocked the request outright (HTTP 400), no page source retrievable to check for date meta tags."
+        }
+      ]
     }
   ]
 }
