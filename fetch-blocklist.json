@@ -1175,10 +1175,10 @@
     {
       "url": "https://www.instagram.com/reel/Db_4fwrjnTF/",
       "firstSeen": "2026-09-05T02:05:44.000Z",
-      "failCount": 2,
-      "lastStatus": "webfetch_bot_wall_login_gate_repeat;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-05T04:00:51.000Z",
-      "cooldownUntil": null,
+      "failCount": 3,
+      "lastStatus": "webfetch_empty_body; firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-05T06:03:48.409942+00:00",
+      "cooldownUntil": "2026-10-05T06:03:48.409942+00:00",
       "permanentSkip": false,
       "history": [
         {
@@ -1208,6 +1208,20 @@
           "status": 403,
           "issue": "LEMA-9742",
           "note": "Blanket 'we do not support this site' refusal for instagram.com, same as prior attempt. Full-chain failure, failCount now 2."
+        },
+        {
+          "attempt": "2026-09-05T06:03:48.409942+00:00",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9743",
+          "note": "WebFetch returned only the bare word 'Instagram' with no caption/date/account data -- Instagram's login-gate bot wall, an empty-content failure not a genuine fetch."
+        },
+        {
+          "attempt": "2026-09-05T06:03:48.409942+00:00",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9743",
+          "note": "Blanket 'we do not support this site' refusal for instagram.com, same as prior attempts. Full-chain failure, failCount now 3 -- cooldownUntil set to 30 days out per policy."
         }
       ]
     }
