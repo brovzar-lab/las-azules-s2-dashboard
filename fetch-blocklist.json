@@ -121,10 +121,10 @@
     {
       "url": "https://www.aol.com/perfect-crime-series-branded-simply-222400629.html",
       "firstSeen": "2026-09-02T18:06:40Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-03T04:00:17Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-05T14:07:26Z",
+      "cooldownUntil": "2026-10-05T14:07:26Z",
       "history": [
         {
           "attempt": "2026-09-02T18:06:40Z",
@@ -151,6 +151,13 @@
           "status": 200,
           "issue": "LEMA-9637",
           "note": "Firecrawl returned 200 but body is AOL's generic page-not-found placeholder again. Full-chain failure, failCount now 2."
+        },
+        {
+          "attempt": "2026-09-05T14:07:26Z",
+          "method": "WebFetch+Firecrawl",
+          "status": 404,
+          "issue": "LEMA-9749",
+          "note": "Retry after prior failCount=2; both WebFetch and Firecrawl returned 404 (page not found). failCount now 3, cooldown set."
         }
       ]
     },
@@ -1316,6 +1323,31 @@
           "status": 200,
           "issue": "LEMA-9746",
           "note": "Confirmed tweet links to already-tracked bostonherald.com article; treated as redundant."
+        }
+      ]
+    },
+    {
+      "url": "https://www.aol.com/entertainment/apple-tv-spanish-language-debut-131500419.html",
+      "firstSeen": "2026-09-05T14:07:26Z",
+      "failCount": 1,
+      "lastStatus": 404,
+      "lastAttempt": "2026-09-05T14:07:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-05T14:07:26Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9749",
+          "note": "404 on WebFetch"
+        },
+        {
+          "attempt": "2026-09-05T14:07:26Z",
+          "method": "Firecrawl scrape",
+          "status": 404,
+          "issue": "LEMA-9749",
+          "note": "Firecrawl also returned page-not-found content; full-chain failure."
         }
       ]
     }
