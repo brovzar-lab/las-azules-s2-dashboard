@@ -1350,6 +1350,17 @@
           "note": "Firecrawl also returned page-not-found content; full-chain failure."
         }
       ]
+    },
+    {
+      "url": "https://www.rottentomatoes.com/tv/women_in_blue_2024/s01",
+      "firstSeen": "2026-09-05T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-05T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true
     }
   ]
 }
