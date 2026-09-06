@@ -1368,6 +1368,33 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true
+    },
+    {
+      "url": "https://pro.imdb.com/title/tt33054256",
+      "firstSeen": "2026-09-06T10:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-06T10:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "IMDbPro title/episode page for 'Ángeles' (S1E5 of Women in Blue, 2024) — a cast/episode database catalog page, not a news article. WebFetch returned 403 (subscriber-gated). Firecrawl scrape succeeded (200) but returned only IMDbPro's episode/cast listing markup with no article body and no sourced publish date for any news event. Consistent with other imdb.com/tvmaze/justwatch reference/catalog pages already in this ledger under editorial_undateable. Found via LEMA-9760 sweep.",
+      "history": [
+        {
+          "attempt": "2026-09-06T10:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9760"
+        },
+        {
+          "attempt": "2026-09-06T10:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9760",
+          "note": "Firecrawl succeeded but page is an IMDbPro episode/cast database page with no news content or sourced publish date."
+        }
+      ]
     }
   ]
 }
