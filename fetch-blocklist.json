@@ -477,9 +477,9 @@
     {
       "url": "https://www.imdb.com/es/name/nm0746370/publicity",
       "firstSeen": "2026-09-03T06:00:25Z",
-      "failCount": 1,
+      "failCount": 0,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-03T06:00:25Z",
+      "lastAttempt": "2026-09-06T02:10:00Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -494,6 +494,13 @@
           "status": 200,
           "issue": "LEMA-9638",
           "note": "Firecrawl returned 200 but the body was an ad-blocker error page ('s.amazon-adsystem.com is blocked'), not real IMDb publicity-listing content. Treated as a full-chain failure (unusable body), same pattern as the existing www.imdb.com/title/tt20516590/ ledger entry."
+        },
+        {
+          "attempt": "2026-09-06T02:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9756",
+          "note": "WebFetch returned 403. Firecrawl scrape succeeded (200): page is Fernando Rovzar publicity listings, only linking two 2022-05-24 articles (Variety, Deadline) about the original series order, not S2 coverage. Not added to data.json (off-topic/too old for S2 sweep), but fetch chain resolved so ledger resets per step 4d."
         }
       ]
     },
