@@ -1466,6 +1466,119 @@
       "lastStatus": 200,
       "lastAttempt": "2026-09-06T14:00:00.000Z",
       "note": "Official Apple TV general show page (Peru locale variant). WebFetch and Firecrawl both attempted; only a bare year ('2024') surfaced, no real publish date. Added LEMA-9766 sweep."
+    },
+    {
+      "url": "https://www.thetvdb.com/series/las-azules/seasons/official/1",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "lastAttempt": "2026-09-06T16:00:00.000Z",
+      "lastStatus": 200,
+      "firstSeen": "2026-09-06T16:00:00Z",
+      "failCount": 0,
+      "cooldownUntil": null,
+      "skipNote": "Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Static TheTVDB Season 1 metadata/episode-list page. WebFetch confirmed no publish date in body (only a 'last modified' site timestamp, which is a site-maintenance artifact, not an article publish date -- excluded per Rule A). Firecrawl scrape also attempted (status 200, success): full page metadata returned with no publishedTime/date field of any kind. Both methods exhausted, no date recoverable. Not media coverage anyway (permanent reference DB entry) but ledgered as editorial_undateable per Rule A process.",
+      "history": [
+        {
+          "attempt": "2026-09-06T16:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9767",
+          "note": "Static DB page, only a site 'last modified' timestamp, no article publish date."
+        },
+        {
+          "attempt": "2026-09-06T16:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9767",
+          "note": "Success, full metadata returned, no publish/date field present."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PLPDDDmhRE2s8KxriGjT-QlsKTHWcExaXc",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "lastAttempt": "2026-09-06T16:00:00.000Z",
+      "lastStatus": 200,
+      "firstSeen": "2026-09-06T16:00:00Z",
+      "failCount": 0,
+      "cooldownUntil": null,
+      "skipNote": "Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Official Apple TV+ YouTube playlist page for the show. WebFetch returned only YouTube footer/nav boilerplate, no playlist creation date or content. Firecrawl scrape also attempted (status 200, success): full page metadata (og:, twitter: tags) returned with no publishedTime/date field. Both methods exhausted, no date recoverable.",
+      "history": [
+        {
+          "attempt": "2026-09-06T16:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9767",
+          "note": "Returned only footer/nav boilerplate, no playlist date or content."
+        },
+        {
+          "attempt": "2026-09-06T16:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9767",
+          "note": "Success, full metadata returned, no publish/date field present."
+        }
+      ]
+    },
+    {
+      "url": "https://www.filmaffinity.com/us/film786793.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "lastAttempt": "2026-09-06T16:00:00.000Z",
+      "lastStatus": 200,
+      "firstSeen": "2026-09-06T16:00:00Z",
+      "failCount": 0,
+      "cooldownUntil": null,
+      "skipNote": "Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Static Filmaffinity title database page. WebFetch failed with HTTP 403 (bot wall). Firecrawl scrape succeeded (status 200): full page metadata (og: tags, ratings schema) returned with no publishedTime/date field. Both methods exhausted, no date recoverable.",
+      "history": [
+        {
+          "attempt": "2026-09-06T16:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9767",
+          "note": "403 Forbidden bot wall."
+        },
+        {
+          "attempt": "2026-09-06T16:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9767",
+          "note": "Success, full metadata returned, no publish/date field present."
+        }
+      ]
+    },
+    {
+      "url": "https://www.formulatv.com/series/las-azules/capitulos/",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "lastAttempt": "2026-09-06T16:00:00.000Z",
+      "lastStatus": 200,
+      "firstSeen": "2026-09-06T16:00:00Z",
+      "failCount": 0,
+      "cooldownUntil": null,
+      "skipNote": "Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Static FormulaTV episode-index page. WebFetch confirmed no article publish date (only a generic '2004-2026' copyright-range footer, not a publication date -- excluded per Rule A). Firecrawl scrape also attempted (status 200, success): full page metadata returned with no publishedTime/date field. Both methods exhausted, no date recoverable.",
+      "history": [
+        {
+          "attempt": "2026-09-06T16:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9767",
+          "note": "Static index page, only a copyright-range footer, no article publish date."
+        },
+        {
+          "attempt": "2026-09-06T16:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9767",
+          "note": "Success, full metadata returned, no publish/date field present."
+        }
+      ]
     }
-  ]
+  ],
+  "lastUpdated": "2026-09-06T16:00:00.000Z"
 }
