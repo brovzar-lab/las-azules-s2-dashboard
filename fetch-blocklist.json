@@ -1395,6 +1395,34 @@
           "note": "Firecrawl succeeded but page is an IMDbPro episode/cast database page with no news content or sourced publish date."
         }
       ]
+    },
+    {
+      "url": "https://epguides.com/WomeninBlue/",
+      "firstSeen": "2026-09-06T12:00:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-06T12:00:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Evergreen epguides.com 'Titles & Air Dates Guide' database page for Women in Blue (Las Azules), surfaced during Pass 2 EN sweep (LEMA-9763). WebFetch returned 200 with real content (full episode list, cast, air dates for S1 and S2) but the only date-like field is 'Last updated: Wed, 26 Aug 2026 15:00', which is the guide's own page-revision timestamp, not an article publish date. Firecrawl scrape confirmed (200): same content, same 'Last updated' field, no og:article:published_time, datePublished, or any other page-level publish timestamp anywhere in body or metadata -- same evergreen-database-page pattern as the existing tvmaze.com/shows/62238/las-azules/episodeguide and themoviedb.org/tv/253983-las-azules/season/2 ledger entries. Per Rule A, the page's own last-updated/crawl-style timestamp may never substitute for a real sourced publish date. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-06T12:00:24Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9763",
+          "note": "Real page content returned (episode list, cast, air dates) but only a page-level 'Last updated' timestamp, not an article publish date."
+        },
+        {
+          "attempt": "2026-09-06T12:00:24Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9763",
+          "note": "Full markdown content retrieved successfully, confirmed no publish/update date field present anywhere besides the same page-level 'Last updated' field. Undateable per Rule A."
+        }
+      ]
     }
   ]
 }
