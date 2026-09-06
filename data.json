@@ -6701,6 +6701,17 @@
     "excerpt": "Recap of Season 1 Episode 9: a sting operation to capture the Undresser killer goes awry when Valentina is abducted instead, and the investigation intensifies after a commanding officer kills the suspect, leaving Valentina's location unknown."
   },
   {
+    "outlet": "TheTVDB",
+    "headline": "Las Azules - Rosa (Episode 8)",
+    "url": "https://thetvdb.com/series/las-azules/episodes/10512997",
+    "date": "Sep 11, 2024",
+    "ts": 20240911,
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Episode guide entry for Season 1 Episode 8 \"Rosa\": Maria and Angeles interrogate the adopted son of a woman named Rosa, who the Azules believe may have been the Undresser's first victim."
+  },
+  {
     "outlet": "Collider",
     "headline": "The Women in Blue Are at Wit's End Hunting a Killer in Episode 8 Sneak Peek",
     "url": "https://collider.com/women-in-blue-episode-8-sneak-peek/",
@@ -6765,6 +6776,17 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "French-language overview of Las Azules season 1: four female police officers in 1970s Mexico hunt a serial killer known as 'The Undresser.' Notes positive early reception and that a season 2 renewal was pending at time of writing."
+  },
+  {
+    "outlet": "Apple TV",
+    "headline": "Ver Alma - Las Azules (temporada 1, episodio 4) - Apple TV (PE)",
+    "url": "https://tv.apple.com/pe/episode/alma/umc.cmc.5g6l2hlovopmmxtypma7v3j3u?showId=umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+    "date": "Aug 14, 2024",
+    "ts": 20240814,
+    "lang": "ES",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Official Apple TV episode page for Season 1 Episode 4 \"Alma\": a new victim of El Encuerador appears, strengthening the Azules' investigative leads toward a new suspect."
   },
   {
     "outlet": "El Comercio (Peru)",
@@ -7035,6 +7057,17 @@
     "excerpt": "A comprehensive guide to Women In Blue (Las Azules), the Spanish-language crime drama on Apple TV+ following four female recruits who join Mexico's first female police force in 1970, only to discover their squad was a publicity stunt while a serial killer roams free."
   },
   {
+    "outlet": "Milenio (Opinion - Alvaro Cueva)",
+    "headline": "\"Las Azules\" de AppleTV+",
+    "url": "https://www.milenio.com/opinion/alvaro-cueva/el-pozo-de-los-deseos-reprimidos/las-azules-de-appletv",
+    "date": "Jul 31, 2024",
+    "ts": 20240731,
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Review",
+    "excerpt": "Television critic Alvaro Cueva enthusiastically recommends Apple TV+'s Mexican series 'Las Azules,' praising its storytelling, performances by Barbara Mori and Natalia Tellez, and its significance as a Spanish-language production worth supporting."
+  },
+  {
     "outlet": "Mindies",
     "headline": "Crítica de 'Las Azules', la nueva serie de Fernando Rovzar estrenada en Apple TV+",
     "url": "https://www.mindies.es/pelicula/critica-de-las-azules-la-nueva-serie-de-fernando-rovzar-estrenada-en-apple-tv/",
@@ -7211,5 +7244,16 @@
     "type": "Trade",
     "excerpt": "IMDb syndication of Deadline's original series-order announcement: Apple TV+ orders the 10-episode Spanish-language crime drama Las Azules starring Barbara Mori, credited to Deadline Film + TV (Rosy Cordero, 5/24/2022).",
     "storyGroup": "deadline-s2-series-order-20220524"
+  },
+  {
+    "outlet": "Apple TV Press",
+    "headline": "Apple TV+ orders \"Las Azules,\" a new Spanish-language crime drama from International Emmy Award winner Fernando Rovzar",
+    "url": "https://www.apple.com/tv-pr/news/2022/05/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama-from-international-emmy-award-winner-fernando-rovzar/",
+    "date": "May 24, 2022",
+    "ts": 20220524,
+    "lang": "EN",
+    "market": "International",
+    "type": "Trade",
+    "excerpt": "Apple TV+ greenlit a 10-episode Spanish-language crime series inspired by Mexico's first female police force in 1970, starring Barbara Mori, following four women who join the force only to uncover that their squad was created as a media distraction from an active serial killer investigation."
   }
 ]
