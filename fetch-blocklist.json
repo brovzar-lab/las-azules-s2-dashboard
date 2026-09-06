@@ -1423,6 +1423,49 @@
           "note": "Full markdown content retrieved successfully, confirmed no publish/update date field present anywhere besides the same page-level 'Last updated' field. Undateable per Rule A."
         }
       ]
+    },
+    {
+      "url": "https://www.instagram.com/reel/DAPWbnLPhj8/",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "cooldownUntil": null,
+      "failCount": 0,
+      "lastStatus": "webfetch_empty; firecrawl_unsupported_site",
+      "lastAttempt": "2026-09-06T14:00:00.000Z",
+      "note": "Barbara Mori Instagram reel referencing Las Azules. WebFetch returned no usable content; Firecrawl returned explicit 'we do not support this site' refusal for instagram.com. No real publish date recoverable after exhausting both methods. Added LEMA-9766 sweep."
+    },
+    {
+      "url": "https://x.com/AsoSimuladores/status/1763398963422507244",
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "cooldownUntil": null,
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-06T14:00:00.000Z",
+      "note": "Account self-identifies as 'los simuladores fan account'. Fan-repost account, not media coverage, per Rule B. Skipped on relevance regardless of dateability. Added LEMA-9766 sweep."
+    },
+    {
+      "url": "https://tv.apple.com/us/show/las-azules--la-brigade-bleue/umc.cmc.73wmdmkfpta5ul1vbwckmme39?l=es-MX",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "cooldownUntil": null,
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-06T14:00:00.000Z",
+      "note": "Official Apple TV general show page (locale variant). WebFetch and Firecrawl both attempted; only a bare year ('2024') surfaced, no real publish date. Added LEMA-9766 sweep."
+    },
+    {
+      "url": "https://tv.apple.com/pe/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "cooldownUntil": null,
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-06T14:00:00.000Z",
+      "note": "Official Apple TV general show page (Peru locale variant). WebFetch and Firecrawl both attempted; only a bare year ('2024') surfaced, no real publish date. Added LEMA-9766 sweep."
     }
   ]
 }
