@@ -1734,6 +1734,34 @@
           "note": "Confirmed same content type, no date field present anywhere in metadata or body."
         }
       ]
+    },
+    {
+      "url": "https://www.primevideo.com/-/es/detail/0JFCKSNHTRBNJA50K5E6QG2HHN?tr=cl",
+      "firstSeen": "2026-09-06T22:04:27.000Z",
+      "failCount": 0,
+      "lastStatus": "webfetch_200_no_date; firecrawl_200_no_date",
+      "lastAttempt": "2026-09-06T22:04:27.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "note": "Prime Video (Chile locale) product/catalog detail page for Las Azules Season 2, surfaced during Pass 2 sweep (LEMA-9770). Same base title ID as already-ledgered Mexico-locale variant (?tr=mx) but a different tr= query param (Chile storefront), so treated as a distinct ledger URL. WebFetch succeeded (200): page returned a region-block redirect message plus catalog metadata; no publish/update date field anywhere. Firecrawl scrape confirmed the same: full metadata block retrieved, no date field present in metadata or body. Both methods exhausted, no date recoverable. Matches the same pattern as other permanentSkip streaming-catalog pages in this ledger (JustWatch, TVDB, other Prime Video locale variants). Skipped as editorial_undateable, reviewable=true.",
+      "history": [
+        {
+          "attempt": "2026-09-06T22:04:27.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9770",
+          "note": "Region-blocked catalog redirect message, no publish date found."
+        },
+        {
+          "attempt": "2026-09-06T22:04:27.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9770",
+          "note": "Confirmed same content type, no date field present anywhere in metadata or body."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-06T16:00:00.000Z"
