@@ -1578,6 +1578,162 @@
           "note": "Success, full metadata returned, no publish/date field present."
         }
       ]
+    },
+    {
+      "url": "https://www.imdb.com/es/news/ni65968191/",
+      "firstSeen": "2026-09-06T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": "webfetch_403; firecrawl_200_no_date",
+      "lastAttempt": "2026-09-06T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "note": "'Las Azules' Season 2 Episode 2 Release Date and Time (IMDb ES news, credits comicbasics.com as the linked original). WebFetch returned 403. Firecrawl scrape succeeded (200) and returned full page content (article body + related-news sidebar), but no og:article:published_time, datePublished, or any other publish-date field exists in the metadata or body -- the only dates present belong to unrelated sidebar items (Just Jared celebrity news, dated 2026/09/04, not this article). Both fetch methods exhausted per Rule A, no date recoverable. Skipped as editorial_undateable, reviewable=true.",
+      "history": [
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9769"
+        },
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9769",
+          "note": "Full content returned, no publish-date field found anywhere in metadata or body."
+        }
+      ]
+    },
+    {
+      "url": "https://www.threads.com/@theentertainmentfactor99/post/Dc8Hc8Jjlom/the-second-season-of-the-mexican-crime-drama-series-women-in-blue-las-azules/",
+      "firstSeen": "2026-09-06T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": "webfetch_200_unverifiable; firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-06T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "reviewable": false,
+      "note": "Threads post reposting Women in Blue S2 premiere content (trailer/images/poster links). Account handle '@theentertainmentfactor99' does not match any recognized trade press, newspaper, magazine, or official show/network brand -- the numeric-suffixed handle pattern matches the fan-aggregator/repost accounts this ledger has skipped before (per Rule B, LEMA-9642), not an editorial outlet. Skipped on relevance per Rule B before dateability was evaluated; per Rule B, dateability is irrelevant once the relevance gate fails, so no fetch-fallback-chain attempt was spent chasing a date. (Firecrawl was still attempted for completeness and returned the same blanket 'we do not support this site' refusal seen for other Meta-family domains in this ledger; this is not the basis for the skip.)",
+      "history": [
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9769",
+          "note": "Returned generic content summary; account-type claim not independently verifiable given Meta-family bot-wall precedent in this ledger."
+        },
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9769",
+          "note": "Blanket 'we do not support this site' refusal, consistent with facebook.com/instagram.com pattern."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/@ledcardenas/video/7398259345248488710",
+      "firstSeen": "2026-09-06T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-06T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "reviewable": false,
+      "note": "TikTok post by individual account @ledcardenas captioned 'Opinion de las Azules' -- a personal fan-opinion repost, not media coverage. Skipped on relevance per Rule B before any fetch attempt; dateability is irrelevant once the relevance gate fails, so no fetch-fallback-chain attempt was spent on this URL.",
+      "history": [
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "Relevance gate (Rule B), no fetch attempted",
+          "status": null,
+          "issue": "LEMA-9769"
+        }
+      ]
+    },
+    {
+      "url": "https://www.thefutoncritic.com/listings/2026/09/09/",
+      "firstSeen": "2026-09-06T20:00:00Z",
+      "failCount": 1,
+      "lastStatus": "webfetch_econnrefused; firecrawl_500_tunnel_error",
+      "lastAttempt": "2026-09-06T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "note": "Daily TV listings/schedule grid page for 2026-09-09 (found via Exa Pass 1 EN query). WebFetch failed with ECONNREFUSED (both http and https tried). Firecrawl scrape failed with a 500 SCRAPE_SITE_ERROR (ERR_TUNNEL_CONNECTION_FAILED, described by Firecrawl as an internal proxy error). This is a technical full-chain fetch failure, not an editorial exclusion -- not added to data.json this run, failCount=1 (not yet at the 3-failure cooldown threshold).",
+      "history": [
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "WebFetch",
+          "status": "ECONNREFUSED",
+          "issue": "LEMA-9769"
+        },
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 500,
+          "issue": "LEMA-9769",
+          "note": "SCRAPE_SITE_ERROR / ERR_TUNNEL_CONNECTION_FAILED, described as an internal Firecrawl proxy error."
+        }
+      ]
+    },
+    {
+      "url": "https://serienstream.to/serie/women-in-blue/staffel-2/episode-5",
+      "firstSeen": "2026-09-06T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": "webfetch_200_no_date; firecrawl_200_no_date",
+      "lastAttempt": "2026-09-06T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "note": "SerienStream (S.to) German streaming-platform episode listing page for Women in Blue S2E5 (episode not yet aired as of fetch, scheduled Sept 9, 2026). WebFetch succeeded (200) and confirmed this is a streaming/episode listing page (cast info, FAQ/support content), not an editorial article -- no publish/article date anywhere in the body, only the episode's scheduled air date (a catalog/schedule artifact, not a sourced editorial publish date per Rule A). Firecrawl scrape also attempted per Rule A: succeeded (200), same result -- no date field in metadata or body. Both methods exhausted, no date recoverable. Matches the same pattern as other already-permanentSkip streaming-catalog pages in this ledger (JustWatch, TVMaze, TheMovieDB, tv.apple.com). Skipped as editorial_undateable, reviewable=true.",
+      "history": [
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9769",
+          "note": "Streaming/episode listing page, no publish date found."
+        },
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9769",
+          "note": "Confirmed same content type, no date field present anywhere in metadata or body."
+        }
+      ]
+    },
+    {
+      "url": "https://www.primevideo.com/-/es/detail/0RMO1EJVZG03W0PUOQZ4XW98PT",
+      "firstSeen": "2026-09-06T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": "webfetch_200_no_date; firecrawl_200_no_date",
+      "lastAttempt": "2026-09-06T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "note": "Prime Video (ES locale) product/catalog detail page for Las Azules (via Apple TV channel add-on). WebFetch succeeded (200) and confirmed this is a promotional catalog entry (episode summaries, runtime, cast, IMDb rating, subscription options), not an editorial article -- no publish date displayed anywhere on the page (the show's own 2024 season-1 air dates are mentioned as content metadata, not a page publish date). Firecrawl scrape also attempted per Rule A: succeeded (200), same result -- no date field in metadata or body. Both methods exhausted, no date recoverable. Matches the same pattern as other already-permanentSkip streaming-catalog pages in this ledger (JustWatch, TVMaze, TheMovieDB). Skipped as editorial_undateable, reviewable=true.",
+      "history": [
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9769",
+          "note": "Catalog/product listing page, no publish date found."
+        },
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9769",
+          "note": "Confirmed same content type, no date field present anywhere in metadata or body."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-06T16:00:00.000Z"
