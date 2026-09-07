@@ -2023,6 +2023,34 @@
       ],
       "skipReason": "editorial_undateable",
       "reviewable": true
+    },
+    {
+      "url": "http://thefutoncritic.com/listings/2026/09/09/",
+      "firstSeen": "2026-09-07T08:10:19.000Z",
+      "failCount": 0,
+      "lastStatus": "webfetch_econnrefused; firecrawl_200_no_article_date",
+      "lastAttempt": "2026-09-07T08:10:19.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9794. TheFutonCritic daily TV listings/schedule grid page for 2026-09-09, showing dozens of shows airing that day across networks, including 'women in blue: lozano (#205)' on Apple TV. This is a syndicated programming grid, not an editorial article about the show -- no article-level publish date exists, only the schedule date embedded in the URL. WebFetch failed (ECONNREFUSED, connection error), so a Firecrawl scrape was attempted per Rule A mandate: succeeded (200) and confirmed the page is a generic daily listings grid with no page-level publish/article date field, matching the same catalog/listing pattern already established for JustWatch, TVMaze, TheMovieDB, tv.apple.com, MijnSerie and SerienStream in this ledger. Not added to data.json. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-07T08:10:19.000Z",
+          "method": "WebFetch",
+          "status": "ECONNREFUSED",
+          "issue": "LEMA-9794",
+          "note": "Connection refused, no content retrieved."
+        },
+        {
+          "attempt": "2026-09-07T08:10:19.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9794",
+          "note": "Confirmed generic daily TV listings grid, no article-level publish date; 'women in blue: lozano (#205)' appears as one of dozens of scheduled programs that day."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-07T06:00:53.000Z"
