@@ -1867,6 +1867,160 @@
           "note": "Confirmed fan-aggregator account reposting official announcement content, no original reporting. Applied Rule B relevance gate."
         }
       ]
+    },
+    {
+      "url": "https://tvmeg.com/index.php/tag/las-azules/",
+      "firstSeen": "2026-09-07T04:00:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T04:00:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Surfaced via Pass 2 general web sweep. This is TVMEG.COM's tag-archive page, which surfaces the same interview with Bárbara Mori, Ximena Sariñana and Fernando Rovzar already tracked in data.json at the canonical article URL https://tvmeg.com/index.php/2026/08/08/rovzar/ (same outlet, same interview content). WebFetch and Firecrawl both confirmed this is the identical underlying post/interview, just an archive/tag-listing view rather than the article permalink. Not new coverage, excluded as a duplicate of already-present content from the same outlet.",
+      "history": [
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9773",
+          "note": "Returned tag-archive page content matching the already-tracked tvmeg.com/index.php/2026/08/08/rovzar/ article (same interview, same outlet)."
+        },
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9773",
+          "note": "Confirmed same content; inline byline date '8/5/26' visible but this is the same story as the already-present canonical article URL, not new coverage."
+        }
+      ]
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Las_Azules",
+      "firstSeen": "2026-09-07T04:00:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T04:00:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Portuguese Wikipedia biography/reference page for Las Azules, surfaced via Pass 2 web sweep. WebFetch confirmed this is a general encyclopedia page (plot, cast, S1 reception), not a dated news article; the only date-like element is a last-edited revision timestamp (2026-08-19), a revision artifact, not a sourced publish date. Firecrawl scrape (per Rule A mandate) confirmed no og:article:published_time, datePublished, or similar field present in metadata. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9773",
+          "note": "General encyclopedia page; no article-level publish date, only a last-edited revision timestamp."
+        },
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9773",
+          "note": "Confirmed no publish-date field in metadata or body. Undateable per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://m.imdb.com/review/rw9942240/",
+      "firstSeen": "2026-09-07T04:00:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T04:00:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Surfaced via Pass 2 web sweep ('Las Azules Apple TV YouTube review episode 7 episode 8' query). This is an anonymous IMDb user-submitted review ('Review by armandoemc'), not a media outlet or critic. Under Rule B, individual/anonymous user-generated content is not media coverage of the show regardless of dateability, the same relevance gate applied to fan-repost social accounts. Page also gated behind an IMDb sign-in wall (login-required to view full review text) and interleaved with an ad-blocker error page via Firecrawl, consistent with other imdb.com bot-wall entries in this ledger. Skipped on relevance grounds; dateability not pursued.",
+      "history": [
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9773"
+        },
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9773",
+          "note": "Returned page shell: 'Review by armandoemc', sign-in wall for full text, ad-block error page interleaved. Confirmed anonymous user review, not outlet coverage. Skipped on relevance per Rule B."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/izzimx/videos/ellas-rompieron-barreras-e-hicieron-historia-%EF%B8%8F-conoce-la-valent%C3%ADa-y-los-secretos/28009947492022426/",
+      "firstSeen": "2026-09-07T04:00:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T04:00:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "Surfaced via Pass 3 Firecrawl BR-market search. This is izzi telecom's official account (Mexican pay-TV/telecom distributor), posting promotional content ('#NoMeLoPierdoEnizzi') encouraging viewers to watch Las Azules via izzi's service. This is vendor/distributor marketing promoting a third-party platform's carriage of the show, not media coverage of the show itself, the same relevance disposition as the CTT Exp & Rentals vendor posts already in this ledger. Skipped on relevance grounds per Rule B; dateability not pursued (no date was found in the fetched content either).",
+      "history": [
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9773",
+          "note": "Confirmed izzi telecom vendor/distributor promotional post, no publish date visible. Skipped on relevance, not dateability, per Rule B."
+        }
+      ]
+    },
+    {
+      "url": "https://www.allocine.fr/series/ficheserie_gen_cserie=31977.html",
+      "firstSeen": "2026-09-07T04:00:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T04:00:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Surfaced via Pass 3 Firecrawl FR-market search. AlloCiné general show-profile/database page for Las Azules (synopsis, cast, ratings, viewing options), not a dated news article. The only dated element on the page is an unrelated hyperlink to a separate 2025-09-19 'canceled and renewed series' roundup article, not this page's own publish date. Firecrawl scrape (per Rule A mandate) confirmed no publish/update date field in metadata. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9773",
+          "note": "Confirmed evergreen database/reference page, no page-level publish date."
+        },
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9773",
+          "note": "Confirmed no publish-date metadata field present. Undateable per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://m.imdb.com/title/tt20516590/",
+      "firstSeen": "2026-09-07T04:00:46Z",
+      "failCount": 1,
+      "lastStatus": "webfetch_redirect_unresolved;firecrawl_200_unusable_adblock_page",
+      "lastAttempt": "2026-09-07T04:00:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "WebFetch",
+          "status": 302,
+          "issue": "LEMA-9773",
+          "note": "Redirects to https://www.imdb.com/title/tt20516590/ (already in this ledger, failCount=1); WebFetch did not auto-follow, content not retrieved."
+        },
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9773",
+          "note": "Returned 200 but body is largely an ad-blocker error page ('s.amazon-adsystem.com is blocked') interleaved with partial title content, same unusable-body pattern as the www.imdb.com/title/tt20516590/ ledger entry. Treated as a full-chain failure. failCount now 1."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-07T00:00:50.000Z"
