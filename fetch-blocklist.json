@@ -2088,6 +2088,31 @@
           "note": "Firecrawl succeeded and returned real content (title, uploader, transcript) confirming this is an individual fan reupload of a Las Azules S2 scene clip, not outlet/publisher coverage. Skipped on relevance per Rule B."
         }
       ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/las-azules-final-serie-episodio-8",
+      "firstSeen": "2026-09-07T16:03:42Z",
+      "failCount": 1,
+      "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-07T16:03:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-07T16:03:42Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Returned only 'TikTok - Make Your Day' boilerplate, no post caption/content (bot wall), empty-body failure.",
+          "issue": "LEMA-9826"
+        },
+        {
+          "attempt": "2026-09-07T16:03:42Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 1.",
+          "issue": "LEMA-9826"
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-07T06:00:53.000Z"
