@@ -2061,6 +2061,33 @@
           "note": "Confirmed generic daily TV listings grid, no article-level publish date; 'women in blue: lozano (#205)' appears as one of dozens of scheduled programs that day."
         }
       ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=5feWbwFLSRc",
+      "firstSeen": "2026-09-07T14:01:08.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T14:01:08.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Individual fan reupload (channel: Andrea Guemez, @andreaguemezmx; 3 views, 1 like, no description) of a short (68s) scene clip from Las Azules Season 2, uploaded 2026-09-04. Not a publisher, outlet, or official show/network account -- an individual crew-personal/fan-repost account under the Rule B relevance gate (LEMA-9642, CEO ruling on LEMA-9641). Skipped on relevance, not dateability. Surfaced via YouTube Data API date-ordered search for \"Las Azules temporada 2\" during the Pass 2 sweep in LEMA-9823.",
+      "history": [
+        {
+          "attempt": "2026-09-07T14:01:08.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9823",
+          "note": "WebFetch returned only YouTube footer/nav boilerplate, no video content (empty-body pattern)."
+        },
+        {
+          "attempt": "2026-09-07T14:01:08.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9823",
+          "note": "Firecrawl succeeded and returned real content (title, uploader, transcript) confirming this is an individual fan reupload of a Las Azules S2 scene clip, not outlet/publisher coverage. Skipped on relevance per Rule B."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-07T06:00:53.000Z"
