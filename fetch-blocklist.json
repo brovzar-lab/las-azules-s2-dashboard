@@ -1657,11 +1657,11 @@
     {
       "url": "https://www.thefutoncritic.com/listings/2026/09/09/",
       "firstSeen": "2026-09-06T20:00:00Z",
-      "failCount": 1,
-      "lastStatus": "webfetch_econnrefused; firecrawl_500_tunnel_error",
-      "lastAttempt": "2026-09-06T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T00:00:50.000Z",
       "cooldownUntil": null,
-      "permanentSkip": false,
+      "permanentSkip": true,
       "note": "Daily TV listings/schedule grid page for 2026-09-09 (found via Exa Pass 1 EN query). WebFetch failed with ECONNREFUSED (both http and https tried). Firecrawl scrape failed with a 500 SCRAPE_SITE_ERROR (ERR_TUNNEL_CONNECTION_FAILED, described by Firecrawl as an internal proxy error). This is a technical full-chain fetch failure, not an editorial exclusion -- not added to data.json this run, failCount=1 (not yet at the 3-failure cooldown threshold).",
       "history": [
         {
@@ -1676,8 +1676,24 @@
           "status": 500,
           "issue": "LEMA-9769",
           "note": "SCRAPE_SITE_ERROR / ERR_TUNNEL_CONNECTION_FAILED, described as an internal Firecrawl proxy error."
+        },
+        {
+          "attempt": "2026-09-07T00:00:50.000Z",
+          "method": "WebFetch",
+          "status": "ECONNREFUSED",
+          "issue": "LEMA-9771"
+        },
+        {
+          "attempt": "2026-09-07T00:00:50.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9771",
+          "note": "Full daily listings grid retrieved, confirms Women in Blue #205 airs 2026-09-09, but no article-level publish date field present anywhere. Undateable per Rule A."
         }
-      ]
+      ],
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Surfaced again via Exa Pass 1 (EN query) on LEMA-9771. WebFetch failed with ECONNREFUSED. Firecrawl scrape succeeded (200) and returned the full daily TV listings grid for 2026-09-09 (confirms 'women in blue: lozano (#205)' airs that day), but this is a static schedule/listings page, not a dated article -- no og:article:published_time, datePublished, or any other publish-timestamp field anywhere in metadata or body. The date in the URL/page is the broadcast schedule date, not an editorial publish date, and is not a substitute per Rule A. Full-chain fetch succeeded (ledger reset per step 4d) but the candidate itself is undateable per Rule A -- same evergreen-listing pattern as the thetvdb.com and epguides.com entries in this ledger."
     },
     {
       "url": "https://serienstream.to/serie/women-in-blue/staffel-2/episode-5",
@@ -1762,7 +1778,96 @@
           "note": "Confirmed same content type, no date field present anywhere in metadata or body."
         }
       ]
+    },
+    {
+      "url": "https://www.mijnserie.nl/las-azules/afleveringen/seizoen_2/aflevering_6/",
+      "firstSeen": "2026-09-07T00:00:50.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T00:00:50.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9771. MijnSerie (Dutch TV database) episode detail page for Las Azules S2E6 ('Gilberto'). WebFetch succeeded (200) and confirmed this is an episode catalog page (cast list, synopsis, navigation to reviews/stats) with only the episode's broadcast date (15 september 2026) -- a schedule/catalog field, not an editorial publish date. Same per-episode-air-date-in-evergreen-catalog pattern already established for themoviedb.org/tv/253983-las-azules/season/2 and tvmaze.com/shows/62238/las-azules/episodeguide in this ledger. Per Rule A, this per-episode field may not substitute for a real sourced publish date for this URL as a candidate. Not added to data.json. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-07T00:00:50.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9771",
+          "note": "Episode catalog page returned; only a per-episode broadcast date present, no page-level publish date."
+        }
+      ]
+    },
+    {
+      "url": "https://www.apple.com/uk/tv-pr/originals/women-in-blue-las-azules/",
+      "firstSeen": "2026-09-07T00:00:50.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T00:00:50.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Pass 2 web sweep (trade press cluster) on LEMA-9771. Official Apple TV Press (UK) evergreen show/press-kit landing page for Women in Blue (Las Azules) -- official-brand account so Rule B relevance gate does not apply (this is media coverage in principle), but Rule A dateability still required. WebFetch succeeded (200): static promotional hub with press images/synopsis, only 'Season 2 Release Date: 12 August 2026' (the show's own release date, not a page publish/update timestamp). Firecrawl scrape attempted per Rule A mandate: succeeded (200), full metadata block retrieved (og:title, og:description, og:image, etc.) with no og:article:published_time, datePublished, or any other publish/update field anywhere. Both methods exhausted, no real date recoverable -- same pattern as the already-ledgered tv.apple.com/us/show/... and tv.apple.com/mx,do,pe locale-variant show pages. Not added to data.json. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-07T00:00:50.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9771",
+          "note": "Evergreen press-kit page, only the show's Season 2 release date present, no page publish date."
+        },
+        {
+          "attempt": "2026-09-07T00:00:50.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9771",
+          "note": "Full metadata retrieved, confirmed no publish/update date field present anywhere. Undateable per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://m.imdb.com/news/ni64735557/?ref_=tt_nwr_1",
+      "firstSeen": "2026-09-07T00:00:50.000Z",
+      "failCount": 0,
+      "lastStatus": 302,
+      "lastAttempt": "2026-09-07T00:00:50.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Discovered via Pass 2 web sweep (YouTube/cast-interview cluster) on LEMA-9771. Mobile-subdomain URL variant of https://www.imdb.com/news/ni64735557/, which is already present in data.json under its canonical www. URL. Confirmed via direct curl: this m. URL returns a 302 redirect to the canonical www. URL. Same pattern as the existing m.imdb.com/title/tt20516590/news/ ledger entry. Ledgered so future sweeps recognize and skip this variant directly without re-resolving the redirect.",
+      "history": [
+        {
+          "attempt": "2026-09-07T00:00:50.000Z",
+          "method": "curl HEAD (redirect check)",
+          "status": 302,
+          "issue": "LEMA-9771",
+          "note": "Redirects to https://www.imdb.com/news/ni64735557/, already tracked in data.json."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/AppleTVNewsHub/status/1818456516246008052",
+      "firstSeen": "2026-09-07T00:00:50.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T00:00:50.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Discovered via Pass 2 web sweep (trade press cluster) on LEMA-9771. Account '@AppleTVNewsHub' ('Apple TV News Hub') is a fan/aggregator account, not a verified editorial outlet or an official Apple/show account -- it posts unofficial reposts of Apple TV announcements (this post simply restates 'The first 2 episodes of #WomenInBlue (Las Azules) ... are now streaming', posted 2024-07-31, the S1 premiere day). Same disposition as the existing @GeekGK_ fan-aggregator ledger entry: no original reporting, not a recognized trade/press/official brand. Skipped on relevance per Rule B regardless of dateability (a real date, 2024-07-31, was in fact recoverable via Firecrawl, but the relevance gate excludes it anyway). Fetched successfully via Firecrawl (200); this is a relevance exclusion, not a fetch failure.",
+      "history": [
+        {
+          "attempt": "2026-09-07T00:00:50.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9771",
+          "note": "Confirmed fan-aggregator account reposting official announcement content, no original reporting. Applied Rule B relevance gate."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-06T16:00:00.000Z"
+  "lastUpdated": "2026-09-07T00:00:50.000Z"
 }
