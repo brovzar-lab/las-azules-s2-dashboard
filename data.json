@@ -33,6 +33,28 @@
     "excerpt": "Spanish-language coverage of a new Las Azules (Women in Blue) Season 2 episode, focused on Maria's undercover investigation into a student activist's death connected to the 1968 student massacre, exploring the ethical tension between institutional rules and pursuing the truth. Stars Barbara Mori, Natalia Tellez, Amorita Rasgado, Ximena Sarinana; the piece draws comparisons to Black Bird, Big Little Lies, and Mare of Easttown."
   },
   {
+    "outlet": "Nerds Rule The World (YouTube)",
+    "headline": "WOMEN IN BLUE (\"LAS AZULES\")'s Actor, Ximena Sariñana (\"Angeles\") chats with NRW!",
+    "url": "https://www.youtube.com/watch?v=K_BB3g5Mla4",
+    "date": "Sep 7, 2026",
+    "ts": 20260907,
+    "lang": "EN",
+    "market": "US",
+    "type": "Social",
+    "excerpt": "NRW (Nerds Rule The World) interview video with Women in Blue (Las Azules) actor Ximena Sariñana, timed to the show's Season 2 weekly run on Apple TV (episodes through Sept 30, 2026); covers Season 2's plot involving the 1968 student massacre investigation."
+  },
+  {
+    "outlet": "Nerds Rule The World (YouTube)",
+    "headline": "WOMEN IN BLUE (\"LAS AZULES\")'s Actor, Bárbara Mori (\"Maria\") chats with NRW!",
+    "url": "https://www.youtube.com/watch?v=xkUo0KjpMUc",
+    "date": "Sep 7, 2026",
+    "ts": 20260907,
+    "lang": "EN",
+    "market": "US",
+    "type": "Social",
+    "excerpt": "NRW (Nerds Rule The World) interview video with Women in Blue (Las Azules) actor Bárbara Mori, timed to the show's Season 2 weekly run on Apple TV (episodes through Sept 30, 2026); covers Season 2's plot involving the 1968 student massacre investigation."
+  },
+  {
     "outlet": "High On Films",
     "headline": "Women In Blue (Season 2) 2026: Episodes Release Date, Cast, Streaming Schedule and How to Watch for Free",
     "url": "https://www.highonfilms.com/women-in-blue-season-2-episodes-release-date/",
@@ -3704,7 +3726,8 @@
     "lang": "PT",
     "market": "International",
     "type": "Entertainment",
-    "excerpt": "Brazilian Apple-focused publication announces Season 2 premiere of Women in Blue (Mulheres de Azul) on Apple TV, covering Lieutenant María investigating a murdered activist connected to the 1968 Tlatelolco Massacre."
+    "excerpt": "Brazilian Apple-focused publication announces Season 2 premiere of Women in Blue (Mulheres de Azul) on Apple TV, covering Lieutenant María investigating a murdered activist connected to the 1968 Tlatelolco Massacre.",
+    "storyGroup": "macmagazine-s2-premiere-day-20260812"
   },
   {
     "outlet": "Memorable TV",
@@ -3991,6 +4014,18 @@
     "market": "International",
     "type": "Review",
     "excerpt": "Italian review by Greta Wieth on how Season 2 broadens beyond the Season 1 serial-killer plot into institutional corruption and the 1968 student massacre, with the four leads shifting from seeking acceptance within the police force to questioning whether the institution itself can be reformed."
+  },
+  {
+    "outlet": "MacMagazine",
+    "headline": "2ª temporada de \"Mulheres de Azul\" estreia hoje no Apple TV (X post)",
+    "url": "https://x.com/MacMagazine/status/2087502137987068187",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "lang": "PT",
+    "market": "International",
+    "type": "Social",
+    "excerpt": "MacMagazine's X/Twitter post linking to its own Aug 12, 2026 premiere-day article announcing Season 2 of Mulheres de Azul (Women in Blue) on Apple TV.",
+    "storyGroup": "macmagazine-s2-premiere-day-20260812"
   },
   {
     "outlet": "Fiction Horizon",
