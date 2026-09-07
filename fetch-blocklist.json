@@ -479,7 +479,7 @@
       "firstSeen": "2026-09-03T06:00:25Z",
       "failCount": 0,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-06T02:10:00Z",
+      "lastAttempt": "2026-09-07T10:00:00.000Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -501,8 +501,18 @@
           "status": 200,
           "issue": "LEMA-9756",
           "note": "WebFetch returned 403. Firecrawl scrape succeeded (200): page is Fernando Rovzar publicity listings, only linking two 2022-05-24 articles (Variety, Deadline) about the original series order, not S2 coverage. Not added to data.json (off-topic/too old for S2 sweep), but fetch chain resolved so ledger resets per step 4d."
+        },
+        {
+          "attempt": "2026-09-07T10:00:00.000Z",
+          "method": "WebFetch (403) then Firecrawl scrape (200)",
+          "status": 200,
+          "issue": "LEMA-9811",
+          "note": "Re-encountered via m.imdb.com/es/name/nm0746370/publicity redirect in Pass 2. WebFetch 403; Firecrawl succeeded with real content this time (static IMDb publicity-listings index for Fernando Rovzar, linking only two 2022-05-24 wire pieces on the original series order). Page carries no publish date of its own. Per Rule A this is genuine on-topic content with no recoverable real date after both fetch methods attempted -> editorial_undateable, permanentSkip=true, reviewable=true. Closes the gap left by LEMA-9756 (decision was made in that run comment only, never written to the ledger, so it re-surfaced here) per Rule C (LEMA-9761/9762)."
         }
-      ]
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true
     },
     {
       "url": "https://www.facebook.com/oscarurielcine/videos/las-azules-llegan-a-apple-tv/1765768017163955/",
