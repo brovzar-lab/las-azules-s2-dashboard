@@ -2113,7 +2113,63 @@
           "issue": "LEMA-9826"
         }
       ]
+    },
+    {
+      "url": "https://tv.apple.com/no/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-09-07T20:00:55Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T20:00:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Norway-locale Apple TV show page for Las Azules, same static-listing template as the already-ledgered US/DO/MX/PE locale show pages (all editorial_undateable). Rule A date-recovery gate run this run (LEMA-9829): WebFetch returned full page content but no publish/article date, only the show's release year (2024) under About. Firecrawl scrape run as the mandated second method: also returned full markdown content (episode list, cast) but no og:article:published_time, datePublished, or any other publish timestamp field, only the same 2024 release-year reference. Both methods exhausted, no real date recoverable. Consistent application of the existing editorial_undateable pattern already used for other locale variants of this same show page, not a new exclusion ground.",
+      "history": [
+        {
+          "attempt": "2026-09-07T20:00:55Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9829",
+          "note": "Full page content returned, no publish date field present, only release year 2024."
+        },
+        {
+          "attempt": "2026-09-07T20:00:55Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9829",
+          "note": "Full markdown returned (episode list, cast), no publish/article date field present."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Women_in_Blue_(TV_series)",
+      "firstSeen": "2026-09-07T20:00:55Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-07T20:00:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "English Wikipedia article about the Women in Blue TV series itself. Same pattern as the already-ledgered Barbara Mori and pt.wikipedia.org/wiki/Las_Azules Wikipedia pages (both editorial_undateable). Rule A date-recovery gate run this run (LEMA-9829): WebFetch and Firecrawl scrape both returned full article content, but the only date-like field on the page is 'This page was last edited on 6 September 2026' -- a wiki edit-history artifact, not a genuine article publish date, and per Rule A a crawler/edit artifact must never be substituted for a real publish date. The infobox contains only the show's original release dates (2024-07-31 etc.), not an article publish date. No real date recoverable by either method. Consistent application of the existing editorial_undateable pattern already used for other Wikipedia pages in this ledger, not a new exclusion ground.",
+      "history": [
+        {
+          "attempt": "2026-09-07T20:00:55Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9829",
+          "note": "Full article content returned. Only date-like field is the 'last edited' timestamp (wiki edit artifact), not a publish date."
+        },
+        {
+          "attempt": "2026-09-07T20:00:55Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9829",
+          "note": "Full markdown returned (infobox, plot). No article publish date field; infobox dates are the show's own release dates, not the article's."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-07T06:00:53.000Z"
+  "lastUpdated": "2026-09-07T20:00:55Z"
 }
