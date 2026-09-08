@@ -97,9 +97,9 @@
     {
       "url": "https://procine.cdmx.gob.mx/comunicacion/nota/las-azules-el-nuevo-drama-criminal-de-apple-tv-protagonizado-por-barbara-mori-y-ximena-sarinana",
       "firstSeen": "2026-09-02T18:06:40Z",
-      "failCount": 1,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-02T18:06:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-08T18:10:00.000Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -2455,5 +2455,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-08T16:03:07.000Z"
+  "lastUpdated": "2026-09-08T18:10:00.000Z"
 }
