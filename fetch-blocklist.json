@@ -2476,6 +2476,14 @@
       "permanentSkip": false,
       "skipReason": null,
       "skipNote": "WebFetch returned only the generic TikTok tagline with no article content (near-empty body). Firecrawl scrape returned a 403 with 'we do not support this site' for this TikTok discover page. Full-chain failure, logged per step 4c. First failure for this exact URL (query-param variant of an already-ledgered TikTok discover page); not yet at the 3-failure cooldown threshold."
+    },
+    {
+      "url": "https://www.tiktok.com/discover/serie-en-apple-tv-tendencia",
+      "failCount": 1,
+      "lastStatus": "webfetch_empty_body; firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-08T22:00:27.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": false
     }
   ],
   "lastUpdated": "2026-09-08T18:10:00.000Z"
