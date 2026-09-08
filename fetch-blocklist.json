@@ -2224,7 +2224,87 @@
           "note": "Fallback succeeded: confirmed this is an individual fan forum thread (author 'NoFiSoX', a forum moderator handle, not an outlet), not media coverage. Relevance gate (Rule B) fails; permanentSkip applied."
         }
       ]
+    },
+    {
+      "url": "https://tv.apple.com/it/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-09-08T06:07:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-08T06:07:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Pass 3 Firecrawl IT-market search (LEMA-9834). Italian-locale Apple TV show catalog page for Las Azules. WebFetch succeeded (200): catalog/product page (synopsis in Italian, pricing, 2024 release year) with no article-level publish/update date. Firecrawl scrape also attempted per Rule A: succeeded (200), metadata contains no date field at all (only timezone, viewport, etc.), same evergreen catalog content. Matches the same evergreen tv.apple.com show-page pattern already permanentSkip editorial_undateable for the us/do/mx/pe/no market variants in this ledger. Not added to data.json. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-08T06:07:40Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9834",
+          "note": "Catalog page, only release year 2024 present, no article date."
+        },
+        {
+          "attempt": "2026-09-08T06:07:40Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9834",
+          "note": "Confirmed no date field in metadata or body; same evergreen catalog pattern as other tv.apple.com market variants."
+        }
+      ]
+    },
+    {
+      "url": "https://www.sensacine.com/series/serie-31977/",
+      "firstSeen": "2026-09-08T06:07:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-08T06:07:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Pass 2 web sweep (LEMA-9834, YouTube/trade-press query). SensaCine series hub page for Las Azules. WebFetch succeeded (200): comprehensive series hub (synopsis, cast, streaming info, related news/trailers) with only an unrelated news item's date visible (a separate Aug 2026 streaming-guide blurb), no page-level publish/update date for this hub page itself. Firecrawl scrape also attempted per Rule A: succeeded (200), extensive og:/twitter: metadata present but no article:published_time, datePublished, or any date field. Both methods exhausted, no date recoverable. Same evergreen series-hub pattern as other database/catalog pages already permanentSkip in this ledger. Not added to data.json. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-08T06:07:40Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9834",
+          "note": "Series hub page, no page-level publish date found."
+        },
+        {
+          "attempt": "2026-09-08T06:07:40Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9834",
+          "note": "Full og:/twitter: metadata present, no date field anywhere."
+        }
+      ]
+    },
+    {
+      "url": "https://guides.justwatch.com/gt/serie/las-azules",
+      "firstSeen": "2026-09-08T06:07:40Z",
+      "failCount": 1,
+      "lastStatus": 404,
+      "lastAttempt": "2026-09-08T06:07:40Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-08T06:07:40Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9834",
+          "note": "404 Not Found."
+        },
+        {
+          "attempt": "2026-09-08T06:07:40Z",
+          "method": "Firecrawl scrape",
+          "status": 404,
+          "issue": "LEMA-9834",
+          "note": "success:true but body is a literal '404 page not found' placeholder; metadata statusCode 404. Dead link, treated as full-chain failure per the AOL placeholder precedent in this ledger."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-07T20:00:55Z"
+  "lastUpdated": "2026-09-08T06:07:40Z"
 }
