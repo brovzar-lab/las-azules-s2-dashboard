@@ -2169,6 +2169,61 @@
           "note": "Full markdown returned (infobox, plot). No article publish date field; infobox dates are the show's own release dates, not the article's."
         }
       ]
+    },
+    {
+      "url": "https://allyoucanfind.org/women-in-blue-season-2-episode-schedule-how-many-episodes-are-left-when-is-the-finale-278429.html",
+      "firstSeen": "2026-09-08T02:00:56.757Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-08T02:00:56.757Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Low-quality WordPress aggregator (site name 'All You Can Find') that mirrors Just Jared's RSS feed excerpt; page explicitly says 'The post ... appeared first on Just Jared' and links back to the primary https://www.justjared.com/2026/09/07/women-in-blue-season-2-episode-schedule-finale-date/ (already in data.json). Rule A dateability check performed per LEMA-9642: WebFetch returned only a vague relative-time guess ('posted 8 hours ago' relative to an unclear reference, rendered as 'November 22, 2025', which predates Season 2 entirely and is not a real timestamp -- a WebFetch summarization artifact, not a sourced date). Firecrawl scrape metadata was checked explicitly for datePublished/article:published_time/og:article:published_time fields: none present anywhere in the page metadata (only ogTitle/ogDescription/ogImage/ogUrl, no date field). Both fetch methods exhausted with no real date recoverable. Per Rule A, no proxy/approximated date may substitute, so this is permanentSkip/editorial_undateable rather than added with a fabricated date, reviewable=true in case a future run finds a dateable source for this same mirror.",
+      "history": [
+        {
+          "attempt": "2026-09-08T02:00:56.757Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9832",
+          "note": "Returned real body content (syndicated Just Jared episode-schedule mirror) but only a vague, unreliable relative-time guess for date, not a sourced timestamp."
+        },
+        {
+          "attempt": "2026-09-08T02:00:56.757Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9832",
+          "note": "Checked metadata explicitly for date fields (datePublished, article:published_time, og:article:published_time): none present. Confirms no date recoverable from this page."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mediavida.com/foro/tv/las-azules-appletv-mexico-713218",
+      "firstSeen": "2026-09-08T02:00:56.757Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-08T02:00:56.757Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Individual fan discussion thread on the Mediavida forum, created by user 'NoFiSoX' (a forum moderator, not an outlet, publisher, or editorial-brand account) on 2024-07-28, discussing Season 1. Firecrawl scrape confirms datePublished 2024-07-28T23:41:23+02:00 and author name 'NoFiSoX' (a personal forum handle). Per Rule B, this is not media coverage of the show regardless of dateability; it is a personal/fan discussion post. Skipped on relevance grounds, dateability not evaluated further.",
+      "history": [
+        {
+          "attempt": "2026-09-08T02:00:56.757Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9832",
+          "note": "403 Forbidden."
+        },
+        {
+          "attempt": "2026-09-08T02:00:56.757Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9832",
+          "note": "Fallback succeeded: confirmed this is an individual fan forum thread (author 'NoFiSoX', a forum moderator handle, not an outlet), not media coverage. Relevance gate (Rule B) fails; permanentSkip applied."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-07T20:00:55Z"
