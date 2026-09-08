@@ -2304,6 +2304,54 @@
           "note": "success:true but body is a literal '404 page not found' placeholder; metadata statusCode 404. Dead link, treated as full-chain failure per the AOL placeholder precedent in this ledger."
         }
       ]
+    },
+    {
+      "url": "https://www.facebook.com/izzimx/videos/ellas-rompieron-barreras-e-hicieron-historia-%EF%B8%8F-conoce-la-valent%C3%ADa-y-los-secretos/28009947492022426/",
+      "firstSeen": "2026-09-08T10:04:08.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-08T10:04:08.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "Facebook video posted by 'izzi telecom' (izzimx), a Mexican pay-TV/telecom distribution vendor, promoting availability of Las Azules on their platform. Vendor/distributor promotional account, not an outlet or the studio/network itself. Surfaced during Pass 3 Firecrawl BR search (LEMA-9848). Skipped on relevance per Rule B (LEMA-9642); dateability not evaluated since relevance gate fails first. WebFetch confirmed content is promotional (police-themed show, #LasAzules hashtag, Apple TV mention) from the izzi telecom account.",
+      "history": [
+        {
+          "attempt": "2026-09-08T10:04:08.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9848",
+          "note": "Confirmed poster is izzi telecom, a distribution vendor account promoting the show on their platform. Skipped on Rule B relevance grounds before any dateability check."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/thefemalelead/videos/when-filming-las-azules-the-series-inspired-by-the-true-story-of-mexicos-first-f/1370329548535537/",
+      "firstSeen": "2026-09-08T10:04:08.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-08T10:04:08.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Facebook video from 'The Female Lead', a legitimate editorial/media brand (not vendor or personal-repost), about the cast of Las Azules meeting the real-life 1970s female police officers who inspired the show. Surfaced during Pass 3 Firecrawl FR search (LEMA-9848). Passes Rule B relevance gate (editorial-brand account). WebFetch returned 200 with real content (BTS filming feature) but no publish date field. Firecrawl scrape was attempted per Rule A and returned the documented blanket 'we do not support this site' refusal (403) for facebook.com -- a valid, documented exhaustion of the method. Both fetch methods exhausted with no real date recoverable. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-08T10:04:08.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9848",
+          "note": "Real content returned (BTS feature on the real-life women who inspired the show) but no page-level publish date field."
+        },
+        {
+          "attempt": "2026-09-08T10:04:08.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9848",
+          "note": "Blanket 'we do not support this site' refusal for facebook.com. Documented exhaustion of the method per Rule A."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-08T06:07:40Z"
