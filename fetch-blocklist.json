@@ -2352,6 +2352,82 @@
           "note": "Blanket 'we do not support this site' refusal for facebook.com. Documented exhaustion of the method per Rule A."
         }
       ]
+    },
+    {
+      "url": "https://www.movistarplus.es/series/las-azules/ficha?tipo=E&id=3958475",
+      "firstSeen": "2026-09-08T12:06:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-08T12:06:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Movistar Plus (Spain) catalog/detail page for Las Azules, surfaced during Pass 2 general web sweep. WebFetch returned 200 with real page content (title, synopsis, 16+ rating, two seasons available) but no publish/update date field. Firecrawl scrape confirmed: full metadata block retrieved (og:title, og:description, og:image, og:type=profile, etc.) but no og:article:published_time, datePublished, or any other publish/update timestamp field present anywhere. This is an evergreen title/catalog page, same pattern as the existing primevideo.com and tv.apple.com ledger entries. Per Rule A, no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-08T12:06:02Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9849",
+          "note": "Real page content (synopsis, cast, rating) but no publish/update date, only implied release year (2026) in title."
+        },
+        {
+          "attempt": "2026-09-08T12:06:02Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9849",
+          "note": "Full metadata block retrieved successfully, but no publish/update date field present anywhere in body or metadata. Undateable per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.parrotanalytics.com/IN/women-in-blue-las-azules-apple-tv-plus",
+      "firstSeen": "2026-09-08T12:06:02Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-08T12:06:02Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-08T12:06:02Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9849",
+          "note": "HTTP 403 Forbidden."
+        },
+        {
+          "attempt": "2026-09-08T12:06:02Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9849",
+          "note": "CloudFront 'request could not be satisfied' block page (statusCode 403), not real analytics content. Full-chain failure, failCount now 1."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/@postcreditscenepodcast/video/7398269390321372449",
+      "firstSeen": "2026-09-08T12:06:02Z",
+      "failCount": 1,
+      "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-08T12:06:02Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-08T12:06:02Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9849",
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post caption/content -- bot wall, treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-08T12:06:02Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9849",
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 1. Note: @postcreditscenepodcast is a podcast/media outlet account (editorial-brand per Rule B), not a fan-repost -- relevance gate does not apply; this is a pure fetch failure, candidate remains eligible on retry after cooldown clears."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-08T06:07:40Z"
