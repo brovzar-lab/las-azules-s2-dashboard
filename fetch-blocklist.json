@@ -2531,11 +2531,20 @@
     {
       "url": "https://www.youtube.com/watch?v=Z9n3TkdcGLY",
       "permanentSkip": false,
-      "failCount": 1,
+      "failCount": 0,
       "cooldownUntil": null,
-      "lastStatus": "webfetch_empty_nav_shell; firecrawl_408_scrape_timeout",
-      "lastAttempt": "2026-09-09T06:00:00.000Z"
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-09T10:03:05.000Z",
+      "history": [
+        {
+          "attempt": "2026-09-09T10:03:05.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9865",
+          "note": "Retry succeeded: Firecrawl returned real page content with resolvable metadata (datePublished/uploadDate 2026-07-21T06:59:47-07:00, Apple TV channel). Note: this canonical URL (no query params) is already present in data.json as the Jul 21, 2026 Apple TV YouTube trailer entry; this run also surfaced a &vl=en-US query-string variant via Firecrawl Pass 3 (DE query), which is the same video and was not added as a separate entry. failCount reset per step 4d."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-08T18:10:00.000Z"
+  "lastUpdated": "2026-09-09T10:03:05.000Z"
 }
