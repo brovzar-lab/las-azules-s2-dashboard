@@ -2659,6 +2659,34 @@
       "skipReason": "editorial_undateable",
       "reviewable": true,
       "firstSeen": "2026-09-09T18:03:55.000Z"
+    },
+    {
+      "url": "https://www.spin-off.fr/episode06-473879-16092026-saison2-Las-Azules.html",
+      "firstSeen": "2026-09-09T22:00:50.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-09T22:00:50.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Exa Pass 1 (both EN and ES queries) on LEMA-9876. Spin-off.fr episode detail page for Las Azules S2E6. WebFetch (200) confirmed this is an episode catalog entry (runtime, episode list, ratings/comments sections), no editorial publish date. Firecrawl scrape (200) confirmed the only date field is schema.org datePublished=2026-09-16, which matches the URL's embedded broadcast date (16092026) -- a per-episode air-date field, not a real sourced publish date. Same per-episode-air-date-in-evergreen-catalog pattern already established for themoviedb.org/tv/253983-las-azules/season/2, tvmaze.com/shows/62238/las-azules/episodeguide, and mijnserie.nl/las-azules. Per Rule A, not added to data.json. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-09T22:00:50.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9876",
+          "note": "Episode catalog page, no editorial publish date found."
+        },
+        {
+          "attempt": "2026-09-09T22:00:50.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9876",
+          "note": "Confirmed only date field is schema.org datePublished matching the episode broadcast date embedded in the URL, not a real editorial publish date."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-09T18:03:55.000Z"
