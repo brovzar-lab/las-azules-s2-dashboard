@@ -2544,7 +2544,115 @@
           "note": "Retry succeeded: Firecrawl returned real page content with resolvable metadata (datePublished/uploadDate 2026-07-21T06:59:47-07:00, Apple TV channel). Note: this canonical URL (no query params) is already present in data.json as the Jul 21, 2026 Apple TV YouTube trailer entry; this run also surfaced a &vl=en-US query-string variant via Firecrawl Pass 3 (DE query), which is the same video and was not added as a separate entry. failCount reset per step 4d."
         }
       ]
+    },
+    {
+      "url": "https://www.justwatch.com/mx/serie/las-azules",
+      "firstSeen": "2026-09-09T16:05:00.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-09T16:05:00.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "JustWatch MX streaming listing page for Las Azules. Both WebFetch and Firecrawl attempted per Rule A; only a crawler 'last checked' timestamp (e.g. \"Hemos buscado actualizaciones en 82 plataformas el 9 de septiembre de 2026\") is present, not a real publish date. Same pattern as other already-ledgered JustWatch locale pages. Skipped as editorial_undateable, reviewable=true.",
+      "history": [
+        {
+          "attempt": "2026-09-09T16:05:00.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9873",
+          "note": "Page returned real content but only a JustWatch crawler 'last checked streaming services' timestamp, not a publish date."
+        },
+        {
+          "attempt": "2026-09-09T16:05:00.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9873",
+          "note": "Confirmed no publish/article date field anywhere in scraped markdown. This is a streaming-availability listing page, not a dated article."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/sa/tv-show/women-in-blue",
+      "firstSeen": "2026-09-09T16:05:00.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-09T16:05:00.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "JustWatch Saudi Arabia locale streaming listing page. Both WebFetch and Firecrawl attempted per Rule A; only a Hijri-date crawler 'last checked' timestamp present, no real publish date. Skipped as editorial_undateable, reviewable=true.",
+      "history": [
+        {
+          "attempt": "2026-09-09T16:05:00.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9873",
+          "note": "Page returned real content but only a JustWatch crawler 'last checked streaming services' timestamp, not a publish date."
+        },
+        {
+          "attempt": "2026-09-09T16:05:00.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9873",
+          "note": "Confirmed no publish/article date field anywhere in scraped markdown. This is a streaming-availability listing page, not a dated article."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/bg/сериал/las-azules",
+      "firstSeen": "2026-09-09T16:05:00.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-09T16:05:00.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "JustWatch Bulgaria locale streaming listing page. Both WebFetch and Firecrawl attempted per Rule A; only a crawler 'last checked' timestamp present (\"Проверихме за актуализации... на 8 септември 2026\"), no real publish date. Skipped as editorial_undateable, reviewable=true.",
+      "history": [
+        {
+          "attempt": "2026-09-09T16:05:00.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9873",
+          "note": "Page returned real content but only a JustWatch crawler 'last checked streaming services' timestamp, not a publish date."
+        },
+        {
+          "attempt": "2026-09-09T16:05:00.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9873",
+          "note": "Confirmed no publish/article date field anywhere in scraped markdown. This is a streaming-availability listing page, not a dated article."
+        }
+      ]
+    },
+    {
+      "url": "https://gnula.beauty/episodios/las-azules-1-temporada-5-episodio/",
+      "firstSeen": "2026-09-09T16:05:00.000Z",
+      "failCount": 1,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-09T16:05:00.000Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-09T16:05:00.000Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9873",
+          "note": "WebFetch failed with a TLS/certificate error (unable to get local issuer certificate)."
+        },
+        {
+          "attempt": "2026-09-09T16:05:00.000Z",
+          "method": "Firecrawl scrape",
+          "status": 500,
+          "issue": "LEMA-9873",
+          "note": "Firecrawl SCRAPE_ALL_ENGINES_FAILED: all scraping engines (index, fire-engine chrome-cdp x2) failed to retrieve content. Full-chain failure, failCount=1."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-09T10:03:05.000Z"
+  "lastUpdated": "2026-09-09T16:05:00.000Z"
 }
