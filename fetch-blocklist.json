@@ -2507,6 +2507,34 @@
           "note": "Firecrawl also returned 404 (Page Not Found placeholder). Dead link discovered via WebSearch Pass 2, full-chain failure, failCount now 1."
         }
       ]
+    },
+    {
+      "url": "https://tv.apple.com/fr/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": "webfetch_200_no_date; firecrawl_200_no_date",
+      "lastAttempt": "2026-09-09T06:00:00.000Z"
+    },
+    {
+      "url": "https://www.primevideo.com/-/it/detail/0JFCKSNHTRBNJA50K5E6QG2HHN",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": "webfetch_200_no_date; firecrawl_200_no_date",
+      "lastAttempt": "2026-09-09T06:00:00.000Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Z9n3TkdcGLY",
+      "permanentSkip": false,
+      "failCount": 1,
+      "cooldownUntil": null,
+      "lastStatus": "webfetch_empty_nav_shell; firecrawl_408_scrape_timeout",
+      "lastAttempt": "2026-09-09T06:00:00.000Z"
     }
   ],
   "lastUpdated": "2026-09-08T18:10:00.000Z"
