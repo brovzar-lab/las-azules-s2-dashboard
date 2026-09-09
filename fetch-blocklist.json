@@ -2603,6 +2603,27 @@
           "note": "Firecrawl blanket-refused facebook.com domain ('we do not support this site'). Documented exhaustion of method per Rule A."
         }
       ]
+    },
+    {
+      "url": "https://epguides.com/WomeninBlue/",
+      "firstSeen": "2026-09-09T02:10:00.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-09T02:10:00.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via WebSearch Pass 2 (\"Las Azules episode 5 September 9 2026\") on LEMA-9861. Episode-guide/air-date catalog page for Women in Blue (Season 1 2024 + Season 2 2026 episode lists). WebFetch succeeded (200); the only date-like field is a site 'last updated' timestamp for the page itself, not a real article publish date -- matches the evergreen-catalog pattern already established for themoviedb.org, tvmaze.com, and mijnserie.nl in this ledger. Per Rule A, not added to data.json with that timestamp as a stand-in date. reviewable=true for future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-09T02:10:00.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9861",
+          "note": "Episode-guide catalog page; only a page 'last updated' timestamp present, no article publish date."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-08T18:10:00.000Z"
