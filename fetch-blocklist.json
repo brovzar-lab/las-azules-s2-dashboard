@@ -279,6 +279,34 @@
           "status": 200,
           "issue": "LEMA-9642",
           "note": "Fetched raw page source directly to check for date metadata beyond what WebFetch/Firecrawl surface. og:type, og:description, og:image, og:url, og:locale present and confirm this is the correct post (matches prior WebFetch content). No og:article:published_time, datePublished, publish_time, or creation_time field found anywhere in the page source. Confirms no date is recoverable from this page by any fetch method. permanentSkip applied, see skipNote."
+        },
+        {
+          "attempt": "2026-09-08T10:04:08.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9848",
+          "note": "Real content returned (BTS feature on the real-life women who inspired the show) but no page-level publish date field."
+        },
+        {
+          "attempt": "2026-09-08T10:04:08.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9848",
+          "note": "Blanket 'we do not support this site' refusal for facebook.com. Documented exhaustion of the method per Rule A."
+        },
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9861",
+          "note": "Editorial account confirmed, but no publish date present in fetched body."
+        },
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9861",
+          "note": "Firecrawl blanket-refused facebook.com domain ('we do not support this site'). Documented exhaustion of method per Rule A."
         }
       ]
     },
@@ -339,7 +367,7 @@
       "firstSeen": "2026-09-03T02:00:00Z",
       "failCount": 3,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-03T16:03:21Z",
+      "lastAttempt": "2026-09-08T06:07:40Z",
       "cooldownUntil": "2026-10-03T16:03:21Z",
       "history": [
         {
@@ -380,6 +408,20 @@
           "status": 404,
           "issue": "LEMA-9649",
           "note": "Real 404, page not found (not a bot-wall placeholder). Full-chain failure, failCount now 3, cooldown set to 30 days."
+        },
+        {
+          "attempt": "2026-09-08T06:07:40Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9834",
+          "note": "404 Not Found."
+        },
+        {
+          "attempt": "2026-09-08T06:07:40Z",
+          "method": "Firecrawl scrape",
+          "status": 404,
+          "issue": "LEMA-9834",
+          "note": "success:true but body is a literal '404 page not found' placeholder; metadata statusCode 404. Dead link, treated as full-chain failure per the AOL placeholder precedent in this ledger."
         }
       ]
     },
@@ -845,6 +887,19 @@
           "status": 200,
           "issue": "LEMA-9657",
           "note": "Ad-block error page mixed with real content; no dateable field in metadata."
+        },
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9861"
+        },
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9861",
+          "note": "Static IMDb title/show page, no publish date. Undateable catalog page."
         }
       ]
     },
@@ -951,7 +1006,7 @@
       "firstSeen": "2026-09-04T18:05:15.000Z",
       "failCount": 3,
       "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-05T10:05:00.000Z",
+      "lastAttempt": "2026-09-08T16:03:07.000Z",
       "cooldownUntil": "2026-10-05T10:05:00.000Z",
       "permanentSkip": false,
       "history": [
@@ -996,6 +1051,20 @@
           "status": 403,
           "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days.",
           "issue": "LEMA-9745"
+        },
+        {
+          "attempt": "2026-09-08T16:03:07.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content. Same pattern as sibling tiktok.com/discover/segunda-temporada-de-las-azules entry.",
+          "issue": "LEMA-9856"
+        },
+        {
+          "attempt": "2026-09-08T16:03:07.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 1.",
+          "issue": "LEMA-9856"
         }
       ]
     },
@@ -1431,6 +1500,13 @@
           "status": 200,
           "issue": "LEMA-9763",
           "note": "Full markdown content retrieved successfully, confirmed no publish/update date field present anywhere besides the same page-level 'Last updated' field. Undateable per Rule A."
+        },
+        {
+          "attempt": "2026-09-09T02:10:00.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9861",
+          "note": "Episode-guide catalog page; only a page 'last updated' timestamp present, no article publish date."
         }
       ]
     },
@@ -1976,6 +2052,20 @@
           "status": 200,
           "issue": "LEMA-9773",
           "note": "Confirmed izzi telecom vendor/distributor promotional post, no publish date visible. Skipped on relevance, not dateability, per Rule B."
+        },
+        {
+          "attempt": "2026-09-08T10:04:08.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9848",
+          "note": "Confirmed poster is izzi telecom, a distribution vendor account promoting the show on their platform. Skipped on Rule B relevance grounds before any dateability check."
+        },
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9861",
+          "note": "Confirmed izzi telecom (vendor/distribution partner) account; relevance gate fails per Rule B."
         }
       ]
     },
@@ -2250,6 +2340,13 @@
           "status": 200,
           "issue": "LEMA-9834",
           "note": "Confirmed no date field in metadata or body; same evergreen catalog pattern as other tv.apple.com market variants."
+        },
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9861",
+          "note": "Static Apple TV show/episode listing page, no publish date."
         }
       ]
     },
@@ -2278,78 +2375,6 @@
           "status": 200,
           "issue": "LEMA-9834",
           "note": "Full og:/twitter: metadata present, no date field anywhere."
-        }
-      ]
-    },
-    {
-      "url": "https://guides.justwatch.com/gt/serie/las-azules",
-      "firstSeen": "2026-09-08T06:07:40Z",
-      "failCount": 1,
-      "lastStatus": 404,
-      "lastAttempt": "2026-09-08T06:07:40Z",
-      "cooldownUntil": null,
-      "history": [
-        {
-          "attempt": "2026-09-08T06:07:40Z",
-          "method": "WebFetch",
-          "status": 404,
-          "issue": "LEMA-9834",
-          "note": "404 Not Found."
-        },
-        {
-          "attempt": "2026-09-08T06:07:40Z",
-          "method": "Firecrawl scrape",
-          "status": 404,
-          "issue": "LEMA-9834",
-          "note": "success:true but body is a literal '404 page not found' placeholder; metadata statusCode 404. Dead link, treated as full-chain failure per the AOL placeholder precedent in this ledger."
-        }
-      ]
-    },
-    {
-      "url": "https://www.facebook.com/izzimx/videos/ellas-rompieron-barreras-e-hicieron-historia-%EF%B8%8F-conoce-la-valent%C3%ADa-y-los-secretos/28009947492022426/",
-      "firstSeen": "2026-09-08T10:04:08.000Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-08T10:04:08.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_vendor_promo",
-      "skipNote": "Facebook video posted by 'izzi telecom' (izzimx), a Mexican pay-TV/telecom distribution vendor, promoting availability of Las Azules on their platform. Vendor/distributor promotional account, not an outlet or the studio/network itself. Surfaced during Pass 3 Firecrawl BR search (LEMA-9848). Skipped on relevance per Rule B (LEMA-9642); dateability not evaluated since relevance gate fails first. WebFetch confirmed content is promotional (police-themed show, #LasAzules hashtag, Apple TV mention) from the izzi telecom account.",
-      "history": [
-        {
-          "attempt": "2026-09-08T10:04:08.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-9848",
-          "note": "Confirmed poster is izzi telecom, a distribution vendor account promoting the show on their platform. Skipped on Rule B relevance grounds before any dateability check."
-        }
-      ]
-    },
-    {
-      "url": "https://www.facebook.com/thefemalelead/videos/when-filming-las-azules-the-series-inspired-by-the-true-story-of-mexicos-first-f/1370329548535537/",
-      "firstSeen": "2026-09-08T10:04:08.000Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-08T10:04:08.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Facebook video from 'The Female Lead', a legitimate editorial/media brand (not vendor or personal-repost), about the cast of Las Azules meeting the real-life 1970s female police officers who inspired the show. Surfaced during Pass 3 Firecrawl FR search (LEMA-9848). Passes Rule B relevance gate (editorial-brand account). WebFetch returned 200 with real content (BTS filming feature) but no publish date field. Firecrawl scrape was attempted per Rule A and returned the documented blanket 'we do not support this site' refusal (403) for facebook.com -- a valid, documented exhaustion of the method. Both fetch methods exhausted with no real date recoverable. reviewable=true for a future manual lookup.",
-      "history": [
-        {
-          "attempt": "2026-09-08T10:04:08.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-9848",
-          "note": "Real content returned (BTS feature on the real-life women who inspired the show) but no page-level publish date field."
-        },
-        {
-          "attempt": "2026-09-08T10:04:08.000Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "issue": "LEMA-9848",
-          "note": "Blanket 'we do not support this site' refusal for facebook.com. Documented exhaustion of the method per Rule A."
         }
       ]
     },
@@ -2430,31 +2455,6 @@
       ]
     },
     {
-      "url": "https://www.tiktok.com/discover/la-serie-de-las-azules-tendr%C3%A1-segunda-temporada",
-      "firstSeen": "2026-09-08T16:03:07.000Z",
-      "failCount": 1,
-      "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-08T16:03:07.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": false,
-      "history": [
-        {
-          "attempt": "2026-09-08T16:03:07.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content. Same pattern as sibling tiktok.com/discover/segunda-temporada-de-las-azules entry.",
-          "issue": "LEMA-9856"
-        },
-        {
-          "attempt": "2026-09-08T16:03:07.000Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 1.",
-          "issue": "LEMA-9856"
-        }
-      ]
-    },
-    {
       "url": "https://thetvdb.com/series/las-azules/seasons/official/2",
       "firstSeen": "2026-09-08T20:15:00Z",
       "failCount": 0,
@@ -2505,123 +2505,6 @@
           "status": 404,
           "issue": "LEMA-9861",
           "note": "Firecrawl also returned 404 (Page Not Found placeholder). Dead link discovered via WebSearch Pass 2, full-chain failure, failCount now 1."
-        }
-      ]
-    },
-    {
-      "url": "https://www.imdb.com/es-es/title/tt20516590/",
-      "firstSeen": "2026-09-09T02:05:30.000Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-09T02:05:30.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Firecrawl BR-market search on LEMA-9861. Spanish-locale variant of the main IMDb title page for Las Azules / Women in Blue (same title id tt20516590 as the already-tracked English imdb.com/title/tt20516590/ entry). WebFetch returned 403; Firecrawl scrape succeeded (200) and confirmed this is a static show database page (series years, IMDb rating) with no page-level publish/article date, matching the evergreen-catalog pattern already established for themoviedb.org and tvmaze.com in this ledger. Not added to data.json per Rule A. reviewable=true for future manual lookup.",
-      "history": [
-        {
-          "attempt": "2026-09-09T02:05:30.000Z",
-          "method": "WebFetch",
-          "status": 403,
-          "issue": "LEMA-9861"
-        },
-        {
-          "attempt": "2026-09-09T02:05:30.000Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9861",
-          "note": "Static IMDb title/show page, no publish date. Undateable catalog page."
-        }
-      ]
-    },
-    {
-      "url": "https://tv.apple.com/it/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
-      "firstSeen": "2026-09-09T02:05:30.000Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-09T02:05:30.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Firecrawl IT-market search on LEMA-9861. Italian-locale Apple TV show page for Las Azules (episode list, cast, pricing) -- same evergreen catalog-page pattern as the already-tracked tv.apple.com locale variants (lu, es, us?l=es) and as themoviedb.org/tvmaze.com in this ledger. Firecrawl scrape succeeded (200) but the page carries no page-level publish/article date, only static show/episode metadata. Per Rule A (no proxy/approximated dates), not added to data.json with a crawl-date stand-in. reviewable=true for future manual lookup.",
-      "history": [
-        {
-          "attempt": "2026-09-09T02:05:30.000Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9861",
-          "note": "Static Apple TV show/episode listing page, no publish date."
-        }
-      ]
-    },
-    {
-      "url": "https://www.facebook.com/izzimx/videos/ellas-rompieron-barreras-e-hicieron-historia-%EF%B8%8F-conoce-la-valent%C3%ADa-y-los-secretos/28009947492022426/",
-      "firstSeen": "2026-09-09T02:05:30.000Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-09T02:05:30.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_vendor_promo",
-      "skipNote": "Discovered via Firecrawl BR-market search on LEMA-9861. Posted by izzi (izzimx), a Mexican telecom/pay-TV/internet operator owned by Grupo Televisa, promoting Las Azules as available via their service bundle. This is a commercial distribution-partner/vendor account, not editorial media coverage. Skipped on Rule B relevance grounds before any dateability check.",
-      "history": [
-        {
-          "attempt": "2026-09-09T02:05:30.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-9861",
-          "note": "Confirmed izzi telecom (vendor/distribution partner) account; relevance gate fails per Rule B."
-        }
-      ]
-    },
-    {
-      "url": "https://www.facebook.com/thefemalelead/videos/when-filming-las-azules-the-series-inspired-by-the-true-story-of-mexicos-first-f/1370329548535537/",
-      "firstSeen": "2026-09-09T02:05:30.000Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-09T02:05:30.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Firecrawl FR-market search on LEMA-9861. 'The Female Lead' is an editorial media brand (passes Rule B relevance gate) covering the cast meeting real-life officers who inspired the show. WebFetch succeeded (200) but returned no page-level publish date. Firecrawl was attempted and returned a blanket 'we do not support this site' refusal for facebook.com (403) -- a valid, documented exhaustion of the method per Rule A. No real publish date could be surfaced by either method. Not added to data.json. reviewable=true for future manual lookup.",
-      "history": [
-        {
-          "attempt": "2026-09-09T02:05:30.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-9861",
-          "note": "Editorial account confirmed, but no publish date present in fetched body."
-        },
-        {
-          "attempt": "2026-09-09T02:05:30.000Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "issue": "LEMA-9861",
-          "note": "Firecrawl blanket-refused facebook.com domain ('we do not support this site'). Documented exhaustion of method per Rule A."
-        }
-      ]
-    },
-    {
-      "url": "https://epguides.com/WomeninBlue/",
-      "firstSeen": "2026-09-09T02:10:00.000Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-09T02:10:00.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via WebSearch Pass 2 (\"Las Azules episode 5 September 9 2026\") on LEMA-9861. Episode-guide/air-date catalog page for Women in Blue (Season 1 2024 + Season 2 2026 episode lists). WebFetch succeeded (200); the only date-like field is a site 'last updated' timestamp for the page itself, not a real article publish date -- matches the evergreen-catalog pattern already established for themoviedb.org, tvmaze.com, and mijnserie.nl in this ledger. Per Rule A, not added to data.json with that timestamp as a stand-in date. reviewable=true for future manual lookup.",
-      "history": [
-        {
-          "attempt": "2026-09-09T02:10:00.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-9861",
-          "note": "Episode-guide catalog page; only a page 'last updated' timestamp present, no article publish date."
         }
       ]
     }
