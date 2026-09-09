@@ -2484,6 +2484,125 @@
       "lastAttempt": "2026-09-08T22:00:27.000Z",
       "cooldownUntil": null,
       "permanentSkip": false
+    },
+    {
+      "url": "https://thefeastoflegends.com/women-in-blue-episode-5-review/",
+      "firstSeen": "2026-09-09T02:05:30.000Z",
+      "failCount": 1,
+      "lastStatus": 404,
+      "lastAttempt": "2026-09-09T02:05:30.000Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-9861"
+        },
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "Firecrawl scrape",
+          "status": 404,
+          "issue": "LEMA-9861",
+          "note": "Firecrawl also returned 404 (Page Not Found placeholder). Dead link discovered via WebSearch Pass 2, full-chain failure, failCount now 1."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.com/es-es/title/tt20516590/",
+      "firstSeen": "2026-09-09T02:05:30.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-09T02:05:30.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Firecrawl BR-market search on LEMA-9861. Spanish-locale variant of the main IMDb title page for Las Azules / Women in Blue (same title id tt20516590 as the already-tracked English imdb.com/title/tt20516590/ entry). WebFetch returned 403; Firecrawl scrape succeeded (200) and confirmed this is a static show database page (series years, IMDb rating) with no page-level publish/article date, matching the evergreen-catalog pattern already established for themoviedb.org and tvmaze.com in this ledger. Not added to data.json per Rule A. reviewable=true for future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9861"
+        },
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9861",
+          "note": "Static IMDb title/show page, no publish date. Undateable catalog page."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/it/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-09-09T02:05:30.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-09T02:05:30.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Firecrawl IT-market search on LEMA-9861. Italian-locale Apple TV show page for Las Azules (episode list, cast, pricing) -- same evergreen catalog-page pattern as the already-tracked tv.apple.com locale variants (lu, es, us?l=es) and as themoviedb.org/tvmaze.com in this ledger. Firecrawl scrape succeeded (200) but the page carries no page-level publish/article date, only static show/episode metadata. Per Rule A (no proxy/approximated dates), not added to data.json with a crawl-date stand-in. reviewable=true for future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9861",
+          "note": "Static Apple TV show/episode listing page, no publish date."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/izzimx/videos/ellas-rompieron-barreras-e-hicieron-historia-%EF%B8%8F-conoce-la-valent%C3%ADa-y-los-secretos/28009947492022426/",
+      "firstSeen": "2026-09-09T02:05:30.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-09T02:05:30.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "Discovered via Firecrawl BR-market search on LEMA-9861. Posted by izzi (izzimx), a Mexican telecom/pay-TV/internet operator owned by Grupo Televisa, promoting Las Azules as available via their service bundle. This is a commercial distribution-partner/vendor account, not editorial media coverage. Skipped on Rule B relevance grounds before any dateability check.",
+      "history": [
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9861",
+          "note": "Confirmed izzi telecom (vendor/distribution partner) account; relevance gate fails per Rule B."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/thefemalelead/videos/when-filming-las-azules-the-series-inspired-by-the-true-story-of-mexicos-first-f/1370329548535537/",
+      "firstSeen": "2026-09-09T02:05:30.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-09T02:05:30.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Firecrawl FR-market search on LEMA-9861. 'The Female Lead' is an editorial media brand (passes Rule B relevance gate) covering the cast meeting real-life officers who inspired the show. WebFetch succeeded (200) but returned no page-level publish date. Firecrawl was attempted and returned a blanket 'we do not support this site' refusal for facebook.com (403) -- a valid, documented exhaustion of the method per Rule A. No real publish date could be surfaced by either method. Not added to data.json. reviewable=true for future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9861",
+          "note": "Editorial account confirmed, but no publish date present in fetched body."
+        },
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9861",
+          "note": "Firecrawl blanket-refused facebook.com domain ('we do not support this site'). Documented exhaustion of method per Rule A."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-08T18:10:00.000Z"
