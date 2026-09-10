@@ -3536,6 +3536,30 @@
           "issue": "LEMA-9912"
         }
       ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ddHrWGpJduI",
+      "firstSeen": "2026-09-10T16:00:49Z",
+      "failCount": 1,
+      "lastStatus": "timeout",
+      "lastAttempt": "2026-09-10T16:00:49Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-10T16:00:49Z",
+          "method": "WebFetch",
+          "status": "empty_body",
+          "issue": "LEMA-9915",
+          "note": "YouTube official trailer page returned only footer navigation/legal links, no video title, channel, date, or description -- near-empty body, treated as a fetch failure per bot-wall convention."
+        },
+        {
+          "attempt": "2026-09-10T16:00:49Z",
+          "method": "Firecrawl scrape",
+          "status": "timeout",
+          "issue": "LEMA-9915",
+          "note": "Firecrawl scrape timed out before completing (heavy JS render). Full-chain failure, failCount=1."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-10T14:08:03Z"
