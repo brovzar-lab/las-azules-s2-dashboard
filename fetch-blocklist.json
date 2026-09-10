@@ -1593,34 +1593,6 @@
       ]
     },
     {
-      "url": "https://www.youtube.com/playlist?list=PLPDDDmhRE2s8KxriGjT-QlsKTHWcExaXc",
-      "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "lastAttempt": "2026-09-06T16:00:00.000Z",
-      "lastStatus": 200,
-      "firstSeen": "2026-09-06T16:00:00Z",
-      "failCount": 0,
-      "cooldownUntil": null,
-      "skipNote": "Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Official Apple TV+ YouTube playlist page for the show. WebFetch returned only YouTube footer/nav boilerplate, no playlist creation date or content. Firecrawl scrape also attempted (status 200, success): full page metadata (og:, twitter: tags) returned with no publishedTime/date field. Both methods exhausted, no date recoverable.",
-      "history": [
-        {
-          "attempt": "2026-09-06T16:00:00Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-9767",
-          "note": "Returned only footer/nav boilerplate, no playlist date or content."
-        },
-        {
-          "attempt": "2026-09-06T16:00:00Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9767",
-          "note": "Success, full metadata returned, no publish/date field present."
-        }
-      ]
-    },
-    {
       "url": "https://www.filmaffinity.com/us/film786793.html",
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
@@ -1750,47 +1722,6 @@
           "issue": "LEMA-9769"
         }
       ]
-    },
-    {
-      "url": "https://www.thefutoncritic.com/listings/2026/09/09/",
-      "firstSeen": "2026-09-06T20:00:00Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-07T00:00:50.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "note": "Daily TV listings/schedule grid page for 2026-09-09 (found via Exa Pass 1 EN query). WebFetch failed with ECONNREFUSED (both http and https tried). Firecrawl scrape failed with a 500 SCRAPE_SITE_ERROR (ERR_TUNNEL_CONNECTION_FAILED, described by Firecrawl as an internal proxy error). This is a technical full-chain fetch failure, not an editorial exclusion -- not added to data.json this run, failCount=1 (not yet at the 3-failure cooldown threshold).",
-      "history": [
-        {
-          "attempt": "2026-09-06T20:00:00Z",
-          "method": "WebFetch",
-          "status": "ECONNREFUSED",
-          "issue": "LEMA-9769"
-        },
-        {
-          "attempt": "2026-09-06T20:00:00Z",
-          "method": "Firecrawl scrape",
-          "status": 500,
-          "issue": "LEMA-9769",
-          "note": "SCRAPE_SITE_ERROR / ERR_TUNNEL_CONNECTION_FAILED, described as an internal Firecrawl proxy error."
-        },
-        {
-          "attempt": "2026-09-07T00:00:50.000Z",
-          "method": "WebFetch",
-          "status": "ECONNREFUSED",
-          "issue": "LEMA-9771"
-        },
-        {
-          "attempt": "2026-09-07T00:00:50.000Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9771",
-          "note": "Full daily listings grid retrieved, confirms Women in Blue #205 airs 2026-09-09, but no article-level publish date field present anywhere. Undateable per Rule A."
-        }
-      ],
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Surfaced again via Exa Pass 1 (EN query) on LEMA-9771. WebFetch failed with ECONNREFUSED. Firecrawl scrape succeeded (200) and returned the full daily TV listings grid for 2026-09-09 (confirms 'women in blue: lozano (#205)' airs that day), but this is a static schedule/listings page, not a dated article -- no og:article:published_time, datePublished, or any other publish-timestamp field anywhere in metadata or body. The date in the URL/page is the broadcast schedule date, not an editorial publish date, and is not a substitute per Rule A. Full-chain fetch succeeded (ledger reset per step 4d) but the candidate itself is undateable per Rule A -- same evergreen-listing pattern as the thetvdb.com and epguides.com entries in this ledger."
     },
     {
       "url": "https://serienstream.to/serie/women-in-blue/staffel-2/episode-5",
@@ -2134,34 +2065,6 @@
       ],
       "skipReason": "editorial_undateable",
       "reviewable": true
-    },
-    {
-      "url": "http://thefutoncritic.com/listings/2026/09/09/",
-      "firstSeen": "2026-09-07T08:10:19.000Z",
-      "failCount": 0,
-      "lastStatus": "webfetch_econnrefused; firecrawl_200_no_article_date",
-      "lastAttempt": "2026-09-07T08:10:19.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9794. TheFutonCritic daily TV listings/schedule grid page for 2026-09-09, showing dozens of shows airing that day across networks, including 'women in blue: lozano (#205)' on Apple TV. This is a syndicated programming grid, not an editorial article about the show -- no article-level publish date exists, only the schedule date embedded in the URL. WebFetch failed (ECONNREFUSED, connection error), so a Firecrawl scrape was attempted per Rule A mandate: succeeded (200) and confirmed the page is a generic daily listings grid with no page-level publish/article date field, matching the same catalog/listing pattern already established for JustWatch, TVMaze, TheMovieDB, tv.apple.com, MijnSerie and SerienStream in this ledger. Not added to data.json. reviewable=true for a future manual lookup.",
-      "history": [
-        {
-          "attempt": "2026-09-07T08:10:19.000Z",
-          "method": "WebFetch",
-          "status": "ECONNREFUSED",
-          "issue": "LEMA-9794",
-          "note": "Connection refused, no content retrieved."
-        },
-        {
-          "attempt": "2026-09-07T08:10:19.000Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9794",
-          "note": "Confirmed generic daily TV listings grid, no article-level publish date; 'women in blue: lozano (#205)' appears as one of dozens of scheduled programs that day."
-        }
-      ]
     },
     {
       "url": "https://www.youtube.com/watch?v=5feWbwFLSRc",
@@ -3492,8 +3395,8 @@
       ]
     },
     {
-      "url": "https://www.youtube.com/playlist?list=PLPDDDmhRE2s8KxriGjT-QlsKTHWcExaXc",
-      "firstSeen": "2026-09-10T08:00:00Z",
+      "url": "https://youtube.com/playlist?list=PLPDDDmhRE2s8KxriGjT-QlsKTHWcExaXc",
+      "firstSeen": "2026-09-06T16:00:00Z",
       "failCount": 0,
       "lastStatus": null,
       "lastAttempt": "2026-09-10T08:00:00Z",
@@ -3501,8 +3404,22 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "Discovered via Pass 2 web sweep on LEMA-9898. 'Las Azules | Apple TV+' YouTube playlist owned by channel 'Apple México'. WebFetch on the playlist page returned only generic YouTube chrome (no title/date/video list -- SPA content not rendered). Firecrawl scrape returned a 401 bot-wall error page, no usable content. YouTube Data API (playlists.list) was consulted directly and returned publishedAt=2024-10-09T17:51:01Z, but that is the playlist container's creation date from the Season 1 era, not a publish date tied to any Season 2 coverage event -- same evergreen-container problem already established for tvmaze.com/justwatch.com entries in this ledger. Per Rule A, no real sourced publish date exists for this URL as a piece of Season 2 coverage after both WebFetch and Firecrawl were attempted. Not added to data.json. reviewable=true for a future manual lookup (e.g. if a specific new video within the playlist is later identified with its own real publish date, that video's own URL would be evaluated separately).",
+      "skipNote": "Discovered via Pass 2 web sweep on LEMA-9898. 'Las Azules | Apple TV+' YouTube playlist owned by channel 'Apple México'. WebFetch on the playlist page returned only generic YouTube chrome (no title/date/video list -- SPA content not rendered). Firecrawl scrape returned a 401 bot-wall error page, no usable content. YouTube Data API (playlists.list) was consulted directly and returned publishedAt=2024-10-09T17:51:01Z, but that is the playlist container's creation date from the Season 1 era, not a publish date tied to any Season 2 coverage event -- same evergreen-container problem already established for tvmaze.com/justwatch.com entries in this ledger. Per Rule A, no real sourced publish date exists for this URL as a piece of Season 2 coverage after both WebFetch and Firecrawl were attempted. Not added to data.json. reviewable=true for a future manual lookup (e.g. if a specific new video within the playlist is later identified with its own real publish date, that video's own URL would be evaluated separately). Prior note (LEMA-9767): Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Official Apple TV+ YouTube playlist page for the show. WebFetch returned only YouTube footer/nav boilerplate, no playlist creation date or content. Firecrawl scrape also attempted (status 200, success): full page metadata (og:, twitter: tags) returned with no publishedTime/date field. Both methods exhausted, no date recoverable.",
       "history": [
+        {
+          "attempt": "2026-09-06T16:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9767",
+          "note": "Returned only footer/nav boilerplate, no playlist date or content."
+        },
+        {
+          "attempt": "2026-09-06T16:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9767",
+          "note": "Success, full metadata returned, no publish/date field present."
+        },
         {
           "attempt": "2026-09-10T08:00:00Z",
           "method": "WebFetch",
@@ -3518,7 +3435,61 @@
           "note": "Bot-wall/login-wall error page, no usable content."
         }
       ]
+    },
+    {
+      "url": "https://thefutoncritic.com/listings/2026/09/09",
+      "firstSeen": "2026-09-06T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": "webfetch_econnrefused; firecrawl_200_no_article_date",
+      "lastAttempt": "2026-09-07T08:10:19.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9794. TheFutonCritic daily TV listings/schedule grid page for 2026-09-09, showing dozens of shows airing that day across networks, including 'women in blue: lozano (#205)' on Apple TV. This is a syndicated programming grid, not an editorial article about the show -- no article-level publish date exists, only the schedule date embedded in the URL. WebFetch failed (ECONNREFUSED, connection error), so a Firecrawl scrape was attempted per Rule A mandate: succeeded (200) and confirmed the page is a generic daily listings grid with no page-level publish/article date field, matching the same catalog/listing pattern already established for JustWatch, TVMaze, TheMovieDB, tv.apple.com, MijnSerie and SerienStream in this ledger. Not added to data.json. reviewable=true for a future manual lookup. Prior note (LEMA-9771): Surfaced again via Exa Pass 1 (EN query) on LEMA-9771. WebFetch failed with ECONNREFUSED. Firecrawl scrape succeeded (200) and returned the full daily TV listings grid for 2026-09-09 (confirms 'women in blue: lozano (#205)' airs that day), but this is a static schedule/listings page, not a dated article -- no og:article:published_time, datePublished, or any other publish-timestamp field anywhere in metadata or body. The date in the URL/page is the broadcast schedule date, not an editorial publish date, and is not a substitute per Rule A. Full-chain fetch succeeded (ledger reset per step 4d) but the candidate itself is undateable per Rule A -- same evergreen-listing pattern as the thetvdb.com and epguides.com entries in this ledger. Prior note (LEMA-9769): Daily TV listings/schedule grid page for 2026-09-09 (found via Exa Pass 1 EN query). WebFetch failed with ECONNREFUSED (both http and https tried). Firecrawl scrape failed with a 500 SCRAPE_SITE_ERROR (ERR_TUNNEL_CONNECTION_FAILED, described by Firecrawl as an internal proxy error). This is a technical full-chain fetch failure, not an editorial exclusion -- not added to data.json this run, failCount=1 (not yet at the 3-failure cooldown threshold).",
+      "history": [
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "WebFetch",
+          "status": "ECONNREFUSED",
+          "issue": "LEMA-9769"
+        },
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 500,
+          "issue": "LEMA-9769",
+          "note": "SCRAPE_SITE_ERROR / ERR_TUNNEL_CONNECTION_FAILED, described as an internal Firecrawl proxy error."
+        },
+        {
+          "attempt": "2026-09-07T00:00:50.000Z",
+          "method": "WebFetch",
+          "status": "ECONNREFUSED",
+          "issue": "LEMA-9771"
+        },
+        {
+          "attempt": "2026-09-07T00:00:50.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9771",
+          "note": "Full daily listings grid retrieved, confirms Women in Blue #205 airs 2026-09-09, but no article-level publish date field present anywhere. Undateable per Rule A."
+        },
+        {
+          "attempt": "2026-09-07T08:10:19.000Z",
+          "method": "WebFetch",
+          "status": "ECONNREFUSED",
+          "issue": "LEMA-9794",
+          "note": "Connection refused, no content retrieved."
+        },
+        {
+          "attempt": "2026-09-07T08:10:19.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9794",
+          "note": "Confirmed generic daily TV listings grid, no article-level publish date; 'women in blue: lozano (#205)' appears as one of dozens of scheduled programs that day."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-10T08:00:00Z"
+  "lastUpdated": "2026-09-10T12:17:45Z"
 }
