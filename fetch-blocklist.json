@@ -3414,9 +3414,9 @@
     {
       "url": "https://www.reddit.com/r/moviestvrants/comments/1wbf7gh/apple_tv_women_in_blue_season_2_episode_5_review/",
       "firstSeen": "2026-09-10T06:05:00.000Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-10T06:05:00.000Z",
+      "lastAttempt": "2026-09-10T08:00:00Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -3432,9 +3432,51 @@
           "status": 403,
           "issue": "LEMA-9897",
           "note": "Firecrawl: 'we do not support this site' (reddit.com blanket refusal)."
+        },
+        {
+          "attempt": "2026-09-10T08:00:00Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9898",
+          "note": "Claude Code unable to fetch www.reddit.com (blocked) -- retried on this run per expired-null-cooldown rule."
+        },
+        {
+          "attempt": "2026-09-10T08:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9898",
+          "note": "Firecrawl: 'we do not support this site' (reddit.com blanket refusal) again. failCount now 2, still below cooldown threshold of 3."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PLPDDDmhRE2s8KxriGjT-QlsKTHWcExaXc",
+      "firstSeen": "2026-09-10T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-10T08:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Pass 2 web sweep on LEMA-9898. 'Las Azules | Apple TV+' YouTube playlist owned by channel 'Apple México'. WebFetch on the playlist page returned only generic YouTube chrome (no title/date/video list -- SPA content not rendered). Firecrawl scrape returned a 401 bot-wall error page, no usable content. YouTube Data API (playlists.list) was consulted directly and returned publishedAt=2024-10-09T17:51:01Z, but that is the playlist container's creation date from the Season 1 era, not a publish date tied to any Season 2 coverage event -- same evergreen-container problem already established for tvmaze.com/justwatch.com entries in this ledger. Per Rule A, no real sourced publish date exists for this URL as a piece of Season 2 coverage after both WebFetch and Firecrawl were attempted. Not added to data.json. reviewable=true for a future manual lookup (e.g. if a specific new video within the playlist is later identified with its own real publish date, that video's own URL would be evaluated separately).",
+      "history": [
+        {
+          "attempt": "2026-09-10T08:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9898",
+          "note": "Returned generic YouTube navigation chrome only, no playlist title/date/videos extracted."
+        },
+        {
+          "attempt": "2026-09-10T08:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 401,
+          "issue": "LEMA-9898",
+          "note": "Bot-wall/login-wall error page, no usable content."
         }
       ]
     }
   ],
-  "lastUpdated": "2026-09-10T06:05:00.000Z"
+  "lastUpdated": "2026-09-10T08:00:00Z"
 }
