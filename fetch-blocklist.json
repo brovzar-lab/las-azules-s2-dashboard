@@ -3489,7 +3489,54 @@
           "note": "Confirmed generic daily TV listings grid, no article-level publish date; 'women in blue: lozano (#205)' appears as one of dozens of scheduled programs that day."
         }
       ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=aUkajQnAG1Y",
+      "firstSeen": "2026-09-10T14:08:03Z",
+      "failCount": 1,
+      "lastStatus": 408,
+      "lastAttempt": "2026-09-10T14:08:03Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-10T14:08:03Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9912",
+          "note": "WebFetch returned 200 but body contained only YouTube footer navigation links and copyright text, no video content/metadata (bot wall), treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-10T14:08:03Z",
+          "method": "Firecrawl scrape",
+          "status": 408,
+          "issue": "LEMA-9912",
+          "note": "SCRAPE_TIMEOUT"
+        }
+      ]
+    },
+    {
+      "url": "https://peopleenespanol.com/entrevista-12058260",
+      "firstSeen": "2026-09-10T14:08:03Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-10T14:08:03Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-10T14:08:03Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9912",
+          "note": "Claude Code WebFetch tool reported it is unable to fetch from peopleenespanol.com (domain-level block)."
+        },
+        {
+          "attempt": "2026-09-10T14:08:03Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9912"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-10T12:17:45Z"
+  "lastUpdated": "2026-09-10T14:08:03Z"
 }
