@@ -2687,7 +2687,31 @@
           "note": "Confirmed only date field is schema.org datePublished matching the episode broadcast date embedded in the URL, not a real editorial publish date."
         }
       ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/en-que-plataforma-puedo-ver-las-azules",
+      "firstSeen": "2026-09-10T00:05:12Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-10T00:05:12Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-10T00:05:12Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9877",
+          "note": "Returned only the generic TikTok landing tagline (Make Your Day), no actual discover-page content about Las Azules. Empty-body bot wall, treated as failure."
+        },
+        {
+          "attempt": "2026-09-10T00:05:12Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9877",
+          "note": "Blanket we do not support this site refusal for tiktok.com, consistent with other tiktok.com/discover URLs in this ledger."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-09T18:03:55.000Z"
+  "lastUpdated": "2026-09-10T00:05:12Z"
 }
