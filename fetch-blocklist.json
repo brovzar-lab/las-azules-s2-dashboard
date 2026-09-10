@@ -3410,7 +3410,31 @@
           "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
         }
       ]
+    },
+    {
+      "url": "https://www.reddit.com/r/moviestvrants/comments/1wbf7gh/apple_tv_women_in_blue_season_2_episode_5_review/",
+      "firstSeen": "2026-09-10T06:05:00.000Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-10T06:05:00.000Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-10T06:05:00.000Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9897",
+          "note": "Claude Code unable to fetch www.reddit.com (blocked)."
+        },
+        {
+          "attempt": "2026-09-10T06:05:00.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9897",
+          "note": "Firecrawl: 'we do not support this site' (reddit.com blanket refusal)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-10T04:30:00Z"
+  "lastUpdated": "2026-09-10T06:05:00.000Z"
 }
