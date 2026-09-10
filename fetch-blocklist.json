@@ -3642,7 +3642,51 @@
           "note": "Retroactive removal under Rule E (CEO ruling on LEMA-9923). Removed the corresponding live data.json entry (outlet=DescargaSeriesTV, ts=20260902) in this same commit per Rule D's same-commit requirement. Also clears the FLAGGED FOR CEO REVIEW excerpt that had been live on the board-facing feed since the LEMA-9872 sweep."
         }
       ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DdHZwozkacZ/",
+      "firstSeen": "2026-09-10T22:03:34Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-10T22:03:34Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-10T22:03:34Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9935",
+          "note": "WebFetch returned a near-empty body (only the word \"Instagram\", no post content) -- bot wall, treated as failure per Pass 0b."
+        },
+        {
+          "attempt": "2026-09-10T22:03:34Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9935",
+          "note": "Firecrawl returned a blanket we-do-not-support-this-site refusal for instagram.com. Full-chain failure, failCount=1."
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DdHecW1HN3V/",
+      "firstSeen": "2026-09-10T22:03:34Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T22:03:34Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Instagram account lesreveries_de_mademoisellem (Toulouse, France), a personal/fan account, not a publisher. Post is a broader 7-series recommendation list; Las Azules is one of seven shows mentioned, not dedicated coverage. Rule B relevance gate: personal/fan-repost accounts are not media coverage regardless of on-topic content or dateability.",
+      "history": [
+        {
+          "attempt": "2026-09-10T22:03:34Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9935",
+          "note": "WebFetch succeeded, fetched real post content. Excluded on Rule B relevance grounds, not a fetch failure."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-10T20:30:00Z"
+  "lastUpdated": "2026-09-10T22:03:34Z"
 }
