@@ -486,8 +486,19 @@
           "status": 200,
           "issue": "LEMA-9637",
           "note": "Firecrawl returned 200 but the body was an ad-blocker error page ('s.amazon-adsystem.com is blocked'), not the real IMDb title page content. Treated as a full-chain failure (empty/unusable body)."
+        },
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation",
+          "status": null,
+          "issue": "LEMA-9882",
+          "note": "Converted from plain fetch-failure record to permanentSkip/editorial_undateable; removed the corresponding live data.json entry in this commit."
         }
-      ]
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). IMDb main title page for Las Azules/Women in Blue (tt20516590) is a static database page (cast, crew, ratings, no episode-specific content) with no editorial publish date anywhere on the page -- the prior ledger record here was only a fetch-failure/cooldown entry (WebFetch 403, Firecrawl blocked by an ad-blocker error page), it never evaluated dateability. Same per-page-no-date pattern already established for themoviedb.org/tv/253983-las-azules and tvmaze.com/shows/62238 in this ledger. Per Rule A/Rule D, not eligible for data.json. Removed the corresponding data.json entry (idx 25, ts=20260902) in this commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected."
     },
     {
       "url": "https://www.facebook.com/CTTEXPRENTALS/posts/las-azules-temporada-2-lleg%C3%B3-a-apple-tv%EF%B8%8Festa-serie-producida-por-lemon-studios-f/1513668230800391/",
@@ -2670,7 +2681,7 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "Discovered via Exa Pass 1 (both EN and ES queries) on LEMA-9876. Spin-off.fr episode detail page for Las Azules S2E6. WebFetch (200) confirmed this is an episode catalog entry (runtime, episode list, ratings/comments sections), no editorial publish date. Firecrawl scrape (200) confirmed the only date field is schema.org datePublished=2026-09-16, which matches the URL's embedded broadcast date (16092026) -- a per-episode air-date field, not a real sourced publish date. Same per-episode-air-date-in-evergreen-catalog pattern already established for themoviedb.org/tv/253983-las-azules/season/2, tvmaze.com/shows/62238/las-azules/episodeguide, and mijnserie.nl/las-azules. Per Rule A, not added to data.json. reviewable=true for a future manual lookup.",
+      "skipNote": "Discovered via Exa Pass 1 (both EN and ES queries) on LEMA-9876. Spin-off.fr episode detail page for Las Azules S2E6. WebFetch (200) confirmed this is an episode catalog entry (runtime, episode list, ratings/comments sections), no editorial publish date. Firecrawl scrape (200) confirmed the only date field is schema.org datePublished=2026-09-16, which matches the URL's embedded broadcast date (16092026) -- a per-episode air-date field, not a real sourced publish date. Same per-episode-air-date-in-evergreen-catalog pattern already established for themoviedb.org/tv/253983-las-azules/season/2, tvmaze.com/shows/62238/las-azules/episodeguide, and mijnserie.nl/las-azules. Per Rule A, not added to data.json. reviewable=true for a future manual lookup. UPDATE 2026-09-10 (LEMA-9882): this URL's data.json entry (idx 0, ts=20260916) had been live in the feed since 2026-09-08T18:04Z despite this permanentSkip record -- the sweep does not check data.json before writing a permanentSkip, so the two went out of sync (Rule D guardrail one now closes this gap). Removed from data.json in the same commit as this note per Rule D. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
       "history": [
         {
           "attempt": "2026-09-09T22:00:50.000Z",
@@ -2685,6 +2696,13 @@
           "status": 200,
           "issue": "LEMA-9876",
           "note": "Confirmed only date field is schema.org datePublished matching the episode broadcast date embedded in the URL, not a real editorial publish date."
+        },
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation",
+          "status": null,
+          "issue": "LEMA-9882",
+          "note": "Confirmed still permanentSkip-correct; removed the contradicting live data.json entry (idx 0) in this commit. See LEMA-9880 Rule D ruling."
         }
       ]
     },
@@ -2783,7 +2801,616 @@
           "note": "New candidate from Pass 2 (episodio 5/6 crítica search). WebFetch returned only generic TikTok shell content, no date. Firecrawl scrape returned 403 'we do not support this site'. Full-chain failure."
         }
       ]
+    },
+    {
+      "url": "https://www.tvguide.com/tvshows/women-in-blue/cast/1030171264/",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TV Guide 'Full Cast & Crew' page for Women in Blue. Static database listing (cast, crew credits, episode/news navigation tabs), no publish/update date anywhere on the page (confirmed via fetch, 2026-09-10). Same per-page-no-date pattern as other listing databases in this ledger (themoviedb.org, tvmaze.com). Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/fr/serie/las-azules/saison-2",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (France). JustWatch pages never carry an editorial publish date -- they are live availability listings, not articles. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/cl/serie/las-azules/temporada-1",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Chile). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://thetvdb.com/series/las-azules/allseasons/official",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TheTVDB 'All Seasons Episode Guide' page. Canonical episode-guide database page, no editorial publish date. Same pattern as thetvdb.com/series/las-azules/episodes/10512996 and /10512997 already in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.com/es/title/tt20516590/",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). IMDb main title page (Spanish locale) for tt20516590. Static database page, no publish date. Same as the English-locale https://www.imdb.com/title/tt20516590/ entry in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.com/it/title/tt20516590/",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). IMDb main title page (Italian locale) for tt20516590. Static database page, no publish date. Same as the English-locale https://www.imdb.com/title/tt20516590/ entry in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvmaze.com/shows/62238/show-slug",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TVmaze show page (malformed/placeholder slug URL). Static database show page, no publish date. Same pattern as https://www.tvmaze.com/shows/62238/las-azules also removed in this run. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/za/tv-series/las-azules",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (South Africa). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/id/tv-show/las-azules",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Indonesia). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://next-episode.net/las-azules",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). next-episode.net page explicitly titled 'Episode Air Dates & Countdown'. Textbook air-date-as-ts listing database, no editorial publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://en.myshows.me/view/90272/",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). MyShows.me 'Episode Guide & Ratings' page. Episode-guide database page, no editorial publish date. Same pattern as tvmaze.com/thetvdb.com episode-guide entries. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/es/serie/las-azules/temporada-2",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Spain). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mijnserie.nl/las-azules/afleveringen/seizoen_2/aflevering_4/",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). MijnSerie (Dutch TV database) episode detail page for Las Azules S2E4 ('Arizmendi'). Episode catalog page with only a broadcast-date field, no editorial publish date. Identical template/pattern to https://www.mijnserie.nl/las-azules/afleveringen/seizoen_2/aflevering_6/ already ledgered in this file -- same site, same issue, this one had simply not been caught by an earlier sweep before it entered data.json. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.spin-off.fr/episode03-473876-26082026-saison2-Las-Azules.html",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Spin-off.fr episode detail page for Las Azules S2E3. Same per-episode-air-date-in-evergreen-catalog pattern as the S2E6 spin-off.fr entry already in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.spin-off.fr/episode02-473875-19082026-saison2-Las-Azules.html",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Spin-off.fr episode detail page for Las Azules S2E2 ('Filiberto'). Same per-episode-air-date-in-evergreen-catalog pattern as the S2E6 spin-off.fr entry already in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/us/tv-show/las-azules/season-2",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (US). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvmaze.com/shows/62238/las-azules",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TVmaze show page for Las Azules Season 2. Static database show page, no editorial publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.rottentomatoes.com/tv/women_in_blue_2024/s02/e02",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Rotten Tomatoes episode page for S02E02 ('Filiberto'). Confirmed via fetch (2026-09-10): the only date shown is 'Aired Aug 12, 2026', an episode air-date field, not a page publish date. Static episode database page. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/za/tv-series/las-azules/season-2",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (South Africa, season 2). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/bo/serie/las-azules/temporada-2",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Bolivia). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.rottentomatoes.com/tv/women_in_blue_2024/s02",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Rotten Tomatoes season-2 overview page. Review-aggregator database page (critic/audience score widgets), no page-level editorial publish date. Same issue as the per-episode RT pages in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.metacritic.com/tv/women-in-blue/season-2/",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Metacritic season-2 review-aggregation page. Confirmed via fetch (2026-09-10): shows 'Season Premiere' and per-episode air dates as broadcast-schedule metadata, no page-level publish/update timestamp. Static review-aggregator database page. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvguide.com/tvshows/women-in-blue/episodes-season-2/1030171264/",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TV Guide 'Season 2 Episodes Guide' page. Canonical episode-guide database page, no editorial publish date. Same pattern as the TV Guide cast/crew page also removed in this run. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.rottentomatoes.com/tv/women_in_blue_2024/s02/e01",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Rotten Tomatoes episode page for S02E01 ('Mauricio'). Same static episode-database-page pattern as the S02E02 RT entry in this ledger; only an episode air date is shown, no page publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.themoviedb.org/tv/253983-las-azules",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TMDB season-2 page. Confirmed via fetch (2026-09-10): no publish/update date anywhere on the page. Static database page -- this is the exact URL already cited as an established pattern-precedent in the spin-off.fr and mijnserie.nl ledger notes, and is itself now formally ledgered. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/at/Serie/women-in-blue/Staffel-2",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Austria). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/it/serie-tv/las-azules/stagione-2",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Italy). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://www.thetvdb.com/series/las-azules/episodes/10512996",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TheTVDB per-episode page for S02E01 ('Mauricio'), explicitly titled 'Episode Guide'. Episode-guide database page, no editorial publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
+    },
+    {
+      "url": "https://thetvdb.com/series/las-azules/episodes/10512997",
+      "firstSeen": "2026-09-10T04:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T04:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TheTVDB per-episode page for S1E8 ('Rosa'). Episode-guide database page, no editorial publish date. Confirms this pattern is not season-2-specific -- Season 1 catalog pages have the identical defect. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "history": [
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation-audit",
+          "status": 200,
+          "issue": "LEMA-9882",
+          "note": "Found live in data.json during full-feed audit; confirmed episode-guide/TV-database page with no editorial publish date; removed from data.json and ledgered in the same commit."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-10T00:05:12Z"
+  "lastUpdated": "2026-09-10T04:30:00Z"
 }
