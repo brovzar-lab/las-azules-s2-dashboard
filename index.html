@@ -991,7 +991,7 @@
 <!-- ═══ DATA-AS-OF BAR (sitewide, visible on every tab) ═══ -->
 <div id="databar">
   <div class="databar-inner">
-    <span class="databar-crit">Critical reception data as of <strong>Aug 28, 2026</strong></span>
+    <span class="databar-crit">Critical reception data as of <strong id="databar-crit-date">Aug 28, 2026</strong></span>
     <span class="databar-sep">·</span>
     <span class="databar-cov"><span class="live-dot"></span>Coverage feed: auto-updating</span>
   </div>
@@ -1616,7 +1616,7 @@
 
   <div class="container" style="padding-top:40px;padding-bottom:48px">
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:28px">
-      <p style="font-size:12px;color:var(--ink3)">Last updated: <strong style="color:var(--ink2)">Aug 28, 2026</strong> — final entry of the Aug 12–28 monitoring arc</p>
+      <p style="font-size:12px;color:var(--ink3)">Last updated: <strong id="updates-last-date" style="color:var(--ink2)">Aug 28, 2026</strong> — final entry of the Aug 12–28 monitoring arc</p>
     </div>
 
     <div class="card" style="border-left:3px solid var(--teal);padding:28px 32px;margin-bottom:8px">
@@ -2724,6 +2724,33 @@ document.addEventListener('keydown', function(e) {
     buildHome();
     renderCoverage();
   } catch(e) { /* fail silently — hardcoded MEDIA remains as fallback */ }
+})();
+
+/* Critical Reception + Updates timeline are hand-curated from the research-report
+   document, not the data.json sweep. content-meta.json is the single source of
+   truth for when that curated content was last touched — update it in the same
+   commit as any Critical Reception / Updates edit, both stamps read from here. */
+(async function loadContentMeta() {
+  try {
+    const res = await fetch('./content-meta.json?_=' + Date.now());
+    if (!res.ok) return;
+    const meta = await res.json();
+    const fmt = (iso) => {
+      const d = new Date(iso + 'T00:00:00Z');
+      if (isNaN(d.getTime())) return null;
+      return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+    };
+    if (meta.criticalReceptionAsOf) {
+      const text = fmt(meta.criticalReceptionAsOf);
+      const el = document.getElementById('databar-crit-date');
+      if (text && el) el.textContent = text;
+    }
+    if (meta.updatesAsOf) {
+      const text = fmt(meta.updatesAsOf);
+      const el = document.getElementById('updates-last-date');
+      if (text && el) el.textContent = text;
+    }
+  } catch(e) { /* fail silently — hardcoded dates remain as fallback */ }
 })();
 
 /* ─── ARTICLE SHARE MODAL ─── */

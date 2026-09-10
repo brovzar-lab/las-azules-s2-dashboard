@@ -6,6 +6,7 @@ on:
       - lemon-virtual-studios
     paths:
       - 'data.json'
+      - 'content-meta.json'
       - 'index.html'
       - 'sw.js'
       - 'manifest.json'
