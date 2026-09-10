@@ -2545,7 +2545,7 @@
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-09T10:03:05.000Z",
+      "lastAttempt": "2026-09-10T12:00:00.000Z",
       "history": [
         {
           "attempt": "2026-09-09T10:03:05.000Z",
@@ -2553,6 +2553,20 @@
           "status": 200,
           "issue": "LEMA-9865",
           "note": "Retry succeeded: Firecrawl returned real page content with resolvable metadata (datePublished/uploadDate 2026-07-21T06:59:47-07:00, Apple TV channel). Note: this canonical URL (no query params) is already present in data.json as the Jul 21, 2026 Apple TV YouTube trailer entry; this run also surfaced a &vl=en-US query-string variant via Firecrawl Pass 3 (DE query), which is the same video and was not added as a separate entry. failCount reset per step 4d."
+        },
+        {
+          "attempt": "2026-09-10T12:00:00.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9900",
+          "note": "Returned only YouTube nav/footer chrome, no video metadata (SPA not rendered)."
+        },
+        {
+          "attempt": "2026-09-10T12:00:00.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9900",
+          "note": "Success again: full metadata returned (Uploaded at: 2026-07-21). Surfaced this run via Firecrawl Pass 3 (DE and FR queries) as a &vl=en-US query-string variant of this same canonical URL; confirmed duplicate of the existing data.json entry (Jul 21, 2026 Apple TV trailer), not added as a separate entry. Same near-miss pattern already noted on this row by LEMA-9865 -- see LEMA-9902 for the standing URL-normalization process gap this keeps surfacing."
         }
       ]
     },
