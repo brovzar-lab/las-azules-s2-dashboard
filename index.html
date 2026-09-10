@@ -1699,7 +1699,7 @@
       </div>
     </div>
     <div class="card" style="padding:14px 24px;text-align:center;color:var(--ink3);font-size:12px">
-      The daily 7am monitoring cadence ended after the Aug 28, 2026 entry above. Updates now run around episode drops at the Studio Boss's discretion — the next check is expected around the Sept 2, 2026 Episode 4 "Arizmendi" release.
+      The daily 7am monitoring cadence ended after the entry above; editorial synthesis into this timeline now runs around episode drops at the Studio Boss's discretion. This does not affect the underlying data feed — the 2-hourly coverage sweep behind the Coverage tab has continued without interruption. <span id="next-check-stamp">Next scheduled check: calculating…</span>
     </div>
   </div>
 </section>
@@ -1948,6 +1948,19 @@ const EPISODES = [
   { ep:7, title:'Capítulo 7',          date:'September 23, 2026', iso:'2026-09-23' },
   { ep:8, title:'Capítulo 8 — Finale', date:'September 30, 2026', iso:'2026-09-30' },
 ];
+
+/* Next-check footer stamp: derived from EPISODES so it can never promise a
+   drop-week check that has already passed. Recomputed on every load from
+   whichever episode's iso date has not yet arrived — no hand-typed date. */
+(function updateNextCheckStamp() {
+  const el = document.getElementById('next-check-stamp');
+  if (!el) return;
+  const todayIso = new Date().toISOString().slice(0, 10);
+  const next = EPISODES.find(e => e.iso >= todayIso);
+  el.textContent = next
+    ? `Next scheduled check: around the ${next.date} Episode ${next.ep} release.`
+    : 'No further episode drops are currently scheduled.';
+})();
 
 const CAST = [
   { name:'Barbara Mori',         role:'Lt. María',    note:'Lead',   ig:'@delamori',         igFollowers:'3M',  link:'https://www.instagram.com/delamori/',      initials:'BM' },
