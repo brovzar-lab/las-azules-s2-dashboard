@@ -1924,6 +1924,20 @@ let MEDIA = [
 /* URLs from the original hardcoded set — used to mark sweep-added articles as NEW */
 const MEDIA_ORIGINAL_URLS = new Set(MEDIA.map(a => a.url));
 
+/* Rule D defense (LEMA-9885): a ts later than today is never a valid publish date,
+   so it must not win "newest/latest" derivation (home hero, Just In card, Post
+   Builder seed). Full Coverage table is intentionally left unfiltered so a
+   future-ts anomaly stays visible/auditable there instead of silently vanishing. */
+function excludeFutureTs(list) {
+  const cutoff = Number(new Date().toISOString().slice(0,10).replace(/-/g,''));
+  const valid = list.filter(a => a.ts <= cutoff);
+  if (valid.length < list.length) {
+    const n = list.length - valid.length;
+    console.warn(`[Las Azules] excluded ${n} future-ts entr${n===1?'y':'ies'} from newest/latest derivation (cutoff ${cutoff})`);
+  }
+  return valid.length ? valid : list;
+}
+
 const EPISODES = [
   { ep:1, title:'Capítulo 1',          date:'August 12, 2026',    iso:'2026-08-12' },
   { ep:2, title:'Capítulo 2',          date:'August 19, 2026',    iso:'2026-08-19' },
@@ -2130,7 +2144,7 @@ function buildHome() {
   const dateStr   = now.toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'});
 
   /* Derived signals from MEDIA array */
-  const sorted     = MEDIA.slice().sort((a,b) => b.ts - a.ts);
+  const sorted     = excludeFutureTs(MEDIA).sort((a,b) => b.ts - a.ts);
   const newest     = sorted[0];
   const byMarket   = tally('market');
   const byType     = tally('type');
@@ -2521,7 +2535,7 @@ function quickGenerate(idx) {
 
   let topic = QUICK_TOPICS[idx];
   if (topic.dynamic === 'latest') {
-    const latest = MEDIA.slice().sort((a,b)=>b.ts-a.ts)[0];
+    const latest = excludeFutureTs(MEDIA).sort((a,b)=>b.ts-a.ts)[0];
     topic = { hl: latest.headline, url: latest.url, out: latest.outlet, exc: latest.excerpt||'' };
   }
   _runGenerate(idx, topic);
@@ -2529,7 +2543,7 @@ function quickGenerate(idx) {
 
 function _runGenerate(idx, overrideTopic) {
   const topic = overrideTopic || (QUICK_TOPICS[idx].dynamic === 'latest'
-    ? (() => { const l=MEDIA.slice().sort((a,b)=>b.ts-a.ts)[0]; return {hl:l.headline,url:l.url,out:l.outlet,exc:l.excerpt||''}; })()
+    ? (() => { const l=excludeFutureTs(MEDIA).sort((a,b)=>b.ts-a.ts)[0]; return {hl:l.headline,url:l.url,out:l.outlet,exc:l.excerpt||''}; })()
     : QUICK_TOPICS[idx]);
   const tmpl = PLAT_TMPL[currentPlatform];
   if (!tmpl) return;
