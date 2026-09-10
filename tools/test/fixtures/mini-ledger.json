@@ -1,0 +1,76 @@
+{
+  "_readme": "Synthetic fixture for tools/test/ledger.test.js. Not the real ledger.",
+  "entries": [
+    {
+      "url": "https://example.com/news/permanent-skip-story",
+      "firstSeen": "2026-09-01T00:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-01T00:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Older note, from the first row.",
+      "history": [
+        { "attempt": "2026-09-01T00:00:00Z", "method": "WebFetch", "status": 403, "issue": "LEMA-1001" }
+      ]
+    },
+    {
+      "url": "https://www.example.com/news/permanent-skip-story/",
+      "firstSeen": "2026-09-02T00:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-02T00:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Newer note, from the second row (www variant).",
+      "history": [
+        { "attempt": "2026-09-02T00:00:00Z", "method": "Firecrawl scrape", "status": 200, "issue": "LEMA-1002" }
+      ]
+    },
+    {
+      "url": "https://example.com/news/active-cooldown-story",
+      "firstSeen": "2026-09-01T00:00:00Z",
+      "failCount": 3,
+      "lastStatus": 404,
+      "lastAttempt": "2026-09-01T00:00:00Z",
+      "cooldownUntil": "2099-01-01T00:00:00Z",
+      "history": []
+    },
+    {
+      "url": "https://example.com/news/expired-cooldown-story",
+      "firstSeen": "2026-09-01T00:00:00Z",
+      "failCount": 3,
+      "lastStatus": 404,
+      "lastAttempt": "2026-09-01T00:00:00Z",
+      "cooldownUntil": "2020-01-01T00:00:00Z",
+      "history": []
+    },
+    {
+      "url": "https://example.com/news/conflict-a",
+      "firstSeen": "2026-09-01T00:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-01T00:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "Vendor row.",
+      "history": []
+    },
+    {
+      "url": "https://www.example.com/news/conflict-a/",
+      "firstSeen": "2026-09-03T00:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-03T00:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Personal-repost row, disagrees with the vendor row above.",
+      "history": []
+    }
+  ],
+  "lastUpdated": "2026-09-03T00:00:00Z"
+}

@@ -2,6 +2,9 @@
   "name": "las-azules-s2-dashboard",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "test": "node --test 'tools/test/**/*.test.js'"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.0"
   }

@@ -1,0 +1,95 @@
+[
+  {
+    "outlet": "Standalone Outlet",
+    "headline": "A standalone story with no duplicates",
+    "url": "https://standalone.example.com/story",
+    "date": "Sep 1, 2026",
+    "ts": 20260901,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "No duplicates in this fixture."
+  },
+  {
+    "outlet": "Agree Outlet",
+    "headline": "Solo tag short headline",
+    "url": "https://outlet.com/solo-tag-story",
+    "date": "Sep 1, 2026",
+    "ts": 20260901,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Short excerpt.",
+    "storyGroup": "solo-tag-cluster"
+  },
+  {
+    "outlet": "Agree Outlet",
+    "headline": "Solo tag story, longer headline text with more detail",
+    "url": "https://www.outlet.com/solo-tag-story/",
+    "date": "Sep 1, 2026",
+    "ts": 20260901,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Longer excerpt with more detail than the other row, this one should win."
+  },
+  {
+    "outlet": "Shared Outlet",
+    "headline": "Shared tag story",
+    "url": "https://outlet.com/shared-tag-story",
+    "date": "Sep 2, 2026",
+    "ts": 20260902,
+    "lang": "EN",
+    "market": "US",
+    "type": "Review",
+    "excerpt": "One side of the duplicate pair.",
+    "storyGroup": "shared-tag-cluster"
+  },
+  {
+    "outlet": "Shared Outlet",
+    "headline": "Shared tag story",
+    "url": "https://www.outlet.com/shared-tag-story/",
+    "date": "Sep 2, 2026",
+    "ts": 20260902,
+    "lang": "EN",
+    "market": "US",
+    "type": "Review",
+    "excerpt": "Other side of the duplicate pair."
+  },
+  {
+    "outlet": "Third Party Outlet",
+    "headline": "Third entry keeping the shared-tag-cluster alive",
+    "url": "https://other-outlet.example.com/related-story",
+    "date": "Sep 2, 2026",
+    "ts": 20260902,
+    "lang": "EN",
+    "market": "US",
+    "type": "Trade",
+    "excerpt": "This is a different URL that also carries shared-tag-cluster.",
+    "storyGroup": "shared-tag-cluster"
+  },
+  {
+    "outlet": "Conflict Outlet A",
+    "headline": "Conflicting outlet field, row A",
+    "url": "https://conflict.example.com/story",
+    "date": "Sep 3, 2026",
+    "ts": 20260903,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Row A of the conflict pair.",
+    "storyGroup": "conflict-defect-cluster"
+  },
+  {
+    "outlet": "Conflict Outlet B",
+    "headline": "Conflicting outlet field, row B",
+    "url": "https://www.conflict.example.com/story/",
+    "date": "Sep 3, 2026",
+    "ts": 20260903,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Row B of the conflict pair, different outlet than row A.",
+    "storyGroup": "conflict-defect-cluster"
+  }
+]
