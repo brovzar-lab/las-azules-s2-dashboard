@@ -528,46 +528,6 @@
       ]
     },
     {
-      "url": "https://www.imdb.com/es/name/nm0746370/publicity",
-      "firstSeen": "2026-09-03T06:00:25Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-07T10:00:00.000Z",
-      "cooldownUntil": null,
-      "history": [
-        {
-          "attempt": "2026-09-03T06:00:25Z",
-          "method": "WebFetch",
-          "status": 403,
-          "issue": "LEMA-9638"
-        },
-        {
-          "attempt": "2026-09-03T06:00:25Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9638",
-          "note": "Firecrawl returned 200 but the body was an ad-blocker error page ('s.amazon-adsystem.com is blocked'), not real IMDb publicity-listing content. Treated as a full-chain failure (unusable body), same pattern as the existing www.imdb.com/title/tt20516590/ ledger entry."
-        },
-        {
-          "attempt": "2026-09-06T02:10:00Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9756",
-          "note": "WebFetch returned 403. Firecrawl scrape succeeded (200): page is Fernando Rovzar publicity listings, only linking two 2022-05-24 articles (Variety, Deadline) about the original series order, not S2 coverage. Not added to data.json (off-topic/too old for S2 sweep), but fetch chain resolved so ledger resets per step 4d."
-        },
-        {
-          "attempt": "2026-09-07T10:00:00.000Z",
-          "method": "WebFetch (403) then Firecrawl scrape (200)",
-          "status": 200,
-          "issue": "LEMA-9811",
-          "note": "Re-encountered via m.imdb.com/es/name/nm0746370/publicity redirect in Pass 2. WebFetch 403; Firecrawl succeeded with real content this time (static IMDb publicity-listings index for Fernando Rovzar, linking only two 2022-05-24 wire pieces on the original series order). Page carries no publish date of its own. Per Rule A this is genuine on-topic content with no recoverable real date after both fetch methods attempted -> editorial_undateable, permanentSkip=true, reviewable=true. Closes the gap left by LEMA-9756 (decision was made in that run comment only, never written to the ledger, so it re-surfaced here) per Rule C (LEMA-9761/9762)."
-        }
-      ],
-      "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true
-    },
-    {
       "url": "https://www.facebook.com/oscarurielcine/videos/las-azules-llegan-a-apple-tv/1765768017163955/",
       "firstSeen": "2026-09-03T10:00:39Z",
       "failCount": 1,
@@ -3560,7 +3520,62 @@
           "note": "Firecrawl scrape timed out before completing (heavy JS render). Full-chain failure, failCount=1."
         }
       ]
+    },
+    {
+      "url": "https://www.imdb.com/es/name/nm0746370/publicity",
+      "firstSeen": "2026-09-03T06:00:25Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T18:15:00.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via WebSearch (m.imdb.com/es/name/nm0746370/publicity redirected here) on LEMA-9916. This is Fernando Rovzar's IMDb 'Listados publicitarios' (publicity listings) index page, not a standalone article: WebFetch returned 403; Firecrawl scrape succeeded (200) and returned the page content, which is a directory of two linked items (Variety and Deadline articles from 24 May 2022 announcing the original Season 1 series order), each with its own date -- but the index page itself carries no independent editorial publish date, only og:profile metadata for the person. Same aggregator/database-page pattern already established for other IMDb, JustWatch, TVMaze, and RottenTomatoes season/listing URLs in this ledger. Per Rule A, not added to data.json (no genuine page-level publish date to source). Note: the two linked 2022 articles are pre-Season-2 series-order announcements, not new S2 coverage, so even if fetched directly they would not be new to this dashboard. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9638"
+        },
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9638",
+          "note": "Firecrawl returned 200 but the body was an ad-blocker error page ('s.amazon-adsystem.com is blocked'), not real IMDb publicity-listing content. Treated as a full-chain failure (unusable body), same pattern as the existing www.imdb.com/title/tt20516590/ ledger entry."
+        },
+        {
+          "attempt": "2026-09-06T02:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9756",
+          "note": "WebFetch returned 403. Firecrawl scrape succeeded (200): page is Fernando Rovzar publicity listings, only linking two 2022-05-24 articles (Variety, Deadline) about the original series order, not S2 coverage. Not added to data.json (off-topic/too old for S2 sweep), but fetch chain resolved so ledger resets per step 4d."
+        },
+        {
+          "attempt": "2026-09-07T10:00:00.000Z",
+          "method": "WebFetch (403) then Firecrawl scrape (200)",
+          "status": 200,
+          "issue": "LEMA-9811",
+          "note": "Re-encountered via m.imdb.com/es/name/nm0746370/publicity redirect in Pass 2. WebFetch 403; Firecrawl succeeded with real content this time (static IMDb publicity-listings index for Fernando Rovzar, linking only two 2022-05-24 wire pieces on the original series order). Page carries no publish date of its own. Per Rule A this is genuine on-topic content with no recoverable real date after both fetch methods attempted -> editorial_undateable, permanentSkip=true, reviewable=true. Closes the gap left by LEMA-9756 (decision was made in that run comment only, never written to the ledger, so it re-surfaced here) per Rule C (LEMA-9761/9762)."
+        },
+        {
+          "attempt": "2026-09-10T18:15:00.000Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9916",
+          "note": "403 Forbidden on imdb.com direct fetch."
+        },
+        {
+          "attempt": "2026-09-10T18:15:00.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9916",
+          "note": "Succeeded; confirmed publicity-listing index page for Fernando Rovzar with no page-level editorial publish date, only a directory of two 2022 articles with their own dates."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-10T14:08:03Z"
+  "lastUpdated": "2026-09-10T18:15:00.000Z"
 }
