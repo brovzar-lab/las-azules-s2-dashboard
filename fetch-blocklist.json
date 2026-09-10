@@ -3575,6 +3575,33 @@
           "note": "Succeeded; confirmed publicity-listing index page for Fernando Rovzar with no page-level editorial publish date, only a directory of two 2022 articles with their own dates."
         }
       ]
+    },
+    {
+      "url": "https://1screen.ciatr.jp/tv/182201/season/2",
+      "firstSeen": "2026-09-10T20:05:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T20:05:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9922. Japanese streaming-availability aggregator page (1Screen/ciatr.jp) for Women in Blue Season 2, listing Apple TV+ subscription and free-trial info with affiliate links to multiple JP streaming services. WebFetch failed (403 bot wall); Firecrawl scrape succeeded (200) and confirmed the only date-like field on the page is a '最終更新' (last updated) stamp (2026年9月10日最終更新), which is a crawler/update-log artifact, not a real sourced editorial publish date. Same per-title evergreen-catalog pattern already established in this ledger for themoviedb.org/tv/253983-las-azules/season/2, tvmaze.com/shows/62238/las-azules/episodeguide, mijnserie.nl/las-azules, and spin-off.fr (episode guide entries). Per Rule A, not added to data.json. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-10T20:05:48Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9922"
+        },
+        {
+          "attempt": "2026-09-10T20:05:48Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9922",
+          "note": "Confirmed streaming-aggregator page with only a 'last updated' stamp, no real editorial publish date."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-10T18:15:00.000Z"
