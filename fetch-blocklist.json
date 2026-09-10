@@ -3602,7 +3602,47 @@
           "note": "Confirmed streaming-aggregator page with only a 'last updated' stamp, no real editorial publish date."
         }
       ]
+    },
+    {
+      "url": "https://uscflix.net/2026/09/las-azules-2024-serie-de-tv-segunda-temporada-2026-720p-hd/",
+      "firstSeen": "2026-09-10T20:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T20:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_piracy_or_unauthorized_distribution",
+      "skipNote": "USCFlix page hosting Las Azules (2024) Segunda Temporada (2026) as an unauthorized download/streaming listing, claimed quality tier 720p HD, with paywalled/subtitled-dubbed download links behind a synopsis blurb. Page publish date Sep 8, 2026 (ts=20260908), confirmed via WebFetch during the LEMA-9922 sweep. Retroactively removed from data.json and ledgered under Rule E (CEO ruling on LEMA-9923, executed via LEMA-9925): primary function is supplying unauthorized copies of the title, not media coverage, so dateability is irrelevant per Rule E.",
+      "history": [
+        {
+          "attempt": "2026-09-10T20:30:00Z",
+          "method": "manual-remediation",
+          "status": null,
+          "issue": "LEMA-9925",
+          "note": "Retroactive removal under Rule E (CEO ruling on LEMA-9923). Removed the corresponding live data.json entry (outlet=USCFlix, ts=20260908) in this same commit per Rule D's same-commit requirement."
+        }
+      ]
+    },
+    {
+      "url": "https://descargaseriestv.com/las-azules-temporada-2-2026-web-dl-1080p-serie-de-tv/",
+      "firstSeen": "2026-09-10T20:30:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T20:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_piracy_or_unauthorized_distribution",
+      "skipNote": "DescargaSeriesTV page hosting Las Azules Temporada 2 (2026) as an unauthorized download listing, claimed quality tier WEB-DL 1080p. Page publish date Sep 2, 2026 (ts=20260902). Originally surfaced on LEMA-9872 (2026-09-09 sweep) with an excerpt reading 'FLAGGED FOR CEO REVIEW' pending a ruling on the piracy/unauthorized-distribution category; that escalation sat untriaged and the entry stayed live in a board-facing feed. Retroactively removed from data.json and ledgered under Rule E (CEO ruling on LEMA-9923, executed via LEMA-9925): primary function is supplying unauthorized copies of the title, not media coverage, so dateability is irrelevant per Rule E.",
+      "history": [
+        {
+          "attempt": "2026-09-10T20:30:00Z",
+          "method": "manual-remediation",
+          "status": null,
+          "issue": "LEMA-9925",
+          "note": "Retroactive removal under Rule E (CEO ruling on LEMA-9923). Removed the corresponding live data.json entry (outlet=DescargaSeriesTV, ts=20260902) in this same commit per Rule D's same-commit requirement. Also clears the FLAGGED FOR CEO REVIEW excerpt that had been live on the board-facing feed since the LEMA-9872 sweep."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-10T18:15:00.000Z"
+  "lastUpdated": "2026-09-10T20:30:00Z"
 }
