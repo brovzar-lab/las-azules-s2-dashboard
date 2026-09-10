@@ -2691,10 +2691,10 @@
     {
       "url": "https://www.tiktok.com/discover/en-que-plataforma-puedo-ver-las-azules",
       "firstSeen": "2026-09-10T00:05:12Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": "WebFetch:200(empty-substance)/Firecrawl:403(unsupported-site)",
-      "lastAttempt": "2026-09-10T02:05:57.000Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-10T04:08:02Z",
+      "cooldownUntil": "2026-10-10T04:08:02Z",
       "history": [
         {
           "attempt": "2026-09-10T00:05:12Z",
@@ -2716,16 +2716,23 @@
           "status": "full-chain-failure",
           "issue": "LEMA-9878",
           "note": "Scheduled retry (cooldownUntil was null, failCount was 1). WebFetch again returned only generic TikTok shell content, no date. Firecrawl scrape again returned 403 'we do not support this site'. Retry failed, failCount incremented."
+        },
+        {
+          "attempt": "2026-09-10T04:08:02Z",
+          "method": "WebFetch then Firecrawl scrape",
+          "status": "full-chain-failure",
+          "issue": "LEMA-9879",
+          "note": "Retry (cooldownUntil was null, failCount was 2). WebFetch again returned only generic TikTok shell content, no date. Firecrawl scrape again returned 403 'we do not support this site'. failCount reached 3; cooldownUntil set to 30 days out."
         }
       ]
     },
     {
       "url": "https://www.tiktok.com/discover/donde-ver-las-azules-serie-completa",
       "permanentSkip": false,
-      "failCount": 1,
+      "failCount": 2,
       "cooldownUntil": null,
       "lastStatus": "WebFetch:200(empty-substance)/Firecrawl:403(unsupported-site)",
-      "lastAttempt": "2026-09-10T02:05:57.000Z",
+      "lastAttempt": "2026-09-10T04:08:02Z",
       "history": [
         {
           "attempt": "2026-09-10T02:05:57.000Z",
@@ -2733,6 +2740,13 @@
           "status": "full-chain-failure",
           "issue": "LEMA-9878",
           "note": "New candidate from Pass 2 (#LasAzules web search). WebFetch returned only generic 'TikTok - Make Your Day' shell content (no real article body, no date). Firecrawl scrape returned 403 'we do not support this site' (blanket TikTok domain refusal). Full-chain failure, consistent with other tiktok.com/discover ledger entries."
+        },
+        {
+          "attempt": "2026-09-10T04:08:02Z",
+          "method": "WebFetch then Firecrawl scrape",
+          "status": "full-chain-failure",
+          "issue": "LEMA-9879",
+          "note": "Retry (cooldownUntil was null, failCount was 1). WebFetch again returned only generic TikTok shell content, no date. Firecrawl scrape again returned 403 'we do not support this site'. Retry failed, failCount incremented to 2."
         }
       ]
     },
