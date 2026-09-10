@@ -2747,10 +2747,10 @@
     {
       "url": "https://www.tiktok.com/discover/donde-ver-las-azules-serie-completa",
       "permanentSkip": false,
-      "failCount": 2,
-      "cooldownUntil": null,
-      "lastStatus": "WebFetch:200(empty-substance)/Firecrawl:403(unsupported-site)",
-      "lastAttempt": "2026-09-10T04:08:02Z",
+      "failCount": 3,
+      "cooldownUntil": "2026-10-10T10:00:00Z",
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-10T10:00:00Z",
       "history": [
         {
           "attempt": "2026-09-10T02:05:57.000Z",
@@ -2765,6 +2765,20 @@
           "status": "full-chain-failure",
           "issue": "LEMA-9879",
           "note": "Retry (cooldownUntil was null, failCount was 1). WebFetch again returned only generic TikTok shell content, no date. Firecrawl scrape again returned 403 'we do not support this site'. Retry failed, failCount incremented to 2."
+        },
+        {
+          "attempt": "2026-09-10T10:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9899",
+          "note": "Returned generic TikTok header only, no article content (empty/near-empty body treated as failure)."
+        },
+        {
+          "attempt": "2026-09-10T10:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9899",
+          "note": "Firecrawl: 'we do not support this site' (tiktok.com blanket refusal). failCount now 3, cooldownUntil set to 30 days."
         }
       ]
     },
@@ -3414,10 +3428,10 @@
     {
       "url": "https://www.reddit.com/r/moviestvrants/comments/1wbf7gh/apple_tv_women_in_blue_season_2_episode_5_review/",
       "firstSeen": "2026-09-10T06:05:00.000Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-10T08:00:00Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-10T10:00:00Z",
+      "cooldownUntil": "2026-10-10T10:00:00Z",
       "history": [
         {
           "attempt": "2026-09-10T06:05:00.000Z",
@@ -3446,6 +3460,20 @@
           "status": 403,
           "issue": "LEMA-9898",
           "note": "Firecrawl: 'we do not support this site' (reddit.com blanket refusal) again. failCount now 2, still below cooldown threshold of 3."
+        },
+        {
+          "attempt": "2026-09-10T10:00:00Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9899",
+          "note": "Claude Code unable to fetch www.reddit.com (blocked)."
+        },
+        {
+          "attempt": "2026-09-10T10:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9899",
+          "note": "Firecrawl: 'we do not support this site' (reddit.com blanket refusal) again. failCount now 3, cooldownUntil set to 30 days."
         }
       ]
     },
