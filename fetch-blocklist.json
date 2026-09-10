@@ -2691,9 +2691,9 @@
     {
       "url": "https://www.tiktok.com/discover/en-que-plataforma-puedo-ver-las-azules",
       "firstSeen": "2026-09-10T00:05:12Z",
-      "failCount": 1,
-      "lastStatus": 403,
-      "lastAttempt": "2026-09-10T00:05:12Z",
+      "failCount": 2,
+      "lastStatus": "WebFetch:200(empty-substance)/Firecrawl:403(unsupported-site)",
+      "lastAttempt": "2026-09-10T02:05:57.000Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -2709,6 +2709,64 @@
           "status": 403,
           "issue": "LEMA-9877",
           "note": "Blanket we do not support this site refusal for tiktok.com, consistent with other tiktok.com/discover URLs in this ledger."
+        },
+        {
+          "attempt": "2026-09-10T02:05:57.000Z",
+          "method": "WebFetch then Firecrawl scrape",
+          "status": "full-chain-failure",
+          "issue": "LEMA-9878",
+          "note": "Scheduled retry (cooldownUntil was null, failCount was 1). WebFetch again returned only generic TikTok shell content, no date. Firecrawl scrape again returned 403 'we do not support this site'. Retry failed, failCount incremented."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/donde-ver-las-azules-serie-completa",
+      "permanentSkip": false,
+      "failCount": 1,
+      "cooldownUntil": null,
+      "lastStatus": "WebFetch:200(empty-substance)/Firecrawl:403(unsupported-site)",
+      "lastAttempt": "2026-09-10T02:05:57.000Z",
+      "history": [
+        {
+          "attempt": "2026-09-10T02:05:57.000Z",
+          "method": "WebFetch then Firecrawl scrape",
+          "status": "full-chain-failure",
+          "issue": "LEMA-9878",
+          "note": "New candidate from Pass 2 (#LasAzules web search). WebFetch returned only generic 'TikTok - Make Your Day' shell content (no real article body, no date). Firecrawl scrape returned 403 'we do not support this site' (blanket TikTok domain refusal). Full-chain failure, consistent with other tiktok.com/discover ledger entries."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/donde-puedo-ver-la-serie-las-azules",
+      "permanentSkip": false,
+      "failCount": 1,
+      "cooldownUntil": null,
+      "lastStatus": "WebFetch:200(empty-substance)/Firecrawl:403(unsupported-site)",
+      "lastAttempt": "2026-09-10T02:05:57.000Z",
+      "history": [
+        {
+          "attempt": "2026-09-10T02:05:57.000Z",
+          "method": "WebFetch then Firecrawl scrape",
+          "status": "full-chain-failure",
+          "issue": "LEMA-9878",
+          "note": "New candidate from Pass 2 (#LasAzules web search). WebFetch returned only generic TikTok shell content, no date. Firecrawl scrape returned 403 'we do not support this site'. Full-chain failure."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/las-azules-serie-capitulo-5",
+      "permanentSkip": false,
+      "failCount": 1,
+      "cooldownUntil": null,
+      "lastStatus": "WebFetch:200(empty-substance)/Firecrawl:403(unsupported-site)",
+      "lastAttempt": "2026-09-10T02:05:57.000Z",
+      "history": [
+        {
+          "attempt": "2026-09-10T02:05:57.000Z",
+          "method": "WebFetch then Firecrawl scrape",
+          "status": "full-chain-failure",
+          "issue": "LEMA-9878",
+          "note": "New candidate from Pass 2 (episodio 5/6 crítica search). WebFetch returned only generic TikTok shell content, no date. Firecrawl scrape returned 403 'we do not support this site'. Full-chain failure."
         }
       ]
     }
