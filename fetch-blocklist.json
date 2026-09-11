@@ -4349,7 +4349,207 @@
       "permanentSkip": false,
       "skipReason": null,
       "skipNote": "Surfaced by Exa EN broad query as an on-topic candidate (weekend streaming roundup that may list Las Azules among 10 titles). WebFetch returned only the article header/title with no body content across two attempts (near-empty, truncated). Firecrawl scrape returned 403. Full-chain failure logged per step 4d, not added to data.json this run. LEMA-9995."
+    },
+    {
+      "url": "https://www.usmagazine.com/entertainment/news/4-best-new-shows-to-watch-this-weekend-september-11-13-2026/",
+      "firstSeen": "2026-09-11T14:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T14:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Us Weekly weekend streaming roundup covering Apple TV's Last Seen, Peacock's Fan Level Midnight and The Paper Season 2, and Netflix's Crew Girl. Confirmed via Firecrawl scrape: no mention of Las Azules or Women in Blue anywhere in the article. Surfaced only as a broad-query match on \"Apple TV\" + \"new shows\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T14:01:09.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10003",
+          "note": "Us Weekly weekend streaming roundup covering Apple TV's Last Seen, Peacock's Fan Level Midnight and The Paper Season 2, and Netflix's Crew Girl. Confirmed via Firecrawl scrape: no mention of Las Azules or Women in Blue anywhere in the article. Surfaced only as a broad-query match on \"Apple TV\" + \"new shows\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.canalplus.com/series/",
+      "firstSeen": "2026-09-11T14:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T14:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "CANAL+ series catalog homepage (French). Las Azules appears only as one catalog tile among dozens (poster thumbnail + \"S'abonner\" subscribe link), no written editorial content about the show anywhere on the page. Rule F: stripping the catalog grid leaves nothing written about the show.",
+      "history": [
+        {
+          "attempt": "2026-09-11T14:01:09.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10003",
+          "note": "CANAL+ series catalog homepage (French). Las Azules appears only as one catalog tile among dozens (poster thumbnail + \"S'abonner\" subscribe link), no written editorial content about the show anywhere on the page. Rule F: stripping the catalog grid leaves nothing written about the show."
+        }
+      ]
+    },
+    {
+      "url": "https://www.rottentomatoes.com/tv/women_in_blue_2024",
+      "firstSeen": "2026-09-11T14:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T14:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Rotten Tomatoes main show page for Women in Blue. Confirmed via WebFetch: aggregated Tomatometer/Popcornmeter scores, cast/crew metadata, streaming availability -- no written reviews, no bylined articles, no publish date visible. Pure ratings/database page. Rule F.",
+      "history": [
+        {
+          "attempt": "2026-09-11T14:01:09.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10003",
+          "note": "Rotten Tomatoes main show page for Women in Blue. Confirmed via WebFetch: aggregated Tomatometer/Popcornmeter scores, cast/crew metadata, streaming availability -- no written reviews, no bylined articles, no publish date visible. Pure ratings/database page. Rule F."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/au/tv-show/the-early-spring/season-1",
+      "firstSeen": "2026-09-11T14:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T14:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch page for \"The Early Spring\", a 2026 Chinese drama-romance series about a new employee and her boss hiding a secret relationship. Confirmed via WebFetch: no mention of Las Azules or Women in Blue at all. Broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-11T14:01:09.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10003",
+          "note": "JustWatch page for \"The Early Spring\", a 2026 Chinese drama-romance series about a new employee and her boss hiding a secret relationship. Confirmed via WebFetch: no mention of Las Azules or Women in Blue at all. Broad-query false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://www.revistaclase.mx/eventos/gina-diez-barroso-presenta-su-podcast-sin-permiso-en-compania-de-familia-y-amigos/",
+      "firstSeen": "2026-09-11T14:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T14:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Revista Clase (Mexico) society piece about Gina Diez Barroso launching her podcast \"Sin Permiso\" with family and friends. No connection to Las Azules or Women in Blue; surfaced via broad Exa ES neural match on general entertainment/interview terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T14:01:09.000Z",
+          "method": "title/snippet review (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-10003",
+          "note": "Revista Clase (Mexico) society piece about Gina Diez Barroso launching her podcast \"Sin Permiso\" with family and friends. No connection to Las Azules or Women in Blue; surfaced via broad Exa ES neural match on general entertainment/interview terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/CandelaEstereo/posts/gaby-spanic-sorprendi%C3%B3-con-su-nueva-imagensu-cambio-ha-generado-debate-en-redes-/1684524469701460/",
+      "firstSeen": "2026-09-11T14:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T14:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Candela Estereo Facebook post about actress Gaby Spanic's new look/image change generating debate on social media. No connection to Las Azules or Women in Blue; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-11T14:01:09.000Z",
+          "method": "title/snippet review (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-10003",
+          "note": "Candela Estereo Facebook post about actress Gaby Spanic's new look/image change generating debate on social media. No connection to Las Azules or Women in Blue; broad-query false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/infobaemexico/posts/la-conductora-y-comediante-cont%C3%B3-que-fue-contratada-al-menos-en-tres-ocasiones/1686681530131925/",
+      "firstSeen": "2026-09-11T14:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T14:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Infobae Mexico Facebook post about a TV host/comedian recounting being hired multiple times for unrelated work. No connection to Las Azules or Women in Blue; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-11T14:01:09.000Z",
+          "method": "title/snippet review (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-10003",
+          "note": "Infobae Mexico Facebook post about a TV host/comedian recounting being hired multiple times for unrelated work. No connection to Las Azules or Women in Blue; broad-query false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://diariodia.es/2026/09/11/vicky-martin-berrocal-a-corazon-abierto-sobre-su-historia-de-amor-con-javier-cabrera-no-lo-esperaba/",
+      "firstSeen": "2026-09-11T14:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T14:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Diario Dia (Spain) celebrity piece about Vicky Martin Berrocal discussing her relationship with Javier Cabrera. No connection to Las Azules or Women in Blue; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-11T14:01:09.000Z",
+          "method": "title/snippet review (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-10003",
+          "note": "Diario Dia (Spain) celebrity piece about Vicky Martin Berrocal discussing her relationship with Javier Cabrera. No connection to Las Azules or Women in Blue; broad-query false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://www.rtve.es/rtve/20260911/sukha-regresa-a-2-con-segunda-temporada-mas-cultural-mas-divertida-conectada-con-actualidad/17221289.shtml",
+      "firstSeen": "2026-09-11T14:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T14:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RTVE piece about Spanish TV program \"Sukha\" returning to La 2 for a second season. Different show entirely; no connection to Las Azules or Women in Blue. Broad-query false positive (matched on generic \"segunda temporada\" terms).",
+      "history": [
+        {
+          "attempt": "2026-09-11T14:01:09.000Z",
+          "method": "title/snippet review (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-10003",
+          "note": "RTVE piece about Spanish TV program \"Sukha\" returning to La 2 for a second season. Different show entirely; no connection to Las Azules or Women in Blue. Broad-query false positive (matched on generic \"segunda temporada\" terms)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mdzol.com/tendencias/chiche-gelblung-y-la-entrevista-que-dejo-javier-milei-respuestas-n1604596",
+      "firstSeen": "2026-09-11T14:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T14:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "MDZ (Argentina) piece about Chiche Gelblung's interview with Javier Milei. No connection to Las Azules or Women in Blue; broad-query false positive (matched on generic \"entrevista\" terms).",
+      "history": [
+        {
+          "attempt": "2026-09-11T14:01:09.000Z",
+          "method": "title/snippet review (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-10003",
+          "note": "MDZ (Argentina) piece about Chiche Gelblung's interview with Javier Milei. No connection to Las Azules or Women in Blue; broad-query false positive (matched on generic \"entrevista\" terms)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-11T10:05:00Z"
+  "lastUpdated": "2026-09-11T14:01:09.000Z"
 }
