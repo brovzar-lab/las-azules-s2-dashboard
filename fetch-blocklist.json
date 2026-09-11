@@ -3846,7 +3846,167 @@
           "note": "WebFetch succeeded; confirmed article is about an unrelated variety/talk show."
         }
       ]
+    },
+    {
+      "url": "https://www.seriecanal.com/Las+Azules-8902.htm",
+      "firstSeen": "2026-09-11T02:03:51Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T02:03:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_piracy_or_unauthorized_distribution",
+      "skipNote": "SerieCanal.com listing page for Las Azules Season 2 Episode 2, an unauthorized streaming platform. Page offers an embedded online video player gated behind Visionados Online Disponibles SOLO para DONADORES (donor-only access), no stated release-quality tier beyond online viewing, page last-updated stamp 11/09/2026 (not used as a publish date per Rule A/E). Unauthorized-distribution listing, not media coverage.",
+      "history": [
+        {
+          "attempt": "2026-09-11T02:03:51Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9944",
+          "note": "SerieCanal.com listing page for Las Azules Season 2 Episode 2, an unauthorized streaming platform. Page offers an embedded online video player gated behind Visionados Online Disponibles SOLO para DONADORES (donor-only access), no stated release-quality tier beyond online viewing, page last-updated stamp 11/09/2026 (not used as a publish date per Rule A/E). Unauthorized-distribution listing, not media coverage."
+        }
+      ]
+    },
+    {
+      "url": "https://deadline.com/feature/tv-show-based-on-books-this-year-1236035246/",
+      "firstSeen": "2026-09-11T02:03:51Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T02:03:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Deadline feature \"TV Shows Based On Books Coming Out In 2026\" (published 2026-08-21). Full body fetched via Firecrawl (WebFetch returned 402 Payment Required / paywall); no mention of Las Azules or Women in Blue anywhere in the piece. Only tangential match is actor surname \"Bluemel\" (Ed Bluemel, cast of an unrelated Agatha Christie adaptation), which likely triggered the Exa Pass 1 broad-query match on \"Blue\". Surfaced only as a broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-11T02:03:51Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9944",
+          "note": "Deadline feature \"TV Shows Based On Books Coming Out In 2026\" (published 2026-08-21). Full body fetched via Firecrawl (WebFetch returned 402 Payment Required / paywall); no mention of Las Azules or Women in Blue anywhere in the piece. Only tangential match is actor surname \"Bluemel\" (Ed Bluemel, cast of an unrelated Agatha Christie adaptation), which likely triggered the Exa Pass 1 broad-query match on \"Blue\". Surfaced only as a broad-query false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://music.apple.com/gb/concerts/ce.f49c111e-6715-45c8-a0ff-3ef8ff2fd7f3",
+      "firstSeen": "2026-09-11T02:03:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T02:03:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Apple Music concert listing for Los Ángeles Azules (Mexican cumbia band, unrelated to the TV series) Val Air Room tour date. Classified from Exa search result title alone (unambiguous: concert ticketing page for a music act, not the show); not fetched, same posture as the LEMA-9940 precedent for other Los Ángeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\".",
+      "history": [
+        {
+          "attempt": "2026-09-11T02:03:51Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-9944",
+          "note": "Apple Music concert listing for Los Ángeles Azules (Mexican cumbia band, unrelated to the TV series) Val Air Room tour date. Classified from Exa search result title alone (unambiguous: concert ticketing page for a music act, not the show); not fetched, same posture as the LEMA-9940 precedent for other Los Ángeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\"."
+        }
+      ]
+    },
+    {
+      "url": "https://gigora.live/events/los-angeles-azules-los-angeles-azules-yaamava-theater-2026-09-13",
+      "firstSeen": "2026-09-11T02:03:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T02:03:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Gigora event listing for Los Ángeles Azules (Mexican cumbia band) concert at Yaamava Theater, Sep 13 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\".",
+      "history": [
+        {
+          "attempt": "2026-09-11T02:03:51Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-9944",
+          "note": "Gigora event listing for Los Ángeles Azules (Mexican cumbia band) concert at Yaamava Theater, Sep 13 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\"."
+        }
+      ]
+    },
+    {
+      "url": "https://gigsty.com/concert/los-angeles-azules-las-vegas-2026-09-12",
+      "firstSeen": "2026-09-11T02:03:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T02:03:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Gigsty concert ticket listing for Los Ángeles Azules (Mexican cumbia band) in Las Vegas, NV, Sep 12 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\".",
+      "history": [
+        {
+          "attempt": "2026-09-11T02:03:51Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-9944",
+          "note": "Gigsty concert ticket listing for Los Ángeles Azules (Mexican cumbia band) in Las Vegas, NV, Sep 12 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\"."
+        }
+      ]
+    },
+    {
+      "url": "https://music.apple.com/mo/concerts/ce.1a2b1451-9765-4d96-ad46-7330f9342c73",
+      "firstSeen": "2026-09-11T02:03:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T02:03:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Apple Music concert listing for Los Ángeles Azules (Mexican cumbia band, unrelated to the TV series) 2026 tour date. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched, same posture as the LEMA-9940 precedent for other Los Ángeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\".",
+      "history": [
+        {
+          "attempt": "2026-09-11T02:03:51Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-9944",
+          "note": "Apple Music concert listing for Los Ángeles Azules (Mexican cumbia band, unrelated to the TV series) 2026 tour date. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched, same posture as the LEMA-9940 precedent for other Los Ángeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\"."
+        }
+      ]
+    },
+    {
+      "url": "https://www.infobae.com/teleshow/2026/09/11/bandana-recordo-su-pelea-con-santiago-del-moro-se-paso-el-disco-por-las-partes-lo-amenazamos-y-nos-pidio-perdon/",
+      "firstSeen": "2026-09-11T02:03:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T02:03:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Infobae Teleshow article about pop group Bandana recalling a past conflict with TV host Santiago del Moro. No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match on the Spanish query terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T02:03:51Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-9944",
+          "note": "Infobae Teleshow article about pop group Bandana recalling a past conflict with TV host Santiago del Moro. No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.abc.es/queplan/sevilla/conciertos/amaia-endulza-sevilla-ciudades-bonitas-mundo-noche-20260911021741-nts.html",
+      "firstSeen": "2026-09-11T02:03:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T02:03:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ABC (Sevilla) article about singer Amaia performing a concert in Sevilla. No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match on the Spanish query terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T02:03:51Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-9944",
+          "note": "ABC (Sevilla) article about singer Amaia performing a concert in Sevilla. No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-11T00:05:26Z"
+  "lastUpdated": "2026-09-11T02:03:51Z"
 }
