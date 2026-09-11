@@ -4006,6 +4006,34 @@
           "note": "ABC (Sevilla) article about singer Amaia performing a concert in Sevilla. No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
         }
       ]
+    },
+    {
+      "url": "https://m.imdb.com/es/name/nm0746370/publicity",
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "IMDb 'Listados publicitarios' page for Fernando Rovzar: a directory of links to press mentions, no written editorial content itself.",
+      "firstSeen": "2026-09-11T04:00:00Z"
+    },
+    {
+      "url": "https://www.justwatch.com/us/tv-show/las-azules",
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch streaming-availability listing page: providers, pricing, ratings, no written commentary beyond a stock synopsis.",
+      "firstSeen": "2026-09-11T04:00:00Z"
+    },
+    {
+      "url": "https://www.justwatch.com/dk/tv-series/las-azules/season-1",
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch (DK) streaming-availability listing page: providers, pricing, ratings, no written commentary beyond a stock synopsis.",
+      "firstSeen": "2026-09-11T04:00:00Z"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Women_in_Blue_(film)",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia page is about a different title: 'Women In Blue' (2021), an American documentary about the Minneapolis Police Department, not the Apple TV+ series Las Azules.",
+      "firstSeen": "2026-09-11T04:00:00Z"
     }
   ],
   "lastUpdated": "2026-09-11T02:03:51Z"
