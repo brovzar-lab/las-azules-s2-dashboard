@@ -4642,7 +4642,127 @@
           "note": "WebFetch returned HTTP 451; Firecrawl scrape succeeded and confirmed no mention of Las Azules/Women in Blue, article is about Primetime Emmys."
         }
       ]
+    },
+    {
+      "url": "https://streamingnow.com/post/official-blockbuster-release",
+      "firstSeen": "2026-09-11T20:06:14Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T20:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Generic entertainment-content discovery post on a streaming aggregator blog (\"Official Blockbuster Release\"). WebFetch confirmed the page is a generic content-discovery listing (films, TV, music, podcasts, audiobooks) with no reference to Las Azules or Women in Blue anywhere. Surfaced only as a broad-query match on generic streaming/Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T20:06:14Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10007",
+          "note": "WebFetch succeeded; confirmed page is about a different, unrelated topic (see skipNote)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/100093663771599/posts/-zuria-vega-returns-to-netflix-with-a-new-thrillermexican-actress-zuria-vega-is-/994490953683021/",
+      "firstSeen": "2026-09-11T20:06:14Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T20:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post (account: \"All Telenovela News and Gists\") about Mexican actress Zuria Vega returning to Netflix with a new thriller. Zuria Vega is not part of the Las Azules/Women in Blue cast; the post is about an unrelated Netflix project, not Apple TV. No mention of Las Azules or Women in Blue anywhere. Firecrawl scrape attempted and returned the standard \"we do not support this site\" refusal for facebook.com (documented exhaustion); WebFetch content was sufficient to confirm off-topic classification regardless.",
+      "history": [
+        {
+          "attempt": "2026-09-11T20:06:14Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10007",
+          "note": "WebFetch succeeded; confirmed page is about a different, unrelated topic (see skipNote)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/threeviralvidz/posts/-as%C3%AD-estaba-el-men%C3%BA-de-solo-para-mujeres-en-2001-despu%C3%A9s-de-dos-a%C3%B1os-de-%C3%A9xito-ac/1054179750792590/",
+      "firstSeen": "2026-09-11T20:06:14Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T20:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post (account: \"Viral 3M\") about the 2001 lineup/menu for the Mexican stage production \"Sólo Para Mujeres\", a decades-old unrelated theatrical show. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic \"para mujeres\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T20:06:14Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10007",
+          "note": "WebFetch succeeded; confirmed page is about a different, unrelated topic (see skipNote)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/objetivotv/posts/ester-exp%C3%B3sito-se-ha-emocionado-casi-hasta-las-l%C3%A1grimas-ante-las-c%C3%A1maras-durante/1575775917338054/",
+      "firstSeen": "2026-09-11T20:06:14Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T20:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post (account: \"Objetivo TV\") about actress Ester Expósito getting emotional at a Madrid press event for her film \"Enfrentados: Marfil\". Unrelated actress and unrelated project; no mention of Las Azules or Women in Blue anywhere.",
+      "history": [
+        {
+          "attempt": "2026-09-11T20:06:14Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10007",
+          "note": "WebFetch succeeded; confirmed page is about a different, unrelated topic (see skipNote)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/tvtlnovelas/posts/-rub%C3%AD-no-soporta-que-cayetano-le-diga-sus-verdades-y-se-venga-coloc%C3%A1ndole-un-cos/1547293884101237/",
+      "firstSeen": "2026-09-11T20:06:14Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T20:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post (account: \"TVyTLNovelas\") about a plot point in the telenovela \"Rubí\" (Las Estrellas / Vix), an unrelated show. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic Spanish-language TV drama terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T20:06:14Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10007",
+          "note": "WebFetch succeeded; confirmed page is about a different, unrelated topic (see skipNote)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.quever.news/series/la-serie-tom-hardy-que-rompio-un-record-audiencia-vuelve-su-segunda-temporada-solo-una-semana-n1604695",
+      "firstSeen": "2026-09-11T20:06:14Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T20:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about \"MobLand\", a Paramount+ crime series starring Tom Hardy, returning for a second season on September 18, 2026. Unrelated show/platform/cast; no mention of Las Azules or Women in Blue anywhere. Surfaced only as a broad-query match on generic \"season 2 returns\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T20:06:14Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10007",
+          "note": "WebFetch succeeded; confirmed page is about a different, unrelated topic (see skipNote)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-11T18:06:23Z"
+  "lastUpdated": "2026-09-11T20:06:14Z"
 }
