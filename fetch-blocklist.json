@@ -4150,7 +4150,195 @@
           "note": "SCRAPE_TIMEOUT: page took too long to load/render."
         }
       ]
+    },
+    {
+      "url": "https://www.lavozdelanacion.com/espectaculos/ester-exposito-estrena-thriller-romantico-en-prime-video/",
+      "firstSeen": "2026-09-11T08:03:33.671Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T08:03:33.671Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about Ester Expósito starring in an unrelated Prime Video romantic thriller. No connection to Las Azules / Women in Blue; surfaced only as a broad-query false positive on the sweep query set.",
+      "history": [
+        {
+          "attempt": "2026-09-11T08:03:33.671Z",
+          "method": "editorial-review",
+          "status": null,
+          "issue": "LEMA-9977",
+          "note": "Off-topic false positive identified during standard EN/ES sweep (Rule G), no fetch attempted per Rule G guidance."
+        }
+      ]
+    },
+    {
+      "url": "https://playmax.mx/margarita-f231145",
+      "firstSeen": "2026-09-11T08:03:33.671Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T08:03:33.671Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about the unrelated film \"Margarita\" (2024) on PlayMax. No connection to Las Azules; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-11T08:03:33.671Z",
+          "method": "editorial-review",
+          "status": null,
+          "issue": "LEMA-9977",
+          "note": "Off-topic false positive identified during standard EN/ES sweep (Rule G), no fetch attempted per Rule G guidance."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/ec/pelicula/los-anos-azules",
+      "firstSeen": "2026-09-11T08:03:33.671Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T08:03:33.671Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about \"Los años azules\" (2017), an unrelated Mexican drama film directed by Sofía Gómez Córdova. Title-similarity false positive, not the show Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-09-11T08:03:33.671Z",
+          "method": "editorial-review",
+          "status": null,
+          "issue": "LEMA-9977",
+          "note": "Off-topic false positive identified during standard EN/ES sweep (Rule G), no fetch attempted per Rule G guidance."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/mx/pelicula/los-angeles-azules-cumbia-sinfonica",
+      "firstSeen": "2026-09-11T08:03:33.671Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T08:03:33.671Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about \"Los Ángeles Azules: Cumbia Sinfónica\" (2014), a concert film for the Mexican band Los Ángeles Azules. Different entity from the show Las Azules; name-similarity false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-11T08:03:33.671Z",
+          "method": "editorial-review",
+          "status": null,
+          "issue": "LEMA-9977",
+          "note": "Off-topic false positive identified during standard EN/ES sweep (Rule G), no fetch attempted per Rule G guidance."
+        }
+      ]
+    },
+    {
+      "url": "https://www.larazon.es/tecnologia-consumo/series/netflix-cancela-sorpresa-nueva-vida-ransom-canyon-su-segunda-temporada_202609116aa39f3e7486a40f2c9a070b.html",
+      "firstSeen": "2026-09-11T08:03:33.671Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T08:03:33.671Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about Netflix cancelling \"Nueva vida en Ransom Canyon\" after its second season. No connection to Las Azules; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-11T08:03:33.671Z",
+          "method": "editorial-review",
+          "status": null,
+          "issue": "LEMA-9977",
+          "note": "Off-topic false positive identified during standard EN/ES sweep (Rule G), no fetch attempted per Rule G guidance."
+        }
+      ]
+    },
+    {
+      "url": "https://www.telebajocero.com/lali-esposito/lali-esposito-deslumbra-el-trailer-glaxo-y-prepara-su-regreso-san-sebastian-n1358313",
+      "firstSeen": "2026-09-11T08:03:33.671Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T08:03:33.671Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about Lali Espósito's trailer for \"Glaxo\" and her return to San Sebastián. No connection to Las Azules; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-11T08:03:33.671Z",
+          "method": "editorial-review",
+          "status": null,
+          "issue": "LEMA-9977",
+          "note": "Off-topic false positive identified during standard EN/ES sweep (Rule G), no fetch attempted per Rule G guidance."
+        }
+      ]
+    },
+    {
+      "url": "https://www.thenationalnews.com/magazine/2026/09/11/last-seen-apple-tv/",
+      "firstSeen": "2026-09-11T08:03:33.671Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T08:03:33.671Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about a different Apple TV title, \"Last Seen\". No connection to Las Azules / Women in Blue; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-11T08:03:33.671Z",
+          "method": "editorial-review",
+          "status": null,
+          "issue": "LEMA-9977",
+          "note": "Off-topic false positive identified during standard EN/ES sweep (Rule G), no fetch attempted per Rule G guidance."
+        }
+      ]
+    },
+    {
+      "url": "https://www.ultimahora.es/vips/television/2026/09/11/2706403/victoria-luengo-sincera-revuelta-despido-mas-surrealista-historia-detras-camiseta.html",
+      "firstSeen": "2026-09-11T08:03:33.671Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-11T08:03:33.671Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about Spanish actress Victoria Luengo on \"La Revuelta\". No connection to Las Azules; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-11T08:03:33.671Z",
+          "method": "editorial-review",
+          "status": null,
+          "issue": "LEMA-9977",
+          "note": "Off-topic false positive identified during standard EN/ES sweep (Rule G), no fetch attempted per Rule G guidance."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/exafm/videos/b%C3%A1rbara-mori-y-fernando-rovzar-de-rub%C3%AD-a-las-azules-entrevista-con-jessie-en-exa/1855397961648357/",
+      "firstSeen": "2026-09-11T08:03:33.671Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-11T08:03:33.671Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "skipNote": "EXA FM (radio station, editorial/outlet account) interview with Bárbara Mori and Fernando Rovzar about Las Azules (\"De Rubí a Las Azules\"), passes Rule B relevance gate. No publish date visible via WebFetch. Firecrawl scrape attempted and returned the documented facebook.com blanket refusal (\"we do not support this site\"), a valid exhaustion of the method per Rule A. No real publish date recoverable by either method.",
+      "reviewable": true,
+      "history": [
+        {
+          "attempt": "2026-09-11T08:03:33.671Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9977",
+          "note": "Fetched but no publish date present in body."
+        },
+        {
+          "attempt": "2026-09-11T08:03:33.671Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9977",
+          "note": "We apologize for the inconvenience but we do not support this site (facebook.com blanket refusal)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-11T06:06:06Z"
+  "lastUpdated": "2026-09-11T08:03:33.671Z"
 }
