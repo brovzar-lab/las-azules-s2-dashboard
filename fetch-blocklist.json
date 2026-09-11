@@ -4549,7 +4549,100 @@
           "note": "MDZ (Argentina) piece about Chiche Gelblung's interview with Javier Milei. No connection to Las Azules or Women in Blue; broad-query false positive (matched on generic \"entrevista\" terms)."
         }
       ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=BOa4OghfhpY",
+      "firstSeen": "2026-09-11T18:06:23Z",
+      "failCount": 1,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T18:06:23Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-11T18:06:23Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10006",
+          "note": "WebFetch returned generic YouTube shell content, no video data."
+        },
+        {
+          "attempt": "2026-09-11T18:06:23Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10006",
+          "note": "Firecrawl returned 200 but body is YouTube's terminated-account placeholder (\"This video is no longer available because the YouTube account associated with this video has been terminated\"), not real video/coverage content. Full-chain failure."
+        }
+      ]
+    },
+    {
+      "url": "https://www.filmaffinity.com/es/movie-awards.php?movie-id=786793",
+      "firstSeen": "2026-09-11T18:06:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T18:06:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "FilmAffinity awards/nominations page for Las Azules. Firecrawl scrape (200) confirmed the page is purely a metadata table (awards editions, categories, nominee/winner rows) with a boilerplate one-line synopsis reused from the film record; no written editorial content about the show. Rule F test applied: stripping the awards table leaves nothing written about the show. Not media coverage.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-11T18:06:23Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10006"
+        },
+        {
+          "attempt": "2026-09-11T18:06:23Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10006",
+          "note": "Firecrawl succeeded; confirmed pure awards-table listing page, no editorial prose. Rule F."
+        }
+      ]
+    },
+    {
+      "url": "https://www.infobae.com/entretenimiento/2026/07/08/premios-emmy-2026-lista-completa-de-nominados-a-la-gala-mas-importante-de-la-television/",
+      "firstSeen": "2026-09-11T18:06:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T18:06:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Infobae article listing nominees for the 78th Primetime Emmy Awards (English-language US television, ceremony Sept 14, 2026). No mention of Las Azules or Women in Blue anywhere in the fetched body; Las Azules competes in the separate International Emmy Awards (gala Nov 24), not this ceremony. Surfaced only as a broad-query match on generic \"Emmy 2026 nominees\" terms.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-11T18:06:23Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10006",
+          "note": "Confirmed no mention of Las Azules/Women in Blue; article is about the Primetime Emmys, unrelated ceremony."
+        }
+      ]
+    },
+    {
+      "url": "https://cnnespanol.cnn.com/2026/07/08/entretenimiento/premios-emmy-2026-lista-nominaciones-orix",
+      "firstSeen": "2026-09-11T18:06:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T18:06:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "CNN en Español article listing nominees for the 78th Primetime Emmy Awards (canonicalizes to cnnespanol.cnn.com/2026/09/10/entretenimiento/emmy-2026-nominaciones-premios-categorias-orix). Covers \"The Pitt\", \"Hacks\", \"Widow's Bay\", \"Pluribus\" etc. No mention of Las Azules or Women in Blue anywhere in the fetched body. Surfaced only as a broad-query match on generic \"Emmy 2026 nominaciones\" terms.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-11T18:06:23Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10006",
+          "note": "WebFetch returned HTTP 451; Firecrawl scrape succeeded and confirmed no mention of Las Azules/Women in Blue, article is about Primetime Emmys."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-11T14:01:09.000Z"
+  "lastUpdated": "2026-09-11T18:06:23Z"
 }
