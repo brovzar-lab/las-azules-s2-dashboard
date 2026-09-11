@@ -4034,7 +4034,123 @@
       "skipReason": "editorial_off_topic_false_positive",
       "skipNote": "Wikipedia page is about a different title: 'Women In Blue' (2021), an American documentary about the Minneapolis Police Department, not the Apple TV+ series Las Azules.",
       "firstSeen": "2026-09-11T04:00:00Z"
+    },
+    {
+      "url": "https://es.headtopics.com/news/las-16-series-de-la-semana-se-someten-a-el-juicio-de-87631186",
+      "firstSeen": "2026-09-11T06:06:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T06:06:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "HeadTopics ES roundup of the week's series premieres (Sept 7-13) across Netflix, Disney+, Prime Video, Movistar Plus, Apple TV, SkyShowtime, Filmin, Cosmo, Syfy, AXN. Highlights 'El Juicio', 'La mujer miniatura', 'Chicago Fire', 'Los Forsythe'. Full body text confirmed via Firecrawl scrape contains no mention of 'Las Azules' or 'Women in Blue' anywhere; surfaced only as a broad-query match on generic 'series'/'Apple TV'/'temporada' terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T06:06:06Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9946"
+        },
+        {
+          "attempt": "2026-09-11T06:06:06Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9946",
+          "note": "Firecrawl succeeded; full body text searched, 'azules' does not appear anywhere in the ~12.7KB markdown. Confirmed off-topic false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://areajugones.sport.es/series/la-timonel-habra-temporada-2-en-netflix-estas-son-las-posibilidades/",
+      "firstSeen": "2026-09-11T06:06:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T06:06:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'La timonel' (Netflix), a wholly different show, discussing whether it will get a season 2 on Netflix. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on 'temporada 2'/Netflix terms. WebFetch was blocked entirely for this domain; Firecrawl scrape succeeded but returned the site's dynamic 'últimas fichas' sidebar widget (unrelated video-game listing) rather than the article body due to client-side rendering, so confirmation of topic relies on the original WebSearch result snippet, which unambiguously identifies the article as being about 'La timonel'.",
+      "history": [
+        {
+          "attempt": "2026-09-11T06:06:06Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9946",
+          "note": "WebFetch tool reported it is unable to fetch from this domain at all."
+        },
+        {
+          "attempt": "2026-09-11T06:06:06Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9946",
+          "note": "Firecrawl returned 200 but body was the site's dynamic sidebar widget (unrelated video game listings), not the article. Topic confirmed off-topic via original search snippet instead."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvazteca.com/aztecauno/la-granja-vip/la-impactante-razon-por-la-que-kevyn-se-quebro-en-llanto-en-la-granja-vip/",
+      "firstSeen": "2026-09-11T06:06:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T06:06:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Azteca article about 'La Granja VIP' (reality competition show), covering contestant Kevyn Contreras crying during a nomination dynamic. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic 'temporada 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T06:06:06Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9946",
+          "note": "WebFetch succeeded; confirmed article is about La Granja VIP, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.cineplay.co.kr/es-es/articles/29645",
+      "firstSeen": "2026-09-11T06:06:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T06:06:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Cineplay (Korean cinema site, Spanish edition) interview with actor Lee Min-ho about the film 'Los asesinos' (The Assassins). No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic Spanish-language entertainment terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T06:06:06Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9946",
+          "note": "WebFetch succeeded; confirmed article is about Lee Min-ho and 'Los asesinos', unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.palomitacas.com/serie/ficha/p253983/temporada/1",
+      "firstSeen": "2026-09-11T06:06:06Z",
+      "failCount": 1,
+      "lastStatus": 408,
+      "lastAttempt": "2026-09-11T06:06:06Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-11T06:06:06Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9946"
+        },
+        {
+          "attempt": "2026-09-11T06:06:06Z",
+          "method": "Firecrawl scrape",
+          "status": 408,
+          "issue": "LEMA-9946",
+          "note": "SCRAPE_TIMEOUT: page took too long to load/render."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-11T02:03:51Z"
+  "lastUpdated": "2026-09-11T06:06:06Z"
 }
