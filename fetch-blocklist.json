@@ -2343,13 +2343,13 @@
     {
       "url": "https://www.tiktok.com/discover/la-serie-de-las-azules-tendr%C3%A1-segunda-temporada?lang=es",
       "firstSeen": "2026-09-08T20:15:00Z",
-      "failCount": 1,
-      "lastStatus": 403,
-      "lastAttempt": "2026-09-08T20:15:00Z",
+      "failCount": 2,
+      "lastStatus": "webfetch_near_empty;firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-11T10:05:00Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
-      "skipNote": "WebFetch returned only the generic TikTok tagline with no article content (near-empty body). Firecrawl scrape returned a 403 with 'we do not support this site' for this TikTok discover page. Full-chain failure, logged per step 4c. First failure for this exact URL (query-param variant of an already-ledgered TikTok discover page); not yet at the 3-failure cooldown threshold."
+      "skipNote": "WebFetch returned only the generic TikTok tagline with no article content (near-empty body). Firecrawl scrape returned a 403 with 'we do not support this site' for this TikTok discover page. Full-chain failure, logged per step 4c. First failure for this exact URL (query-param variant of an already-ledgered TikTok discover page); not yet at the 3-failure cooldown threshold. Retry attempt on 2026-09-11T10:05:00Z (LEMA-9995): WebFetch again returned only the generic TikTok tagline, Firecrawl scrape again 403'd. failCount now 2."
     },
     {
       "url": "https://www.tiktok.com/discover/serie-en-apple-tv-tendencia",
@@ -4338,7 +4338,18 @@
           "note": "We apologize for the inconvenience but we do not support this site (facebook.com blanket refusal)."
         }
       ]
+    },
+    {
+      "url": "https://www.tomsguide.com/entertainment/streaming/10-new-movies-and-shows-to-stream-this-weekend-on-netflix-hulu-peacock-and-more-sept-11-13",
+      "firstSeen": "2026-09-11T10:05:00Z",
+      "failCount": 1,
+      "lastStatus": "webfetch_truncated_no_body;firecrawl_403",
+      "lastAttempt": "2026-09-11T10:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": "Surfaced by Exa EN broad query as an on-topic candidate (weekend streaming roundup that may list Las Azules among 10 titles). WebFetch returned only the article header/title with no body content across two attempts (near-empty, truncated). Firecrawl scrape returned 403. Full-chain failure logged per step 4d, not added to data.json this run. LEMA-9995."
     }
   ],
-  "lastUpdated": "2026-09-11T08:03:33.671Z"
+  "lastUpdated": "2026-09-11T10:05:00Z"
 }
