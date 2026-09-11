@@ -12,8 +12,8 @@
 // in the source prose. Flagged as an ambiguity in the LEMA-9933 deliverable.
 const TRACKING_PARAM_NAMES = new Set([
   'fbclid', 'gclid', 'gclsrc', 'dclid', 'msclkid',
-  'mc_cid', 'mc_eid', 'igshid', 'ref', 'ref_src', 'ref_url',
-  'spm', 'si', 'cmpid', 'icid',
+  'mc_cid', 'mc_eid', 'igshid', 'ref', 'ref_src', 'ref_url', 'ref_',
+  'spm', 'si', 'cmpid', 'icid', 'srsltid', 'sessionid',
 ]);
 const TRACKING_PARAM_PREFIX = /^utm_/i;
 
@@ -21,6 +21,16 @@ function isTrackingParam(name) {
   const lower = name.toLowerCase();
   return TRACKING_PARAM_PREFIX.test(lower) || TRACKING_PARAM_NAMES.has(lower);
 }
+
+// Per-host whitelist for the YouTube family (youtube.com, m.youtube.com,
+// youtu.be -- checked after the existing www. strip). Approved on
+// LEMA-9904 Item 5, shipped on LEMA-9942: `v` (video id) and `list`
+// (playlist id) are the only identity-bearing params on these hosts, so
+// everything else (locale flags like `vl`, session/share params, etc.) is
+// dropped instead of running through the generic tracking-param strip.
+// Video/playlist IDs are case-sensitive and must never be lowercased.
+const YOUTUBE_FAMILY_HOSTS = new Set(['youtube.com', 'm.youtube.com', 'youtu.be']);
+const YOUTUBE_KEPT_PARAMS = new Set(['v', 'list']);
 
 function stripTrailingSlash(pathname) {
   if (pathname.length > 1 && pathname.endsWith('/')) {
@@ -36,10 +46,15 @@ function stripLeadingWww(host) {
 // The routine prose does not specify an order for surviving query params.
 // Sorted here so two URLs whose params differ only in order produce the
 // same key. Implementation decision, flagged as an ambiguity.
-function buildQueryString(searchParams) {
+function buildQueryString(searchParams, host) {
+  const isYoutubeFamily = YOUTUBE_FAMILY_HOSTS.has(host);
   const kept = [];
   for (const [key, value] of searchParams.entries()) {
-    if (!isTrackingParam(key)) kept.push([key, value]);
+    if (isYoutubeFamily) {
+      if (YOUTUBE_KEPT_PARAMS.has(key)) kept.push([key, value]);
+    } else if (!isTrackingParam(key)) {
+      kept.push([key, value]);
+    }
   }
   kept.sort((a, b) => {
     if (a[0] !== b[0]) return a[0] < b[0] ? -1 : 1;
@@ -77,13 +92,22 @@ function buildQueryString(searchParams) {
  * Fragments (#...) are dropped entirely from both url and key. The routine
  * prose does not mention fragments; this is also an implementation
  * decision, flagged in the deliverable.
+ *
+ * KNOWN GAP (not resolved here, flagged on LEMA-9942): `youtu.be/<id>` and
+ * `youtube.com/shorts/<id>` are not folded into `watch?v=<id>` even though
+ * they carry the same video identity. Zero occurrences of either form in
+ * data.json or fetch-blocklist.json as of LEMA-9942, so this was not
+ * invented speculatively. Pre-approved by the CEO on LEMA-9942 to implement
+ * video-ID-based path folding for these forms the first time one actually
+ * appears in a candidate stream or artifact -- ship it with a test and a
+ * note on that ticket, no new escalation needed.
  */
 function normalizeUrl(rawUrl) {
   const parsed = new URL(rawUrl);
   const scheme = parsed.protocol.toLowerCase(); // e.g. "https:"
   const host = stripLeadingWww(parsed.host.toLowerCase()); // host includes port, if any
   const path = stripTrailingSlash(parsed.pathname);
-  const query = buildQueryString(parsed.searchParams);
+  const query = buildQueryString(parsed.searchParams, host);
 
   const url = `${scheme}//${host}${path}${query}`;
   const key = `${host}${path}${query}`;
