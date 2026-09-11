@@ -2408,7 +2408,7 @@
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-10T12:00:00.000Z",
+      "lastAttempt": "2026-09-11T22:04:43Z",
       "history": [
         {
           "attempt": "2026-09-09T10:03:05.000Z",
@@ -2430,6 +2430,13 @@
           "status": 200,
           "issue": "LEMA-9900",
           "note": "Success again: full metadata returned (Uploaded at: 2026-07-21). Surfaced this run via Firecrawl Pass 3 (DE and FR queries) as a &vl=en-US query-string variant of this same canonical URL; confirmed duplicate of the existing data.json entry (Jul 21, 2026 Apple TV trailer), not added as a separate entry. Same near-miss pattern already noted on this row by LEMA-9865 -- see LEMA-9902 for the standing URL-normalization process gap this keeps surfacing."
+        },
+        {
+          "attempt": "2026-09-11T22:04:43Z",
+          "method": "YouTube Data API (videos.list)",
+          "status": 200,
+          "issue": "LEMA-10008",
+          "note": "WebFetch returned only YouTube nav/footer chrome (no video metadata). Retrieved full metadata via YouTube Data API instead (publishedAt 2026-07-21T13:59:47Z, channel 'Apple TV'). Surfaced again this run via Firecrawl Pass 3 (DE query) as a &vl=en-US variant; confirmed duplicate of existing data.json entry (Jul 21, 2026 Apple TV trailer), not added as a separate entry. Same recurring near-miss pattern as LEMA-9865/LEMA-9900."
         }
       ]
     },
@@ -4762,7 +4769,87 @@
           "note": "WebFetch succeeded; confirmed page is about a different, unrelated topic (see skipNote)."
         }
       ]
+    },
+    {
+      "url": "https://poppednews.com/2026/09/11/what-to-watch-apple-tv-october-2026/",
+      "firstSeen": "2026-09-11T22:04:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T22:04:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Popped News \"What To Watch On Apple TV: October 2026\" roundup covering documentaries, action films, a dark comedy, and a crime thriller slated for October 2026. No mention of Las Azules or Women in Blue anywhere in the article; surfaced only as a broad Exa match on \"Apple TV\" + season terminology.",
+      "history": [
+        {
+          "attempt": "2026-09-11T22:04:43Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10008",
+          "note": "WebFetch succeeded; confirmed article covers unrelated October 2026 Apple TV titles, no reference to Las Azules/Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvazteca.com/aztecauno/la-granja-vip/yo-estaba-hablando-el-no-ella-niurka-aclara-lo-ocurrido-frente-a-la-vikinga/",
+      "firstSeen": "2026-09-11T22:04:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T22:04:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Azteca article about reality show \"La Granja VIP\" (Niurka Marcos clarifying an on-set confrontation with Manelyk). No mention of Las Azules, Women in Blue, or Bárbara Mori; surfaced only as a broad Exa Spanish-language match.",
+      "history": [
+        {
+          "attempt": "2026-09-11T22:04:43Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10008",
+          "note": "WebFetch succeeded; confirmed article is La Granja VIP reality-show coverage, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/RealityChile/posts/b%C3%A1rbara-rompi%C3%B3-en-llanto-luego-que-austin-le-dijera-que-est%C3%A1-interesado-en-noeli/1100365052340834/",
+      "firstSeen": "2026-09-11T22:04:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T22:04:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RealityChile Facebook post about a Chilean reality-show contestant named \"Bárbara\" (unrelated to actress Bárbara Mori) crying after castmate Austin said he's interested in another contestant, Noelia. No mention of Las Azules, Women in Blue, or Bárbara Mori; surfaced only because the reality-show contestant shares the first name \"Bárbara\".",
+      "history": [
+        {
+          "attempt": "2026-09-11T22:04:43Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10008",
+          "note": "WebFetch succeeded; confirmed post is Chilean reality-TV drama, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/plaxico.lecter/posts/hoy-cumple-38-a%C3%B1os-sandra-vergara-naci%C3%B3-el-11-de-septiembre-de-1988-en-barranqui/1399433388992848/",
+      "firstSeen": "2026-09-11T22:04:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T22:04:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Personal Facebook post celebrating Sandra Vergara's (Colombian actress, Sofía Vergara's adoptive sister) 38th birthday. No mention of Las Azules, Women in Blue, or Bárbara Mori; surfaced only as a broad Spanish-language \"Bárbara\" match.",
+      "history": [
+        {
+          "attempt": "2026-09-11T22:04:43Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10008",
+          "note": "WebFetch succeeded; confirmed post is an unrelated birthday tribute to Sandra Vergara."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-11T20:06:14Z"
+  "lastUpdated": "2026-09-11T22:04:43Z"
 }
