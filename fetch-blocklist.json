@@ -3686,7 +3686,167 @@
           "note": "WebFetch succeeded, fetched real post content. Excluded on Rule B relevance grounds, not a fetch failure."
         }
       ]
+    },
+    {
+      "url": "https://thefutureoftheforce.com/category/articles/television/streaming/apple-tv/",
+      "firstSeen": "2026-09-11T00:05:26Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T00:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Apple TV category/archive index page on Future of the Force. Contains only two teaser preview cards linking to other Las Azules/Women in Blue articles (thumbnail, headline, 1-2 sentence excerpt); no original written editorial content about the show on the page itself, it is a navigational feed of article links. Rule F: stripping the metadata/teaser cards leaves nothing written about the show.",
+      "history": [
+        {
+          "attempt": "2026-09-11T00:05:26Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9940",
+          "note": "WebFetch succeeded; confirmed category/archive listing page with no standalone editorial content, just teaser cards linking out."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/lotus.fm/posts/award-winning-actor-daniel-anderson-and-acclaimed-actress-kiruna-lind-devar-join/1707822981351018/",
+      "firstSeen": "2026-09-11T00:05:26Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T00:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Lotus FM Facebook post about actors Daniel Anderson and Kiruna Lind Devar promoting an unrelated show, \"Damsel in Distress\", on the radio program The Lunch Break. No mention of Las Azules or Women in Blue anywhere in the post; surfaced only as a broad-query match on generic show-promotion terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T00:05:26Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9940",
+          "note": "WebFetch succeeded; confirmed post is about a different show (Damsel in Distress), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.afr.com/life-and-luxury/arts-and-culture/apple-tv-s-first-locally-made-series-is-a-gripping-yarn-20260910-p60w7d",
+      "firstSeen": "2026-09-11T00:05:26Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-11T00:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Australian Financial Review article about Apple TV+'s \"Last Seen\", an Australian-made series starring Patrick Brammall and Maxine Peake. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"Apple TV series\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T00:05:26Z",
+          "method": "WebFetch",
+          "status": 0,
+          "issue": "LEMA-9940",
+          "note": "WebFetch tool error (unable to fetch afr.com). Classification made from the Exa search result title/snippet (\"Apple TV's first locally made series... showcases Patrick Brammall, Maxine Peake\"), which unambiguously identifies a different show; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://music.apple.com/mo/concerts/ce.081a769e-8351-464c-843b-b9d2383a0f44",
+      "firstSeen": "2026-09-11T00:05:26Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T00:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Apple Music concert listing page for Los Ángeles Azules, a Mexican musical group, for a September 6, 2026 show at Harrah's Resort SoCal. Unrelated to the TV series Las Azules; surfaced only as a broad-query match on the word \"Azules\".",
+      "history": [
+        {
+          "attempt": "2026-09-11T00:05:26Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9940",
+          "note": "WebFetch succeeded; confirmed page is a concert ticket listing for the band Los Angeles Azules, not the TV show."
+        }
+      ]
+    },
+    {
+      "url": "https://www.rtve.es/play/videos/la-revuelta/programa-10-09-2026-victoria-luengo-javier-bardem/17220427/",
+      "firstSeen": "2026-09-11T00:05:26Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-11T00:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RTVE Play video page for \"La Revuelta\" talk show episode featuring guests Victoria Luengo and Javier Bardem. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic Spanish-TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T00:05:26Z",
+          "method": "WebFetch",
+          "status": 0,
+          "issue": "LEMA-9940",
+          "note": "WebFetch tool error (unable to fetch rtve.es). Classification made from the Exa search result title (\"La Revuelta - Victoria Luengo y Javier Bardem\"), which unambiguously identifies a different, unrelated talk-show episode; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.elperiodico.digital/titulares/las-hijas-de-la-criada-conquista-al-publico-de-antena-3-479391.html",
+      "firstSeen": "2026-09-11T00:05:26Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T00:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Periódico Digital article about \"Las hijas de la criada\", an Antena 3 series adapted from Sonsoles Onega's novel. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Las ...\" TV-series terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T00:05:26Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9940",
+          "note": "WebFetch succeeded; confirmed article is exclusively about a different, unrelated series."
+        }
+      ]
+    },
+    {
+      "url": "https://prnoticias.com/2026/09/11/la-ficcion-televisiva-desembarca-con-fuerza-en-el-festval/",
+      "firstSeen": "2026-09-11T00:05:26Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T00:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "PRNoticias article about the FesTVal festival in Vitoria-Gasteiz covering RTVE's \"Rojo sobre blanco\" and Atresmedia's \"Las hijas de la criada\". No mention of Las Azules or Women in Blue anywhere in the piece; surfaced only as a broad-query match on generic Spanish-fiction-festival terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T00:05:26Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9940",
+          "note": "WebFetch succeeded; confirmed article covers two other, unrelated Spanish productions with no reference to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.canalsur.es/rtva/comunicacion/viernes-vuelve-show-bertin-prime_1_1434473.html",
+      "firstSeen": "2026-09-11T00:05:26Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-11T00:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Canal Sur article about the return of \"El Show de Bertin\" (host Bertin Osborne, guest Angela Carrasco) to its Friday primetime slot. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic Spanish-TV-programming terms.",
+      "history": [
+        {
+          "attempt": "2026-09-11T00:05:26Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9940",
+          "note": "WebFetch succeeded; confirmed article is about an unrelated variety/talk show."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-10T22:03:34Z"
+  "lastUpdated": "2026-09-11T00:05:26Z"
 }
