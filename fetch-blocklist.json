@@ -2424,7 +2424,7 @@
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-11T22:04:43Z",
+      "lastAttempt": "2026-09-12T06:00:33Z",
       "history": [
         {
           "attempt": "2026-09-09T10:03:05.000Z",
@@ -2453,6 +2453,13 @@
           "status": 200,
           "issue": "LEMA-10008",
           "note": "WebFetch returned only YouTube nav/footer chrome (no video metadata). Retrieved full metadata via YouTube Data API instead (publishedAt 2026-07-21T13:59:47Z, channel 'Apple TV'). Surfaced again this run via Firecrawl Pass 3 (DE query) as a &vl=en-US variant; confirmed duplicate of existing data.json entry (Jul 21, 2026 Apple TV trailer), not added as a separate entry. Same recurring near-miss pattern as LEMA-9865/LEMA-9900."
+        },
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "YouTube Data API (videos.list)",
+          "status": 200,
+          "issue": "LEMA-10013",
+          "note": "Surfaced again this run via mandated Exa Pass 1 EN query as a &vl=en-US query-string variant. Confirmed duplicate of existing data.json entry (Jul 21, 2026 Apple TV trailer); not added as a separate entry. Same recurring near-miss pattern as LEMA-9865/LEMA-9900/LEMA-10008."
         }
       ]
     },
@@ -5285,7 +5292,307 @@
           "note": "Surfaced by mandated Pass 1 Exa query; confirmed off-topic false positive, ledgered per Rule G so future runs stop re-surfacing it."
         }
       ]
+    },
+    {
+      "url": "https://ar.headtopics.com/news/mercedes-funes-el-miedo-que-le-generaba-miguel-ngel-sol-87667411",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Argentine headtopics.com piece about actress Mercedes Funes discussing her fear of actor Miguel Ángel Solá and memories of her mother. No connection to Las Azules or Women in Blue; surfaced only via the mandated Pass 1 Exa Spanish query ('Bárbara Mori entrevista Las Azules temporada 2') as a broad actress-interview match.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Cruz_Azul_(women)",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about Cruz Azul Femenil, a Mexican women's football (soccer) club. Unrelated to the TV series Las Azules; surfaced only via a Google News site-search broad query on 'Las Azules'.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_Apple_TV_original_films",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia list of Apple TV+ original FILMS (Las Azules is a TV series, not a film, and this list does not cover it). Unrelated page surfaced only via a broad '#LasAzules twitter Apple TV' query match on 'Apple TV'.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Los_%C3%81ngeles_Azules",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about Los Ángeles Azules, a Mexican cumbia band. Different 'Azules' entity, unrelated to the TV series; surfaced only via a Google News site-search broad query on 'Las Azules'.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Los_Azules_mine",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about the Los Azules copper mine in Argentina. Unrelated to the TV series; surfaced only via a Google News site-search broad query on 'Las Azules'.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Mi_Ni%C3%B1a_Mujer",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about 'Mi Niña Mujer', a 1996 song by Los Ángeles Azules (the cumbia band). Unrelated to the TV series; surfaced only via the mandated Pass 1 Exa broad-English query matching on 'Azules'.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ojos_azules_(song)",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about 'Ojos Azules', a traditional Mexican song. Unrelated to the TV series; surfaced only via a Google News site-search broad query on 'Las Azules'.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://twitter.com/AppleTV",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Bare @AppleTV account homepage (X/Twitter profile), not a specific post. Surfaced via the mandated '#LasAzules twitter Apple TV' Pass 2 query. Stripped of its live tweet stream, the page carries no fixed written content about Las Azules specifically -- same disposition as a directory/listing placeholder page under Rule F.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://twitter.com/AppleTV/status/1666105302134009856?lang=en-GB",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Confirmed via Firecrawl scrape (200): this is an AppleTV post dated 2023-06-06T15:30:33Z, text 'Smells like potential.' -- an unrelated teaser tweet predating even the Las Azules Season 1 premiere announcement window relevant to this dashboard, with no mention of Las Azules or Women in Blue anywhere in the post or top comments. Surfaced only via the mandated '#LasAzules twitter Apple TV' Pass 2 query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://www.europesays.com/es/761009/",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'The Shards' (Ryan Murphy / Bret Easton Ellis series) Season 2 speculation. Unrelated to Las Azules; surfaced only via the mandated Pass 1 Exa Spanish query as a broad Spanish-language TV-season-2 match.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://www.express.co.uk/life-style/science-technology/2246708/apple-tv-free-slow-horses",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Express.co.uk article about Apple TV+ pricing and the Slow Horses Season 6 premiere. Unrelated to Las Azules; surfaced only via the mandated Pass 1 Exa broad-English query matching on 'Apple TV'.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://www.infobae.com/teleshow/2026/09/12/griselda-siciliani-con-teleshow-cuando-tratas-de-explicar-un-espectaculo-como-boite-lo-empobreces/",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Infobae Teleshow interview with actress Griselda Siciliani about the stage show 'Boite', unrelated Argentine entertainment content. Unrelated to Las Azules; surfaced only via the mandated Pass 1 Exa Spanish query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://www.pbs.org/video/episode-2-lsyxu6/",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "PBS video page for 'The Marlow Murder Club' Season 3 Episode 2. Unrelated show; surfaced only via the mandated Pass 1 Exa broad-English query matching on 'Apple TV' adjacency in search ranking.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/@AngelesAzulesOficial/videos",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Official YouTube channel for Los Ángeles Azules, the Mexican cumbia band. Different 'Azules' entity, unrelated to the TV series; surfaced only via a YouTube Pass 2 search on 'Las Azules'.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/@LosAngelesAzulesVEVO",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T06:00:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Los Ángeles Azules VEVO channel (the cumbia band's official music-video channel). Unrelated to the TV series; surfaced only via a YouTube Pass 2 search on 'Las Azules'.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-12T04:00:00Z"
+  "lastUpdated": "2026-09-12T06:00:33Z"
 }
