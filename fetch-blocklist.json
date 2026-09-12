@@ -6111,7 +6111,107 @@
           "note": "Zolo Noticias article about a Mexican nationality-requirement reform for presidential/gubernatorial candidates; unrelated to Las Azules, surfaced only via keyword overlap on 'reforma' in Pass 2's press search."
         }
       ]
+    },
+    {
+      "url": "https://www.justwatch.com/ph/tv-show/georgie-and-mandys-first-marriage/season-2",
+      "firstSeen": "2026-09-12T22:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T22:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch (Philippines) page for \"Georgie & Mandy's First Marriage\" Season 2, an unrelated HBO Max comedy series. No mention of Las Azules or Women in Blue anywhere on the page; surfaced only via a broad Exa query match.",
+      "history": [
+        {
+          "attempt": "2026-09-12T22:05:03Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10023",
+          "note": "WebFetch succeeded; confirmed page is about a different show (Georgie & Mandy's First Marriage), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.edna.cz/ranni-show/novinky/jedna-z-nejvetsich-serii-apple-tv-konci-the-morning-show-se-vrati-s-posledni-radou/",
+      "firstSeen": "2026-09-12T22:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T22:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Czech (edna.cz) article about The Morning Show ending after Season 5 (2027), an unrelated Apple TV+ series starring Jennifer Aniston and Reese Witherspoon. No mention of Las Azules or Women in Blue anywhere on the page; surfaced only via a broad Exa query overlap on \"Apple TV\".",
+      "history": [
+        {
+          "attempt": "2026-09-12T22:05:03Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10023",
+          "note": "WebFetch succeeded; confirmed article is about The Morning Show finale, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/100064912081062/posts/reaparece-galamontes-con-nuevo-look-/1503974518442937/",
+      "firstSeen": "2026-09-12T22:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T22:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post (telenovela community page) about actress Gala Montes reappearing with a new haircut after her exit from La Casa de los Famosos Mexico; Gala Montes is not part of the Las Azules cast. No mention of Las Azules or Women in Blue anywhere in the post; surfaced only via a broad Exa query match.",
+      "history": [
+        {
+          "attempt": "2026-09-12T22:05:03Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10023",
+          "note": "WebFetch succeeded; confirmed post is about Gala Montes's new haircut, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/escandalamx/posts/gala-montes-reaparece-con-nuevo-look-/1620183256168275/",
+      "firstSeen": "2026-09-12T22:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T22:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post (Escandala MX) about actress Gala Montes reappearing with a new haircut after her exit from La Casa de los Famosos Mexico; Gala Montes is not part of the Las Azules cast. No mention of Las Azules or Women in Blue anywhere in the post; surfaced only via a broad Exa query match.",
+      "history": [
+        {
+          "attempt": "2026-09-12T22:05:03Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10023",
+          "note": "WebFetch succeeded; confirmed post is about Gala Montes's new haircut, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/Eltrendytop/posts/margaleff-ha-sufrido-muchos-accidentes-interpretando-a-plutarco-actriz-personaje/1798203388571613/",
+      "firstSeen": "2026-09-12T22:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T22:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post (Eltrendytop) about actor Ricardo Margaleff and accidents suffered by his character Plutarco in the unrelated Televisa sitcom \"Una Familia de Diez\". No mention of Las Azules or Women in Blue anywhere in the post; surfaced only via a broad Exa query match.",
+      "history": [
+        {
+          "attempt": "2026-09-12T22:05:03Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10023",
+          "note": "WebFetch succeeded; confirmed post is about an unrelated sitcom character (Plutarco), unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-12T20:05:55Z"
+  "lastUpdated": "2026-09-12T22:05:03Z"
 }
