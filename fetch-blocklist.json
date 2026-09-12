@@ -5692,7 +5692,54 @@
           "note": "WebFetch could not reach the host. Title/snippet from Exa search result unambiguously confirms this is an unrelated feature on Claudia García."
         }
       ]
+    },
+    {
+      "url": "https://cincodias.elpais.com/smartlife/smart-tv/2026-09-12/miniseries-apple-tv-descargar-viaje.html",
+      "firstSeen": "2026-09-12T10:04:20.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T10:04:20.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Exa broad-query match on \"Las Azules Women in Blue Season 2 Apple TV\". Firecrawl scrape confirmed the full body (Cinco Dias/El Pais, 'Miniseries de Apple TV muy entretenidas que puedes descargar para no aburrirte de viaje', Sep 12, 2026) is a general listicle of Apple TV miniseries to download for travel; the string 'azules' does not appear anywhere in the fetched body. Not about Las Azules at all -- Rule G.",
+      "history": [
+        {
+          "attempt": "2026-09-12T10:04:20.000Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10015",
+          "note": "WebFetch tool refused/failed on this host."
+        },
+        {
+          "attempt": "2026-09-12T10:04:20.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10015",
+          "note": "Full body fetched successfully; confirmed off-topic per Rule G, see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/reel/DdGAwDXQjhd",
+      "firstSeen": "2026-09-12T10:04:20.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T10:04:20.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Instagram reel by @bart_rosalesd, an individual/personal account, posting their own opinion review ('Las Azules Temporada 2 reseña opiniones y análisis') of Women in Blue Season 2, dated Sep 9, 2026. Individual personal account, not a publisher/outlet/editorial-brand -- Rule B relevance gate, excluded regardless of dateability.",
+      "history": [
+        {
+          "attempt": "2026-09-12T10:04:20.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10015",
+          "note": "Fetched successfully; account-type check applied per Rule B, excluded on relevance before any dateability check."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-12T08:00:00Z"
+  "lastUpdated": "2026-09-12T10:04:20.000Z"
 }
