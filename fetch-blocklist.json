@@ -2343,13 +2343,29 @@
     {
       "url": "https://www.tiktok.com/discover/la-serie-de-las-azules-tendr%C3%A1-segunda-temporada?lang=es",
       "firstSeen": "2026-09-08T20:15:00Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": "webfetch_near_empty;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-11T10:05:00Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-12T04:00:00Z",
+      "cooldownUntil": "2026-10-12T04:00:00Z",
       "permanentSkip": false,
       "skipReason": null,
-      "skipNote": "WebFetch returned only the generic TikTok tagline with no article content (near-empty body). Firecrawl scrape returned a 403 with 'we do not support this site' for this TikTok discover page. Full-chain failure, logged per step 4c. First failure for this exact URL (query-param variant of an already-ledgered TikTok discover page); not yet at the 3-failure cooldown threshold. Retry attempt on 2026-09-11T10:05:00Z (LEMA-9995): WebFetch again returned only the generic TikTok tagline, Firecrawl scrape again 403'd. failCount now 2."
+      "skipNote": "WebFetch returned only the generic TikTok tagline ('Make Your Day', no post content). Firecrawl scrape returned 403 'we do not support this site' for this TikTok discover page. Full-chain failure, failCount now 3 -- cooldown set to 30 days per step 4d.",
+      "history": [
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10012",
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content."
+        },
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10012",
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days."
+        }
+      ]
     },
     {
       "url": "https://www.tiktok.com/discover/serie-en-apple-tv-tendencia",
@@ -4138,9 +4154,9 @@
     {
       "url": "https://www.palomitacas.com/serie/ficha/p253983/temporada/1",
       "firstSeen": "2026-09-11T06:06:06Z",
-      "failCount": 1,
-      "lastStatus": 408,
-      "lastAttempt": "2026-09-11T06:06:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T04:00:00Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -4155,8 +4171,18 @@
           "status": 408,
           "issue": "LEMA-9946",
           "note": "SCRAPE_TIMEOUT: page took too long to load/render."
+        },
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10012",
+          "note": "Retry succeeded (prior WebFetch 403, Firecrawl timeout). Confirmed Rule F listing/database page, not editorial content. permanentSkip applied."
         }
-      ]
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Firecrawl scrape succeeded (prior WebFetch 403 / Firecrawl timeout on 2026-09-11 now resolved). Page is a Palomitacas season-info card: premiere date, episode count, runtime, ratings (Palomitacas/TMDB), and 'where to watch' provider list. No written editorial content about the show beyond the templated metadata. Rule F: stripping the metadata table leaves nothing written about the show."
     },
     {
       "url": "https://www.lavozdelanacion.com/espectaculos/ester-exposito-estrena-thriller-romantico-en-prime-video/",
@@ -5091,7 +5117,175 @@
           "note": "Confirmed bare announcement post (headline + link only, no commentary) by the verified 9to5mac account, dated Aug 11 2026, linking to their own already-covered article."
         }
       ]
+    },
+    {
+      "url": "https://www.betaseries.com/en/show/las-azules",
+      "firstSeen": "2026-09-12T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "BetaSeries show-tracker database entry: metadata table (country, genres, runtime, network, showrunners), cast list, episode listings, similar-shows block, plus a single templated one-line plot synopsis. No reviewer commentary or written analysis. Rule F: stripping the metadata leaves nothing written about the show beyond the boilerplate synopsis.",
+      "history": [
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10012",
+          "note": "WebFetch succeeded; confirmed Rule F database/tracker page."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/ElDiarioNY/videos/de-qu%C3%A9-trata-las-azules-ximena-sari%C3%B1ana-y-b%C3%A1rbara-mori-revelan-detalles/4043456695940669/",
+      "firstSeen": "2026-09-12T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "El Diario NY (publisher/editorial-brand account, not vendor or fan repost -- passes Rule B) video: Ximena Sariñana and Bárbara Mori discuss Las Azules and its parallel between the 1971 fight for gender equality and present-day women's issues. WebFetch returned real content but no publish date field. Firecrawl scrape returned the standard blanket 'we do not support this site' refusal for facebook.com -- documented exhaustion of the method per Rule A. No date recoverable by either method. Skipped as editorial_undateable, reviewable=true for a future manual date lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10012",
+          "note": "Real content returned (Sariñana/Mori interview clip) but no publish date present in fetched body."
+        },
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10012",
+          "note": "Blanket 'we do not support this site' refusal for facebook.com. Documented exhaustion of method per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://music.apple.com/bm/artist/conjunto-agua-azul/350778846",
+      "firstSeen": "2026-09-12T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Apple Music artist page for Conjunto Agua Azul, a different Mexican música regional group; unrelated to the TV series, surfaced only via the 'Azules' keyword match on the mandated Pass 1 Exa broad-English query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10012",
+          "note": "Surfaced by mandated Pass 1 Exa query; confirmed off-topic false positive, ledgered per Rule G so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://collider.com/silo-season-4-apple-tv-book-juliette-lukas/",
+      "firstSeen": "2026-09-12T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Collider article about 'Silo' Season 4 on Apple TV+ (a different Apple TV+ series); unrelated to Las Azules, surfaced only via the shared 'Apple TV' keyword on the mandated Pass 1 Exa broad-English query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10012",
+          "note": "Surfaced by mandated Pass 1 Exa query; confirmed off-topic false positive, ledgered per Rule G so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://music.apple.com/bm/concerts/ce.c7feaa18-5449-41fd-8be5-8c15d4004309",
+      "firstSeen": "2026-09-12T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Apple Music concert-listing page for Conjunto Agua Azul at Rancho Los Lagos; unrelated music-group tour date, surfaced only via the 'Azules' keyword match on the mandated Pass 1 Exa broad-English query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10012",
+          "note": "Surfaced by mandated Pass 1 Exa query; confirmed off-topic false positive, ledgered per Rule G so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://www.milenio.com/espectaculos/barbara-torres-llega-a-guadalajara-con-obra-de-teatro",
+      "firstSeen": "2026-09-12T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Milenio article about actress and comedian Bárbara Torres (not Bárbara Mori) touring a stage play in Guadalajara; unrelated to Las Azules, surfaced only via the 'Bárbara' keyword match on the mandated Pass 1 Exa Spanish query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10012",
+          "note": "Surfaced by mandated Pass 1 Exa query; confirmed off-topic false positive, ledgered per Rule G so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eldebate.com/cine-tv-series/20260912/motivo-no-rodo-capitulo-20-serie-verano-azul_457835.html",
+      "firstSeen": "2026-09-12T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Debate article about why episode 20 of 'Verano Azul', a different (classic Spanish) TV series, was never filmed; unrelated to Las Azules, surfaced only via the 'Azul' keyword match on the mandated Pass 1 Exa Spanish query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10012",
+          "note": "Surfaced by mandated Pass 1 Exa query; confirmed off-topic false positive, ledgered per Rule G so future runs stop re-surfacing it."
+        }
+      ]
+    },
+    {
+      "url": "https://esradio.libertaddigital.com/una-hora-contigo/2026-09-12/fernando-gonzalez-molina-de-a-tres-metros-sobre-el-cielo-a-cronos-7458647/",
+      "firstSeen": "2026-09-12T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "esRadio interview with director Fernando González Molina about his film 'Cronos' and earlier work 'A tres metros sobre el cielo'; unrelated to Las Azules or its creator Fernando Rovzar, surfaced only via the shared first-name/director-interview pattern on the mandated Pass 1 Exa Spanish query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "Exa search (Pass 1)",
+          "status": null,
+          "issue": "LEMA-10012",
+          "note": "Surfaced by mandated Pass 1 Exa query; confirmed off-topic false positive, ledgered per Rule G so future runs stop re-surfacing it."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-12T02:08:58Z"
+  "lastUpdated": "2026-09-12T04:00:00Z"
 }
