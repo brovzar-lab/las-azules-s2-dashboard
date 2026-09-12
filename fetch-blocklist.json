@@ -5592,7 +5592,107 @@
           "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
         }
       ]
+    },
+    {
+      "url": "https://www.nbclosangeles.com/news/local/los-angeles-azules-to-kick-off-hispanic-heritage-month-celebrations-in-los-angeles/3941064/",
+      "firstSeen": "2026-09-12T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T08:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About the cumbia band Los Ángeles Azules kicking off Hispanic Heritage Month celebrations in Los Angeles. No mention of the Las Azules/Women in Blue TV series anywhere in the article; surfaced only as a broad-query match on \"Azules\".",
+      "history": [
+        {
+          "attempt": "2026-09-12T08:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10014",
+          "note": "WebFetch succeeded; confirmed article is about the band Los Ángeles Azules, unrelated to the TV series."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mondosonoro.com/entrevistas/lambchop-entrevista/",
+      "firstSeen": "2026-09-12T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-12T08:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Interview with the band Lambchop ('Lambchop, entrevista en Mondo Sonoro'). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on the Spanish word \"entrevista\".",
+      "history": [
+        {
+          "attempt": "2026-09-12T08:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10014",
+          "note": "WebFetch blocked (403). Title/snippet from Exa search result (\"Lambchop, entrevista en Mondo Sonoro (2026)\", byline Don Disturbios) unambiguously confirms this is a music interview unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://estacionk2.com/nota/181336/se-estreno-amor-animal-la-serie-que-cuenta-con-el-necochense-tomi-raimon/",
+      "firstSeen": "2026-09-12T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-12T08:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About the premiere of the TV series 'Amor Animal' featuring actor Tomi Raimon. A different show entirely; no mention of Las Azules. Surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-12T08:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10014",
+          "note": "WebFetch blocked (403). Title/snippet from Exa search result unambiguously confirms this is coverage of a different, unrelated series ('Amor Animal')."
+        }
+      ]
+    },
+    {
+      "url": "https://www.larazon.es/television/series/jennifer-connelly-felicidad-esta-necesariamente-otra-vida-posible-sino-que-hacemos-aquella-que-hemos-elegido_202609126aa2c600250a3a7556f579e0.html",
+      "firstSeen": "2026-09-12T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T08:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Interview with actor Jennifer Connelly about happiness and life choices. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on Spanish-language TV/series interview terms.",
+      "history": [
+        {
+          "attempt": "2026-09-12T08:00:00Z",
+          "method": "WebFetch",
+          "status": "fetch_error",
+          "issue": "LEMA-10014",
+          "note": "WebFetch could not reach the host. Title/snippet from Exa search result unambiguously confirms this is an unrelated Jennifer Connelly interview."
+        }
+      ]
+    },
+    {
+      "url": "https://www.elpais.com.uy/sabado-show/la-vuelta-al-ruedo-de-claudia-garcia-nuevo-programa-vivir-mas-despacio-lejos-de-la-tv-y-un-deseo-pendiente",
+      "firstSeen": "2026-09-12T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T08:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Feature on TV host Claudia García's new program and stepping away from TV. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on Spanish-language TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-12T08:00:00Z",
+          "method": "WebFetch",
+          "status": "fetch_error",
+          "issue": "LEMA-10014",
+          "note": "WebFetch could not reach the host. Title/snippet from Exa search result unambiguously confirms this is an unrelated feature on Claudia García."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-12T06:00:33Z"
+  "lastUpdated": "2026-09-12T08:00:00Z"
 }
