@@ -5759,7 +5759,99 @@
           "note": "WebFetch returned 403; Firecrawl scrape succeeded and confirmed the article does not mention Las Azules/Women in Blue at all."
         }
       ]
+    },
+    {
+      "url": "https://www.larazon.es/videojuegos/series/apple-tv-tiene-reemplazo-perfecto-dark-serie-es-pura-fisica-cuantica_202609126aa3e4b9250a3a7556f69b6d.html",
+      "firstSeen": "2026-09-12T16:05:08Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T16:05:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article ('Apple TV tiene el reemplazo perfecto para Dark...') is entirely about Apple TV+'s 'Materia Oscura' (Dark Matter) Season 2, a different show. Surfaced only via broad Exa 'Apple TV' query match on shared platform keyword; does not mention Las Azules or Women in Blue. Confirmed via Firecrawl scrape body (byline Víctor García, published 2026-09-12T17:00 Spain time). See LEMA-10020.",
+      "history": [
+        {
+          "attempt": "2026-09-12T16:05:08Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10020",
+          "note": "WebFetch could not fetch host; Firecrawl scrape succeeded and confirmed article is off-topic (about Dark Matter S2, not Las Azules)."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/lucesazules_net/status/2028590089144574394",
+      "firstSeen": "2026-09-12T16:05:08Z",
+      "failCount": 1,
+      "lastStatus": 402,
+      "lastAttempt": "2026-09-12T16:05:08Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-12T16:05:08Z",
+          "method": "WebFetch",
+          "status": 402,
+          "issue": "LEMA-10020",
+          "note": "WebFetch returned 402 Payment Required on x.com status URL."
+        },
+        {
+          "attempt": "2026-09-12T16:05:08Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10020",
+          "note": "Firecrawl returned 200 but body was empty ('No top comments were returned', blank Post section) -- near-empty body, treated as full-chain failure. failCount now 1."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/lucesazules_net/status/2029213735479324758",
+      "firstSeen": "2026-09-12T16:05:08Z",
+      "failCount": 1,
+      "lastStatus": 402,
+      "lastAttempt": "2026-09-12T16:05:08Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-12T16:05:08Z",
+          "method": "WebFetch",
+          "status": 402,
+          "issue": "LEMA-10020",
+          "note": "WebFetch returned 402 Payment Required on x.com status URL."
+        },
+        {
+          "attempt": "2026-09-12T16:05:08Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10020",
+          "note": "Firecrawl returned 200 but body was empty ('No top comments were returned', blank Post section) -- near-empty body, treated as full-chain failure. failCount now 1."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/lucesazules_net/status/2032098077427794095",
+      "firstSeen": "2026-09-12T16:05:08Z",
+      "failCount": 1,
+      "lastStatus": 402,
+      "lastAttempt": "2026-09-12T16:05:08Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-12T16:05:08Z",
+          "method": "WebFetch",
+          "status": 402,
+          "issue": "LEMA-10020",
+          "note": "WebFetch returned 402 Payment Required on x.com status URL."
+        },
+        {
+          "attempt": "2026-09-12T16:05:08Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10020",
+          "note": "Firecrawl returned 200 but body was empty ('No top comments were returned', blank Post section) -- near-empty body, treated as full-chain failure. failCount now 1."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-12T14:00:56Z"
+  "lastUpdated": "2026-09-12T16:05:08Z"
 }
