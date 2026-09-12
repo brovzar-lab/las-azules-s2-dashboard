@@ -5739,7 +5739,27 @@
           "note": "Fetched successfully; account-type check applied per Rule B, excluded on relevance before any dateability check."
         }
       ]
+    },
+    {
+      "url": "https://www.imdb.com/news/ni66012924/",
+      "firstSeen": "2026-09-12T14:00:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T14:00:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "IMDb syndicated republish of ActualTV.es listicle '5 estrenos en streaming del 14 al 20 de septiembre: de Slow Horses a Neagley' (byline Maria Lopez, 2026-09-12). Covers Slow Horses (Apple TV), a Reacher spinoff (Prime Video), and a Ryan Murphy Netflix title. No mention of Las Azules or Women in Blue anywhere in the fetched body; surfaced only as a broad-query match on 'Apple TV'.",
+      "history": [
+        {
+          "attempt": "2026-09-12T14:00:56Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10019",
+          "note": "WebFetch returned 403; Firecrawl scrape succeeded and confirmed the article does not mention Las Azules/Women in Blue at all."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-12T10:04:20.000Z"
+  "lastUpdated": "2026-09-12T14:00:56Z"
 }
