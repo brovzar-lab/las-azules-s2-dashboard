@@ -5871,7 +5871,247 @@
           "issue": "LEMA-10021"
         }
       ]
+    },
+    {
+      "url": "https://www.facebook.com/updates4cinema/posts/inde-navarrette-says-shes-pitching-her-own-projects-and-hopes-to-make-her-direct/1382159180757816/",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post about actress Inde Navarrette discussing her own pitched projects and directing ambitions; unrelated to the TV series Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's English query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "Exa search (Pass 1, EN)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "Facebook post about actress Inde Navarrette discussing her own pitched projects and directing ambitions; unrelated to the TV series Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's English query."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mactech.com/firehose/",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "MacTech.com's generic tech-news 'Firehose' aggregator/index page, not an article about Las Azules or any TV coverage; surfaced only via a broad-query match on Pass 1 Exa's English query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "Exa search (Pass 1, EN)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "MacTech.com's generic tech-news 'Firehose' aggregator/index page, not an article about Las Azules or any TV coverage; surfaced only via a broad-query match on Pass 1 Exa's English query."
+        }
+      ]
+    },
+    {
+      "url": "https://movieweb.com/last-seen-apple-stream-crime-thriller-sept-2026/",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "MovieWeb article about 'Last Seen', an unrelated Apple TV crime thriller; not about Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's English query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "Exa search (Pass 1, EN)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "MovieWeb article about 'Last Seen', an unrelated Apple TV crime thriller; not about Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's English query."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mensjournal.com/news/pluribus-season-2-everything-we-know-so-far",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Men's Journal article about 'Pluribus' Season 2, an unrelated Apple TV+ series; not about Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's English query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "Exa search (Pass 1, EN)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "Men's Journal article about 'Pluribus' Season 2, an unrelated Apple TV+ series; not about Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's English query."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/RobandoShow/posts/-ver%C3%B3nica-castro-rega%C3%B1%C3%B3-al-g%C3%BCero-por-hablar-de-su-salud-y-%C3%A9l-cont%C3%B3-toda-la-histo/1667538278271628/",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post about Mexican TV personality Verónica Castro scolding 'El Güero' over health disclosures; unrelated celebrity-gossip content, not about Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "Exa search (Pass 1, ES)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "Facebook post about Mexican TV personality Verónica Castro scolding 'El Güero' over health disclosures; unrelated celebrity-gossip content, not about Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/AestheticArt13/posts/blue-ivy-cada-vez-se-parece-m%C3%A1s-a-su-madre-beyonc%C3%A9-/1131425479455181/",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post comparing Blue Ivy Carter's appearance to her mother Beyoncé; entirely unrelated to Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "Exa search (Pass 1, ES)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "Facebook post comparing Blue Ivy Carter's appearance to her mother Beyoncé; entirely unrelated to Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query."
+        }
+      ]
+    },
+    {
+      "url": "https://www.antena3.com/series/a-la-deriva/asi-preparo-paula-echevarria-deslumbrar-premier-festval-vitoria_202609126aa590557486a40f2c9bcb57.html",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Antena 3 article about actress Paula Echevarría preparing for the 'A la deriva' premiere at FesTVal Vitoria; unrelated Spanish series, not Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "Exa search (Pass 1, ES)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "Antena 3 article about actress Paula Echevarría preparing for the 'A la deriva' premiere at FesTVal Vitoria; unrelated Spanish series, not Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query."
+        }
+      ]
+    },
+    {
+      "url": "https://www.reforma.com/tendran-los-angeles-azules-su-propia-plaza-en-los-angeles/ar3256892",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Reforma article about the band Los Ángeles Azules getting a plaza named after them in Los Angeles; unrelated music group, not the TV series. Surfaced only via keyword overlap on 'Azules' in Pass 2's Reforma/El Universal/El País search.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "Reforma article about the band Los Ángeles Azules getting a plaza named after them in Los Angeles; unrelated music group, not the TV series. Surfaced only via keyword overlap on 'Azules' in Pass 2's Reforma/El Universal/El País search."
+        }
+      ]
+    },
+    {
+      "url": "https://www.cronista.com/economia-politica/reforma-electoral-el-gobierno-activa-el-debate-en-el-senado-sin-acuerdo-para-eliminar-las-paso/",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Cronista article about Argentine electoral reform debate in the Senate; unrelated to Las Azules, surfaced only via keyword overlap on 'Reforma' in Pass 2's press search.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "El Cronista article about Argentine electoral reform debate in the Senate; unrelated to Las Azules, surfaced only via keyword overlap on 'Reforma' in Pass 2's press search."
+        }
+      ]
+    },
+    {
+      "url": "https://www.periodicocentral.mx/puebla/anuncian-canje-de-placas-azules-en-puebla-y-rebaja-en-fotomultas-a-partir-de-septiembre-2026/510397/",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Periódico Central article about blue license plate ('placas azules') exchange and photo-fine discounts in Puebla; unrelated to Las Azules, surfaced only via keyword overlap on 'azules' in Pass 2's press search.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "Periódico Central article about blue license plate ('placas azules') exchange and photo-fine discounts in Puebla; unrelated to Las Azules, surfaced only via keyword overlap on 'azules' in Pass 2's press search."
+        }
+      ]
+    },
+    {
+      "url": "https://www.infobae.com/economia/2026/08/19/de-cuanto-sera-la-auh-de-anses-en-septiembre-2026/",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Infobae article about Argentina's AUH welfare payment amount for September 2026; entirely unrelated to Las Azules, surfaced only via Pass 2's general press search.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "Infobae article about Argentina's AUH welfare payment amount for September 2026; entirely unrelated to Las Azules, surfaced only via Pass 2's general press search."
+        }
+      ]
+    },
+    {
+      "url": "https://www.zolonoticias.com/2026/09/09/aprueban-reforma-sobre-nacionalidad-unica-para-candidatos-a-presidencia-y-gubernaturas/",
+      "firstSeen": "2026-09-12T20:05:55Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-12T20:05:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Zolo Noticias article about a Mexican nationality-requirement reform for presidential/gubernatorial candidates; unrelated to Las Azules, surfaced only via keyword overlap on 'reforma' in Pass 2's press search.",
+      "history": [
+        {
+          "attempt": "2026-09-12T20:05:55Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10022",
+          "note": "Zolo Noticias article about a Mexican nationality-requirement reform for presidential/gubernatorial candidates; unrelated to Las Azules, surfaced only via keyword overlap on 'reforma' in Pass 2's press search."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-12T18:00:00Z"
+  "lastUpdated": "2026-09-12T20:05:55Z"
 }
