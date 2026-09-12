@@ -4849,7 +4849,162 @@
           "note": "WebFetch succeeded; confirmed post is an unrelated birthday tribute to Sandra Vergara."
         }
       ]
+    },
+    {
+      "url": "https://www.europesays.com/ie/684382/",
+      "firstSeen": "2026-09-12T00:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T00:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "\"8 New TV Shows to Watch This Weekend on Netflix, HBO Max, and Apple TV (September 11-13)\" roundup on EuropeSays. Covers The Paper, Krypto Saves the Day, and other unrelated titles; confirmed via Firecrawl scrape that the full body contains zero mentions of \"Las Azules\" or \"Women in Blue\". Surfaced only as a broad Exa match on generic Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-12T00:01:09.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10010",
+          "note": "Returned body; no mention of the show."
+        },
+        {
+          "attempt": "2026-09-12T00:01:09.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10010",
+          "note": "Confirmed full article text (6398 chars) contains no reference to Las Azules/Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/RadioFormulaMX/posts/%EF%B8%8F-hugo-mejuto-asegura-que-tuvo-un-romance-con-sergio-bas%C3%A1%C3%B1ez-revela-detalles-de-/1244007531521536/",
+      "firstSeen": "2026-09-12T00:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T00:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Radio Fórmula MX post about Hugo Mejuto claiming a past romance with telenovela actor Sergio Basáñez. No mention of Las Azules or Women in Blue anywhere in the post. Surfaced only as a broad-query match on generic Mexican-entertainment terms.",
+      "history": [
+        {
+          "attempt": "2026-09-12T00:01:09.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10010",
+          "note": "Confirmed post is about an unrelated celebrity story."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/escandalamx/posts/ivan-arana-nos-cont%C3%B3-c%C3%B3mo-fue-meterse-en-la-piel-del-gran-malo-de-tierra-de-amor/1619442916242309/",
+      "firstSeen": "2026-09-12T00:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T00:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Escándala MX post about actor Iván Arana discussing his antagonist role in the unrelated telenovela \"Tierra de Amor y Coraje\". No mention of Las Azules or Women in Blue anywhere in the post. Surfaced only as a broad-query match on generic Mexican-entertainment terms.",
+      "history": [
+        {
+          "attempt": "2026-09-12T00:01:09.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10010",
+          "note": "Confirmed post is about an unrelated telenovela."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/MatildeObregonOficial/posts/pero-qu%C3%A9-pas%C3%B3-con-gala-montes-en-qu%C3%A9-momento-todo-cambi%C3%B3-checa-la-entrevista-com/1855619432477579/",
+      "firstSeen": "2026-09-12T00:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T00:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Matilde Obregón post revisiting a past interview with actress Gala Montes. No mention of Las Azules or Women in Blue anywhere in the post. Surfaced only as a broad-query match on generic Mexican-entertainment terms.",
+      "history": [
+        {
+          "attempt": "2026-09-12T00:01:09.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10010",
+          "note": "Confirmed post is about an unrelated personality/interview."
+        }
+      ]
+    },
+    {
+      "url": "https://ofuxico.com.br/novelas/avenida-brasil/eliane-giardini-sobre-avenida-brasil-2-era-uma-vontade-nossa/",
+      "firstSeen": "2026-09-12T00:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T00:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "OFuxico (Brazil) article about actress Eliane Giardini confirming her return for the unrelated Brazilian telenovela sequel \"Avenida Brasil 2\". No mention of Las Azules or Women in Blue anywhere in the article. Surfaced only as a broad-query match on generic Latin-American telenovela terms.",
+      "history": [
+        {
+          "attempt": "2026-09-12T00:01:09.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10010",
+          "note": "Confirmed article is about an unrelated Brazilian telenovela."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/jp/%E3%83%86%E3%83%AC%E3%83%93%E7%95%AA%E7%B5%84/las-azules/%E3%82%B7%E3%83%BC%E3%82%BA%E3%83%B3-1",
+      "firstSeen": "2026-09-12T00:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T00:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "JustWatch streaming-availability page (Japan locale) for Las Azules Season 1. Same JustWatch listing-page pattern as the other JustWatch entries already in this ledger (US/MX/ID/CL/ZA/IT locales): database-sourced synopsis, cast/crew grid, and ratings, no written editorial content. No publish date anywhere on the page; the only timestamp present is a data-verification stamp (\"2026年9月11日の9:19:32に\"), not a publication date. Firecrawl scrape attempted per Rule A and confirmed the same listing-page content with no date field.",
+      "history": [
+        {
+          "attempt": "2026-09-12T00:01:09.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10010",
+          "note": "Returned listing content; no publish date found."
+        },
+        {
+          "attempt": "2026-09-12T00:01:09.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10010",
+          "note": "Confirmed streaming-availability listing with database-sourced synopsis; no publish date field anywhere in the scraped body."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=47n_AAUShxw",
+      "firstSeen": "2026-09-12T00:01:09.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T00:01:09.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "\"Las Azules capítulo 2 ... Temporada 1\" uploaded by channel Telenovelas Plus (@telenovelasplusoff), published 2024-09-14. A fan narration/recap of a Season 1 episode, not an outlet, official show account, or reviewer -- a repost/recap channel repackaging show content, per Rule B. Also Season 1 era content, included in scope per Rule C but excluded here on the relevance gate, not on date-floor grounds.",
+      "history": [
+        {
+          "attempt": "2026-09-12T00:01:09.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10010",
+          "note": "Confirmed uploader is a telenovela recap/repost channel narrating a Season 1 episode; not editorial coverage."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-11T22:04:43Z"
+  "lastUpdated": "2026-09-12T00:01:09.000Z"
 }
