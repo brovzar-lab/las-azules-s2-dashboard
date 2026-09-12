@@ -5851,7 +5851,27 @@
           "note": "Firecrawl returned 200 but body was empty ('No top comments were returned', blank Post section) -- near-empty body, treated as full-chain failure. failCount now 1."
         }
       ]
+    },
+    {
+      "url": "https://showsnob.com/5-hit-tv-shows-2026-that-still-havent-been-renewed",
+      "firstSeen": "2026-09-12T18:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T18:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by the Pass 1 Exa broad EN query (neural/semantic match on \"Season 2\" + renewal-adjacent phrasing), but the article is about five entirely different shows awaiting renewal: Bait (Prime Video), Man on Fire (Netflix), Maximum Pleasure Guaranteed (Apple TV), Star City (Apple TV), and Lanterns (HBO). It does not mention Las Azules or Women in Blue anywhere in the body (confirmed via WebFetch, 200, full body reviewed). Published Sep 12, 2026. Ledgered per Rule G (LEMA-9927) so future runs stop re-evaluating this URL.",
+      "history": [
+        {
+          "attempt": "2026-09-12T18:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Body fetched successfully; confirmed no mention of Las Azules / Women in Blue. Off-topic false positive from broad Exa query, not a coverage candidate.",
+          "issue": "LEMA-10021"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-12T16:05:08Z"
+  "lastUpdated": "2026-09-12T18:00:00Z"
 }
