@@ -5004,7 +5004,94 @@
           "note": "Confirmed uploader is a telenovela recap/repost channel narrating a Season 1 episode; not editorial coverage."
         }
       ]
+    },
+    {
+      "url": "https://www.hollywoodreporter.com/lists/2026-tv-premiere-dates-calendar/",
+      "firstSeen": "2026-09-12T02:08:58Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T02:08:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Surfaced via Pass 2 trade-press search. This is Hollywood Reporter's giant 2026 TV premiere-date calendar listicle covering hundreds of unrelated shows. \"Women in Blue (Apple TV)\" appears only as a single bare date entry under \"Wednesday, Aug. 12\" with no written commentary about the show. Confirmed via Firecrawl scrape (WebFetch hit a 402 paywall redirect to tollbit.hollywoodreporter.com first). Stripping the schedule grid leaves nothing written about the show. Rule F.",
+      "history": [
+        {
+          "attempt": "2026-09-12T02:08:58Z",
+          "method": "WebFetch",
+          "status": 402,
+          "issue": "LEMA-10011",
+          "note": "WebFetch redirected to tollbit.hollywoodreporter.com paywall wrapper, returned 402 Payment Required."
+        },
+        {
+          "attempt": "2026-09-12T02:08:58Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10011",
+          "note": "Firecrawl scrape succeeded. Confirmed \"Women in Blue (Apple TV)\" is a single bare date-entry line in a giant multi-show premiere calendar, no written editorial content about the show. Rule F listing/database gate."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eluniversal.com.mx/nacion/publican-reforma-judicial-en-el-diario-oficial-a-horas-del-grito-del-15-de-septiembre/",
+      "firstSeen": "2026-09-12T02:08:58Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T02:08:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 2 broad El Universal/Reforma/El Pais search. Page is about AMLO's judicial reform being published in the Diario Oficial ahead of the Sept 15 Grito ceremony -- Mexican national politics, nothing to do with the TV show Las Azules or Women in Blue. Matched only on broad outlet/query overlap. Rule G off-topic false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-12T02:08:58Z",
+          "method": "title/snippet review",
+          "status": 200,
+          "issue": "LEMA-10011",
+          "note": "Headline and topic confirm this is about judicial reform publication, unrelated to Las Azules. No fetch needed to confirm off-topic status."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eluniversal.com.mx/metropoli/de-iztapalapa-para-el-mundo-anuncian-concierto-de-los-angeles-azules-en-la-utopia-meyehualco/",
+      "firstSeen": "2026-09-12T02:08:58Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T02:08:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 2 broad El Universal/Reforma/El Pais search. Page announces a concert by the cumbia band Los Angeles Azules at the Utopia Meyehualco venue -- an unrelated musical group, not the TV show Las Azules (Women in Blue). Matched only on the word \"azules\". Rule G off-topic false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-12T02:08:58Z",
+          "method": "title/snippet review",
+          "status": 200,
+          "issue": "LEMA-10011",
+          "note": "Headline confirms this is about the band Los Angeles Azules' concert, unrelated to the TV show. No fetch needed to confirm off-topic status."
+        }
+      ]
+    },
+    {
+      "url": "https://www.threads.com/@9to5mac/post/Db7BiblmlWT/women-in-blues-second-season-premieres-on-apple-tv-utm-medium-threads/",
+      "firstSeen": "2026-09-12T02:08:58Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-12T02:08:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Surfaced via Perplexity Pass-2 supplementary check. Bare Threads repost (dated Aug 11, 2026) by the verified 9to5mac account: just a headline and a link, no independent editorial text. It links to 9to5mac's own article, which is already present in data.json (https://9to5mac.com/2026/08/11/women-in-blues-second-season-premieres-on-apple-tv/, dated Aug 11, 2026). Adding this bare social cross-post of an already-covered story would be a duplicate-story entry, not new coverage, the same underlying logic as the wire-syndication editorial_redundant_syndication examples already in this ledger (mechanism differs -- same-outlet self-repost rather than third-party wire pickup -- but the \"we already have this story\" test is identical).",
+      "history": [
+        {
+          "attempt": "2026-09-12T02:08:58Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10011",
+          "note": "Confirmed bare announcement post (headline + link only, no commentary) by the verified 9to5mac account, dated Aug 11 2026, linking to their own already-covered article."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-12T00:01:09.000Z"
+  "lastUpdated": "2026-09-12T02:08:58Z"
 }
