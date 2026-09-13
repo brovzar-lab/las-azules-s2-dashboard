@@ -1386,9 +1386,9 @@
     {
       "url": "https://www.aol.com/entertainment/apple-tv-spanish-language-debut-131500419.html",
       "firstSeen": "2026-09-05T14:07:26Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-05T14:07:26Z",
+      "lastAttempt": "2026-09-13T04:15:00Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "history": [
@@ -1405,6 +1405,20 @@
           "status": 404,
           "issue": "LEMA-9749",
           "note": "Firecrawl also returned page-not-found content; full-chain failure."
+        },
+        {
+          "attempt": "2026-09-13T04:15:00Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-10026",
+          "note": "404 on WebFetch, one-retry window (expired-cooldown-retry) per step 4a."
+        },
+        {
+          "attempt": "2026-09-13T04:15:00Z",
+          "method": "Firecrawl scrape",
+          "status": 404,
+          "issue": "LEMA-10026",
+          "note": "Firecrawl also returned AOL generic page-not-found content; full-chain failure again. failCount incremented to 2 (not yet at 3, no cooldown set)."
         }
       ]
     },
@@ -6253,5 +6267,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-13T02:04:40Z"
+  "lastUpdated": "2026-09-13T04:15:00Z"
 }
