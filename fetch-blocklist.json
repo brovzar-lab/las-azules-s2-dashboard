@@ -6503,10 +6503,10 @@
     {
       "url": "https://www.reddit.com/r/tvPlus/comments/1ega6o7/women_in_blue_las_azules_season_1_episode_1/",
       "firstSeen": "2026-09-13T10:05:23Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-13T12:01:22Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-13T14:01:02Z",
+      "cooldownUntil": "2026-10-13T14:01:02Z",
       "permanentSkip": false,
       "history": [
         {
@@ -6522,6 +6522,13 @@
           "status": 403,
           "issue": "LEMA-10033",
           "note": "Retry after prior full-chain failure (LEMA-10032). WebFetch again reports it cannot fetch reddit.com; Firecrawl scrape again returned 403 'we do not support this site' (documented blanket refusal for this domain). failCount now 2 of 3; still not on cooldown."
+        },
+        {
+          "attempt": "2026-09-13T14:01:02Z",
+          "method": "WebFetch+Firecrawl",
+          "status": 403,
+          "issue": "LEMA-10037",
+          "note": "Third consecutive full-chain failure. WebFetch cannot fetch reddit.com; Firecrawl scrape again returned 403 'we do not support this site' (same documented blanket refusal for this domain). failCount reached 3 of 3 -- cooldownUntil set to 30 days out (2026-10-13)."
         }
       ]
     },
@@ -6579,7 +6586,147 @@
       "permanentSkip": true,
       "skipReason": "editorial_personal_repost",
       "skipNote": "Surfaced via Pass 2 web sweep. Personal Instagram account of cast member Amorita Rasgado (plays Gabina), posting her own promo for episode 5 ('Manana estrenamos el episodio 5 de Las Azules...'). Individual crew-personal account, not a publisher/outlet -- Rule B relevance gate, excluded regardless of dateability. Not attempted for fetch."
+    },
+    {
+      "url": "https://www.filmvandaag.nl/video-on-demand/apple-tv/09-2026",
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T14:01:02Z",
+      "firstSeen": "2026-09-13T14:01:02Z",
+      "history": [
+        {
+          "attempt": "2026-09-13T14:01:02Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10037",
+          "note": "Dutch September 2026 Apple TV VOD calendar/grid page. Las Azules appears only as a listing item (title, IMDb rating, genre tags, episode air dates); no written editorial content about the show. Page footer shows a last-update timestamp (13 sep 2026 04:21), not an article publish date. Rule F: stripping the metadata/grid leaves nothing written about the show. permanentSkip, reviewable=false."
+        }
+      ]
+    },
+    {
+      "url": "https://www.vanitatis.elconfidencial.com/famosos/2026-09-13/ana-torroja-habla-duros-inicios-mecano-cantante-espana-musica-pop-confesion_4422482/",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-13T14:01:02Z",
+      "firstSeen": "2026-09-13T14:01:02Z",
+      "history": [
+        {
+          "attempt": "2026-09-13T14:01:02Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-10037",
+          "note": "Vanitatis (El Confidencial) piece about singer Ana Torroja reflecting on her early years in the band Mecano. No connection to Las Azules / Women in Blue; surfaced only via Exa Pass 1 ES broad-query match on 'entrevista'/'temporada'. Rule G, reviewable=false."
+        }
+      ]
+    },
+    {
+      "url": "https://es.headtopics.com/news/aniversario-de-cuentame-c-mo-pas-25-actores-que-87695567",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-13T14:01:02Z",
+      "firstSeen": "2026-09-13T14:01:02Z",
+      "history": [
+        {
+          "attempt": "2026-09-13T14:01:02Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-10037",
+          "note": "HeadTopics ES piece about the anniversary of the unrelated Mexican TV series 'Cuentame como paso' and its cast. No connection to Las Azules; surfaced only via Exa Pass 1 ES broad-query match. Rule G, reviewable=false."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/Las13azules",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-13T14:01:02Z",
+      "firstSeen": "2026-09-13T14:01:02Z",
+      "history": [
+        {
+          "attempt": "2026-09-13T14:01:02Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-10037",
+          "note": "X account for 'Unami Futsalfem' (a women's futsal team), handle contains 'azules'. No connection to Las Azules / Women in Blue; surfaced only via Pass 2 #LasAzules broad-query match. Rule G, reviewable=false."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/angelesazulesmx?lang=en",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-13T14:01:02Z",
+      "firstSeen": "2026-09-13T14:01:02Z",
+      "history": [
+        {
+          "attempt": "2026-09-13T14:01:02Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-10037",
+          "note": "Official X account for musical group Los Angeles Azules, unrelated to the TV show. Same off-topic 'Azules' band confusion already ledgered for losangelesazules.com.mx, facebook.com/angelesazulesmx, and the Wikipedia/Hoodline/JustWatch band entries. Rule G, reviewable=false."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ptazeta",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T14:01:02Z",
+      "firstSeen": "2026-09-13T14:01:02Z",
+      "history": [
+        {
+          "attempt": "2026-09-13T14:01:02Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10037",
+          "note": "Wikipedia article about Ptazeta, a Spanish rapper (real name Zuleima del Pino Gonzalez). No connection to Las Azules; surfaced only via Pass 2 #LasAzules broad-query match. Rule G, reviewable=false."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Polvos_Azules",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T14:01:02Z",
+      "firstSeen": "2026-09-13T14:01:02Z",
+      "history": [
+        {
+          "attempt": "2026-09-13T14:01:02Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10037",
+          "note": "Wikipedia article about Polvos Azules, a shopping centre in Lima, Peru. No connection to Las Azules; surfaced only via Pass 2 #LasAzules broad-query match. Rule G, reviewable=false."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-13T12:01:22Z"
+  "lastUpdated": "2026-09-13T14:01:02Z"
 }
