@@ -905,10 +905,19 @@
     {
       "url": "https://www.dailydot.com/pop-culture/women-in-blue-interview",
       "firstSeen": "2026-09-04T08:06:33Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-04T08:06:33Z",
-      "cooldownUntil": null
+      "lastAttempt": "2026-09-13T12:01:22Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-13T12:01:22Z",
+          "method": "WebFetch+Firecrawl",
+          "status": 404,
+          "issue": "LEMA-10033",
+          "note": "Retry after prior 404 (firstSeen 2026-09-04). Both WebFetch and Firecrawl scrape confirm the page no longer exists (Firecrawl returned the Daily Dot's own 404 template). failCount now 2 of 3; still not on cooldown."
+        }
+      ]
     },
     {
       "url": "https://www.tiktok.com/discover/final-explicado-las-azules-serie",
@@ -6494,9 +6503,9 @@
     {
       "url": "https://www.reddit.com/r/tvPlus/comments/1ega6o7/women_in_blue_las_azules_season_1_episode_1/",
       "firstSeen": "2026-09-13T10:05:23Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-13T10:05:23Z",
+      "lastAttempt": "2026-09-13T12:01:22Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "history": [
@@ -6506,9 +6515,71 @@
           "status": 403,
           "issue": "LEMA-10032",
           "note": "WebFetch could not access reddit.com (tool reports it cannot fetch this domain). Firecrawl scrape fallback returned 403: 'we do not support this site.' Full fallback-chain failure; not added to data.json this run."
+        },
+        {
+          "attempt": "2026-09-13T12:01:22Z",
+          "method": "WebFetch+Firecrawl",
+          "status": 403,
+          "issue": "LEMA-10033",
+          "note": "Retry after prior full-chain failure (LEMA-10032). WebFetch again reports it cannot fetch reddit.com; Firecrawl scrape again returned 403 'we do not support this site' (documented blanket refusal for this domain). failCount now 2 of 3; still not on cooldown."
         }
       ]
+    },
+    {
+      "url": "https://macobserver.com/appletv/two-leightons-planning-dark-matter-season-2",
+      "firstSeen": "2026-09-13T12:01:22Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-13T12:01:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad English query ('Las Azules Women in Blue Season 2 Apple TV'). Article is entirely about Apple TV+'s unrelated series 'Dark Matter' Season 2 (characters 'the two Leightons'); does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G. Not attempted for fetch: relevance gate fails before dateability is evaluated."
+    },
+    {
+      "url": "https://en.softonic.com/articles/the-sisters-grimm-returns-to-apple-tv-on-october-2-season-2-is-official",
+      "firstSeen": "2026-09-13T12:01:22Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-13T12:01:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad English query ('Las Azules Women in Blue Season 2 Apple TV'). Article is about Apple TV+'s unrelated series 'The Sisters Grimm' Season 2 renewal; does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://larazon.es/cultura/cine/alauda-ruiz-azua-necesito-creerme-mis-personajes-busco-que-sean-incomodos_202609136aa67b35e428ed29213e5eec.html",
+      "firstSeen": "2026-09-13T12:01:22Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-13T12:01:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa Spanish query ('Barbara Mori entrevista Las Azules temporada 2'). Article is an interview with Spanish film director Alauda Ruiz de Azua about her own filmmaking approach; no connection to Las Azules or Barbara Mori. Off-topic false positive from the broad Spanish query per Rule G."
+    },
+    {
+      "url": "https://antena3.com/programas/el-hormiguero/increibles-peticiones-tamara-falco-inteligencia-artificial-uso-tres-simultaneamente_202609136aa67843e428ed29213e5d9e.html",
+      "firstSeen": "2026-09-13T12:01:22Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-13T12:01:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa Spanish query ('Barbara Mori entrevista Las Azules temporada 2'). Article is about Tamara Falco discussing her AI usage on the talk show El Hormiguero; no connection to Las Azules. Off-topic false positive from the broad Spanish query per Rule G."
+    },
+    {
+      "url": "https://instagram.com/amoritarasgado/p/C-6V9kOOvRB",
+      "firstSeen": "2026-09-13T12:01:22Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-13T12:01:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Surfaced via Pass 2 web sweep. Personal Instagram account of cast member Amorita Rasgado (plays Gabina), posting her own promo for episode 5 ('Manana estrenamos el episodio 5 de Las Azules...'). Individual crew-personal account, not a publisher/outlet -- Rule B relevance gate, excluded regardless of dateability. Not attempted for fetch."
     }
   ],
-  "lastUpdated": "2026-09-13T06:00:00Z"
+  "lastUpdated": "2026-09-13T12:01:22Z"
 }
