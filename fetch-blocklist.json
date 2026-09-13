@@ -6833,7 +6833,107 @@
           "note": "Facebook video from izzi (Mexican telecom/ISP) promoting Las Azules to drive viewers to watch via izzi's TV service (#NoMeLoPierdoEnizzi). Vendor/distributor promo account, not media coverage; no written editorial content, purely a promotional video description."
         }
       ]
+    },
+    {
+      "url": "https://www.filmvandaag.nl/video-on-demand/apple-tv/binnenkort-op-apple-tv",
+      "firstSeen": "2026-09-13T18:03:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T18:03:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Dutch VOD schedule/listing grid page for upcoming Apple TV releases. Las Azules appears only as one row with a repeated boilerplate plot synopsis (no unique written editorial content about the show); stripping the schedule grid leaves nothing. Rule F listing/database gate.",
+      "history": [
+        {
+          "attempt": "2026-09-13T18:03:48Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10039",
+          "note": "Dutch VOD schedule/listing grid page for upcoming Apple TV releases. Las Azules appears only as one row with a repeated boilerplate plot synopsis (no unique written editorial content about the show); stripping the schedule grid leaves nothing. Rule F listing/database gate."
+        }
+      ]
+    },
+    {
+      "url": "https://mi8.com.ar/pilar-gamboa-sobre-la-argentina-de-milei-veo-gente-cansada-y-triste/",
+      "firstSeen": "2026-09-13T18:03:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T18:03:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Argentine local-news interview with actress Pilar Gamboa about Argentine politics under Milei. No mention of Las Azules/Women in Blue anywhere in the fetched body (confirmed via Firecrawl scrape after WebFetch 403). Pilar Gamboa is not a Las Azules cast member; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-13T18:03:48Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10039",
+          "note": "Argentine local-news interview with actress Pilar Gamboa about Argentine politics under Milei. No mention of Las Azules/Women in Blue anywhere in the fetched body (confirmed via Firecrawl scrape after WebFetch 403). Pilar Gamboa is not a Las Azules cast member; broad-query false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://larepublica.pe/cine-series/2026/09/13/joel-calero-el-lum-preserva-la-memoria-objetiva-del-horror-408993",
+      "firstSeen": "2026-09-13T18:03:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T18:03:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La República (Peru) interview with director Joel Calero about his film trilogy on Peru's internal armed conflict and Lima's LUM museum. No connection to Las Azules/Women in Blue; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-13T18:03:48Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10039",
+          "note": "La República (Peru) interview with director Joel Calero about his film trilogy on Peru's internal armed conflict and Lima's LUM museum. No connection to Las Azules/Women in Blue; broad-query false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/groups/1002605638285009/posts/1569790054899895/",
+      "firstSeen": "2026-09-13T18:03:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T18:03:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook group post about Filipino actors and villain (\"Kontrabida\") roles in Philippine entertainment. No connection to Las Azules/Women in Blue; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-13T18:03:48Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10039",
+          "note": "Facebook group post about Filipino actors and villain (\"Kontrabida\") roles in Philippine entertainment. No connection to Las Azules/Women in Blue; broad-query false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/cuore/posts/la-actriz-form%C3%B3-parte-de-la-ic%C3%B3nica-serie-y-durante-un-per%C3%ADodo-se-centr%C3%B3-en-el-b/1544721394359232/",
+      "firstSeen": "2026-09-13T18:03:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T18:03:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Revista CUORE post about actress Irene Visedo and her role 25 years ago in the Spanish series \"Cuéntame cómo pasó\". Different actress and different series; no connection to Las Azules/Women in Blue. Broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-13T18:03:48Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10039",
+          "note": "Revista CUORE post about actress Irene Visedo and her role 25 years ago in the Spanish series \"Cuéntame cómo pasó\". Different actress and different series; no connection to Las Azules/Women in Blue. Broad-query false positive."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-13T16:05:06Z"
+  "lastUpdated": "2026-09-13T18:03:48Z"
 }
