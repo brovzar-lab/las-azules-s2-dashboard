@@ -6310,6 +6310,204 @@
           "issue": "LEMA-10027"
         }
       ]
+    },
+    {
+      "url": "https://thetvdb.com/series/las-azules/episodes/11698481",
+      "firstSeen": "2026-09-13T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "TheTVDB per-episode page for S02E01 ('Mauricio', air date Aug 12, 2026). WebFetch confirmed the only prose present is a short database synopsis line repeated in multiple languages plus administrative metadata (runtime, rating, network); no editorial content about the show. Rule F: stripping the metadata table leaves nothing written about the show.",
+      "history": [
+        {
+          "attempt": "2026-09-13T10:05:23Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10032",
+          "note": "WebFetch succeeded; confirmed episode-guide/database row with no editorial content, per Rule F."
+        }
+      ]
+    },
+    {
+      "url": "https://losangelesazules.com.mx/en/",
+      "firstSeen": "2026-09-13T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Official site of Los Ángeles Azules, a Mexican cumbia band. Surfaced only as a broad-query match on the word \"Azules\"; no relation to the Las Azules / Women in Blue TV series.",
+      "history": [
+        {
+          "attempt": "2026-09-13T10:05:23Z",
+          "method": "search-metadata-only",
+          "status": 200,
+          "issue": "LEMA-10032",
+          "note": "Off-topic false positive confirmed from result metadata; unrelated music act, not the TV show."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/angelesazulesmx/",
+      "firstSeen": "2026-09-13T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Official Facebook page of Los Ángeles Azules, a Mexican cumbia band. Surfaced only as a broad-query match on the word \"Azules\"; no relation to the Las Azules / Women in Blue TV series.",
+      "history": [
+        {
+          "attempt": "2026-09-13T10:05:23Z",
+          "method": "search-metadata-only",
+          "status": 200,
+          "issue": "LEMA-10032",
+          "note": "Off-topic false positive confirmed from result metadata; unrelated music act, not the TV show."
+        }
+      ]
+    },
+    {
+      "url": "https://collider.com/last-seen-apple-tv-streaming-success-september-2026/",
+      "firstSeen": "2026-09-13T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Collider article about \"Last Seen\", a different Apple TV+ thriller. Surfaced only as a broad-query match on \"Apple TV streaming success\"; no mention of Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-13T10:05:23Z",
+          "method": "search-metadata-only",
+          "status": 200,
+          "issue": "LEMA-10032",
+          "note": "Off-topic false positive confirmed from result metadata; article is about a different Apple TV+ title."
+        }
+      ]
+    },
+    {
+      "url": "https://collider.com/the-hunting-wives-season-2-netflix-november-2026-premiere-date/",
+      "firstSeen": "2026-09-13T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Collider article about \"The Hunting Wives\" Season 2 on Netflix, an unrelated series. Surfaced only as a broad-query match; no mention of Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-13T10:05:23Z",
+          "method": "search-metadata-only",
+          "status": 200,
+          "issue": "LEMA-10032",
+          "note": "Off-topic false positive confirmed from result metadata; different show, different platform."
+        }
+      ]
+    },
+    {
+      "url": "https://www.larazon.es/television/programas/iker-jimenez-cuatro-nueva-temporada-cuarto-milenio_202609136aa45c2f7486a40f2c9ae2be.html",
+      "firstSeen": "2026-09-13T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Razón article about Iker Jiménez's new season of 'Cuarto Milenio' on Cuatro. Unrelated Spanish TV program; surfaced only as a broad-query match on Spanish-language TV season news, no mention of Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-09-13T10:05:23Z",
+          "method": "search-metadata-only",
+          "status": 200,
+          "issue": "LEMA-10032",
+          "note": "Off-topic false positive confirmed from result metadata; different program entirely."
+        }
+      ]
+    },
+    {
+      "url": "https://www.excelsior.com.mx/espectaculos/belinda-danna-y-mariana-trevino-conquistan-mentiverso-auditorio-nacional",
+      "firstSeen": "2026-09-13T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Excelsior article about Belinda, Danna, and Mariana Treviño at a \"Mentiverso\" event at Auditorio Nacional. Unrelated entertainment event; surfaced only as a broad Spanish-language query match, no mention of Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-09-13T10:05:23Z",
+          "method": "search-metadata-only",
+          "status": 200,
+          "issue": "LEMA-10032",
+          "note": "Off-topic false positive confirmed from result metadata; unrelated concert/event coverage."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Mujeres_asesinas_(2022_TV_series)",
+      "firstSeen": "2026-09-13T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia page for 'Mujeres asesinas' (2022 TV series), an unrelated show. Surfaced only as a broad-query match on \"Mujeres\"/crime-drama terms; not Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-13T10:05:23Z",
+          "method": "search-metadata-only",
+          "status": 200,
+          "issue": "LEMA-10032",
+          "note": "Off-topic false positive confirmed from result metadata; different television title."
+        }
+      ]
+    },
+    {
+      "url": "https://pro.imdb.com/title/tt8950420",
+      "firstSeen": "2026-09-13T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "IMDbPro title page for 'Los lentes azules', an unrelated title. Surfaced only as a broad-query match on \"azules\"; not Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-13T10:05:23Z",
+          "method": "search-metadata-only",
+          "status": 200,
+          "issue": "LEMA-10032",
+          "note": "Off-topic false positive confirmed from result metadata; different, unrelated title."
+        }
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/tvPlus/comments/1ega6o7/women_in_blue_las_azules_season_1_episode_1/",
+      "firstSeen": "2026-09-13T10:05:23Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-13T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-13T10:05:23Z",
+          "method": "WebFetch+Firecrawl",
+          "status": 403,
+          "issue": "LEMA-10032",
+          "note": "WebFetch could not access reddit.com (tool reports it cannot fetch this domain). Firecrawl scrape fallback returned 403: 'we do not support this site.' Full fallback-chain failure; not added to data.json this run."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-13T06:00:00Z"
