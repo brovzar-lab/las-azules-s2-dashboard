@@ -6265,7 +6265,45 @@
           "note": "WebFetch succeeded; confirmed article is about Under the Bridge (Disney+), unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://thetvdb.com/companies/apple-tv-plus?page=6",
+      "firstSeen": "2026-09-13T06:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T06:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TheTVDB company profile page for Apple TV Plus (page 6 of its show catalog). Las Azules appears only as one incidental poster thumbnail among ~20 unrelated Apple TV Plus shows (The Savant, Still Up, The Problem With Jon Stewart, etc). Page content is entirely about the Apple TV Plus company/catalog, not about Las Azules specifically. Surfaced only via broad query match on \"apple tv plus\". Rule G.",
+      "history": [
+        {
+          "attempt": "2026-09-13T06:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10027"
+        }
+      ]
+    },
+    {
+      "url": "https://apps.apple.com/mx/app/azlotv/id6748067306",
+      "firstSeen": "2026-09-13T06:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T06:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "AzloTV App Store listing (developer Adrian Dominguez): a general multi-format streaming/live-creator app unrelated to Las Azules / Women in Blue. No mention of the show in the app description; surfaced only via fuzzy name-match on \"Azlo\"/\"Azules\". Rule G.",
+      "history": [
+        {
+          "attempt": "2026-09-13T06:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10027"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-13T04:15:00Z"
+  "lastUpdated": "2026-09-13T06:00:00Z"
 }
