@@ -1961,40 +1961,6 @@
       ]
     },
     {
-      "url": "https://www.facebook.com/izzimx/videos/ellas-rompieron-barreras-e-hicieron-historia-%EF%B8%8F-conoce-la-valent%C3%ADa-y-los-secretos/28009947492022426/",
-      "firstSeen": "2026-09-07T04:00:46Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-07T04:00:46Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_vendor_promo",
-      "skipNote": "Surfaced via Pass 3 Firecrawl BR-market search. This is izzi telecom's official account (Mexican pay-TV/telecom distributor), posting promotional content ('#NoMeLoPierdoEnizzi') encouraging viewers to watch Las Azules via izzi's service. This is vendor/distributor marketing promoting a third-party platform's carriage of the show, not media coverage of the show itself, the same relevance disposition as the CTT Exp & Rentals vendor posts already in this ledger. Skipped on relevance grounds per Rule B; dateability not pursued (no date was found in the fetched content either).",
-      "history": [
-        {
-          "attempt": "2026-09-07T04:00:46Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-9773",
-          "note": "Confirmed izzi telecom vendor/distributor promotional post, no publish date visible. Skipped on relevance, not dateability, per Rule B."
-        },
-        {
-          "attempt": "2026-09-08T10:04:08.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-9848",
-          "note": "Confirmed poster is izzi telecom, a distribution vendor account promoting the show on their platform. Skipped on Rule B relevance grounds before any dateability check."
-        },
-        {
-          "attempt": "2026-09-09T02:05:30.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-9861",
-          "note": "Confirmed izzi telecom (vendor/distribution partner) account; relevance gate fails per Rule B."
-        }
-      ]
-    },
-    {
       "url": "https://www.allocine.fr/series/ficheserie_gen_cserie=31977.html",
       "firstSeen": "2026-09-07T04:00:46Z",
       "failCount": 0,
@@ -6726,7 +6692,148 @@
           "note": "Wikipedia article about Polvos Azules, a shopping centre in Lima, Peru. No connection to Las Azules; surfaced only via Pass 2 #LasAzules broad-query match. Rule G, reviewable=false."
         }
       ]
+    },
+    {
+      "url": "https://www.instagram.com/normantorregrosa/?hl=en",
+      "firstSeen": "2026-09-13T16:05:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T16:05:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Instagram profile of Norman Torregrosa, a Marvel/DC/Star Wars geek content creator and collector who posts unboxings/reviews of unrelated pop-culture merchandise. No connection to Las Azules/Women in Blue; surfaced only as a broad-query false positive on \"Las Azules\" (matches unrelated \"azules\" content).",
+      "history": [
+        {
+          "attempt": "2026-09-13T16:05:06Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-10038",
+          "note": "Instagram profile of Norman Torregrosa, a Marvel/DC/Star Wars geek content creator and collector who posts unboxings/reviews of unrelated pop-culture merchandise. No connection to Las Azules/Women in Blue; surfaced only as a broad-query false positive on \"Las Azules\" (matches unrelated \"azules\" content)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/viastreamingarg/posts/ya-tiene-27-a%C3%B1os-y-vive-en-otro-pa%C3%ADsel-mayor-de-los-cuatro-hijos-de-la-modelo-y-/1695015869291336/",
+      "firstSeen": "2026-09-13T16:05:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T16:05:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post about Sergio Mayer Mori, the 27-year-old son of actress Barbara Mori (Las Azules lead), covering his personal life/reality-TV activity. Not about the show; surfaced only because it mentions Barbara Mori by name.",
+      "history": [
+        {
+          "attempt": "2026-09-13T16:05:06Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-10038",
+          "note": "Facebook post about Sergio Mayer Mori, the 27-year-old son of actress Barbara Mori (Las Azules lead), covering his personal life/reality-TV activity. Not about the show; surfaced only because it mentions Barbara Mori by name."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/corazonytv/posts/la-nueva-vida-de-sergio-ayala-de-gh-vip-el-ex-de-ivonne-reyes-trabaja-como-polic/1109861784727354/",
+      "firstSeen": "2026-09-13T16:05:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T16:05:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post about Sergio Ayala, a Spanish Gran Hermano VIP contestant who now works as a municipal police officer. Unrelated to Las Azules/Women in Blue; surfaced only as a coincidental keyword match on policia-related terms.",
+      "history": [
+        {
+          "attempt": "2026-09-13T16:05:06Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-10038",
+          "note": "Facebook post about Sergio Ayala, a Spanish Gran Hermano VIP contestant who now works as a municipal police officer. Unrelated to Las Azules/Women in Blue; surfaced only as a coincidental keyword match on policia-related terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/famososreales/posts/far%C3%A1ndula-en-su-m%C3%A1ximo-esplendor-gerardo-mor%C3%A1n-alza-la-voz-y-llama-mal-agradecid/122255710766257370/",
+      "firstSeen": "2026-09-13T16:05:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T16:05:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post about Mexican singer Gerardo Moran and an unrelated celebrity dispute. No connection to Las Azules/Women in Blue found; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-13T16:05:06Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-10038",
+          "note": "Facebook post about Mexican singer Gerardo Moran and an unrelated celebrity dispute. No connection to Las Azules/Women in Blue found; broad-query false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://es-us.noticias.yahoo.com/cuidado-deseas-curry-barker-inde-144235407.html",
+      "firstSeen": "2026-09-13T16:05:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T16:05:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Yahoo Noticias article about actors Curry Barker and Inde Navarrette discussing the one-year anniversary of the unrelated 2025 film Obsession at TIFF. No connection to Las Azules/Women in Blue; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-13T16:05:06Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-10038",
+          "note": "Yahoo Noticias article about actors Curry Barker and Inde Navarrette discussing the one-year anniversary of the unrelated 2025 film Obsession at TIFF. No connection to Las Azules/Women in Blue; broad-query false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://facebook.com/izzimx/videos/ellas-rompieron-barreras-e-hicieron-historia-%EF%B8%8F-conoce-la-valent%C3%ADa-y-los-secretos/28009947492022426",
+      "firstSeen": "2026-09-07T04:00:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T16:05:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "Facebook video from izzi (Mexican telecom/ISP) promoting Las Azules to drive viewers to watch via izzi's TV service (#NoMeLoPierdoEnizzi). Vendor/distributor promo account, not media coverage; no written editorial content, purely a promotional video description. Prior note (LEMA-9861): Surfaced via Pass 3 Firecrawl BR-market search. This is izzi telecom's official account (Mexican pay-TV/telecom distributor), posting promotional content ('#NoMeLoPierdoEnizzi') encouraging viewers to watch Las Azules via izzi's service. This is vendor/distributor marketing promoting a third-party platform's carriage of the show, not media coverage of the show itself, the same relevance disposition as the CTT Exp & Rentals vendor posts already in this ledger. Skipped on relevance grounds per Rule B; dateability not pursued (no date was found in the fetched content either).",
+      "history": [
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9773",
+          "note": "Confirmed izzi telecom vendor/distributor promotional post, no publish date visible. Skipped on relevance, not dateability, per Rule B."
+        },
+        {
+          "attempt": "2026-09-08T10:04:08.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9848",
+          "note": "Confirmed poster is izzi telecom, a distribution vendor account promoting the show on their platform. Skipped on Rule B relevance grounds before any dateability check."
+        },
+        {
+          "attempt": "2026-09-09T02:05:30.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9861",
+          "note": "Confirmed izzi telecom (vendor/distribution partner) account; relevance gate fails per Rule B."
+        },
+        {
+          "attempt": "2026-09-13T16:05:06Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10038",
+          "note": "Facebook video from izzi (Mexican telecom/ISP) promoting Las Azules to drive viewers to watch via izzi's TV service (#NoMeLoPierdoEnizzi). Vendor/distributor promo account, not media coverage; no written editorial content, purely a promotional video description."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-13T14:01:02Z"
+  "lastUpdated": "2026-09-13T16:05:06Z"
 }
