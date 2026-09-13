@@ -6211,7 +6211,47 @@
           "note": "WebFetch succeeded; confirmed post is about an unrelated sitcom character (Plutarco), unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://hoodline.com/2026/09/los-angeles-azules-to-headline-la-s-hispanic-heritage-kickoff-get-their-own-square/",
+      "firstSeen": "2026-09-13T02:04:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T02:04:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Hoodline article about the musical group Los Ángeles Azules being honored with a street dedication and headlining LA Hispanic Heritage Month kickoff (Sept 14-15, 2026, Panorama City / LA City Hall). Not about the TV show Las Azules / Women in Blue at all; surfaced only as a broad-query match on \"Azules\".",
+      "history": [
+        {
+          "attempt": "2026-09-13T02:04:40Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10025",
+          "note": "WebFetch succeeded; confirmed article is about the band Los Ángeles Azules, unrelated to the TV show."
+        }
+      ]
+    },
+    {
+      "url": "https://www.canal26.com/espectaculos/2026/09/13/tiene-solo-8-capitulos-se-inspira-en-una-historia-real-y-es-una-de-las-miniseries-de-true-crime-mas-cautivantes-para-ver-este-fin-de-semana/",
+      "firstSeen": "2026-09-13T02:04:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T02:04:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Canal26 article about the Disney+ true-crime miniseries \"Under the Bridge\" (Bajo el puente), starring Riley Keough and Lily Gladstone, based on the 1997 murder of Reena Virk. Not about Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"8 episodes, based on a true story\" phrasing from the Spanish Exa query.",
+      "history": [
+        {
+          "attempt": "2026-09-13T02:04:40Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10025",
+          "note": "WebFetch succeeded; confirmed article is about Under the Bridge (Disney+), unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-12T22:05:03Z"
+  "lastUpdated": "2026-09-13T02:04:40Z"
 }
