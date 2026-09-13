@@ -2438,7 +2438,7 @@
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-12T06:00:33Z",
+      "lastAttempt": "2026-09-13T06:00:00Z",
       "history": [
         {
           "attempt": "2026-09-09T10:03:05.000Z",
@@ -2474,6 +2474,13 @@
           "status": 200,
           "issue": "LEMA-10013",
           "note": "Surfaced again this run via mandated Exa Pass 1 EN query as a &vl=en-US query-string variant. Confirmed duplicate of existing data.json entry (Jul 21, 2026 Apple TV trailer); not added as a separate entry. Same recurring near-miss pattern as LEMA-9865/LEMA-9900/LEMA-10008."
+        },
+        {
+          "attempt": "2026-09-13T06:00:00Z",
+          "method": "YouTube Data API (videos.list)",
+          "status": 200,
+          "issue": "LEMA-10027",
+          "note": "Surfaced again this run via Firecrawl Pass 3 (DE and FR queries) as a &vl=en-US query-string variant. Confirmed duplicate of existing data.json entry (Jul 21, 2026 Apple TV trailer); not added as a separate entry. Same recurring near-miss pattern as LEMA-9865/LEMA-9900/LEMA-10008/LEMA-10013."
         }
       ]
     },
