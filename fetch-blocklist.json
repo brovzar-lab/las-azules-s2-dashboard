@@ -6933,7 +6933,227 @@
           "note": "Revista CUORE post about actress Irene Visedo and her role 25 years ago in the Spanish series \"Cuéntame cómo pasó\". Different actress and different series; no connection to Las Azules/Women in Blue. Broad-query false positive."
         }
       ]
+    },
+    {
+      "url": "https://www.facebook.com/euronews/posts/portugals-scariest-festival-wrapped-up-with-the-m%C3%A9li%C3%A8s-dargent-for-best-european/1462344149274244/",
+      "firstSeen": "2026-09-13T20:05:21Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T20:05:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Euronews Facebook post about Portugal's MOTELX genre film festival wrapping its 20th edition, with the Melies d'Argent for best European feature going to a Danish film set in 19th-century Faroe Islands. No mention of Las Azules or Women in Blue anywhere in the post; surfaced only via broad Exa query match.",
+      "history": [
+        {
+          "attempt": "2026-09-13T20:05:21Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10040",
+          "note": "WebFetch succeeded; confirmed post is about the MOTELX film festival, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://247videogame.com/dark-matter-the-box-is-back-season-2-scene-apple-tv/",
+      "firstSeen": "2026-09-13T20:05:21Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T20:05:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about a Season 2 scene from Apple TV+'s 'Dark Matter' (based on Blake Crouch's novel, starring Joel Edgerton and Jennifer Connelly). A different Apple TV+ series entirely; no mention of Las Azules or Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-13T20:05:21Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10040",
+          "note": "WebFetch succeeded; confirmed article is about Dark Matter, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/100063644043499/posts/gala-montes-estrena-nuevo-look/1728075089323943/",
+      "firstSeen": "2026-09-13T20:05:21Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T20:05:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post (Plurinominal page) about Mexican actress Gala Montes debuting a new look/hairstyle. Gala Montes is not part of the Las Azules cast; no mention of the show anywhere in the post.",
+      "history": [
+        {
+          "attempt": "2026-09-13T20:05:21Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10040",
+          "note": "WebFetch succeeded; confirmed post is about Gala Montes's new look, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/CandelaEstereo/posts/gaby-spanic-sorprendi%C3%B3-con-su-nueva-imagensu-cambio-ha-generado-debate-en-redes-/1686510859502821/",
+      "firstSeen": "2026-09-13T20:05:21Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T20:05:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Candela Estereo Facebook post about actress Gaby Spanic's new appearance after a cosmetic procedure. Gaby Spanic is not part of the Las Azules cast; no mention of the show anywhere in the post.",
+      "history": [
+        {
+          "attempt": "2026-09-13T20:05:21Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10040",
+          "note": "WebFetch succeeded; confirmed post is about Gaby Spanic's new look, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/Eltrendytop/posts/natalia-maderay-su-paso-por-la-comedia-disfrutando-su-embarazo-y-nos-revela-un-g/1799061091819176/",
+      "firstSeen": "2026-09-13T20:05:21Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T20:05:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Eltrendytop Facebook post about actress/comedian Natalia Maderay's comedy career and pregnancy. Different person from Las Azules cast member Natalia Tellez; no mention of the show anywhere in the post.",
+      "history": [
+        {
+          "attempt": "2026-09-13T20:05:21Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10040",
+          "note": "WebFetch succeeded; confirmed post is about Natalia Maderay, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/groups/533521559696791/posts/886436044405339/",
+      "firstSeen": "2026-09-13T20:05:21Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T20:05:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook group post about the telenovela 'Valle Salvaje' (character Manuela changing strategy). Unrelated telenovela; no mention of Las Azules anywhere in the post.",
+      "history": [
+        {
+          "attempt": "2026-09-13T20:05:21Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10040",
+          "note": "WebFetch succeeded; confirmed post is about Valle Salvaje, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.hollywoodreporter.com/news/general-news/variety-acquired-by-penske-media-deadline-377398/",
+      "firstSeen": "2026-09-13T20:05:21Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T20:05:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Hollywood Reporter article about Penske Media Corp acquiring/consolidating Variety, Hollywood Reporter, Billboard and Vibe into a joint venture (PMRC). General trade-press business/M&A news; no mention of Las Azules or Women in Blue. Same story confirmed via nexttv.com and moviemaker.com coverage.",
+      "history": [
+        {
+          "attempt": "2026-09-13T20:05:21Z",
+          "method": "WebFetch",
+          "status": 307,
+          "issue": "LEMA-10040",
+          "note": "Redirects to tollbit.hollywoodreporter.com (paywall/bot-mitigation host); topic confirmed off-topic via companion coverage of the same Penske/Variety story on nexttv.com and moviemaker.com."
+        }
+      ]
+    },
+    {
+      "url": "https://www.nexttv.com/news/variety-and-the-hollywood-reporter-combine-in-joint-venture",
+      "firstSeen": "2026-09-13T20:05:21Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T20:05:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "NextTV article about Penske Media Corp and MRC forming joint venture 'PMRC' consolidating Variety, Hollywood Reporter, Billboard and Vibe. General trade-press business news; no mention of Las Azules or Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-13T20:05:21Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10040",
+          "note": "WebFetch succeeded; confirmed article is about trade-press consolidation, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.moviemaker.com/jay-penske-3-top-hollywood-trades-variety-hollywood-reporter-and-deadline/",
+      "firstSeen": "2026-09-13T20:05:21Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T20:05:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "MovieMaker article about Jay Penske's consolidation of Hollywood Reporter, Billboard and Vibe under PMC alongside Variety and Deadline. General trade-press business news; no mention of Las Azules or Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-13T20:05:21Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10040",
+          "note": "WebFetch succeeded; confirmed article is about trade-press consolidation, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://issuu.com/deadlinehollywood",
+      "firstSeen": "2026-09-13T20:05:21Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T20:05:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Issuu publisher profile page for Deadline Hollywood magazine (181 publications, general awards/industry coverage archive). Not an article; no Las Azules-specific content, surfaced only via broad query match on 'Deadline'.",
+      "history": [
+        {
+          "attempt": "2026-09-13T20:05:21Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10040",
+          "note": "WebFetch succeeded; confirmed page is a generic publisher profile, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://issuu.com/deadlinehollywood/docs/deadline_hollywood_-_contenders_television_-_docum?fr=sYzhhYTgzOTIxODk",
+      "firstSeen": "2026-09-13T20:05:21Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-13T20:05:21Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Issuu document reader for a Deadline Hollywood 'Contenders Television - Documentary + Unscripted and Variety' magazine issue. General trade-publication issue with no Las Azules-specific written content found; surfaced only via broad query match on 'Deadline'.",
+      "history": [
+        {
+          "attempt": "2026-09-13T20:05:21Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10040",
+          "note": "WebFetch succeeded; reader content minimal/no substantive text found, no reference to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-13T18:03:48Z"
+  "lastUpdated": "2026-09-13T20:05:21Z"
 }
