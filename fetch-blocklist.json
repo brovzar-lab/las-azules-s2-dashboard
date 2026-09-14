@@ -2413,7 +2413,7 @@
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-14T02:11:49Z",
+      "lastAttempt": "2026-09-14T12:00:42Z",
       "history": [
         {
           "attempt": "2026-09-09T10:03:05.000Z",
@@ -2463,6 +2463,13 @@
           "status": 200,
           "issue": "LEMA-10043",
           "note": "Surfaced again this run via Firecrawl Pass 3 (BR/DE/FR queries) as a &vl=en-US query-string variant. Confirmed duplicate of existing data.json entry (Jul 21, 2026 Apple TV trailer); not added as a separate entry. Same recurring near-miss pattern as LEMA-9865/LEMA-9900/LEMA-10008/LEMA-10013/LEMA-10027 (tracked URL-normalization gap, LEMA-9902)."
+        },
+        {
+          "attempt": "2026-09-14T12:00:42Z",
+          "method": "YouTube Data API (videos.list)",
+          "status": 200,
+          "issue": "LEMA-10112",
+          "note": "Surfaced again this run via Firecrawl Pass 3 (DE/ES Exa) queries as a &vl=en-US query-string variant. Confirmed via tools/sweep-integrity.js normalize that this variant now collapses to the same key as the canonical URL (youtube.com/watch?v=Z9n3TkdcGLY) already in data.json (Jul 21, 2026 Apple TV trailer) -- the normalization gap tracked on LEMA-9902 across the prior six runs appears resolved by the LEMA-9933/9934 normalize tool. Not added as a separate entry."
         }
       ]
     },
@@ -7735,7 +7742,147 @@
           "note": "Firecrawl returned a blanket \"we do not support this site\" refusal for tiktok.com. Full-chain failure, failCount now 1. Could not determine account type (Rule B) or content relevance."
         }
       ]
+    },
+    {
+      "url": "https://moviesnewstoday.com/the-wait-is-over-cbs-may-have-just-given-blue-bloods-fans-the-update-theyve-been-dreaming-of-hong01/",
+      "firstSeen": "2026-09-14T12:00:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-14T12:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about CBS's 'Blue Bloods' Season 15 renewal news. Not about Las Azules / Women in Blue; surfaced only as a broad-query match on generic 'season two' terms via Exa Pass 1 EN.",
+      "history": [
+        {
+          "attempt": "2026-09-14T12:00:42Z",
+          "method": "Relevance skip (no fetch required, off-topic determined from title/URL/content)",
+          "status": null,
+          "issue": "LEMA-10112",
+          "note": "Rule G skip: candidate is plainly about a different show/person/topic, surfaced only via broad-query match."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eleconomista.es/informalia/television/noticias/14013732/09/26/vicky-martin-berrocal-no-somos-una-familia-perfecta-pero-somos-tremendamente-autenticas.html",
+      "firstSeen": "2026-09-14T12:00:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-14T12:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Interview with Spanish TV personality Vicky Martín Berrocal about her family and a docuseries about her own life. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match via Exa Pass 1 EN.",
+      "history": [
+        {
+          "attempt": "2026-09-14T12:00:42Z",
+          "method": "Relevance skip (no fetch required, off-topic determined from title/URL/content)",
+          "status": null,
+          "issue": "LEMA-10112",
+          "note": "Rule G skip: candidate is plainly about a different show/person/topic, surfaced only via broad-query match."
+        }
+      ]
+    },
+    {
+      "url": "https://multianime.com.mx/2026/09/14/the-ramparts-of-ice-season-2-mejor-conocida-como-rompiendo-el-hielo-revela-trailer-con-opening-de-the-beat-garden-y-estreno-exclusivo-en-netflix-anime-romance-therampartsofice/",
+      "firstSeen": "2026-09-14T12:00:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-14T12:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about a Chinese/Japanese anime series 'The Ramparts of Ice' ('Rompiendo el Hielo') and its Netflix premiere. Unrelated show entirely; surfaced only as a broad-query match on 'season 2' + trailer terms via Exa Pass 1 EN.",
+      "history": [
+        {
+          "attempt": "2026-09-14T12:00:42Z",
+          "method": "Relevance skip (no fetch required, off-topic determined from title/URL/content)",
+          "status": null,
+          "issue": "LEMA-10112",
+          "note": "Rule G skip: candidate is plainly about a different show/person/topic, surfaced only via broad-query match."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/las-novias-de-silvia-navarro",
+      "firstSeen": "2026-09-14T12:00:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-14T12:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TikTok discover page about Mexican actress Silvia Navarro's personal relationships/engagements ('novias' = girlfriends/fiancées), not a Las Azules cast member. Unrelated; surfaced only as a broad-query match via Exa Pass 1 ES.",
+      "history": [
+        {
+          "attempt": "2026-09-14T12:00:42Z",
+          "method": "Relevance skip (no fetch required, off-topic determined from title/URL/content)",
+          "status": null,
+          "issue": "LEMA-10112",
+          "note": "Rule G skip: candidate is plainly about a different show/person/topic, surfaced only via broad-query match."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/manolo-cardona-popayan",
+      "firstSeen": "2026-09-14T12:00:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-14T12:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TikTok discover page about actor Manolo Cardona and Popayán, Colombia. Manolo Cardona is not part of the Las Azules cast/crew; unrelated, surfaced only as a broad-query match via Exa Pass 1 ES.",
+      "history": [
+        {
+          "attempt": "2026-09-14T12:00:42Z",
+          "method": "Relevance skip (no fetch required, off-topic determined from title/URL/content)",
+          "status": null,
+          "issue": "LEMA-10112",
+          "note": "Rule G skip: candidate is plainly about a different show/person/topic, surfaced only via broad-query match."
+        }
+      ]
+    },
+    {
+      "url": "https://www.ciudad.com.ar/espectaculos/2026/09/14/el-furcio-de-sofi-martinez-con-diego-leuco-que-expuso-un-dato-revelador-sobre-su-relacion/",
+      "firstSeen": "2026-09-14T12:00:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-14T12:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Argentine entertainment-press article about a live-TV slip-up ('furcio') by presenter Sofi Martínez and Diego Leuco regarding their own relationship. Unrelated to Las Azules; surfaced only as a broad-query match via Exa Pass 1 ES.",
+      "history": [
+        {
+          "attempt": "2026-09-14T12:00:42Z",
+          "method": "Relevance skip (no fetch required, off-topic determined from title/URL/content)",
+          "status": null,
+          "issue": "LEMA-10112",
+          "note": "Rule G skip: candidate is plainly about a different show/person/topic, surfaced only via broad-query match."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/SeriesTeleCine/posts/la-s%C3%A9rie-las-azules-est-renouvel%C3%A9e-pour-une-saison-2-par-apple-tv-/714164477634999/",
+      "firstSeen": "2026-09-14T12:00:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-14T12:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Séries-télé-ciné is a French fan/community Facebook page (~54K likes, self-described as a page for exchanging about TV series/cinema/music), not a professional publisher, outlet, or editorial brand account. Post reposts the (already-covered, 2025) Season 2 renewal news. Under Rule B (LEMA-9642), fan-repost accounts are not media coverage regardless of on-topic content or dateability; not fetched further.",
+      "history": [
+        {
+          "attempt": "2026-09-14T12:00:42Z",
+          "method": "Relevance skip (no fetch required per Rule B)",
+          "status": null,
+          "issue": "LEMA-10112",
+          "note": "Rule B skip: fan/community page account, not an editorial outlet."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-14T08:06:56.000Z"
+  "lastUpdated": "2026-09-14T12:00:42Z"
 }
