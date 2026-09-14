@@ -7431,7 +7431,127 @@
           "note": "Confirmed same: no series-level date field anywhere in body."
         }
       ]
+    },
+    {
+      "url": "https://as.com/meristation/series/que-ver-del-14-al-20-de-septiembre-en-netflix-disney-amazon-prime-video-hbo-max-movistar-filmin-apple-tv-y-skyshowtime-f202609-n/",
+      "firstSeen": "2026-09-14T06:05:12Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T06:05:12Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "AS.com Meristation weekly \"qué ver\" roundup for Sept 14-20 across Netflix/Disney+/Prime/HBO Max/Movistar+/Filmin/Apple TV/SkyShowtime. Firecrawl scrape confirmed full body contains zero mentions of \"azules\" anywhere; Las Azules is not covered in this roundup. Surfaced only as a broad-query match on Apple TV + September terms.",
+      "history": [
+        {
+          "attempt": "2026-09-14T06:05:12Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10050",
+          "note": "Confirmed off-topic false positive per Rule G; page fetched successfully and contains no mention of Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tomsguide.com/entertainment/streaming/10-biggest-new-shows-to-stream-this-week-including-slow-horses-mobland-traitors-and-more",
+      "firstSeen": "2026-09-14T06:05:12Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T06:05:12Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Tom's Guide \"10 biggest new shows to stream this week\" roundup (Slow Horses, MobLand, Traitors, etc). Full page body fetched directly (WebFetch was inconclusive on a truncated preview; Firecrawl scrape returned a blanket site-not-supported refusal, 403) confirmed zero mentions of \"azules\" anywhere in the 2.2MB page. Surfaced only as a broad-query match on streaming/Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-14T06:05:12Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10050",
+          "note": "Confirmed off-topic false positive per Rule G; page fetched successfully and contains no mention of Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://trendimovies.com/tv/301389",
+      "firstSeen": "2026-09-14T06:05:12Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T06:05:12Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TrendiMovies page for \"A la deriva\" (2026), an unrelated Spanish drama about a shipwreck in the fishing village of Batuel airing on Antena 3/Atresplayer. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-14T06:05:12Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10050",
+          "note": "Confirmed off-topic false positive per Rule G; page fetched successfully and contains no mention of Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://playmax.mx/azur-lane-slow-ahead-f137099",
+      "firstSeen": "2026-09-14T06:05:12Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T06:05:12Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "PlayMax page for \"Azur Lane: Slow Ahead!\" (2021), an anime spin-off about naval academy cadets, unrelated to Las Azules. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on the phonetically similar title (\"Azur\" vs \"Azules\").",
+      "history": [
+        {
+          "attempt": "2026-09-14T06:05:12Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10050",
+          "note": "Confirmed off-topic false positive per Rule G; page fetched successfully and contains no mention of Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://areajugones.sport.es/series/el-juicio-temporada-2-habra-nuevos-episodios-de-la-serie-de-prime-video/",
+      "firstSeen": "2026-09-14T06:05:12Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T06:05:12Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "AreaJugones article about \"El Juicio\" Season 2, a different Prime Video series. Firecrawl scrape confirmed full body contains zero mentions of \"azules\" anywhere. Surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-14T06:05:12Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10050",
+          "note": "Confirmed off-topic false positive per Rule G; page fetched successfully and contains no mention of Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://realsound.jp/movie/2026/09/post-2521269.html",
+      "firstSeen": "2026-09-14T06:05:12Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T06:05:12Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RealSound (Japanese) article about the wrap of Japanese TV drama \"Daitsuiseki -Keishicho SSBC Kokohan-gakari- Season 2\", featuring cast comments. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-14T06:05:12Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10050",
+          "note": "Confirmed off-topic false positive per Rule G; page fetched successfully and contains no mention of Las Azules / Women in Blue."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-14T02:11:49Z"
+  "lastUpdated": "2026-09-14T06:05:12Z"
 }
