@@ -7882,6 +7882,146 @@
           "note": "Rule B skip: fan/community page account, not an editorial outlet."
         }
       ]
+    },
+    {
+      "url": "https://elperiodico.com/es/ocio-y-cultura/20260914/olivia-cooke-alicent-entrevista-retorno-slow-horses-134269221",
+      "firstSeen": "2026-09-14T14:05:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T14:05:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Periodico interview with Olivia Cooke about her return in \"Slow Horses\" (Apple TV+ series unrelated to Las Azules). Surfaced only as a broad-query match on shared \"Apple TV\" terms; no mention of Las Azules or Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-14T14:05:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10122",
+          "note": "Relevance gate (Rule G): confirmed off-topic, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://es.domiplay.net/podcaster/mas-de-uno/humoristas-entrevista-a-cristina-pardo-y-un-tarotista-para-oyentes",
+      "firstSeen": "2026-09-14T14:05:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T14:05:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Domiplay podcast listing for \"Mas de uno\" (comedians interviewing Cristina Pardo and a tarot reader). Entirely unrelated to Las Azules; surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-14T14:05:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10122",
+          "note": "Relevance gate (Rule G): confirmed off-topic, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://diariodeleon.es/sociedad/gente/260914/2097233/alba-carrillo-programas-salida-tve.html",
+      "firstSeen": "2026-09-14T14:05:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T14:05:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Diario de Leon piece about TV personality Alba Carrillo's career move after leaving TVE. No connection to Las Azules; surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-14T14:05:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10122",
+          "note": "Relevance gate (Rule G): confirmed off-topic, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://elconfidencial.com/television/programas-tv/2026-09-14/karlos-arguinano-cocina-abierta-nuevo-plato-antena3-joseba-eva_4423408",
+      "firstSeen": "2026-09-14T14:05:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T14:05:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Confidencial piece about chef Karlos Arguinano's cooking show \"Cocina abierta\" on Antena 3. Entirely unrelated to Las Azules; surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-14T14:05:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10122",
+          "note": "Relevance gate (Rule G): confirmed off-topic, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://thetvdb.com/series/lisboa-azul/episodes/7429933",
+      "firstSeen": "2026-09-14T14:05:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T14:05:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TheTVDB episode listing for a different series, \"Lisboa Azul\" (not Las Azules). Surfaced only as a broad-query match on the similar title.",
+      "history": [
+        {
+          "attempt": "2026-09-14T14:05:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10122",
+          "note": "Relevance gate (Rule G): confirmed off-topic, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/reel/DdQF0qKqd9g",
+      "firstSeen": "2026-09-14T14:05:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T14:05:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Instagram reel from @anabreco (personal/influencer account) about a podcast interview with artist Chui Navarro (career, regional identity, personal growth). No mention of Las Azules or Women in Blue anywhere in the post; surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-14T14:05:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10122",
+          "note": "Relevance gate (Rule G): confirmed off-topic, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/en/digital/apple-tv-sets-august-return-for-las-azules-season-two",
+      "firstSeen": "2026-09-14T14:05:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T14:05:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "This URL redirects/canonicalizes to https://senalnews.com/en/digital/apple-tv-to-launch-spanish-language-women-in-blue-second-season-in-august (verified via Firecrawl scrape: sourceURL vs og:url/canonical url both resolve to the same article, identical title/date/outlet), which is already present in data.json (Senal News, 'Apple TV to launch Spanish-language Women in Blue second season in August', Mar 26, 2026). Same document under an alternate URL slug, not new coverage.",
+      "history": [
+        {
+          "attempt": "2026-09-14T14:05:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10122",
+          "note": "Firecrawl scrape resolved canonical URL; confirmed duplicate of existing data.json entry."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-14T12:00:42Z"
