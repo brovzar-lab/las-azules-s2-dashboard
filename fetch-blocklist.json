@@ -7551,7 +7551,147 @@
           "note": "Confirmed off-topic false positive per Rule G; page fetched successfully and contains no mention of Las Azules / Women in Blue."
         }
       ]
+    },
+    {
+      "url": "http://www.thefutoncritic.com/news/2026/09/15/acorn-tvs-culinary-mystery-series-recipes-for-love-and-murder-bubbles-up-for-season-two",
+      "firstSeen": "2026-09-14T08:06:56.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T08:06:56.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TheFutonCritic breaking-news post about Acorn TV's culinary mystery series 'Recipes for Love and Murder' being renewed for a second season. No mention of Las Azules or Women in Blue anywhere on the page; surfaced only as a broad Exa query match on generic 'season two' terms.",
+      "history": [
+        {
+          "attempt": "2026-09-14T08:06:56.000Z",
+          "method": "WebFetch (failed, ECONNREFUSED) then Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10093",
+          "note": "Firecrawl scrape succeeded; confirmed page is about a different show (Acorn TV's Recipes for Love and Murder), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://cincodias.elpais.com/smartlife/smart-tv/2026-09-14/estrenos-plataformas-semana-14-septiembre-2026.html",
+      "firstSeen": "2026-09-14T08:06:56.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T08:06:56.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Cinco Dias (El Pais) 'Smart TV' weekly streaming-premieres roundup for the week of Sept 14, 2026. Full article body checked (14,167 chars markdown) and contains no mention of 'Las Azules', 'azules', or 'Women in Blue' anywhere; this week's roundup does not include the show. Surfaced only as a broad-query match on generic Apple TV premiere terms.",
+      "history": [
+        {
+          "attempt": "2026-09-14T08:06:56.000Z",
+          "method": "WebFetch (failed, tool could not fetch domain) then Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10093",
+          "note": "Firecrawl scrape succeeded; full body searched for 'azul', zero matches."
+        }
+      ]
+    },
+    {
+      "url": "https://deadline.com/2026/09/the-walsh-sisters-renewed-for-season-2-rte-bbc-stan-1237100622/",
+      "firstSeen": "2026-09-14T08:06:56.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T08:06:56.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Deadline article about 'The Walsh Sisters', an RTE/BBC/Stan series renewed for season 2. No mention of Las Azules or Women in Blue anywhere in the article. Surfaced only as a broad-query match on generic 'renewed for season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-09-14T08:06:56.000Z",
+          "method": "WebFetch (402 via tollbit paywall gateway) then Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10093",
+          "note": "Firecrawl scrape succeeded; confirmed article is about a different show (The Walsh Sisters), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.dizibox.live/diziler/dead-ahead/",
+      "firstSeen": "2026-09-14T08:06:56.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T08:06:56.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Dizibox.live catalog page for the unrelated series 'Dead Ahead'. The only occurrences of 'azules' on the page are sidebar catalog navigation links to the site's separate 'Las Azules' listing page (a different URL, not this one); the fetched page itself is about Dead Ahead and contains no editorial content about Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-09-14T08:06:56.000Z",
+          "method": "WebFetch (403) then Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10093",
+          "note": "Firecrawl scrape succeeded (449KB body); confirmed page content is about Dead Ahead, with Las Azules appearing only in an unrelated A-Z catalog sidebar link list."
+        }
+      ]
+    },
+    {
+      "url": "https://www.filmaffinity.com/us/pro-reviews.php?movie-id=786793",
+      "firstSeen": "2026-09-14T08:06:56.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T08:06:56.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "FilmAffinity 'Pro Reviews' page for Women in Blue / Las Azules: a table of links to external critic reviews (Media | Author | Review columns) plus boilerplate metadata (cast, rating, one-paragraph synopsis identical to the site's main title page). Stripping the review-links table and metadata leaves no original written editorial content about the show on this page itself. Rule F.",
+      "history": [
+        {
+          "attempt": "2026-09-14T08:06:56.000Z",
+          "method": "WebFetch (403) then Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10093",
+          "note": "Firecrawl scrape succeeded; confirmed page is a professional-reviews aggregator table, not original editorial."
+        }
+      ]
+    },
+    {
+      "url": "https://www.marca.com/ciclismo/vuelta-espana/2026/09/14/claves-exitosa-estrategia-pasarse-rojo-enric-dejamos-azules-movistar-nunca.html",
+      "firstSeen": "2026-09-14T08:06:56.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T08:06:56.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Marca cycling article about Vuelta a Espana rider Enric Mas's team-color strategy (leaving the Movistar 'azules'/blues jersey for the leader's red jersey). 'Azules' refers to Movistar team kit colors, not the TV show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on 'azules' as a bare keyword.",
+      "history": [
+        {
+          "attempt": "2026-09-14T08:06:56.000Z",
+          "method": "WebFetch (failed, tool could not fetch domain) then Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10093",
+          "note": "Firecrawl scrape succeeded; confirmed article is about Vuelta a Espana cycling, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvazteca.com/aztecauno/la-granja-vip/en-el-corral-las-verdades-ivonne-montero-y-natalia-alconcer-se-sinceran/",
+      "firstSeen": "2026-09-14T08:06:56.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T08:06:56.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Azteca article about reality competition show 'La Granja VIP' (contestants Ivonne Montero and Natalia Alconcer). No mention of Las Azules or Women in Blue anywhere in the article. Surfaced only as a broad-query match on generic Mexican TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-14T08:06:56.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10093",
+          "note": "WebFetch succeeded; confirmed article is about a different show (La Granja VIP), unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-14T06:05:12Z"
+  "lastUpdated": "2026-09-14T08:06:56.000Z"
 }
