@@ -7691,6 +7691,50 @@
           "note": "WebFetch succeeded; confirmed article is about a different show (La Granja VIP), unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.facebook.com/univisionfamosos/posts/ang%C3%A9lica-vale-revel%C3%B3-que-su-hija-fue-quien-la-anim%C3%B3-para-que-se-separara-de-su-p/1535210305307097/",
+      "firstSeen": "2026-09-14T10:06:31Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T10:06:31Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Univision Famosos Facebook post about Angelica Vale revealing her daughter encouraged her to separate from her partner. Purely celebrity personal-life content; no mention of Las Azules or Women in Blue anywhere in the post. Surfaced only as a broad-query match on the Spanish-language Exa query (Barbara Mori interview Las Azules season 2).",
+      "history": [
+        {
+          "attempt": "2026-09-14T10:06:31Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10106",
+          "note": "WebFetch succeeded; confirmed post is about Angelica Vale personal life, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/@lagoa.nerd/video/7384187833336024326",
+      "firstSeen": "2026-09-14T10:06:31Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-14T10:06:31Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-14T10:06:31Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10106",
+          "note": "WebFetch returned only TikTok generic app-shell header (\"TikTok - Make Your Day\"), no account/video metadata. Empty-success, treated as failure."
+        },
+        {
+          "attempt": "2026-09-14T10:06:31Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10106",
+          "note": "Firecrawl returned a blanket \"we do not support this site\" refusal for tiktok.com. Full-chain failure, failCount now 1. Could not determine account type (Rule B) or content relevance."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-14T08:06:56.000Z"
