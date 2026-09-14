@@ -8022,7 +8022,50 @@
           "note": "Firecrawl scrape resolved canonical URL; confirmed duplicate of existing data.json entry."
         }
       ]
+    },
+    {
+      "url": "https://www.instagram.com/normantorregrosa/",
+      "firstSeen": "2026-09-14T20:00:00Z",
+      "failCount": 1,
+      "lastStatus": 429,
+      "lastAttempt": "2026-09-14T20:00:00Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-14T20:00:00Z",
+          "method": "WebFetch",
+          "status": 429,
+          "issue": "LEMA-10147"
+        },
+        {
+          "attempt": "2026-09-14T20:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10147",
+          "note": "Firecrawl returned 'we do not support this site' refusal for instagram.com. Full-chain failure."
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/reel/DdQrt3tCbhA/",
+      "firstSeen": "2026-09-14T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Instagram reel posted by @cinemien, caption 'The WOMEN in BLUE LIGHTS💙'. Content is a motherhood/autonomy campaign message ('we believe there should be no mandate to become a mother'), unrelated to the Las Azules/Women in Blue show; surfaced only because of the 'women in blue' phrase pun. Not media coverage of the show. Rule G.",
+      "history": [
+        {
+          "attempt": "2026-09-14T20:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10147",
+          "note": "Fetched successfully; confirmed off-topic content (unrelated cinemien campaign post), classified Rule G."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-14T12:00:42Z"
+  "lastUpdated": "2026-09-14T20:00:00Z"
 }
