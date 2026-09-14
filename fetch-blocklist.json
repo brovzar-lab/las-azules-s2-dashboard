@@ -7219,7 +7219,107 @@
           "note": "Confirmed pure episode-list metadata table (title/air-date/synopsis/rating per row), no standalone editorial prose. Rule F applied."
         }
       ]
+    },
+    {
+      "url": "https://www.macobserver.com/appletv/last-seen-episode-3-release-date-what-to-expect/",
+      "firstSeen": "2026-09-14T00:03:50Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T00:03:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "MacObserver article titled \"Last Seen Episode 3 Release Date and What to Expect After Episode 2\" -- about the unrelated Apple TV+ show \"Last Seen\", not Las Azules/Women in Blue. Body fetch confirms no mention of Las Azules or Women in Blue anywhere in the page. Surfaced only as a broad-query match on the macobserver.com/appletv/ domain.",
+      "history": [
+        {
+          "attempt": "2026-09-14T00:03:50Z",
+          "method": "curl-verify",
+          "status": 200,
+          "issue": "LEMA-10042",
+          "note": "Body fetch confirmed off-topic (different show, \"Last Seen\"); no mention of Las Azules/Women in Blue in page text."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/groups/286671191854732/posts/2541569209698241/",
+      "firstSeen": "2026-09-14T00:03:50Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T00:03:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook group post about a Night Crew radio show (WKJB/WPRA) interview with Gaby Miranda, discussing her denial of appearing as guest DJ for \"the Indios\" and an Indios representative named Dion. No mention of Las Azules, Women in Blue, B\u00e1rbara Mori, or Apple TV anywhere in the post; surfaced only as a broad-query match on \"regreso\"/entertainment terms.",
+      "history": [
+        {
+          "attempt": "2026-09-14T00:03:50Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10042",
+          "note": "WebFetch succeeded; confirmed post is about an unrelated radio interview, no connection to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/EsTrendingMujer/posts/la-edad-no-marca-un-l%C3%ADmite-para-dejar-de-seguir-luciendo-bella-y-fabulosas-y-est/1502596885227230/",
+      "firstSeen": "2026-09-14T00:03:50Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T00:03:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook page \"EsTrendingMujer\" post about celebrity women aging gracefully (\"La edad no marca un l\u00edmite...\"), a generic celebrity-beauty listicle. No mention of Las Azules, Women in Blue, or Apple TV anywhere in the post; surfaced only as a broad-query match on \"famosas\"/celebrity terms.",
+      "history": [
+        {
+          "attempt": "2026-09-14T00:03:50Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10042",
+          "note": "WebFetch succeeded; confirmed post is about unrelated celebrity aging content, no connection to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/groups/5465368560165206/posts/28230693453206060/",
+      "firstSeen": "2026-09-14T00:03:50Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T00:03:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook group post about Argentine singer Cazzu and fan anticipation for her comeback (\"su regreso podr\u00eda ser el m\u00e1s esperado\"). No mention of Las Azules, Women in Blue, or Apple TV anywhere in the post; surfaced only as a broad-query match on \"regreso\"/entertainment terms.",
+      "history": [
+        {
+          "attempt": "2026-09-14T00:03:50Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10042",
+          "note": "WebFetch succeeded; confirmed post is about Cazzu (singer) comeback, no connection to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.abc.es/play/series/noticias/marusia-serie-marinos-telecinco-cuenta-asesoramiento-armada-20260908012418-nt.html",
+      "firstSeen": "2026-09-14T00:03:50Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T00:03:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ABC.es article titled \"'Marus\u00eda', la serie sobre marinos que cuenta con el asesoramiento de la Armada Espa\u00f1ola\" -- about an unrelated Spanish Navy drama series \"Marus\u00eda\", not Las Azules/Women in Blue. Body fetch confirms no mention of Las Azules or Women in Blue anywhere in the page. Surfaced only as a broad-query match on generic Spanish-language \"serie\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-14T00:03:50Z",
+          "method": "curl-verify",
+          "status": 200,
+          "issue": "LEMA-10042",
+          "note": "Body fetch confirmed off-topic (different show, \"Marus\u00eda\"); no mention of Las Azules/Women in Blue in page text."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-13T22:06:08.000Z"
+  "lastUpdated": "2026-09-14T00:03:50Z"
 }
