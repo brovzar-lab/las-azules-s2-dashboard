@@ -516,7 +516,7 @@
           "method": "WebFetch",
           "status": 200,
           "issue": "LEMA-9637",
-          "note": "Real post content returned (CTT EXP & RENTALS BTS post about Las Azules S2 cinematography equipment, ARRI Alexa 35, cast including B\u00e1rbara Mori and Leonardo Sbaraglia). No publish date anywhere in the body or via corroborating search. Not added to data.json: schema requires a real ts/date, fabricating one would violate the no-fabrication guardrail. Candidate remains available for a future run if a dateable source surfaces."
+          "note": "Real post content returned (CTT EXP & RENTALS BTS post about Las Azules S2 cinematography equipment, ARRI Alexa 35, cast including Bárbara Mori and Leonardo Sbaraglia). No publish date anywhere in the body or via corroborating search. Not added to data.json: schema requires a real ts/date, fabricating one would violate the no-fabrication guardrail. Candidate remains available for a future run if a dateable source surfaces."
         },
         {
           "attempt": "2026-09-03T10:10:00Z",
@@ -790,7 +790,7 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "TVmaze biography/filmography database page for B\u00e1rbara Mori, surfaced during Pass 2 general web sweep (LEMA-9656) while checking for new interview/coverage content. WebFetch returned 200 with real content (bio, filmography including Las Azules) but no publish/update date. Firecrawl scrape confirmed: full markdown retrieved (bio text plus cast-credit list with individual past episode air dates for Las Azules Season 1, e.g. Sep 25/18/11/4, 2024) but no page-level publish/update date field anywhere in body or metadata. This is an evergreen actor biography/database page, not a dated article, and its Las Azules credit references Season 1 (2024) episodes only, not new Season 2 coverage. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "skipNote": "TVmaze biography/filmography database page for Bárbara Mori, surfaced during Pass 2 general web sweep (LEMA-9656) while checking for new interview/coverage content. WebFetch returned 200 with real content (bio, filmography including Las Azules) but no publish/update date. Firecrawl scrape confirmed: full markdown retrieved (bio text plus cast-credit list with individual past episode air dates for Las Azules Season 1, e.g. Sep 25/18/11/4, 2024) but no page-level publish/update date field anywhere in body or metadata. This is an evergreen actor biography/database page, not a dated article, and its Las Azules credit references Season 1 (2024) episodes only, not new Season 2 coverage. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
       "history": [
         {
           "attempt": "2026-09-04T02:00:50Z",
@@ -884,7 +884,7 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "Surfaced as a candidate via Pass 2 EN sweep (#LasAzules B\u00e1rbara Mori query). This is B\u00e1rbara Mori's general Wikipedia biography, not a news article about Las Azules Season 2 specifically, and Wikipedia pages carry no fixed publish date -- the page footer only shows a last-edited timestamp (2026-08-24T01:22Z at time of check), which is a revision artifact, not a sourced publication date. WebFetch confirmed no news-event publish date exists on the page (continually-updated encyclopedia entry, filmography extends through 2026). Firecrawl scrape was also attempted per the Rule A mandate and returned the full page content (infobox, born 1978-02-02 Montevideo, etc.) with no article:published_time or equivalent field, confirming no dateable publish event exists by either method. Per LEMA-9641/9642 Rule A, no proxy/approximated date may be substituted, so this is not added to data.json. reviewable=true in case a specific dateable Las Azules S2 news item is later found citing this page.",
+      "skipNote": "Surfaced as a candidate via Pass 2 EN sweep (#LasAzules Bárbara Mori query). This is Bárbara Mori's general Wikipedia biography, not a news article about Las Azules Season 2 specifically, and Wikipedia pages carry no fixed publish date -- the page footer only shows a last-edited timestamp (2026-08-24T01:22Z at time of check), which is a revision artifact, not a sourced publication date. WebFetch confirmed no news-event publish date exists on the page (continually-updated encyclopedia entry, filmography extends through 2026). Firecrawl scrape was also attempted per the Rule A mandate and returned the full page content (infobox, born 1978-02-02 Montevideo, etc.) with no article:published_time or equivalent field, confirming no dateable publish event exists by either method. Per LEMA-9641/9642 Rule A, no proxy/approximated date may be substituted, so this is not added to data.json. reviewable=true in case a specific dateable Las Azules S2 news item is later found citing this page.",
       "history": [
         {
           "attempt": "2026-09-04T06:01:30Z",
@@ -1452,7 +1452,7 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "IMDbPro title/episode page for '\u00c1ngeles' (S1E5 of Women in Blue, 2024) \u2014 a cast/episode database catalog page, not a news article. WebFetch returned 403 (subscriber-gated). Firecrawl scrape succeeded (200) but returned only IMDbPro's episode/cast listing markup with no article body and no sourced publish date for any news event. Consistent with other imdb.com/tvmaze/justwatch reference/catalog pages already in this ledger under editorial_undateable. Found via LEMA-9760 sweep.",
+      "skipNote": "IMDbPro title/episode page for 'Ángeles' (S1E5 of Women in Blue, 2024) — a cast/episode database catalog page, not a news article. WebFetch returned 403 (subscriber-gated). Firecrawl scrape succeeded (200) but returned only IMDbPro's episode/cast listing markup with no article body and no sourced publish date for any news event. Consistent with other imdb.com/tvmaze/justwatch reference/catalog pages already in this ledger under editorial_undateable. Found via LEMA-9760 sweep.",
       "history": [
         {
           "attempt": "2026-09-06T10:00:00Z",
@@ -1888,7 +1888,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_redundant_syndication",
-      "skipNote": "Surfaced via Pass 2 general web sweep. This is TVMEG.COM's tag-archive page, which surfaces the same interview with B\u00e1rbara Mori, Ximena Sari\u00f1ana and Fernando Rovzar already tracked in data.json at the canonical article URL https://tvmeg.com/index.php/2026/08/08/rovzar/ (same outlet, same interview content). WebFetch and Firecrawl both confirmed this is the identical underlying post/interview, just an archive/tag-listing view rather than the article permalink. Not new coverage, excluded as a duplicate of already-present content from the same outlet.",
+      "skipNote": "Surfaced via Pass 2 general web sweep. This is TVMEG.COM's tag-archive page, which surfaces the same interview with Bárbara Mori, Ximena Sariñana and Fernando Rovzar already tracked in data.json at the canonical article URL https://tvmeg.com/index.php/2026/08/08/rovzar/ (same outlet, same interview content). WebFetch and Firecrawl both confirmed this is the identical underlying post/interview, just an archive/tag-listing view rather than the article permalink. Not new coverage, excluded as a duplicate of already-present content from the same outlet.",
       "history": [
         {
           "attempt": "2026-09-07T04:00:46Z",
@@ -1970,7 +1970,7 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "Surfaced via Pass 3 Firecrawl FR-market search. AlloCin\u00e9 general show-profile/database page for Las Azules (synopsis, cast, ratings, viewing options), not a dated news article. The only dated element on the page is an unrelated hyperlink to a separate 2025-09-19 'canceled and renewed series' roundup article, not this page's own publish date. Firecrawl scrape (per Rule A mandate) confirmed no publish/update date field in metadata. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "skipNote": "Surfaced via Pass 3 Firecrawl FR-market search. AlloCiné general show-profile/database page for Las Azules (synopsis, cast, ratings, viewing options), not a dated news article. The only dated element on the page is an unrelated hyperlink to a separate 2025-09-19 'canceled and renewed series' roundup article, not this page's own publish date. Firecrawl scrape (per Rule A mandate) confirmed no publish/update date field in metadata. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
       "history": [
         {
           "attempt": "2026-09-07T04:00:46Z",
@@ -2413,7 +2413,7 @@
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-13T06:00:00Z",
+      "lastAttempt": "2026-09-14T02:11:49Z",
       "history": [
         {
           "attempt": "2026-09-09T10:03:05.000Z",
@@ -2456,6 +2456,13 @@
           "status": 200,
           "issue": "LEMA-10027",
           "note": "Surfaced again this run via Firecrawl Pass 3 (DE and FR queries) as a &vl=en-US query-string variant. Confirmed duplicate of existing data.json entry (Jul 21, 2026 Apple TV trailer); not added as a separate entry. Same recurring near-miss pattern as LEMA-9865/LEMA-9900/LEMA-10008/LEMA-10013."
+        },
+        {
+          "attempt": "2026-09-14T02:11:49Z",
+          "method": "YouTube Data API (videos.list)",
+          "status": 200,
+          "issue": "LEMA-10043",
+          "note": "Surfaced again this run via Firecrawl Pass 3 (BR/DE/FR queries) as a &vl=en-US query-string variant. Confirmed duplicate of existing data.json entry (Jul 21, 2026 Apple TV trailer); not added as a separate entry. Same recurring near-miss pattern as LEMA-9865/LEMA-9900/LEMA-10008/LEMA-10013/LEMA-10027 (tracked URL-normalization gap, LEMA-9902)."
         }
       ]
     },
@@ -2516,7 +2523,7 @@
       ]
     },
     {
-      "url": "https://www.justwatch.com/bg/\u0441\u0435\u0440\u0438\u0430\u043b/las-azules",
+      "url": "https://www.justwatch.com/bg/сериал/las-azules",
       "firstSeen": "2026-09-09T16:05:00.000Z",
       "failCount": 0,
       "lastStatus": 200,
@@ -2525,7 +2532,7 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "JustWatch Bulgaria locale streaming listing page. Both WebFetch and Firecrawl attempted per Rule A; only a crawler 'last checked' timestamp present (\"\u041f\u0440\u043e\u0432\u0435\u0440\u0438\u0445\u043c\u0435 \u0437\u0430 \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438... \u043d\u0430 8 \u0441\u0435\u043f\u0442\u0435\u043c\u0432\u0440\u0438 2026\"), no real publish date. Skipped as editorial_undateable, reviewable=true.",
+      "skipNote": "JustWatch Bulgaria locale streaming listing page. Both WebFetch and Firecrawl attempted per Rule A; only a crawler 'last checked' timestamp present (\"Проверихме за актуализации... на 8 септември 2026\"), no real publish date. Skipped as editorial_undateable, reviewable=true.",
       "history": [
         {
           "attempt": "2026-09-09T16:05:00.000Z",
@@ -2715,7 +2722,7 @@
           "method": "WebFetch then Firecrawl scrape",
           "status": "full-chain-failure",
           "issue": "LEMA-9878",
-          "note": "New candidate from Pass 2 (episodio 5/6 cr\u00edtica search). WebFetch returned only generic TikTok shell content, no date. Firecrawl scrape returned 403 'we do not support this site'. Full-chain failure."
+          "note": "New candidate from Pass 2 (episodio 5/6 crítica search). WebFetch returned only generic TikTok shell content, no date. Firecrawl scrape returned 403 'we do not support this site'. Full-chain failure."
         }
       ]
     },
@@ -3390,7 +3397,7 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "Discovered via Pass 2 web sweep on LEMA-9898. 'Las Azules | Apple TV+' YouTube playlist owned by channel 'Apple M\u00e9xico'. WebFetch on the playlist page returned only generic YouTube chrome (no title/date/video list -- SPA content not rendered). Firecrawl scrape returned a 401 bot-wall error page, no usable content. YouTube Data API (playlists.list) was consulted directly and returned publishedAt=2024-10-09T17:51:01Z, but that is the playlist container's creation date from the Season 1 era, not a publish date tied to any Season 2 coverage event -- same evergreen-container problem already established for tvmaze.com/justwatch.com entries in this ledger. Per Rule A, no real sourced publish date exists for this URL as a piece of Season 2 coverage after both WebFetch and Firecrawl were attempted. Not added to data.json. reviewable=true for a future manual lookup (e.g. if a specific new video within the playlist is later identified with its own real publish date, that video's own URL would be evaluated separately). Prior note (LEMA-9767): Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Official Apple TV+ YouTube playlist page for the show. WebFetch returned only YouTube footer/nav boilerplate, no playlist creation date or content. Firecrawl scrape also attempted (status 200, success): full page metadata (og:, twitter: tags) returned with no publishedTime/date field. Both methods exhausted, no date recoverable.",
+      "skipNote": "Discovered via Pass 2 web sweep on LEMA-9898. 'Las Azules | Apple TV+' YouTube playlist owned by channel 'Apple México'. WebFetch on the playlist page returned only generic YouTube chrome (no title/date/video list -- SPA content not rendered). Firecrawl scrape returned a 401 bot-wall error page, no usable content. YouTube Data API (playlists.list) was consulted directly and returned publishedAt=2024-10-09T17:51:01Z, but that is the playlist container's creation date from the Season 1 era, not a publish date tied to any Season 2 coverage event -- same evergreen-container problem already established for tvmaze.com/justwatch.com entries in this ledger. Per Rule A, no real sourced publish date exists for this URL as a piece of Season 2 coverage after both WebFetch and Firecrawl were attempted. Not added to data.json. reviewable=true for a future manual lookup (e.g. if a specific new video within the playlist is later identified with its own real publish date, that video's own URL would be evaluated separately). Prior note (LEMA-9767): Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Official Apple TV+ YouTube playlist page for the show. WebFetch returned only YouTube footer/nav boilerplate, no playlist creation date or content. Firecrawl scrape also attempted (status 200, success): full page metadata (og:, twitter: tags) returned with no publishedTime/date field. Both methods exhausted, no date recoverable.",
       "history": [
         {
           "attempt": "2026-09-06T16:00:00Z",
@@ -3612,7 +3619,7 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9922. Japanese streaming-availability aggregator page (1Screen/ciatr.jp) for Women in Blue Season 2, listing Apple TV+ subscription and free-trial info with affiliate links to multiple JP streaming services. WebFetch failed (403 bot wall); Firecrawl scrape succeeded (200) and confirmed the only date-like field on the page is a '\u6700\u7d42\u66f4\u65b0' (last updated) stamp (2026\u5e749\u670810\u65e5\u6700\u7d42\u66f4\u65b0), which is a crawler/update-log artifact, not a real sourced editorial publish date. Same per-title evergreen-catalog pattern already established in this ledger for themoviedb.org/tv/253983-las-azules/season/2, tvmaze.com/shows/62238/las-azules/episodeguide, mijnserie.nl/las-azules, and spin-off.fr (episode guide entries). Per Rule A, not added to data.json. reviewable=true for a future manual lookup.",
+      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9922. Japanese streaming-availability aggregator page (1Screen/ciatr.jp) for Women in Blue Season 2, listing Apple TV+ subscription and free-trial info with affiliate links to multiple JP streaming services. WebFetch failed (403 bot wall); Firecrawl scrape succeeded (200) and confirmed the only date-like field on the page is a '最終更新' (last updated) stamp (2026年9月10日最終更新), which is a crawler/update-log artifact, not a real sourced editorial publish date. Same per-title evergreen-catalog pattern already established in this ledger for themoviedb.org/tv/253983-las-azules/season/2, tvmaze.com/shows/62238/las-azules/episodeguide, mijnserie.nl/las-azules, and spin-off.fr (episode guide entries). Per Rule A, not added to data.json. reviewable=true for a future manual lookup.",
       "history": [
         {
           "attempt": "2026-09-10T20:05:48Z",
@@ -3782,7 +3789,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Apple Music concert listing page for Los \u00c1ngeles Azules, a Mexican musical group, for a September 6, 2026 show at Harrah's Resort SoCal. Unrelated to the TV series Las Azules; surfaced only as a broad-query match on the word \"Azules\".",
+      "skipNote": "Apple Music concert listing page for Los Ángeles Azules, a Mexican musical group, for a September 6, 2026 show at Harrah's Resort SoCal. Unrelated to the TV series Las Azules; surfaced only as a broad-query match on the word \"Azules\".",
       "history": [
         {
           "attempt": "2026-09-11T00:05:26Z",
@@ -3822,7 +3829,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "El Peri\u00f3dico Digital article about \"Las hijas de la criada\", an Antena 3 series adapted from Sonsoles Onega's novel. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Las ...\" TV-series terms.",
+      "skipNote": "El Periódico Digital article about \"Las hijas de la criada\", an Antena 3 series adapted from Sonsoles Onega's novel. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Las ...\" TV-series terms.",
       "history": [
         {
           "attempt": "2026-09-11T00:05:26Z",
@@ -3922,14 +3929,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Apple Music concert listing for Los \u00c1ngeles Azules (Mexican cumbia band, unrelated to the TV series) Val Air Room tour date. Classified from Exa search result title alone (unambiguous: concert ticketing page for a music act, not the show); not fetched, same posture as the LEMA-9940 precedent for other Los \u00c1ngeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\".",
+      "skipNote": "Apple Music concert listing for Los Ángeles Azules (Mexican cumbia band, unrelated to the TV series) Val Air Room tour date. Classified from Exa search result title alone (unambiguous: concert ticketing page for a music act, not the show); not fetched, same posture as the LEMA-9940 precedent for other Los Ángeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\".",
       "history": [
         {
           "attempt": "2026-09-11T02:03:51Z",
           "method": "title-only (Exa metadata)",
           "status": null,
           "issue": "LEMA-9944",
-          "note": "Apple Music concert listing for Los \u00c1ngeles Azules (Mexican cumbia band, unrelated to the TV series) Val Air Room tour date. Classified from Exa search result title alone (unambiguous: concert ticketing page for a music act, not the show); not fetched, same posture as the LEMA-9940 precedent for other Los \u00c1ngeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\"."
+          "note": "Apple Music concert listing for Los Ángeles Azules (Mexican cumbia band, unrelated to the TV series) Val Air Room tour date. Classified from Exa search result title alone (unambiguous: concert ticketing page for a music act, not the show); not fetched, same posture as the LEMA-9940 precedent for other Los Ángeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\"."
         }
       ]
     },
@@ -3942,14 +3949,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Gigora event listing for Los \u00c1ngeles Azules (Mexican cumbia band) concert at Yaamava Theater, Sep 13 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\".",
+      "skipNote": "Gigora event listing for Los Ángeles Azules (Mexican cumbia band) concert at Yaamava Theater, Sep 13 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\".",
       "history": [
         {
           "attempt": "2026-09-11T02:03:51Z",
           "method": "title-only (Exa metadata)",
           "status": null,
           "issue": "LEMA-9944",
-          "note": "Gigora event listing for Los \u00c1ngeles Azules (Mexican cumbia band) concert at Yaamava Theater, Sep 13 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\"."
+          "note": "Gigora event listing for Los Ángeles Azules (Mexican cumbia band) concert at Yaamava Theater, Sep 13 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\"."
         }
       ]
     },
@@ -3962,14 +3969,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Gigsty concert ticket listing for Los \u00c1ngeles Azules (Mexican cumbia band) in Las Vegas, NV, Sep 12 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\".",
+      "skipNote": "Gigsty concert ticket listing for Los Ángeles Azules (Mexican cumbia band) in Las Vegas, NV, Sep 12 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\".",
       "history": [
         {
           "attempt": "2026-09-11T02:03:51Z",
           "method": "title-only (Exa metadata)",
           "status": null,
           "issue": "LEMA-9944",
-          "note": "Gigsty concert ticket listing for Los \u00c1ngeles Azules (Mexican cumbia band) in Las Vegas, NV, Sep 12 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\"."
+          "note": "Gigsty concert ticket listing for Los Ángeles Azules (Mexican cumbia band) in Las Vegas, NV, Sep 12 2026. Unrelated to the TV series Las Azules. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched. Surfaced only as a broad-query match on \"Azules\"."
         }
       ]
     },
@@ -3982,14 +3989,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Apple Music concert listing for Los \u00c1ngeles Azules (Mexican cumbia band, unrelated to the TV series) 2026 tour date. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched, same posture as the LEMA-9940 precedent for other Los \u00c1ngeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\".",
+      "skipNote": "Apple Music concert listing for Los Ángeles Azules (Mexican cumbia band, unrelated to the TV series) 2026 tour date. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched, same posture as the LEMA-9940 precedent for other Los Ángeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\".",
       "history": [
         {
           "attempt": "2026-09-11T02:03:51Z",
           "method": "title-only (Exa metadata)",
           "status": null,
           "issue": "LEMA-9944",
-          "note": "Apple Music concert listing for Los \u00c1ngeles Azules (Mexican cumbia band, unrelated to the TV series) 2026 tour date. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched, same posture as the LEMA-9940 precedent for other Los \u00c1ngeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\"."
+          "note": "Apple Music concert listing for Los Ángeles Azules (Mexican cumbia band, unrelated to the TV series) 2026 tour date. Classified from Exa search result title alone (unambiguous concert ticketing page); not fetched, same posture as the LEMA-9940 precedent for other Los Ángeles Azules concert-listing false positives. Surfaced only as a broad-query match on the word \"Azules\"."
         }
       ]
     },
@@ -4096,7 +4103,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Article about 'La timonel' (Netflix), a wholly different show, discussing whether it will get a season 2 on Netflix. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on 'temporada 2'/Netflix terms. WebFetch was blocked entirely for this domain; Firecrawl scrape succeeded but returned the site's dynamic '\u00faltimas fichas' sidebar widget (unrelated video-game listing) rather than the article body due to client-side rendering, so confirmation of topic relies on the original WebSearch result snippet, which unambiguously identifies the article as being about 'La timonel'.",
+      "skipNote": "Article about 'La timonel' (Netflix), a wholly different show, discussing whether it will get a season 2 on Netflix. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on 'temporada 2'/Netflix terms. WebFetch was blocked entirely for this domain; Firecrawl scrape succeeded but returned the site's dynamic 'últimas fichas' sidebar widget (unrelated video-game listing) rather than the article body due to client-side rendering, so confirmation of topic relies on the original WebSearch result snippet, which unambiguously identifies the article as being about 'La timonel'.",
       "history": [
         {
           "attempt": "2026-09-11T06:06:06Z",
@@ -4196,7 +4203,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Page is about Ester Exp\u00f3sito starring in an unrelated Prime Video romantic thriller. No connection to Las Azules / Women in Blue; surfaced only as a broad-query false positive on the sweep query set.",
+      "skipNote": "Page is about Ester Expósito starring in an unrelated Prime Video romantic thriller. No connection to Las Azules / Women in Blue; surfaced only as a broad-query false positive on the sweep query set.",
       "history": [
         {
           "attempt": "2026-09-11T08:03:33.671Z",
@@ -4236,7 +4243,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Page is about \"Los a\u00f1os azules\" (2017), an unrelated Mexican drama film directed by Sof\u00eda G\u00f3mez C\u00f3rdova. Title-similarity false positive, not the show Las Azules.",
+      "skipNote": "Page is about \"Los años azules\" (2017), an unrelated Mexican drama film directed by Sofía Gómez Córdova. Title-similarity false positive, not the show Las Azules.",
       "history": [
         {
           "attempt": "2026-09-11T08:03:33.671Z",
@@ -4256,7 +4263,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Page is about \"Los \u00c1ngeles Azules: Cumbia Sinf\u00f3nica\" (2014), a concert film for the Mexican band Los \u00c1ngeles Azules. Different entity from the show Las Azules; name-similarity false positive.",
+      "skipNote": "Page is about \"Los Ángeles Azules: Cumbia Sinfónica\" (2014), a concert film for the Mexican band Los Ángeles Azules. Different entity from the show Las Azules; name-similarity false positive.",
       "history": [
         {
           "attempt": "2026-09-11T08:03:33.671Z",
@@ -4296,7 +4303,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Article is about Lali Esp\u00f3sito's trailer for \"Glaxo\" and her return to San Sebasti\u00e1n. No connection to Las Azules; broad-query false positive.",
+      "skipNote": "Article is about Lali Espósito's trailer for \"Glaxo\" and her return to San Sebastián. No connection to Las Azules; broad-query false positive.",
       "history": [
         {
           "attempt": "2026-09-11T08:03:33.671Z",
@@ -4356,7 +4363,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
-      "skipNote": "EXA FM (radio station, editorial/outlet account) interview with B\u00e1rbara Mori and Fernando Rovzar about Las Azules (\"De Rub\u00ed a Las Azules\"), passes Rule B relevance gate. No publish date visible via WebFetch. Firecrawl scrape attempted and returned the documented facebook.com blanket refusal (\"we do not support this site\"), a valid exhaustion of the method per Rule A. No real publish date recoverable by either method.",
+      "skipNote": "EXA FM (radio station, editorial/outlet account) interview with Bárbara Mori and Fernando Rovzar about Las Azules (\"De Rubí a Las Azules\"), passes Rule B relevance gate. No publish date visible via WebFetch. Firecrawl scrape attempted and returned the documented facebook.com blanket refusal (\"we do not support this site\"), a valid exhaustion of the method per Rule A. No real publish date recoverable by either method.",
       "reviewable": true,
       "history": [
         {
@@ -4667,7 +4674,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "CNN en Espa\u00f1ol article listing nominees for the 78th Primetime Emmy Awards (canonicalizes to cnnespanol.cnn.com/2026/09/10/entretenimiento/emmy-2026-nominaciones-premios-categorias-orix). Covers \"The Pitt\", \"Hacks\", \"Widow's Bay\", \"Pluribus\" etc. No mention of Las Azules or Women in Blue anywhere in the fetched body. Surfaced only as a broad-query match on generic \"Emmy 2026 nominaciones\" terms.",
+      "skipNote": "CNN en Español article listing nominees for the 78th Primetime Emmy Awards (canonicalizes to cnnespanol.cnn.com/2026/09/10/entretenimiento/emmy-2026-nominaciones-premios-categorias-orix). Covers \"The Pitt\", \"Hacks\", \"Widow's Bay\", \"Pluribus\" etc. No mention of Las Azules or Women in Blue anywhere in the fetched body. Surfaced only as a broad-query match on generic \"Emmy 2026 nominaciones\" terms.",
       "reviewable": false,
       "history": [
         {
@@ -4728,7 +4735,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Facebook post (account: \"Viral 3M\") about the 2001 lineup/menu for the Mexican stage production \"S\u00f3lo Para Mujeres\", a decades-old unrelated theatrical show. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic \"para mujeres\" terms.",
+      "skipNote": "Facebook post (account: \"Viral 3M\") about the 2001 lineup/menu for the Mexican stage production \"Sólo Para Mujeres\", a decades-old unrelated theatrical show. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic \"para mujeres\" terms.",
       "history": [
         {
           "attempt": "2026-09-11T20:06:14Z",
@@ -4748,7 +4755,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Facebook post (account: \"Objetivo TV\") about actress Ester Exp\u00f3sito getting emotional at a Madrid press event for her film \"Enfrentados: Marfil\". Unrelated actress and unrelated project; no mention of Las Azules or Women in Blue anywhere.",
+      "skipNote": "Facebook post (account: \"Objetivo TV\") about actress Ester Expósito getting emotional at a Madrid press event for her film \"Enfrentados: Marfil\". Unrelated actress and unrelated project; no mention of Las Azules or Women in Blue anywhere.",
       "history": [
         {
           "attempt": "2026-09-11T20:06:14Z",
@@ -4768,7 +4775,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Facebook post (account: \"TVyTLNovelas\") about a plot point in the telenovela \"Rub\u00ed\" (Las Estrellas / Vix), an unrelated show. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic Spanish-language TV drama terms.",
+      "skipNote": "Facebook post (account: \"TVyTLNovelas\") about a plot point in the telenovela \"Rubí\" (Las Estrellas / Vix), an unrelated show. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic Spanish-language TV drama terms.",
       "history": [
         {
           "attempt": "2026-09-11T20:06:14Z",
@@ -4828,7 +4835,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "TV Azteca article about reality show \"La Granja VIP\" (Niurka Marcos clarifying an on-set confrontation with Manelyk). No mention of Las Azules, Women in Blue, or B\u00e1rbara Mori; surfaced only as a broad Exa Spanish-language match.",
+      "skipNote": "TV Azteca article about reality show \"La Granja VIP\" (Niurka Marcos clarifying an on-set confrontation with Manelyk). No mention of Las Azules, Women in Blue, or Bárbara Mori; surfaced only as a broad Exa Spanish-language match.",
       "history": [
         {
           "attempt": "2026-09-11T22:04:43Z",
@@ -4848,7 +4855,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "RealityChile Facebook post about a Chilean reality-show contestant named \"B\u00e1rbara\" (unrelated to actress B\u00e1rbara Mori) crying after castmate Austin said he's interested in another contestant, Noelia. No mention of Las Azules, Women in Blue, or B\u00e1rbara Mori; surfaced only because the reality-show contestant shares the first name \"B\u00e1rbara\".",
+      "skipNote": "RealityChile Facebook post about a Chilean reality-show contestant named \"Bárbara\" (unrelated to actress Bárbara Mori) crying after castmate Austin said he's interested in another contestant, Noelia. No mention of Las Azules, Women in Blue, or Bárbara Mori; surfaced only because the reality-show contestant shares the first name \"Bárbara\".",
       "history": [
         {
           "attempt": "2026-09-11T22:04:43Z",
@@ -4868,7 +4875,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Personal Facebook post celebrating Sandra Vergara's (Colombian actress, Sof\u00eda Vergara's adoptive sister) 38th birthday. No mention of Las Azules, Women in Blue, or B\u00e1rbara Mori; surfaced only as a broad Spanish-language \"B\u00e1rbara\" match.",
+      "skipNote": "Personal Facebook post celebrating Sandra Vergara's (Colombian actress, Sofía Vergara's adoptive sister) 38th birthday. No mention of Las Azules, Women in Blue, or Bárbara Mori; surfaced only as a broad Spanish-language \"Bárbara\" match.",
       "history": [
         {
           "attempt": "2026-09-11T22:04:43Z",
@@ -4915,7 +4922,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Radio F\u00f3rmula MX post about Hugo Mejuto claiming a past romance with telenovela actor Sergio Bas\u00e1\u00f1ez. No mention of Las Azules or Women in Blue anywhere in the post. Surfaced only as a broad-query match on generic Mexican-entertainment terms.",
+      "skipNote": "Radio Fórmula MX post about Hugo Mejuto claiming a past romance with telenovela actor Sergio Basáñez. No mention of Las Azules or Women in Blue anywhere in the post. Surfaced only as a broad-query match on generic Mexican-entertainment terms.",
       "history": [
         {
           "attempt": "2026-09-12T00:01:09.000Z",
@@ -4935,7 +4942,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Esc\u00e1ndala MX post about actor Iv\u00e1n Arana discussing his antagonist role in the unrelated telenovela \"Tierra de Amor y Coraje\". No mention of Las Azules or Women in Blue anywhere in the post. Surfaced only as a broad-query match on generic Mexican-entertainment terms.",
+      "skipNote": "Escándala MX post about actor Iván Arana discussing his antagonist role in the unrelated telenovela \"Tierra de Amor y Coraje\". No mention of Las Azules or Women in Blue anywhere in the post. Surfaced only as a broad-query match on generic Mexican-entertainment terms.",
       "history": [
         {
           "attempt": "2026-09-12T00:01:09.000Z",
@@ -4955,7 +4962,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Matilde Obreg\u00f3n post revisiting a past interview with actress Gala Montes. No mention of Las Azules or Women in Blue anywhere in the post. Surfaced only as a broad-query match on generic Mexican-entertainment terms.",
+      "skipNote": "Matilde Obregón post revisiting a past interview with actress Gala Montes. No mention of Las Azules or Women in Blue anywhere in the post. Surfaced only as a broad-query match on generic Mexican-entertainment terms.",
       "history": [
         {
           "attempt": "2026-09-12T00:01:09.000Z",
@@ -4996,7 +5003,7 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "JustWatch streaming-availability page (Japan locale) for Las Azules Season 1. Same JustWatch listing-page pattern as the other JustWatch entries already in this ledger (US/MX/ID/CL/ZA/IT locales): database-sourced synopsis, cast/crew grid, and ratings, no written editorial content. No publish date anywhere on the page; the only timestamp present is a data-verification stamp (\"2026\u5e749\u670811\u65e5\u306e9:19:32\u306b\"), not a publication date. Firecrawl scrape attempted per Rule A and confirmed the same listing-page content with no date field.",
+      "skipNote": "JustWatch streaming-availability page (Japan locale) for Las Azules Season 1. Same JustWatch listing-page pattern as the other JustWatch entries already in this ledger (US/MX/ID/CL/ZA/IT locales): database-sourced synopsis, cast/crew grid, and ratings, no written editorial content. No publish date anywhere on the page; the only timestamp present is a data-verification stamp (\"2026年9月11日の9:19:32に\"), not a publication date. Firecrawl scrape attempted per Rule A and confirmed the same listing-page content with no date field.",
       "history": [
         {
           "attempt": "2026-09-12T00:01:09.000Z",
@@ -5023,7 +5030,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_personal_repost",
-      "skipNote": "\"Las Azules cap\u00edtulo 2 ... Temporada 1\" uploaded by channel Telenovelas Plus (@telenovelasplusoff), published 2024-09-14. A fan narration/recap of a Season 1 episode, not an outlet, official show account, or reviewer -- a repost/recap channel repackaging show content, per Rule B. Also Season 1 era content, included in scope per Rule C but excluded here on the relevance gate, not on date-floor grounds.",
+      "skipNote": "\"Las Azules capítulo 2 ... Temporada 1\" uploaded by channel Telenovelas Plus (@telenovelasplusoff), published 2024-09-14. A fan narration/recap of a Season 1 episode, not an outlet, official show account, or reviewer -- a repost/recap channel repackaging show content, per Rule B. Also Season 1 era content, included in scope per Rule C but excluded here on the relevance gate, not on date-floor grounds.",
       "history": [
         {
           "attempt": "2026-09-12T00:01:09.000Z",
@@ -5151,14 +5158,14 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "El Diario NY (publisher/editorial-brand account, not vendor or fan repost -- passes Rule B) video: Ximena Sari\u00f1ana and B\u00e1rbara Mori discuss Las Azules and its parallel between the 1971 fight for gender equality and present-day women's issues. WebFetch returned real content but no publish date field. Firecrawl scrape returned the standard blanket 'we do not support this site' refusal for facebook.com -- documented exhaustion of the method per Rule A. No date recoverable by either method. Skipped as editorial_undateable, reviewable=true for a future manual date lookup.",
+      "skipNote": "El Diario NY (publisher/editorial-brand account, not vendor or fan repost -- passes Rule B) video: Ximena Sariñana and Bárbara Mori discuss Las Azules and its parallel between the 1971 fight for gender equality and present-day women's issues. WebFetch returned real content but no publish date field. Firecrawl scrape returned the standard blanket 'we do not support this site' refusal for facebook.com -- documented exhaustion of the method per Rule A. No date recoverable by either method. Skipped as editorial_undateable, reviewable=true for a future manual date lookup.",
       "history": [
         {
           "attempt": "2026-09-12T04:00:00Z",
           "method": "WebFetch",
           "status": 200,
           "issue": "LEMA-10012",
-          "note": "Real content returned (Sari\u00f1ana/Mori interview clip) but no publish date present in fetched body."
+          "note": "Real content returned (Sariñana/Mori interview clip) but no publish date present in fetched body."
         },
         {
           "attempt": "2026-09-12T04:00:00Z",
@@ -5178,7 +5185,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Apple Music artist page for Conjunto Agua Azul, a different Mexican m\u00fasica regional group; unrelated to the TV series, surfaced only via the 'Azules' keyword match on the mandated Pass 1 Exa broad-English query.",
+      "skipNote": "Apple Music artist page for Conjunto Agua Azul, a different Mexican música regional group; unrelated to the TV series, surfaced only via the 'Azules' keyword match on the mandated Pass 1 Exa broad-English query.",
       "history": [
         {
           "attempt": "2026-09-12T04:00:00Z",
@@ -5238,7 +5245,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Milenio article about actress and comedian B\u00e1rbara Torres (not B\u00e1rbara Mori) touring a stage play in Guadalajara; unrelated to Las Azules, surfaced only via the 'B\u00e1rbara' keyword match on the mandated Pass 1 Exa Spanish query.",
+      "skipNote": "Milenio article about actress and comedian Bárbara Torres (not Bárbara Mori) touring a stage play in Guadalajara; unrelated to Las Azules, surfaced only via the 'Bárbara' keyword match on the mandated Pass 1 Exa Spanish query.",
       "history": [
         {
           "attempt": "2026-09-12T04:00:00Z",
@@ -5278,7 +5285,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "esRadio interview with director Fernando Gonz\u00e1lez Molina about his film 'Cronos' and earlier work 'A tres metros sobre el cielo'; unrelated to Las Azules or its creator Fernando Rovzar, surfaced only via the shared first-name/director-interview pattern on the mandated Pass 1 Exa Spanish query.",
+      "skipNote": "esRadio interview with director Fernando González Molina about his film 'Cronos' and earlier work 'A tres metros sobre el cielo'; unrelated to Las Azules or its creator Fernando Rovzar, surfaced only via the shared first-name/director-interview pattern on the mandated Pass 1 Exa Spanish query.",
       "history": [
         {
           "attempt": "2026-09-12T04:00:00Z",
@@ -5298,7 +5305,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Argentine headtopics.com piece about actress Mercedes Funes discussing her fear of actor Miguel \u00c1ngel Sol\u00e1 and memories of her mother. No connection to Las Azules or Women in Blue; surfaced only via the mandated Pass 1 Exa Spanish query ('B\u00e1rbara Mori entrevista Las Azules temporada 2') as a broad actress-interview match.",
+      "skipNote": "Argentine headtopics.com piece about actress Mercedes Funes discussing her fear of actor Miguel Ángel Solá and memories of her mother. No connection to Las Azules or Women in Blue; surfaced only via the mandated Pass 1 Exa Spanish query ('Bárbara Mori entrevista Las Azules temporada 2') as a broad actress-interview match.",
       "history": [
         {
           "attempt": "2026-09-12T06:00:33Z",
@@ -5358,7 +5365,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Wikipedia article about Los \u00c1ngeles Azules, a Mexican cumbia band. Different 'Azules' entity, unrelated to the TV series; surfaced only via a Google News site-search broad query on 'Las Azules'.",
+      "skipNote": "Wikipedia article about Los Ángeles Azules, a Mexican cumbia band. Different 'Azules' entity, unrelated to the TV series; surfaced only via a Google News site-search broad query on 'Las Azules'.",
       "history": [
         {
           "attempt": "2026-09-12T06:00:33Z",
@@ -5398,7 +5405,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Wikipedia article about 'Mi Ni\u00f1a Mujer', a 1996 song by Los \u00c1ngeles Azules (the cumbia band). Unrelated to the TV series; surfaced only via the mandated Pass 1 Exa broad-English query matching on 'Azules'.",
+      "skipNote": "Wikipedia article about 'Mi Niña Mujer', a 1996 song by Los Ángeles Azules (the cumbia band). Unrelated to the TV series; surfaced only via the mandated Pass 1 Exa broad-English query matching on 'Azules'.",
       "history": [
         {
           "attempt": "2026-09-12T06:00:33Z",
@@ -5558,7 +5565,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Official YouTube channel for Los \u00c1ngeles Azules, the Mexican cumbia band. Different 'Azules' entity, unrelated to the TV series; surfaced only via a YouTube Pass 2 search on 'Las Azules'.",
+      "skipNote": "Official YouTube channel for Los Ángeles Azules, the Mexican cumbia band. Different 'Azules' entity, unrelated to the TV series; surfaced only via a YouTube Pass 2 search on 'Las Azules'.",
       "history": [
         {
           "attempt": "2026-09-12T06:00:33Z",
@@ -5578,7 +5585,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Los \u00c1ngeles Azules VEVO channel (the cumbia band's official music-video channel). Unrelated to the TV series; surfaced only via a YouTube Pass 2 search on 'Las Azules'.",
+      "skipNote": "Los Ángeles Azules VEVO channel (the cumbia band's official music-video channel). Unrelated to the TV series; surfaced only via a YouTube Pass 2 search on 'Las Azules'.",
       "history": [
         {
           "attempt": "2026-09-12T06:00:33Z",
@@ -5598,14 +5605,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "About the cumbia band Los \u00c1ngeles Azules kicking off Hispanic Heritage Month celebrations in Los Angeles. No mention of the Las Azules/Women in Blue TV series anywhere in the article; surfaced only as a broad-query match on \"Azules\".",
+      "skipNote": "About the cumbia band Los Ángeles Azules kicking off Hispanic Heritage Month celebrations in Los Angeles. No mention of the Las Azules/Women in Blue TV series anywhere in the article; surfaced only as a broad-query match on \"Azules\".",
       "history": [
         {
           "attempt": "2026-09-12T08:00:00Z",
           "method": "WebFetch",
           "status": 200,
           "issue": "LEMA-10014",
-          "note": "WebFetch succeeded; confirmed article is about the band Los \u00c1ngeles Azules, unrelated to the TV series."
+          "note": "WebFetch succeeded; confirmed article is about the band Los Ángeles Azules, unrelated to the TV series."
         }
       ]
     },
@@ -5678,14 +5685,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Feature on TV host Claudia Garc\u00eda's new program and stepping away from TV. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on Spanish-language TV terms.",
+      "skipNote": "Feature on TV host Claudia García's new program and stepping away from TV. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on Spanish-language TV terms.",
       "history": [
         {
           "attempt": "2026-09-12T08:00:00Z",
           "method": "WebFetch",
           "status": "fetch_error",
           "issue": "LEMA-10014",
-          "note": "WebFetch could not reach the host. Title/snippet from Exa search result unambiguously confirms this is an unrelated feature on Claudia Garc\u00eda."
+          "note": "WebFetch could not reach the host. Title/snippet from Exa search result unambiguously confirms this is an unrelated feature on Claudia García."
         }
       ]
     },
@@ -5725,7 +5732,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_personal_repost",
-      "skipNote": "Instagram reel by @bart_rosalesd, an individual/personal account, posting their own opinion review ('Las Azules Temporada 2 rese\u00f1a opiniones y an\u00e1lisis') of Women in Blue Season 2, dated Sep 9, 2026. Individual personal account, not a publisher/outlet/editorial-brand -- Rule B relevance gate, excluded regardless of dateability.",
+      "skipNote": "Instagram reel by @bart_rosalesd, an individual/personal account, posting their own opinion review ('Las Azules Temporada 2 reseña opiniones y análisis') of Women in Blue Season 2, dated Sep 9, 2026. Individual personal account, not a publisher/outlet/editorial-brand -- Rule B relevance gate, excluded regardless of dateability.",
       "history": [
         {
           "attempt": "2026-09-12T10:04:20.000Z",
@@ -5765,7 +5772,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Article ('Apple TV tiene el reemplazo perfecto para Dark...') is entirely about Apple TV+'s 'Materia Oscura' (Dark Matter) Season 2, a different show. Surfaced only via broad Exa 'Apple TV' query match on shared platform keyword; does not mention Las Azules or Women in Blue. Confirmed via Firecrawl scrape body (byline V\u00edctor Garc\u00eda, published 2026-09-12T17:00 Spain time). See LEMA-10020.",
+      "skipNote": "Article ('Apple TV tiene el reemplazo perfecto para Dark...') is entirely about Apple TV+'s 'Materia Oscura' (Dark Matter) Season 2, a different show. Surfaced only via broad Exa 'Apple TV' query match on shared platform keyword; does not mention Las Azules or Women in Blue. Confirmed via Firecrawl scrape body (byline Víctor García, published 2026-09-12T17:00 Spain time). See LEMA-10020.",
       "history": [
         {
           "attempt": "2026-09-12T16:05:08Z",
@@ -5957,14 +5964,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Facebook post about Mexican TV personality Ver\u00f3nica Castro scolding 'El G\u00fcero' over health disclosures; unrelated celebrity-gossip content, not about Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query.",
+      "skipNote": "Facebook post about Mexican TV personality Verónica Castro scolding 'El Güero' over health disclosures; unrelated celebrity-gossip content, not about Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query.",
       "history": [
         {
           "attempt": "2026-09-12T20:05:55Z",
           "method": "Exa search (Pass 1, ES)",
           "status": null,
           "issue": "LEMA-10022",
-          "note": "Facebook post about Mexican TV personality Ver\u00f3nica Castro scolding 'El G\u00fcero' over health disclosures; unrelated celebrity-gossip content, not about Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query."
+          "note": "Facebook post about Mexican TV personality Verónica Castro scolding 'El Güero' over health disclosures; unrelated celebrity-gossip content, not about Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query."
         }
       ]
     },
@@ -5977,14 +5984,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Facebook post comparing Blue Ivy Carter's appearance to her mother Beyonc\u00e9; entirely unrelated to Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query.",
+      "skipNote": "Facebook post comparing Blue Ivy Carter's appearance to her mother Beyoncé; entirely unrelated to Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query.",
       "history": [
         {
           "attempt": "2026-09-12T20:05:55Z",
           "method": "Exa search (Pass 1, ES)",
           "status": null,
           "issue": "LEMA-10022",
-          "note": "Facebook post comparing Blue Ivy Carter's appearance to her mother Beyonc\u00e9; entirely unrelated to Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query."
+          "note": "Facebook post comparing Blue Ivy Carter's appearance to her mother Beyoncé; entirely unrelated to Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query."
         }
       ]
     },
@@ -5997,14 +6004,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Antena 3 article about actress Paula Echevarr\u00eda preparing for the 'A la deriva' premiere at FesTVal Vitoria; unrelated Spanish series, not Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query.",
+      "skipNote": "Antena 3 article about actress Paula Echevarría preparing for the 'A la deriva' premiere at FesTVal Vitoria; unrelated Spanish series, not Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query.",
       "history": [
         {
           "attempt": "2026-09-12T20:05:55Z",
           "method": "Exa search (Pass 1, ES)",
           "status": null,
           "issue": "LEMA-10022",
-          "note": "Antena 3 article about actress Paula Echevarr\u00eda preparing for the 'A la deriva' premiere at FesTVal Vitoria; unrelated Spanish series, not Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query."
+          "note": "Antena 3 article about actress Paula Echevarría preparing for the 'A la deriva' premiere at FesTVal Vitoria; unrelated Spanish series, not Las Azules. Surfaced only via a broad-query match on Pass 1 Exa's Spanish query."
         }
       ]
     },
@@ -6017,14 +6024,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Reforma article about the band Los \u00c1ngeles Azules getting a plaza named after them in Los Angeles; unrelated music group, not the TV series. Surfaced only via keyword overlap on 'Azules' in Pass 2's Reforma/El Universal/El Pa\u00eds search.",
+      "skipNote": "Reforma article about the band Los Ángeles Azules getting a plaza named after them in Los Angeles; unrelated music group, not the TV series. Surfaced only via keyword overlap on 'Azules' in Pass 2's Reforma/El Universal/El País search.",
       "history": [
         {
           "attempt": "2026-09-12T20:05:55Z",
           "method": "WebSearch (Pass 2)",
           "status": null,
           "issue": "LEMA-10022",
-          "note": "Reforma article about the band Los \u00c1ngeles Azules getting a plaza named after them in Los Angeles; unrelated music group, not the TV series. Surfaced only via keyword overlap on 'Azules' in Pass 2's Reforma/El Universal/El Pa\u00eds search."
+          "note": "Reforma article about the band Los Ángeles Azules getting a plaza named after them in Los Angeles; unrelated music group, not the TV series. Surfaced only via keyword overlap on 'Azules' in Pass 2's Reforma/El Universal/El País search."
         }
       ]
     },
@@ -6057,14 +6064,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Peri\u00f3dico Central article about blue license plate ('placas azules') exchange and photo-fine discounts in Puebla; unrelated to Las Azules, surfaced only via keyword overlap on 'azules' in Pass 2's press search.",
+      "skipNote": "Periódico Central article about blue license plate ('placas azules') exchange and photo-fine discounts in Puebla; unrelated to Las Azules, surfaced only via keyword overlap on 'azules' in Pass 2's press search.",
       "history": [
         {
           "attempt": "2026-09-12T20:05:55Z",
           "method": "WebSearch (Pass 2)",
           "status": null,
           "issue": "LEMA-10022",
-          "note": "Peri\u00f3dico Central article about blue license plate ('placas azules') exchange and photo-fine discounts in Puebla; unrelated to Las Azules, surfaced only via keyword overlap on 'azules' in Pass 2's press search."
+          "note": "Periódico Central article about blue license plate ('placas azules') exchange and photo-fine discounts in Puebla; unrelated to Las Azules, surfaced only via keyword overlap on 'azules' in Pass 2's press search."
         }
       ]
     },
@@ -6217,14 +6224,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Hoodline article about the musical group Los \u00c1ngeles Azules being honored with a street dedication and headlining LA Hispanic Heritage Month kickoff (Sept 14-15, 2026, Panorama City / LA City Hall). Not about the TV show Las Azules / Women in Blue at all; surfaced only as a broad-query match on \"Azules\".",
+      "skipNote": "Hoodline article about the musical group Los Ángeles Azules being honored with a street dedication and headlining LA Hispanic Heritage Month kickoff (Sept 14-15, 2026, Panorama City / LA City Hall). Not about the TV show Las Azules / Women in Blue at all; surfaced only as a broad-query match on \"Azules\".",
       "history": [
         {
           "attempt": "2026-09-13T02:04:40Z",
           "method": "WebFetch",
           "status": 200,
           "issue": "LEMA-10025",
-          "note": "WebFetch succeeded; confirmed article is about the band Los \u00c1ngeles Azules, unrelated to the TV show."
+          "note": "WebFetch succeeded; confirmed article is about the band Los Ángeles Azules, unrelated to the TV show."
         }
       ]
     },
@@ -6315,7 +6322,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Official site of Los \u00c1ngeles Azules, a Mexican cumbia band. Surfaced only as a broad-query match on the word \"Azules\"; no relation to the Las Azules / Women in Blue TV series.",
+      "skipNote": "Official site of Los Ángeles Azules, a Mexican cumbia band. Surfaced only as a broad-query match on the word \"Azules\"; no relation to the Las Azules / Women in Blue TV series.",
       "history": [
         {
           "attempt": "2026-09-13T10:05:23Z",
@@ -6335,7 +6342,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Official Facebook page of Los \u00c1ngeles Azules, a Mexican cumbia band. Surfaced only as a broad-query match on the word \"Azules\"; no relation to the Las Azules / Women in Blue TV series.",
+      "skipNote": "Official Facebook page of Los Ángeles Azules, a Mexican cumbia band. Surfaced only as a broad-query match on the word \"Azules\"; no relation to the Las Azules / Women in Blue TV series.",
       "history": [
         {
           "attempt": "2026-09-13T10:05:23Z",
@@ -6395,7 +6402,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "La Raz\u00f3n article about Iker Jim\u00e9nez's new season of 'Cuarto Milenio' on Cuatro. Unrelated Spanish TV program; surfaced only as a broad-query match on Spanish-language TV season news, no mention of Las Azules.",
+      "skipNote": "La Razón article about Iker Jiménez's new season of 'Cuarto Milenio' on Cuatro. Unrelated Spanish TV program; surfaced only as a broad-query match on Spanish-language TV season news, no mention of Las Azules.",
       "history": [
         {
           "attempt": "2026-09-13T10:05:23Z",
@@ -6415,7 +6422,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Excelsior article about Belinda, Danna, and Mariana Trevi\u00f1o at a \"Mentiverso\" event at Auditorio Nacional. Unrelated entertainment event; surfaced only as a broad Spanish-language query match, no mention of Las Azules.",
+      "skipNote": "Excelsior article about Belinda, Danna, and Mariana Treviño at a \"Mentiverso\" event at Auditorio Nacional. Unrelated entertainment event; surfaced only as a broad Spanish-language query match, no mention of Las Azules.",
       "history": [
         {
           "attempt": "2026-09-13T10:05:23Z",
@@ -6883,14 +6890,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "La Rep\u00fablica (Peru) interview with director Joel Calero about his film trilogy on Peru's internal armed conflict and Lima's LUM museum. No connection to Las Azules/Women in Blue; broad-query false positive.",
+      "skipNote": "La República (Peru) interview with director Joel Calero about his film trilogy on Peru's internal armed conflict and Lima's LUM museum. No connection to Las Azules/Women in Blue; broad-query false positive.",
       "history": [
         {
           "attempt": "2026-09-13T18:03:48Z",
           "method": "WebFetch",
           "status": 200,
           "issue": "LEMA-10039",
-          "note": "La Rep\u00fablica (Peru) interview with director Joel Calero about his film trilogy on Peru's internal armed conflict and Lima's LUM museum. No connection to Las Azules/Women in Blue; broad-query false positive."
+          "note": "La República (Peru) interview with director Joel Calero about his film trilogy on Peru's internal armed conflict and Lima's LUM museum. No connection to Las Azules/Women in Blue; broad-query false positive."
         }
       ]
     },
@@ -6923,14 +6930,14 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Revista CUORE post about actress Irene Visedo and her role 25 years ago in the Spanish series \"Cu\u00e9ntame c\u00f3mo pas\u00f3\". Different actress and different series; no connection to Las Azules/Women in Blue. Broad-query false positive.",
+      "skipNote": "Revista CUORE post about actress Irene Visedo and her role 25 years ago in the Spanish series \"Cuéntame cómo pasó\". Different actress and different series; no connection to Las Azules/Women in Blue. Broad-query false positive.",
       "history": [
         {
           "attempt": "2026-09-13T18:03:48Z",
           "method": "WebFetch",
           "status": 200,
           "issue": "LEMA-10039",
-          "note": "Revista CUORE post about actress Irene Visedo and her role 25 years ago in the Spanish series \"Cu\u00e9ntame c\u00f3mo pas\u00f3\". Different actress and different series; no connection to Las Azules/Women in Blue. Broad-query false positive."
+          "note": "Revista CUORE post about actress Irene Visedo and her role 25 years ago in the Spanish series \"Cuéntame cómo pasó\". Different actress and different series; no connection to Las Azules/Women in Blue. Broad-query false positive."
         }
       ]
     },
@@ -7249,7 +7256,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Facebook group post about a Night Crew radio show (WKJB/WPRA) interview with Gaby Miranda, discussing her denial of appearing as guest DJ for \"the Indios\" and an Indios representative named Dion. No mention of Las Azules, Women in Blue, B\u00e1rbara Mori, or Apple TV anywhere in the post; surfaced only as a broad-query match on \"regreso\"/entertainment terms.",
+      "skipNote": "Facebook group post about a Night Crew radio show (WKJB/WPRA) interview with Gaby Miranda, discussing her denial of appearing as guest DJ for \"the Indios\" and an Indios representative named Dion. No mention of Las Azules, Women in Blue, Bárbara Mori, or Apple TV anywhere in the post; surfaced only as a broad-query match on \"regreso\"/entertainment terms.",
       "history": [
         {
           "attempt": "2026-09-14T00:03:50Z",
@@ -7269,7 +7276,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Facebook page \"EsTrendingMujer\" post about celebrity women aging gracefully (\"La edad no marca un l\u00edmite...\"), a generic celebrity-beauty listicle. No mention of Las Azules, Women in Blue, or Apple TV anywhere in the post; surfaced only as a broad-query match on \"famosas\"/celebrity terms.",
+      "skipNote": "Facebook page \"EsTrendingMujer\" post about celebrity women aging gracefully (\"La edad no marca un límite...\"), a generic celebrity-beauty listicle. No mention of Las Azules, Women in Blue, or Apple TV anywhere in the post; surfaced only as a broad-query match on \"famosas\"/celebrity terms.",
       "history": [
         {
           "attempt": "2026-09-14T00:03:50Z",
@@ -7289,7 +7296,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Facebook group post about Argentine singer Cazzu and fan anticipation for her comeback (\"su regreso podr\u00eda ser el m\u00e1s esperado\"). No mention of Las Azules, Women in Blue, or Apple TV anywhere in the post; surfaced only as a broad-query match on \"regreso\"/entertainment terms.",
+      "skipNote": "Facebook group post about Argentine singer Cazzu and fan anticipation for her comeback (\"su regreso podría ser el más esperado\"). No mention of Las Azules, Women in Blue, or Apple TV anywhere in the post; surfaced only as a broad-query match on \"regreso\"/entertainment terms.",
       "history": [
         {
           "attempt": "2026-09-14T00:03:50Z",
@@ -7309,17 +7316,122 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "ABC.es article titled \"'Marus\u00eda', la serie sobre marinos que cuenta con el asesoramiento de la Armada Espa\u00f1ola\" -- about an unrelated Spanish Navy drama series \"Marus\u00eda\", not Las Azules/Women in Blue. Body fetch confirms no mention of Las Azules or Women in Blue anywhere in the page. Surfaced only as a broad-query match on generic Spanish-language \"serie\" terms.",
+      "skipNote": "ABC.es article titled \"'Marusía', la serie sobre marinos que cuenta con el asesoramiento de la Armada Española\" -- about an unrelated Spanish Navy drama series \"Marusía\", not Las Azules/Women in Blue. Body fetch confirms no mention of Las Azules or Women in Blue anywhere in the page. Surfaced only as a broad-query match on generic Spanish-language \"serie\" terms.",
       "history": [
         {
           "attempt": "2026-09-14T00:03:50Z",
           "method": "curl-verify",
           "status": 200,
           "issue": "LEMA-10042",
-          "note": "Body fetch confirmed off-topic (different show, \"Marus\u00eda\"); no mention of Las Azules/Women in Blue in page text."
+          "note": "Body fetch confirmed off-topic (different show, \"Marusía\"); no mention of Las Azules/Women in Blue in page text."
+        }
+      ]
+    },
+    {
+      "url": "https://www.europesays.com/ie/687329/",
+      "firstSeen": "2026-09-14T02:11:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T02:11:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Surfaced via mandated Exa Pass 1 EN query ('Las Azules Women in Blue Season 2 Apple TV'), broad neural match only. Page is actually about Apple TV's 'Widow's Bay' (comedy-horror, creator Katie Dippold, starring Matthew Rhys), published Sep 14, 2026 -- no mention of Las Azules / Women in Blue anywhere in the body. Confirmed via Firecrawl scrape (WebFetch failed with repeated socket hang up). Rule G off-topic false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-14T02:11:49Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10043",
+          "note": "Confirmed off-topic: article is about Apple TV's 'Widow's Bay', not Las Azules. WebFetch failed (socket hang up) on 3 attempts."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/gt/clip/las-mujeres-season-1/umc.cmc.dfqcxumy8pgbu8c3016pkf68?l=en&targetId=umc.cmc.73wmdmkfpta5ul1vbwckmme39&targetType=Show",
+      "firstSeen": "2026-09-14T02:11:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T02:11:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "Surfaced via mandated Exa Pass 1 EN query. Both WebFetch and Firecrawl returned 200, but the page renders only an Apple TV country/region selector menu (Guatemala storefront geo-gate) with no synopsis, cast, episode, or any written content about the show at all -- less content than even a bare listing page. Stripping the (nonexistent) content leaves nothing about the show. Rule F.",
+      "history": [
+        {
+          "attempt": "2026-09-14T02:11:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10043",
+          "note": "Returned only a country/region selector menu, no show content."
+        },
+        {
+          "attempt": "2026-09-14T02:11:49Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10043",
+          "note": "Confirmed same: country selector menu only, no synopsis/cast/episode content."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39?l=es",
+      "firstSeen": "2026-09-14T02:11:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T02:11:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Rule D retroactive remediation (LEMA-10043): this exact URL was live in data.json with ts=20260903/date='Sep 3, 2026', but both WebFetch and Firecrawl confirm the page is a purely evergreen Apple TV show catalog page (cast, episodes, synopsis, release year '2024' only) with no publish/last-updated date anywhere in the body. The ts was an approximated crawl-date substitute, a Rule A violation. Matches the identical, already-established pattern for sibling locale variants of this same show page already ledgered as permanentSkip/editorial_undateable (e.g. the '--la-brigade-bleue'/l=es-MX variant, LEMA-9766). Removed from data.json in the same commit per Rule D/ledger-precedence guardrail.",
+      "history": [
+        {
+          "attempt": "2026-09-14T02:11:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10043",
+          "note": "Evergreen catalog page, no publish date found, only release year 2024."
+        },
+        {
+          "attempt": "2026-09-14T02:11:49Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10043",
+          "note": "Confirmed same: no date field in body or metadata."
+        }
+      ]
+    },
+    {
+      "url": "https://www.primevideo.com/-/es/detail/0JFCKSNHTRBNJA50K5E6QG2HHN",
+      "firstSeen": "2026-09-14T02:11:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T02:11:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Rule D retroactive remediation (LEMA-10043): this exact URL was live in data.json with ts=20260902/date='Sep 2, 2026', but both WebFetch and Firecrawl confirm the page only shows individual episode air dates (Aug 11/18/25, Sep 1/8 2026) with no series-level publish/last-updated date -- an episode air date used as ts on an evergreen catalog page is the exact pattern Rule A prohibits. Matches the identical, already-established pattern for sibling locale/storefront variants of this same title already ledgered as permanentSkip/editorial_undateable (?tr=mx LEMA-9643, ?tr=cl LEMA-9770). Removed from data.json in the same commit per Rule D/ledger-precedence guardrail.",
+      "history": [
+        {
+          "attempt": "2026-09-14T02:11:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10043",
+          "note": "Only per-episode air dates shown, no series-level publish date."
+        },
+        {
+          "attempt": "2026-09-14T02:11:49Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10043",
+          "note": "Confirmed same: no series-level date field anywhere in body."
         }
       ]
     }
   ],
-  "lastUpdated": "2026-09-14T00:03:50Z"
+  "lastUpdated": "2026-09-14T02:11:49Z"
 }
