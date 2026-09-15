@@ -577,6 +577,15 @@
     .cov-table tbody tr:last-child { border-bottom: none; }
     .cov-table tbody tr:hover { background: var(--smoke); }
     .cov-table tbody td { padding: 11px 14px; vertical-align: top; }
+    .story-breadth {
+      display: inline-block; margin-left: 8px; padding: 1px 7px;
+      font-size: 9px; font-weight: 700; letter-spacing: .03em;
+      color: var(--poster-blue); background: rgba(27,123,196,0.08);
+      border: 1px solid rgba(27,123,196,0.25); border-radius: 10px;
+      cursor: pointer; white-space: nowrap; vertical-align: middle;
+    }
+    .story-breadth:hover { background: rgba(27,123,196,0.16); }
+    .story-sub-row td { background: rgba(0,0,0,0.015); }
 
     /* Tablet: horizontal scroll is fine */
     @media (min-width: 601px) and (max-width: 767px) {
@@ -2142,6 +2151,16 @@ function navWithFilter(field, value) {
   nav('coverage');
 }
 
+function storyGroups(list) {
+  const map = new Map();
+  list.forEach(a => {
+    const key = a.storyGroup || a.url;
+    if (!map.has(key)) map.set(key, []);
+    map.get(key).push(a);
+  });
+  return map;
+}
+
 function buildCharts() {
   buildChart('chart-market', tally('market'), MARKET_BAR, 'market');
   buildChart('chart-type',   tally('type'),   TYPE_BAR,   'type');
@@ -2165,12 +2184,13 @@ function buildHome() {
   const bestReview = reviews[0];
   const topMarket  = byMarket[0];
   const markets    = new Set(MEDIA.map(a=>a.market));
+  const storyCount = storyGroups(MEDIA).size;
 
   /* Hero */
   document.getElementById('home-eyebrow').textContent =
     `${dateStr} · Season 2 · Day ${dayN}`;
   document.getElementById('home-sub').textContent =
-    `${MEDIA.length} articles · ${markets.size} markets · Newest: ${newest.outlet}`;
+    `${storyCount} stories (${MEDIA.length} mentions) · ${markets.size} markets · Newest: ${newest.outlet}`;
 
   /* Signal — best one-line summary */
   const signalLines = [];
@@ -2197,8 +2217,8 @@ function buildHome() {
     /* Card 2 — Coverage snapshot */
     `<div class="signal-card" style="">
       <p class="sc-eyebrow">📰 Coverage · Day ${dayN}</p>
-      <p class="sc-headline">${MEDIA.length} articles tracked</p>
-      <p class="sc-body">${typeBreakdown}<br>across ${markets.size} markets · ${MEDIA.filter(a=>a.lang==='ES').length} in Spanish · ${MEDIA.filter(a=>a.lang==='EN').length} in English</p>
+      <p class="sc-headline">${storyCount} stories tracked</p>
+      <p class="sc-body">${MEDIA.length} mentions · ${typeBreakdown}<br>across ${markets.size} markets · ${MEDIA.filter(a=>a.lang==='ES').length} in Spanish · ${MEDIA.filter(a=>a.lang==='EN').length} in English</p>
       <div class="sc-footer">
         <button class="sc-action" onclick="nav('coverage')">Full coverage →</button>
         <span style="font-size:10px;color:var(--ink3)">${topMarket.k} leading</span>
@@ -2238,7 +2258,7 @@ function buildHome() {
   document.getElementById('home-briefing').innerHTML = `
     <p class="briefing-date">${dateStr} · Season 2 Day ${dayN} · Las Azules Coverage Brief</p>
     <div class="briefing-body">
-      <p>Season 2 has <strong>${MEDIA.length} pieces of coverage</strong> across ${markets.size} markets after ${dayN} day${dayN!==1?'s':''}. ${byType[0] ? `<strong>${byType[0].k}</strong> is the leading coverage type (${byType[0].v} pieces).` : ''} ${reviews.length > 0 ? `Critical reception led by ${bestReview.outlet}.` : 'Critical reviews are incoming.'}</p>
+      <p>Season 2 has <strong>${storyCount} stories</strong> (${MEDIA.length} total mentions across pickups) across ${markets.size} markets after ${dayN} day${dayN!==1?'s':''}. ${byType[0] ? `<strong>${byType[0].k}</strong> is the leading coverage type (${byType[0].v} pieces).` : ''} ${reviews.length > 0 ? `Critical reception led by ${bestReview.outlet}.` : 'Critical reviews are incoming.'}</p>
       ${mktLines}
       <div class="focus-item" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bd)">
         <span class="focus-bullet" style="color:var(--coral)">!</span>
@@ -2247,7 +2267,7 @@ function buildHome() {
     </div>`;
 
   /* ── Top 3 latest articles ── */
-  document.getElementById('today-badge').textContent = `${MEDIA.length} articles tracked — newest first`;
+  document.getElementById('today-badge').textContent = `${storyCount} stories tracked (${MEDIA.length} mentions) · newest first`;
   document.getElementById('today-feed').innerHTML = sorted.slice(0,3).map((a,i) => `
     <div class="home-article" onclick="openShareModal('${a.url}')">
       <div class="home-art-num">${i+1}</div>
@@ -2347,6 +2367,17 @@ document.getElementById('crew-list').innerHTML = CREW.map(c => `
   </div>`).join('');
 
 /* ─── COVERAGE ─── */
+const expandedStories = new Set();
+let coverageGroupsCache = [];
+
+function toggleStoryExpand(i) {
+  const g = coverageGroupsCache[i];
+  if (!g) return;
+  if (expandedStories.has(g.key)) expandedStories.delete(g.key);
+  else expandedStories.add(g.key);
+  renderCoverage();
+}
+
 function renderCoverage() {
   const q   = (document.getElementById('cov-search').value||'').toLowerCase();
   const mkt = document.getElementById('cov-market').value||'';
@@ -2354,39 +2385,73 @@ function renderCoverage() {
   const lng = document.getElementById('cov-lang').value||'';
   const srt = document.getElementById('cov-sort').value||'newest';
 
-  let filtered = MEDIA.filter(a =>
+  const matches = a =>
     (!q   || a.outlet.toLowerCase().includes(q) || a.headline.toLowerCase().includes(q) || (a.excerpt||'').toLowerCase().includes(q)) &&
     (!mkt || a.market === mkt) &&
     (!typ || a.type   === typ) &&
-    (!lng || a.lang   === lng)
-  );
-  filtered.sort((a,b) => srt==='newest' ? b.ts-a.ts : a.ts-b.ts);
+    (!lng || a.lang   === lng);
 
-  document.getElementById('cov-count').textContent = filtered.length + ' of ' + MEDIA.length + ' articles';
+  /* Group first, then keep whole groups where any member matches, since a
+     synthesized story key has no market/type/lang of its own. */
+  const matchingGroups = [];
+  storyGroups(MEDIA).forEach((members, key) => {
+    if (members.some(matches)) matchingGroups.push({ key, members: members.slice() });
+  });
+
+  /* Members always sort newest-first so the visible row uses the most
+     recent member (highest ts), independent of the selected sort order. */
+  matchingGroups.forEach(g => g.members.sort((a,b) => b.ts - a.ts));
+  matchingGroups.sort((a,b) => {
+    const aTs = srt==='newest' ? a.members[0].ts : a.members[a.members.length-1].ts;
+    const bTs = srt==='newest' ? b.members[0].ts : b.members[b.members.length-1].ts;
+    return srt==='newest' ? bTs-aTs : aTs-bTs;
+  });
+
+  const totalMentions    = matchingGroups.reduce((n,g) => n+g.members.length, 0);
+  const totalStoryCount  = storyGroups(MEDIA).size;
+  document.getElementById('cov-count').textContent =
+    `${matchingGroups.length} of ${totalStoryCount} stories (${totalMentions} mentions)`;
+
+  coverageGroupsCache = matchingGroups;
   const tbody = document.getElementById('cov-feed');
   const empty = document.getElementById('cov-empty');
 
-  if (!filtered.length) {
+  if (!matchingGroups.length) {
     tbody.innerHTML = '';
     empty.classList.remove('hidden');
     return;
   }
   empty.classList.add('hidden');
-  tbody.innerHTML = filtered.map(a => {
+  tbody.innerHTML = matchingGroups.map((g, i) => {
+    const a = g.members[0];
     const isNew = !MEDIA_ORIGINAL_URLS.has(a.url);
     const newPill = isNew ? `<span style="display:inline-block;font-size:8px;font-weight:800;letter-spacing:.06em;padding:1px 5px;background:#d44;color:#fff;vertical-align:middle;margin-left:4px">NEW</span>` : '';
+    const extra = g.members.length - 1;
+    const isOpen = expandedStories.has(g.key);
+    const breadthPill = extra > 0
+      ? `<span class="story-breadth" onclick="event.stopPropagation();toggleStoryExpand(${i})">${isOpen?'▾':'▸'} +${extra} more outlet${extra!==1?'s':''}</span>`
+      : '';
+    const subRows = (extra > 0 && isOpen) ? g.members.slice(1).map(m => `
+      <tr class="story-sub-row" onclick="openShareModal('${m.url}')" style="cursor:pointer">
+        <td style="font-size:11px;font-weight:600;color:var(--ink2);max-width:130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-left:26px">↳ ${m.outlet}</td>
+        <td style="max-width:340px"><p style="font-size:12px;color:var(--ink2);line-height:1.4">${m.headline}</p></td>
+        <td style="white-space:nowrap">${badge(m.market,MARKET_STYLE[m.market])}</td>
+        <td style="white-space:nowrap">${badge(m.type,TYPE_STYLE[m.type])}</td>
+        <td style="white-space:nowrap">${badge(m.lang,LANG_STYLE[m.lang])}</td>
+        <td style="font-size:11px;color:var(--ink3);white-space:nowrap">${m.date}</td>
+      </tr>`).join('') : '';
     return `
     <tr onclick="openShareModal('${a.url}')" style="cursor:pointer${isNew?';background:rgba(212,68,68,0.04)':''}">
       <td style="font-size:12px;font-weight:700;color:var(--ink1);max-width:130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${a.outlet}${newPill}</td>
       <td style="max-width:340px">
-        <p style="font-size:13px;color:var(--ink1);font-weight:500;line-height:1.4;margin-bottom:2px">${a.headline}</p>
+        <p style="font-size:13px;color:var(--ink1);font-weight:500;line-height:1.4;margin-bottom:2px">${a.headline}${breadthPill}</p>
         ${a.excerpt?`<p style="font-size:11px;color:var(--ink3);line-height:1.45">${a.excerpt.substring(0,100)}${a.excerpt.length>100?'…':''}</p>`:''}
       </td>
       <td style="white-space:nowrap">${badge(a.market,MARKET_STYLE[a.market])}</td>
       <td style="white-space:nowrap">${badge(a.type,TYPE_STYLE[a.type])}</td>
       <td style="white-space:nowrap">${badge(a.lang,LANG_STYLE[a.lang])}</td>
       <td style="font-size:11px;color:var(--ink3);white-space:nowrap">${a.date}</td>
-    </tr>`;
+    </tr>${subRows}`;
   }).join('');
 }
 
