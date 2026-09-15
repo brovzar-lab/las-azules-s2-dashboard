@@ -8280,9 +8280,9 @@
     {
       "url": "https://cpasbien.dev/tv/333002/season/1/episode/2",
       "firstSeen": "2026-09-15T04:07:02Z",
-      "failCount": 1,
-      "lastStatus": 404,
-      "lastAttempt": "2026-09-15T04:07:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T06:04:36Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -8297,8 +8297,18 @@
           "status": 404,
           "issue": "LEMA-10152",
           "note": "Firecrawl scrape also returned 404 (\"Episode introuvable\"). Full-chain failure, failCount=1. Could not confirm content (title in Exa's index was \"Blue Season S01E02\", not confirmed to be Las Azules/Women in Blue) since the page is gone; not classified under Rule E without evidence."
+        },
+        {
+          "attempt": "2026-09-15T06:04:36Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10153",
+          "note": "Page now resolves (previously 404 on LEMA-10152). Confirmed off-topic: different show (Blue Season), not Las Azules."
         }
-      ]
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Confirmed via WebFetch (page now resolves, unlike the 404 seen on LEMA-10152): page is about a different show titled Blue Season, Season 1 Episode 2, an unrelated title, not Las Azules/Women in Blue. Off-topic false positive, not a Rule E case, since the show itself does not match (page also hosts streaming/download links, but exclusion here is on relevance grounds)."
     },
     {
       "url": "https://www.forbes.com/sites/willdawson/2026/09/14/rhea-seehorns-pluribus-emmy-is-a-win-for-apple-tv/",
@@ -8399,7 +8409,159 @@
           "note": "WebFetch succeeded; confirmed article is about a different, unrelated telenovela."
         }
       ]
+    },
+    {
+      "url": "https://eldiariodechihuahua.mx/espectaculos/2026/sep/14/homenajean-a-los-angeles-azules-en-california-837701.html",
+      "firstSeen": "2026-09-15T06:04:36Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T06:04:36Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-15T06:04:36Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-10153",
+          "note": "Off-topic classification made from search result title/snippet; no full fetch needed for a Rule G relevance miss."
+        }
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about the Mexican cumbia band Los Angeles Azules being honored with a civic tribute in California, not the TV series Las Azules. Off-topic false positive surfaced by a broad Exa query match on the word Azules."
+    },
+    {
+      "url": "https://www.nbclosangeles.com/news/local/los-angeles-azules-honored-with-square-in-panorama-city/3942143/",
+      "firstSeen": "2026-09-15T06:04:36Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T06:04:36Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-15T06:04:36Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-10153",
+          "note": "Off-topic classification made from search result title/snippet; no full fetch needed for a Rule G relevance miss."
+        }
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about the band Los Angeles Azules receiving a dedicated square/plaza in Panorama City, not the TV series Las Azules. Off-topic false positive surfaced by a broad Exa query match on the word Azules."
+    },
+    {
+      "url": "https://streamlinefeed.co.ke/news/apple-tvs-widows-bay-shatters-emmy-records-with-14-historic-comedy-wins",
+      "firstSeen": "2026-09-15T06:04:36Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T06:04:36Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-15T06:04:36Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-10153",
+          "note": "Off-topic classification made from search result title/snippet; no full fetch needed for a Rule G relevance miss."
+        }
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about a different Apple TV show, Widow's Bay, and its Emmy wins, not Las Azules/Women in Blue. Off-topic false positive surfaced by a broad Exa query match on Apple TV Season 2."
+    },
+    {
+      "url": "https://www.elcorreogallego.es/ocio/tv/2026/09/15/serie-sello-compostelano-armada-espanola-rodada-galicia-nueva-apuesta-prime-time-telecinco-134285790.html",
+      "firstSeen": "2026-09-15T06:04:36Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T06:04:36Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-15T06:04:36Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-10153",
+          "note": "Off-topic classification made from search result title/snippet; no full fetch needed for a Rule G relevance miss."
+        }
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about an unrelated Spanish-language series about the Spanish Navy (Armada Espanola) filmed in Galicia for Telecinco prime time, not Las Azules. Off-topic false positive surfaced by a broad Exa Spanish-language query match."
+    },
+    {
+      "url": "https://www.elperiodico.com/es/entre-todos/participacion/cristina-pardo-entrevista-ministro-oscar-puente-la-mesa-carta-lector-victoriano-sanchez-134211239",
+      "firstSeen": "2026-09-15T06:04:36Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T06:04:36Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-15T06:04:36Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-10153",
+          "note": "Off-topic classification made from search result title/snippet; no full fetch needed for a Rule G relevance miss."
+        }
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is an opinion piece about a TV interview between journalist Cristina Pardo and Spanish minister Oscar Puente; entirely unrelated to Las Azules. Off-topic false positive surfaced by a broad Exa Spanish-language query match on entrevista."
+    },
+    {
+      "url": "https://www.apple.com/tv-pr/originals/women-in-blue-las-azules/trailers-videos/",
+      "firstSeen": "2026-09-15T06:04:36Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T06:04:36Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-15T06:04:36Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10153",
+          "note": "Fetched successfully; no publish date found in body."
+        },
+        {
+          "attempt": "2026-09-15T06:04:36Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10153",
+          "note": "Fetched successfully; confirmed no publish date anywhere on page."
+        }
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Official Apple TV Press trailers/videos hub page for Women in Blue (Las Azules). Lists Season 1 and Season 2 trailer video tiles but carries no publish date anywhere on the page (confirmed via both WebFetch and a Firecrawl scrape, which returned the full page markdown with only a generic copyright 2026 Apple Inc footer, no dated byline). Evergreen media-hub page, not a dated article; genuine on-topic first-party content but undateable per Rule A."
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=OLAK5uy_leGHXkX51Wp-Gak0qlj6aOgC-XIJk4cFc",
+      "firstSeen": "2026-09-15T06:04:36Z",
+      "failCount": 1,
+      "lastStatus": 401,
+      "lastAttempt": "2026-09-15T06:04:36Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-15T06:04:36Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10153",
+          "note": "Returned only a truncated fragment (playlist title Las Azules: Temporada 1 Banda Sonora Original de la serie de Apple TV+); no channel/owner or upload date recoverable."
+        },
+        {
+          "attempt": "2026-09-15T06:04:36Z",
+          "method": "Firecrawl scrape",
+          "status": 401,
+          "issue": "LEMA-10153",
+          "note": "Hit a YouTube sign-in/bot wall (embedded 401 error page, no real playlist content or date). Full-chain failure; not added to data.json this run."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-15T04:07:02Z"
+  "lastUpdated": "2026-09-15T06:04:36Z"
 }
