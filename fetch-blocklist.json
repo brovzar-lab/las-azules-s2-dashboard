@@ -8276,7 +8276,130 @@
           "note": "WebFetch returned 403; Firecrawl scrape succeeded and confirmed article is about the band Los Ángeles Azules, unrelated to the TV show."
         }
       ]
+    },
+    {
+      "url": "https://cpasbien.dev/tv/333002/season/1/episode/2",
+      "firstSeen": "2026-09-15T04:07:02Z",
+      "failCount": 1,
+      "lastStatus": 404,
+      "lastAttempt": "2026-09-15T04:07:02Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-15T04:07:02Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-10152"
+        },
+        {
+          "attempt": "2026-09-15T04:07:02Z",
+          "method": "Firecrawl scrape",
+          "status": 404,
+          "issue": "LEMA-10152",
+          "note": "Firecrawl scrape also returned 404 (\"Episode introuvable\"). Full-chain failure, failCount=1. Could not confirm content (title in Exa's index was \"Blue Season S01E02\", not confirmed to be Las Azules/Women in Blue) since the page is gone; not classified under Rule E without evidence."
+        }
+      ]
+    },
+    {
+      "url": "https://www.forbes.com/sites/willdawson/2026/09/14/rhea-seehorns-pluribus-emmy-is-a-win-for-apple-tv/",
+      "firstSeen": "2026-09-15T04:07:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T04:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Forbes article about Rhea Seehorn's Emmy win for 'Pluribus' being a win for Apple TV+ generally. No mention of Las Azules or Women in Blue anywhere in the piece; surfaced only as a broad Exa match on \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-15T04:07:02Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10152",
+          "note": "WebFetch returned 403; Firecrawl scrape succeeded and confirmed the article is about a different show (Pluribus), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://variety.com/2026/tv/news/apple-tv-wins-emmys-widows-bay-hbo-max-1236861206/",
+      "firstSeen": "2026-09-15T04:07:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T04:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Variety article about Apple TV's overall Emmy wins led by 'Widow's Bay' and HBO Max's 'The Pitt'/'DTF St. Louis'. No mention of Las Azules or Women in Blue anywhere in the piece; surfaced only as a broad Exa match on \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-15T04:07:02Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10152",
+          "note": "WebFetch hit a 307 redirect to a tollbit paywall gateway; Firecrawl scrape succeeded and confirmed the article is about general Emmy wins, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvazteca.com/aztecauno/la-granja-vip/niurka-le-confiesa-a-natalia-la-razon-por-la-que-recobro-la-fuerza/",
+      "firstSeen": "2026-09-15T04:07:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T04:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Azteca article about Niurka and Natalia Alcocer on the reality show 'La Granja VIP'. No mention of Las Azules anywhere; surfaced only as a broad Exa match on generic Spanish-language terms.",
+      "history": [
+        {
+          "attempt": "2026-09-15T04:07:02Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10152",
+          "note": "WebFetch succeeded; confirmed article is about a different show (La Granja VIP), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mundiario.com/articulo/cineseries/yakarta-tiene-que-morir-mucha-gente-reciben-dos-premios-festval-2026/20260915043252441183.html",
+      "firstSeen": "2026-09-15T04:07:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T04:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Mundiario article about FesTVal 2026 awards going to Movistar Plus productions 'Yakarta' and 'Se tiene que morir mucha gente'. No mention of Las Azules anywhere; surfaced only as a broad Exa match on Spanish-language entertainment terms.",
+      "history": [
+        {
+          "attempt": "2026-09-15T04:07:02Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10152",
+          "note": "WebFetch returned 403; Firecrawl scrape succeeded and confirmed the article is about unrelated Movistar Plus productions, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lasestrellas.tv/famosos/corazon-de-marruecos-cambia-de-nombre-y-ahora-asi-se-llama-la-nueva-telenovela-de-rosy-ocampo",
+      "firstSeen": "2026-09-15T04:07:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T04:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Las Estrellas article about producer Rosy Ocampo's telenovela 'Corazón de Marruecos' being renamed to 'Cruzando Destinos: Marruecos en el Corazón'. No mention of Las Azules anywhere; surfaced only as a broad Exa match on Spanish-language TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-15T04:07:02Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10152",
+          "note": "WebFetch succeeded; confirmed article is about a different, unrelated telenovela."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-15T02:05:07Z"
+  "lastUpdated": "2026-09-15T04:07:02Z"
 }
