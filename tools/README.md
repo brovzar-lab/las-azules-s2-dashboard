@@ -136,8 +136,32 @@ confirmation.
 7. **Step 11 merge, "more complete text."** Not defined beyond "from the entry with the more
    complete text." Implemented as trimmed character length (the longer string wins).
 
-None of these affect whether the two live artifacts currently pass integrity (both do, see
-below); they only matter if a future duplicate group actually exercises one of these paths.
+As of this section's original writing, none of these affected whether the two live artifacts
+passed integrity. That is no longer true for `fetch-blocklist.json` -- see the m. fold section
+below.
+
+## m. mobile-subdomain fold (LEMA-10275)
+
+`normalize.js` now folds a leading `m.` mobile subdomain into its parent host (`m.imdb.com` ->
+`imdb.com`), the same way it already folded `www.`. Exception: hosts in the YouTube family
+(`YOUTUBE_FAMILY_HOSTS`) are left alone -- `m.youtube.com` keeps its own key, unchanged from
+before this ticket, because that per-host identity was a deliberate LEMA-9942 decision, not an
+unhandled normalization gap.
+
+Running this against the live artifacts surfaced **3 duplicate groups in `fetch-blocklist.json`**
+(0 new in `data.json`), all `www.imdb.com` vs `m.imdb.com` pairs that already agree on
+`skipReason`/`permanentSkip` and, in two cases, whose own `skipNote` already describes the other
+row as "the same pattern." This is a real pre-existing ledger redundancy this normalizer change
+makes visible, not a new duplicate created by the change. Per the code/data split established on
+LEMA-9923 and LEMA-9942, remediation is Research Specialist's, tracked on
+[LEMA-10275](/LEMA/issues/LEMA-10275)'s follow-up. This tool does not write to
+`fetch-blocklist.json`.
+
+**Redirect/canonical aliases (e.g. a page whose live URL differs from its `og:url` /
+`<link rel="canonical">`) are explicitly out of scope for this fold and are not solved by it.**
+Folding those would require a network fetch per URL, changing this module's contract from
+deterministic/offline to network-dependent. See the `KNOWN GAP` comment on `normalizeUrl` in
+`tools/lib/normalize.js` and the recommendation on LEMA-10275.
 
 ## A factual correction to the LEMA-9933 ticket
 

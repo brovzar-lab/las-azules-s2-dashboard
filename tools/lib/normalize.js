@@ -43,6 +43,22 @@ function stripLeadingWww(host) {
   return host.startsWith('www.') ? host.slice(4) : host;
 }
 
+// Folds a leading "m." mobile subdomain into its parent host (e.g.
+// m.imdb.com -> imdb.com), same rationale and style as the www. strip
+// above: a mobile-site duplicate of an already-tracked page, not a
+// distinct one. LEMA-10275.
+//
+// Exception: hosts already in YOUTUBE_FAMILY_HOSTS are left alone.
+// m.youtube.com is a deliberate, pre-existing member of that set (LEMA-9942)
+// with its own key identity -- folding it here would collapse it into
+// youtube.com and change the comparison key, breaking that shipped
+// behavior. Checked against the pre-fold host so this only ever exempts
+// the literal 'm.youtube.com' entry, not every "m." host.
+function stripLeadingMobile(host) {
+  if (YOUTUBE_FAMILY_HOSTS.has(host)) return host;
+  return host.startsWith('m.') ? host.slice(2) : host;
+}
+
 // The routine prose does not specify an order for surviving query params.
 // Sorted here so two URLs whose params differ only in order produce the
 // same key. Implementation decision, flagged as an ambiguity.
@@ -67,9 +83,11 @@ function buildQueryString(searchParams, host) {
 
 /**
  * Applies the Pass 0 URL normalization rule: lowercase scheme and host,
- * strip a leading www. from the host, strip a trailing slash from the
- * path, drop tracking query params, and exclude the scheme from the
- * comparison key (http/https treated as equivalent).
+ * strip a leading www. from the host, fold a leading m. mobile subdomain
+ * into its parent host (except for the YouTube family, see
+ * stripLeadingMobile above), strip a trailing slash from the path, drop
+ * tracking query params, and exclude the scheme from the comparison key
+ * (http/https treated as equivalent).
  *
  * Returns:
  *   url - canonical display form, real scheme kept, everything else
@@ -101,11 +119,24 @@ function buildQueryString(searchParams, host) {
  * video-ID-based path folding for these forms the first time one actually
  * appears in a candidate stream or artifact -- ship it with a test and a
  * note on that ticket, no new escalation needed.
+ *
+ * KNOWN GAP (not resolved here, flagged on LEMA-10275): canonical/redirect
+ * aliases are not folded. A URL that 302-redirects to (or declares via
+ * og:url / <link rel="canonical">) a different URL already in data.json is
+ * a duplicate this function cannot see -- e.g. a Senal News piece whose
+ * live URL differs from its canonical one. Following redirects or fetching
+ * canonical tags would require a network call per URL, which would change
+ * this module's contract from deterministic/offline to network-dependent
+ * and add fetch-failure/timeout handling this tool doesn't otherwise need.
+ * Recommendation (not yet decided, see LEMA-10275 comment thread): leave
+ * this class of duplicate to editorial judgment
+ * (`editorial_redundant_syndication`) rather than the normalizer, the same
+ * way the routine already handles it today.
  */
 function normalizeUrl(rawUrl) {
   const parsed = new URL(rawUrl);
   const scheme = parsed.protocol.toLowerCase(); // e.g. "https:"
-  const host = stripLeadingWww(parsed.host.toLowerCase()); // host includes port, if any
+  const host = stripLeadingMobile(stripLeadingWww(parsed.host.toLowerCase())); // host includes port, if any
   const path = stripTrailingSlash(parsed.pathname);
   const query = buildQueryString(parsed.searchParams, host);
 

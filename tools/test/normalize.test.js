@@ -107,9 +107,9 @@ test('SESSIONID is stripped (case-insensitive), aId survives as the identity', (
   assert.equal(key, 'webwire.com/ViewPressRel.asp?aId=358842');
 });
 
-test('ref_ (IMDb nav referrer) is stripped, the news id survives', () => {
+test('ref_ (IMDb nav referrer) is stripped, the news id survives, host is m.-folded (LEMA-10275)', () => {
   const { key } = normalizeUrl('https://m.imdb.com/news/ni64735557/?ref_=tt_nwr_1');
-  assert.equal(key, 'm.imdb.com/news/ni64735557');
+  assert.equal(key, 'imdb.com/news/ni64735557');
 });
 
 // Regression guard: these params are identity-bearing on non-YouTube hosts
@@ -136,4 +136,43 @@ test('non-YouTube identity params survive: aId, s (macprime.ch), p, f, v (reform
     normalizeUrl('https://www.reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897?v=3').key,
     'reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897?v=3'
   );
+});
+
+// m. mobile-subdomain fold (LEMA-10275, falls out of the LEMA-10247 ruling:
+// two of the six editorial_redundant_syndication ledger rows turned out to
+// be m.<host> variants of an already-tracked URL, not editorial judgments).
+
+test('m. mobile subdomain collapses to the same key as the bare host', () => {
+  const bare = normalizeUrl('https://example.com/article');
+  const mobile = normalizeUrl('https://m.example.com/article');
+  assert.equal(bare.key, mobile.key);
+  assert.equal(mobile.key, 'example.com/article');
+});
+
+test('m.imdb.com collapses to the same key as www.imdb.com (the real LEMA-10247 case)', () => {
+  const tracked = normalizeUrl('https://www.imdb.com/news/ni64735557/');
+  const mobileWithTracking = normalizeUrl('https://m.imdb.com/news/ni64735557/?ref_=tt_nwr_1');
+  assert.equal(tracked.key, mobileWithTracking.key);
+});
+
+test('YouTube family hosts are exempt from the m. fold: m.youtube.com keeps its own key', () => {
+  const { key, url } = normalizeUrl('https://m.youtube.com/watch?v=Z9n3TkdcGLY');
+  assert.equal(key, 'm.youtube.com/watch?v=Z9n3TkdcGLY');
+  assert.equal(url, 'https://m.youtube.com/watch?v=Z9n3TkdcGLY');
+});
+
+test('YouTube family per-host param whitelist still applies to m.youtube.com after the fold exists', () => {
+  const { key } = normalizeUrl('https://m.youtube.com/watch?v=Z9n3TkdcGLY&vl=en-US');
+  assert.equal(key, 'm.youtube.com/watch?v=Z9n3TkdcGLY');
+});
+
+test('m.youtube.com and youtube.com remain distinct keys (unchanged by this ticket)', () => {
+  const mobile = normalizeUrl('https://m.youtube.com/watch?v=Z9n3TkdcGLY');
+  const desktop = normalizeUrl('https://www.youtube.com/watch?v=Z9n3TkdcGLY');
+  assert.notEqual(mobile.key, desktop.key);
+});
+
+test('a host that merely starts with "m" but is not an m. subdomain is left alone', () => {
+  const { key } = normalizeUrl('https://movies.example.com/article');
+  assert.equal(key, 'movies.example.com/article');
 });
