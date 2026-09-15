@@ -467,39 +467,6 @@
       ]
     },
     {
-      "url": "https://www.imdb.com/title/tt20516590/",
-      "firstSeen": "2026-09-03T04:00:17Z",
-      "failCount": 1,
-      "lastStatus": 403,
-      "lastAttempt": "2026-09-03T04:00:17Z",
-      "cooldownUntil": null,
-      "history": [
-        {
-          "attempt": "2026-09-03T04:00:17Z",
-          "method": "WebFetch",
-          "status": 403,
-          "issue": "LEMA-9637"
-        },
-        {
-          "attempt": "2026-09-03T04:00:17Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9637",
-          "note": "Firecrawl returned 200 but the body was an ad-blocker error page ('s.amazon-adsystem.com is blocked'), not the real IMDb title page content. Treated as a full-chain failure (empty/unusable body)."
-        },
-        {
-          "attempt": "2026-09-10T04:30:00Z",
-          "method": "manual-remediation",
-          "status": null,
-          "issue": "LEMA-9882",
-          "note": "Converted from plain fetch-failure record to permanentSkip/editorial_undateable; removed the corresponding live data.json entry in this commit."
-        }
-      ],
-      "permanentSkip": true,
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). IMDb main title page for Las Azules/Women in Blue (tt20516590) is a static database page (cast, crew, ratings, no episode-specific content) with no editorial publish date anywhere on the page -- the prior ledger record here was only a fetch-failure/cooldown entry (WebFetch 403, Firecrawl blocked by an ad-blocker error page), it never evaluated dateability. Same per-page-no-date pattern already established for themoviedb.org/tv/253983-las-azules and tvmaze.com/shows/62238 in this ledger. Per Rule A/Rule D, not eligible for data.json. Removed the corresponding data.json entry (idx 25, ts=20260902) in this commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
-    },
-    {
       "url": "https://www.facebook.com/CTTEXPRENTALS/posts/las-azules-temporada-2-lleg%C3%B3-a-apple-tv%EF%B8%8Festa-serie-producida-por-lemon-studios-f/1513668230800391/",
       "firstSeen": "2026-09-03T04:00:17Z",
       "failCount": 0,
@@ -922,32 +889,6 @@
       "permanentSkip": false
     },
     {
-      "url": "https://www.imdb.com/title/tt20516590/news/",
-      "firstSeen": "2026-09-04T14:15:00Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-04T14:15:00Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": "LEMA-9732 sweep: candidate surfaced via Pass 2 web sweep. WebFetch returned HTTP 403. Firecrawl scrape succeeded (200) but returned the IMDb news index/listing page for the show (an aggregator of many separate story links, ad/extension-block boilerplate, no single dated article body of its own). No og:article:published_time, datePublished, or any page-level publish timestamp exists for this listing page itself (each linked story has its own date, but this URL has none). Per Rule A (LEMA-9642), a listing page with no article-level publish date cannot be added with a substitute date. Distinct from https://www.imdb.com/title/tt20516590/ (the show's main title page, already in this ledger, failCount=1) and from individual imdb.com/news/ni<id>/ story permalinks (which do carry their own dates and are evaluated separately). UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
-      "history": [
-        {
-          "attempt": "2026-09-04T14:15:00Z",
-          "method": "WebFetch",
-          "status": 403,
-          "issue": "LEMA-9732"
-        },
-        {
-          "attempt": "2026-09-04T14:15:00Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9732",
-          "note": "Success 200, but page is a news index/listing (no single article date). No publish-date field recoverable. Marked editorial_undateable per Rule A."
-        }
-      ]
-    },
-    {
       "url": "https://soundtrackwiki.com/tv-shows/women-in-blue-songs/",
       "firstSeen": "2026-09-04T14:15:00Z",
       "failCount": 0,
@@ -1090,26 +1031,6 @@
           "status": 200,
           "issue": "LEMA-9738",
           "note": "Returned cast/overview database page content, no article publish date present, only the show's original release date."
-        }
-      ]
-    },
-    {
-      "url": "https://m.imdb.com/title/tt20516590/news/",
-      "firstSeen": "2026-09-04T20:00:40Z",
-      "failCount": 0,
-      "lastStatus": 302,
-      "lastAttempt": "2026-09-04T20:00:40Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": "Discovered via Pass 2 web sweep (trade press search cluster) on LEMA-9738. Mobile-subdomain URL variant of https://www.imdb.com/title/tt20516590/news/, which is already permanentSkip=true / editorial_undateable in this ledger. WebFetch on this m. URL returned a 302 redirect to the canonical www. URL (the already-tracked, already-exhausted entry). Adding this variant as its own ledger entry so future sweeps recognize and skip it directly without needing to re-resolve the redirect. Skipped as editorial_undateable, reviewable=true, consistent with the canonical entry. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
-      "history": [
-        {
-          "attempt": "2026-09-04T20:00:40Z",
-          "method": "WebFetch",
-          "status": 302,
-          "issue": "LEMA-9738",
-          "note": "Redirects to https://www.imdb.com/title/tt20516590/news/, an already permanentSkip/editorial_undateable entry in this ledger."
         }
       ]
     },
@@ -1960,33 +1881,6 @@
           "note": "Confirmed no publish-date metadata field present. Undateable per Rule A."
         }
       ]
-    },
-    {
-      "url": "https://m.imdb.com/title/tt20516590/",
-      "firstSeen": "2026-09-07T04:00:46Z",
-      "failCount": 0,
-      "lastStatus": "firecrawl_200_no_date",
-      "lastAttempt": "2026-09-07T06:00:53.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "history": [
-        {
-          "attempt": "2026-09-07T04:00:46Z",
-          "method": "WebFetch",
-          "status": 302,
-          "issue": "LEMA-9773",
-          "note": "Redirects to https://www.imdb.com/title/tt20516590/ (already in this ledger, failCount=1); WebFetch did not auto-follow, content not retrieved."
-        },
-        {
-          "attempt": "2026-09-07T04:00:46Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9773",
-          "note": "Returned 200 but body is largely an ad-blocker error page ('s.amazon-adsystem.com is blocked') interleaved with partial title content, same unusable-body pattern as the www.imdb.com/title/tt20516590/ ledger entry. Treated as a full-chain failure. failCount now 1."
-        }
-      ],
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": " UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis: Mobile-subdomain variant that redirects to https://www.imdb.com/title/tt20516590/, the canonical IMDb title page already in this ledger (static database page: cast, crew, ratings, no written editorial content). This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
     },
     {
       "url": "https://www.youtube.com/watch?v=5feWbwFLSRc",
@@ -3502,60 +3396,6 @@
       ]
     },
     {
-      "url": "https://www.imdb.com/es/name/nm0746370/publicity",
-      "firstSeen": "2026-09-03T06:00:25Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-10T18:15:00.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": "Discovered via WebSearch (m.imdb.com/es/name/nm0746370/publicity redirected here) on LEMA-9916. This is Fernando Rovzar's IMDb 'Listados publicitarios' (publicity listings) index page, not a standalone article: WebFetch returned 403; Firecrawl scrape succeeded (200) and returned the page content, which is a directory of two linked items (Variety and Deadline articles from 24 May 2022 announcing the original Season 1 series order), each with its own date -- but the index page itself carries no independent editorial publish date, only og:profile metadata for the person. Same aggregator/database-page pattern already established for other IMDb, JustWatch, TVMaze, and RottenTomatoes season/listing URLs in this ledger. Per Rule A, not added to data.json (no genuine page-level publish date to source). Note: the two linked 2022 articles are pre-Season-2 series-order announcements, not new S2 coverage, so even if fetched directly they would not be new to this dashboard. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
-      "history": [
-        {
-          "attempt": "2026-09-03T06:00:25Z",
-          "method": "WebFetch",
-          "status": 403,
-          "issue": "LEMA-9638"
-        },
-        {
-          "attempt": "2026-09-03T06:00:25Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9638",
-          "note": "Firecrawl returned 200 but the body was an ad-blocker error page ('s.amazon-adsystem.com is blocked'), not real IMDb publicity-listing content. Treated as a full-chain failure (unusable body), same pattern as the existing www.imdb.com/title/tt20516590/ ledger entry."
-        },
-        {
-          "attempt": "2026-09-06T02:10:00Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9756",
-          "note": "WebFetch returned 403. Firecrawl scrape succeeded (200): page is Fernando Rovzar publicity listings, only linking two 2022-05-24 articles (Variety, Deadline) about the original series order, not S2 coverage. Not added to data.json (off-topic/too old for S2 sweep), but fetch chain resolved so ledger resets per step 4d."
-        },
-        {
-          "attempt": "2026-09-07T10:00:00.000Z",
-          "method": "WebFetch (403) then Firecrawl scrape (200)",
-          "status": 200,
-          "issue": "LEMA-9811",
-          "note": "Re-encountered via m.imdb.com/es/name/nm0746370/publicity redirect in Pass 2. WebFetch 403; Firecrawl succeeded with real content this time (static IMDb publicity-listings index for Fernando Rovzar, linking only two 2022-05-24 wire pieces on the original series order). Page carries no publish date of its own. Per Rule A this is genuine on-topic content with no recoverable real date after both fetch methods attempted -> editorial_undateable, permanentSkip=true, reviewable=true. Closes the gap left by LEMA-9756 (decision was made in that run comment only, never written to the ledger, so it re-surfaced here) per Rule C (LEMA-9761/9762)."
-        },
-        {
-          "attempt": "2026-09-10T18:15:00.000Z",
-          "method": "WebFetch",
-          "status": 403,
-          "issue": "LEMA-9916",
-          "note": "403 Forbidden on imdb.com direct fetch."
-        },
-        {
-          "attempt": "2026-09-10T18:15:00.000Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-9916",
-          "note": "Succeeded; confirmed publicity-listing index page for Fernando Rovzar with no page-level editorial publish date, only a directory of two 2022 articles with their own dates."
-        }
-      ]
-    },
-    {
       "url": "https://1screen.ciatr.jp/tv/182201/season/2",
       "firstSeen": "2026-09-10T20:05:48Z",
       "failCount": 0,
@@ -3984,13 +3824,6 @@
           "note": "ABC (Sevilla) article about singer Amaia performing a concert in Sevilla. No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
         }
       ]
-    },
-    {
-      "url": "https://m.imdb.com/es/name/nm0746370/publicity",
-      "permanentSkip": true,
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": "IMDb 'Listados publicitarios' page for Fernando Rovzar: a directory of links to press mentions, no written editorial content itself.",
-      "firstSeen": "2026-09-11T04:00:00Z"
     },
     {
       "url": "https://www.justwatch.com/us/tv-show/las-azules",
@@ -8597,6 +8430,140 @@
           "status": 403,
           "issue": "LEMA-10239",
           "note": "Firecrawl: 'we do not support this site' (instagram.com blanket refusal, same documented pattern as facebook.com/reddit.com). Full fallback-chain failure; not added to data.json this run."
+        }
+      ]
+    },
+    {
+      "url": "https://imdb.com/title/tt20516590",
+      "firstSeen": "2026-09-03T04:00:17Z",
+      "failCount": 0,
+      "lastStatus": "firecrawl_200_no_date",
+      "lastAttempt": "2026-09-07T06:00:53.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": " UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis: Mobile-subdomain variant that redirects to https://www.imdb.com/title/tt20516590/, the canonical IMDb title page already in this ledger (static database page: cast, crew, ratings, no written editorial content). This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all. Prior note (LEMA-9882): Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). IMDb main title page for Las Azules/Women in Blue (tt20516590) is a static database page (cast, crew, ratings, no episode-specific content) with no editorial publish date anywhere on the page -- the prior ledger record here was only a fetch-failure/cooldown entry (WebFetch 403, Firecrawl blocked by an ad-blocker error page), it never evaluated dateability. Same per-page-no-date pattern already established for themoviedb.org/tv/253983-las-azules and tvmaze.com/shows/62238 in this ledger. Per Rule A/Rule D, not eligible for data.json. Removed the corresponding data.json entry (idx 25, ts=20260902) in this commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-09-03T04:00:17Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9637"
+        },
+        {
+          "attempt": "2026-09-03T04:00:17Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9637",
+          "note": "Firecrawl returned 200 but the body was an ad-blocker error page ('s.amazon-adsystem.com is blocked'), not the real IMDb title page content. Treated as a full-chain failure (empty/unusable body)."
+        },
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "WebFetch",
+          "status": 302,
+          "issue": "LEMA-9773",
+          "note": "Redirects to https://www.imdb.com/title/tt20516590/ (already in this ledger, failCount=1); WebFetch did not auto-follow, content not retrieved."
+        },
+        {
+          "attempt": "2026-09-07T04:00:46Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9773",
+          "note": "Returned 200 but body is largely an ad-blocker error page ('s.amazon-adsystem.com is blocked') interleaved with partial title content, same unusable-body pattern as the www.imdb.com/title/tt20516590/ ledger entry. Treated as a full-chain failure. failCount now 1."
+        },
+        {
+          "attempt": "2026-09-10T04:30:00Z",
+          "method": "manual-remediation",
+          "status": null,
+          "issue": "LEMA-9882",
+          "note": "Converted from plain fetch-failure record to permanentSkip/editorial_undateable; removed the corresponding live data.json entry in this commit."
+        }
+      ]
+    },
+    {
+      "url": "https://imdb.com/title/tt20516590/news",
+      "firstSeen": "2026-09-04T14:15:00Z",
+      "failCount": 0,
+      "lastStatus": 302,
+      "lastAttempt": "2026-09-04T20:00:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Pass 2 web sweep (trade press search cluster) on LEMA-9738. Mobile-subdomain URL variant of https://www.imdb.com/title/tt20516590/news/, which is already permanentSkip=true / editorial_undateable in this ledger. WebFetch on this m. URL returned a 302 redirect to the canonical www. URL (the already-tracked, already-exhausted entry). Adding this variant as its own ledger entry so future sweeps recognize and skip it directly without needing to re-resolve the redirect. Skipped as editorial_undateable, reviewable=true, consistent with the canonical entry. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all. Prior note (LEMA-9732): LEMA-9732 sweep: candidate surfaced via Pass 2 web sweep. WebFetch returned HTTP 403. Firecrawl scrape succeeded (200) but returned the IMDb news index/listing page for the show (an aggregator of many separate story links, ad/extension-block boilerplate, no single dated article body of its own). No og:article:published_time, datePublished, or any page-level publish timestamp exists for this listing page itself (each linked story has its own date, but this URL has none). Per Rule A (LEMA-9642), a listing page with no article-level publish date cannot be added with a substitute date. Distinct from https://www.imdb.com/title/tt20516590/ (the show's main title page, already in this ledger, failCount=1) and from individual imdb.com/news/ni<id>/ story permalinks (which do carry their own dates and are evaluated separately). UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-09-04T14:15:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9732"
+        },
+        {
+          "attempt": "2026-09-04T14:15:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9732",
+          "note": "Success 200, but page is a news index/listing (no single article date). No publish-date field recoverable. Marked editorial_undateable per Rule A."
+        },
+        {
+          "attempt": "2026-09-04T20:00:40Z",
+          "method": "WebFetch",
+          "status": 302,
+          "issue": "LEMA-9738",
+          "note": "Redirects to https://www.imdb.com/title/tt20516590/news/, an already permanentSkip/editorial_undateable entry in this ledger."
+        }
+      ]
+    },
+    {
+      "url": "https://imdb.com/es/name/nm0746370/publicity",
+      "firstSeen": "2026-09-03T06:00:25Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-10T18:15:00.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via WebSearch (m.imdb.com/es/name/nm0746370/publicity redirected here) on LEMA-9916. This is Fernando Rovzar's IMDb 'Listados publicitarios' (publicity listings) index page, not a standalone article: WebFetch returned 403; Firecrawl scrape succeeded (200) and returned the page content, which is a directory of two linked items (Variety and Deadline articles from 24 May 2022 announcing the original Season 1 series order), each with its own date -- but the index page itself carries no independent editorial publish date, only og:profile metadata for the person. Same aggregator/database-page pattern already established for other IMDb, JustWatch, TVMaze, and RottenTomatoes season/listing URLs in this ledger. Per Rule A, not added to data.json (no genuine page-level publish date to source). Note: the two linked 2022 articles are pre-Season-2 series-order announcements, not new S2 coverage, so even if fetched directly they would not be new to this dashboard. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all. Prior note (unknown): IMDb 'Listados publicitarios' page for Fernando Rovzar: a directory of links to press mentions, no written editorial content itself.",
+      "history": [
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9638"
+        },
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9638",
+          "note": "Firecrawl returned 200 but the body was an ad-blocker error page ('s.amazon-adsystem.com is blocked'), not real IMDb publicity-listing content. Treated as a full-chain failure (unusable body), same pattern as the existing www.imdb.com/title/tt20516590/ ledger entry."
+        },
+        {
+          "attempt": "2026-09-06T02:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9756",
+          "note": "WebFetch returned 403. Firecrawl scrape succeeded (200): page is Fernando Rovzar publicity listings, only linking two 2022-05-24 articles (Variety, Deadline) about the original series order, not S2 coverage. Not added to data.json (off-topic/too old for S2 sweep), but fetch chain resolved so ledger resets per step 4d."
+        },
+        {
+          "attempt": "2026-09-07T10:00:00.000Z",
+          "method": "WebFetch (403) then Firecrawl scrape (200)",
+          "status": 200,
+          "issue": "LEMA-9811",
+          "note": "Re-encountered via m.imdb.com/es/name/nm0746370/publicity redirect in Pass 2. WebFetch 403; Firecrawl succeeded with real content this time (static IMDb publicity-listings index for Fernando Rovzar, linking only two 2022-05-24 wire pieces on the original series order). Page carries no publish date of its own. Per Rule A this is genuine on-topic content with no recoverable real date after both fetch methods attempted -> editorial_undateable, permanentSkip=true, reviewable=true. Closes the gap left by LEMA-9756 (decision was made in that run comment only, never written to the ledger, so it re-surfaced here) per Rule C (LEMA-9761/9762)."
+        },
+        {
+          "attempt": "2026-09-10T18:15:00.000Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-9916",
+          "note": "403 Forbidden on imdb.com direct fetch."
+        },
+        {
+          "attempt": "2026-09-10T18:15:00.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-9916",
+          "note": "Succeeded; confirmed publicity-listing index page for Fernando Rovzar with no page-level editorial publish date, only a directory of two 2022 articles with their own dates."
         }
       ]
     }
