@@ -8412,9 +8412,9 @@
     {
       "url": "https://www.instagram.com/reel/DdUACW5xnvU/",
       "firstSeen": "2026-09-15T16:00:54Z",
-      "failCount": 2,
-      "lastStatus": "firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-15T18:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T20:05:15Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -8444,8 +8444,18 @@
           "status": 403,
           "issue": "LEMA-10292",
           "note": "Firecrawl: we do not support this site (instagram.com blanket refusal, same documented pattern as facebook.com/reddit.com). Full fallback-chain failure; not added to data.json this run."
+        },
+        {
+          "attempt": "2026-09-15T20:05:15Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10302",
+          "note": "WebFetch succeeded (full content returned, not a bot-wall stub). Determined to be a second-address duplicate of an existing YouTube entry under Rule I; reclassified as permanentSkip/editorial_redundant_syndication rather than added to data.json."
         }
-      ]
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "WebFetch succeeded this run (retry per expired-cooldown-retry), returning full post detail: account 'biggoldbelt' (Big Gold Belt Media), publish date Sep 15 2026, content is the exclusive press clip 'Psychological Angle' from Women in Blue (Las Azules) S2E6 ('Gilberto'). This is the identical press clip already tracked in data.json as a YouTube upload by the same distributor: https://www.youtube.com/watch?v=0EG8HALEQUA (ts=20260915, outlet='Big Gold Belt Media (YouTube)'). Same clip, same distributor account, same publish date, cross-posted to a second platform: a second address for a document already in data.json, not a genuinely separate piece or format, per Rule I. Not added to data.json; not tagged with storyGroup since this is the second-address case, not the distinct-document case."
     },
     {
       "url": "https://imdb.com/title/tt20516590",
