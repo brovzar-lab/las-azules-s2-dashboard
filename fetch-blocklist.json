@@ -8412,9 +8412,9 @@
     {
       "url": "https://www.instagram.com/reel/DdUACW5xnvU/",
       "firstSeen": "2026-09-15T16:00:54Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": "firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-15T16:00:54Z",
+      "lastAttempt": "2026-09-15T18:00:00Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -8430,6 +8430,20 @@
           "status": 403,
           "issue": "LEMA-10239",
           "note": "Firecrawl: 'we do not support this site' (instagram.com blanket refusal, same documented pattern as facebook.com/reddit.com). Full fallback-chain failure; not added to data.json this run."
+        },
+        {
+          "attempt": "2026-09-15T18:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10292",
+          "note": "Retry (expired-cooldown-retry per lookup). WebFetch returned a 2xx response with only the word Instagram in the body, an empty/near-empty bot-wall response, treated as a failure per the fetch fallback chain policy."
+        },
+        {
+          "attempt": "2026-09-15T18:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10292",
+          "note": "Firecrawl: we do not support this site (instagram.com blanket refusal, same documented pattern as facebook.com/reddit.com). Full fallback-chain failure; not added to data.json this run."
         }
       ]
     },
@@ -8628,5 +8642,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-15T17:42:30Z"
+  "lastUpdated": "2026-09-15T18:00:00Z"
 }
