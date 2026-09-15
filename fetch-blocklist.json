@@ -496,9 +496,8 @@
         }
       ],
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). IMDb main title page for Las Azules/Women in Blue (tt20516590) is a static database page (cast, crew, ratings, no episode-specific content) with no editorial publish date anywhere on the page -- the prior ledger record here was only a fetch-failure/cooldown entry (WebFetch 403, Firecrawl blocked by an ad-blocker error page), it never evaluated dateability. Same per-page-no-date pattern already established for themoviedb.org/tv/253983-las-azules and tvmaze.com/shows/62238 in this ledger. Per Rule A/Rule D, not eligible for data.json. Removed the corresponding data.json entry (idx 25, ts=20260902) in this commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected."
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). IMDb main title page for Las Azules/Women in Blue (tt20516590) is a static database page (cast, crew, ratings, no episode-specific content) with no editorial publish date anywhere on the page -- the prior ledger record here was only a fetch-failure/cooldown entry (WebFetch 403, Firecrawl blocked by an ad-blocker error page), it never evaluated dateability. Same per-page-no-date pattern already established for themoviedb.org/tv/253983-las-azules and tvmaze.com/shows/62238 in this ledger. Per Rule A/Rule D, not eligible for data.json. Removed the corresponding data.json entry (idx 25, ts=20260902) in this commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
     },
     {
       "url": "https://www.facebook.com/CTTEXPRENTALS/posts/las-azules-temporada-2-lleg%C3%B3-a-apple-tv%EF%B8%8Festa-serie-producida-por-lemon-studios-f/1513668230800391/",
@@ -568,9 +567,8 @@
       "lastAttempt": "2026-09-03T12:00:23Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "German-locale IMDb title page for Women in Blue (tt20516590), surfaced by the Exa EN pass (LEMA-9643). WebFetch failed with 403. Firecrawl scrape succeeded (200) and returned the full page (title, synopsis, rating, cast) but no date-bearing field anywhere: Firecrawl's metadata block has no og:article:published_time, datePublished, or any other publish/update timestamp, only og:locale/og:image/og:title. This is an evergreen title/database page, not a dated article. Per Rule A (LEMA-9642), no proxy date may be substituted (the ledger's own firstSeen crawl time is not a real publish date), so this candidate is not added to data.json. Both WebFetch and Firecrawl are exhausted. reviewable=true so it stays listable for a future manual lookup if IMDb ever adds a dateable field to this locale variant.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "German-locale IMDb title page for Women in Blue (tt20516590), surfaced by the Exa EN pass (LEMA-9643). WebFetch failed with 403. Firecrawl scrape succeeded (200) and returned the full page (title, synopsis, rating, cast) but no date-bearing field anywhere: Firecrawl's metadata block has no og:article:published_time, datePublished, or any other publish/update timestamp, only og:locale/og:image/og:title. This is an evergreen title/database page, not a dated article. Per Rule A (LEMA-9642), no proxy date may be substituted (the ledger's own firstSeen crawl time is not a real publish date), so this candidate is not added to data.json. Both WebFetch and Firecrawl are exhausted. reviewable=true so it stays listable for a future manual lookup if IMDb ever adds a dateable field to this locale variant. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-03T12:00:23Z",
@@ -595,9 +593,8 @@
       "lastAttempt": "2026-09-03T12:00:23Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Prime Video (Mexico) detail page for Las Azules Season 2, surfaced during the Pass 2 web sweep (LEMA-9643) while checking Apple TV Amazon Channel availability. Both WebFetch and Firecrawl returned 200 with real page content (title, synopsis, cast), but neither surfaced a specific publish/last-updated date -- the page text only shows the air year ('2026, 2 temporadas') with no day-level date, and Firecrawl's metadata block has no date field either. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted, so this candidate is not added to data.json. Both fetch methods exhausted. reviewable=true so it stays listable for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Prime Video (Mexico) detail page for Las Azules Season 2, surfaced during the Pass 2 web sweep (LEMA-9643) while checking Apple TV Amazon Channel availability. Both WebFetch and Firecrawl returned 200 with real page content (title, synopsis, cast), but neither surfaced a specific publish/last-updated date -- the page text only shows the air year ('2026, 2 temporadas') with no day-level date, and Firecrawl's metadata block has no date field either. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted, so this candidate is not added to data.json. Both fetch methods exhausted. reviewable=true so it stays listable for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-03T12:00:23Z",
@@ -663,9 +660,8 @@
       "lastAttempt": "2026-09-03T22:01:04Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "US Apple TV show landing page for Women in Blue (umc.cmc.73wmdmkfpta5ul1vbwckmme39), surfaced during Pass 2 general web sweep (LEMA-9653). WebFetch returned 200 with real page content but only 'Released in 2024' / '2024 - 57m' as time info, no day-level date. Firecrawl scrape confirmed: full metadata block retrieved (og:title, og:description, og:image, etc.) but no og:article:published_time, datePublished, or any other publish/update timestamp field present anywhere in metadata or body. This is an evergreen title/show landing page (still only lists Season 1 episode count in the fetched body), not a dated article. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted, so not added to data.json. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "US Apple TV show landing page for Women in Blue (umc.cmc.73wmdmkfpta5ul1vbwckmme39), surfaced during Pass 2 general web sweep (LEMA-9653). WebFetch returned 200 with real page content but only 'Released in 2024' / '2024 - 57m' as time info, no day-level date. Firecrawl scrape confirmed: full metadata block retrieved (og:title, og:description, og:image, etc.) but no og:article:published_time, datePublished, or any other publish/update timestamp field present anywhere in metadata or body. This is an evergreen title/show landing page (still only lists Season 1 episode count in the fetched body), not a dated article. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted, so not added to data.json. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-03T22:01:04Z",
@@ -760,9 +756,8 @@
       "lastAttempt": "2026-09-04T02:00:50Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "TMDB Season 2 database page for Women in Blue (Las Azules), surfaced during Pass 2 general web sweep (LEMA-9656). WebFetch returned 200 with real content (episode list, air dates for individual episodes e.g. Aug 11/18/2026, synopses) but no page-level publish/update date field. Firecrawl scrape confirmed: full markdown content retrieved (episode list with per-episode air dates) but no og:article:published_time, datePublished, or any other page-level publish/update timestamp anywhere in the body or metadata -- only individual episode air dates within an evergreen, continuously-updated database listing. Per Rule A (LEMA-9642), a per-episode air date embedded in an evergreen catalog page is not a substitute for a real sourced publish date for this URL as a candidate entry, and the ledger's own crawl timestamp may never be used as a proxy. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "TMDB Season 2 database page for Women in Blue (Las Azules), surfaced during Pass 2 general web sweep (LEMA-9656). WebFetch returned 200 with real content (episode list, air dates for individual episodes e.g. Aug 11/18/2026, synopses) but no page-level publish/update date field. Firecrawl scrape confirmed: full markdown content retrieved (episode list with per-episode air dates) but no og:article:published_time, datePublished, or any other page-level publish/update timestamp anywhere in the body or metadata -- only individual episode air dates within an evergreen, continuously-updated database listing. Per Rule A (LEMA-9642), a per-episode air date embedded in an evergreen catalog page is not a substitute for a real sourced publish date for this URL as a candidate entry, and the ledger's own crawl timestamp may never be used as a proxy. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-04T02:00:50Z",
@@ -788,9 +783,8 @@
       "lastAttempt": "2026-09-04T02:00:50Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "TVmaze biography/filmography database page for Bárbara Mori, surfaced during Pass 2 general web sweep (LEMA-9656) while checking for new interview/coverage content. WebFetch returned 200 with real content (bio, filmography including Las Azules) but no publish/update date. Firecrawl scrape confirmed: full markdown retrieved (bio text plus cast-credit list with individual past episode air dates for Las Azules Season 1, e.g. Sep 25/18/11/4, 2024) but no page-level publish/update date field anywhere in body or metadata. This is an evergreen actor biography/database page, not a dated article, and its Las Azules credit references Season 1 (2024) episodes only, not new Season 2 coverage. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "TVmaze biography/filmography database page for Bárbara Mori, surfaced during Pass 2 general web sweep (LEMA-9656) while checking for new interview/coverage content. WebFetch returned 200 with real content (bio, filmography including Las Azules) but no publish/update date. Firecrawl scrape confirmed: full markdown retrieved (bio text plus cast-credit list with individual past episode air dates for Las Azules Season 1, e.g. Sep 25/18/11/4, 2024) but no page-level publish/update date field anywhere in body or metadata. This is an evergreen actor biography/database page, not a dated article, and its Las Azules credit references Season 1 (2024) episodes only, not new Season 2 coverage. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-04T02:00:50Z",
@@ -935,9 +929,8 @@
       "lastAttempt": "2026-09-04T14:15:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "LEMA-9732 sweep: candidate surfaced via Pass 2 web sweep. WebFetch returned HTTP 403. Firecrawl scrape succeeded (200) but returned the IMDb news index/listing page for the show (an aggregator of many separate story links, ad/extension-block boilerplate, no single dated article body of its own). No og:article:published_time, datePublished, or any page-level publish timestamp exists for this listing page itself (each linked story has its own date, but this URL has none). Per Rule A (LEMA-9642), a listing page with no article-level publish date cannot be added with a substitute date. Distinct from https://www.imdb.com/title/tt20516590/ (the show's main title page, already in this ledger, failCount=1) and from individual imdb.com/news/ni<id>/ story permalinks (which do carry their own dates and are evaluated separately).",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "LEMA-9732 sweep: candidate surfaced via Pass 2 web sweep. WebFetch returned HTTP 403. Firecrawl scrape succeeded (200) but returned the IMDb news index/listing page for the show (an aggregator of many separate story links, ad/extension-block boilerplate, no single dated article body of its own). No og:article:published_time, datePublished, or any page-level publish timestamp exists for this listing page itself (each linked story has its own date, but this URL has none). Per Rule A (LEMA-9642), a listing page with no article-level publish date cannot be added with a substitute date. Distinct from https://www.imdb.com/title/tt20516590/ (the show's main title page, already in this ledger, failCount=1) and from individual imdb.com/news/ni<id>/ story permalinks (which do carry their own dates and are evaluated separately). UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-04T14:15:00Z",
@@ -962,9 +955,8 @@
       "lastAttempt": "2026-09-04T14:15:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "LEMA-9732 sweep: candidate surfaced via Pass 3 (Firecrawl DE market search). WebFetch returned HTTP 403. Firecrawl scrape succeeded (200): page is a soundtrack/episode-song reference wiki guide. Page metadata contains only the show's 'Release date: 2026-08-12' (a show-level field, not the article/page's own publish or last-updated timestamp) -- no og:article:published_time, datePublished, or similar field present anywhere in the scraped markdown or metadata. Per Rule A (LEMA-9642), the show release date is a proxy and must not be substituted for a real page publish date. Marked editorial_undateable; reviewable=true in case the site later exposes a dateable timestamp.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "LEMA-9732 sweep: candidate surfaced via Pass 3 (Firecrawl DE market search). WebFetch returned HTTP 403. Firecrawl scrape succeeded (200): page is a soundtrack/episode-song reference wiki guide. Page metadata contains only the show's 'Release date: 2026-08-12' (a show-level field, not the article/page's own publish or last-updated timestamp) -- no og:article:published_time, datePublished, or similar field present anywhere in the scraped markdown or metadata. Per Rule A (LEMA-9642), the show release date is a proxy and must not be substituted for a real page publish date. Marked editorial_undateable; reviewable=true in case the site later exposes a dateable timestamp. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-04T14:15:00Z",
@@ -1056,9 +1048,8 @@
       "lastAttempt": "2026-09-04T20:00:40Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9738. JustWatch Italy streaming-availability listing page for the show overall (distinct from the already-tracked /it/serie-tv/las-azules/stagione-2 season-2 page, which is a standalone entry already present in data.json). WebFetch succeeded (200) and confirmed this is a streaming catalog/database page with no publish date: only a 'last verified for streaming updates' data-verification timestamp, which is a crawler/DB artifact, not an editorial publish date. Firecrawl scrape also attempted per Rule A (LEMA-9642): succeeded (200), returned full page markdown (streaming service listings, season/episode tiles, cast/rating widgets), same result -- no publish/article date field anywhere in the body. Both methods exhausted, no date recoverable. Matches the same pattern as other already-permanentSkip JustWatch/database pages in this ledger (e.g. justwatch.com/gt/serie/las-azules cooldown, tvmaze, themoviedb, tv.apple.com). Skipped as editorial_undateable, reviewable=true.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9738. JustWatch Italy streaming-availability listing page for the show overall (distinct from the already-tracked /it/serie-tv/las-azules/stagione-2 season-2 page, which is a standalone entry already present in data.json). WebFetch succeeded (200) and confirmed this is a streaming catalog/database page with no publish date: only a 'last verified for streaming updates' data-verification timestamp, which is a crawler/DB artifact, not an editorial publish date. Firecrawl scrape also attempted per Rule A (LEMA-9642): succeeded (200), returned full page markdown (streaming service listings, season/episode tiles, cast/rating widgets), same result -- no publish/article date field anywhere in the body. Both methods exhausted, no date recoverable. Matches the same pattern as other already-permanentSkip JustWatch/database pages in this ledger (e.g. justwatch.com/gt/serie/las-azules cooldown, tvmaze, themoviedb, tv.apple.com). Skipped as editorial_undateable, reviewable=true. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-04T20:00:40Z",
@@ -1084,9 +1075,8 @@
       "lastAttempt": "2026-09-04T20:00:40Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Pass 2 web sweep (YouTube/trade search cluster) on LEMA-9738. IMDbPro title overview/cast page (evergreen reference content, not a news article). WebFetch failed with HTTP 403 (IMDbPro login/paywall gate). Firecrawl scrape fallback succeeded (200) and returned the actual page body: title overview, release date (Jul 31, 2024, the SERIES premiere, not an article publish date), cast list, awards summary -- a database/reference page with no article publish date field anywhere. Same undateable pattern as the already-permanentSkip imdb.com title/name pages in this ledger. Skipped as editorial_undateable, reviewable=true.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Pass 2 web sweep (YouTube/trade search cluster) on LEMA-9738. IMDbPro title overview/cast page (evergreen reference content, not a news article). WebFetch failed with HTTP 403 (IMDbPro login/paywall gate). Firecrawl scrape fallback succeeded (200) and returned the actual page body: title overview, release date (Jul 31, 2024, the SERIES premiere, not an article publish date), cast list, awards summary -- a database/reference page with no article publish date field anywhere. Same undateable pattern as the already-permanentSkip imdb.com title/name pages in this ledger. Skipped as editorial_undateable, reviewable=true. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-04T20:00:40Z",
@@ -1111,9 +1101,8 @@
       "lastAttempt": "2026-09-04T20:00:40Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Pass 2 web sweep (trade press search cluster) on LEMA-9738. Mobile-subdomain URL variant of https://www.imdb.com/title/tt20516590/news/, which is already permanentSkip=true / editorial_undateable in this ledger. WebFetch on this m. URL returned a 302 redirect to the canonical www. URL (the already-tracked, already-exhausted entry). Adding this variant as its own ledger entry so future sweeps recognize and skip it directly without needing to re-resolve the redirect. Skipped as editorial_undateable, reviewable=true, consistent with the canonical entry.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Pass 2 web sweep (trade press search cluster) on LEMA-9738. Mobile-subdomain URL variant of https://www.imdb.com/title/tt20516590/news/, which is already permanentSkip=true / editorial_undateable in this ledger. WebFetch on this m. URL returned a 302 redirect to the canonical www. URL (the already-tracked, already-exhausted entry). Adding this variant as its own ledger entry so future sweeps recognize and skip it directly without needing to re-resolve the redirect. Skipped as editorial_undateable, reviewable=true, consistent with the canonical entry. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-04T20:00:40Z",
@@ -1191,9 +1180,8 @@
       "lastAttempt": "2026-09-05T02:05:44.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Dominican Republic-locale Apple TV show landing page for Las Azules, surfaced during Pass 2 general web sweep (LEMA-9741). WebFetch returned 200 with real page content (show description, episode listings, cast) but only 'Released in 2024' / no day-level publish date. Firecrawl scrape confirmed: full metadata block retrieved, no og:article:published_time, datePublished, or any other publish/update timestamp field present. Same evergreen title/show-landing-page pattern as the already-permanentSkip tv.apple.com/us/show/las-azules/... entry. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Dominican Republic-locale Apple TV show landing page for Las Azules, surfaced during Pass 2 general web sweep (LEMA-9741). WebFetch returned 200 with real page content (show description, episode listings, cast) but only 'Released in 2024' / no day-level publish date. Firecrawl scrape confirmed: full metadata block retrieved, no og:article:published_time, datePublished, or any other publish/update timestamp field present. Same evergreen title/show-landing-page pattern as the already-permanentSkip tv.apple.com/us/show/las-azules/... entry. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-05T02:05:44.000Z",
@@ -1219,9 +1207,8 @@
       "lastAttempt": "2026-09-05T02:05:44.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Mexico-locale Apple TV show landing page for Las Azules, surfaced during Pass 2 general web sweep (LEMA-9741). WebFetch returned 200 with real page content (Spanish-language description, episode listings, cast) but only 'Lanzamiento: 2024' / no day-level publish date. Firecrawl scrape confirmed: full metadata block retrieved, no og:article:published_time, datePublished, or any other publish/update timestamp field present. Same evergreen title/show-landing-page pattern as the already-permanentSkip tv.apple.com/us/show/las-azules/... entry. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Mexico-locale Apple TV show landing page for Las Azules, surfaced during Pass 2 general web sweep (LEMA-9741). WebFetch returned 200 with real page content (Spanish-language description, episode listings, cast) but only 'Lanzamiento: 2024' / no day-level publish date. Firecrawl scrape confirmed: full metadata block retrieved, no og:article:published_time, datePublished, or any other publish/update timestamp field present. Same evergreen title/show-landing-page pattern as the already-permanentSkip tv.apple.com/us/show/las-azules/... entry. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-05T02:05:44.000Z",
@@ -1247,9 +1234,8 @@
       "lastAttempt": "2026-09-05T12:05:48Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "French-locale IMDb title page for Las Azules (tt20516590). WebFetch failed (403); Firecrawl scrape succeeded (200) and returned the static show info page (rating, synopsis, cast) but no article publish date -- consistent with the imdb.com/de, /es-es, /it locale variants already in this ledger as editorial_undateable. Genuine on-topic reference, but not a dateable news item.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "French-locale IMDb title page for Las Azules (tt20516590). WebFetch failed (403); Firecrawl scrape succeeded (200) and returned the static show info page (rating, synopsis, cast) but no article publish date -- consistent with the imdb.com/de, /es-es, /it locale variants already in this ledger as editorial_undateable. Genuine on-topic reference, but not a dateable news item. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-05T02:05:44.000Z",
@@ -1439,8 +1425,8 @@
       "lastAttempt": "2026-09-05T20:00:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": " UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis: Rotten Tomatoes season-1 overview page, structurally identical to the sibling s02 entry in this ledger (review-aggregator database page: critic/audience score widgets, no page-level publish date). This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
     },
     {
       "url": "https://pro.imdb.com/title/tt33054256",
@@ -1450,9 +1436,8 @@
       "lastAttempt": "2026-09-06T10:00:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "IMDbPro title/episode page for 'Ángeles' (S1E5 of Women in Blue, 2024) — a cast/episode database catalog page, not a news article. WebFetch returned 403 (subscriber-gated). Firecrawl scrape succeeded (200) but returned only IMDbPro's episode/cast listing markup with no article body and no sourced publish date for any news event. Consistent with other imdb.com/tvmaze/justwatch reference/catalog pages already in this ledger under editorial_undateable. Found via LEMA-9760 sweep.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "IMDbPro title/episode page for 'Ángeles' (S1E5 of Women in Blue, 2024) — a cast/episode database catalog page, not a news article. WebFetch returned 403 (subscriber-gated). Firecrawl scrape succeeded (200) but returned only IMDbPro's episode/cast listing markup with no article body and no sourced publish date for any news event. Consistent with other imdb.com/tvmaze/justwatch reference/catalog pages already in this ledger under editorial_undateable. Found via LEMA-9760 sweep. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-06T10:00:00Z",
@@ -1477,9 +1462,8 @@
       "lastAttempt": "2026-09-06T12:00:24Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Evergreen epguides.com 'Titles & Air Dates Guide' database page for Women in Blue (Las Azules), surfaced during Pass 2 EN sweep (LEMA-9763). WebFetch returned 200 with real content (full episode list, cast, air dates for S1 and S2) but the only date-like field is 'Last updated: Wed, 26 Aug 2026 15:00', which is the guide's own page-revision timestamp, not an article publish date. Firecrawl scrape confirmed (200): same content, same 'Last updated' field, no og:article:published_time, datePublished, or any other page-level publish timestamp anywhere in body or metadata -- same evergreen-database-page pattern as the existing tvmaze.com/shows/62238/las-azules/episodeguide and themoviedb.org/tv/253983-las-azules/season/2 ledger entries. Per Rule A, the page's own last-updated/crawl-style timestamp may never substitute for a real sourced publish date. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Evergreen epguides.com 'Titles & Air Dates Guide' database page for Women in Blue (Las Azules), surfaced during Pass 2 EN sweep (LEMA-9763). WebFetch returned 200 with real content (full episode list, cast, air dates for S1 and S2) but the only date-like field is 'Last updated: Wed, 26 Aug 2026 15:00', which is the guide's own page-revision timestamp, not an article publish date. Firecrawl scrape confirmed (200): same content, same 'Last updated' field, no og:article:published_time, datePublished, or any other page-level publish timestamp anywhere in body or metadata -- same evergreen-database-page pattern as the existing tvmaze.com/shows/62238/las-azules/episodeguide and themoviedb.org/tv/253983-las-azules/season/2 ledger entries. Per Rule A, the page's own last-updated/crawl-style timestamp may never substitute for a real sourced publish date. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-06T12:00:24Z",
@@ -1528,36 +1512,33 @@
     {
       "url": "https://tv.apple.com/us/show/las-azules--la-brigade-bleue/umc.cmc.73wmdmkfpta5ul1vbwckmme39?l=es-MX",
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
+      "skipReason": "editorial_listing_or_database",
       "cooldownUntil": null,
       "failCount": 0,
       "lastStatus": 200,
       "lastAttempt": "2026-09-06T14:00:00.000Z",
-      "note": "Official Apple TV general show page (locale variant). WebFetch and Firecrawl both attempted; only a bare year ('2024') surfaced, no real publish date. Added LEMA-9766 sweep."
+      "note": "Official Apple TV general show page (locale variant). WebFetch and Firecrawl both attempted; only a bare year ('2024') surfaced, no real publish date. Added LEMA-9766 sweep. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
     },
     {
       "url": "https://tv.apple.com/pe/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
+      "skipReason": "editorial_listing_or_database",
       "cooldownUntil": null,
       "failCount": 0,
       "lastStatus": 200,
       "lastAttempt": "2026-09-06T14:00:00.000Z",
-      "note": "Official Apple TV general show page (Peru locale variant). WebFetch and Firecrawl both attempted; only a bare year ('2024') surfaced, no real publish date. Added LEMA-9766 sweep."
+      "note": "Official Apple TV general show page (Peru locale variant). WebFetch and Firecrawl both attempted; only a bare year ('2024') surfaced, no real publish date. Added LEMA-9766 sweep. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
     },
     {
       "url": "https://www.thetvdb.com/series/las-azules/seasons/official/1",
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
+      "skipReason": "editorial_listing_or_database",
       "lastAttempt": "2026-09-06T16:00:00.000Z",
       "lastStatus": 200,
       "firstSeen": "2026-09-06T16:00:00Z",
       "failCount": 0,
       "cooldownUntil": null,
-      "skipNote": "Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Static TheTVDB Season 1 metadata/episode-list page. WebFetch confirmed no publish date in body (only a 'last modified' site timestamp, which is a site-maintenance artifact, not an article publish date -- excluded per Rule A). Firecrawl scrape also attempted (status 200, success): full page metadata returned with no publishedTime/date field of any kind. Both methods exhausted, no date recoverable. Not media coverage anyway (permanent reference DB entry) but ledgered as editorial_undateable per Rule A process.",
+      "skipNote": "Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Static TheTVDB Season 1 metadata/episode-list page. WebFetch confirmed no publish date in body (only a 'last modified' site timestamp, which is a site-maintenance artifact, not an article publish date -- excluded per Rule A). Firecrawl scrape also attempted (status 200, success): full page metadata returned with no publishedTime/date field of any kind. Both methods exhausted, no date recoverable. Not media coverage anyway (permanent reference DB entry) but ledgered as editorial_undateable per Rule A process. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-06T16:00:00Z",
@@ -1578,14 +1559,13 @@
     {
       "url": "https://www.filmaffinity.com/us/film786793.html",
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
+      "skipReason": "editorial_listing_or_database",
       "lastAttempt": "2026-09-06T16:00:00.000Z",
       "lastStatus": 200,
       "firstSeen": "2026-09-06T16:00:00Z",
       "failCount": 0,
       "cooldownUntil": null,
-      "skipNote": "Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Static Filmaffinity title database page. WebFetch failed with HTTP 403 (bot wall). Firecrawl scrape succeeded (status 200): full page metadata (og: tags, ratings schema) returned with no publishedTime/date field. Both methods exhausted, no date recoverable.",
+      "skipNote": "Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Static Filmaffinity title database page. WebFetch failed with HTTP 403 (bot wall). Firecrawl scrape succeeded (status 200): full page metadata (og: tags, ratings schema) returned with no publishedTime/date field. Both methods exhausted, no date recoverable. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-06T16:00:00Z",
@@ -1606,14 +1586,13 @@
     {
       "url": "https://www.formulatv.com/series/las-azules/capitulos/",
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
+      "skipReason": "editorial_listing_or_database",
       "lastAttempt": "2026-09-06T16:00:00.000Z",
       "lastStatus": 200,
       "firstSeen": "2026-09-06T16:00:00Z",
       "failCount": 0,
       "cooldownUntil": null,
-      "skipNote": "Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Static FormulaTV episode-index page. WebFetch confirmed no article publish date (only a generic '2004-2026' copyright-range footer, not a publication date -- excluded per Rule A). Firecrawl scrape also attempted (status 200, success): full page metadata returned with no publishedTime/date field. Both methods exhausted, no date recoverable.",
+      "skipNote": "Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Static FormulaTV episode-index page. WebFetch confirmed no article publish date (only a generic '2004-2026' copyright-range footer, not a publication date -- excluded per Rule A). Firecrawl scrape also attempted (status 200, success): full page metadata returned with no publishedTime/date field. Both methods exhausted, no date recoverable. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-06T16:00:00Z",
@@ -1714,9 +1693,8 @@
       "lastAttempt": "2026-09-06T20:00:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "note": "SerienStream (S.to) German streaming-platform episode listing page for Women in Blue S2E5 (episode not yet aired as of fetch, scheduled Sept 9, 2026). WebFetch succeeded (200) and confirmed this is a streaming/episode listing page (cast info, FAQ/support content), not an editorial article -- no publish/article date anywhere in the body, only the episode's scheduled air date (a catalog/schedule artifact, not a sourced editorial publish date per Rule A). Firecrawl scrape also attempted per Rule A: succeeded (200), same result -- no date field in metadata or body. Both methods exhausted, no date recoverable. Matches the same pattern as other already-permanentSkip streaming-catalog pages in this ledger (JustWatch, TVMaze, TheMovieDB, tv.apple.com). Skipped as editorial_undateable, reviewable=true.",
+      "skipReason": "editorial_listing_or_database",
+      "note": "SerienStream (S.to) German streaming-platform episode listing page for Women in Blue S2E5 (episode not yet aired as of fetch, scheduled Sept 9, 2026). WebFetch succeeded (200) and confirmed this is a streaming/episode listing page (cast info, FAQ/support content), not an editorial article -- no publish/article date anywhere in the body, only the episode's scheduled air date (a catalog/schedule artifact, not a sourced editorial publish date per Rule A). Firecrawl scrape also attempted per Rule A: succeeded (200), same result -- no date field in metadata or body. Both methods exhausted, no date recoverable. Matches the same pattern as other already-permanentSkip streaming-catalog pages in this ledger (JustWatch, TVMaze, TheMovieDB, tv.apple.com). Skipped as editorial_undateable, reviewable=true. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-06T20:00:00Z",
@@ -1742,9 +1720,8 @@
       "lastAttempt": "2026-09-06T20:00:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "note": "Prime Video (ES locale) product/catalog detail page for Las Azules (via Apple TV channel add-on). WebFetch succeeded (200) and confirmed this is a promotional catalog entry (episode summaries, runtime, cast, IMDb rating, subscription options), not an editorial article -- no publish date displayed anywhere on the page (the show's own 2024 season-1 air dates are mentioned as content metadata, not a page publish date). Firecrawl scrape also attempted per Rule A: succeeded (200), same result -- no date field in metadata or body. Both methods exhausted, no date recoverable. Matches the same pattern as other already-permanentSkip streaming-catalog pages in this ledger (JustWatch, TVMaze, TheMovieDB). Skipped as editorial_undateable, reviewable=true.",
+      "skipReason": "editorial_listing_or_database",
+      "note": "Prime Video (ES locale) product/catalog detail page for Las Azules (via Apple TV channel add-on). WebFetch succeeded (200) and confirmed this is a promotional catalog entry (episode summaries, runtime, cast, IMDb rating, subscription options), not an editorial article -- no publish date displayed anywhere on the page (the show's own 2024 season-1 air dates are mentioned as content metadata, not a page publish date). Firecrawl scrape also attempted per Rule A: succeeded (200), same result -- no date field in metadata or body. Both methods exhausted, no date recoverable. Matches the same pattern as other already-permanentSkip streaming-catalog pages in this ledger (JustWatch, TVMaze, TheMovieDB). Skipped as editorial_undateable, reviewable=true. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-06T20:00:00Z",
@@ -1770,9 +1747,8 @@
       "lastAttempt": "2026-09-06T22:04:27.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "note": "Prime Video (Chile locale) product/catalog detail page for Las Azules Season 2, surfaced during Pass 2 sweep (LEMA-9770). Same base title ID as already-ledgered Mexico-locale variant (?tr=mx) but a different tr= query param (Chile storefront), so treated as a distinct ledger URL. WebFetch succeeded (200): page returned a region-block redirect message plus catalog metadata; no publish/update date field anywhere. Firecrawl scrape confirmed the same: full metadata block retrieved, no date field present in metadata or body. Both methods exhausted, no date recoverable. Matches the same pattern as other permanentSkip streaming-catalog pages in this ledger (JustWatch, TVDB, other Prime Video locale variants). Skipped as editorial_undateable, reviewable=true.",
+      "skipReason": "editorial_listing_or_database",
+      "note": "Prime Video (Chile locale) product/catalog detail page for Las Azules Season 2, surfaced during Pass 2 sweep (LEMA-9770). Same base title ID as already-ledgered Mexico-locale variant (?tr=mx) but a different tr= query param (Chile storefront), so treated as a distinct ledger URL. WebFetch succeeded (200): page returned a region-block redirect message plus catalog metadata; no publish/update date field anywhere. Firecrawl scrape confirmed the same: full metadata block retrieved, no date field present in metadata or body. Both methods exhausted, no date recoverable. Matches the same pattern as other permanentSkip streaming-catalog pages in this ledger (JustWatch, TVDB, other Prime Video locale variants). Skipped as editorial_undateable, reviewable=true. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-06T22:04:27.000Z",
@@ -1798,9 +1774,8 @@
       "lastAttempt": "2026-09-07T00:00:50.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9771. MijnSerie (Dutch TV database) episode detail page for Las Azules S2E6 ('Gilberto'). WebFetch succeeded (200) and confirmed this is an episode catalog page (cast list, synopsis, navigation to reviews/stats) with only the episode's broadcast date (15 september 2026) -- a schedule/catalog field, not an editorial publish date. Same per-episode-air-date-in-evergreen-catalog pattern already established for themoviedb.org/tv/253983-las-azules/season/2 and tvmaze.com/shows/62238/las-azules/episodeguide in this ledger. Per Rule A, this per-episode field may not substitute for a real sourced publish date for this URL as a candidate. Not added to data.json. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9771. MijnSerie (Dutch TV database) episode detail page for Las Azules S2E6 ('Gilberto'). WebFetch succeeded (200) and confirmed this is an episode catalog page (cast list, synopsis, navigation to reviews/stats) with only the episode's broadcast date (15 september 2026) -- a schedule/catalog field, not an editorial publish date. Same per-episode-air-date-in-evergreen-catalog pattern already established for themoviedb.org/tv/253983-las-azules/season/2 and tvmaze.com/shows/62238/las-azules/episodeguide in this ledger. Per Rule A, this per-episode field may not substitute for a real sourced publish date for this URL as a candidate. Not added to data.json. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-07T00:00:50.000Z",
@@ -1819,9 +1794,8 @@
       "lastAttempt": "2026-09-07T00:00:50.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Pass 2 web sweep (trade press cluster) on LEMA-9771. Official Apple TV Press (UK) evergreen show/press-kit landing page for Women in Blue (Las Azules) -- official-brand account so Rule B relevance gate does not apply (this is media coverage in principle), but Rule A dateability still required. WebFetch succeeded (200): static promotional hub with press images/synopsis, only 'Season 2 Release Date: 12 August 2026' (the show's own release date, not a page publish/update timestamp). Firecrawl scrape attempted per Rule A mandate: succeeded (200), full metadata block retrieved (og:title, og:description, og:image, etc.) with no og:article:published_time, datePublished, or any other publish/update field anywhere. Both methods exhausted, no real date recoverable -- same pattern as the already-ledgered tv.apple.com/us/show/... and tv.apple.com/mx,do,pe locale-variant show pages. Not added to data.json. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Pass 2 web sweep (trade press cluster) on LEMA-9771. Official Apple TV Press (UK) evergreen show/press-kit landing page for Women in Blue (Las Azules) -- official-brand account so Rule B relevance gate does not apply (this is media coverage in principle), but Rule A dateability still required. WebFetch succeeded (200): static promotional hub with press images/synopsis, only 'Season 2 Release Date: 12 August 2026' (the show's own release date, not a page publish/update timestamp). Firecrawl scrape attempted per Rule A mandate: succeeded (200), full metadata block retrieved (og:title, og:description, og:image, etc.) with no og:article:published_time, datePublished, or any other publish/update field anywhere. Both methods exhausted, no real date recoverable -- same pattern as the already-ledgered tv.apple.com/us/show/... and tv.apple.com/mx,do,pe locale-variant show pages. Not added to data.json. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-07T00:00:50.000Z",
@@ -1968,9 +1942,8 @@
       "lastAttempt": "2026-09-07T04:00:46Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Surfaced via Pass 3 Firecrawl FR-market search. AlloCiné general show-profile/database page for Las Azules (synopsis, cast, ratings, viewing options), not a dated news article. The only dated element on the page is an unrelated hyperlink to a separate 2025-09-19 'canceled and renewed series' roundup article, not this page's own publish date. Firecrawl scrape (per Rule A mandate) confirmed no publish/update date field in metadata. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Surfaced via Pass 3 Firecrawl FR-market search. AlloCiné general show-profile/database page for Las Azules (synopsis, cast, ratings, viewing options), not a dated news article. The only dated element on the page is an unrelated hyperlink to a separate 2025-09-19 'canceled and renewed series' roundup article, not this page's own publish date. Firecrawl scrape (per Rule A mandate) confirmed no publish/update date field in metadata. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-07T04:00:46Z",
@@ -2012,8 +1985,8 @@
           "note": "Returned 200 but body is largely an ad-blocker error page ('s.amazon-adsystem.com is blocked') interleaved with partial title content, same unusable-body pattern as the www.imdb.com/title/tt20516590/ ledger entry. Treated as a full-chain failure. failCount now 1."
         }
       ],
-      "skipReason": "editorial_undateable",
-      "reviewable": true
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": " UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis: Mobile-subdomain variant that redirects to https://www.imdb.com/title/tt20516590/, the canonical IMDb title page already in this ledger (static database page: cast, crew, ratings, no written editorial content). This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
     },
     {
       "url": "https://www.youtube.com/watch?v=5feWbwFLSRc",
@@ -2075,9 +2048,8 @@
       "lastAttempt": "2026-09-07T20:00:55Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Norway-locale Apple TV show page for Las Azules, same static-listing template as the already-ledgered US/DO/MX/PE locale show pages (all editorial_undateable). Rule A date-recovery gate run this run (LEMA-9829): WebFetch returned full page content but no publish/article date, only the show's release year (2024) under About. Firecrawl scrape run as the mandated second method: also returned full markdown content (episode list, cast) but no og:article:published_time, datePublished, or any other publish timestamp field, only the same 2024 release-year reference. Both methods exhausted, no real date recoverable. Consistent application of the existing editorial_undateable pattern already used for other locale variants of this same show page, not a new exclusion ground.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Norway-locale Apple TV show page for Las Azules, same static-listing template as the already-ledgered US/DO/MX/PE locale show pages (all editorial_undateable). Rule A date-recovery gate run this run (LEMA-9829): WebFetch returned full page content but no publish/article date, only the show's release year (2024) under About. Firecrawl scrape run as the mandated second method: also returned full markdown content (episode list, cast) but no og:article:published_time, datePublished, or any other publish timestamp field, only the same 2024 release-year reference. Both methods exhausted, no real date recoverable. Consistent application of the existing editorial_undateable pattern already used for other locale variants of this same show page, not a new exclusion ground. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-07T20:00:55Z",
@@ -2186,9 +2158,8 @@
       "lastAttempt": "2026-09-08T06:07:40Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Pass 3 Firecrawl IT-market search (LEMA-9834). Italian-locale Apple TV show catalog page for Las Azules. WebFetch succeeded (200): catalog/product page (synopsis in Italian, pricing, 2024 release year) with no article-level publish/update date. Firecrawl scrape also attempted per Rule A: succeeded (200), metadata contains no date field at all (only timezone, viewport, etc.), same evergreen catalog content. Matches the same evergreen tv.apple.com show-page pattern already permanentSkip editorial_undateable for the us/do/mx/pe/no market variants in this ledger. Not added to data.json. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Pass 3 Firecrawl IT-market search (LEMA-9834). Italian-locale Apple TV show catalog page for Las Azules. WebFetch succeeded (200): catalog/product page (synopsis in Italian, pricing, 2024 release year) with no article-level publish/update date. Firecrawl scrape also attempted per Rule A: succeeded (200), metadata contains no date field at all (only timezone, viewport, etc.), same evergreen catalog content. Matches the same evergreen tv.apple.com show-page pattern already permanentSkip editorial_undateable for the us/do/mx/pe/no market variants in this ledger. Not added to data.json. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-08T06:07:40Z",
@@ -2221,9 +2192,8 @@
       "lastAttempt": "2026-09-08T06:07:40Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Pass 2 web sweep (LEMA-9834, YouTube/trade-press query). SensaCine series hub page for Las Azules. WebFetch succeeded (200): comprehensive series hub (synopsis, cast, streaming info, related news/trailers) with only an unrelated news item's date visible (a separate Aug 2026 streaming-guide blurb), no page-level publish/update date for this hub page itself. Firecrawl scrape also attempted per Rule A: succeeded (200), extensive og:/twitter: metadata present but no article:published_time, datePublished, or any date field. Both methods exhausted, no date recoverable. Same evergreen series-hub pattern as other database/catalog pages already permanentSkip in this ledger. Not added to data.json. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Pass 2 web sweep (LEMA-9834, YouTube/trade-press query). SensaCine series hub page for Las Azules. WebFetch succeeded (200): comprehensive series hub (synopsis, cast, streaming info, related news/trailers) with only an unrelated news item's date visible (a separate Aug 2026 streaming-guide blurb), no page-level publish/update date for this hub page itself. Firecrawl scrape also attempted per Rule A: succeeded (200), extensive og:/twitter: metadata present but no article:published_time, datePublished, or any date field. Both methods exhausted, no date recoverable. Same evergreen series-hub pattern as other database/catalog pages already permanentSkip in this ledger. Not added to data.json. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-08T06:07:40Z",
@@ -2249,9 +2219,8 @@
       "lastAttempt": "2026-09-08T12:06:02Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Movistar Plus (Spain) catalog/detail page for Las Azules, surfaced during Pass 2 general web sweep. WebFetch returned 200 with real page content (title, synopsis, 16+ rating, two seasons available) but no publish/update date field. Firecrawl scrape confirmed: full metadata block retrieved (og:title, og:description, og:image, og:type=profile, etc.) but no og:article:published_time, datePublished, or any other publish/update timestamp field present anywhere. This is an evergreen title/catalog page, same pattern as the existing primevideo.com and tv.apple.com ledger entries. Per Rule A, no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Movistar Plus (Spain) catalog/detail page for Las Azules, surfaced during Pass 2 general web sweep. WebFetch returned 200 with real page content (title, synopsis, 16+ rating, two seasons available) but no publish/update date field. Firecrawl scrape confirmed: full metadata block retrieved (og:title, og:description, og:image, og:type=profile, etc.) but no og:article:published_time, datePublished, or any other publish/update timestamp field present anywhere. This is an evergreen title/catalog page, same pattern as the existing primevideo.com and tv.apple.com ledger entries. Per Rule A, no proxy/approximated date may be substituted. Both WebFetch and Firecrawl exhausted. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-08T12:06:02Z",
@@ -2325,9 +2294,8 @@
       "lastAttempt": "2026-09-08T20:15:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "TheTVDB database entry for Las Azules Season 2. Both WebFetch and Firecrawl scrape succeeded and returned full page content (Italian/Spanish season synopsis), but the only date fields present are TheTVDB's own 'Created' (May 24, 2022) and 'Modified' (September 3, 2026) database metadata, not a real editorial publish date. Per Rule A these crawler/DB artifacts cannot substitute for a sourced publish date. Same pattern as the already-ledgered thetvdb.com/series/las-azules/seasons/official/1 entry."
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "TheTVDB database entry for Las Azules Season 2. Both WebFetch and Firecrawl scrape succeeded and returned full page content (Italian/Spanish season synopsis), but the only date fields present are TheTVDB's own 'Created' (May 24, 2022) and 'Modified' (September 3, 2026) database metadata, not a real editorial publish date. Per Rule A these crawler/DB artifacts cannot substitute for a sourced publish date. Same pattern as the already-ledgered thetvdb.com/series/las-azules/seasons/official/1 entry. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
     },
     {
       "url": "https://www.tiktok.com/discover/la-serie-de-las-azules-tendr%C3%A1-segunda-temporada?lang=es",
@@ -2390,22 +2358,22 @@
     {
       "url": "https://tv.apple.com/fr/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
+      "skipReason": "editorial_listing_or_database",
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": "webfetch_200_no_date; firecrawl_200_no_date",
-      "lastAttempt": "2026-09-09T06:00:00.000Z"
+      "lastAttempt": "2026-09-09T06:00:00.000Z",
+      "skipNote": " UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis: French-locale Apple TV show landing page, same template as the already-audited us/do/mx/pe/no/it locale variants in this ledger (evergreen catalog page: synopsis, cast, episode list, no written editorial content). This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
     },
     {
       "url": "https://www.primevideo.com/-/it/detail/0JFCKSNHTRBNJA50K5E6QG2HHN",
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
+      "skipReason": "editorial_listing_or_database",
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": "webfetch_200_no_date; firecrawl_200_no_date",
-      "lastAttempt": "2026-09-09T06:00:00.000Z"
+      "lastAttempt": "2026-09-09T06:00:00.000Z",
+      "skipNote": " UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis: Italian-locale Prime Video detail page, same template as the already-audited es/mx/cl locale variants in this ledger (promotional catalog entry: episode summaries, runtime, cast, no written editorial content). This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
     },
     {
       "url": "https://www.youtube.com/watch?v=Z9n3TkdcGLY",
@@ -2488,9 +2456,8 @@
       "lastAttempt": "2026-09-09T16:05:00.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "JustWatch MX streaming listing page for Las Azules. Both WebFetch and Firecrawl attempted per Rule A; only a crawler 'last checked' timestamp (e.g. \"Hemos buscado actualizaciones en 82 plataformas el 9 de septiembre de 2026\") is present, not a real publish date. Same pattern as other already-ledgered JustWatch locale pages. Skipped as editorial_undateable, reviewable=true.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch MX streaming listing page for Las Azules. Both WebFetch and Firecrawl attempted per Rule A; only a crawler 'last checked' timestamp (e.g. \"Hemos buscado actualizaciones en 82 plataformas el 9 de septiembre de 2026\") is present, not a real publish date. Same pattern as other already-ledgered JustWatch locale pages. Skipped as editorial_undateable, reviewable=true. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-09T16:05:00.000Z",
@@ -2516,9 +2483,8 @@
       "lastAttempt": "2026-09-09T16:05:00.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "JustWatch Saudi Arabia locale streaming listing page. Both WebFetch and Firecrawl attempted per Rule A; only a Hijri-date crawler 'last checked' timestamp present, no real publish date. Skipped as editorial_undateable, reviewable=true.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch Saudi Arabia locale streaming listing page. Both WebFetch and Firecrawl attempted per Rule A; only a Hijri-date crawler 'last checked' timestamp present, no real publish date. Skipped as editorial_undateable, reviewable=true. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-09T16:05:00.000Z",
@@ -2544,9 +2510,8 @@
       "lastAttempt": "2026-09-09T16:05:00.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "JustWatch Bulgaria locale streaming listing page. Both WebFetch and Firecrawl attempted per Rule A; only a crawler 'last checked' timestamp present (\"Проверихме за актуализации... на 8 септември 2026\"), no real publish date. Skipped as editorial_undateable, reviewable=true.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch Bulgaria locale streaming listing page. Both WebFetch and Firecrawl attempted per Rule A; only a crawler 'last checked' timestamp present (\"Проверихме за актуализации... на 8 септември 2026\"), no real publish date. Skipped as editorial_undateable, reviewable=true. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-09T16:05:00.000Z",
@@ -2603,9 +2568,8 @@
       "lastAttempt": "2026-09-09T22:00:50.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Exa Pass 1 (both EN and ES queries) on LEMA-9876. Spin-off.fr episode detail page for Las Azules S2E6. WebFetch (200) confirmed this is an episode catalog entry (runtime, episode list, ratings/comments sections), no editorial publish date. Firecrawl scrape (200) confirmed the only date field is schema.org datePublished=2026-09-16, which matches the URL's embedded broadcast date (16092026) -- a per-episode air-date field, not a real sourced publish date. Same per-episode-air-date-in-evergreen-catalog pattern already established for themoviedb.org/tv/253983-las-azules/season/2, tvmaze.com/shows/62238/las-azules/episodeguide, and mijnserie.nl/las-azules. Per Rule A, not added to data.json. reviewable=true for a future manual lookup. UPDATE 2026-09-10 (LEMA-9882): this URL's data.json entry (idx 0, ts=20260916) had been live in the feed since 2026-09-08T18:04Z despite this permanentSkip record -- the sweep does not check data.json before writing a permanentSkip, so the two went out of sync (Rule D guardrail one now closes this gap). Removed from data.json in the same commit as this note per Rule D. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Exa Pass 1 (both EN and ES queries) on LEMA-9876. Spin-off.fr episode detail page for Las Azules S2E6. WebFetch (200) confirmed this is an episode catalog entry (runtime, episode list, ratings/comments sections), no editorial publish date. Firecrawl scrape (200) confirmed the only date field is schema.org datePublished=2026-09-16, which matches the URL's embedded broadcast date (16092026) -- a per-episode air-date field, not a real sourced publish date. Same per-episode-air-date-in-evergreen-catalog pattern already established for themoviedb.org/tv/253983-las-azules/season/2, tvmaze.com/shows/62238/las-azules/episodeguide, and mijnserie.nl/las-azules. Per Rule A, not added to data.json. reviewable=true for a future manual lookup. UPDATE 2026-09-10 (LEMA-9882): this URL's data.json entry (idx 0, ts=20260916) had been live in the feed since 2026-09-08T18:04Z despite this permanentSkip record -- the sweep does not check data.json before writing a permanentSkip, so the two went out of sync (Rule D guardrail one now closes this gap). Removed from data.json in the same commit as this note per Rule D. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-09T22:00:50.000Z",
@@ -2748,9 +2712,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TV Guide 'Full Cast & Crew' page for Women in Blue. Static database listing (cast, crew credits, episode/news navigation tabs), no publish/update date anywhere on the page (confirmed via fetch, 2026-09-10). Same per-page-no-date pattern as other listing databases in this ledger (themoviedb.org, tvmaze.com). Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TV Guide 'Full Cast & Crew' page for Women in Blue. Static database listing (cast, crew credits, episode/news navigation tabs), no publish/update date anywhere on the page (confirmed via fetch, 2026-09-10). Same per-page-no-date pattern as other listing databases in this ledger (themoviedb.org, tvmaze.com). Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -2769,9 +2732,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (France). JustWatch pages never carry an editorial publish date -- they are live availability listings, not articles. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (France). JustWatch pages never carry an editorial publish date -- they are live availability listings, not articles. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -2790,9 +2752,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Chile). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Chile). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -2811,9 +2772,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TheTVDB 'All Seasons Episode Guide' page. Canonical episode-guide database page, no editorial publish date. Same pattern as thetvdb.com/series/las-azules/episodes/10512996 and /10512997 already in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TheTVDB 'All Seasons Episode Guide' page. Canonical episode-guide database page, no editorial publish date. Same pattern as thetvdb.com/series/las-azules/episodes/10512996 and /10512997 already in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -2832,9 +2792,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). IMDb main title page (Spanish locale) for tt20516590. Static database page, no publish date. Same as the English-locale https://www.imdb.com/title/tt20516590/ entry in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). IMDb main title page (Spanish locale) for tt20516590. Static database page, no publish date. Same as the English-locale https://www.imdb.com/title/tt20516590/ entry in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -2853,9 +2812,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). IMDb main title page (Italian locale) for tt20516590. Static database page, no publish date. Same as the English-locale https://www.imdb.com/title/tt20516590/ entry in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). IMDb main title page (Italian locale) for tt20516590. Static database page, no publish date. Same as the English-locale https://www.imdb.com/title/tt20516590/ entry in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -2874,9 +2832,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TVmaze show page (malformed/placeholder slug URL). Static database show page, no publish date. Same pattern as https://www.tvmaze.com/shows/62238/las-azules also removed in this run. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TVmaze show page (malformed/placeholder slug URL). Static database show page, no publish date. Same pattern as https://www.tvmaze.com/shows/62238/las-azules also removed in this run. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -2895,9 +2852,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (South Africa). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (South Africa). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -2916,9 +2872,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Indonesia). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Indonesia). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -2937,9 +2892,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). next-episode.net page explicitly titled 'Episode Air Dates & Countdown'. Textbook air-date-as-ts listing database, no editorial publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). next-episode.net page explicitly titled 'Episode Air Dates & Countdown'. Textbook air-date-as-ts listing database, no editorial publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -2958,9 +2912,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). MyShows.me 'Episode Guide & Ratings' page. Episode-guide database page, no editorial publish date. Same pattern as tvmaze.com/thetvdb.com episode-guide entries. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). MyShows.me 'Episode Guide & Ratings' page. Episode-guide database page, no editorial publish date. Same pattern as tvmaze.com/thetvdb.com episode-guide entries. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -2979,9 +2932,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Spain). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Spain). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3000,9 +2952,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). MijnSerie (Dutch TV database) episode detail page for Las Azules S2E4 ('Arizmendi'). Episode catalog page with only a broadcast-date field, no editorial publish date. Identical template/pattern to https://www.mijnserie.nl/las-azules/afleveringen/seizoen_2/aflevering_6/ already ledgered in this file -- same site, same issue, this one had simply not been caught by an earlier sweep before it entered data.json. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). MijnSerie (Dutch TV database) episode detail page for Las Azules S2E4 ('Arizmendi'). Episode catalog page with only a broadcast-date field, no editorial publish date. Identical template/pattern to https://www.mijnserie.nl/las-azules/afleveringen/seizoen_2/aflevering_6/ already ledgered in this file -- same site, same issue, this one had simply not been caught by an earlier sweep before it entered data.json. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3021,9 +2972,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Spin-off.fr episode detail page for Las Azules S2E3. Same per-episode-air-date-in-evergreen-catalog pattern as the S2E6 spin-off.fr entry already in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Spin-off.fr episode detail page for Las Azules S2E3. Same per-episode-air-date-in-evergreen-catalog pattern as the S2E6 spin-off.fr entry already in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3042,9 +2992,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Spin-off.fr episode detail page for Las Azules S2E2 ('Filiberto'). Same per-episode-air-date-in-evergreen-catalog pattern as the S2E6 spin-off.fr entry already in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Spin-off.fr episode detail page for Las Azules S2E2 ('Filiberto'). Same per-episode-air-date-in-evergreen-catalog pattern as the S2E6 spin-off.fr entry already in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3063,9 +3012,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (US). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (US). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3084,9 +3032,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TVmaze show page for Las Azules Season 2. Static database show page, no editorial publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TVmaze show page for Las Azules Season 2. Static database show page, no editorial publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3105,9 +3052,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Rotten Tomatoes episode page for S02E02 ('Filiberto'). Confirmed via fetch (2026-09-10): the only date shown is 'Aired Aug 12, 2026', an episode air-date field, not a page publish date. Static episode database page. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Rotten Tomatoes episode page for S02E02 ('Filiberto'). Confirmed via fetch (2026-09-10): the only date shown is 'Aired Aug 12, 2026', an episode air-date field, not a page publish date. Static episode database page. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3126,9 +3072,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (South Africa, season 2). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (South Africa, season 2). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3147,9 +3092,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Bolivia). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Bolivia). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3168,9 +3112,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Rotten Tomatoes season-2 overview page. Review-aggregator database page (critic/audience score widgets), no page-level editorial publish date. Same issue as the per-episode RT pages in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Rotten Tomatoes season-2 overview page. Review-aggregator database page (critic/audience score widgets), no page-level editorial publish date. Same issue as the per-episode RT pages in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3189,9 +3132,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Metacritic season-2 review-aggregation page. Confirmed via fetch (2026-09-10): shows 'Season Premiere' and per-episode air dates as broadcast-schedule metadata, no page-level publish/update timestamp. Static review-aggregator database page. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Metacritic season-2 review-aggregation page. Confirmed via fetch (2026-09-10): shows 'Season Premiere' and per-episode air dates as broadcast-schedule metadata, no page-level publish/update timestamp. Static review-aggregator database page. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3210,9 +3152,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TV Guide 'Season 2 Episodes Guide' page. Canonical episode-guide database page, no editorial publish date. Same pattern as the TV Guide cast/crew page also removed in this run. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TV Guide 'Season 2 Episodes Guide' page. Canonical episode-guide database page, no editorial publish date. Same pattern as the TV Guide cast/crew page also removed in this run. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3231,9 +3172,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Rotten Tomatoes episode page for S02E01 ('Mauricio'). Same static episode-database-page pattern as the S02E02 RT entry in this ledger; only an episode air date is shown, no page publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Rotten Tomatoes episode page for S02E01 ('Mauricio'). Same static episode-database-page pattern as the S02E02 RT entry in this ledger; only an episode air date is shown, no page publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3252,9 +3192,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TMDB season-2 page. Confirmed via fetch (2026-09-10): no publish/update date anywhere on the page. Static database page -- this is the exact URL already cited as an established pattern-precedent in the spin-off.fr and mijnserie.nl ledger notes, and is itself now formally ledgered. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TMDB season-2 page. Confirmed via fetch (2026-09-10): no publish/update date anywhere on the page. Static database page -- this is the exact URL already cited as an established pattern-precedent in the spin-off.fr and mijnserie.nl ledger notes, and is itself now formally ledgered. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3273,9 +3212,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Austria). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Austria). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3294,9 +3232,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Italy). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). JustWatch streaming-availability page (Italy). Same JustWatch listing-page pattern as the other JustWatch entries in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3315,9 +3252,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TheTVDB per-episode page for S02E01 ('Mauricio'), explicitly titled 'Episode Guide'. Episode-guide database page, no editorial publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TheTVDB per-episode page for S02E01 ('Mauricio'), explicitly titled 'Episode Guide'. Episode-guide database page, no editorial publish date. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3336,9 +3272,8 @@
       "lastAttempt": "2026-09-10T04:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TheTVDB per-episode page for S1E8 ('Rosa'). Episode-guide database page, no editorial publish date. Confirms this pattern is not season-2-specific -- Season 1 catalog pages have the identical defect. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). TheTVDB per-episode page for S1E8 ('Rosa'). Episode-guide database page, no editorial publish date. Confirms this pattern is not season-2-specific -- Season 1 catalog pages have the identical defect. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3409,9 +3344,8 @@
       "lastAttempt": "2026-09-10T08:00:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Pass 2 web sweep on LEMA-9898. 'Las Azules | Apple TV+' YouTube playlist owned by channel 'Apple México'. WebFetch on the playlist page returned only generic YouTube chrome (no title/date/video list -- SPA content not rendered). Firecrawl scrape returned a 401 bot-wall error page, no usable content. YouTube Data API (playlists.list) was consulted directly and returned publishedAt=2024-10-09T17:51:01Z, but that is the playlist container's creation date from the Season 1 era, not a publish date tied to any Season 2 coverage event -- same evergreen-container problem already established for tvmaze.com/justwatch.com entries in this ledger. Per Rule A, no real sourced publish date exists for this URL as a piece of Season 2 coverage after both WebFetch and Firecrawl were attempted. Not added to data.json. reviewable=true for a future manual lookup (e.g. if a specific new video within the playlist is later identified with its own real publish date, that video's own URL would be evaluated separately). Prior note (LEMA-9767): Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Official Apple TV+ YouTube playlist page for the show. WebFetch returned only YouTube footer/nav boilerplate, no playlist creation date or content. Firecrawl scrape also attempted (status 200, success): full page metadata (og:, twitter: tags) returned with no publishedTime/date field. Both methods exhausted, no date recoverable.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Pass 2 web sweep on LEMA-9898. 'Las Azules | Apple TV+' YouTube playlist owned by channel 'Apple México'. WebFetch on the playlist page returned only generic YouTube chrome (no title/date/video list -- SPA content not rendered). Firecrawl scrape returned a 401 bot-wall error page, no usable content. YouTube Data API (playlists.list) was consulted directly and returned publishedAt=2024-10-09T17:51:01Z, but that is the playlist container's creation date from the Season 1 era, not a publish date tied to any Season 2 coverage event -- same evergreen-container problem already established for tvmaze.com/justwatch.com entries in this ledger. Per Rule A, no real sourced publish date exists for this URL as a piece of Season 2 coverage after both WebFetch and Firecrawl were attempted. Not added to data.json. reviewable=true for a future manual lookup (e.g. if a specific new video within the playlist is later identified with its own real publish date, that video's own URL would be evaluated separately). Prior note (LEMA-9767): Discovered via Pass 2 sweep (LEMA-9767, 2026-09-06). Official Apple TV+ YouTube playlist page for the show. WebFetch returned only YouTube footer/nav boilerplate, no playlist creation date or content. Firecrawl scrape also attempted (status 200, success): full page metadata (og:, twitter: tags) returned with no publishedTime/date field. Both methods exhausted, no date recoverable. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-06T16:00:00Z",
@@ -3451,9 +3385,8 @@
       "lastAttempt": "2026-09-07T08:10:19.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9794. TheFutonCritic daily TV listings/schedule grid page for 2026-09-09, showing dozens of shows airing that day across networks, including 'women in blue: lozano (#205)' on Apple TV. This is a syndicated programming grid, not an editorial article about the show -- no article-level publish date exists, only the schedule date embedded in the URL. WebFetch failed (ECONNREFUSED, connection error), so a Firecrawl scrape was attempted per Rule A mandate: succeeded (200) and confirmed the page is a generic daily listings grid with no page-level publish/article date field, matching the same catalog/listing pattern already established for JustWatch, TVMaze, TheMovieDB, tv.apple.com, MijnSerie and SerienStream in this ledger. Not added to data.json. reviewable=true for a future manual lookup. Prior note (LEMA-9771): Surfaced again via Exa Pass 1 (EN query) on LEMA-9771. WebFetch failed with ECONNREFUSED. Firecrawl scrape succeeded (200) and returned the full daily TV listings grid for 2026-09-09 (confirms 'women in blue: lozano (#205)' airs that day), but this is a static schedule/listings page, not a dated article -- no og:article:published_time, datePublished, or any other publish-timestamp field anywhere in metadata or body. The date in the URL/page is the broadcast schedule date, not an editorial publish date, and is not a substitute per Rule A. Full-chain fetch succeeded (ledger reset per step 4d) but the candidate itself is undateable per Rule A -- same evergreen-listing pattern as the thetvdb.com and epguides.com entries in this ledger. Prior note (LEMA-9769): Daily TV listings/schedule grid page for 2026-09-09 (found via Exa Pass 1 EN query). WebFetch failed with ECONNREFUSED (both http and https tried). Firecrawl scrape failed with a 500 SCRAPE_SITE_ERROR (ERR_TUNNEL_CONNECTION_FAILED, described by Firecrawl as an internal proxy error). This is a technical full-chain fetch failure, not an editorial exclusion -- not added to data.json this run, failCount=1 (not yet at the 3-failure cooldown threshold).",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9794. TheFutonCritic daily TV listings/schedule grid page for 2026-09-09, showing dozens of shows airing that day across networks, including 'women in blue: lozano (#205)' on Apple TV. This is a syndicated programming grid, not an editorial article about the show -- no article-level publish date exists, only the schedule date embedded in the URL. WebFetch failed (ECONNREFUSED, connection error), so a Firecrawl scrape was attempted per Rule A mandate: succeeded (200) and confirmed the page is a generic daily listings grid with no page-level publish/article date field, matching the same catalog/listing pattern already established for JustWatch, TVMaze, TheMovieDB, tv.apple.com, MijnSerie and SerienStream in this ledger. Not added to data.json. reviewable=true for a future manual lookup. Prior note (LEMA-9771): Surfaced again via Exa Pass 1 (EN query) on LEMA-9771. WebFetch failed with ECONNREFUSED. Firecrawl scrape succeeded (200) and returned the full daily TV listings grid for 2026-09-09 (confirms 'women in blue: lozano (#205)' airs that day), but this is a static schedule/listings page, not a dated article -- no og:article:published_time, datePublished, or any other publish-timestamp field anywhere in metadata or body. The date in the URL/page is the broadcast schedule date, not an editorial publish date, and is not a substitute per Rule A. Full-chain fetch succeeded (ledger reset per step 4d) but the candidate itself is undateable per Rule A -- same evergreen-listing pattern as the thetvdb.com and epguides.com entries in this ledger. Prior note (LEMA-9769): Daily TV listings/schedule grid page for 2026-09-09 (found via Exa Pass 1 EN query). WebFetch failed with ECONNREFUSED (both http and https tried). Firecrawl scrape failed with a 500 SCRAPE_SITE_ERROR (ERR_TUNNEL_CONNECTION_FAILED, described by Firecrawl as an internal proxy error). This is a technical full-chain fetch failure, not an editorial exclusion -- not added to data.json this run, failCount=1 (not yet at the 3-failure cooldown threshold). UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-06T20:00:00Z",
@@ -3576,9 +3509,8 @@
       "lastAttempt": "2026-09-10T18:15:00.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via WebSearch (m.imdb.com/es/name/nm0746370/publicity redirected here) on LEMA-9916. This is Fernando Rovzar's IMDb 'Listados publicitarios' (publicity listings) index page, not a standalone article: WebFetch returned 403; Firecrawl scrape succeeded (200) and returned the page content, which is a directory of two linked items (Variety and Deadline articles from 24 May 2022 announcing the original Season 1 series order), each with its own date -- but the index page itself carries no independent editorial publish date, only og:profile metadata for the person. Same aggregator/database-page pattern already established for other IMDb, JustWatch, TVMaze, and RottenTomatoes season/listing URLs in this ledger. Per Rule A, not added to data.json (no genuine page-level publish date to source). Note: the two linked 2022 articles are pre-Season-2 series-order announcements, not new S2 coverage, so even if fetched directly they would not be new to this dashboard. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via WebSearch (m.imdb.com/es/name/nm0746370/publicity redirected here) on LEMA-9916. This is Fernando Rovzar's IMDb 'Listados publicitarios' (publicity listings) index page, not a standalone article: WebFetch returned 403; Firecrawl scrape succeeded (200) and returned the page content, which is a directory of two linked items (Variety and Deadline articles from 24 May 2022 announcing the original Season 1 series order), each with its own date -- but the index page itself carries no independent editorial publish date, only og:profile metadata for the person. Same aggregator/database-page pattern already established for other IMDb, JustWatch, TVMaze, and RottenTomatoes season/listing URLs in this ledger. Per Rule A, not added to data.json (no genuine page-level publish date to source). Note: the two linked 2022 articles are pre-Season-2 series-order announcements, not new S2 coverage, so even if fetched directly they would not be new to this dashboard. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-03T06:00:25Z",
@@ -3631,9 +3563,8 @@
       "lastAttempt": "2026-09-10T20:05:48Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9922. Japanese streaming-availability aggregator page (1Screen/ciatr.jp) for Women in Blue Season 2, listing Apple TV+ subscription and free-trial info with affiliate links to multiple JP streaming services. WebFetch failed (403 bot wall); Firecrawl scrape succeeded (200) and confirmed the only date-like field on the page is a '最終更新' (last updated) stamp (2026年9月10日最終更新), which is a crawler/update-log artifact, not a real sourced editorial publish date. Same per-title evergreen-catalog pattern already established in this ledger for themoviedb.org/tv/253983-las-azules/season/2, tvmaze.com/shows/62238/las-azules/episodeguide, mijnserie.nl/las-azules, and spin-off.fr (episode guide entries). Per Rule A, not added to data.json. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Exa Pass 1 (EN query) on LEMA-9922. Japanese streaming-availability aggregator page (1Screen/ciatr.jp) for Women in Blue Season 2, listing Apple TV+ subscription and free-trial info with affiliate links to multiple JP streaming services. WebFetch failed (403 bot wall); Firecrawl scrape succeeded (200) and confirmed the only date-like field on the page is a '最終更新' (last updated) stamp (2026年9月10日最終更新), which is a crawler/update-log artifact, not a real sourced editorial publish date. Same per-title evergreen-catalog pattern already established in this ledger for themoviedb.org/tv/253983-las-azules/season/2, tvmaze.com/shows/62238/las-azules/episodeguide, mijnserie.nl/las-azules, and spin-off.fr (episode guide entries). Per Rule A, not added to data.json. reviewable=true for a future manual lookup. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-10T20:05:48Z",
@@ -5015,9 +4946,8 @@
       "lastAttempt": "2026-09-12T00:01:09.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "JustWatch streaming-availability page (Japan locale) for Las Azules Season 1. Same JustWatch listing-page pattern as the other JustWatch entries already in this ledger (US/MX/ID/CL/ZA/IT locales): database-sourced synopsis, cast/crew grid, and ratings, no written editorial content. No publish date anywhere on the page; the only timestamp present is a data-verification stamp (\"2026年9月11日の9:19:32に\"), not a publication date. Firecrawl scrape attempted per Rule A and confirmed the same listing-page content with no date field.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch streaming-availability page (Japan locale) for Las Azules Season 1. Same JustWatch listing-page pattern as the other JustWatch entries already in this ledger (US/MX/ID/CL/ZA/IT locales): database-sourced synopsis, cast/crew grid, and ratings, no written editorial content. No publish date anywhere on the page; the only timestamp present is a data-verification stamp (\"2026年9月11日の9:19:32に\"), not a publication date. Firecrawl scrape attempted per Rule A and confirmed the same listing-page content with no date field. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-12T00:01:09.000Z",
@@ -7398,9 +7328,8 @@
       "lastAttempt": "2026-09-14T02:11:49Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Rule D retroactive remediation (LEMA-10043): this exact URL was live in data.json with ts=20260903/date='Sep 3, 2026', but both WebFetch and Firecrawl confirm the page is a purely evergreen Apple TV show catalog page (cast, episodes, synopsis, release year '2024' only) with no publish/last-updated date anywhere in the body. The ts was an approximated crawl-date substitute, a Rule A violation. Matches the identical, already-established pattern for sibling locale variants of this same show page already ledgered as permanentSkip/editorial_undateable (e.g. the '--la-brigade-bleue'/l=es-MX variant, LEMA-9766). Removed from data.json in the same commit per Rule D/ledger-precedence guardrail.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Rule D retroactive remediation (LEMA-10043): this exact URL was live in data.json with ts=20260903/date='Sep 3, 2026', but both WebFetch and Firecrawl confirm the page is a purely evergreen Apple TV show catalog page (cast, episodes, synopsis, release year '2024' only) with no publish/last-updated date anywhere in the body. The ts was an approximated crawl-date substitute, a Rule A violation. Matches the identical, already-established pattern for sibling locale variants of this same show page already ledgered as permanentSkip/editorial_undateable (e.g. the '--la-brigade-bleue'/l=es-MX variant, LEMA-9766). Removed from data.json in the same commit per Rule D/ledger-precedence guardrail. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-14T02:11:49Z",
@@ -7426,9 +7355,8 @@
       "lastAttempt": "2026-09-14T02:11:49Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Rule D retroactive remediation (LEMA-10043): this exact URL was live in data.json with ts=20260902/date='Sep 2, 2026', but both WebFetch and Firecrawl confirm the page only shows individual episode air dates (Aug 11/18/25, Sep 1/8 2026) with no series-level publish/last-updated date -- an episode air date used as ts on an evergreen catalog page is the exact pattern Rule A prohibits. Matches the identical, already-established pattern for sibling locale/storefront variants of this same title already ledgered as permanentSkip/editorial_undateable (?tr=mx LEMA-9643, ?tr=cl LEMA-9770). Removed from data.json in the same commit per Rule D/ledger-precedence guardrail.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Rule D retroactive remediation (LEMA-10043): this exact URL was live in data.json with ts=20260902/date='Sep 2, 2026', but both WebFetch and Firecrawl confirm the page only shows individual episode air dates (Aug 11/18/25, Sep 1/8 2026) with no series-level publish/last-updated date -- an episode air date used as ts on an evergreen catalog page is the exact pattern Rule A prohibits. Matches the identical, already-established pattern for sibling locale/storefront variants of this same title already ledgered as permanentSkip/editorial_undateable (?tr=mx LEMA-9643, ?tr=cl LEMA-9770). Removed from data.json in the same commit per Rule D/ledger-precedence guardrail. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-14T02:11:49Z",
@@ -8534,9 +8462,8 @@
         }
       ],
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Official Apple TV Press trailers/videos hub page for Women in Blue (Las Azules). Lists Season 1 and Season 2 trailer video tiles but carries no publish date anywhere on the page (confirmed via both WebFetch and a Firecrawl scrape, which returned the full page markdown with only a generic copyright 2026 Apple Inc footer, no dated byline). Evergreen media-hub page, not a dated article; genuine on-topic first-party content but undateable per Rule A."
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Official Apple TV Press trailers/videos hub page for Women in Blue (Las Azules). Lists Season 1 and Season 2 trailer video tiles but carries no publish date anywhere on the page (confirmed via both WebFetch and a Firecrawl scrape, which returned the full page markdown with only a generic copyright 2026 Apple Inc footer, no dated byline). Evergreen media-hub page, not a dated article; genuine on-topic first-party content but undateable per Rule A. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
     },
     {
       "url": "https://www.youtube.com/playlist?list=OLAK5uy_leGHXkX51Wp-Gak0qlj6aOgC-XIJk4cFc",
@@ -8650,5 +8577,5 @@
       "note": "Candidate Le Monde summer-series-picks roundup mentioning Las Azules (URL-slug date 2024-07-30), found while mining the AlloCine critiques presse aggregation per Rule H scope limit 1 (LEMA-10163). Same fetch-chain failure as the companion Le Monde URL logged alongside this one: WebFetch refused the domain, direct fetch HTTP 402, Firecrawl returned only the paywall shell. Not added to data.json. Not marked permanentSkip, eligible for normal retry."
     }
   ],
-  "lastUpdated": "2026-09-15T14:44:00Z"
+  "lastUpdated": "2026-09-15T15:40:00Z"
 }
