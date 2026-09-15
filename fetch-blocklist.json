@@ -2413,7 +2413,7 @@
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-14T12:00:42Z",
+      "lastAttempt": "2026-09-15T00:08:00Z",
       "history": [
         {
           "attempt": "2026-09-09T10:03:05.000Z",
@@ -2470,6 +2470,13 @@
           "status": 200,
           "issue": "LEMA-10112",
           "note": "Surfaced again this run via Firecrawl Pass 3 (DE/ES Exa) queries as a &vl=en-US query-string variant. Confirmed via tools/sweep-integrity.js normalize that this variant now collapses to the same key as the canonical URL (youtube.com/watch?v=Z9n3TkdcGLY) already in data.json (Jul 21, 2026 Apple TV trailer) -- the normalization gap tracked on LEMA-9902 across the prior six runs appears resolved by the LEMA-9933/9934 normalize tool. Not added as a separate entry."
+        },
+        {
+          "attempt": "2026-09-15T00:08:00Z",
+          "method": "YouTube Data API (videos.list)",
+          "status": 200,
+          "issue": "LEMA-10149",
+          "note": "Surfaced again this run via Exa Pass 1 EN query as the bare canonical URL (no query string this time). Confirmed via tools/sweep-integrity.js normalize it collapses to the same key already in data.json (Jul 21, 2026 Apple TV trailer). Not added as a separate entry. Same recurring near-miss pattern as prior runs (LEMA-9902)."
         }
       ]
     },
@@ -8065,7 +8072,191 @@
           "note": "Fetched successfully; confirmed off-topic content (unrelated cinemien campaign post), classified Rule G."
         }
       ]
+    },
+    {
+      "url": "https://www.instagram.com/reel/DdSE6U_P-vP/",
+      "firstSeen": "2026-09-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Instagram Reel promoting the movie 'Coyote vs. Acme' now in theaters. No mention of Las Azules / Women in Blue; surfaced only as a broad-query neural match on the Exa EN sweep query.",
+      "history": [
+        {
+          "attempt": "2026-09-15T00:08:00Z",
+          "method": "Exa search snippet",
+          "status": 200,
+          "issue": "LEMA-10149",
+          "note": "Confirmed off-topic from search snippet; unrelated film promo."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/ca/tv-show/the-bridge",
+      "firstSeen": "2026-09-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch Canada listing page for the unrelated TV show 'The Bridge'. No connection to Las Azules / Women in Blue; surfaced only as a broad-query neural match on the Exa EN sweep query.",
+      "history": [
+        {
+          "attempt": "2026-09-15T00:08:00Z",
+          "method": "Exa search snippet",
+          "status": 200,
+          "issue": "LEMA-10149",
+          "note": "Confirmed off-topic; different show entirely."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/QuoteCatalog/posts/chris-rock-says-scott-rudins-demanding-approach-while-producing-the-2014-comedy-/1384204773830704/",
+      "firstSeen": "2026-09-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook QuoteCatalog post about Chris Rock discussing Scott Rudin's producing style on a 2014 comedy. No connection to Las Azules / Women in Blue; surfaced only as a broad-query neural match on the Exa EN sweep query.",
+      "history": [
+        {
+          "attempt": "2026-09-15T00:08:00Z",
+          "method": "Exa search snippet",
+          "status": 200,
+          "issue": "LEMA-10149",
+          "note": "Confirmed off-topic from search snippet."
+        }
+      ]
+    },
+    {
+      "url": "https://screenrant.com/for-all-mankind-season-6-ending-ambitious-mireille-enos/",
+      "firstSeen": "2026-09-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ScreenRant article about the unrelated Apple TV+ series 'For All Mankind' Season 6 ending. No connection to Las Azules / Women in Blue; surfaced only as a broad-query neural match (both are Apple TV+ shows) on the Exa EN sweep query.",
+      "history": [
+        {
+          "attempt": "2026-09-15T00:08:00Z",
+          "method": "Exa search snippet",
+          "status": 200,
+          "issue": "LEMA-10149",
+          "note": "Confirmed off-topic; different Apple TV+ show."
+        }
+      ]
+    },
+    {
+      "url": "https://lopezdoriga.com/entretenimiento/los-angeles-azules-reciben-homenaje-en-la-y-encabezaran-el-grito-2026/",
+      "firstSeen": "2026-09-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "LopezDoriga article about the cumbia band 'Los Ángeles Azules' receiving a Los Angeles homage and headlining El Grito 2026. Name-collision with the TV show 'Las Azules'; no connection to Women in Blue. Surfaced on the Exa ES sweep query due to shared 'Azules' term.",
+      "history": [
+        {
+          "attempt": "2026-09-15T00:08:00Z",
+          "method": "Exa search snippet",
+          "status": 200,
+          "issue": "LEMA-10149",
+          "note": "Confirmed off-topic; music band, not the TV show."
+        }
+      ]
+    },
+    {
+      "url": "https://www.telemundo.com/shows/al-rojo-vivo/famosos/video/los-angeles-azules-celebran-el-grito-en-las-vegas-con-un-gran-concierto-tmvo13223779",
+      "firstSeen": "2026-09-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Telemundo video about the cumbia band 'Los Ángeles Azules' performing 'El Grito' in Las Vegas. Name-collision with the TV show 'Las Azules'; no connection to Women in Blue. Surfaced on the Exa ES sweep query due to shared 'Azules' term.",
+      "history": [
+        {
+          "attempt": "2026-09-15T00:08:00Z",
+          "method": "Exa search snippet",
+          "status": 200,
+          "issue": "LEMA-10149",
+          "note": "Confirmed off-topic; music band, not the TV show."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/MatildeObregonOficial/posts/pero-qu%C3%A9-pas%C3%B3-con-gala-montes-en-qu%C3%A9-momento-todo-cambi%C3%B3-checa-la-entrevista-com/1858286738877515/",
+      "firstSeen": "2026-09-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Facebook post by Matilde Obregon promoting a YouTube interview about actress Gala Montes' personal life. No mention of Las Azules, Women in Blue, or Barbara Mori. Surfaced only as a broad-query neural match on the Exa ES sweep query.",
+      "history": [
+        {
+          "attempt": "2026-09-15T00:08:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10149",
+          "note": "WebFetch succeeded; confirmed post is about Gala Montes, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/torino-se-entera-que-es-andres-y-se-encuentra-con-margarita-y-fach",
+      "firstSeen": "2026-09-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TikTok discover topic page about a different telenovela storyline involving characters Torino, Andres, Margarita and Fach. No connection to Las Azules / Women in Blue. Surfaced only as a broad-query neural match on the Exa ES sweep query.",
+      "history": [
+        {
+          "attempt": "2026-09-15T00:08:00Z",
+          "method": "Exa search snippet",
+          "status": 200,
+          "issue": "LEMA-10149",
+          "note": "Confirmed off-topic; different telenovela."
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DdQ27y4tJo4/",
+      "firstSeen": "2026-09-15T00:08:00Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-15T00:08:00Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-15T00:08:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10149",
+          "note": "WebFetch returned only Instagram's JS shell, no usable content (near-empty body, treated as failure)."
+        },
+        {
+          "attempt": "2026-09-15T00:08:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10149",
+          "note": "Firecrawl explicitly refuses instagram.com ('we do not support this site'). Full-chain failure, could not determine relevance or date, failCount now 1."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-14T20:00:00Z"
+  "lastUpdated": "2026-09-15T00:08:00Z"
 }
