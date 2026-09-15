@@ -8256,7 +8256,27 @@
           "note": "Firecrawl explicitly refuses instagram.com ('we do not support this site'). Full-chain failure, could not determine relevance or date, failCount now 1."
         }
       ]
+    },
+    {
+      "url": "https://www.reforma.com/homenajean-a-los-angeles-azules-en-california/ar3276117",
+      "firstSeen": "2026-09-15T02:05:07Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T02:05:07Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Reforma article headlined \"Homenajean a Los Ángeles Azules en California\" (14 Sept 2026) is about the Mexican band Los Ángeles Azules being honored in California. No mention of the TV show Las Azules / Women in Blue; surfaced only as a broad-query match on \"azules\".",
+      "history": [
+        {
+          "attempt": "2026-09-15T02:05:07Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10150",
+          "note": "WebFetch returned 403; Firecrawl scrape succeeded and confirmed article is about the band Los Ángeles Azules, unrelated to the TV show."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-15T00:08:00Z"
+  "lastUpdated": "2026-09-15T02:05:07Z"
 }
