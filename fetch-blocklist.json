@@ -8584,7 +8584,31 @@
           "note": "Firecrawl scrape returned the site WordPress 404 page (Page Not Found - COCALECAS), no article content. Full-chain failure, failCount=1."
         }
       ]
+    },
+    {
+      "url": "https://youtube.com/watch?v=Lcx9lfl7Zs0",
+      "firstSeen": "2026-09-15T12:06:05.000Z",
+      "failCount": 1,
+      "lastStatus": 408,
+      "lastAttempt": "2026-09-15T12:06:05.000Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-15T12:06:05.000Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10156",
+          "note": "Returned near-empty body (YouTube footer/legal nav only, no video title/channel/upload date/description)."
+        },
+        {
+          "attempt": "2026-09-15T12:06:05.000Z",
+          "method": "Firecrawl scrape",
+          "status": 408,
+          "issue": "LEMA-10156",
+          "note": "SCRAPE_TIMEOUT"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-15T10:05:18Z"
+  "lastUpdated": "2026-09-15T12:06:05.000Z"
 }
