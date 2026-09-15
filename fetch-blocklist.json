@@ -8,9 +8,9 @@
       "lastStatus": 200,
       "lastAttempt": "2026-09-02T16:11:03Z",
       "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_redundant_syndication",
-      "skipNote": "Syndicated Variety wire story ('Women in Blue' Renewed for Season 2 at Apple TV+, byline Joe Otterson, dated 2025-05-20) republished by IMDb news. The same renewal announcement is already present in data.json from the Variety original (https://variety.com/2025/tv/news/women-in-blue-renewed-season-2-apple-tv-1236404908/) plus 15 other outlets covering the same event. Not a fetch failure, the URL is fetchable via the Firecrawl fallback (see history). Excluded on editorial grounds: adding it would be a duplicate-story entry, not new coverage. See LEMA-9621.",
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": "RECLASSIFIED 2026-09-15 under Rule I (CEO ruling LEMA-10247, implemented LEMA-10274): distinct document, not a second address. This is IMDb's own republication of the Variety wire story at its own URL; its twin ni65294704 (IMDb via Vital Thrills) is already live in data.json under storyGroup deadline-s2-renewal-20250501, and this entry now joins that group there instead of being ledgered here. Publish date sourced directly from the live page (Firecrawl scrape, 2026-09-15): IMDb's own news-item byline reads \"5/20/2025, by Joe Otterson, Variety - TV News\" -- used as date=\"May 20, 2025\", ts=20250520; not copied from the twin's \"May 21, 2025\" and not reused from this row's prior skipNote below, per the Rule A warning on LEMA-10274. permanentSkip cleared; row and history preserved per Rule C (one URL, one row, always). Prior disposition (superseded 2026-09-15, permanentSkip=true, skipReason=editorial_redundant_syndication): Syndicated Variety wire story ('Women in Blue' Renewed for Season 2 at Apple TV+, byline Joe Otterson, dated 2025-05-20) republished by IMDb news. The same renewal announcement is already present in data.json from the Variety original (https://variety.com/2025/tv/news/women-in-blue-renewed-season-2-apple-tv-1236404908/) plus 15 other outlets covering the same event. Not a fetch failure, the URL is fetchable via the Firecrawl fallback (see history). Excluded on editorial grounds: adding it would be a duplicate-story entry, not new coverage. See LEMA-9621.",
       "history": [
         {
           "attempt": "2026-09-02T10:00:00Z",
@@ -8601,5 +8601,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-15T16:00:54Z"
+  "lastUpdated": "2026-09-15T18:00:00Z"
 }
