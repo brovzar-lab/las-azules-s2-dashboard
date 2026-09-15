@@ -8608,7 +8608,47 @@
           "note": "SCRAPE_TIMEOUT"
         }
       ]
+    },
+    {
+      "url": "https://www.allocine.fr/series/ficheserie-31977/critiques/",
+      "firstSeen": "2026-09-15T14:09:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T14:44:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_user_review_aggregate",
+      "skipNote": "AlloCine critiques spectateurs tab (viewer/audience review aggregator) for Las Azules: https://www.allocine.fr/series/ficheserie-31977/critiques/. 90 user ratings, average 3.6/5 as captured at the original sweep (most recent review at crawl time dated Oct 2025, user 'Chamax', 4/5). Retroactive Rule H remediation (CEO ruling LEMA-10162, implemented LEMA-10163): removed from data.json, where it had been committed as outlet=AlloCine, type=Review, ts=20251011 -- the newest-review timestamp visible at crawl time, which was also a Rule A crawler-artifact violation, not a real publish date for this aggregation surface. Per Rule H scope limit 1, AlloCine's separate critiques presse (press) surface for the same title was mined as a lead source per this same commit; see https://www.allocine.fr/series/ficheserie-31977/critiques/presse/ for the harvest record."
+    },
+    {
+      "url": "https://www.allocine.fr/series/ficheserie-31977/critiques/presse/",
+      "firstSeen": "2026-09-15T14:44:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T14:44:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_user_review_aggregate",
+      "skipNote": "AlloCine critiques presse tab (press-critic aggregator, distinct from the critiques spectateurs tab) for Las Azules: https://www.allocine.fr/series/ficheserie-31977/critiques/presse/. 6 press outlets aggregated, average press score 3.7/5: Elle (Sophie Rosemont, 4/5), Le Journal du Dimanche (Barbara Theate credited, 4/5), Tele 7 Jours (Katia de la Ballina, 4/5), Voici (Leontine Behaeghel, 4/5), Telestar (Romain Nigita, 3.5/5), Le Monde (Thomas Sotinel, 2.5/5). Ledgered under Rule H per scope limit 1: the aggregation page itself gets no row, but the sweep mined it per the ruling. Mining outcome: 1 of 6 press credits yielded an individually fetchable, dateable, sourced article and was added to data.json as its own entry (Le Journal du Dimanche, 'Que vaut la serie Las Azules sur Apple TV+ ?', https://www.lejdd.fr/culture/que-vaut-la-serie-women-blue-sur-apple-tv-148722, Aug 21, 2024 -- byline on the fetched page is Baptiste Thion, not Barbara Theate as credited on this AlloCine aggregation page; could not confirm these are the same underlying piece, so it was added on the independently-fetched article's own merits per the Source verification rule, not on AlloCine's attribution). Le Monde's press credit (Thomas Sotinel) could not be added: two candidate Le Monde URLs were identified (a dedicated Aug 27, 2024 review and a Jul 30, 2024 summer-roundup piece) but both are paywalled -- WebFetch, direct fetch, and Firecrawl scrape all failed to return article body or date/author metadata; logged separately as fetch-blocklist failures (not permanentSkip) for future retry. The remaining 4 press credits (Elle, Tele 7 Jours, Voici, Telestar) have no outbound link on this AlloCine page and no individually discoverable web URL was found via WebSearch (including site-scoped queries) or Firecrawl search; they appear to be French TV-magazine print capsule reviews with no standalone web article, so per the Source verification rule they cannot be added as individual entries -- not skipped on editorial grounds, simply unsourceable."
+    },
+    {
+      "url": "https://www.lemonde.fr/culture/article/2024/08/27/las-azules-sur-apple-tv-les-pervenches-de-mexico-entre-police-academy-et-le-silence-des-agneaux_6296829_3246.html",
+      "firstSeen": "2026-09-15T14:44:00Z",
+      "failCount": 1,
+      "lastStatus": "402_paywall; firecrawl_paywall_shell_no_body",
+      "lastAttempt": "2026-09-15T14:44:00Z",
+      "cooldownUntil": null,
+      "note": "Candidate Le Journal-du-Monde review of Las Azules (dedicated review, URL-slug date 2024-08-27), found while mining the AlloCine critiques presse aggregation per Rule H scope limit 1 (LEMA-10163). WebFetch tool refused the domain; direct fetch returned HTTP 402; Firecrawl scrape returned only the paywall/login shell, no article body or date/author metadata. Not added to data.json (Source verification rule requires a successful body fetch). Not marked permanentSkip -- may become fetchable later, eligible for normal retry."
+    },
+    {
+      "url": "https://www.lemonde.fr/series/article/2024/07/30/nos-choix-de-series-de-l-ete-meurtre-mode-d-emploi-those-about-to-die-las-azules-follow_6261337_5439376.html",
+      "firstSeen": "2026-09-15T14:44:00Z",
+      "failCount": 1,
+      "lastStatus": "402_paywall; firecrawl_paywall_shell_no_body",
+      "lastAttempt": "2026-09-15T14:44:00Z",
+      "cooldownUntil": null,
+      "note": "Candidate Le Monde summer-series-picks roundup mentioning Las Azules (URL-slug date 2024-07-30), found while mining the AlloCine critiques presse aggregation per Rule H scope limit 1 (LEMA-10163). Same fetch-chain failure as the companion Le Monde URL logged alongside this one: WebFetch refused the domain, direct fetch HTTP 402, Firecrawl returned only the paywall shell. Not added to data.json. Not marked permanentSkip, eligible for normal retry."
     }
   ],
-  "lastUpdated": "2026-09-15T12:06:05.000Z"
+  "lastUpdated": "2026-09-15T14:44:00Z"
 }

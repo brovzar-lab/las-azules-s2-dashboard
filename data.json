@@ -6386,17 +6386,6 @@
     "excerpt": "Fernando Rovzar attended a charity race for the Amorinfinito foundation and expressed enthusiasm about Las Azules' International Emmy nomination, saying he will compete for the award on November 24 in New York."
   },
   {
-    "outlet": "AlloCine",
-    "headline": "Las Azules - Critiques spectateurs (AlloCine)",
-    "url": "https://www.allocine.fr/series/ficheserie-31977/critiques/",
-    "date": "Oct 11, 2025",
-    "ts": 20251011,
-    "lang": "FR",
-    "market": "International",
-    "type": "Review",
-    "excerpt": "AlloCine's viewer-critiques page for Las Azules aggregates French-language audience reviews (3.6/5 average across 90 ratings); the most recent, from user Chamax (Oct 2025, 4/5), praises the performances and intrigue in the story of four women joining Mexico's 1970s female police unit."
-  },
-  {
     "outlet": "Common Sense Media",
     "headline": "Women in Blue TV Review",
     "url": "https://www.commonsensemedia.org/tv-reviews/women-in-blue",
@@ -6989,6 +6978,17 @@
     "market": "Spain",
     "type": "Entertainment",
     "excerpt": "Recap of Las Azules Season 1, Episode 5: Angeles appears to have identified 'El Encuerador de Tlalpan,' though the police continue to obstruct her investigation."
+  },
+  {
+    "outlet": "Le Journal du Dimanche",
+    "headline": "Que vaut la série « Las Azules » sur Apple TV+ ?",
+    "url": "https://www.lejdd.fr/culture/que-vaut-la-serie-women-blue-sur-apple-tv-148722",
+    "date": "Aug 21, 2024",
+    "ts": 20240821,
+    "lang": "FR",
+    "market": "International",
+    "type": "Review",
+    "excerpt": "Le Journal du Dimanche's review of the 10-episode Apple TV+ thriller set in 1970s Mexico, praising the period recreation and the female brigade's resilience against institutional sexism amid a serial-murder investigation."
   },
   {
     "outlet": "Serie-News",
