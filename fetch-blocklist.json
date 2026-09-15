@@ -8575,7 +8575,31 @@
       "lastAttempt": "2026-09-15T14:44:00Z",
       "cooldownUntil": null,
       "note": "Candidate Le Monde summer-series-picks roundup mentioning Las Azules (URL-slug date 2024-07-30), found while mining the AlloCine critiques presse aggregation per Rule H scope limit 1 (LEMA-10163). Same fetch-chain failure as the companion Le Monde URL logged alongside this one: WebFetch refused the domain, direct fetch HTTP 402, Firecrawl returned only the paywall shell. Not added to data.json. Not marked permanentSkip, eligible for normal retry."
+    },
+    {
+      "url": "https://www.instagram.com/reel/DdUACW5xnvU/",
+      "firstSeen": "2026-09-15T16:00:54Z",
+      "failCount": 1,
+      "lastStatus": "firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-15T16:00:54Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-15T16:00:54Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10239",
+          "note": "WebFetch returned a 2xx response with only the word 'Instagram' in the body -- an empty/near-empty bot-wall response, treated as a failure per the fetch fallback chain policy."
+        },
+        {
+          "attempt": "2026-09-15T16:00:54Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10239",
+          "note": "Firecrawl: 'we do not support this site' (instagram.com blanket refusal, same documented pattern as facebook.com/reddit.com). Full fallback-chain failure; not added to data.json this run."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-15T15:40:00Z"
+  "lastUpdated": "2026-09-15T16:00:54Z"
 }
