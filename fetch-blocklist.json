@@ -8650,7 +8650,63 @@
           "note": "Page fetchable (200) but not self-canonical; canonical/og:url point at the generic /print-article/ root. Structured publish date (2014-08-14) is the print template's creation date, not the article's. Not a fetch failure, excluded on editorial grounds."
         }
       ]
+    },
+    {
+      "url": "https://www.facebook.com/CNNee/videos/1343457514667233/",
+      "firstSeen": "2026-09-15T22:00:54Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T22:00:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "CNN en Espanol (editorial brand account, passes Rule B) Facebook video post surfaced via Pass 3 Firecrawl BR-market search. Content: promo for Las Azules S2 launch, Ximena Sarinana discusses playing Angeles. WebFetch succeeded (200, real content returned, not a bot-wall stub) but the summarized body carried no publish date. Firecrawl scrape returned the documented blanket facebook.com refusal (\"we do not support this site\", 403), a valid documented exhaustion of the method per Rule A. A raw curl fetch with a Facebook-crawler user agent also surfaced no publish_time/created_time/article:published_time metadata. Both WebFetch and Firecrawl exhausted per Rule A; no real publish date found. Not added to data.json. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-15T22:00:54Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10303",
+          "note": "Succeeded, full content returned, no publish date present in summarized body."
+        },
+        {
+          "attempt": "2026-09-15T22:00:54Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10303",
+          "note": "Blanket facebook.com refusal (we do not support this site), documented exhaustion per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/thefemalelead/videos/1370329548535537/",
+      "firstSeen": "2026-09-15T22:00:54Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-15T22:00:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "The Female Lead (editorial media brand account focused on women's stories, passes Rule B) Facebook video post surfaced via Pass 3 Firecrawl FR-market search. Content: BTS piece on Las Azules cast meeting original 1970s female police officers. WebFetch succeeded (200, real content returned, not a bot-wall stub) but the summarized body carried no publish date. Firecrawl scrape returned the documented blanket facebook.com refusal (\"we do not support this site\", 403), a valid documented exhaustion of the method per Rule A. A raw curl fetch with a Facebook-crawler user agent also surfaced no publish_time/created_time/article:published_time metadata. Both WebFetch and Firecrawl exhausted per Rule A; no real publish date found. Not added to data.json. reviewable=true for a future manual lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-15T22:00:54Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10303",
+          "note": "Succeeded, full content returned, no publish date present in summarized body."
+        },
+        {
+          "attempt": "2026-09-15T22:00:54Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10303",
+          "note": "Blanket facebook.com refusal (we do not support this site), documented exhaustion per Rule A."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-15T18:00:00Z"
+  "lastUpdated": "2026-09-15T22:00:54Z"
 }
