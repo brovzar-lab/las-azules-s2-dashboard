@@ -9205,10 +9205,10 @@
     {
       "url": "https://www.reddit.com/r/tvPlus/comments/1vs7qq2/women_in_blue_las_azules_season_2_episode_2/",
       "firstSeen": "2026-09-16T18:04:25Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-16T20:07:55Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-16T22:06:57Z",
+      "cooldownUntil": "2026-10-16T22:06:57Z",
       "permanentSkip": false,
       "skipReason": null,
       "skipNote": null,
@@ -9239,6 +9239,20 @@
           "status": 403,
           "issue": "LEMA-10408",
           "note": "Firecrawl scrape again returned 403 'we do not support this site' (documented blanket refusal for reddit.com). failCount now 2 of 3; still not on cooldown."
+        },
+        {
+          "attempt": "2026-09-16T22:06:57Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10421",
+          "note": "Claude Code WebFetch tool again refused to fetch reddit.com (tool-level block, not a site response)."
+        },
+        {
+          "attempt": "2026-09-16T22:06:57Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10421",
+          "note": "Firecrawl scrape again returned 403 blanket we do not support this site refusal for reddit.com. failCount reached 3; cooldownUntil set to 30 days."
         }
       ]
     },
@@ -9288,7 +9302,27 @@
           "note": "Firecrawl scrape confirmed 404 (page body: 'The resource requested could not be found on this server!'). Full fallback-chain failure. Likely a stale/incorrect URL surfaced by web search; the same outlet's real article on this story is already tracked in data.json at a different slug (lucaslaruffa.com/noticias/apple-tv-la-temporada-2-de-mujeres-de-azul-tiene-trailer-macmagazine/)."
         }
       ]
+    },
+    {
+      "url": "https://tvline.com/2260743/boston-blue-season-2-cast-marg-helgenberger-tracker-season-4-michael-malarkey",
+      "firstSeen": "2026-09-16T22:07:10Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-16T22:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Exa broad-query match (\"Las Azules Women in Blue Season 2 Apple TV\"). Page is entirely about TVLine casting news for Boston Blue Season 2 (Marg Helgenberger) and Tracker Season 4 (Michael Malarkey) -- unrelated shows. No mention of Las Azules / Women in Blue found in title or snippet. Relevance miss, not fetched.",
+      "history": [
+        {
+          "attempt": "2026-09-16T22:07:10Z",
+          "method": "none (relevance gate, not fetched per Rule G)",
+          "status": null,
+          "issue": "LEMA-10421",
+          "note": "Classified off-topic from search snippet alone; Rule G does not require a fetch attempt."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-16T20:07:55Z"
+  "lastUpdated": "2026-09-16T22:07:10Z"
 }
