@@ -1,16 +1,5 @@
 [
   {
-    "outlet": "Comic Basics",
-    "headline": "'Las Azules' Season 2 Episode 7 Release Date, Time and Where to Watch",
-    "url": "https://www.comicbasics.com/las-azules-season-2-episode-7-release-date-time-and-where-to-watch/",
-    "date": "Sep 16, 2026",
-    "ts": 20260916,
-    "lang": "EN",
-    "market": "US",
-    "type": "Entertainment",
-    "excerpt": "Episode 7 ('Gerardo') premieres Wednesday, September 23, 2026 at 12 AM ET (9 PM PT the night before) exclusively on Apple TV+; the penultimate episode escalates the investigation into Mexico's 1968 student massacre ahead of the season finale."
-  },
-  {
     "outlet": "Fiction Horizon",
     "headline": "'Las Azules' Season 2 Episode 7 Release Date, Time, Preview, And Streaming Details",
     "url": "https://fictionhorizon.com/las-azules-season-2-episode-7-release-date-time-preview-and-streaming-details/",
@@ -20,6 +9,18 @@
     "market": "US",
     "type": "Entertainment",
     "excerpt": "Episode 7 premieres September 23, 2026 at midnight ET exclusively on Apple TV+, continuing the investigation into a decades-old conspiracy tied to Mexico's 1968 student massacre as the season approaches its finale."
+  },
+  {
+    "outlet": "IMDb",
+    "headline": "'Las Azules' Season 2 Episode 7 Release Date, Time and Where to Watch",
+    "url": "https://www.imdb.com/news/ni66018464/",
+    "date": "Sep 16, 2026",
+    "ts": 20260916,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Syndicated republication of the Comic Basics article (byline Arthur S. Poe) on IMDb News: fans are down to the final stretch of Season 2, with Episode 7 continuing the investigation tied to Mexico's 1968 student massacre as the season nears its conclusion.",
+    "storyGroup": "comicbasics-s2-ep7-release-20260916"
   },
   {
     "outlet": "Big Gold Belt Media (YouTube)",
@@ -7797,5 +7798,17 @@
     "market": "Mexico",
     "type": "Entertainment",
     "excerpt": "Mexican actress Bárbara Mori stars in this new Apple TV+ series created by Emmy-winning filmmaker Fernando Rovzar. Set in 1970 and inspired by true events, the show follows four women who join Mexico first female police force, only to discover their squad is a publicity stunt masking an investigation into a serial killer."
+  },
+  {
+    "outlet": "Comic Basics",
+    "headline": "'Las Azules' Season 2 Episode 7 Release Date, Time and Where to Watch",
+    "url": "https://comicbasics.com/las-azules-season-2-episode-7-release-date-time-and-where-to-watch",
+    "date": "Sep 16, 2026",
+    "ts": 20260916,
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Episode 7 ('Gerardo') premieres Wednesday, September 23, 2026 at 12 AM ET (9 PM PT the night before) exclusively on Apple TV+; the penultimate episode escalates the investigation into Mexico's 1968 student massacre ahead of the season finale.",
+    "storyGroup": "comicbasics-s2-ep7-release-20260916"
   }
 ]
