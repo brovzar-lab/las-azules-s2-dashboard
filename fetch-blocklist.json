@@ -8850,7 +8850,267 @@
           "issue": "LEMA-10345"
         }
       ]
+    },
+    {
+      "url": "https://facebook.com/fictionhorizon/posts/las-azules-has-kept-a-steady-weekly-rhythm-since-its-return-and-episode-7-is-the/1861898228949579",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Fiction Horizon's own Facebook post teasing their article 'Las Azules Season 2 Episode 7 Release Date, Time, Preview, And Streaming Details' (already in data.json at https://fictionhorizon.com/las-azules-season-2-episode-7-release-date-time-preview-and-streaming-details/). WebFetch confirmed the post contains only a truncated teaser sentence ('Las Azules has kept a steady weekly...') with no original commentary of its own -- a bare social link-post carrying no text of its own, per Rule I a second address for the already-tracked document, not a distinct document.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10348",
+          "note": "Fiction Horizon's own Facebook post teasing their article 'Las Azules Season 2 Episode 7 Release Date, Time, Preview, And Streaming Details' (already in data.json at https://fictionhorizon.com/las-azules-season-2-episode-7-release-date-time-preview-and-streaming-details/). WebFetch confirmed the post contains only a truncated teaser sentence ('Las Azules has kept a steady weekly...') with no original commentary of its own -- a bare social link-post carrying no text of its own, per Rule I a second address for the already-tracked document, not a distinct document."
+        }
+      ]
+    },
+    {
+      "url": "https://dizibox.live/the-drop-a-snowfall-saga-1-sezon-2-bolum-izle/3",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about the Turkish-subtitled streaming of \"The Drop: A Snowfall Saga\", an unrelated show. No mention of Las Azules or Women in Blue. Surfaced only as a broad Exa EN query match.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10348",
+          "note": "Page is about the Turkish-subtitled streaming of \"The Drop: A Snowfall Saga\", an unrelated show. No mention of Las Azules or Women in Blue. Surfaced only as a broad Exa EN query match."
+        }
+      ]
+    },
+    {
+      "url": "http://thefutoncritic.com/listings/2026/09/18",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "A daily US TV programming/listings grid page for 2026-09-18. Fetched full body via Firecrawl: zero mentions of \"Azules\" anywhere on the page. Surfaced only as a broad Exa EN query match on generic Apple TV listings terms.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10348",
+          "note": "A daily US TV programming/listings grid page for 2026-09-18. Fetched full body via Firecrawl: zero mentions of \"Azules\" anywhere on the page. Surfaced only as a broad Exa EN query match on generic Apple TV listings terms."
+        }
+      ]
+    },
+    {
+      "url": "https://cinebymovies.com/tv/250203/brothers",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is a listing for the unrelated 2026 Apple TV comedy series \"Brothers\" (McConaughey/Harrelson). No mention of Las Azules or Women in Blue. Surfaced only as a broad Exa EN query match on generic Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10348",
+          "note": "Page is a listing for the unrelated 2026 Apple TV comedy series \"Brothers\" (McConaughey/Harrelson). No mention of Las Azules or Women in Blue. Surfaced only as a broad Exa EN query match on generic Apple TV terms."
+        }
+      ]
+    },
+    {
+      "url": "https://uniladtech.com/apple/why-millions-iphone-users-getting-apple-tv-arcade-basic-icloud-206966-20260916",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about Apple expanding iCloud+ to bundle Apple TV and Apple Arcade in 59 new countries. No mention of Las Azules or Women in Blue anywhere. Surfaced only as a broad Exa EN query match on \"Apple TV\".",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10348",
+          "note": "Article is about Apple expanding iCloud+ to bundle Apple TV and Apple Arcade in 59 new countries. No mention of Las Azules or Women in Blue anywhere. Surfaced only as a broad Exa EN query match on \"Apple TV\"."
+        }
+      ]
+    },
+    {
+      "url": "https://fictionhorizon.com/ted-lasso-season-4-episode-8-release-date-time-and-streaming-details-ahead-of-its-apple-tv-premiere",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about Ted Lasso Season 4 Episode 8 release details. \"Las Azules\" appears only as an unrelated sidebar \"Don't miss\" link, not in the article's own content. Surfaced only as a broad Exa EN query match on generic Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10348",
+          "note": "Article is about Ted Lasso Season 4 Episode 8 release details. \"Las Azules\" appears only as an unrelated sidebar \"Don't miss\" link, not in the article's own content. Surfaced only as a broad Exa EN query match on generic Apple TV terms."
+        }
+      ]
+    },
+    {
+      "url": "https://biobiochile.cl/noticias/dopamina/2026/09/16/fue-un-hombre-sin-mucha-opinion-disley-ramos-critico-entrevista-de-luis-jimenez-en-primer-plano.shtml",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about Disley Ramos's critique of Luis Jimenez's interview on Chilean program \"Primer Plano\". No mention of Las Azules anywhere. Surfaced only as a broad Exa ES query match.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10348",
+          "note": "Article is about Disley Ramos's critique of Luis Jimenez's interview on Chilean program \"Primer Plano\". No mention of Las Azules anywhere. Surfaced only as a broad Exa ES query match."
+        }
+      ]
+    },
+    {
+      "url": "https://levante-emv.com/cultura/2026/09/16/jose-maria-pou-paz-padilla-134341460.html",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Headline/snippet is about the new Olympia theater season lineup (Jose Maria Pou, Paz Padilla, Lola Herrera, et al.), unrelated to Las Azules. WebFetch was blocked by the site; classified on unambiguous title/snippet evidence per Rule G (relevance miss, not a dateability question). Surfaced only as a broad Exa ES query match.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 0,
+          "issue": "LEMA-10348",
+          "note": "WebFetch blocked (site not fetchable by tool); classified on title/snippet, no ambiguity present."
+        }
+      ]
+    },
+    {
+      "url": "https://elconfidencial.com/television/programas-tv/2026-09-13/pasapalabra-saber-ganar-entrevista-alberto-izquierdo_4421345",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Headline/snippet is an interview with Alberto Izquierdo about the game shows Pasapalabra and Saber y Ganar, unrelated to Las Azules. WebFetch was blocked by the site; classified on unambiguous title/snippet evidence per Rule G. Surfaced only as a broad Exa ES query match.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 0,
+          "issue": "LEMA-10348",
+          "note": "WebFetch blocked (site not fetchable by tool); classified on title/snippet, no ambiguity present."
+        }
+      ]
+    },
+    {
+      "url": "https://billboard.com/artist/los-angeles-azules",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Artist page for the cumbia band \"Los Angeles Azules\", not the TV show Las Azules / Women in Blue. Name-collision false positive from the Google News query.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10348",
+          "note": "Artist page for the cumbia band \"Los Angeles Azules\", not the TV show Las Azules / Women in Blue. Name-collision false positive from the Google News query."
+        }
+      ]
+    },
+    {
+      "url": "https://facebook.com/KFOXTV/posts/newlos-angeles-azules-are-bringing-their-cumbia-sin-fronteras-us-tour-to-the-bor/1231032115728183",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "KFOX-TV Facebook post about the cumbia band \"Los Angeles Azules\" touring, not the TV show Las Azules / Women in Blue. Name-collision false positive from the Google News query.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10348",
+          "note": "KFOX-TV Facebook post about the cumbia band \"Los Angeles Azules\" touring, not the TV show Las Azules / Women in Blue. Name-collision false positive from the Google News query."
+        }
+      ]
+    },
+    {
+      "url": "https://open.spotify.com/artist/0ZCO8oVkMj897cKgFH7fRW",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Spotify artist page for the cumbia band \"Los Angeles Azules\", not the TV show. Name-collision false positive from the Google News query.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10348",
+          "note": "Spotify artist page for the cumbia band \"Los Angeles Azules\", not the TV show. Name-collision false positive from the Google News query."
+        }
+      ]
+    },
+    {
+      "url": "https://hollyland.com/blog/tips/watch-twitter-on-tv",
+      "firstSeen": "2026-09-16T12:09:56.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T12:09:56.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Generic blog post about watching Twitter/X on a TV device. No relation to Las Azules; surfaced only as a broad match on the #LasAzules Twitter query.",
+      "history": [
+        {
+          "attempt": "2026-09-16T12:09:56.134Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10348",
+          "note": "Generic blog post about watching Twitter/X on a TV device. No relation to Las Azules; surfaced only as a broad match on the #LasAzules Twitter query."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-16T08:01:37Z"
+  "lastUpdated": "2026-09-16T12:09:56.134Z"
 }
