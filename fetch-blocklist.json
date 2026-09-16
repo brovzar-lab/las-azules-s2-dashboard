@@ -1302,10 +1302,10 @@
     {
       "url": "https://www.aol.com/entertainment/apple-tv-spanish-language-debut-131500419.html",
       "firstSeen": "2026-09-05T14:07:26Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-13T04:15:00Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-16T16:04:17Z",
+      "cooldownUntil": "2026-10-16T16:04:17Z",
       "permanentSkip": false,
       "history": [
         {
@@ -1335,6 +1335,20 @@
           "status": 404,
           "issue": "LEMA-10026",
           "note": "Firecrawl also returned AOL generic page-not-found content; full-chain failure again. failCount incremented to 2 (not yet at 3, no cooldown set)."
+        },
+        {
+          "attempt": "2026-09-16T16:04:17Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-10366",
+          "note": "404 on WebFetch, one-retry window (expired-cooldown-retry) per step 4a."
+        },
+        {
+          "attempt": "2026-09-16T16:04:17Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10366",
+          "note": "Firecrawl HTTP 200 but body is AOL generic page-not-found content (soft-404); full-chain failure. failCount reached 3, cooldownUntil set to 30 days out."
         }
       ]
     },
@@ -9166,7 +9180,28 @@
       "skipReason": "editorial_off_topic_false_positive",
       "skipNote": "Page is about Apple executive John Ternus making his product-event debut as CEO -- Apple corporate/hardware news, not about Las Azules or Women in Blue. Broad-query false positive from Exa EN pass (matched on \"Apple\" + IMDb domain). Not fetched: title alone is unambiguous. LEMA-10352.",
       "history": []
+    },
+    {
+      "url": "https://jessiecervantes.com/barbara-mori-y-fernando-rovzar-presentan-las-azules-entrevista-con-jessie-cervantes/",
+      "firstSeen": "2026-09-16T16:04:49Z",
+      "failCount": 0,
+      "lastStatus": 301,
+      "lastAttempt": "2026-09-16T16:04:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "301 redirects to https://noticias.jessiecervantes.com/barbara-mori-y-fernando-rovzar-presentan-las-azules-entrevista-con-jessie-cervantes/, which is already tracked in data.json (same story, Sep 7 2024). Second address for an existing document per Rule I, not a distinct document.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-16T16:04:49Z",
+          "method": "WebFetch",
+          "status": 301,
+          "issue": "LEMA-10366",
+          "note": "Redirects to noticias.jessiecervantes.com subdomain, which normalizes to a different key and is already present in data.json. Ledgered as redundant second address per Rule I."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-16T14:07:13.752Z"
+  "lastUpdated": "2026-09-16T16:04:49Z"
 }
