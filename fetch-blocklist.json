@@ -9205,9 +9205,9 @@
     {
       "url": "https://www.reddit.com/r/tvPlus/comments/1vs7qq2/women_in_blue_las_azules_season_2_episode_2/",
       "firstSeen": "2026-09-16T18:04:25Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-16T18:04:25Z",
+      "lastAttempt": "2026-09-16T20:07:55Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
@@ -9225,9 +9225,70 @@
           "method": "Firecrawl scrape",
           "status": 403,
           "issue": "LEMA-10379"
+        },
+        {
+          "attempt": "2026-09-16T20:07:55Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10408",
+          "note": "Claude Code WebFetch tool again refused to fetch reddit.com (tool-level block, not a site response)."
+        },
+        {
+          "attempt": "2026-09-16T20:07:55Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10408",
+          "note": "Firecrawl scrape again returned 403 'we do not support this site' (documented blanket refusal for reddit.com). failCount now 2 of 3; still not on cooldown."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/es/show/brothers/umc.cmc.17g1y5mzqp92sc0ge1c0hdorg",
+      "firstSeen": "2026-09-16T20:07:55Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T20:07:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Apple TV+ Spanish-locale show page for \"Brothers\", an unrelated Apple TV+ title, not Las Azules / Women in Blue. Surfaced only as a broad-query match on \"Apple TV\" terms via Exa search.",
+      "history": [
+        {
+          "attempt": "2026-09-16T20:07:55Z",
+          "method": "Exa search result inspection",
+          "status": 200,
+          "issue": "LEMA-10408",
+          "note": "Confirmed off-topic: page is Apple TV's own listing for the show \"Brothers\", unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lucaslaruffa.com/noticias/la-segunda-temporada-de-mujeres-de-azul-debutara-en-apple-tv-el-12-de-agosto-macmagazine/",
+      "firstSeen": "2026-09-16T20:07:55Z",
+      "failCount": 1,
+      "lastStatus": 404,
+      "lastAttempt": "2026-09-16T20:07:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-09-16T20:07:55Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-10408",
+          "note": "WebFetch returned HTTP 404 Not Found."
+        },
+        {
+          "attempt": "2026-09-16T20:07:55Z",
+          "method": "Firecrawl scrape",
+          "status": 404,
+          "issue": "LEMA-10408",
+          "note": "Firecrawl scrape confirmed 404 (page body: 'The resource requested could not be found on this server!'). Full fallback-chain failure. Likely a stale/incorrect URL surfaced by web search; the same outlet's real article on this story is already tracked in data.json at a different slug (lucaslaruffa.com/noticias/apple-tv-la-temporada-2-de-mujeres-de-azul-tiene-trailer-macmagazine/)."
         }
       ]
     }
   ],
-  "lastUpdated": "2026-09-16T18:04:25Z"
+  "lastUpdated": "2026-09-16T20:07:55Z"
 }
