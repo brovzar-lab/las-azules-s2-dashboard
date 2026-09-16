@@ -9201,7 +9201,33 @@
           "note": "Redirects to noticias.jessiecervantes.com subdomain, which normalizes to a different key and is already present in data.json. Ledgered as redundant second address per Rule I."
         }
       ]
+    },
+    {
+      "url": "https://www.reddit.com/r/tvPlus/comments/1vs7qq2/women_in_blue_las_azules_season_2_episode_2/",
+      "firstSeen": "2026-09-16T18:04:25Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-16T18:04:25Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-09-16T18:04:25Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10379",
+          "note": "Claude Code WebFetch tool refused to fetch reddit.com (tool-level block, not a site response)"
+        },
+        {
+          "attempt": "2026-09-16T18:04:25Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10379"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-16T16:04:49Z"
+  "lastUpdated": "2026-09-16T18:04:25Z"
 }
