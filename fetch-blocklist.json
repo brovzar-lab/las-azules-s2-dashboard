@@ -8811,7 +8811,27 @@
           "note": "WebFetch succeeded on both this URL and the primary dramaquarterly.com URL; content compared field-by-field (headline, byline, date, body) and found identical. Classified as second-address duplicate under Rule I, not a distinct document."
         }
       ]
+    },
+    {
+      "url": "https://fueradeseries.com/critica-de-las-azules-temporada-2-sin-spoilers-apple-tv/",
+      "firstSeen": "2026-09-16T08:01:37Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T08:01:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Fetched successfully (200) via WebFetch. Page is a landing/embed page for the Fuera de Series podcast episode already tracked in data.json at https://open.spotify.com/episode/3pRwThyHoGshXiyECXyLs6 (same headline 'Crítica de LAS AZULES (Temporada 2) | SIN SPOILERS | Apple TV', same Aug 25, 2026 date). Confirmed via fetch: page body is primarily an embedded podcast player plus a short one-line promotional description, no substantial original written review prose -- not a genuinely separate editorial artifact under Rule I's amendment, just a second address (webpage mirror) for the same podcast document. Second address, not a distinct document.",
+      "history": [
+        {
+          "attempt": "2026-09-16T08:01:37Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10335",
+          "note": "Confirmed page mirrors already-tracked Spotify podcast episode with no distinct written content; classified as redundant second address under Rule I."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-16T06:05:01Z"
+  "lastUpdated": "2026-09-16T08:01:37Z"
 }
