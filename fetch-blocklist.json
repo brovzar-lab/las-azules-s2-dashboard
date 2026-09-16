@@ -8706,7 +8706,92 @@
           "note": "Blanket facebook.com refusal (we do not support this site), documented exhaustion per Rule A."
         }
       ]
+    },
+    {
+      "url": "https://serienstream.cx/serie/women-in-blue/staffel-2/episode-6",
+      "firstSeen": "2026-09-16T00:07:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T00:07:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_piracy_or_unauthorized_distribution",
+      "skipNote": "Discovered via Exa Pass 1 EN query on LEMA-10304. serienstream.cx (S.to) is a German unauthorized streaming index for Women in Blue S2E6. WebFetch (200) confirmed the page is on-topic but functions as an index directing users to third-party video hosts via a 'Sprache & Server' (language/server) selector, with FAQ content on circumventing blocked content and EU ad-partner monetization; no quality-tier label or live embedded player was present on this specific episode page at check time ('no video player available for this episode'), but the site's primary function is unauthorized-distribution indexing, not editorial coverage. Per Rule E (LEMA-9924), dateability not attempted since relevance/function gate already fails.",
+      "history": [
+        {
+          "attempt": "2026-09-16T00:07:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10304",
+          "note": "Confirmed unauthorized-distribution index page (S.to), no editorial content, links to third-party video hosts."
+        }
+      ]
+    },
+    {
+      "url": "https://www.spin-off.fr/episode07-473880-23092026-saison2-Las-Azules.html",
+      "firstSeen": "2026-09-16T00:07:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T00:07:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Exa Pass 1 ES query on LEMA-10304. Spin-off.fr episode detail page for Las Azules S2E7, same site/pattern as the sibling S2E6 row already in this ledger (episode06-473879). WebFetch (200) confirmed this is a bare episode database entry: air date, network, runtime metadata, 'Aucune note' (no ratings), no synopsis, and crowd-sourced placeholder prompts ('Proposer un resume', 'Proposer une video'). No written editorial content about the show remains once the metadata/placeholders are stripped. Per Rule F (LEMA-9927), classified editorial_listing_or_database; reviewable omitted (not coverage at all).",
+      "history": [
+        {
+          "attempt": "2026-09-16T00:07:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10304",
+          "note": "Confirmed bare episode catalog entry, no editorial prose, matches sibling episode06 row pattern."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/SomosCinefilos1/posts/nuestras-cuatro-hermosas-rubias-protagonistas-de-la-serie-margo-posando-para-la-/1655410466630976/",
+      "firstSeen": "2026-09-16T00:07:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T00:07:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Discovered via Exa Pass 1 ES query on LEMA-10304 ('Barbara Mori entrevista Las Azules temporada 2'). Exa's own result title and WebFetch's fetched page title both read 'Nuestras cuatro hermosas rubias protagonistas de la serie #Margo posando para la...' -- this post is about the series 'Margo' (four blonde actresses), not Las Azules or Women in Blue; no mention of Las Azules, Women in Blue, or Barbara Mori found. Surfaced only via broad Spanish-language semantic query match. Per Rule G (LEMA-9927), classified editorial_off_topic_false_positive; reviewable omitted.",
+      "history": [
+        {
+          "attempt": "2026-09-16T00:07:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10304",
+          "note": "Page title confirms post is about the series 'Margo', not Las Azules -- off-topic false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/latinview/posts/una-bella-joven-y-talentosa-actriz-que-se-esta-abriendo-camino-a-la-fama-ella-es/1407984198196452/",
+      "firstSeen": "2026-09-16T00:07:04Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-16T00:07:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-16T00:07:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10304",
+          "note": "WebFetch returned only a fragment ('Latinview - Una bella, joven y talentosa actriz que se...'), not enough content to identify the actress, show, or confirm relevance to Las Azules."
+        },
+        {
+          "attempt": "2026-09-16T00:07:04Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10304",
+          "note": "Firecrawl returned a blanket 'we do not support this site' refusal for facebook.com. Full-chain fetch failure; not added to data.json, relevance undetermined."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-15T22:00:54Z"
+  "lastUpdated": "2026-09-16T00:07:04Z"
 }
