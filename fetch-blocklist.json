@@ -9110,7 +9110,63 @@
           "note": "Generic blog post about watching Twitter/X on a TV device. No relation to Las Azules; surfaced only as a broad match on the #LasAzules Twitter query."
         }
       ]
+    },
+    {
+      "url": "https://www.myepisodes.com/",
+      "firstSeen": "2026-09-16T14:07:13.752Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T14:07:13.752Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "MyEpisodes.com homepage: a generic EPG-style daily air-date grid. \"Las Azules S02E06 - Gilberto\" appears as one row among dozens of unrelated shows airing that day, with no written editorial content about the show. Rule F test: stripping the schedule grid leaves nothing written about the show. Surfaced by Exa broad EN query, LEMA-10352.",
+      "history": [
+        {
+          "attempt": "2026-09-16T14:07:13.752Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10352",
+          "note": "Confirmed generic EPG homepage, Las Azules appears only as a bare schedule row."
+        }
+      ]
+    },
+    {
+      "url": "https://www.comicbasics.com/ted-lasso-season-4-episode-8-release-date-time-and-where-to-watch/",
+      "firstSeen": "2026-09-16T14:07:13.752Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-16T14:07:13.752Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about \"Ted Lasso\" Season 4 Episode 8, an unrelated Apple TV+ show. Surfaced only as a broad-query false positive (same outlet/domain as a genuine Las Azules Comic Basics article, different URL). Not fetched: title alone is unambiguous. Surfaced by Exa broad EN query, LEMA-10352.",
+      "history": []
+    },
+    {
+      "url": "https://www.justwatch.com/ca/tv-show/young-justice",
+      "firstSeen": "2026-09-16T14:07:13.752Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-16T14:07:13.752Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is JustWatch's listing for \"Young Justice\", an unrelated animated series, not Las Azules. Broad-query false positive from Exa EN pass. Not fetched: title alone is unambiguous. LEMA-10352.",
+      "history": []
+    },
+    {
+      "url": "https://www.imdb.com/es/news/ni66008749/",
+      "firstSeen": "2026-09-16T14:07:13.752Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-16T14:07:13.752Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about Apple executive John Ternus making his product-event debut as CEO -- Apple corporate/hardware news, not about Las Azules or Women in Blue. Broad-query false positive from Exa EN pass (matched on \"Apple\" + IMDb domain). Not fetched: title alone is unambiguous. LEMA-10352.",
+      "history": []
     }
   ],
-  "lastUpdated": "2026-09-16T12:09:56.134Z"
+  "lastUpdated": "2026-09-16T14:07:13.752Z"
 }
