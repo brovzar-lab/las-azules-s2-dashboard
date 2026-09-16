@@ -8831,6 +8831,25 @@
           "note": "Confirmed page mirrors already-tracked Spotify podcast episode with no distinct written content; classified as redundant second address under Rule I."
         }
       ]
+    },
+    {
+      "url": "https://www.imdb.com/name/nm00605224/",
+      "firstSeen": "2026-09-16T10:04:00Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-16T10:04:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "IMDb name/bio page for Barbara Mori (nm00605224), surfaced by the standard EN/ES sweep (LEMA-10345) via a Variety/Deadline/HR press-list search. WebFetch failed with 403 (IMDb bot wall). This is the standard IMDb actor bio + filmography listing page, structurally identical to the imdb.com/title/* pages already ledgered under Rule F: stripping the bio/filmography table leaves no written editorial content about Las Azules / Women in Blue Season 2 specifically. Not coverage of the show, no fetch-fallback-chain attempt spent per Rule F (dateability irrelevant). reviewable omitted: Rule F entries are not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-09-16T10:04:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10345"
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-16T08:01:37Z"
