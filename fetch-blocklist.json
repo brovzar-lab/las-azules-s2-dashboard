@@ -8791,7 +8791,27 @@
           "note": "Firecrawl returned a blanket 'we do not support this site' refusal for facebook.com. Full-chain fetch failure; not added to data.json, relevance undetermined."
         }
       ]
+    },
+    {
+      "url": "https://dramaquarterly.substack.com/p/back-in-blue-with-las-azules-women",
+      "firstSeen": "2026-09-16T06:05:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-16T06:05:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Surfaced via Pass 2 standard sweep (dramaquarterly.substack.com is DramaQuarterly's own Substack newsletter mirror). WebFetch succeeded on both URLs: this Substack post and the primary dramaquarterly.com article share the identical headline (\"Back in Blue with Las Azules...\"), the same byline (Michael Pickard), the same Aug 17, 2026 publish date, and the same body content (interview with Fernando Rovzar, Barbara Mori, Ximena Sarinana about S2). Per Rule I's mechanical shortcut test (LEMA-10247/LEMA-10274, amended LEMA-10278/LEMA-10287): same outlet publishing the same underlying piece at two addresses (main site + own newsletter mirror) is one document at two addresses, not a genuinely separate format (no distinct video/podcast/gallery/liveblog content of its own). permanentSkip as editorial_redundant_syndication, not added to data.json. Primary (already in data.json): https://dramaquarterly.com/back-in-blue-las-azules-women-in-blue-stars-barbara-mori-ximena-sarinana-and-director-fernando-rovzar-reunite-for-s2-of-apple-tvs-spanish-crime-drama/",
+      "history": [
+        {
+          "attempt": "2026-09-16T06:05:01Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10323",
+          "note": "WebFetch succeeded on both this URL and the primary dramaquarterly.com URL; content compared field-by-field (headline, byline, date, body) and found identical. Classified as second-address duplicate under Rule I, not a distinct document."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-16T00:07:04Z"
+  "lastUpdated": "2026-09-16T06:05:01Z"
 }
