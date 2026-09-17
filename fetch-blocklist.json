@@ -9966,7 +9966,147 @@
           "issue": "LEMA-10458"
         }
       ]
+    },
+    {
+      "url": "https://caretas.pe/entretenimiento/barbara-torres-vuelve-peru-comedia-amor/",
+      "firstSeen": "2026-09-17T22:04:41Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-17T22:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Caretas (Peru) article about actress/comedian Bárbara Torres returning to Peru for a romantic comedy stage tour. Different Bárbara entirely (not Bárbara Mori); no mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on the Spanish query \"Bárbara ... Las Azules temporada 2\" (name collision on \"Bárbara\").",
+      "history": [
+        {
+          "attempt": "2026-09-17T22:04:41Z",
+          "method": "none (classified from Exa search-result title/snippet; unambiguous person mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-10462",
+          "note": "Caretas (Peru) article about actress/comedian Bárbara Torres returning to Peru for a romantic comedy stage tour. Different Bárbara entirely (not Bárbara Mori); no mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on the Spanish query \"Bárbara ... Las Azules temporada 2\" (name collision on \"Bárbara\")."
+        }
+      ]
+    },
+    {
+      "url": "https://decider.com/2026/09/17/slow-horses-season-6-cast-guide-apple-tv/",
+      "firstSeen": "2026-09-17T22:04:41Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-17T22:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Decider cast guide for Apple TV+'s \"Slow Horses\" Season 6, an unrelated show. No mention of Las Azules / Women in Blue. Surfaced only as a broad-query match on generic \"Apple TV Season\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-17T22:04:41Z",
+          "method": "none (classified from Exa search-result title/snippet; unambiguous different-show mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-10462",
+          "note": "Decider cast guide for Apple TV+'s \"Slow Horses\" Season 6, an unrelated show. No mention of Las Azules / Women in Blue. Surfaced only as a broad-query match on generic \"Apple TV Season\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Azules_de_Veracruz",
+      "firstSeen": "2026-09-17T22:04:41Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-17T22:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about Azules de Veracruz, a historical Mexican baseball team. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on the word \"Azules\".",
+      "history": [
+        {
+          "attempt": "2026-09-17T22:04:41Z",
+          "method": "none (classified from Exa search-result title; unambiguous topic mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-10462",
+          "note": "Wikipedia article about Azules de Veracruz, a historical Mexican baseball team. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on the word \"Azules\"."
+        }
+      ]
+    },
+    {
+      "url": "https://www.abc.es/play/television/noticias/maria-valverde-recordar-video-viral-resistencia-persiguio-20260917225754-nt.html",
+      "firstSeen": "2026-09-17T22:04:41Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-17T22:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ABC.es article about actress María Valverde discussing a viral video from the Spanish TV program \"La Resistencia\". No relation to Las Azules / Women in Blue or Bárbara Mori. Surfaced only as a broad-query match on generic Spanish-language TV-interview terms.",
+      "history": [
+        {
+          "attempt": "2026-09-17T22:04:41Z",
+          "method": "none (classified from Exa search-result title/snippet; unambiguous topic mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-10462",
+          "note": "ABC.es article about actress María Valverde discussing a viral video from the Spanish TV program \"La Resistencia\". No relation to Las Azules / Women in Blue or Bárbara Mori. Surfaced only as a broad-query match on generic Spanish-language TV-interview terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mediaplaynews.com/apple-tv-releases-knife-edge-chasing-michelin-stars-season-two-trailer/",
+      "firstSeen": "2026-09-17T22:04:41Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-17T22:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Media Play News article about Apple TV+'s \"Knife Edge: Chasing Michelin Stars\" Season 2 trailer, an unrelated show. No mention of Las Azules / Women in Blue. Surfaced only as a broad-query match on generic \"Apple TV ... Season Two\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-17T22:04:41Z",
+          "method": "none (classified from Exa search-result title/snippet; unambiguous different-show mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-10462",
+          "note": "Media Play News article about Apple TV+'s \"Knife Edge: Chasing Michelin Stars\" Season 2 trailer, an unrelated show. No mention of Las Azules / Women in Blue. Surfaced only as a broad-query match on generic \"Apple TV ... Season Two\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/",
+      "firstSeen": "2026-09-17T22:04:41Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-17T22:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch bare homepage (generic streaming-availability aggregator covering all shows/movies, not Las Azules specifically). Exa returned this bare domain root instead of a real article URL for a query result; not a distinct document about the show. JustWatch's actual Las Azules-specific pages (e.g. justwatch.com/us/tv-show/las-azules/season-2) are already ledgered separately under Rule F (editorial_listing_or_database).",
+      "history": [
+        {
+          "attempt": "2026-09-17T22:04:41Z",
+          "method": "none (homepage has no show-specific content by construction; sibling JustWatch show/season pages already ledgered under Rule F, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-10462",
+          "note": "JustWatch bare homepage (generic streaming-availability aggregator covering all shows/movies, not Las Azules specifically). Exa returned this bare domain root instead of a real article URL for a query result; not a distinct document about the show. JustWatch's actual Las Azules-specific pages (e.g. justwatch.com/us/tv-show/las-azules/season-2) are already ledgered separately under Rule F (editorial_listing_or_database)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.today.it/",
+      "firstSeen": "2026-09-17T22:04:41Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-17T22:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Today.it bare homepage (general Italian news portal, not Las Azules specific). Exa returned this bare domain root instead of the real article URL for a query result titled \"Las Azules 2: trailer, trama, cast e data di uscita della nuova...\". Located the real article via a follow-up WebSearch: https://www.today.it/film-serie-tv/apple/las-azules-2-quando-esce.html -- confirmed already present in data.json (this run), so no new coverage was lost; this bare-homepage artifact URL itself carries no show-specific content and is ledgered to stop it being re-surfaced as a false candidate.",
+      "history": [
+        {
+          "attempt": "2026-09-17T22:04:41Z",
+          "method": "none (homepage has no show-specific content by construction; real article confirmed already tracked, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-10462",
+          "note": "Today.it bare homepage (general Italian news portal, not Las Azules specific). Exa returned this bare domain root instead of the real article URL for a query result titled \"Las Azules 2: trailer, trama, cast e data di uscita della nuova...\". Located the real article via a follow-up WebSearch: https://www.today.it/film-serie-tv/apple/las-azules-2-quando-esce.html -- confirmed already present in data.json (this run), so no new coverage was lost; this bare-homepage artifact URL itself carries no show-specific content and is ledgered to stop it being re-surfaced as a false candidate."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-17T18:20:00Z"
+  "lastUpdated": "2026-09-17T22:04:41Z"
 }
