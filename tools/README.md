@@ -37,12 +37,26 @@ $ node tools/sweep-integrity.js normalize "HTTP://WWW.Example.com/Article/Page/?
 `url` is the canonical display form (real scheme kept, everything else normalized). `key` is
 the schemeless comparison key used for lookup, dedup, and both integrity assertions.
 
-### `lookup <candidates.json> [--fetch-blocklist path]`
+### `lookup <candidates.json> [--fetch-blocklist path] [--json] [--strict]`
 
 `candidates.json` is either a JSON array of URL strings, or of `{"url": "..."}` objects.
 Builds the Pass 0 lookup dict from `fetch-blocklist.json` and prints one line per candidate
 with its disposition (`permanentSkip`, `active-cooldown`, `expired-cooldown-retry`, or
 `not-found`). Add `--json` for structured output.
+
+**Every run also prints a fingerprint of both input files to stderr** (LEMA-10448):
+`rows=<N> sha256=<hash>` for the ledger, `count=<N> sha256=<hash>` for the candidates file.
+stdout's line-per-candidate contract is unchanged. This exists so two runs someone claims were
+"against the same unmodified files" can be checked mechanically instead of taken on faith --
+diff the stderr lines. This was the exact gap that made the LEMA-10447 nondeterminism report
+undiagnosable after the fact: its `candidates.json` input wasn't preserved, so nobody could
+confirm the two runs actually read byte-identical files.
+
+Add `--strict` to fail loudly (non-zero exit, no stdout result lines, a clear stderr message)
+instead of silently producing output if the ledger or candidates file is present but empty or
+malformed (e.g. `{"entries": []}` from a torn/short read). Without `--strict`, those inputs are
+still handled the same as before (an empty ledger just means everything looks up as
+`not-found`) -- the guard is opt-in so it can't change any existing caller's behavior.
 
 ```
 $ node tools/sweep-integrity.js lookup candidates.json

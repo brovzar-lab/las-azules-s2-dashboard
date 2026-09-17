@@ -18,6 +18,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const { normalizeUrl } = require('./lib/normalize');
 const { lookupAll } = require('./lib/ledger');
@@ -30,6 +31,18 @@ const DEFAULT_DATA_PATH = path.join(REPO_ROOT, 'data.json');
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+}
+
+// Same as readJson, but also returns the raw bytes so the caller can
+// fingerprint exactly what was on disk (LEMA-10448: readJson alone can't
+// tell two runs apart if the underlying file differed between them).
+function readJsonWithRaw(filePath) {
+  const raw = fs.readFileSync(filePath, 'utf8');
+  return { raw, value: JSON.parse(raw) };
+}
+
+function sha256(text) {
+  return crypto.createHash('sha256').update(text, 'utf8').digest('hex');
 }
 
 function writeJson(filePath, value) {
@@ -70,13 +83,53 @@ function cmdNormalize(positional) {
 function cmdLookup(positional, flags) {
   const candidatesPath = positional[0];
   if (!candidatesPath) {
-    console.error('Usage: sweep-integrity.js lookup <candidates.json> [--fetch-blocklist path] [--json]');
+    console.error('Usage: sweep-integrity.js lookup <candidates.json> [--fetch-blocklist path] [--json] [--strict]');
     process.exit(2);
   }
   const ledgerPath = flags['fetch-blocklist'] || DEFAULT_LEDGER_PATH;
-  const candidates = readJson(candidatesPath);
-  const ledger = readJson(ledgerPath);
+  const { raw: candidatesRaw, value: candidates } = readJsonWithRaw(candidatesPath);
+  const { raw: ledgerRaw, value: ledger } = readJsonWithRaw(ledgerPath);
+
+  // LEMA-10448: emit a mechanically-comparable fingerprint of both input
+  // files on every run, to stderr only (stdout's one-line-per-candidate
+  // contract is unchanged for existing consumers). Two runs claimed to be
+  // "against the same unmodified files" can now be diffed on this line
+  // instead of taken on faith -- the exact gap that made the original
+  // LEMA-10447 report undiagnosable after the fact (its candidates.json
+  // input wasn't preserved, so nobody could check).
+  const ledgerEntries = Array.isArray(ledger && ledger.entries) ? ledger.entries : null;
+  const candidateList = Array.isArray(candidates) ? candidates : null;
+  console.error(
+    `[lookup] ledger path=${ledgerPath} rows=${ledgerEntries ? ledgerEntries.length : 'INVALID'} sha256=${sha256(ledgerRaw)}`
+  );
+  console.error(
+    `[lookup] candidates path=${candidatesPath} count=${candidateList ? candidateList.length : 'INVALID'} sha256=${sha256(candidatesRaw)}`
+  );
+
+  if (flags.strict) {
+    const problems = [];
+    if (!ledgerEntries) problems.push('fetch-blocklist ledger has no "entries" array');
+    else if (ledgerEntries.length === 0) problems.push('fetch-blocklist ledger "entries" array is empty');
+    if (!candidateList) problems.push('candidates file is not a JSON array');
+    else if (candidateList.length === 0) problems.push('candidates file is an empty array');
+    if (problems.length > 0) {
+      console.error(`[lookup] --strict guard failed:\n  - ${problems.join('\n  - ')}`);
+      process.exitCode = 3;
+      return;
+    }
+  }
+
   const results = lookupAll(candidates, ledger);
+
+  if (flags.strict && results.length !== candidates.length) {
+    // Defense in depth: lookupAll is a straight .map() today so this can't
+    // actually happen, but a silent count mismatch is exactly the failure
+    // shape this guard exists to catch, so check it explicitly rather than
+    // trusting the invariant to hold forever.
+    console.error(`[lookup] --strict guard failed: produced ${results.length} results for ${candidates.length} candidates`);
+    process.exitCode = 3;
+    return;
+  }
 
   if (flags.json) {
     console.log(JSON.stringify(results, null, 2));
@@ -166,7 +219,16 @@ function cmdAssertIntegrity(flags) {
   }
 
   const failed = (result.ledger && !result.ledger.passes) || (result.dataset && !result.dataset.passes);
-  process.exit(failed ? 1 : 0);
+  // LEMA-10448: was process.exit(failed ? 1 : 0) here, which tears the
+  // process down as soon as this line runs -- if stdout is a pipe under
+  // backpressure (slow consumer, large --json output), Node can still have
+  // buffered console.log bytes that haven't reached the reader yet, and
+  // process.exit() drops them, truncating the output. Reproduced: piping
+  // a large --json run into a slow reader cut output at exactly 65536
+  // bytes (the default pipe buffer size) and left invalid JSON on the
+  // other end. Setting exitCode and returning lets Node drain stdout
+  // before the process actually exits.
+  process.exitCode = failed ? 1 : 0;
 }
 
 function cmdEvidence(flags) {
