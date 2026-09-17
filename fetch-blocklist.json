@@ -8315,9 +8315,9 @@
     {
       "url": "https://www.youtube.com/playlist?list=OLAK5uy_leGHXkX51Wp-Gak0qlj6aOgC-XIJk4cFc",
       "firstSeen": "2026-09-15T06:04:36Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 401,
-      "lastAttempt": "2026-09-15T06:04:36Z",
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -8333,6 +8333,13 @@
           "status": 401,
           "issue": "LEMA-10153",
           "note": "Hit a YouTube sign-in/bot wall (embedded 401 error page, no real playlist content or date). Full-chain failure; not added to data.json this run."
+        },
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "Firecrawl scrape",
+          "status": 401,
+          "issue": "LEMA-10426",
+          "note": "Retried per expired-cooldown-retry (this is the one retry). WebFetch again returned only a truncated fragment (playlist title only, no channel/date). Firecrawl scrape hit the same YouTube sign-in/bot wall (401 error page body, no real playlist content). Full-chain failure again; failCount incremented to 2. Not added to data.json this run."
         }
       ]
     },
@@ -9394,6 +9401,266 @@
           "status": 200,
           "issue": "LEMA-10423",
           "note": "Surfaced by Pass 2 web search; fetched and found to canonicalize to an existing data.json entry under a different slug; ledgered as permanentSkip/editorial_redundant_syndication per Rule I rather than added as a new row."
+        }
+      ]
+    },
+    {
+      "url": "https://nauticalchannel.es/programa/mujeres-surcando-las-olas",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic: page is about \"Mujeres surcando las olas\", a Nautical Channel documentary series about female surfers across generations. No mention of Las Azules / Women in Blue anywhere on the page. Surfaced via Exa ES broad-query match on \"azules\"/\"mujeres\".",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "Relevance check (title/content review, no editorial-content fetch needed)",
+          "status": null,
+          "issue": "LEMA-10426",
+          "note": "Off-topic: page is about \"Mujeres surcando las olas\", a Nautical Channel documentary series about female surfers across generations. No mention of Las Azules / Women in Blue anywhere on the page. Surfaced via Exa ES broad-query match on \"azules\"/\"mujeres\"."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mandatory.com/news/1852399-csi-marg-helgenberger-joins-blue-bloods-spinoff-boston-blue",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic: article is about Marg Helgenberger (CSI) joining the \"Boston Blue\" spinoff of Blue Bloods. Unrelated show. Surfaced via Exa EN broad-query match on \"blue\"/\"spinoff\".",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "Relevance check (title/content review, no editorial-content fetch needed)",
+          "status": null,
+          "issue": "LEMA-10426",
+          "note": "Off-topic: article is about Marg Helgenberger (CSI) joining the \"Boston Blue\" spinoff of Blue Bloods. Unrelated show. Surfaced via Exa EN broad-query match on \"blue\"/\"spinoff\"."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mega.cl/programas/el-juicio-de-los-ex/mejores-momentos/220324-ludmila-ksenofontova-reencuentro-alvaro-ballero-reality.html",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic: page is about Chilean reality show \"El Juicio de los Ex\" (Mega) and cast members Ludmila Ksenofontova / Alvaro Ballero. Unrelated to Las Azules. Surfaced via Exa ES broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "Relevance check (title/content review, no editorial-content fetch needed)",
+          "status": null,
+          "issue": "LEMA-10426",
+          "note": "Off-topic: page is about Chilean reality show \"El Juicio de los Ex\" (Mega) and cast members Ludmila Ksenofontova / Alvaro Ballero. Unrelated to Las Azules. Surfaced via Exa ES broad-query match."
+        }
+      ]
+    },
+    {
+      "url": "https://record.r7.com/reis/entrevistas/miguel-moro-comenta-nova-fase-de-asa-em-reis-cenas-maravilhosas-17092026/",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic: interview about actor Miguel Moro and the Brazilian telenovela \"Reis\" (Record TV). Unrelated to Las Azules. Surfaced via Exa ES broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "Relevance check (title/content review, no editorial-content fetch needed)",
+          "status": null,
+          "issue": "LEMA-10426",
+          "note": "Off-topic: interview about actor Miguel Moro and the Brazilian telenovela \"Reis\" (Record TV). Unrelated to Las Azules. Surfaced via Exa ES broad-query match."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tomatazos.com/series/877324/Samurai-de-Ojos-Azules/temporada/1/episodio/7",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic: Tomatazos page for \"Samurái de Ojos Azules\" (Blue Eye Samurai), a completely different animated series, season 1 episode 7. Surfaced via broad-query match on \"Azules\"/\"temporada 1\"/\"episodio 7\".",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "Relevance check (title/content review, no editorial-content fetch needed)",
+          "status": null,
+          "issue": "LEMA-10426",
+          "note": "Off-topic: Tomatazos page for \"Samurái de Ojos Azules\" (Blue Eye Samurai), a completely different animated series, season 1 episode 7. Surfaced via broad-query match on \"Azules\"/\"temporada 1\"/\"episodio 7\"."
+        }
+      ]
+    },
+    {
+      "url": "https://mundootaku.online/anime/revision-del-volumen-7-del-periodo-azul/",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic: review of volume 7 of the manga/anime \"Blue Period\" (\"Periodo Azul\"). Unrelated to Las Azules. Surfaced via broad-query match on \"azul\"/\"volumen 7\".",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "Relevance check (title/content review, no editorial-content fetch needed)",
+          "status": null,
+          "issue": "LEMA-10426",
+          "note": "Off-topic: review of volume 7 of the manga/anime \"Blue Period\" (\"Periodo Azul\"). Unrelated to Las Azules. Surfaced via broad-query match on \"azul\"/\"volumen 7\"."
+        }
+      ]
+    },
+    {
+      "url": "https://www.thetvdb.com/series/336524-show/episodes/11654937",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic: TheTVDB episode page verified via WebFetch to actually be for \"Exatlón México\" (\"Programa 122\"), not Las Azules. Different show entirely despite surfacing on a broad \"Las Azules\"/\"Season 2\" query.",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "Relevance check (title/content review, no editorial-content fetch needed)",
+          "status": null,
+          "issue": "LEMA-10426",
+          "note": "Off-topic: TheTVDB episode page verified via WebFetch to actually be for \"Exatlón México\" (\"Programa 122\"), not Las Azules. Different show entirely despite surfacing on a broad \"Las Azules\"/\"Season 2\" query."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.youtube.com/browse/una-casa-para-azul-UCqqBEYs6RXqWY2ZkFqGTubg",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic: YouTube TV channel browse page for \"Una casa para Azul\", an unrelated children's show. Surfaced via broad-query match on \"azul\".",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "Relevance check (title/content review, no editorial-content fetch needed)",
+          "status": null,
+          "issue": "LEMA-10426",
+          "note": "Off-topic: YouTube TV channel browse page for \"Una casa para Azul\", an unrelated children's show. Surfaced via broad-query match on \"azul\"."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Otro_Cap%C3%ADtulo",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic: Wikipedia article about \"Otro Capítulo\", a 2024 single by Becky G. No connection to Las Azules / Women in Blue. Surfaced via broad-query match on \"capítulo\".",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "Relevance check (title/content review, no editorial-content fetch needed)",
+          "status": null,
+          "issue": "LEMA-10426",
+          "note": "Off-topic: Wikipedia article about \"Otro Capítulo\", a 2024 single by Becky G. No connection to Las Azules / Women in Blue. Surfaced via broad-query match on \"capítulo\"."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PLhwZU6iP9chEKRzNy4yfx4zA1-QWFdigH",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic: YouTube playlist for \"Los Ángeles Azules\", the Mexican cumbia band, an unrelated musical act. Surfaced via broad-query match on \"azules\".",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "Relevance check (title/content review, no editorial-content fetch needed)",
+          "status": null,
+          "issue": "LEMA-10426",
+          "note": "Off-topic: YouTube playlist for \"Los Ángeles Azules\", the Mexican cumbia band, an unrelated musical act. Surfaced via broad-query match on \"azules\"."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=-MIRgB2LAnE",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Fan-repost account: \"Telenovelas Plus\" channel, a generic telenovela reupload/compilation channel (tags include \"Las Azules capítulos completos\", cross-promoted alongside Netflix/Amazon/Max/Vix content), not the show's official channel and not a media/press outlet. Video: \"Las azules capítulo 3 \\\"De ser Policías pasan a ser Sirvientas\\\"\" published 2024-09-15 per YouTube Data API. Relevance gate fails under Rule B; no fetch-fallback attempt spent on dateability.",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "YouTube Data API v3 videos.list (channel/title/publishedAt check)",
+          "status": 200,
+          "issue": "LEMA-10426",
+          "note": "Fan-repost account: \"Telenovelas Plus\" channel, a generic telenovela reupload/compilation channel (tags include \"Las Azules capítulos completos\", cross-promoted alongside Netflix/Amazon/Max/Vix content), not the show's official channel and not a media/press outlet. Video: \"Las azules capítulo 3 \\\"De ser Policías pasan a ser Sirvientas\\\"\" published 2024-09-15 per YouTube Data API. Relevance gate fails under Rule B; no fetch-fallback attempt spent on dateability."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4fSobqwcLDQ",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Fan-repost/aggregator account: \"Trailer Ñ\" channel, a generic movie/series trailer-reposting channel (\"LOS TRAILERES ORGANIZADOS POR MESES\"), not affiliated with Apple TV or the studio. Video: official Spanish-language trailer repost, published 2024-06-24 per YouTube Data API. Relevance gate fails under Rule B; no fetch-fallback attempt spent on dateability.",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "YouTube Data API v3 videos.list (channel/title/publishedAt check)",
+          "status": 200,
+          "issue": "LEMA-10426",
+          "note": "Fan-repost/aggregator account: \"Trailer Ñ\" channel, a generic movie/series trailer-reposting channel (\"LOS TRAILERES ORGANIZADOS POR MESES\"), not affiliated with Apple TV or the studio. Video: official Spanish-language trailer repost, published 2024-06-24 per YouTube Data API. Relevance gate fails under Rule B; no fetch-fallback attempt spent on dateability."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tomatazos.com/series/929713/Las-Azules/temporada/1",
+      "firstSeen": "2026-09-17T06:12:12.919Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-17T06:12:12.919Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_user_review_aggregate",
+      "skipNote": "Rule H scope limit (1): critic/press aggregation surface (Tomatazos season page embeds professional critic quotes with clickable source links, akin to a Rotten Tomatoes critic list). Aggregation page itself gets no row. Mined per Rule H: harvested 4 individually-linked critic reviews, each added to data.json at its own URL/outlet/date: rogerebert.com (Cristina Escobar), decider.com (Joel Keller), nerdspin.com (Amelia Harvey), ft.com (Dan Einav).",
+      "history": [
+        {
+          "attempt": "2026-09-17T06:12:12.919Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10426",
+          "note": "Confirmed page structure: general show page with 4 embedded, individually-linked critic reviews (not a dedicated user-review tab). Mined per Rule H scope limit (1)."
         }
       ]
     }
