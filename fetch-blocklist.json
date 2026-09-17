@@ -8369,9 +8369,9 @@
     {
       "url": "https://youtube.com/watch?v=Lcx9lfl7Zs0",
       "firstSeen": "2026-09-15T12:06:05.000Z",
-      "failCount": 1,
-      "lastStatus": 408,
-      "lastAttempt": "2026-09-15T12:06:05.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-17T08:03:55.000Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -8387,6 +8387,13 @@
           "status": 408,
           "issue": "LEMA-10156",
           "note": "SCRAPE_TIMEOUT"
+        },
+        {
+          "attempt": "2026-09-17T08:03:55.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10428",
+          "note": "Retry succeeded (Firecrawl scrape returned full title/channel/upload-date/description). Candidate turned out to be an exact-URL-variant duplicate of an entry already in data.json (https://www.youtube.com/watch?v=Lcx9lfl7Zs0, added by an earlier sweep), so no new data.json row was added this run, but the fetch itself succeeded so the ledger row resets per step 4e."
         }
       ]
     },
@@ -9663,7 +9670,27 @@
           "note": "Confirmed page structure: general show page with 4 embedded, individually-linked critic reviews (not a dedicated user-review tab). Mined per Rule H scope limit (1)."
         }
       ]
+    },
+    {
+      "url": "https://www.apple.com/tv-pr/originals/women-in-blue-las-azules/episodes-images/",
+      "firstSeen": "2026-09-17T08:03:55.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-17T08:03:55.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Apple TV Press section-landing/navigation page for Women in Blue (Las Azules), surfaced by the standard EN/ES sweep (LEMA-10428). WebFetch succeeded (200) and returned the full page, but it is a navigation hub only: links to Cast & Crew / News / Trailers & Videos sub-sections plus a watch-now button, no synopsis, no article prose, no dated content of its own. Strip the navigation chrome and nothing written about the show remains, so per Rule F this is a listing/database-type page, not coverage. reviewable omitted: Rule F entries are not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-09-17T08:03:55.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10428",
+          "note": "Full page fetched; confirmed navigation-hub page with no editorial prose about the show (Rule F)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-17T02:08:45.909Z"
+  "lastUpdated": "2026-09-17T08:03:55.000Z"
 }
