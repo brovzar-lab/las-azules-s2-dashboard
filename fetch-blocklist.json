@@ -9830,7 +9830,57 @@
           "note": "Not fetched; title/search-index metadata alone confirms this is a music interview, unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.rottentomatoes.com/tv/women_in_blue_2024/s01/reviews",
+      "firstSeen": "2026-09-17T16:06:18Z",
+      "failCount": 1,
+      "lastStatus": "webfetch_empty/firecrawl_500",
+      "lastAttempt": "2026-09-17T16:06:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-09-17T16:06:18Z",
+          "method": "WebFetch",
+          "status": "empty/JS-gated (Load More, no review content)",
+          "issue": "LEMA-10452"
+        },
+        {
+          "attempt": "2026-09-17T16:06:18Z",
+          "method": "Firecrawl scrape",
+          "status": 500,
+          "issue": "LEMA-10452"
+        }
+      ]
+    },
+    {
+      "url": "https://www.rottentomatoes.com/m/women_in_blue/reviews",
+      "firstSeen": "2026-09-17T16:06:18Z",
+      "failCount": 1,
+      "lastStatus": "webfetch_empty/firecrawl_500",
+      "lastAttempt": "2026-09-17T16:06:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-09-17T16:06:18Z",
+          "method": "WebFetch",
+          "status": "empty/JS-gated, could not confirm title identity",
+          "issue": "LEMA-10452"
+        },
+        {
+          "attempt": "2026-09-17T16:06:18Z",
+          "method": "Firecrawl scrape",
+          "status": 500,
+          "issue": "LEMA-10452"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-17T10:04:02.134Z"
+  "lastUpdated": "2026-09-17T16:06:18Z"
 }
