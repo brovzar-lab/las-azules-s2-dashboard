@@ -9907,7 +9907,34 @@
           "note": "Rule H mining audit: read the critic-reviews tab, cross-checked all 6 listed reviews against data.json and against the FilmAffinity pro-reviews.php mining pass."
         }
       ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=KfrXr1deaCY",
+      "firstSeen": "2026-09-17T18:00:00Z",
+      "failCount": 1,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T18:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-09-17T18:00:00Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10457",
+          "note": "YouTube Data API v3 videos.list for this id returned zero items (video does not exist per API). WebFetch on the watch URL returned only YouTube footer/legal boilerplate, no video content."
+        },
+        {
+          "attempt": "2026-09-17T18:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10457",
+          "note": "Firecrawl returned the YouTube page shell with \"Video unavailable -- This video is no longer available because the YouTube account associated with this video has been terminated.\" Full fallback-chain failure: no real video content recoverable by either method. Not added to data.json this run."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-17T16:00:00.000Z"
+  "lastUpdated": "2026-09-17T18:00:00Z"
 }
