@@ -7429,8 +7429,8 @@
       "lastAttempt": "2026-09-14T08:06:56.000Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": "FilmAffinity 'Pro Reviews' page for Women in Blue / Las Azules: a table of links to external critic reviews (Media | Author | Review columns) plus boilerplate metadata (cast, rating, one-paragraph synopsis identical to the site's main title page). Stripping the review-links table and metadata leaves no original written editorial content about the show on this page itself. Rule F.",
+      "skipReason": "editorial_user_review_aggregate",
+      "skipNote": "UPDATE 2026-09-17 (LEMA-10454, CEO ruling on LEMA-10453, Rule H exemption #1 backfill): reclassified skipReason from editorial_listing_or_database (Rule F) to editorial_user_review_aggregate (Rule H), matching the AlloCine critiques presse precedent (LEMA-10163). Correction, not a re-triage: Rule F and Rule H exemption #1 agree this page gets no data.json row; Rule H additionally carries a duty to mine it that this pre-Rule-H row (written 2026-09-14, one day before Rule H was adopted 2026-09-15) never discharged. Outlet: FilmAffinity (US edition). Surface: 'Pro Reviews' tab (pro-reviews.php?movie-id=786793), a table of links to external professional critic reviews (Media | Author | Review columns), 7 reviews shown. FilmAffinity does not compute or display an aggregate score for this tab (no press/critic average shown anywhere on the page, unlike AlloCine's 'note presse'); two of the 7 quoted reviews carry an inline star rating in their own pull-quote text (The Guardian, Rachel Aroesti, 3/5 stars; The Telegraph, Anita Singh, 4/5 stars), the remaining five do not. Mined per Rule H exemption #1 scope limit 1: all 7 linked reviews checked against data.json by normalized URL. 4 already present (Variety/Aramide Tinubu, RogerEbert.com/Cristina Escobar, Decider/Joel Keller, Screen Anarchy/Peter Martin -- prior sweep runs had already picked these up independently via Pass 2/3). 3 were new and added to data.json this run, each independently fetched and dated from the outlet's own page (not copied from FilmAffinity's attribution), per Rule A: The Guardian (Rachel Aroesti, Jul 31, 2024, sourced via Firecrawl scrape's article:published_time/publishedTime structured metadata; WebFetch attempted first, failed generically), The Telegraph (Anita Singh, Jul 31, 2024, sourced via Firecrawl scrape's DCSext.articleFirstPublished field with og:url self-canonical confirmed, byline DCSext.author matches FilmAffinity's attribution; WebFetch attempted first, failed generically), Collider (Taylor Gates, Jul 22, 2024, sourced via Firecrawl scrape's article:published_time AND independently confirmed by a successful WebFetch of the same page stating the identical date/byline). Cross-validated against the Metacritic critic-reviews page (see that ledger row, LEMA-10454), which independently lists the same 3 new reviews plus the same 3 already-present ones with matching outlet/critic attribution.",
       "history": [
         {
           "attempt": "2026-09-14T08:06:56.000Z",
@@ -7438,6 +7438,13 @@
           "status": 200,
           "issue": "LEMA-10093",
           "note": "Firecrawl scrape succeeded; confirmed page is a professional-reviews aggregator table, not original editorial."
+        },
+        {
+          "attempt": "2026-09-17T16:00:00.000Z",
+          "method": "Rule H mining audit (LEMA-10454)",
+          "status": 200,
+          "issue": "LEMA-10454",
+          "note": "Reclassified Rule F -> Rule H, mined 7 linked critic reviews, 3 new added to data.json, 4 already present."
         }
       ]
     },
@@ -9880,7 +9887,27 @@
           "issue": "LEMA-10452"
         }
       ]
+    },
+    {
+      "url": "https://www.metacritic.com/tv/women-in-blue/critic-reviews/",
+      "firstSeen": "2026-09-17T16:00:00.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-17T16:00:00.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_user_review_aggregate",
+      "skipNote": "Added 2026-09-17 (LEMA-10454, CEO ruling on LEMA-10453, Rule H exemption #1 backfill). Rule H exemption #1 names the Metacritic critic list explicitly as a mining source; it had no ledger row at all prior to this backfill (a missing candidate, not a reclassification -- unlike FilmAffinity, Metacritic's score page https://www.metacritic.com/tv/women-in-blue/season-2/ and its critic-reviews page are different URLs, and only the score page was previously ledgered, under Rule F, correctly, and is left untouched). Outlet: Metacritic. Surface: 'Critic Reviews' tab (/tv/women-in-blue/critic-reviews/), show-level (a 'Filter by season' control exists -- Season Overview/Season 1/Season 2 -- but it is a client-side filter on this one URL, not separate pages; season-2/critic-reviews/ 404s). 6 critic reviews shown under 'Season Overview', Metascore 76 ('Generally Favorable', 5 positive/83%, 1 mixed/17%, 0 negative). All 6 are dated Jul 31-Aug 1, 2024 (Season 1 only; no Season 2 critic reviews yet as of this run). Mined per Rule H exemption #1 scope limit 1: Collider (Taylor Gates), The Telegraph (Anita Singh), Variety (Aramide Tinubu), RogerEbert.com (Cristina Escobar), Decider (Joel Keller), The Guardian (Rachel Aroesti). All 6 cross-checked against data.json by normalized URL: 3 already present (Variety, RogerEbert.com, Decider, from prior independent sweep pickups) and 3 newly added this run via the FilmAffinity pro-reviews.php mining pass on this same issue (The Guardian, The Telegraph, Collider -- see that ledger row for full per-review Rule A sourcing detail). Metacritic's own displayed date for Collider (Jul 31, 2024) does not match the date independently sourced from collider.com itself (Jul 22, 2024, confirmed by both Firecrawl scrape metadata and a direct WebFetch of the live page); the data.json entry uses the independently-sourced Jul 22 date per Rule A (never take an aggregator's displayed date over the primary outlet's own), not Metacritic's. No individually new critic review was found on this surface beyond what the FilmAffinity mining pass already surfaced; this is expected cross-validation between the two aggregation surfaces, not a gap.",
+      "history": [
+        {
+          "attempt": "2026-09-17T16:00:00.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10454",
+          "note": "Rule H mining audit: read the critic-reviews tab, cross-checked all 6 listed reviews against data.json and against the FilmAffinity pro-reviews.php mining pass."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-17T16:06:18Z"
+  "lastUpdated": "2026-09-17T16:00:00.000Z"
 }
