@@ -9690,7 +9690,147 @@
           "note": "Full page fetched; confirmed navigation-hub page with no editorial prose about the show (Rule F)."
         }
       ]
+    },
+    {
+      "url": "https://thenationalnews.com/video/qdCYMS0V/apple-tv-beats-hbo-and-netflix-at-2026-emmys",
+      "firstSeen": "2026-09-17T10:04:02.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-17T10:04:02.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "The National News video portal page, main video is \"Apple TV beats HBO and Netflix at 2026 Emmys\" (general Apple TV Emmys coverage, no mention of Las Azules or Women in Blue). Broad-query match on \"Apple TV\" only.",
+      "history": [
+        {
+          "attempt": "2026-09-17T10:04:02.134Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10435",
+          "note": "WebFetch succeeded; confirmed video portal page about general Apple TV Emmys news, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://meaww.com/who-joins-boston-blue-season-2-marg-helgenberger-new-cast-member-update-maggie-lawson-gwen-silver-blue-bloods-spinoff-release-date",
+      "firstSeen": "2026-09-17T10:04:02.134Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-17T10:04:02.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About Boston Blue (Blue Bloods spinoff) Season 2 casting news (Marg Helgenberger joins as Gwen Silver). Different show entirely; broad-query match on \"Blue\"/\"Season 2\".",
+      "history": [
+        {
+          "attempt": "2026-09-17T10:04:02.134Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10435",
+          "note": "WebFetch succeeded; confirmed article is about Boston Blue casting, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://antena3.com/videos/richard-holmes-desvela-dos-caras-curro-deriva-naufrago-marcado-oscuro-secreto_202609176aab9f3ff8dade401b107b42.html",
+      "firstSeen": "2026-09-17T10:04:02.134Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T10:04:02.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About the Spanish series A la deriva (character Curro). Different show entirely; surfaced only as a broad-query keyword match.",
+      "history": [
+        {
+          "attempt": "2026-09-17T10:04:02.134Z",
+          "method": null,
+          "status": null,
+          "issue": "LEMA-10435",
+          "note": "Not fetched; title/search-index metadata alone confirms this is A la deriva coverage, an unrelated Spanish series, no mention of Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://audiovisual451.com/a-la-deriva-estreno-20-de-septiembre-en-atresplayer",
+      "firstSeen": "2026-09-17T10:04:02.134Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T10:04:02.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About the Spanish Atresplayer series A la deriva premiering Sept 20. Different show entirely.",
+      "history": [
+        {
+          "attempt": "2026-09-17T10:04:02.134Z",
+          "method": null,
+          "status": null,
+          "issue": "LEMA-10435",
+          "note": "Not fetched; title/search-index metadata alone confirms this is A la deriva premiere coverage, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://larazon.es/television/series/ines-planta-cara-conflictos-obreros-nueva-entrega-hijas-criada_202609176aaba76d22237c6bdc588d8c.html",
+      "firstSeen": "2026-09-17T10:04:02.134Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T10:04:02.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About the Spanish series Las hijas de la criada. Different show entirely; broad-query match on \"Las\" fragment.",
+      "history": [
+        {
+          "attempt": "2026-09-17T10:04:02.134Z",
+          "method": null,
+          "status": null,
+          "issue": "LEMA-10435",
+          "note": "Not fetched; title/search-index metadata alone confirms this is Las hijas de la criada coverage, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://europesays.com/es/769906",
+      "firstSeen": "2026-09-17T10:04:02.134Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T10:04:02.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About MobLand (Tierra de mafiosos) Season 2 Rotten Tomatoes scores. Different show entirely.",
+      "history": [
+        {
+          "attempt": "2026-09-17T10:04:02.134Z",
+          "method": null,
+          "status": null,
+          "issue": "LEMA-10435",
+          "note": "Not fetched; title/search-index metadata alone confirms this is MobLand coverage, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://cadena100.es/musica/entrevistas/noticias/veintiuno-concede-ultimo-baile-delirio-equilibrio-siempre-habiamos-querido-poner-canciones-manos-artistas-admiramos-20260917_155145.html",
+      "firstSeen": "2026-09-17T10:04:02.134Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-17T10:04:02.134Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Music interview with band Veintiuno. Unrelated to Las Azules / Women in Blue entirely.",
+      "history": [
+        {
+          "attempt": "2026-09-17T10:04:02.134Z",
+          "method": null,
+          "status": null,
+          "issue": "LEMA-10435",
+          "note": "Not fetched; title/search-index metadata alone confirms this is a music interview, unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-17T08:03:55.000Z"
+  "lastUpdated": "2026-09-17T10:04:02.134Z"
 }
