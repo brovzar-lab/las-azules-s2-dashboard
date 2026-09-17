@@ -9376,7 +9376,27 @@
           "note": "WebFetch succeeded; confirmed page is a product listing for an unrelated graphic novel title."
         }
       ]
+    },
+    {
+      "url": "https://www.macobserver.com/appletv/who-is-really-killing-corrupt-cops-in-women-in-blue-season-2/",
+      "firstSeen": "2026-09-17T02:08:45.909Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-17T02:08:45.909Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Discovered via LEMA-10423 sweep run (2026-09-17). Firecrawl scrape (status 200) shows this slug canonicalizes/redirects to an already-tracked URL: og:url and metadata url both resolve to https://www.macobserver.com/appletv/women-in-blue-season-2-did-police-arrest-the-wrong-killer/ (already in data.json, ts 20260913, published 2026-09-13T12:15:00Z, author Rajat Saini). Same CMS post, second address per Rule I (LEMA-10247/LEMA-10274): no distinct body content, just an old slug redirecting to the live one.",
+      "history": [
+        {
+          "attempt": "2026-09-17T02:08:45.909Z",
+          "method": "firecrawl-scrape",
+          "status": 200,
+          "issue": "LEMA-10423",
+          "note": "Surfaced by Pass 2 web search; fetched and found to canonicalize to an existing data.json entry under a different slug; ledgered as permanentSkip/editorial_redundant_syndication per Rule I rather than added as a new row."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-17T00:15:00Z"
+  "lastUpdated": "2026-09-17T02:08:45.909Z"
 }
