@@ -10110,10 +10110,10 @@
     {
       "url": "https://www.reddit.com/r/tvPlus/comments/1wb6yh7/women_in_blue_las_azules_season_2_episode_5/",
       "firstSeen": "2026-09-18T00:01:21.000Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-18T04:03:51.581Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": "2026-10-18T06:07:14Z",
       "permanentSkip": false,
       "skipReason": null,
       "skipNote": null,
@@ -10145,9 +10145,283 @@
           "status": 403,
           "issue": "LEMA-10471",
           "note": "Firecrawl scrape returned 403 blanket refusal for reddit.com again. failCount now 2 of 3; not on cooldown."
+        },
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Claude Code WebFetch tool refused to fetch reddit.com again (tool-level block, not a site response)."
+        },
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10472",
+          "note": "Firecrawl scrape returned 403 blanket refusal for reddit.com again. failCount now 3 of 3; cooldownUntil set to 30 days out (2026-10-18)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/C-TAKPZC9SM/",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "Instagram post by @bgmanagementmx, a talent management agency account, dated Aug 5, 2024. Promotes their client actor Alejandro de la Madrid's role (playing former Mexican president Luis Echeverria) in the Las Azules S1 premiere. This is agency/vendor promotional content about a client, not media coverage of the show, so skipped on relevance per Rule B; dateability not further pursued.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10472",
+          "note": "WebFetch confirmed post content and account type (talent management agency, not an outlet/network account)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.sensacine.com/series/serie-31977/temporada-47354/",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "SensaCine Season 1 episode listing page (10 episodios, Apple TV, air date July 31 2024). Confirmed via WebFetch: stripping the episode/cast metadata table leaves no written editorial content about the show (empty Sinopsis header, no prose). Rule F listing/database page.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10472",
+          "note": "WebFetch confirmed bare episode-listing page with no editorial prose."
+        }
+      ]
+    },
+    {
+      "url": "https://community.designtaxi.com/topic/37177-is-x-twitter-down-september-2-2026/",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Community forum thread discussing whether X (Twitter) was down on September 2, 2026. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Twitter\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebSearch (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://dosd.com/events/2026/9/6/los-angeles-azules-cumbia-sin-fronteras-us-tour-tickets",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Concert ticket listing for the Mexican cumbia band \"Los Angeles Azules\" (Cumbia Sin Fronteras US Tour) at Harrah's Resort SoCal. Unrelated music group, not the TV series Las Azules; matched only on the shared \"Azules\" name.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebSearch (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Cuarto_Azul_World_Tour",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about \"Cuarto Azul World Tour\", a concert tour by a musical act. Unrelated to the TV series Las Azules / Women in Blue; matched only on the shared \"Azul\" name fragment.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebSearch (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Latin_America_Tour_2026",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia list-article cataloguing concert tours across Latin America in 2026. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebSearch (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://imusic.ca/music/0810140241283/jeff-russo-2026-for-all-mankind-seasons-1-3-apple-tv-original-series-soundtrack-lp",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Product listing for Jeff Russo's soundtrack LP for \"For All Mankind\" Seasons 1-3, a different Apple TV+ series entirely. Matched only on the shared \"Apple TV Original Series\" phrase.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebSearch (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://socialbee.com/blog/twitter-updates/",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "SocialBee blog post rounding up X (Twitter) platform feature updates for September 2026. No mention of Las Azules; surfaced only as a broad-query match on \"September 2026\" + social terms.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebSearch (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://www.agapea.com/libros/LAS-HERMANAS-SEASONS-02-9788467984880-i.htm",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Bookstore listing for the graphic novel \"Las Hermanas Seasons 02\" by Matheus Lopes, Paul Azaceta and Rick Remender. Different title (\"Las Hermanas\", not \"Las Azules\"); unrelated to the TV series.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebSearch (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://www.larazon.es/compras/outlander-sangre-sangre-estrena-manana-temporada-2-donde-verla-cuantos-capitulos-son-3v3r_202609186aab82737f895d2e41c662ad.html",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Razon article about \"Outlander: Sangre de mi Sangre\" Season 2 premiere (where to watch, episode count). Different Apple TV+ show entirely, unrelated to Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebSearch (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lasexta.com/programas/el-intermedio/julieta-venegas-defiende-importancia-desmontar-estereotipo-madre-perfecta-nace-hijo-nace-mama-culpable_202609186aacb776f8dade401b111990.html",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "LaSexta interview with singer Julieta Venegas on the program El Intermedio about motherhood stereotypes. No mention of Las Azules or Women in Blue; unrelated topic.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebSearch (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lavanguardia.com/gente/20260918/11637096/melody-eurovision-espana-bosque-encantado-gira.html",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Vanguardia article about singer Melody commenting on Spain's absence from Eurovision. No relation to Las Azules; unrelated topic.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebSearch (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://www.telecinco.es/noticias/cultura/20260918/entrevista-santos-bravos-teloneros-shakira-madrid-primera-banda-latina-kpop_18_020187314.html",
+      "firstSeen": "2026-09-18T06:07:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T06:07:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Telecinco interview with the band Santos Bravos, opening act for Shakira in Madrid. Unrelated Latin/K-pop band act, no relation to the TV series.",
+      "history": [
+        {
+          "attempt": "2026-09-18T06:07:14Z",
+          "method": "WebSearch (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10472",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
         }
       ]
     }
   ],
-  "lastUpdated": "2026-09-18T00:04:22Z"
+  "lastUpdated": "2026-09-18T06:07:14Z"
 }
