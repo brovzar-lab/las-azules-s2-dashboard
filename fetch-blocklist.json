@@ -8385,7 +8385,7 @@
       "firstSeen": "2026-09-15T12:06:05.000Z",
       "failCount": 0,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-17T08:03:55.000Z",
+      "lastAttempt": "2026-09-18T20:00:00.000Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -8408,6 +8408,13 @@
           "status": 200,
           "issue": "LEMA-10428",
           "note": "Retry succeeded (Firecrawl scrape returned full title/channel/upload-date/description). Candidate turned out to be an exact-URL-variant duplicate of an entry already in data.json (https://www.youtube.com/watch?v=Lcx9lfl7Zs0, added by an earlier sweep), so no new data.json row was added this run, but the fetch itself succeeded so the ledger row resets per step 4e."
+        },
+        {
+          "attempt": "2026-09-18T20:00:00.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10540",
+          "note": "Retry succeeded again (Firecrawl scrape returned full title/channel/upload-date/description). Still an exact-URL-variant duplicate of the existing data.json entry (tracking param &vl=en-US stripped by normalize), so no new data.json row was added this run; ledger row refreshed per step 4e."
         }
       ]
     },
@@ -10463,5 +10470,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-18T16:35:52Z"
+  "lastUpdated": "2026-09-18T20:00:00.000Z"
 }
