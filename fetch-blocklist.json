@@ -10468,6 +10468,271 @@
           "note": "Full page retrieved; classified as listing/database page per Rule F, not added to data.json."
         }
       ]
+    },
+    {
+      "url": "http://www.thefutoncritic.com/news/2026/09/19/investigation-discovery-runs-with-season-5-of-i-almost-got-away-with-it-beginning-",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TheFutonCritic breaking-news page for Investigation Discovery true-crime series \"I Almost Got Away With It\" Season 5. No relation to Las Azules / Women in Blue; matched only on broad Exa neural query.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "http://www.thefutoncritic.com/news/2026/09/22/investigation-discovery-runs-with-season-5-of-i-almost-got-away-with-it-beginning-",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Same TheFutonCritic press release for Investigation Discovery \"I Almost Got Away With It\" Season 5, republished under a different date slug. No relation to Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "http://www.thefutoncritic.com/news/2026/09/23/investigation-discovery-runs-with-season-5-of-i-almost-got-away-with-it-beginning-",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Same TheFutonCritic press release for Investigation Discovery \"I Almost Got Away With It\" Season 5, republished under a third date slug. No relation to Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://www.informacion.es/opinion/2026/09/18/sukha-segunda-temporada-134440553.html",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Informacion.es opinion column about \"Sukha\" (a different show/topic) season 2. No mention of Las Azules; matched only on \"segunda temporada\" phrase coincidence.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvazteca.com/aztecauno/ventaneando/lupita-ferrer-presenta-su-nueva-obra-en-ventaneando/",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Azteca Ventaneando segment about actress Lupita Ferrer presenting a new stage play. Unrelated to Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://heraldodemexico.com.mx/espectaculos/2026/9/18/gala-montes-de-la-ninera-el-senor-de-los-cielos-lcdlf-mexico-asi-ha-sido-el-increible-cambio-de-la-actriz-890651.html",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Heraldo de Mexico profile of actress Gala Montes covering \"La Ninera\", \"El Senor de los Cielos\" and La Casa de los Famosos Mexico. No relation to Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://twitter.com/lasozlas",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "X/Twitter account @lasozlas (\"LASLASLAS\"), unrelated personal/fan account. No content about Las Azules / Women in Blue; matched only on \"azules\"-adjacent handle text via #LasAzules search.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://twitter.com/lasrozuelas",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "X/Twitter account @lasrozuelas, unrelated account. No content about Las Azules / Women in Blue; matched only on handle text similarity via #LasAzules search.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/lasyalol",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "X/Twitter account @lasyalol, unrelated personal account. No content about Las Azules / Women in Blue; matched only on #LasAzules hashtag search noise.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/X_(social_network)",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about the X (formerly Twitter) social network platform itself. Surfaced only as a broad-query match on \"#LasAzules twitter x.com\" search; no relation to the TV series.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Twitter_under_Elon_Musk",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about Twitter/X ownership and policy changes under Elon Musk. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on the same X/Twitter search.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Timeline_of_X",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia timeline article about the X (Twitter) platform history. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on the same X/Twitter search.",
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebSearch/Exa (title/snippet confirmation)",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-september-18-20/",
+      "firstSeen": "2026-09-18T22:05:00.753Z",
+      "failCount": 1,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10541",
+          "note": "WebFetch tool error: unable to fetch www.polygon.com."
+        },
+        {
+          "attempt": "2026-09-18T22:05:00.753Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10541",
+          "note": "200 but near-empty body (604 chars): only video-player chrome and a reCAPTCHA wall, no article text. Cannot confirm whether Las Azules is one of the 8 shows listed (og:description names only a spy show and a spinoff series, not Las Azules). Treated as fetch-chain failure per step 4c empty-body rule, not a soft pass."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-18T20:00:00.000Z"
