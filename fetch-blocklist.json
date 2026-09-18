@@ -10110,9 +10110,9 @@
     {
       "url": "https://www.reddit.com/r/tvPlus/comments/1wb6yh7/women_in_blue_las_azules_season_2_episode_5/",
       "firstSeen": "2026-09-18T00:01:21.000Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-18T00:04:22.000Z",
+      "lastAttempt": "2026-09-18T04:03:51.581Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
@@ -10131,6 +10131,20 @@
           "status": 403,
           "issue": "LEMA-10464",
           "note": "Firecrawl scrape returned 403 'we do not support this site' (documented blanket refusal for reddit.com). failCount now 1 of 3; not on cooldown."
+        },
+        {
+          "attempt": "2026-09-18T04:03:51.581Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10471",
+          "note": "Claude Code WebFetch tool refused to fetch reddit.com again (tool-level block, not a site response)."
+        },
+        {
+          "attempt": "2026-09-18T04:03:51.581Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10471",
+          "note": "Firecrawl scrape returned 403 blanket refusal for reddit.com again. failCount now 2 of 3; not on cooldown."
         }
       ]
     }
