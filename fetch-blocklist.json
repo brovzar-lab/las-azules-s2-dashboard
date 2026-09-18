@@ -10106,7 +10106,34 @@
           "note": "Today.it bare homepage (general Italian news portal, not Las Azules specific). Exa returned this bare domain root instead of the real article URL for a query result titled \"Las Azules 2: trailer, trama, cast e data di uscita della nuova...\". Located the real article via a follow-up WebSearch: https://www.today.it/film-serie-tv/apple/las-azules-2-quando-esce.html -- confirmed already present in data.json (this run), so no new coverage was lost; this bare-homepage artifact URL itself carries no show-specific content and is ledgered to stop it being re-surfaced as a false candidate."
         }
       ]
+    },
+    {
+      "url": "https://www.reddit.com/r/tvPlus/comments/1wb6yh7/women_in_blue_las_azules_season_2_episode_5/",
+      "firstSeen": "2026-09-18T00:01:21.000Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-18T00:04:22.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-09-18T00:04:22.000Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10464",
+          "note": "Claude Code WebFetch tool refused to fetch reddit.com (tool-level block, not a site response)."
+        },
+        {
+          "attempt": "2026-09-18T00:04:22.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10464",
+          "note": "Firecrawl scrape returned 403 'we do not support this site' (documented blanket refusal for reddit.com). failCount now 1 of 3; not on cooldown."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-17T22:04:41Z"
+  "lastUpdated": "2026-09-18T00:04:22Z"
 }
