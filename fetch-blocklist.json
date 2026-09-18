@@ -10441,7 +10441,27 @@
           "note": "Success; confirmed locale-path duplicate of already-ledgered /us/film786793.html, Rule F listing page, no editorial prose of its own."
         }
       ]
+    },
+    {
+      "url": "https://www.tomatazos.com/series/azules/temporada-2/",
+      "firstSeen": "2026-09-18T16:35:52Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-18T16:35:52Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Tomatazos season-2 show page for Las Azules, surfaced by the Pass 2 standard sweep on LEMA-10521. WebFetch succeeded (200). Page is a show-info aggregator: genre/country/language metadata, a 100% 'Certified Fresh' aggregate audience score, and a one-sentence plot synopsis ('La segunda temporada sigue a Maria, ahora ascendida a teniente...'). No written editorial article or review by Tomatazos staff. Checked explicitly for named critic attribution per the Rule H extension note (LEMA-10458): confirmed via a second targeted fetch that the page lists no individual named critic reviews or quotes, only the aggregate score, so no mining duty applies here. Strip the metadata/score block and only a marketing synopsis remains, so this is Rule F (editorial_listing_or_database), not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-09-18T16:35:52Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10521",
+          "note": "Full page retrieved; classified as listing/database page per Rule F, not added to data.json."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-18T08:00:00Z"
+  "lastUpdated": "2026-09-18T16:35:52Z"
 }
