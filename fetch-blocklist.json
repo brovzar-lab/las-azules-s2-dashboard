@@ -10421,7 +10421,27 @@
           "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
         }
       ]
+    },
+    {
+      "url": "https://www.filmaffinity.com/en/film786793.html",
+      "firstSeen": "2026-09-18T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-18T08:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Locale-path variant of the already-ledgered https://www.filmaffinity.com/us/film786793.html row (Rule F, editorial_listing_or_database). normalize.js does not collapse /en/ and /us/ locale paths to the same key (documented gap, LEMA-10470 Pass 0 note -- not patched here), so this URL surfaced as a fresh not-found candidate this run despite being the same underlying page. Firecrawl scrape confirmed: same content as the /us/ row -- title/rating/cast/where-to-watch metadata block plus a 'Pro Reviews [7]' link to pro-reviews.php (already ledgered separately, editorial_user_review_aggregate, Rule H, mined). No written editorial content of its own on this landing page; Rule F strip test applies same as the /us/ row.",
+      "history": [
+        {
+          "attempt": "2026-09-18T08:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10505",
+          "note": "Success; confirmed locale-path duplicate of already-ledgered /us/film786793.html, Rule F listing page, no editorial prose of its own."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-18T06:07:14Z"
+  "lastUpdated": "2026-09-18T08:00:00Z"
 }
