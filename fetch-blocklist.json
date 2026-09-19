@@ -10733,7 +10733,81 @@
           "note": "200 but near-empty body (604 chars): only video-player chrome and a reCAPTCHA wall, no article text. Cannot confirm whether Las Azules is one of the 8 shows listed (og:description names only a spy show and a spinoff series, not Las Azules). Treated as fetch-chain failure per step 4c empty-body rule, not a soft pass."
         }
       ]
+    },
+    {
+      "url": "https://www.apple.com/ca/fr/tv-pr/originals/women-in-blue-las-azules/",
+      "firstSeen": "2026-09-19T06:06:07Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-19T06:06:07Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Surfaced via Firecrawl FR-market search (Pass 3). Canada (French-locale) mirror of Apple TV Press's official series page. Fetched via WebFetch: identical body content to the already-tracked France press page (https://www.apple.com/fr/tv-pr/originals/women-in-blue-las-azules/, ts 20260812) -- same Aug 12, 2026 (\"12 août 2026\") release date, same plot synopsis, same cast list, same trailer, same press contact block. Same outlet (Apple TV Press), same language (French), no genuinely different body content. Rule I second-address case, not a distinct document.",
+      "history": [
+        {
+          "attempt": "2026-09-19T06:06:07Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10545",
+          "note": "WebFetch succeeded; content confirmed identical in substance to the existing France press-page entry already in data.json. Excluded as redundant syndication, not added to data.json."
+        }
+      ]
+    },
+    {
+      "url": "https://deadline.com/feature/2026-tv-premiere-dates-1236391902/",
+      "firstSeen": "2026-09-19T06:06:07Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-19T06:06:07Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Surfaced via Pass 2 trade-press search (\"Las Azules Variety OR Deadline OR Hollywood Reporter temporada 2 September 2026\"). Deadline's 2026 TV premiere-dates calendar listicle covering hundreds of unrelated shows. \"Women in Blue (Apple TV, Season 2)\" appears only as a single bare line under the \"August 12:\" date heading, with no written commentary about the show -- same pattern as the already-ledgered hollywoodreporter.com/lists/2026-tv-premiere-dates-calendar/ entry (LEMA-10011). Confirmed via Firecrawl scrape (WebFetch hit a 402 Payment Required via the tollbit.deadline.com paywall wrapper first). Stripping the schedule grid leaves nothing written about the show. Rule F.",
+      "history": [
+        {
+          "attempt": "2026-09-19T06:06:07Z",
+          "method": "WebFetch",
+          "status": 402,
+          "issue": "LEMA-10545",
+          "note": "WebFetch redirected to tollbit.deadline.com paywall wrapper, returned 402 Payment Required."
+        },
+        {
+          "attempt": "2026-09-19T06:06:07Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10545",
+          "note": "Firecrawl scrape succeeded. Confirmed \"Women in Blue\" is a single bare date-entry line in a giant multi-show premiere calendar, no written editorial content about the show. Rule F listing/database gate."
+        }
+      ]
+    },
+    {
+      "url": "https://deadline.com/lists/most-anticipated-tv-shows-2026/",
+      "firstSeen": "2026-09-19T06:06:07Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-19T06:06:07Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 2 trade-press search (\"Las Azules Variety OR Deadline OR Hollywood Reporter temporada 2 September 2026\"). This page is Deadline's \"48 Of The Most Anticipated New & Returning Scripted Shows of 2026\" listicle (published Aug 17, 2026). Confirmed via Firecrawl scrape that neither \"Women in Blue\" nor \"Las Azules\" appears anywhere in the page body -- the show is not covered by this list at all. Surfaced only as a broad-query match on Deadline + \"2026\" TV-show terms. Rule G.",
+      "history": [
+        {
+          "attempt": "2026-09-19T06:06:07Z",
+          "method": "WebFetch",
+          "status": 402,
+          "issue": "LEMA-10545",
+          "note": "WebFetch redirected to tollbit.deadline.com paywall wrapper, returned 402 Payment Required."
+        },
+        {
+          "attempt": "2026-09-19T06:06:07Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10545",
+          "note": "Firecrawl scrape succeeded. Confirmed the show is not mentioned anywhere on the page. Off-topic false positive, Rule G."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-18T20:00:00.000Z"
+  "lastUpdated": "2026-09-19T06:06:07Z"
 }
