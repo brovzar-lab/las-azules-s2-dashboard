@@ -11053,7 +11053,34 @@
           "note": "Firecrawl: \"we do not support this site\" (documented refusal, per Rule A exhaustion precedent)"
         }
       ]
+    },
+    {
+      "url": "https://variety.com/lists/variety-womens-impact-report-2026",
+      "firstSeen": "2026-09-19T20:01:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-19T20:01:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Variety's 2026 Women's Impact Report: a general industry list profiling executives/producers (e.g. Pamela Abdy/Warner Bros, Kori Adelson/North Road Films) across the industry. Full page text scanned via Firecrawl scrape (58,738 chars): no mention of \"Azules\", \"Mori\", or \"Rovzar\" anywhere. Surfaced only as a broad-query match on \"Women in Blue\"/entertainment-industry terms.",
+      "history": [
+        {
+          "attempt": "2026-09-19T20:01:13Z",
+          "method": "WebFetch",
+          "status": 402,
+          "issue": "LEMA-10578",
+          "note": "WebFetch redirected to tollbit.variety.com paywall gateway, returned HTTP 402 Payment Required."
+        },
+        {
+          "attempt": "2026-09-19T20:01:13Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10578",
+          "note": "Firecrawl returned full article body. Confirmed off-topic: no mention of Las Azules/Women in Blue/Mori/Rovzar in the full text."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-19T18:07:34Z"
+  "lastUpdated": "2026-09-19T20:01:13Z"
 }
