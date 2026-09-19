@@ -10807,7 +10807,67 @@
           "note": "Firecrawl scrape succeeded. Confirmed the show is not mentioned anywhere on the page. Off-topic false positive, Rule G."
         }
       ]
+    },
+    {
+      "url": "https://as.com/meristation/series/criticas/critica-de-ted-lasso-temporada-4-jason-sudeikis-lleva-el-buen-rollo-al-futbol-femenino-f202609-n/",
+      "firstSeen": "2026-09-19T08:05:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-19T08:05:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "AS.com/Meristation review of 'Ted Lasso' Season 4 (Jason Sudeikis, women's football storyline). No mention of Las Azules or Women in Blue anywhere in the piece; surfaced only as a broad-query match on generic Apple TV/season-2 terms.",
+      "history": [
+        {
+          "attempt": "2026-09-19T08:05:56Z",
+          "method": "Firecrawl scrape (WebFetch failed first)",
+          "status": 200,
+          "issue": "LEMA-10546",
+          "note": "WebFetch blocked on as.com; Firecrawl scrape succeeded and confirmed the article is about Ted Lasso Season 4, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.larazon.es/television/series/critica-segunda-temporada-outlander-sangre-sangre_202609196aac3ba822237c6bdc58f51c.html",
+      "firstSeen": "2026-09-19T08:05:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-19T08:05:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Razón review of 'Outlander: Blood of My Blood' Season 2 (Movistar Plus). No mention of Las Azules or Women in Blue anywhere in the piece; surfaced only as a broad-query match on generic season-2 review terms.",
+      "history": [
+        {
+          "attempt": "2026-09-19T08:05:56Z",
+          "method": "Firecrawl scrape (WebFetch failed first)",
+          "status": 200,
+          "issue": "LEMA-10546",
+          "note": "WebFetch blocked on larazon.es; Firecrawl scrape succeeded and confirmed the article is about Outlander: Blood of My Blood, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.europesays.com/es/773492/",
+      "firstSeen": "2026-09-19T08:05:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-19T08:05:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "EuropeSays (ES) article about Jefferson White returning as Jimmy Hurdstrom in 'Marshals' Season 2, the Yellowstone spin-off. No mention of Las Azules or Women in Blue anywhere in the piece; surfaced only as a broad-query match on generic season-2 terms.",
+      "history": [
+        {
+          "attempt": "2026-09-19T08:05:56Z",
+          "method": "Firecrawl scrape (WebFetch failed first)",
+          "status": 200,
+          "issue": "LEMA-10546",
+          "note": "WebFetch failed with socket hang up on europesays.com; Firecrawl scrape succeeded and confirmed the article is about Marshals (Yellowstone spin-off), unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-19T06:06:07Z"
+  "lastUpdated": "2026-09-19T08:05:56Z"
 }
