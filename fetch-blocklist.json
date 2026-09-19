@@ -11007,7 +11007,53 @@
           "note": "Confirmed generic hashtag discovery page, not a dateable post."
         }
       ]
+    },
+    {
+      "url": "https://www.dizibox.live/",
+      "firstSeen": "2026-09-19T18:07:34Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-19T18:07:34Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa EN Pass 1 broad-query false positive for query \"Las Azules Women in Blue Season 2 Apple TV\". Page title: \"Ghostwriter 3.Sezon 13.Bolum Sezon Finali\" -- a Turkish/regional streaming listing site page about the show Ghostwriter Season 3 Episode 13 (season finale), unrelated to Las Azules/Women in Blue. Surfaced only as a broad neural-search match, per Rule G.",
+      "history": [
+        {
+          "attempt": "2026-09-19T18:07:34Z",
+          "method": "n/a (Rule G relevance gate, no fetch attempted)",
+          "status": null,
+          "issue": "LEMA-10577"
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/mauricioginestrar/?hl=en",
+      "firstSeen": "2026-09-19T18:07:34Z",
+      "failCount": 1,
+      "lastStatus": 429,
+      "lastAttempt": "2026-09-19T18:07:34Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-09-19T18:07:34Z",
+          "method": "WebFetch",
+          "status": 429,
+          "issue": "LEMA-10577",
+          "note": "HTTP 429 Too Many Requests"
+        },
+        {
+          "attempt": "2026-09-19T18:07:34Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10577",
+          "note": "Firecrawl: \"we do not support this site\" (documented refusal, per Rule A exhaustion precedent)"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-19T14:07:40Z"
+  "lastUpdated": "2026-09-19T18:07:34Z"
 }
