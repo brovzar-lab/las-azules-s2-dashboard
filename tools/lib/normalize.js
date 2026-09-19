@@ -59,6 +59,43 @@ function stripLeadingMobile(host) {
   return host.startsWith('m.') ? host.slice(2) : host;
 }
 
+// Host aliases: hosts that are the exact same live entity under a
+// different domain name, folded to one canonical host before the
+// comparison key is built. Checked after stripLeadingWww/stripLeadingMobile
+// above, so entries here are written in already-www/m.-stripped form.
+//
+// twitter.com -> x.com: X (formerly Twitter) redirects twitter.com to
+// x.com in the live product, so a twitter.com URL and its x.com
+// equivalent are the same tracked source. LEMA-10553, dedup gap found
+// during LEMA-10552. www.twitter.com does not need its own entry: it is
+// already folded to twitter.com by stripLeadingWww before this map is
+// consulted.
+//
+// mobile.twitter.com -> x.com: included explicitly rather than relying on
+// stripLeadingMobile above, because that fold only strips a literal
+// leading "m." -- "mobile." is a distinct, real legacy Twitter subdomain
+// it does not match. Same same-entity rationale as the twitter.com entry.
+// No occurrence of this host was found in data.json/fetch-blocklist.json
+// as of LEMA-10553; folding it anyway costs nothing and closes the gap
+// pre-emptively rather than waiting for a real occurrence (contrast with
+// the youtu.be gap below, which is deliberately left open pending one).
+//
+// This is a distinct, static, host-level alias and is NOT the same as the
+// open canonical/redirect gap (LEMA-10275) documented below on
+// normalizeUrl: that gap is about per-page redirects/canonical tags that
+// require a network call to discover. twitter.com -> x.com is a
+// universally-known, permanent product-level rename that can be hardcoded
+// with no network dependency, so it is fixed here rather than left to
+// editorial judgment.
+const HOST_ALIASES = new Map([
+  ['twitter.com', 'x.com'],
+  ['mobile.twitter.com', 'x.com'],
+]);
+
+function applyHostAlias(host) {
+  return HOST_ALIASES.get(host) || host;
+}
+
 // The routine prose does not specify an order for surviving query params.
 // Sorted here so two URLs whose params differ only in order produce the
 // same key. Implementation decision, flagged as an ambiguity.
@@ -85,9 +122,10 @@ function buildQueryString(searchParams, host) {
  * Applies the Pass 0 URL normalization rule: lowercase scheme and host,
  * strip a leading www. from the host, fold a leading m. mobile subdomain
  * into its parent host (except for the YouTube family, see
- * stripLeadingMobile above), strip a trailing slash from the path, drop
- * tracking query params, and exclude the scheme from the comparison key
- * (http/https treated as equivalent).
+ * stripLeadingMobile above), fold known same-entity host aliases (e.g.
+ * twitter.com/mobile.twitter.com -> x.com, see HOST_ALIASES above), strip
+ * a trailing slash from the path, drop tracking query params, and exclude
+ * the scheme from the comparison key (http/https treated as equivalent).
  *
  * Returns:
  *   url - canonical display form, real scheme kept, everything else
@@ -136,7 +174,7 @@ function buildQueryString(searchParams, host) {
 function normalizeUrl(rawUrl) {
   const parsed = new URL(rawUrl);
   const scheme = parsed.protocol.toLowerCase(); // e.g. "https:"
-  const host = stripLeadingMobile(stripLeadingWww(parsed.host.toLowerCase())); // host includes port, if any
+  const host = applyHostAlias(stripLeadingMobile(stripLeadingWww(parsed.host.toLowerCase()))); // host includes port, if any
   const path = stripTrailingSlash(parsed.pathname);
   const query = buildQueryString(parsed.searchParams, host);
 

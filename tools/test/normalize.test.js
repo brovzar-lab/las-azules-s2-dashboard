@@ -176,3 +176,36 @@ test('a host that merely starts with "m" but is not an m. subdomain is left alon
   const { key } = normalizeUrl('https://movies.example.com/article');
   assert.equal(key, 'movies.example.com/article');
 });
+
+// twitter.com -> x.com host alias (LEMA-10553, dedup gap found on LEMA-10552):
+// X redirects twitter.com to x.com in the live product, so both hosts are
+// the same tracked source and must collapse to the same comparison key.
+
+test('twitter.com collapses to the same key as x.com', () => {
+  const tw = normalizeUrl('https://twitter.com/AppleTV/status/1837519173062479974');
+  const x = normalizeUrl('https://x.com/AppleTV/status/1837519173062479974');
+  assert.equal(tw.key, x.key);
+  assert.equal(tw.key, 'x.com/AppleTV/status/1837519173062479974');
+});
+
+test('www.twitter.com also collapses to x.com (www strip runs before the alias)', () => {
+  const { key, url } = normalizeUrl('https://www.twitter.com/AppleTV');
+  assert.equal(key, 'x.com/AppleTV');
+  assert.equal(url, 'https://x.com/AppleTV');
+});
+
+test('mobile.twitter.com collapses to x.com even though it does not match the generic m. fold', () => {
+  const { key, url } = normalizeUrl('https://mobile.twitter.com/AppleTV/status/1837519173062479974');
+  assert.equal(key, 'x.com/AppleTV/status/1837519173062479974');
+  assert.equal(url, 'https://x.com/AppleTV/status/1837519173062479974');
+});
+
+test('canonical url display form uses the aliased host, real scheme kept', () => {
+  const { url } = normalizeUrl('http://twitter.com/AppleTV/status/1837519173062479974');
+  assert.equal(url, 'http://x.com/AppleTV/status/1837519173062479974');
+});
+
+test('twitter.com alias composes with tracking-param stripping', () => {
+  const { key } = normalizeUrl('https://twitter.com/AppleTV/status/1666105302134009856?ref_src=twsrc%5Etfw');
+  assert.equal(key, 'x.com/AppleTV/status/1666105302134009856');
+});
