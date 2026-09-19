@@ -10867,7 +10867,147 @@
           "note": "WebFetch failed with socket hang up on europesays.com; Firecrawl scrape succeeded and confirmed the article is about Marshals (Yellowstone spin-off), unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.diariodeavila.es/noticia/zd0abccf5-f28e-4708-943b30cd95532ac4/202609/a-la-deriva-viaja-hasta-un-pueblo-pesquero-en-los-anos-70",
+      "firstSeen": "2026-09-19T14:07:40Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-19T14:07:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Diario de Ávila article about 'A la deriva', an unrelated Spanish TV series about a 1970s fishing village. No mention of Las Azules or Women in Blue anywhere. Classified from Exa Spanish Pass 1 search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match on generic Spanish '70s-drama terms.",
+      "history": [
+        {
+          "attempt": "2026-09-19T14:07:40Z",
+          "method": "Title-only classification (Exa Pass 1 ES)",
+          "status": null,
+          "issue": "LEMA-10551",
+          "note": "Off-topic false positive, not fetched."
+        }
+      ]
+    },
+    {
+      "url": "http://polseres-vermelles.blogspot.com/2012/10/exclusiva-tres-nens-representaran-la-2a.html",
+      "firstSeen": "2026-09-19T14:07:40Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-19T14:07:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2012 Catalan blog post about children representing 'the 2nd [season]' of 'Polseres Vermelles' (Red Bracelets), an unrelated Catalan-Spanish TV drama. No mention of Las Azules or Women in Blue. Classified from Exa Spanish Pass 1 search result title alone (unambiguous subject, 2012 vintage, wrong show); not fetched. Surfaced only as a broad-query match on generic 'segunda temporada' terms.",
+      "history": [
+        {
+          "attempt": "2026-09-19T14:07:40Z",
+          "method": "Title-only classification (Exa Pass 1 ES)",
+          "status": null,
+          "issue": "LEMA-10551",
+          "note": "Off-topic false positive, not fetched."
+        }
+      ]
+    },
+    {
+      "url": "https://dbltake.substack.com/p/watching-house-of-the-dragon-finale",
+      "firstSeen": "2026-09-19T14:07:40Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-19T14:07:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Double Take Substack post about watching the House of the Dragon (HBO) season finale. No mention of Las Azules or Women in Blue. Classified from WebSearch result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match on generic 'season finale' terms in the Pass 2 Reddit/general web search.",
+      "history": [
+        {
+          "attempt": "2026-09-19T14:07:40Z",
+          "method": "Title-only classification (Pass 2 web search)",
+          "status": null,
+          "issue": "LEMA-10551",
+          "note": "Off-topic false positive, not fetched."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/AppleTV/status/1829888042351673662",
+      "firstSeen": "2026-09-19T14:07:40Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-19T14:07:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Official Apple TV X post ('Platonic — Now Streaming') about a different Apple TV+ series, 'Platonic'. No mention of Las Azules or Women in Blue. Classified from WebSearch result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match on generic 'Apple TV' account terms in the Pass 2 X/Twitter search.",
+      "history": [
+        {
+          "attempt": "2026-09-19T14:07:40Z",
+          "method": "Title-only classification (Pass 2 X/Twitter search)",
+          "status": null,
+          "issue": "LEMA-10551",
+          "note": "Off-topic false positive, not fetched."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/AppleTVES",
+      "firstSeen": "2026-09-19T14:07:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-19T14:07:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Apple TV ES (@AppleTVES) account homepage/timeline, not a single dateable post -- a rolling feed aggregating many unrelated show announcements. Confirmed via Firecrawl scrape 2026-09-19: latest visible posts are about 'Al filo: en busca de Estrellas Michelin' and 'Tenzing', neither related to Las Azules. No fixed editorial content specific to this URL to extract; strips to a database-like rolling surface, same posture as Rule F's episode-listing test. Surfaced only as a broad-query match on the account name in Pass 2 X/Twitter search.",
+      "history": [
+        {
+          "attempt": "2026-09-19T14:07:40Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10551",
+          "note": "Confirmed account homepage/timeline, not a specific post; latest posts unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/TVPlusUpdates/status/1818456516246008052",
+      "firstSeen": "2026-09-19T14:07:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-19T14:07:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "This URL (account-alias path 'TVPlusUpdates') resolves via Firecrawl scrape to the identical tweet already ledgered at https://x.com/AppleTVNewsHub/status/1818456516246008052 (same status ID 1818456516246008052, same author 'Apple TV News Hub @AppleTVNewsHub', same 2024-07-31 post: 'The first 2 episodes of #WomenInBlue (Las Azules)... are now streaming on #AppleTV+'). AppleTVNewsHub is a fan/aggregator account (not an official Apple TV or outlet account), already classified editorial_personal_repost on its primary URL. This is a second address (alias-handle URL) for the same non-coverage content; ledgered as its own row per Rule C's one-URL-one-row rule since tools/sweep-integrity.js normalize treats the two account-name paths as distinct keys even though they resolve to the same tweet.",
+      "history": [
+        {
+          "attempt": "2026-09-19T14:07:40Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10551",
+          "note": "Confirmed identical content/author/date to already-ledgered x.com/AppleTVNewsHub/status/1818456516246008052; second-address personal repost."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/las-azules-capitulo-8",
+      "firstSeen": "2026-09-19T14:07:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-19T14:07:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "TikTok #lasazules-capitulo-8 'discover' hashtag aggregation page, not a single dateable post. Confirmed via WebFetch: a generic content-discovery/aggregation interface (TikTok's standard 'Discover' surface), not a specific creator video or written editorial content about the show. Strips to a database-like listing of user clips under a hashtag, same posture as Rule F's episode-listing test. Surfaced via Pass 2 YouTube/social search terms.",
+      "history": [
+        {
+          "attempt": "2026-09-19T14:07:40Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10551",
+          "note": "Confirmed generic hashtag discovery page, not a dateable post."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-19T08:05:56Z"
+  "lastUpdated": "2026-09-19T14:07:40Z"
 }
