@@ -11494,7 +11494,16 @@
       "failCount": 1,
       "cooldownUntil": null,
       "lastStatus": "firecrawl_403",
-      "lastAttempt": "2026-09-20T10:10:27.023Z"
+      "lastAttempt": "2026-09-20T10:10:27.023Z",
+      "history": [
+        {
+          "attempt": "2026-09-20T10:10:27.023Z",
+          "method": "Firecrawl scrape",
+          "status": "firecrawl_403",
+          "issue": "LEMA-10587",
+          "note": "Provenance note added 2026-09-20 per LEMA-10590 (CEO ruling on LEMA-10589): this failCount=1 originated from a dedup-gap re-fetch of a URL already present in data.json (Tom's Guide \"how to watch\" piece, ts=20240730), not from the page being genuinely unfetchable. step 4a2's new data.json dedup gate (added this run) prevents this URL from ever being fetched again, so this row cannot progress toward a 30-day cooldown. failCount, lastStatus, lastAttempt, and cooldownUntil are unchanged by this note; it is additive only."
+        }
+      ]
     },
     {
       "url": "https://youtube.com/watch?v=ESWc7jYeaCY",
@@ -11502,7 +11511,16 @@
       "failCount": 1,
       "cooldownUntil": null,
       "lastStatus": "no_usable_content",
-      "lastAttempt": "2026-09-20T10:10:27.023Z"
+      "lastAttempt": "2026-09-20T10:10:27.023Z",
+      "history": [
+        {
+          "attempt": "2026-09-20T10:10:27.023Z",
+          "method": "WebFetch + Firecrawl (full-chain failure, step 4d)",
+          "status": "no_usable_content",
+          "issue": "LEMA-10587",
+          "note": "Provenance note added 2026-09-20 per LEMA-10590 (CEO ruling on LEMA-10589): this failCount=1 originated from a dedup-gap re-fetch of a URL already present in data.json (Fuera de Series YouTube coverage, ts=20260823), not from the page being genuinely unfetchable. step 4a2's new data.json dedup gate (added this run) prevents this URL from ever being fetched again, so this row cannot progress toward a 30-day cooldown. failCount, lastStatus, lastAttempt, and cooldownUntil are unchanged by this note; it is additive only."
+        }
+      ]
     },
     {
       "url": "https://24heures.ch/las-azules-la-serie-apple-sur-les-policieres-mexicaines-revient-668343431334",
@@ -11626,5 +11644,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-20T12:07:27Z"
+  "lastUpdated": "2026-09-20T12:15:32Z"
 }
