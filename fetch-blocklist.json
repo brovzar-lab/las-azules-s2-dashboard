@@ -11856,9 +11856,8 @@
       "lastAttempt": "2026-09-20T22:00:38Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Apple TV Bolivia show page for Las Azules: full synopsis, cast, and per-episode descriptions for both seasons (same content depth as the ES/LU sibling pages already in data.json), so not a bare Rule F listing. No sourced publish date found: direct fetch (200, full body) and a Firecrawl scrape both returned only JSON-LD datePublished=2024-07-31T00:00:00.000Z, which is the show's original Season 1 release date embedded in the media object, not this page's publication date (a proxy per Rule A, not usable). No article:published_time, visible dateline, or dated URL path exists on this evergreen show page.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Apple TV Bolivia show page for Las Azules: full synopsis, cast, and per-episode descriptions for both seasons. No sourced publish date found: direct fetch (200, full body) and a Firecrawl scrape both returned only JSON-LD datePublished=2024-07-31T00:00:00.000Z, which is the show's original Season 1 release date embedded in the media object, not this page's publication date (a proxy per Rule A, not usable). No article:published_time, visible dateline, or dated URL path exists on this evergreen show page. UPDATE 2026-09-20 (LEMA-10624): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F). CEO ruling on LEMA-10623: the seven existing Apple-locale show-page rows already ledgered editorial_listing_or_database (do, mx, no, it, fr, pe, us?l=es) have identical content depth (synopsis, cast, per-episode descriptions), and distributor marketing copy on a platform's own catalogue page is not editorial content about the show under Rule F's strip-the-metadata test; this row's original 'not a bare Rule F listing' basis does not distinguish it from that precedent. reviewable dropped: Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-20T22:00:38Z",
@@ -11868,7 +11867,47 @@
           "note": "Both methods succeeded in fetching the page but neither surfaced a genuine page-publish date; JSON-LD datePublished is the show's 2024 release date, not this page's own timestamp. Classified editorial_undateable per Rule A, reviewable=true."
         }
       ]
+    },
+    {
+      "url": "https://tv.apple.com/es/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-09-20T22:14:12Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T22:14:12Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Rule D remediation (LEMA-10624), CEO ruling on LEMA-10623. This row was live in data.json as 'Apple TV (Spain)' with ts=20260902, removed from data.json in this same commit. Two independently sufficient grounds: (a) ts=20260902 is a Rule A proxy, not a sourced page date -- it is the UTC calendar date of the automated sweep commit that added the row (commit 154d65f9, 2026-09-02T12:05:45Z UTC), not any date found on the page itself. (b) The surface is an Apple TV locale show page for Las Azules (full synopsis, cast, per-episode descriptions), the same static-listing template already classified editorial_listing_or_database (Rule F) on at least seven prior rows for other locales of this same show page (do, mx, no, it, fr, pe, us?l=es). Distributor marketing copy on a platform's own catalogue page is not editorial content about the show under Rule F's strip-the-metadata test.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:14:12Z",
+          "method": "manual-review",
+          "status": null,
+          "issue": "LEMA-10624",
+          "note": "Retroactive ledger row created as part of Rule D remediation removing this URL from data.json; no new fetch performed. Basis: ts proxy (sweep-commit UTC date, not a sourced page date) and Rule F precedent (Apple TV locale show page), per CEO ruling on LEMA-10623."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/lu/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-09-20T22:14:12Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T22:14:12Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Rule D remediation (LEMA-10624), CEO ruling on LEMA-10623. This row was live in data.json as 'Apple TV (Luxembourg)' with ts=20260902, removed from data.json in this same commit. Two independently sufficient grounds: (a) ts=20260902 is a Rule A proxy, not a sourced page date -- it is the UTC calendar date of the automated sweep commit that added the row (commit 44db1ff6, 2026-09-02T04:03:49Z UTC), not any date found on the page itself. (b) The surface is an Apple TV locale show page for Las Azules (full synopsis, cast, per-episode descriptions), the same static-listing template already classified editorial_listing_or_database (Rule F) on at least seven prior rows for other locales of this same show page (do, mx, no, it, fr, pe, us?l=es). Distributor marketing copy on a platform's own catalogue page is not editorial content about the show under Rule F's strip-the-metadata test.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:14:12Z",
+          "method": "manual-review",
+          "status": null,
+          "issue": "LEMA-10624",
+          "note": "Retroactive ledger row created as part of Rule D remediation removing this URL from data.json; no new fetch performed. Basis: ts proxy (sweep-commit UTC date, not a sourced page date) and Rule F precedent (Apple TV locale show page), per CEO ruling on LEMA-10623."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-20T22:00:38Z"
+  "lastUpdated": "2026-09-20T22:14:12Z"
 }
