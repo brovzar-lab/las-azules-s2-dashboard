@@ -9314,10 +9314,10 @@
     {
       "url": "https://www.lucaslaruffa.com/noticias/la-segunda-temporada-de-mujeres-de-azul-debutara-en-apple-tv-el-12-de-agosto-macmagazine/",
       "firstSeen": "2026-09-16T20:07:55Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-17T00:15:00Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-20T14:05:23Z",
+      "cooldownUntil": "2026-10-20T14:05:23Z",
       "permanentSkip": false,
       "skipReason": null,
       "skipNote": null,
@@ -9349,6 +9349,20 @@
           "status": 404,
           "issue": "LEMA-10422",
           "note": "Firecrawl scrape confirmed 404 again (page body: \"The resource requested could not be found on this server!\"). Full fallback-chain failure, second occurrence. URL appears permanently dead; the real article on this story remains tracked at lucaslaruffa.com/noticias/apple-tv-la-temporada-2-de-mujeres-de-azul-tiene-trailer-macmagazine/."
+        },
+        {
+          "attempt": "2026-09-20T14:05:23Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-10600",
+          "note": "WebFetch returned HTTP 404 Not Found again (third occurrence)."
+        },
+        {
+          "attempt": "2026-09-20T14:05:23Z",
+          "method": "Firecrawl scrape",
+          "status": 404,
+          "issue": "LEMA-10600",
+          "note": "Firecrawl scrape confirmed 404 again (page body: 'The resource requested could not be found on this server!'). Full fallback-chain failure, third occurrence. failCount now 3, cooldown set to 30 days. URL appears permanently dead; the real article on this story remains tracked at lucaslaruffa.com/noticias/apple-tv-la-temporada-2-de-mujeres-de-azul-tiene-trailer-macmagazine/."
         }
       ]
     },
@@ -11642,7 +11656,70 @@
           "note": "Firecrawl returned 403: 'we do not support this site' (instagram.com unsupported, same family as facebook.com precedent). Full-chain failure."
         }
       ]
+    },
+    {
+      "url": "https://www.justwatch.com/ca/tv-show/sex-and-the-city",
+      "firstSeen": "2026-09-20T14:05:23Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Surfaced by Exa EN broad-query Pass 1 ('Las Azules Women in Blue Season 2 Apple TV'). Page is JustWatch's Canada streaming-availability listing for 'Sex and the City', an unrelated HBO series. No mention of Las Azules / Women in Blue anywhere on the page; pure broad-query relevance miss. Rule G (LEMA-9927).",
+      "history": [
+        {
+          "attempt": "2026-09-20T14:05:23Z",
+          "method": "n/a (Rule G relevance gate, no fetch)",
+          "status": null,
+          "issue": "LEMA-10600",
+          "note": "Off-topic false positive, not evaluated for fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://spectrumnews1.com/ca/la/news",
+      "firstSeen": "2026-09-20T14:05:23Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Surfaced by Exa EN broad-query Pass 1. Page is Spectrum News 1's general Los Angeles local-news index/homepage, not an article about Las Azules / Women in Blue. No reference to the show found. Rule G (LEMA-9927).",
+      "history": [
+        {
+          "attempt": "2026-09-20T14:05:23Z",
+          "method": "n/a (Rule G relevance gate, no fetch)",
+          "status": null,
+          "issue": "LEMA-10600",
+          "note": "Off-topic false positive, not evaluated for fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://as.com/meristation/series/en-2024-se-estreno-la-mejor-miniserie-de-mafiosos-en-mucho-tiempo-2-anos-despues-hay-esperanzas-para-una-segunda-temporada-f202609-n/",
+      "firstSeen": "2026-09-20T14:05:23Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Surfaced by Exa ES broad-query Pass 1 ('Barbara Mori entrevista Las Azules temporada 2'). Article ('En 2024 se estreno la mejor miniserie de mafiosos...') is AS.com/Meristation coverage of a different, unrelated mafia miniseries hoping for a season 2; does not mention Las Azules or Barbara Mori. Rule G (LEMA-9927).",
+      "history": [
+        {
+          "attempt": "2026-09-20T14:05:23Z",
+          "method": "n/a (Rule G relevance gate, no fetch)",
+          "status": null,
+          "issue": "LEMA-10600",
+          "note": "Off-topic false positive, not evaluated for fetch."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-20T12:15:32Z"
+  "lastUpdated": "2026-09-20T14:05:23Z"
 }
