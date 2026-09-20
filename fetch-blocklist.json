@@ -307,6 +307,13 @@
           "status": 403,
           "issue": "LEMA-9861",
           "note": "Firecrawl blanket-refused facebook.com domain ('we do not support this site'). Documented exhaustion of method per Rule A."
+        },
+        {
+          "attempt": "2026-09-20T14:00:00Z",
+          "method": "Ledger merge (no fetch)",
+          "status": null,
+          "issue": "LEMA-10603",
+          "note": "MERGED: a second row for this same video under the bare short-ID URL form (https://www.facebook.com/thefemalelead/videos/1370329548535537/, firstSeen 2026-09-15T22:00:54Z, surfaced via the same 2026-09-15 Pass 3 Firecrawl international run that produced the CNNee short-ID duplicate, cf. this ledger's CNNee row) agreed on permanentSkip/editorial_undateable and is folded into this older, more complete row per Rule C (one URL, one row). This row is kept as the survivor for its fuller attempt history; the shorter duplicate is removed. failCount/firstSeen/history on this row are unchanged. Genuinely different normalized keys under the current tools/lib/normalize.js (slug-drop fold is LEMA-10602, not yet shipped as of this note)."
         }
       ]
     },
@@ -8710,35 +8717,7 @@
       "permanentSkip": true,
       "skipReason": "editorial_undateable",
       "reviewable": true,
-      "skipNote": "CNN en Espanol (editorial brand account, passes Rule B) Facebook video post surfaced via Pass 3 Firecrawl BR-market search. Content: promo for Las Azules S2 launch, Ximena Sarinana discusses playing Angeles. WebFetch succeeded (200, real content returned, not a bot-wall stub) but the summarized body carried no publish date. Firecrawl scrape returned the documented blanket facebook.com refusal (\"we do not support this site\", 403), a valid documented exhaustion of the method per Rule A. A raw curl fetch with a Facebook-crawler user agent also surfaced no publish_time/created_time/article:published_time metadata. Both WebFetch and Firecrawl exhausted per Rule A; no real publish date found. Not added to data.json. reviewable=true for a future manual lookup.",
-      "history": [
-        {
-          "attempt": "2026-09-15T22:00:54Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-10303",
-          "note": "Succeeded, full content returned, no publish date present in summarized body."
-        },
-        {
-          "attempt": "2026-09-15T22:00:54Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "issue": "LEMA-10303",
-          "note": "Blanket facebook.com refusal (we do not support this site), documented exhaustion per Rule A."
-        }
-      ]
-    },
-    {
-      "url": "https://www.facebook.com/thefemalelead/videos/1370329548535537/",
-      "firstSeen": "2026-09-15T22:00:54Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-15T22:00:54Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "The Female Lead (editorial media brand account focused on women's stories, passes Rule B) Facebook video post surfaced via Pass 3 Firecrawl FR-market search. Content: BTS piece on Las Azules cast meeting original 1970s female police officers. WebFetch succeeded (200, real content returned, not a bot-wall stub) but the summarized body carried no publish date. Firecrawl scrape returned the documented blanket facebook.com refusal (\"we do not support this site\", 403), a valid documented exhaustion of the method per Rule A. A raw curl fetch with a Facebook-crawler user agent also surfaced no publish_time/created_time/article:published_time metadata. Both WebFetch and Firecrawl exhausted per Rule A; no real publish date found. Not added to data.json. reviewable=true for a future manual lookup.",
+      "skipNote": "CNN en Espanol (editorial brand account, passes Rule B) Facebook video post surfaced via Pass 3 Firecrawl BR-market search. Content: promo for Las Azules S2 launch, Ximena Sarinana discusses playing Angeles. WebFetch succeeded (200, real content returned, not a bot-wall stub) but the summarized body carried no publish date. Firecrawl scrape returned the documented blanket facebook.com refusal (\"we do not support this site\", 403), a valid documented exhaustion of the method per Rule A. A raw curl fetch with a Facebook-crawler user agent also surfaced no publish_time/created_time/article:published_time metadata. Both WebFetch and Firecrawl exhausted per Rule A; no real publish date found. Not added to data.json. reviewable=true for a future manual lookup. MERGED 2026-09-20 (LEMA-10603): a second row for this same video under the full-slug URL form (https://facebook.com/CNNee/videos/la-serie-las-azules-prepara-el-lanzamiento-de-su-segunda-temporada-en-la-que-el-/1343457514667233, added 2026-09-20T10:10:27Z by the LEMA-10587 run, no firstSeen/history) agreed on permanentSkip/editorial_undateable and was folded into this older row per Rule C (one URL, one row); its short-lived duplicate row is removed, this row's firstSeen/history/failCount are unchanged. That same LEMA-10587-run row is also what briefly coexisted with a 'Aug 15, 2026' dated entry in data.json (added 2026-08-30, the same slug URL up to www./trailing-slash) between 2026-09-20T10:12Z and 2026-09-20T14:06Z, until the LEMA-10600 run's Rule D pass removed the data.json row; see LEMA-10603 deliverable for the full provenance writeup. Genuinely different normalized keys under the current tools/lib/normalize.js (slug-drop fold is LEMA-10602, not yet shipped as of this note).",
       "history": [
         {
           "attempt": "2026-09-15T22:00:54Z",
@@ -11442,17 +11421,6 @@
       "skipReason": "editorial_listing_or_database",
       "reviewable": false,
       "skipNote": "SensaCine 'temporada' page: episode listing (S02E01-E08), cast grid, air date and a boilerplate plot synopsis blurb; no written journalism/critical commentary about the show. Retroactive Rule F remediation (LEMA-10587 2026-09-20 run) confirmed via fresh WebFetch re-check.",
-      "failCount": 0,
-      "cooldownUntil": null,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-20T10:10:27.023Z"
-    },
-    {
-      "url": "https://facebook.com/CNNee/videos/la-serie-las-azules-prepara-el-lanzamiento-de-su-segunda-temporada-en-la-que-el-/1343457514667233",
-      "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "CNN en Español Facebook video about Las Azules S2 (editorial-brand account, coverage under Rule B). WebFetch retrieved body content (Ximena Sariñana interview excerpt) but no date; Firecrawl returned HTTP 403 (facebook.com domain-level refusal), the documented valid exhaustion case named in Rule A.",
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": null,
