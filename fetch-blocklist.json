@@ -11687,7 +11687,188 @@
           "note": "Off-topic false positive, not evaluated for fetch."
         }
       ]
+    },
+    {
+      "url": "https://collider.com/stephen-graham-nocturne-apple-tv-release-date-october-30",
+      "firstSeen": "2026-09-20T22:00:38Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T22:00:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About Apple TV+'s \"Nocturne\", an unrelated dark crime thriller starring Stephen Graham and Liev Schreiber with an October 30 release date. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa neural match on \"Apple TV\" crime-drama terms.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:00:38Z",
+          "method": "manual-review",
+          "status": null,
+          "issue": "LEMA-10622",
+          "note": "Confirmed off-topic from the source search result's own title/snippet metadata (Exa/WebSearch), without spending a fetch-fallback-chain attempt, consistent with the Rule B/G posture that relevance is evaluated before dateability. Ledgered under Rule G so future sweeps stop re-fetching."
+        }
+      ]
+    },
+    {
+      "url": "https://elcomercio.pe/mag/fama/que-ver/daemons-of-the-shadow-realm-temporada-2-lo-que-sabemos-sobre-los-proximos-episodios-del-anime-de-crunchyroll-nnda-nnlt-noticia",
+      "firstSeen": "2026-09-20T22:00:38Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T22:00:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About \"Daemons of the Shadow Realm\" Season 2, a Crunchyroll anime series. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa neural match on \"temporada 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:00:38Z",
+          "method": "manual-review",
+          "status": null,
+          "issue": "LEMA-10622",
+          "note": "Confirmed off-topic from the source search result's own title/snippet metadata (Exa/WebSearch), without spending a fetch-fallback-chain attempt, consistent with the Rule B/G posture that relevance is evaluated before dateability. Ledgered under Rule G so future sweeps stop re-fetching."
+        }
+      ]
+    },
+    {
+      "url": "https://us.headtopics.com/news/apple-tv-unveils-dark-crime-thriller-nocturne-starring-87950350",
+      "firstSeen": "2026-09-20T22:00:38Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T22:00:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About Apple TV+'s announcement of \"Nocturne\", an unrelated dark crime thriller starring Liev Schreiber and Stephen Graham. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa neural match on \"Apple TV\" crime-drama terms.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:00:38Z",
+          "method": "manual-review",
+          "status": null,
+          "issue": "LEMA-10622",
+          "note": "Confirmed off-topic from the source search result's own title/snippet metadata (Exa/WebSearch), without spending a fetch-fallback-chain attempt, consistent with the Rule B/G posture that relevance is evaluated before dateability. Ledgered under Rule G so future sweeps stop re-fetching."
+        }
+      ]
+    },
+    {
+      "url": "https://edna.cz/edna-novinky/co-sledovat-tento-tyden-american-horror-story-se-vraci-a-netflix-chysta-naloz-novinek",
+      "firstSeen": "2026-09-20T22:00:38Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T22:00:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Czech-language weekly \"what to watch\" roundup covering American Horror Story's return and upcoming Netflix titles. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa neural match on generic series-watching terms.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:00:38Z",
+          "method": "manual-review",
+          "status": null,
+          "issue": "LEMA-10622",
+          "note": "Confirmed off-topic from the source search result's own title/snippet metadata (Exa/WebSearch), without spending a fetch-fallback-chain attempt, consistent with the Rule B/G posture that relevance is evaluated before dateability. Ledgered under Rule G so future sweeps stop re-fetching."
+        }
+      ]
+    },
+    {
+      "url": "https://justwatch.com/us/tv-show/dark-matter-2024",
+      "firstSeen": "2026-09-20T22:00:38Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T22:00:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch streaming-availability listing page for \"Dark Matter\" (2024), an unrelated Apple TV+ series. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa neural match on \"Apple TV\" show-listing terms.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:00:38Z",
+          "method": "manual-review",
+          "status": null,
+          "issue": "LEMA-10622",
+          "note": "Confirmed off-topic from the source search result's own title/snippet metadata (Exa/WebSearch), without spending a fetch-fallback-chain attempt, consistent with the Rule B/G posture that relevance is evaluated before dateability. Ledgered under Rule G so future sweeps stop re-fetching."
+        }
+      ]
+    },
+    {
+      "url": "https://justwatch.com/za/tv-series/dark-matter-2024/season-2",
+      "firstSeen": "2026-09-20T22:00:38Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T22:00:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch streaming-availability listing page for \"Dark Matter\" (2024) Season 2, an unrelated Apple TV+ series. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa neural match on \"Season 2\" \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:00:38Z",
+          "method": "manual-review",
+          "status": null,
+          "issue": "LEMA-10622",
+          "note": "Confirmed off-topic from the source search result's own title/snippet metadata (Exa/WebSearch), without spending a fetch-fallback-chain attempt, consistent with the Rule B/G posture that relevance is evaluated before dateability. Ledgered under Rule G so future sweeps stop re-fetching."
+        }
+      ]
+    },
+    {
+      "url": "https://superdeporte.es/valencia-basket/2026/09/20/entrevista-helena-pueyo-valencia-basket-pretemporada-134499359.html",
+      "firstSeen": "2026-09-20T22:00:38Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T22:00:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Spanish-language sports interview with basketball player Helena Pueyo ahead of the Valencia Basket preseason. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa neural match on \"temporada\" (season) terms.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:00:38Z",
+          "method": "manual-review",
+          "status": null,
+          "issue": "LEMA-10622",
+          "note": "Confirmed off-topic from the source search result's own title/snippet metadata (Exa/WebSearch), without spending a fetch-fallback-chain attempt, consistent with the Rule B/G posture that relevance is evaluated before dateability. Ledgered under Rule G so future sweeps stop re-fetching."
+        }
+      ]
+    },
+    {
+      "url": "https://tiktok.com/@loslunesseriefilos/video/7687629251796913430",
+      "firstSeen": "2026-09-20T22:00:38Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T22:00:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TikTok video interview with actress Lucía Guerrero about her role Berta in \"A la deriva\", an unrelated Atresplayer series. No mention of Las Azules or Women in Blue anywhere in the post description; surfaced only as a broad Exa neural match on Spanish-series-interview terms.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:00:38Z",
+          "method": "manual-review",
+          "status": null,
+          "issue": "LEMA-10622",
+          "note": "Fetched directly (curl) to inspect the TikTok video's own description metadata; confirmed the post is about \"A la deriva\" (Atresplayer), not Las Azules. Ledgered under Rule G so future sweeps stop re-fetching."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/bo/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-09-20T22:00:38Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T22:00:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Apple TV Bolivia show page for Las Azules: full synopsis, cast, and per-episode descriptions for both seasons (same content depth as the ES/LU sibling pages already in data.json), so not a bare Rule F listing. No sourced publish date found: direct fetch (200, full body) and a Firecrawl scrape both returned only JSON-LD datePublished=2024-07-31T00:00:00.000Z, which is the show's original Season 1 release date embedded in the media object, not this page's publication date (a proxy per Rule A, not usable). No article:published_time, visible dateline, or dated URL path exists on this evergreen show page.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:00:38Z",
+          "method": "WebFetch+Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10622",
+          "note": "Both methods succeeded in fetching the page but neither surfaced a genuine page-publish date; JSON-LD datePublished is the show's 2024 release date, not this page's own timestamp. Classified editorial_undateable per Rule A, reviewable=true."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-20T14:05:23Z"
+  "lastUpdated": "2026-09-20T22:00:38Z"
 }
