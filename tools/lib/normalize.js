@@ -96,6 +96,34 @@ function applyHostAlias(host) {
   return HOST_ALIASES.get(host) || host;
 }
 
+// Facebook /<page>/<type>/<slug>/<id> -> /<page>/<type>/<id> path fold.
+// LEMA-10602: Facebook generates the <slug> segment from the post's own
+// body text -- it carries no identity of its own, so a slug-form URL and
+// its short-ID-only equivalent are the same tracked post. Checked against
+// the already-alias-resolved host (so www./m. variants of facebook.com
+// are covered too, since those fold to plain "facebook.com" upstream of
+// this call) and against the already-trailing-slash-stripped path.
+//
+// <type> must be exactly "videos", "posts", or "reel" -- this is what
+// keeps the fold from misfiring on /groups/<gid>/posts/<id>, where the
+// segment in the <type> position is a numeric group id, not one of these
+// literal words. A bare /<page>/<type>/<id> (no slug present) matches the
+// same pattern with an empty slug capture and reconstructs to an
+// identical path, so it is a no-op for URLs already in the folded form.
+//
+// Deliberately keeps <page>: folding page identity too (numeric page-ID
+// vs. vanity page-name, or /groups/<gid>/... itself) is an out-of-scope
+// residual gap, see the KNOWN GAP comment on normalizeUrl below.
+const FACEBOOK_SLUG_ID_PATH = /^\/([^/]+)\/(videos|posts|reel)\/(?:[^/]+\/)?(\d+)$/;
+
+function foldFacebookPath(host, path) {
+  if (host !== 'facebook.com') return path;
+  const match = FACEBOOK_SLUG_ID_PATH.exec(path);
+  if (!match) return path;
+  const [, page, type, id] = match;
+  return `/${page}/${type}/${id}`;
+}
+
 // The routine prose does not specify an order for surviving query params.
 // Sorted here so two URLs whose params differ only in order produce the
 // same key. Implementation decision, flagged as an ambiguity.
@@ -158,6 +186,22 @@ function buildQueryString(searchParams, host) {
  * appears in a candidate stream or artifact -- ship it with a test and a
  * note on that ticket, no new escalation needed.
  *
+ * FACEBOOK PATH FOLD (LEMA-10602): facebook.com URLs of the form
+ * /<page>/<type>/<slug>/<id> (type is videos, posts, or reel) fold to
+ * /<page>/<type>/<id>, dropping the body-text slug segment. See
+ * foldFacebookPath above for the implementation and rationale.
+ *
+ * KNOWN GAP (not resolved here, flagged on LEMA-10602): the fold above
+ * keeps the <page> segment, so a numeric Facebook page ID
+ * (facebook.com/100064912081062/posts/<id>) and the same page's vanity
+ * name (facebook.com/<vanity>/posts/<id>) still produce different keys.
+ * No occurrence of the *same* post under both page-identity forms has
+ * been found, so folding page identity too was not invented speculatively
+ * -- same "wait for a real occurrence" posture as the youtu.be gap below.
+ * facebook.com/groups/<gid>/posts/<id> is also explicitly NOT folded by
+ * this rule (the <type> position there is a numeric group id, not one of
+ * videos/posts/reel), and is pinned by a test.
+ *
  * KNOWN GAP (not resolved here, flagged on LEMA-10275): canonical/redirect
  * aliases are not folded. A URL that 302-redirects to (or declares via
  * og:url / <link rel="canonical">) a different URL already in data.json is
@@ -175,7 +219,7 @@ function normalizeUrl(rawUrl) {
   const parsed = new URL(rawUrl);
   const scheme = parsed.protocol.toLowerCase(); // e.g. "https:"
   const host = applyHostAlias(stripLeadingMobile(stripLeadingWww(parsed.host.toLowerCase()))); // host includes port, if any
-  const path = stripTrailingSlash(parsed.pathname);
+  const path = foldFacebookPath(host, stripTrailingSlash(parsed.pathname));
   const query = buildQueryString(parsed.searchParams, host);
 
   const url = `${scheme}//${host}${path}${query}`;
