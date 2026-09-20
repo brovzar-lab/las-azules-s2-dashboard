@@ -121,6 +121,14 @@ function cmdLookup(positional, flags) {
     else if (ledgerEntries.length === 0) problems.push('fetch-blocklist ledger "entries" array is empty');
     if (!candidateList) problems.push('candidates file is not a JSON array');
     else if (candidateList.length === 0) problems.push('candidates file is an empty array');
+    // LEMA-10592: without this, an unusable data.json silently degrades to
+    // `datasetEntries || []` below -- lookupAll then reports inDataJson=false
+    // for every candidate, including ones demonstrably present in the real
+    // file, and the process still exits 0. --strict exists to hard-fail on
+    // unusable inputs instead of proceeding on a wrong answer, same as the
+    // ledger/candidates checks above.
+    if (!datasetEntries) problems.push('data.json is not a JSON array');
+    else if (datasetEntries.length === 0) problems.push('data.json array is empty');
     if (problems.length > 0) {
       console.error(`[lookup] --strict guard failed:\n  - ${problems.join('\n  - ')}`);
       process.exitCode = 3;

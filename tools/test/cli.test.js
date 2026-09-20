@@ -191,6 +191,59 @@ test('lookup CLI --json: results carry inDataJson/dataJsonTs/dataJsonOutlet fiel
   assert.equal(r.dataJsonOutlet, 'Test Outlet');
 });
 
+// LEMA-10592: without a data.json shape check, --strict validated the
+// ledger and candidates files but let an unusable data.json through --
+// lookupAll would receive `datasetEntries || []` and every candidate
+// would silently report inDataJson=false (including ones demonstrably
+// present in the real file), with the process still exiting 0.
+test('lookup CLI --strict fails loudly on a data.json that is not a JSON array', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  const badDataPath = path.join(tmp, 'bad-data.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(['https://example.com/a']));
+  fs.writeFileSync(badDataPath, JSON.stringify({ not: 'an array' }));
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--data', badDataPath, '--strict']);
+
+  assert.notEqual(result.status, 0);
+  assert.equal(result.stdout, '');
+  assert.match(result.stderr, /--strict guard failed/);
+  assert.match(result.stderr, /data\.json is not a JSON array/);
+});
+
+test('lookup CLI --strict fails loudly on an empty data.json array', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  const emptyDataPath = path.join(tmp, 'empty-data.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(['https://example.com/a']));
+  fs.writeFileSync(emptyDataPath, JSON.stringify([]));
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--data', emptyDataPath, '--strict']);
+
+  assert.notEqual(result.status, 0);
+  assert.equal(result.stdout, '');
+  assert.match(result.stderr, /--strict guard failed/);
+  assert.match(result.stderr, /data\.json array is empty/);
+});
+
+// Explicit backward-compat pin, matching the same "guard is opt-in"
+// contract already established for the ledger/candidates checks above:
+// non-strict stays permissive on a bad data.json, and the pre-existing
+// `rows=INVALID` stderr fingerprint remains the only signal there.
+test('lookup CLI without --strict stays permissive on a bad data.json (guard is opt-in, matches ledger/candidates precedent)', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  const badDataPath = path.join(tmp, 'bad-data.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(['https://example.com/a']));
+  fs.writeFileSync(badDataPath, JSON.stringify({ not: 'an array' }));
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--data', badDataPath]);
+
+  assert.equal(result.status, 0);
+  assert.match(result.stderr, /data\.json path=.*rows=INVALID/);
+  assert.match(result.stdout, /inDataJson=false/);
+});
+
 test('evidence CLI: "Ledger check" line includes an "already in data.json=<n>" count', () => {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
   const candidatesPath = path.join(tmp, 'candidates.json');
