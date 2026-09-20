@@ -11410,6 +11410,107 @@
           "note": "WebFetch succeeded; confirmed article is an unrelated musician interview."
         }
       ]
+    },
+    {
+      "url": "https://apple.com/tv-pr/originals/women-in-blue-las-azules",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Apple TV Press evergreen show page. WebFetch + Firecrawl both succeeded in retrieving body content but no article:published_time/JSON-LD date/visible dateline exists anywhere on the page; only the show's own Season 2 release date (Aug 12, 2026) appears in body copy, which is a proxy date, not the page's own publish date. Retroactive Rule A remediation (LEMA-10587 2026-09-20 run) after FR/IT locale twins of this exact page template were independently confirmed dateless.",
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T10:10:27.023Z"
+    },
+    {
+      "url": "https://sensacine.com/series/serie-31977/temporada-1000001953",
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "SensaCine 'temporada' page: episode listing (S02E01-E08), cast grid, air date and a boilerplate plot synopsis blurb; no written journalism/critical commentary about the show. Retroactive Rule F remediation (LEMA-10587 2026-09-20 run) confirmed via fresh WebFetch re-check.",
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T10:10:27.023Z"
+    },
+    {
+      "url": "https://facebook.com/CNNee/videos/la-serie-las-azules-prepara-el-lanzamiento-de-su-segunda-temporada-en-la-que-el-/1343457514667233",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "CNN en Español Facebook video about Las Azules S2 (editorial-brand account, coverage under Rule B). WebFetch retrieved body content (Ximena Sariñana interview excerpt) but no date; Firecrawl returned HTTP 403 (facebook.com domain-level refusal), the documented valid exhaustion case named in Rule A.",
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T10:10:27.023Z"
+    },
+    {
+      "url": "https://apple.com/fr/tv-pr/originals/women-in-blue-las-azules",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "FR locale of Apple TV Press evergreen show page. WebFetch and Firecrawl both retrieved full body content; no article:published_time/JSON-LD date/visible dateline present anywhere.",
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T10:10:27.023Z"
+    },
+    {
+      "url": "https://apple.com/it/tv-pr/originals/women-in-blue-las-azules",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "IT locale of Apple TV Press evergreen show page. Same as FR twin: WebFetch and Firecrawl both retrieved full body content; no date present anywhere.",
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T10:10:27.023Z"
+    },
+    {
+      "url": "https://youtube.com/watch?v=wUvSOg3pNmY",
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "reviewable": false,
+      "skipNote": "Uploaded by 'Filmaholic' (@FilmaholicOfficial), an unofficial third-party trailer-reposting channel, not the studio/platform or an outlet. Fails Rule B relevance gate; dateability not evaluated.",
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T10:10:27.023Z"
+    },
+    {
+      "url": "https://pro.imdb.com/title/tt34927536",
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "IMDbPro title page for 'Vogue México y Latinoamérica: Yo Nunca, Nunca' (a different show's episode featuring Las Azules cast in a press-junket segment) — bare login-gated IMDb database page, no journalism.",
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T10:10:27.023Z"
+    },
+    {
+      "url": "https://tomsguide.com/entertainment/apple-tv-plus/how-to-watch-women-in-blue-online-and-from-anywhere-now",
+      "permanentSkip": false,
+      "failCount": 1,
+      "cooldownUntil": null,
+      "lastStatus": "firecrawl_403",
+      "lastAttempt": "2026-09-20T10:10:27.023Z"
+    },
+    {
+      "url": "https://youtube.com/watch?v=ESWc7jYeaCY",
+      "permanentSkip": false,
+      "failCount": 1,
+      "cooldownUntil": null,
+      "lastStatus": "no_usable_content",
+      "lastAttempt": "2026-09-20T10:10:27.023Z"
+    },
+    {
+      "url": "https://24heures.ch/las-azules-la-serie-apple-sur-les-policieres-mexicaines-revient-668343431334",
+      "permanentSkip": false,
+      "failCount": 1,
+      "cooldownUntil": null,
+      "lastStatus": "paywall_blocked",
+      "lastAttempt": "2026-09-20T10:10:27.023Z"
     }
   ],
   "lastUpdated": "2026-09-20T08:04:43Z"
