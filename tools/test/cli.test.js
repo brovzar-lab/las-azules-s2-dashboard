@@ -332,6 +332,70 @@ test('lookup CLI: rejects an unrecognized flag (typo) instead of silently ignori
   assert.match(result.stderr, /--stict/);
 });
 
+// LEMA-10596: the Media Sweep routine's Rule C pre-write check and Step 4a
+// both call `lookup` on a single bare URL with no candidates file in hand.
+// That form did not exist and crashed with an uncaught ENOENT from
+// readJsonWithRaw before printing anything (positional[0] was always
+// treated as a file path). These pin the fix: a positional argument that
+// parses as an http(s) URL is synthesized into a one-element candidate list.
+test('lookup CLI: accepts a single bare URL instead of a candidates-file path', () => {
+  const url = 'https://example.com/news/permanent-skip-story';
+  const result = runCli(['lookup', url, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH]);
+
+  assert.equal(result.status, 0);
+  assert.match(result.stdout, /^https:\/\/example\.com\/news\/permanent-skip-story\tpermanentSkip skipReason=editorial_redundant_syndication/);
+});
+
+test('lookup CLI: single-URL form produces the same disposition as the equivalent one-element candidates file', () => {
+  const url = 'https://example.com/news/active-cooldown-story';
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify([url]));
+
+  const viaFile = runCli(['lookup', candidatesPath, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH]);
+  const viaUrl = runCli(['lookup', url, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH]);
+
+  assert.equal(viaFile.status, 0);
+  assert.equal(viaUrl.status, 0);
+  assert.equal(viaFile.stdout, viaUrl.stdout);
+});
+
+test('lookup CLI: single-URL form fingerprints the synthesized one-element list on stderr, not a file read', () => {
+  const url = 'https://example.com/news/brand-new-story';
+  const result = runCli(['lookup', url, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH]);
+
+  assert.equal(result.status, 0);
+  const expectedRaw = JSON.stringify([url]);
+  assert.match(
+    result.stderr,
+    new RegExp(`\\[lookup\\] candidates path=${url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} count=1 sha256=${sha256(expectedRaw)}`)
+  );
+});
+
+// Rule C's actual call site (the pre-write check before a permanentSkip
+// entry): --strict must not fail on the synthesized one-element list. The
+// list is a real one-element array, so it never trips the "empty array"
+// branch of the --strict candidates check.
+test('lookup CLI: single-URL form with --strict does not fail spuriously (Rule C pre-write check)', () => {
+  const url = 'https://example.com/news/not-in-any-ledger';
+  const result = runCli(['lookup', url, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH, '--strict']);
+
+  assert.equal(result.status, 0);
+  assert.match(result.stdout, /^https:\/\/example\.com\/news\/not-in-any-ledger\tnot-found/);
+  assert.match(result.stderr, /\[lookup\] strict=on/);
+  assert.doesNotMatch(result.stderr, /--strict guard failed/);
+});
+
+test('lookup CLI: a non-URL positional is still treated as a candidates-file path (regression)', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const missingPath = path.join(tmp, 'does-not-exist.json');
+
+  const result = runCli(['lookup', missingPath, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH]);
+
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /ENOENT/);
+});
+
 test('normalize CLI: rejects any flag (command takes none)', () => {
   const result = runCli(['normalize', 'https://example.com/a', '--json']);
 

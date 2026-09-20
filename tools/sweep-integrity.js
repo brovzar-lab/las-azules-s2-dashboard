@@ -49,6 +49,22 @@ function writeJson(filePath, value) {
   fs.writeFileSync(filePath, JSON.stringify(value, null, 2) + '\n');
 }
 
+// LEMA-10596: `lookup`'s only documented positional form was always a
+// candidates-file path. The Media Sweep routine's prose (Rule C, Step 4a)
+// also calls `lookup` on a single bare URL with no candidates file in
+// hand, which does not exist as a form and used to crash with an uncaught
+// ENOENT from readJsonWithRaw before printing anything. This treats a
+// positional argument that parses as an http(s) URL as a synthesized
+// one-element candidate list instead of a file path.
+function isHttpUrl(value) {
+  try {
+    const parsed = new URL(value);
+    return parsed.protocol === 'http:' || parsed.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
+
 function parseArgs(argv) {
   const positional = [];
   const flags = {};
@@ -139,14 +155,26 @@ function cmdNormalize(positional) {
 }
 
 function cmdLookup(positional, flags) {
-  const candidatesPath = positional[0];
-  if (!candidatesPath) {
-    console.error('Usage: sweep-integrity.js lookup <candidates.json> [--fetch-blocklist path] [--data path] [--json] [--strict]');
+  const candidatesArg = positional[0];
+  if (!candidatesArg) {
+    console.error('Usage: sweep-integrity.js lookup <candidates.json|url> [--fetch-blocklist path] [--data path] [--json] [--strict]');
     process.exit(2);
   }
   const ledgerPath = flags['fetch-blocklist'] || DEFAULT_LEDGER_PATH;
   const dataPath = flags.data || DEFAULT_DATA_PATH;
-  const { raw: candidatesRaw, value: candidates } = readJsonWithRaw(candidatesPath);
+
+  // A bare http(s) URL is synthesized into a one-element candidate list
+  // rather than read as a file path (LEMA-10596). candidatesRaw is
+  // synthesized too, so the stderr fingerprint line below still covers it.
+  let candidatesPath, candidatesRaw, candidates;
+  if (isHttpUrl(candidatesArg)) {
+    candidatesPath = candidatesArg;
+    candidates = [candidatesArg];
+    candidatesRaw = JSON.stringify(candidates);
+  } else {
+    candidatesPath = candidatesArg;
+    ({ raw: candidatesRaw, value: candidates } = readJsonWithRaw(candidatesPath));
+  }
   const { raw: ledgerRaw, value: ledger } = readJsonWithRaw(ledgerPath);
   const { raw: dataRaw, value: dataset } = readJsonWithRaw(dataPath);
 

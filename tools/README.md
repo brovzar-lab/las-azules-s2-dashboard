@@ -37,9 +37,16 @@ $ node tools/sweep-integrity.js normalize "HTTP://WWW.Example.com/Article/Page/?
 `url` is the canonical display form (real scheme kept, everything else normalized). `key` is
 the schemeless comparison key used for lookup, dedup, and both integrity assertions.
 
-### `lookup <candidates.json> [--fetch-blocklist path] [--data path] [--json] [--strict]`
+### `lookup <candidates.json|url> [--fetch-blocklist path] [--data path] [--json] [--strict]`
 
-`candidates.json` is either a JSON array of URL strings, or of `{"url": "..."}` objects.
+The positional argument is either a candidates file or a single bare URL (LEMA-10596):
+
+- `candidates.json` is a JSON array of URL strings, or of `{"url": "..."}` objects.
+- a single `http(s)://...` argument is treated as a synthesized one-element candidate list,
+  for callers (the Media Sweep routine's Rule C pre-write check, Step 4a) that have exactly
+  one URL in hand and no candidates file to put it in. Detection is by parsing the argument
+  as a URL, so a relative or malformed path is never misread as one.
+
 Builds the Pass 0 lookup dict from `fetch-blocklist.json` and prints one line per candidate
 with its disposition (`permanentSkip`, `active-cooldown`, `expired-cooldown-retry`, or
 `not-found`). Add `--json` for structured output.
@@ -50,7 +57,8 @@ stdout's line-per-candidate contract is unchanged. This exists so two runs someo
 "against the same unmodified files" can be checked mechanically instead of taken on faith --
 diff the stderr lines. This was the exact gap that made the LEMA-10447 nondeterminism report
 undiagnosable after the fact: its `candidates.json` input wasn't preserved, so nobody could
-confirm the two runs actually read byte-identical files.
+confirm the two runs actually read byte-identical files. For the single-URL form, this line
+fingerprints the synthesized one-element list instead of a file.
 
 Add `--strict` to fail loudly (non-zero exit, no stdout result lines, a clear stderr message)
 instead of silently producing output if the ledger or candidates file is present but empty or
