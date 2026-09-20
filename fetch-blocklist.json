@@ -11407,9 +11407,8 @@
     {
       "url": "https://apple.com/tv-pr/originals/women-in-blue-las-azules",
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "Apple TV Press evergreen show page. WebFetch + Firecrawl both succeeded in retrieving body content but no article:published_time/JSON-LD date/visible dateline exists anywhere on the page; only the show's own Season 2 release date (Aug 12, 2026) appears in body copy, which is a proxy date, not the page's own publish date. Retroactive Rule A remediation (LEMA-10587 2026-09-20 run) after FR/IT locale twins of this exact page template were independently confirmed dateless.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Apple TV Press evergreen show page. WebFetch + Firecrawl both succeeded in retrieving body content but no article:published_time/JSON-LD date/visible dateline exists anywhere on the page; only the show's own Season 2 release date (Aug 12, 2026) appears in body copy, which is a proxy date, not the page's own publish date. Retroactive Rule A remediation (LEMA-10587 2026-09-20 run) after FR/IT locale twins of this exact page template were independently confirmed dateless. UPDATE 2026-09-20 (LEMA-10628): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F). Basis: same root Apple TV Press show-page surface family as the uk sibling (https://www.apple.com/uk/tv-pr/originals/women-in-blue-las-azules/, reclassified under LEMA-10217) and the es sibling ruled on in LEMA-10627 -- one locale segment apart, identical evergreen press-kit template with no written editorial content about the show once the key art, cast list, and trailer tiles are stripped away. This was never coverage at any date, so editorial_undateable mischaracterized the gate; dateability was never the operative test. reviewable dropped: Rule F entries are not coverage at all, so there is nothing to review later.",
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": null,
@@ -11429,9 +11428,8 @@
     {
       "url": "https://apple.com/fr/tv-pr/originals/women-in-blue-las-azules",
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "FR locale of Apple TV Press evergreen show page. WebFetch and Firecrawl both retrieved full body content; no article:published_time/JSON-LD date/visible dateline present anywhere.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "FR locale of Apple TV Press evergreen show page. WebFetch and Firecrawl both retrieved full body content; no article:published_time/JSON-LD date/visible dateline present anywhere. UPDATE 2026-09-20 (LEMA-10628): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F). Basis: same root Apple TV Press show-page surface family as the uk sibling (https://www.apple.com/uk/tv-pr/originals/women-in-blue-las-azules/, reclassified under LEMA-10217) and the es sibling ruled on in LEMA-10627 -- one locale segment apart, identical evergreen press-kit template with no written editorial content about the show once the key art, cast list, and trailer tiles are stripped away. This was never coverage at any date, so editorial_undateable mischaracterized the gate; dateability was never the operative test. reviewable dropped: Rule F entries are not coverage at all, so there is nothing to review later.",
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": null,
@@ -11440,9 +11438,8 @@
     {
       "url": "https://apple.com/it/tv-pr/originals/women-in-blue-las-azules",
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "reviewable": true,
-      "skipNote": "IT locale of Apple TV Press evergreen show page. Same as FR twin: WebFetch and Firecrawl both retrieved full body content; no date present anywhere.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "IT locale of Apple TV Press evergreen show page. Same as FR twin: WebFetch and Firecrawl both retrieved full body content; no date present anywhere. UPDATE 2026-09-20 (LEMA-10628): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F). Basis: same root Apple TV Press show-page surface family as the uk sibling (https://www.apple.com/uk/tv-pr/originals/women-in-blue-las-azules/, reclassified under LEMA-10217) and the es sibling ruled on in LEMA-10627 -- one locale segment apart, identical evergreen press-kit template with no written editorial content about the show once the key art, cast list, and trailer tiles are stripped away. This was never coverage at any date, so editorial_undateable mischaracterized the gate; dateability was never the operative test. reviewable dropped: Rule F entries are not coverage at all, so there is nothing to review later.",
       "failCount": 0,
       "cooldownUntil": null,
       "lastStatus": null,
@@ -11907,7 +11904,27 @@
           "note": "Retroactive ledger row created as part of Rule D remediation removing this URL from data.json; no new fetch performed. Basis: ts proxy (sweep-commit UTC date, not a sourced page date) and Rule F precedent (Apple TV locale show page), per CEO ruling on LEMA-10623."
         }
       ]
+    },
+    {
+      "url": "https://www.apple.com/es/tv-pr/originals/women-in-blue-las-azules/",
+      "firstSeen": "2026-09-20T22:37:58.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T22:37:58.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Rule F (editorial_listing_or_database), per CEO ruling on LEMA-10627, executed under LEMA-10628. Same surface family as the uk sibling (https://www.apple.com/uk/tv-pr/originals/women-in-blue-las-azules/, reclassified under LEMA-10217) -- controlling precedent. Official Apple TV Press (Spain) evergreen press-kit landing page for Women in Blue (Las Azules) Season 2: key art, multi-paragraph synopsis, cast/crew list, trailer tile, links out to sub-sections, downloadable press assets. No byline, no dateline, no publish/updated timestamp anywhere on the page. The only date present is the show's own Season 2 release date, \"12 de agosto de 2026\", in body copy -- a release-date proxy, not the page's own publish date. Strip the key art, cast list, and trailer tiles and what remains is distributor marketing copy on the distributor's own press hub: not coverage at any date, so dateability was never the operative gate. Removed from data.json (was outlet \"Apple TV Press (ES)\", headline \"Las azules — Official Series Page (Spain)\", ts 20260812 -- that ts is the show's premiere date lifted from body copy, a release-date proxy, distinct from the crawl-date proxy defect in LEMA-10623). reviewable omitted: Rule F entries are not coverage at all, so there is nothing to review later.",
+      "history": [
+        {
+          "attempt": "2026-09-20T22:37:58.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10628",
+          "note": "Independently re-fetched the live page; confirmed evergreen press-kit template matching uk sibling -- no byline/dateline/publish-or-updated timestamp, only the show's own release date in body copy."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-20T22:14:12Z"
+  "lastUpdated": "2026-09-20T22:37:58.000Z"
 }
