@@ -11330,7 +11330,87 @@
           "note": "Firecrawl returned 403: site not supported (\"we do not support this site\"). Full-chain failure, failCount now 1."
         }
       ]
+    },
+    {
+      "url": "https://www.gameblog.fr/geek/ed/news/apple-tv-sorties-confirmees-octobre-2026-723233",
+      "firstSeen": "2026-09-20T08:04:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T08:04:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Gameblog.fr roundup of Apple TV October 2026 releases (Matchbox, Tenzing: A la conquete de l Everest, Small Prophets, Where is Wanda?). No mention of Las Azules or Women in Blue anywhere on the page; surfaced only as a broad Apple TV query match.",
+      "history": [
+        {
+          "attempt": "2026-09-20T08:04:43Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10586",
+          "note": "WebFetch succeeded; confirmed page covers unrelated Apple TV October 2026 slate, no Las Azules mention."
+        }
+      ]
+    },
+    {
+      "url": "https://www.yidio.com/show/though-i-am-an-inept-villainess",
+      "firstSeen": "2026-09-20T08:04:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T08:04:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Yidio show page for the anime \"Though I Am an Inept Villainess\" (2026). No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad Season 2 Apple TV query match.",
+      "history": [
+        {
+          "attempt": "2026-09-20T08:04:43Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10586",
+          "note": "WebFetch succeeded; confirmed page is an unrelated anime show listing."
+        }
+      ]
+    },
+    {
+      "url": "https://plazajuarez.mx/diego-luna-se-asoma-a-la-vida-del-migrante-para-contrarrestar-la-ignorancia-con-empatia/",
+      "firstSeen": "2026-09-20T08:04:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T08:04:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Plaza Juarez article about Diego Luna and his film \"Ceniza en la boca\" at San Sebastian Film Festival, on migration themes. Diego Luna is not part of the Las Azules cast; no mention of Las Azules, Women in Blue, or Barbara Mori anywhere. Surfaced only as a broad Barbara Mori / Las Azules interview query match.",
+      "history": [
+        {
+          "attempt": "2026-09-20T08:04:43Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10586",
+          "note": "WebFetch succeeded; confirmed article is about an unrelated Diego Luna film."
+        }
+      ]
+    },
+    {
+      "url": "https://www.cronica.com.ar/diarioshow/entrevistas/bahiano-tuve-que-construir-mi-nombre/",
+      "firstSeen": "2026-09-20T08:04:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T08:04:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Cronica.com.ar interview with Argentine singer Bahiano about his music career and upcoming concert. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad interview query match.",
+      "history": [
+        {
+          "attempt": "2026-09-20T08:04:43Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10586",
+          "note": "WebFetch succeeded; confirmed article is an unrelated musician interview."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-20T06:04:57Z"
+  "lastUpdated": "2026-09-20T08:04:43Z"
 }
