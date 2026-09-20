@@ -11507,11 +11507,124 @@
     {
       "url": "https://24heures.ch/las-azules-la-serie-apple-sur-les-policieres-mexicaines-revient-668343431334",
       "permanentSkip": false,
-      "failCount": 1,
+      "failCount": 0,
       "cooldownUntil": null,
-      "lastStatus": "paywall_blocked",
-      "lastAttempt": "2026-09-20T10:10:27.023Z"
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T12:07:27Z",
+      "history": [
+        {
+          "attempt": "2026-09-20T12:07:27Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10588",
+          "note": "Successful re-fetch; URL already present in data.json (ts 20260827). Prior run's failCount=1 (paywall_blocked) reset per step 4e."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvline.com/2261732/what-to-watch-september-20-2026-tv-shows-movies/",
+      "firstSeen": "2026-09-20T12:07:27Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T12:07:27Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TVLine 'What to Watch' roundup for Sept 20, 2026 covering Cold as Balls, Lioness, Big Brother, Lanterns, and other unrelated titles. No mention of Las Azules/Women in Blue anywhere in the article; surfaced only as a broad Exa EN query match.",
+      "history": [
+        {
+          "attempt": "2026-09-20T12:07:27Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10588",
+          "note": "WebFetch succeeded; confirmed no mention of Las Azules or Women in Blue in the full roundup text."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/CandelaEstereo/posts/gaby-spanic-sorprendi%C3%B3-con-su-nueva-imagensu-cambio-ha-generado-debate-en-redes-/1692791642208076/",
+      "firstSeen": "2026-09-20T12:07:27Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T12:07:27Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Candela Estereo Facebook post about actress Gaby Spanic's new appearance/image change. Gaby Spanic is not part of the Las Azules cast and the post makes no mention of the show; surfaced only as a broad Exa ES query match.",
+      "history": [
+        {
+          "attempt": "2026-09-20T12:07:27Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10588",
+          "note": "WebFetch returned the post headline confirming topic is Gaby Spanic's appearance, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.reforma.com/morro-invita-a-encontrar-luz/ar3278996",
+      "firstSeen": "2026-09-20T12:07:27Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T12:07:27Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Reforma article about the Mexican film 'Morro' (director Rodrigo García Saiz) at the San Sebastián Film Festival. No relation to Las Azules/Women in Blue; surfaced only as a broad Exa ES query match. WebFetch returned 403; Firecrawl scrape succeeded and confirmed the off-topic subject.",
+      "history": [
+        {
+          "attempt": "2026-09-20T12:07:27Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10588",
+          "note": "WebFetch failed with 403; Firecrawl scrape succeeded and confirmed article is about the film 'Morro', unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eluniversal.com.mx/tag/barbara-mori/3/",
+      "firstSeen": "2026-09-20T12:07:27Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T12:07:27Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "El Universal tag/archive index page (page 3 of Bárbara Mori's tag archive) listing ~10 articles from 2022-2023, none about Las Azules (topics: TV personality support comments, film role in 'Perdidos en la Noche', granddaughter's singing, past alcohol struggle, her partner Fernando Rovzar, Maya Train activism, vacation photos). Stripped of the listing itself, no written editorial content about the show remains.",
+      "history": [
+        {
+          "attempt": "2026-09-20T12:07:27Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10588",
+          "note": "WebFetch succeeded; confirmed this is a tag/archive index with no Las Azules-specific editorial content."
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DWZfXUjlvnB/",
+      "firstSeen": "2026-09-20T12:07:27Z",
+      "failCount": 1,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-20T12:07:27Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-20T12:07:27Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10588",
+          "note": "WebFetch returned only Instagram page chrome/placeholder markup, no caption or post content."
+        },
+        {
+          "attempt": "2026-09-20T12:07:27Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10588",
+          "note": "Firecrawl returned 403: 'we do not support this site' (instagram.com unsupported, same family as facebook.com precedent). Full-chain failure."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-20T08:04:43Z"
+  "lastUpdated": "2026-09-20T12:07:27Z"
 }
