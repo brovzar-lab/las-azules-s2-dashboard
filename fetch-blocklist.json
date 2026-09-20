@@ -11258,10 +11258,10 @@
     {
       "url": "https://www.reddit.com/r/tvPlus/comments/1vlzpn1/women_in_blue_las_azules_season_2_episode_1/",
       "firstSeen": "2026-09-20T02:06:02Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-20T04:00:52Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-20T06:04:57Z",
+      "cooldownUntil": "2026-10-20T06:04:57Z",
       "history": [
         {
           "attempt": "2026-09-20T02:06:02Z",
@@ -11290,9 +11290,47 @@
           "status": 403,
           "issue": "LEMA-10584",
           "note": "Firecrawl returned 403 on retry."
+        },
+        {
+          "attempt": "2026-09-20T06:04:57Z",
+          "method": "WebFetch",
+          "status": "error",
+          "issue": "LEMA-10585",
+          "note": "WebFetch unable to fetch from reddit.com (tool-level restriction), one-retry attempt per expired-cooldown-retry disposition."
+        },
+        {
+          "attempt": "2026-09-20T06:04:57Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10585",
+          "note": "Firecrawl returned 403: site not supported. Full-chain failure, failCount now 3, cooldown set to 30 days."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/segunda-temporada-de-las-azules",
+      "firstSeen": "2026-09-20T06:04:57Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-20T06:04:57Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-20T06:04:57Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10585",
+          "note": "WebFetch returned 200 but body is TikTok's generic landing page (\"TikTok - Make Your Day\"), no discover content or editorial text. Treated as a near-empty-body failure per the fetch fallback chain rule."
+        },
+        {
+          "attempt": "2026-09-20T06:04:57Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10585",
+          "note": "Firecrawl returned 403: site not supported (\"we do not support this site\"). Full-chain failure, failCount now 1."
         }
       ]
     }
   ],
-  "lastUpdated": "2026-09-20T04:00:52Z"
+  "lastUpdated": "2026-09-20T06:04:57Z"
 }
