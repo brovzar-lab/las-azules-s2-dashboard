@@ -66,6 +66,28 @@ malformed (e.g. `{"entries": []}` from a torn/short read). Without `--strict`, t
 still handled the same as before (an empty ledger just means everything looks up as
 `not-found`) -- the guard is opt-in so it can't change any existing caller's behavior.
 
+**A missing or unparseable candidates/ledger/`data.json` file is a clean usage error, not a
+crash (LEMA-10597).** Before this, a non-URL positional argument that didn't resolve to a real
+file (e.g. `normalize`'s schemeless `key` field, a mistyped path, or a URL pasted without its
+scheme) went straight into `readFileSync` and escaped as an uncaught ENOENT/`SyntaxError` --
+stack trace on stderr, exit **1**, before a single line of output. Now it prints one line
+naming the path and exits **2** (this tool's existing usage-error code, distinct from `1`,
+which is no longer reachable for these files, and `3`, the `--strict` guard). The candidates
+argument's message adds a hint, since it's the one call site where a bare host/path string is
+plausibly a URL missing its scheme:
+
+```
+$ node tools/sweep-integrity.js lookup "tomsguide.com/entertainment/apple-tv-plus/how-to-watch-women-in-blue-online-and-from-anywhere-now" --strict
+Error: candidates file not found: tomsguide.com/entertainment/apple-tv-plus/how-to-watch-women-in-blue-online-and-from-anywhere-now (if you meant a URL, include the https:// scheme)
+EXIT=2
+```
+
+A malformed (non-JSON) file gets the same clean-exit-2 treatment with a "not valid JSON"
+message instead. This matters beyond tidiness: an ENOENT crash never reaches the `--strict`
+check, so it can't print the `--strict guard failed` block the Media Sweep routine's
+STOP-and-escalate path (LEMA-10593) requires quoting verbatim -- this closes that gap by
+converting the crash into a normal, quotable failure.
+
 ```
 $ node tools/sweep-integrity.js lookup candidates.json
 https://www.example.com/news/story  permanentSkip skipReason=editorial_redundant_syndication

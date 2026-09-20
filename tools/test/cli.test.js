@@ -392,8 +392,70 @@ test('lookup CLI: a non-URL positional is still treated as a candidates-file pat
 
   const result = runCli(['lookup', missingPath, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH]);
 
-  assert.notEqual(result.status, 0);
-  assert.match(result.stderr, /ENOENT/);
+  // LEMA-10597: this used to assert an uncaught ENOENT stack trace here --
+  // that was the bug. It's now the clean usage-error path below.
+  assert.equal(result.status, 2);
+  assert.equal(result.stdout, '');
+  assert.doesNotMatch(result.stderr, /ENOENT/);
+  assert.match(result.stderr, /^Error: candidates file not found: /);
+});
+
+// LEMA-10597: `normalize`'s schemeless `key` field (and any other
+// non-URL argument, e.g. a mistyped path) used to crash `lookup` with an
+// uncaught ENOENT stack trace from readJsonWithRaw -- exit 1, no stdout,
+// and (worse) no `--strict guard failed` block for the Media Sweep
+// routine's STOP-and-quote escalation path to quote, since the process
+// never survived long enough to reach the --strict check. This is the
+// exact repro from the ticket: `normalize`'s `key` output fed straight
+// into `lookup`.
+test('lookup CLI: a schemeless normalize `key` value fails cleanly instead of crashing with ENOENT', () => {
+  const normalizeResult = runCli(['normalize', 'https://www.tomsguide.com/entertainment/apple-tv-plus/how-to-watch-women-in-blue']);
+  assert.equal(normalizeResult.status, 0);
+  const { key } = JSON.parse(normalizeResult.stdout);
+  assert.doesNotMatch(key, /^https?:\/\//);
+
+  const result = runCli(['lookup', key, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH, '--strict']);
+
+  assert.equal(result.status, 2);
+  assert.equal(result.stdout, '');
+  assert.doesNotMatch(result.stderr, /ENOENT/);
+  assert.doesNotMatch(result.stderr, /--strict guard failed/);
+  assert.equal(
+    result.stderr.trim(),
+    `Error: candidates file not found: ${key} (if you meant a URL, include the https:// scheme)`
+  );
+});
+
+test('lookup CLI: a malformed (non-JSON) candidates file fails cleanly instead of crashing', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  fs.writeFileSync(candidatesPath, '{not valid json');
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH]);
+
+  assert.equal(result.status, 2);
+  assert.equal(result.stdout, '');
+  assert.match(result.stderr, new RegExp(`^Error: candidates file is not valid JSON: ${candidatesPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'm'));
+});
+
+test('lookup CLI: a missing --fetch-blocklist path fails cleanly (no URL hint, not the candidates file)', () => {
+  const result = runCli(['lookup', 'https://example.com/x', '--fetch-blocklist', '/tmp/lema-10597-does-not-exist-ledger.json', '--data', DATA_PATH]);
+
+  assert.equal(result.status, 2);
+  assert.equal(result.stdout, '');
+  assert.doesNotMatch(result.stderr, /ENOENT/);
+  assert.doesNotMatch(result.stderr, /if you meant a URL/);
+  assert.match(result.stderr, /^Error: fetch-blocklist ledger not found: \/tmp\/lema-10597-does-not-exist-ledger\.json$/m);
+});
+
+test('lookup CLI: a missing --data path fails cleanly (no URL hint, not the candidates file)', () => {
+  const result = runCli(['lookup', 'https://example.com/x', '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', '/tmp/lema-10597-does-not-exist-data.json']);
+
+  assert.equal(result.status, 2);
+  assert.equal(result.stdout, '');
+  assert.doesNotMatch(result.stderr, /ENOENT/);
+  assert.doesNotMatch(result.stderr, /if you meant a URL/);
+  assert.match(result.stderr, /^Error: data\.json not found: \/tmp\/lema-10597-does-not-exist-data\.json$/m);
 });
 
 test('normalize CLI: rejects any flag (command takes none)', () => {

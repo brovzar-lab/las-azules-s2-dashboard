@@ -36,9 +36,34 @@ function readJson(filePath) {
 // Same as readJson, but also returns the raw bytes so the caller can
 // fingerprint exactly what was on disk (LEMA-10448: readJson alone can't
 // tell two runs apart if the underlying file differed between them).
-function readJsonWithRaw(filePath) {
-  const raw = fs.readFileSync(filePath, 'utf8');
-  return { raw, value: JSON.parse(raw) };
+//
+// LEMA-10597: a missing or unparseable file here used to escape as an
+// uncaught ENOENT/SyntaxError -- a raw stack trace, exit 1, before a
+// single line of output. That's not just noisy: it happens before the
+// `--strict` check even runs, so the Media Sweep routine's STOP-and-quote
+// escalation path (LEMA-10593) demands a `--strict guard failed` block
+// that was never printed. `description`/`urlHint` let each call site name
+// itself in the resulting message; `urlHint` is for the one call site
+// (the candidates argument) where a bare host/path string is plausibly a
+// URL missing its scheme.
+function readJsonWithRaw(filePath, description, { urlHint = false } = {}) {
+  let raw;
+  try {
+    raw = fs.readFileSync(filePath, 'utf8');
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      const hint = urlHint ? ' (if you meant a URL, include the https:// scheme)' : '';
+      console.error(`Error: ${description} not found: ${filePath}${hint}`);
+      process.exit(2);
+    }
+    throw err;
+  }
+  try {
+    return { raw, value: JSON.parse(raw) };
+  } catch {
+    console.error(`Error: ${description} is not valid JSON: ${filePath}`);
+    process.exit(2);
+  }
 }
 
 function sha256(text) {
@@ -173,10 +198,14 @@ function cmdLookup(positional, flags) {
     candidatesRaw = JSON.stringify(candidates);
   } else {
     candidatesPath = candidatesArg;
-    ({ raw: candidatesRaw, value: candidates } = readJsonWithRaw(candidatesPath));
+    ({ raw: candidatesRaw, value: candidates } = readJsonWithRaw(
+      candidatesPath,
+      'candidates file',
+      { urlHint: true }
+    ));
   }
-  const { raw: ledgerRaw, value: ledger } = readJsonWithRaw(ledgerPath);
-  const { raw: dataRaw, value: dataset } = readJsonWithRaw(dataPath);
+  const { raw: ledgerRaw, value: ledger } = readJsonWithRaw(ledgerPath, 'fetch-blocklist ledger');
+  const { raw: dataRaw, value: dataset } = readJsonWithRaw(dataPath, 'data.json');
 
   // LEMA-10448: emit a mechanically-comparable fingerprint of both input
   // files on every run, to stderr only (stdout's one-line-per-candidate
