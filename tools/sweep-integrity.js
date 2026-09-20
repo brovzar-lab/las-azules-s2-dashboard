@@ -55,6 +55,18 @@ function parseArgs(argv) {
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i];
     if (arg.startsWith('--')) {
+      // LEMA-10595: `--name=value` is parsed as its own form rather than
+      // falling through to the space-separated branch below, which used to
+      // treat the whole `name=value` string as the flag *name* (so
+      // `--strict=true` silently became an unrecognized key nobody read,
+      // and `flags.strict` stayed undefined -- disarming the --strict
+      // guard without any error).
+      const eq = arg.indexOf('=');
+      if (eq !== -1) {
+        const name = arg.slice(2, eq);
+        flags[name] = arg.slice(eq + 1);
+        continue;
+      }
       const name = arg.slice(2);
       const next = argv[i + 1];
       if (next === undefined || next.startsWith('--')) {
@@ -68,6 +80,52 @@ function parseArgs(argv) {
     }
   }
   return { positional, flags };
+}
+
+// LEMA-10595: every command gets an explicit allow-list of flag names.
+// Anything outside it (a typo like `--stict`, or a genuinely new flag no
+// command reads) is rejected loudly instead of being parsed, stored under
+// a key nobody reads, and silently dropped -- the same silent-fallback
+// shape that let `--strict=true` disarm the LEMA-10592 guard.
+const KNOWN_FLAGS = {
+  normalize: [],
+  lookup: ['fetch-blocklist', 'data', 'json', 'strict'],
+  'assert-integrity': ['fetch-blocklist', 'data', 'target', 'fix', 'json'],
+  evidence: ['candidates', 'fetch-blocklist', 'data', 'fix'],
+};
+
+// Flags that gate an on/off code path rather than carry a path/enum value.
+// `--name=value` is supported for these too (e.g. `--strict=true`), so a
+// value has to be interpreted as a boolean rather than treated as always
+// truthy -- otherwise `--strict=false` would parse to the non-empty string
+// "false", which is JS-truthy, and silently re-arm the guard the caller
+// just asked to turn off. Only "false"/"0" (case-insensitive) count as off;
+// a bare `--strict` (value `true`) and any other value stay on.
+const BOOLEAN_FLAGS = new Set(['strict', 'fix', 'json']);
+
+function rejectUnknownFlags(command, flags) {
+  const allowed = KNOWN_FLAGS[command];
+  if (!allowed) return;
+  const allowedSet = new Set(allowed);
+  const unknown = Object.keys(flags).filter((name) => !allowedSet.has(name));
+  if (unknown.length > 0) {
+    console.error(
+      `Error: unrecognized flag(s) for '${command}': ${unknown.map((f) => `--${f}`).join(', ')}`
+    );
+    console.error(
+      `Allowed flags for '${command}': ${allowed.length ? allowed.map((f) => `--${f}`).join(', ') : '(none)'}`
+    );
+    process.exit(2);
+  }
+}
+
+function coerceBooleanFlags(flags) {
+  for (const name of Object.keys(flags)) {
+    if (!BOOLEAN_FLAGS.has(name)) continue;
+    const value = flags[name];
+    if (value === true) continue;
+    flags[name] = !/^(false|0)$/i.test(value);
+  }
 }
 
 function cmdNormalize(positional) {
@@ -114,6 +172,13 @@ function cmdLookup(positional, flags) {
   console.error(
     `[lookup] data.json path=${dataPath} rows=${datasetEntries ? datasetEntries.length : 'INVALID'} sha256=${sha256(dataRaw)}`
   );
+  // LEMA-10595: additive fourth line only -- the three fingerprint lines
+  // above are quoted verbatim by the Media Sweep routine and stay
+  // byte-identical. On healthy inputs, stdout/stderr used to be identical
+  // whether or not --strict was passed, so a transcript couldn't prove the
+  // gate was actually armed. This line makes that state explicit on every
+  // run, pass or fail.
+  console.error(`[lookup] strict=${flags.strict ? 'on' : 'off'}`);
 
   if (flags.strict) {
     const problems = [];
@@ -313,6 +378,9 @@ function cmdEvidence(flags) {
 function main() {
   const [, , command, ...rest] = process.argv;
   const { positional, flags } = parseArgs(rest);
+
+  rejectUnknownFlags(command, flags);
+  coerceBooleanFlags(flags);
 
   switch (command) {
     case 'normalize':

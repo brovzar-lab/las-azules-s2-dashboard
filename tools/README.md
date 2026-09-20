@@ -37,7 +37,7 @@ $ node tools/sweep-integrity.js normalize "HTTP://WWW.Example.com/Article/Page/?
 `url` is the canonical display form (real scheme kept, everything else normalized). `key` is
 the schemeless comparison key used for lookup, dedup, and both integrity assertions.
 
-### `lookup <candidates.json> [--fetch-blocklist path] [--json] [--strict]`
+### `lookup <candidates.json> [--fetch-blocklist path] [--data path] [--json] [--strict]`
 
 `candidates.json` is either a JSON array of URL strings, or of `{"url": "..."}` objects.
 Builds the Pass 0 lookup dict from `fetch-blocklist.json` and prints one line per candidate
@@ -112,6 +112,27 @@ When a duplicate group is escalated (disagrees), the printed line includes a
 `[FILL IN by agent: ...]` placeholder for the `Step 10/11 escalation: <...>` disposition string,
 since which of "opened / re-observed / suppressed" applies depends on searching existing
 issues, which this tool deliberately does not do.
+
+## Flag parsing (LEMA-10595)
+
+Every command has an explicit allow-list of flag names. A flag outside it -- a typo
+(`--stict`) or a name no command reads -- is rejected with a non-zero exit and a stderr
+message naming the offending flag, instead of being parsed, stored under a key nobody
+reads, and silently dropped. This closes the exact shape of bug that let `--strict=true`
+disarm the `lookup --strict` guard (LEMA-10592) without any error: before this fix,
+`--strict=true` parsed as a flag literally named `strict=true`, so `flags.strict` stayed
+`undefined` and the guard never ran.
+
+Both `--name value` and `--name=value` are accepted for every flag. For the boolean gate
+flags (`--strict`, `--fix`, `--json`), a value of `false` or `0` (case-insensitive) is
+treated as off; a bare flag or any other value is on -- so `--strict=false` actually
+disarms the guard rather than being coerced to "on" by JS string truthiness.
+
+`lookup` also prints a fourth stderr line, `[lookup] strict=on` or `[lookup] strict=off`,
+on every run. The three fingerprint lines above it are unchanged (the Media Sweep routine
+quotes them verbatim); this line exists because a passing run used to look byte-identical
+whether or not `--strict` was actually passed, so a transcript alone couldn't prove the
+guard was armed.
 
 ## Ambiguities in the source prose, flagged rather than resolved
 

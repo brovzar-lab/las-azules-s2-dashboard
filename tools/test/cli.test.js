@@ -244,6 +244,151 @@ test('lookup CLI without --strict stays permissive on a bad data.json (guard is 
   assert.match(result.stdout, /inDataJson=false/);
 });
 
+// LEMA-10595: --strict=true used to parse as an unrecognized flag named
+// literally "strict=true", so flags.strict stayed undefined and the
+// --strict guard silently never ran (fail open, exit 0, wrong answer).
+test('lookup CLI: --strict=true (equals form) arms the guard exactly like a bare --strict', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  const badDataPath = path.join(tmp, 'bad-data.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(['https://example.com/a']));
+  fs.writeFileSync(badDataPath, JSON.stringify({ not: 'an array' }));
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--data', badDataPath, '--strict=true']);
+
+  assert.notEqual(result.status, 0);
+  assert.equal(result.stdout, '');
+  assert.match(result.stderr, /--strict guard failed/);
+  assert.match(result.stderr, /data\.json is not a JSON array/);
+});
+
+// LEMA-10595: --strict=false must actually disarm the guard, not just fail
+// to arm it. Since flags now hold a real string value ("false") rather than
+// silently vanishing, a naive truthy check would treat any non-empty string
+// as "on" and re-arm a guard the caller explicitly asked to turn off.
+test('lookup CLI: --strict=false does not arm the guard', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  const badDataPath = path.join(tmp, 'bad-data.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(['https://example.com/a']));
+  fs.writeFileSync(badDataPath, JSON.stringify({ not: 'an array' }));
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--data', badDataPath, '--strict=false']);
+
+  assert.equal(result.status, 0);
+  assert.match(result.stderr, /\[lookup\] strict=off/);
+});
+
+// LEMA-10595: --data=path used to be parsed as an unrecognized flag named
+// literally "data=path", so cmdLookup fell back to DEFAULT_DATA_PATH and
+// silently answered against the wrong file while claiming (via the
+// fingerprint line, which did print the real path used) that everything
+// was fine.
+test('lookup CLI: --data=path (equals form) is honored, not silently ignored in favor of the default', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  const dataPath = path.join(tmp, 'data.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(['https://example.com/covered']));
+  fs.writeFileSync(dataPath, JSON.stringify([
+    { outlet: 'Test Outlet', headline: 'h', url: 'https://example.com/covered', date: 'Sep 1, 2026', ts: 20260901, lang: 'EN', market: 'US', type: 'Entertainment', excerpt: 'e' },
+  ]));
+
+  const result = runCli(['lookup', candidatesPath, `--fetch-blocklist=${LEDGER_PATH}`, `--data=${dataPath}`]);
+
+  assert.equal(result.status, 0);
+  const dataRaw = fs.readFileSync(dataPath, 'utf8');
+  assert.match(result.stderr, new RegExp(`\\[lookup\\] data\\.json path=${dataPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} rows=1 sha256=${sha256(dataRaw)}`));
+  assert.match(result.stdout, /https:\/\/example\.com\/covered\t.*inDataJson=true/);
+});
+
+// LEMA-10595: a fourth stderr line makes the armed/disarmed state of
+// --strict provable from the transcript alone, since a passing run used to
+// look byte-identical with and without --strict.
+test('lookup CLI: emits "[lookup] strict=on"/"strict=off" as a fourth stderr line without altering the three existing fingerprint lines', () => {
+  const args = ['lookup', FIXTURE_CANDIDATES_PATH, '--fetch-blocklist', FIXTURE_LEDGER_PATH];
+  const plain = runCli(args);
+  const strict = runCli([...args, '--strict']);
+
+  assert.equal(plain.status, 0);
+  assert.equal(strict.status, 0);
+  assert.match(plain.stderr, /\[lookup\] strict=off/);
+  assert.match(strict.stderr, /\[lookup\] strict=on/);
+
+  const stripStrictLine = (s) => s.split('\n').filter((l) => !/^\[lookup\] strict=/.test(l)).join('\n');
+  assert.equal(stripStrictLine(plain.stderr), stripStrictLine(strict.stderr));
+  assert.equal(plain.stdout, strict.stdout);
+});
+
+// LEMA-10595: unrecognized flags used to be parsed silently into a key
+// nobody read (`--stict` -> flags.stict, `--foo` -> flags.foo) with no
+// error of any kind. Every command should now reject them loudly, naming
+// the offending flag.
+test('lookup CLI: rejects an unrecognized flag (typo) instead of silently ignoring it', () => {
+  const result = runCli(['lookup', FIXTURE_CANDIDATES_PATH, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--stict']);
+
+  assert.notEqual(result.status, 0);
+  assert.equal(result.stdout, '');
+  assert.match(result.stderr, /unrecognized flag/);
+  assert.match(result.stderr, /--stict/);
+});
+
+test('normalize CLI: rejects any flag (command takes none)', () => {
+  const result = runCli(['normalize', 'https://example.com/a', '--json']);
+
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /unrecognized flag/);
+  assert.match(result.stderr, /--json/);
+});
+
+test('assert-integrity CLI: rejects an unrecognized flag', () => {
+  const result = runCli(['assert-integrity', '--fetch-blocklist', LEDGER_PATH, '--data', DATA_PATH, '--targett', 'ledger']);
+
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /unrecognized flag/);
+  assert.match(result.stderr, /--targett/);
+});
+
+test('evidence CLI: rejects an unrecognized flag', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(['https://example.com/a']));
+
+  const result = runCli(['evidence', '--candidates', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--data', DATA_PATH, '--verbose']);
+
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /unrecognized flag/);
+  assert.match(result.stderr, /--verbose/);
+});
+
+// assert-integrity's boolean flags (--fix, --json) go through the same
+// coercion path as lookup's --strict; pin the equals-form for at least one
+// of them here since assert-integrity has no dedicated test file of its
+// own. Deliberately uses the default (non-JSON) text output rather than
+// --json: the live fetch-blocklist.json/data.json are large enough that a
+// full --json dump exceeds spawnSync's default 1MB stdout buffer, which
+// truncates non-deterministically and has nothing to do with this flag.
+test('assert-integrity CLI: --target=ledger (equals form) behaves like a bare --target ledger', () => {
+  const bare = runCli(['assert-integrity', '--fetch-blocklist', LEDGER_PATH, '--data', DATA_PATH, '--target', 'ledger']);
+  const equals = runCli(['assert-integrity', '--fetch-blocklist', LEDGER_PATH, '--data', DATA_PATH, '--target=ledger']);
+
+  assert.equal(bare.status, equals.status);
+  assert.equal(bare.stdout, equals.stdout);
+  assert.match(bare.stdout, /^- Ledger integrity:/);
+  assert.doesNotMatch(bare.stdout, /data\.json integrity/);
+});
+
+// Boolean-coercion coverage for assert-integrity specifically (lookup's
+// --strict is covered above): --fix=false must behave exactly like no
+// --fix at all, not like a truthy "--fix" that starts writing merges back
+// to the ledger/data.json files.
+test('assert-integrity CLI: --fix=false behaves like no --fix at all (read-only)', () => {
+  const noFlag = runCli(['assert-integrity', '--fetch-blocklist', LEDGER_PATH, '--data', DATA_PATH, '--target', 'ledger']);
+  const fixFalse = runCli(['assert-integrity', '--fetch-blocklist', LEDGER_PATH, '--data', DATA_PATH, '--target', 'ledger', '--fix=false']);
+
+  assert.equal(noFlag.status, fixFalse.status);
+  assert.equal(noFlag.stdout, fixFalse.stdout);
+});
+
 test('evidence CLI: "Ledger check" line includes an "already in data.json=<n>" count', () => {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
   const candidatesPath = path.join(tmp, 'candidates.json');
