@@ -11258,9 +11258,9 @@
     {
       "url": "https://www.reddit.com/r/tvPlus/comments/1vlzpn1/women_in_blue_las_azules_season_2_episode_1/",
       "firstSeen": "2026-09-20T02:06:02Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-20T02:06:02Z",
+      "lastAttempt": "2026-09-20T04:00:52Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -11276,9 +11276,23 @@
           "status": 403,
           "issue": "LEMA-10581",
           "note": "Firecrawl returned 403: site not supported (\"we do not support this site\")."
+        },
+        {
+          "attempt": "2026-09-20T04:00:52Z",
+          "method": "WebFetch",
+          "status": "error",
+          "issue": "LEMA-10584",
+          "note": "WebFetch unable to fetch from reddit.com (tool-level restriction)."
+        },
+        {
+          "attempt": "2026-09-20T04:00:52Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10584",
+          "note": "Firecrawl returned 403 on retry."
         }
       ]
     }
   ],
-  "lastUpdated": "2026-09-20T02:06:02Z"
+  "lastUpdated": "2026-09-20T04:00:52Z"
 }
