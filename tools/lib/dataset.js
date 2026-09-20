@@ -159,9 +159,45 @@ function assertDatasetIntegrity(dataset, { fix = false } = {}) {
   };
 }
 
+// ---- Pre-fetch data.json presence check (LEMA-10591) ----
+
+// Builds a normalized-key -> [entries] index over data.json, mirroring
+// buildLedgerIndex's shape in ledger.js. Used by lookupCandidate/lookupAll
+// to answer "is this candidate already covered?" before any fetch is
+// attempted, independent of whatever the fetch-blocklist ledger says.
+function buildDatasetIndex(dataset) {
+  const index = new Map();
+  (dataset || []).forEach((entry) => {
+    const { key } = normalizeUrl(entry.url);
+    if (!index.has(key)) index.set(key, []);
+    index.get(key).push(entry);
+  });
+  return index;
+}
+
+// Presence-only check against data.json for a single candidate URL. Purely
+// additive and orthogonal to ledger disposition: this never changes what
+// lookupCandidate returns for `disposition`, it reports a separate axis
+// alongside it. If the candidate's normalized key matches more than one
+// data.json row (a pre-existing duplicate group -- see
+// assertDatasetIntegrity above), the most recently-published row (highest
+// `ts`) is reported, so the result is deterministic without waiting for
+// that duplicate group to be merged.
+function lookupInDataJson(candidateUrl, datasetIndex) {
+  const { key } = normalizeUrl(candidateUrl);
+  const rows = datasetIndex.get(key);
+  if (!rows || rows.length === 0) {
+    return { inDataJson: false };
+  }
+  const chosen = rows.slice().sort((a, b) => (b.ts || 0) - (a.ts || 0))[0];
+  return { inDataJson: true, dataJsonTs: chosen.ts, dataJsonOutlet: chosen.outlet };
+}
+
 module.exports = {
   findDuplicateGroups,
   groupAgrees,
   mergeDatasetGroup,
   assertDatasetIntegrity,
+  buildDatasetIndex,
+  lookupInDataJson,
 };

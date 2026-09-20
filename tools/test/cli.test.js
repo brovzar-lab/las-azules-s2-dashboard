@@ -149,3 +149,59 @@ test('assert-integrity CLI: --json output is not truncated by a slow/backpressur
   assert.ok(parsed.ledger, 'expected a ledger key in the parsed result');
   assert.ok(parsed.dataset, 'expected a dataset key in the parsed result');
 });
+
+// LEMA-10591: pre-fetch data.json presence check. Same fingerprint
+// discipline as the ledger/candidates lines above (LEMA-10448), extended
+// to data.json so a dedup decision made against it is mechanically
+// auditable too.
+test('lookup CLI: stderr fingerprint line for data.json matches the actual file bytes, and --data override is honored', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  const dataPath = path.join(tmp, 'data.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(['https://example.com/covered', 'https://example.com/not-covered']));
+  fs.writeFileSync(dataPath, JSON.stringify([
+    { outlet: 'Test Outlet', headline: 'h', url: 'https://www.example.com/covered/', date: 'Sep 1, 2026', ts: 20260901, lang: 'EN', market: 'US', type: 'Entertainment', excerpt: 'e' },
+  ]));
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--data', dataPath]);
+
+  assert.equal(result.status, 0);
+  const dataRaw = fs.readFileSync(dataPath, 'utf8');
+  assert.match(result.stderr, new RegExp(`\\[lookup\\] data\\.json path=${dataPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} rows=1 sha256=${sha256(dataRaw)}`));
+
+  assert.match(result.stdout, /https:\/\/example\.com\/covered\t.*inDataJson=true dataJsonTs=20260901 dataJsonOutlet="Test Outlet"/);
+  assert.match(result.stdout, /https:\/\/example\.com\/not-covered\t.*inDataJson=false/);
+});
+
+test('lookup CLI --json: results carry inDataJson/dataJsonTs/dataJsonOutlet fields', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  const dataPath = path.join(tmp, 'data.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(['https://example.com/covered']));
+  fs.writeFileSync(dataPath, JSON.stringify([
+    { outlet: 'Test Outlet', headline: 'h', url: 'https://example.com/covered', date: 'Sep 1, 2026', ts: 20260901, lang: 'EN', market: 'US', type: 'Entertainment', excerpt: 'e' },
+  ]));
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--data', dataPath, '--json']);
+
+  assert.equal(result.status, 0);
+  const [r] = JSON.parse(result.stdout);
+  assert.equal(r.inDataJson, true);
+  assert.equal(r.dataJsonTs, 20260901);
+  assert.equal(r.dataJsonOutlet, 'Test Outlet');
+});
+
+test('evidence CLI: "Ledger check" line includes an "already in data.json=<n>" count', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  const dataPath = path.join(tmp, 'data.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(['https://example.com/covered', 'https://example.com/not-covered']));
+  fs.writeFileSync(dataPath, JSON.stringify([
+    { outlet: 'Test Outlet', headline: 'h', url: 'https://example.com/covered', date: 'Sep 1, 2026', ts: 20260901, lang: 'EN', market: 'US', type: 'Entertainment', excerpt: 'e' },
+  ]));
+
+  const result = runCli(['evidence', '--candidates', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--data', dataPath]);
+
+  assert.equal(result.status, 0);
+  assert.match(result.stdout, /- Ledger check: candidates surfaced=2, ledger-checked=2, hits=0 \(permanentSkip=0, active cooldown=0, expired cooldown retried=0\), already in data\.json=1/);
+});

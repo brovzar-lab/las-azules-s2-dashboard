@@ -1,6 +1,7 @@
 'use strict';
 
 const { normalizeUrl } = require('./normalize');
+const { buildDatasetIndex, lookupInDataJson } = require('./dataset');
 
 // Builds the URL -> entry lookup dict described in Pass 0, keyed on the
 // normalized comparison key. A well-formed ledger has exactly one row per
@@ -29,51 +30,70 @@ function pickAuthoritativeRow(rows) {
     .sort((a, b) => new Date(b.entry.lastAttempt || 0) - new Date(a.entry.lastAttempt || 0))[0].entry;
 }
 
-// Pass 0 disposition rules for a single candidate URL.
-function lookupCandidate(candidateUrl, index, now = new Date()) {
+// Pass 0 disposition rules for a single candidate URL. `datasetIndex` is
+// optional (LEMA-10591): when provided (a Map from buildDatasetIndex), the
+// result also carries `inDataJson`/`dataJsonTs`/`dataJsonOutlet` -- a
+// presence check against data.json, reported alongside `disposition` and
+// never changing it. Omitting `datasetIndex` (the pre-LEMA-10591 call
+// shape) omits those fields entirely, so existing callers see byte-
+// identical output to before this change.
+function lookupCandidate(candidateUrl, index, now = new Date(), datasetIndex = null) {
   const { key } = normalizeUrl(candidateUrl);
   const rows = index.get(key);
+  let result;
+
   if (!rows || rows.length === 0) {
-    return { url: candidateUrl, key, disposition: 'not-found' };
-  }
-  const row = pickAuthoritativeRow(rows);
+    result = { url: candidateUrl, key, disposition: 'not-found' };
+  } else {
+    const row = pickAuthoritativeRow(rows);
 
-  if (row.permanentSkip === true) {
-    return {
-      url: candidateUrl,
-      key,
-      disposition: 'permanentSkip',
-      skipReason: row.skipReason,
-      skipNote: row.skipNote,
-      reviewable: row.reviewable === true,
-    };
+    if (row.permanentSkip === true) {
+      result = {
+        url: candidateUrl,
+        key,
+        disposition: 'permanentSkip',
+        skipReason: row.skipReason,
+        skipNote: row.skipNote,
+        reviewable: row.reviewable === true,
+      };
+    } else {
+      const cooldownUntil = row.cooldownUntil ? new Date(row.cooldownUntil) : null;
+      if (cooldownUntil && cooldownUntil.getTime() > now.getTime()) {
+        result = {
+          url: candidateUrl,
+          key,
+          disposition: 'active-cooldown',
+          cooldownUntil: row.cooldownUntil,
+          failCount: row.failCount,
+        };
+      } else {
+        // cooldownUntil has passed, or is null: proceed to fetch normally
+        // (the spec's "one retry"). Also covers a row that never had a
+        // cooldown set.
+        result = {
+          url: candidateUrl,
+          key,
+          disposition: 'expired-cooldown-retry',
+          cooldownUntil: row.cooldownUntil || null,
+          failCount: row.failCount,
+        };
+      }
+    }
   }
 
-  const cooldownUntil = row.cooldownUntil ? new Date(row.cooldownUntil) : null;
-  if (cooldownUntil && cooldownUntil.getTime() > now.getTime()) {
-    return {
-      url: candidateUrl,
-      key,
-      disposition: 'active-cooldown',
-      cooldownUntil: row.cooldownUntil,
-      failCount: row.failCount,
-    };
+  if (datasetIndex) {
+    Object.assign(result, lookupInDataJson(candidateUrl, datasetIndex));
   }
-
-  // cooldownUntil has passed, or is null: proceed to fetch normally (the
-  // spec's "one retry"). Also covers a row that never had a cooldown set.
-  return {
-    url: candidateUrl,
-    key,
-    disposition: 'expired-cooldown-retry',
-    cooldownUntil: row.cooldownUntil || null,
-    failCount: row.failCount,
-  };
+  return result;
 }
 
-function lookupAll(candidates, ledger, now = new Date()) {
+// `dataset` is optional (LEMA-10591): pass the parsed data.json array to
+// have every result carry the inDataJson presence fields (see
+// lookupCandidate above). Omit it to get the pre-LEMA-10591 output shape.
+function lookupAll(candidates, ledger, now = new Date(), dataset = null) {
   const index = buildLedgerIndex(ledger);
-  return candidates.map((c) => lookupCandidate(typeof c === 'string' ? c : c.url, index, now));
+  const datasetIndex = dataset ? buildDatasetIndex(dataset) : null;
+  return candidates.map((c) => lookupCandidate(typeof c === 'string' ? c : c.url, index, now, datasetIndex));
 }
 
 // ---- Step 10: post-write ledger integrity assertion ----

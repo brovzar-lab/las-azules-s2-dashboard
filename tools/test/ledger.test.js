@@ -16,6 +16,76 @@ const FIXTURE_CANDIDATES = JSON.parse(
 
 const NOW = new Date('2026-09-10T00:00:00Z');
 
+// LEMA-10591: minimal synthetic data.json, one row deliberately keyed to
+// the same normalized URL as FIXTURE_CANDIDATES' expired-cooldown-story
+// entry (via a www/no-trailing-slash variant, same normalization the
+// ledger side already relies on) so the "already in data.json" axis and
+// the ledger `disposition` axis can be checked as independent of each
+// other. Everything else in FIXTURE_CANDIDATES is deliberately absent
+// from this dataset.
+const FIXTURE_DATASET_FOR_LOOKUP = [
+  {
+    outlet: 'Some Outlet',
+    headline: 'Already-covered story',
+    url: 'https://www.example.com/news/expired-cooldown-story',
+    date: 'Sep 5, 2026',
+    ts: 20260905,
+    lang: 'EN',
+    market: 'US',
+    type: 'Entertainment',
+    excerpt: 'Already sitting in data.json under a www/no-trailing-slash variant.',
+  },
+];
+
+test('lookup: dataset param supplied -- inDataJson=true for a candidate already in data.json, disposition unchanged', () => {
+  const results = lookupAll(FIXTURE_CANDIDATES, FIXTURE_LEDGER, NOW, FIXTURE_DATASET_FOR_LOOKUP);
+  const r = results.find((x) => x.url === 'https://example.com/news/expired-cooldown-story/');
+  assert.equal(r.disposition, 'expired-cooldown-retry'); // unaffected by the new axis
+  assert.equal(r.inDataJson, true);
+  assert.equal(r.dataJsonTs, 20260905);
+  assert.equal(r.dataJsonOutlet, 'Some Outlet');
+});
+
+test('lookup: dataset param supplied -- inDataJson=false for a candidate not in data.json', () => {
+  const results = lookupAll(FIXTURE_CANDIDATES, FIXTURE_LEDGER, NOW, FIXTURE_DATASET_FOR_LOOKUP);
+  const r = results.find((x) => x.url === 'https://example.com/news/brand-new-story');
+  assert.equal(r.disposition, 'not-found');
+  assert.equal(r.inDataJson, false);
+  assert.equal(r.dataJsonTs, undefined);
+  assert.equal(r.dataJsonOutlet, undefined);
+});
+
+test('lookup: dataset param omitted -- output has no inDataJson field at all (backward compatible)', () => {
+  const results = lookupAll(FIXTURE_CANDIDATES, FIXTURE_LEDGER, NOW);
+  for (const r of results) {
+    assert.equal('inDataJson' in r, false);
+    assert.equal('dataJsonTs' in r, false);
+    assert.equal('dataJsonOutlet' in r, false);
+  }
+});
+
+test('lookup: a data.json duplicate group (same normalized key, two rows) resolves deterministically to the most recent ts', () => {
+  const datasetWithDupe = [
+    ...FIXTURE_DATASET_FOR_LOOKUP,
+    {
+      outlet: 'Older Duplicate Outlet',
+      headline: 'Same story, older crawl',
+      url: 'https://example.com/news/expired-cooldown-story',
+      date: 'Sep 1, 2026',
+      ts: 20260901,
+      lang: 'EN',
+      market: 'US',
+      type: 'Entertainment',
+      excerpt: 'Earlier duplicate of the same story.',
+    },
+  ];
+  const results = lookupAll(FIXTURE_CANDIDATES, FIXTURE_LEDGER, NOW, datasetWithDupe);
+  const r = results.find((x) => x.url === 'https://example.com/news/expired-cooldown-story/');
+  assert.equal(r.inDataJson, true);
+  assert.equal(r.dataJsonTs, 20260905); // the more recent of the two rows, not the first one in the array
+  assert.equal(r.dataJsonOutlet, 'Some Outlet');
+});
+
 test('lookup: permanentSkip disposition, matched via a www/trailing-slash variant', () => {
   const results = lookupAll(FIXTURE_CANDIDATES, FIXTURE_LEDGER, NOW);
   const r = results.find((x) => x.url === 'https://www.example.com/news/permanent-skip-story');

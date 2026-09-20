@@ -83,12 +83,14 @@ function cmdNormalize(positional) {
 function cmdLookup(positional, flags) {
   const candidatesPath = positional[0];
   if (!candidatesPath) {
-    console.error('Usage: sweep-integrity.js lookup <candidates.json> [--fetch-blocklist path] [--json] [--strict]');
+    console.error('Usage: sweep-integrity.js lookup <candidates.json> [--fetch-blocklist path] [--data path] [--json] [--strict]');
     process.exit(2);
   }
   const ledgerPath = flags['fetch-blocklist'] || DEFAULT_LEDGER_PATH;
+  const dataPath = flags.data || DEFAULT_DATA_PATH;
   const { raw: candidatesRaw, value: candidates } = readJsonWithRaw(candidatesPath);
   const { raw: ledgerRaw, value: ledger } = readJsonWithRaw(ledgerPath);
+  const { raw: dataRaw, value: dataset } = readJsonWithRaw(dataPath);
 
   // LEMA-10448: emit a mechanically-comparable fingerprint of both input
   // files on every run, to stderr only (stdout's one-line-per-candidate
@@ -99,11 +101,18 @@ function cmdLookup(positional, flags) {
   // input wasn't preserved, so nobody could check).
   const ledgerEntries = Array.isArray(ledger && ledger.entries) ? ledger.entries : null;
   const candidateList = Array.isArray(candidates) ? candidates : null;
+  // LEMA-10591: same fingerprint discipline extended to data.json, since a
+  // pre-fetch dedup decision made against an un-fingerprinted file is the
+  // same un-auditable shape LEMA-10447/LEMA-10448 fixed for the ledger.
+  const datasetEntries = Array.isArray(dataset) ? dataset : null;
   console.error(
     `[lookup] ledger path=${ledgerPath} rows=${ledgerEntries ? ledgerEntries.length : 'INVALID'} sha256=${sha256(ledgerRaw)}`
   );
   console.error(
     `[lookup] candidates path=${candidatesPath} count=${candidateList ? candidateList.length : 'INVALID'} sha256=${sha256(candidatesRaw)}`
+  );
+  console.error(
+    `[lookup] data.json path=${dataPath} rows=${datasetEntries ? datasetEntries.length : 'INVALID'} sha256=${sha256(dataRaw)}`
   );
 
   if (flags.strict) {
@@ -119,7 +128,7 @@ function cmdLookup(positional, flags) {
     }
   }
 
-  const results = lookupAll(candidates, ledger);
+  const results = lookupAll(candidates, ledger, new Date(), datasetEntries || []);
 
   if (flags.strict && results.length !== candidates.length) {
     // Defense in depth: lookupAll is a straight .map() today so this can't
@@ -141,7 +150,10 @@ function cmdLookup(positional, flags) {
       : r.disposition === 'active-cooldown' || r.disposition === 'expired-cooldown-retry'
         ? ` cooldownUntil=${r.cooldownUntil || 'null'} failCount=${r.failCount}`
         : '';
-    console.log(`${r.url}\t${r.disposition}${extra}`);
+    const dataJsonExtra = r.inDataJson
+      ? ` inDataJson=true dataJsonTs=${r.dataJsonTs} dataJsonOutlet=${JSON.stringify(r.dataJsonOutlet)}`
+      : ' inDataJson=false';
+    console.log(`${r.url}\t${r.disposition}${extra}${dataJsonExtra}`);
   }
 }
 
@@ -238,21 +250,28 @@ function cmdEvidence(flags) {
     process.exit(2);
   }
   const ledgerPath = flags['fetch-blocklist'] || DEFAULT_LEDGER_PATH;
+  const dataPath = flags.data || DEFAULT_DATA_PATH;
 
   const candidates = readJson(candidatesPath);
   const ledger = readJson(ledgerPath);
-  const lookups = lookupAll(candidates, ledger);
+  const dataset = readJson(dataPath);
+  const lookups = lookupAll(candidates, ledger, new Date(), dataset);
 
-  const counts = { permanentSkip: 0, activeCooldown: 0, expiredCooldownRetry: 0, notFound: 0 };
+  // LEMA-10591: alreadyInDataJson is deliberately not folded into `hits` --
+  // it's a separate axis from ledger disposition (a candidate can be
+  // not-found in the ledger and still already be in data.json), so mixing
+  // it into the ledger hit-rate count would misstate both numbers.
+  const counts = { permanentSkip: 0, activeCooldown: 0, expiredCooldownRetry: 0, notFound: 0, alreadyInDataJson: 0 };
   for (const r of lookups) {
     if (r.disposition === 'permanentSkip') counts.permanentSkip++;
     else if (r.disposition === 'active-cooldown') counts.activeCooldown++;
     else if (r.disposition === 'expired-cooldown-retry') counts.expiredCooldownRetry++;
     else counts.notFound++;
+    if (r.inDataJson) counts.alreadyInDataJson++;
   }
   const hits = counts.permanentSkip + counts.activeCooldown + counts.expiredCooldownRetry;
 
-  console.log(`- Ledger check: candidates surfaced=${candidates.length}, ledger-checked=${lookups.length}, hits=${hits} (permanentSkip=${counts.permanentSkip}, active cooldown=${counts.activeCooldown}, expired cooldown retried=${counts.expiredCooldownRetry})`);
+  console.log(`- Ledger check: candidates surfaced=${candidates.length}, ledger-checked=${lookups.length}, hits=${hits} (permanentSkip=${counts.permanentSkip}, active cooldown=${counts.activeCooldown}, expired cooldown retried=${counts.expiredCooldownRetry}), already in data.json=${counts.alreadyInDataJson}`);
 
   const assertResult = runAssertIntegrity(flags);
   const l = assertResult.ledger;
