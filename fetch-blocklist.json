@@ -11234,7 +11234,51 @@
           "note": "Highxtar red-carpet fashion roundup for the 2026 Primetime Emmy Awards (Zendaya, Selena Gomez, Elle Fanning, etc.). WebFetch confirmed no mention of Las Azules, Women in Blue, or Bárbara Mori anywhere."
         }
       ]
+    },
+    {
+      "url": "https://www.elcolombiano.com/entretenimiento/television/estrenos-netflix-hbo-max-prime-video-apple-tv-septiembre-2026-peliculas-series-JC40535905",
+      "firstSeen": "2026-09-20T02:06:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-20T02:06:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Colombiano roundup of September 2026 streaming releases across Netflix, HBO Max, Prime Video and Apple TV. Las Azules appears only as an embedded \"Le puede interesar\" (related-article) recommendation widget linking to El Colombianos own prior Las Azules piece (already tracked in data.json), not as roundup content of its own; the roundup body itself does not cover Las Azules. Surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-20T02:06:02Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10581",
+          "note": "WebFetch succeeded; confirmed the only Las Azules reference is a related-article widget, not roundup content."
+        }
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/tvPlus/comments/1vlzpn1/women_in_blue_las_azules_season_2_episode_1/",
+      "firstSeen": "2026-09-20T02:06:02Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-20T02:06:02Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-20T02:06:02Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10581",
+          "note": "WebFetch blocked: unable to fetch from reddit.com."
+        },
+        {
+          "attempt": "2026-09-20T02:06:02Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10581",
+          "note": "Firecrawl returned 403: site not supported (\"we do not support this site\")."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-19T22:06:41Z"
+  "lastUpdated": "2026-09-20T02:06:02Z"
 }
