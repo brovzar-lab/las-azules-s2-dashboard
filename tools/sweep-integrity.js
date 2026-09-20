@@ -24,6 +24,13 @@ const { normalizeUrl } = require('./lib/normalize');
 const { lookupAll } = require('./lib/ledger');
 const { assertLedgerIntegrity } = require('./lib/ledger');
 const { assertDatasetIntegrity } = require('./lib/dataset');
+const {
+  ledgerOverlapCheck,
+  deriveListingFamilies,
+  surfaceFamilyCheck,
+  runDateProxyCheck,
+  getFirstSeenDates,
+} = require('./lib/audit');
 
 const REPO_ROOT = path.join(__dirname, '..');
 const DEFAULT_LEDGER_PATH = path.join(REPO_ROOT, 'fetch-blocklist.json');
@@ -133,6 +140,7 @@ const KNOWN_FLAGS = {
   lookup: ['fetch-blocklist', 'data', 'json', 'strict'],
   'assert-integrity': ['fetch-blocklist', 'data', 'target', 'fix', 'json'],
   evidence: ['candidates', 'fetch-blocklist', 'data', 'fix'],
+  audit: ['fetch-blocklist', 'data', 'repo', 'json'],
 };
 
 // Flags that gate an on/off code path rather than carry a path/enum value.
@@ -432,6 +440,115 @@ function cmdEvidence(flags) {
   }
 }
 
+// LEMA-10625: re-checks every existing data.json row against the ledger's
+// exclusion rules, closing the gap where Rules D-I's retroactivity clauses
+// never fire because no pass in the Media Sweep routine performs a
+// full-feed check, and Step 4a2's pre-fetch dedup gate (LEMA-10590) means a
+// URL already in data.json is never re-fetched/re-classified by the normal
+// path either. Report-only: never edits data.json or the ledger, never
+// makes an editorial call. See tools/lib/audit.js for the three checks.
+function cmdAudit(flags) {
+  const ledgerPath = flags['fetch-blocklist'] || DEFAULT_LEDGER_PATH;
+  const dataPath = flags.data || DEFAULT_DATA_PATH;
+  const repoDir = flags.repo || path.dirname(dataPath);
+
+  const { raw: ledgerRaw, value: ledger } = readJsonWithRaw(ledgerPath, 'fetch-blocklist ledger');
+  const { raw: dataRaw, value: dataset } = readJsonWithRaw(dataPath, 'data.json');
+
+  const ledgerEntries = Array.isArray(ledger && ledger.entries) ? ledger.entries : [];
+  const datasetEntries = Array.isArray(dataset) ? dataset : [];
+
+  // Same stderr input fingerprints as `lookup` (LEMA-10448), so two audit
+  // runs claimed to be against the same files can be diffed mechanically.
+  console.error(`[audit] fetch-blocklist path=${ledgerPath} rows=${ledgerEntries.length} sha256=${sha256(ledgerRaw)}`);
+  console.error(`[audit] data.json path=${dataPath} rows=${datasetEntries.length} sha256=${sha256(dataRaw)}`);
+
+  const ledgerOverlap = ledgerOverlapCheck(datasetEntries, ledgerEntries);
+
+  const families = deriveListingFamilies(ledgerEntries);
+  const surfaceFamilyMatch = surfaceFamilyCheck(datasetEntries, families);
+
+  const relDataPath = path.relative(repoDir, dataPath) || path.basename(dataPath);
+  const gitResult = getFirstSeenDates(repoDir, relDataPath);
+  const runDateProxySuspects = gitResult.skipped ? [] : runDateProxyCheck(datasetEntries, gitResult.firstSeenDates);
+  console.error(
+    gitResult.skipped
+      ? `[audit] run-date proxy check skipped: ${gitResult.reason}`
+      : `[audit] run-date proxy check: ${runDateProxySuspects.length} suspect(s) from ${datasetEntries.length} row(s)`
+  );
+
+  const familyMatchUrls = new Set(surfaceFamilyMatch.map((f) => f.url));
+  const intersection = runDateProxySuspects.filter((f) => familyMatchUrls.has(f.url));
+
+  const result = {
+    generatedAt: new Date().toISOString(),
+    rowsChecked: datasetEntries.length,
+    checks: {
+      ledgerOverlap: {
+        description:
+          'Assertable: data.json rows whose normalized key matches a permanentSkip ledger row. A row cannot legitimately be both live coverage and a permanent exclusion.',
+        count: ledgerOverlap.length,
+        findings: ledgerOverlap,
+      },
+      surfaceFamilyMatch: {
+        description:
+          'Advisory, high signal: data.json rows whose host+path shape match a family the ledger has already permanentSkipped (editorial_listing_or_database) at other locales/paths. Families are derived from the ledger, not hard-coded.',
+        familiesConsidered: families.length,
+        count: surfaceFamilyMatch.length,
+        findings: surfaceFamilyMatch,
+      },
+      runDateProxySuspects: {
+        description:
+          'Advisory only, never gates a run: rows whose ts equals the UTC date of the git commit that introduced them (the Rule A firstSeen-substitution proxy). Noisy on its own -- a daily sweep naturally picks up same-day news.',
+        skipped: gitResult.skipped,
+        reason: gitResult.reason,
+        count: runDateProxySuspects.length,
+        findings: runDateProxySuspects,
+      },
+      intersection: {
+        description:
+          'Advisory, nearly conclusive: rows flagged by BOTH surfaceFamilyMatch and runDateProxySuspects. This is the exact signal combination that made the ES/LU tv.apple.com call on LEMA-10623.',
+        count: intersection.length,
+        findings: intersection,
+      },
+    },
+  };
+
+  if (flags.json) {
+    console.log(JSON.stringify(result, null, 2));
+  } else {
+    console.log(`- Ledger overlap (assertable): ${ledgerOverlap.length} row(s)`);
+    for (const f of ledgerOverlap) {
+      console.log(`  - ${f.url} -- ledger: ${f.ledgerUrl} skipReason=${f.skipReason} reviewable=${f.reviewable}`);
+    }
+    console.log(
+      `- Surface-family match (advisory): ${surfaceFamilyMatch.length} row(s) against ${families.length} derived listing-page famil${families.length === 1 ? 'y' : 'ies'}`
+    );
+    for (const f of surfaceFamilyMatch) {
+      const fam = f.matchedFamilies.map((m) => `${m.host}/…/${m.keyword}/… (precedent=${m.precedentCount})`).join('; ');
+      console.log(`  - ${f.url} -- ${fam}`);
+    }
+    if (gitResult.skipped) {
+      console.log(`- Run-date proxy suspects (advisory): skipped -- ${gitResult.reason}`);
+    } else {
+      console.log(`- Run-date proxy suspects (advisory, never gates): ${runDateProxySuspects.length} row(s)`);
+      for (const f of runDateProxySuspects) {
+        console.log(`  - ${f.url} ts=${f.ts} firstSeenCommitDate=${f.firstSeenCommitDate}`);
+      }
+    }
+    console.log(`- Intersection (surface-family AND run-date proxy -- near-conclusive): ${intersection.length} row(s)`);
+    for (const f of intersection) {
+      console.log(`  - ${f.url}`);
+    }
+  }
+
+  // Only the assertable check (ledger overlap) affects exit code, same
+  // pass/fail contract as assert-integrity's structural checks. Advisory
+  // findings (checks 2/3, and their intersection) must never produce a
+  // failing exit on their own, per the ticket's explicit requirement.
+  process.exitCode = ledgerOverlap.length > 0 ? 1 : 0;
+}
+
 function main() {
   const [, , command, ...rest] = process.argv;
   const { positional, flags } = parseArgs(rest);
@@ -448,8 +565,10 @@ function main() {
       return cmdAssertIntegrity(flags);
     case 'evidence':
       return cmdEvidence(flags);
+    case 'audit':
+      return cmdAudit(flags);
     default:
-      console.error('Usage: sweep-integrity.js <normalize|lookup|assert-integrity|evidence> ...');
+      console.error('Usage: sweep-integrity.js <normalize|lookup|assert-integrity|evidence|audit> ...');
       process.exit(2);
   }
 }

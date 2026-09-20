@@ -143,6 +143,66 @@ When a duplicate group is escalated (disagrees), the printed line includes a
 since which of "opened / re-observed / suppressed" applies depends on searching existing
 issues, which this tool deliberately does not do.
 
+### `audit [--fetch-blocklist path] [--data path] [--repo path] [--json]`
+
+Re-checks every **existing** `data.json` row against the ledger's exclusion rules
+([LEMA-10625](/LEMA/issues/LEMA-10625)). Every other command in this tool only looks at
+candidates about to be fetched; nothing re-examines a row once it has already landed in
+`data.json`, and Step 4a2's pre-fetch dedup gate (LEMA-10591/10592) means a URL already in
+`data.json` is never re-fetched either, so a row admitted before a rule hardened is
+structurally invisible to every subsequent sweep. Two `tv.apple.com` locale show-page rows
+survived 18 days and two cleanup waves this way -- see [LEMA-10623](/LEMA/issues/LEMA-10623).
+
+Read-only, report-only: never edits `data.json` or `fetch-blocklist.json`, never makes an
+editorial call. Same division of labour as the rest of this kit -- mechanics here, judgment
+with the agent. Three checks:
+
+1. **`ledgerOverlap` (assertable).** `data.json` rows whose normalized key matches a
+   `permanentSkip` ledger row. A row cannot legitimately be both live coverage and a permanent
+   exclusion -- this is the only one of the three checks that affects the exit code.
+2. **`surfaceFamilyMatch` (advisory, high signal).** `data.json` rows whose host+path shape
+   match a family the ledger has already `permanentSkip`ped (`editorial_listing_or_database`
+   only -- see below) at other locales/paths. Families are *derived from the live ledger*, not
+   hard-coded, so this stays current as new locales get ledgered. A "family" is a `(host,
+   keyword)` pair: a literal path segment (not a locale code, not an opaque id) shared by at
+   least 2 `editorial_listing_or_database` rows on the same host. Restricted to that one
+   skipReason deliberately: other reasons (`editorial_undateable`,
+   `editorial_off_topic_false_positive`, etc.) are per-article judgment calls that can happen to
+   share a path keyword with genuine coverage elsewhere on the same host -- e.g. several
+   `imdb.com/news/...` ledger rows exist for unrelated individual reasons, while `data.json`
+   also carries 12+ legitimate `imdb.com/news/...` rows. Only Rule F
+   (`editorial_listing_or_database`, "no written content, pure database/listing page") is a
+   structural, shape-based judgment a URL-shape family can legitimately generalize from.
+3. **`runDateProxySuspects` (advisory only, never gates a run).** Rows whose `ts` equals the
+   UTC date of the git commit that first introduced them in `data.json` -- the Rule A
+   `firstSeen`-substitution proxy. Noisy on its own (a daily sweep naturally picks up same-day
+   news); intersected with check 2 it is nearly conclusive, and that intersection is reported
+   separately as `checks.intersection`. Needs git history: degrades cleanly (`skipped: true`,
+   with a `reason`, checks 1/2 still run) when the checkout isn't a git repo, is shallow, or the
+   file has no history there -- never crashes, never silently drops the check.
+
+```
+$ node tools/sweep-integrity.js audit
+- Ledger overlap (assertable): 3 row(s)
+  - https://www.youtube.com/watch?v=wUvSOg3pNmY -- ledger: https://youtube.com/watch?v=wUvSOg3pNmY skipReason=editorial_personal_repost reviewable=false
+  ...
+- Surface-family match (advisory): 4 row(s) against 27 derived listing-page families
+  - https://tv.apple.com/lu/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39 -- tv.apple.com/…/show/… (precedent=9)
+  ...
+- Run-date proxy suspects (advisory, never gates): 73 row(s)
+  ...
+- Intersection (surface-family AND run-date proxy -- near-conclusive): 2 row(s)
+  - https://tv.apple.com/lu/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39
+  - https://tv.apple.com/es/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39
+```
+
+`--repo path` overrides where check 3 runs its `git log`/`git show` calls (defaults to the
+directory containing `--data`); only useful for pointing the check at a different checkout,
+e.g. in tests. Prints the same `[audit] ... rows=<N> sha256=<hash>` stderr fingerprints as
+`lookup` (LEMA-10448) for both input files. Exit is **1** only when `ledgerOverlap` is
+non-empty -- the two advisory checks and their intersection never affect the exit code, per
+the ticket's explicit requirement.
+
 ## Flag parsing (LEMA-10595)
 
 Every command has an explicit allow-list of flag names. A flag outside it -- a typo
