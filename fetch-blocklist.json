@@ -11924,7 +11924,47 @@
           "note": "Independently re-fetched the live page; confirmed evergreen press-kit template matching uk sibling -- no byline/dateline/publish-or-updated timestamp, only the show's own release date in body copy."
         }
       ]
+    },
+    {
+      "url": "https://www.geo.tv/latest/682938-apple-tv-finally-sets-spring-2027-release-for-jessica-chastains-the-savant",
+      "firstSeen": "2026-09-21T00:20:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-21T00:20:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Geo.tv article about \"The Savant\", a different Apple TV political thriller starring Jessica Chastain, covering its Spring 2027 release date. No mention of Las Azules or Women in Blue anywhere in the article; surfaced only as a broad Exa neural-search match on generic \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-21T00:20:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10629",
+          "note": "WebFetch succeeded; confirmed article is about a different show (The Savant), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://collider.com/rebecca-ferguson-silo-streaming-success-apple-tv-september-2026/",
+      "firstSeen": "2026-09-21T00:20:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-21T00:20:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Collider article about \"Silo\", a different Apple TV sci-fi thriller starring Rebecca Ferguson, covering its streaming success and final season. No mention of Las Azules or Women in Blue anywhere in the article; surfaced only as a broad Exa neural-search match on generic \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-21T00:20:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10629",
+          "note": "WebFetch succeeded; confirmed article is about a different show (Silo), unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-20T22:37:58.000Z"
+  "lastUpdated": "2026-09-21T00:20:00Z"
 }
