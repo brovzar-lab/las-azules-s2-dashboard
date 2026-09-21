@@ -12004,7 +12004,47 @@
           "note": "Firecrawl returned a blanket 'we do not support this site' refusal for tiktok.com, same documented exhaustion pattern as facebook.com under Rule A. Full fallback-chain failure; not added to data.json this run."
         }
       ]
+    },
+    {
+      "url": "https://www.mensjournal.com/entertainment/apple-tv-revives-jessica-chastain-series-it-pulled-just-3-days-before-premiere",
+      "firstSeen": "2026-09-21T04:03:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-21T04:03:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Men's Journal article about Jessica Chastain's Apple TV thriller \"The Savant\" (pulled/delayed, now reinstated), published Sep 20, 2026. No mention of Las Azules or Women in Blue anywhere in the piece; surfaced only via Exa's broad \"Las Azules Women in Blue Season 2 Apple TV\" query matching on generic \"Apple TV series\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-21T04:03:01Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10639",
+          "note": "WebFetch returned 403; Firecrawl scrape succeeded and confirmed the article is about \"The Savant\" (Jessica Chastain), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.thedailybeast.com/obsessed/oscar-winner-jessica-chastains-show-delayed-again-after-charlie-kirk-fallout/",
+      "firstSeen": "2026-09-21T04:03:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-21T04:03:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "The Daily Beast article about Jessica Chastain's Apple TV series \"The Savant\" being delayed following the Charlie Kirk fallout, published Sep 20, 2026. No mention of Las Azules or Women in Blue anywhere in the piece; surfaced only via Exa's broad \"Las Azules Women in Blue Season 2 Apple TV\" query matching on generic \"Apple TV series\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-21T04:03:01Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10639",
+          "note": "WebFetch succeeded; confirmed article is about \"The Savant\" (Jessica Chastain), unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-21T00:20:00Z"
+  "lastUpdated": "2026-09-21T04:03:01Z"
 }
