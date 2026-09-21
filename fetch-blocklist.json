@@ -12130,7 +12130,35 @@
           "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 1. @postcreditscenepodcast is a podcast/media outlet account (editorial-brand per Rule B), not a fan-repost -- relevance gate does not apply; this is a pure fetch failure, candidate remains eligible on retry."
         }
       ]
+    },
+    {
+      "url": "https://facebook.com/PoluxWeb/posts/1468116105324773",
+      "firstSeen": "2026-09-21T20:04:10Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-21T20:04:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "On-topic coverage (PoluxWeb is a legitimate entertainment/lifestyle news outlet, poluxweb.com, covering music/film/TV/games/sports/tech -- confirmed via corroborating WebSearch, passes Rule B relevance gate as a publisher/editorial-brand account, not a fan repost or vendor). WebFetch returned real post content (headline announcing S2 return around Aug 12) but no visible publish-date element. Firecrawl scrape returned success:false, \"we do not support this site\" -- the same documented blanket policy refusal for facebook.com seen on every other Facebook URL in this ledger, a valid exhaustion of the method per Rule A, not a per-URL technical failure. No day-level date is present in the URL path (only descriptive slug text referencing Aug 12 premiere, not a structured dated path), so Rule A amendment 4 does not apply. Both WebFetch and Firecrawl exhausted, no real sourced date recoverable. Skipped as editorial_undateable, reviewable=true so this stays listable for a future manual date lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-21T20:04:10Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10762",
+          "note": "Real post content returned (PoluxWeb entertainment-news account, headline on Las Azules S2 return). No publish-date field visible in fetched body."
+        },
+        {
+          "attempt": "2026-09-21T20:04:10Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10762",
+          "note": "success:false, error: \"We apologize for the inconvenience but we do not support this site.\" Blanket facebook.com policy block, documented exhaustion of method per Rule A."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-21T14:07:40Z"
+  "lastUpdated": "2026-09-21T20:04:10Z"
 }
