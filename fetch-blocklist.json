@@ -811,8 +811,8 @@
       "lastAttempt": "2026-09-04T04:01:14Z",
       "cooldownUntil": null,
       "permanentSkip": true,
-      "skipReason": "editorial_undateable",
-      "skipNote": "Spain-locale (es-es) IMDb title page for Las Azules (tt20516590), surfaced by Firecrawl BR-market pass (LEMA-9657). WebFetch failed with 403. Firecrawl scrape returned 200; body is largely an ad-blocker error page (s.amazon-adsystem.com is blocked) interleaved with real title/rating/popularity content, but no publish/update date field anywhere in body or metadata (only msvalidate.01 and timezone present). Same evergreen title/database-page pattern as the existing imdb.com/de/title/tt20516590/ ledger entry. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted; note that sibling locale variants (es/, it/, base) already in data.json were dated using the sweep crawl date under an earlier, looser standard and are not being retroactively corrected here. Both WebFetch and Firecrawl exhausted for this locale variant. reviewable=true for a future manual lookup.",
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Spain-locale (es-es) IMDb title page for Las Azules (tt20516590), surfaced by Firecrawl BR-market pass (LEMA-9657). WebFetch failed with 403. Firecrawl scrape returned 200; body is largely an ad-blocker error page (s.amazon-adsystem.com is blocked) interleaved with real title/rating/popularity content, but no publish/update date field anywhere in body or metadata (only msvalidate.01 and timezone present). Same evergreen title/database-page pattern as the existing imdb.com/de/title/tt20516590/ ledger entry. Per Rule A (LEMA-9642), no proxy/approximated date may be substituted; note that sibling locale variants (es/, it/, base) already in data.json were dated using the sweep crawl date under an earlier, looser standard and are not being retroactively corrected here. Both WebFetch and Firecrawl exhausted for this locale variant. reviewable=true for a future manual lookup. UPDATE 2026-09-21 (LEMA-10638, per Rule F clarification LEMA-10632/CEO ruling LEMA-10630, adopted 2026-09-21): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F). imdb.com/title/* at any locale/depth is a named Rule F surface family regardless of dateability; this locale variant was missed when the sibling https://www.imdb.com/it/title/tt20516590/ row was reclassified on LEMA-10217. reviewable dropped (was never a top-level field on this row): Rule F entries are not coverage at all.",
       "history": [
         {
           "attempt": "2026-09-04T04:01:14Z",
@@ -839,6 +839,13 @@
           "status": 200,
           "issue": "LEMA-9861",
           "note": "Static IMDb title/show page, no publish date. Undateable catalog page."
+        },
+        {
+          "attempt": "2026-09-21T02:06:38Z",
+          "method": "retroactive-reclassification",
+          "status": null,
+          "issue": "LEMA-10638",
+          "note": "Rule F clarification (LEMA-10632) retroactive fix: skipReason editorial_undateable -> editorial_listing_or_database. No data.json entry existed for this URL to remove."
         }
       ]
     },
@@ -9918,9 +9925,9 @@
     {
       "url": "https://www.youtube.com/watch?v=KfrXr1deaCY",
       "firstSeen": "2026-09-17T18:00:00Z",
-      "failCount": 1,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-17T18:00:00Z",
+      "failCount": 2,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-21T02:06:38Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
@@ -9939,6 +9946,13 @@
           "status": 200,
           "issue": "LEMA-10457",
           "note": "Firecrawl returned the YouTube page shell with \"Video unavailable -- This video is no longer available because the YouTube account associated with this video has been terminated.\" Full fallback-chain failure: no real video content recoverable by either method. Not added to data.json this run."
+        },
+        {
+          "attempt": "2026-09-21T02:06:38Z",
+          "method": "WebFetch+Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10638",
+          "note": "Re-attempted per expired-cooldown-retry. WebFetch returned only YouTube footer boilerplate. Firecrawl confirmed the same terminated-account placeholder as LEMA-10457. Full fallback-chain failure again; failCount now 2."
         }
       ]
     },
@@ -11961,6 +11975,33 @@
           "status": 200,
           "issue": "LEMA-10629",
           "note": "WebFetch succeeded; confirmed article is about a different show (Silo), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/las-azules-temporada-2-cap-3",
+      "firstSeen": "2026-09-21T02:06:38Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-21T02:06:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-09-21T02:06:38Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10638",
+          "note": "WebFetch returned only the generic TikTok homepage shell ('TikTok - Make Your Day'), no discover-page content."
+        },
+        {
+          "attempt": "2026-09-21T02:06:38Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10638",
+          "note": "Firecrawl returned a blanket 'we do not support this site' refusal for tiktok.com, same documented exhaustion pattern as facebook.com under Rule A. Full fallback-chain failure; not added to data.json this run."
         }
       ]
     }
