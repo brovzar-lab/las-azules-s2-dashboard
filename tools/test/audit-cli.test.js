@@ -133,6 +133,7 @@ test('audit --json: reports ledgerOverlap, surfaceFamilyMatch, runDateProxySuspe
 
   assert.equal(parsed.checks.ledgerOverlap.count, 1);
   assert.equal(parsed.checks.ledgerOverlap.findings[0].url, 'https://www.youtube.com/watch?v=abc123');
+  assert.equal(parsed.checks.ledgerOverlapAdvisory.count, 0, 'no redundant-syndication overlap in this fixture');
 
   assert.equal(parsed.checks.surfaceFamilyMatch.count, 1);
   assert.equal(parsed.checks.surfaceFamilyMatch.findings[0].url, 'https://tv.apple.com/es/show/las-azules/umc.cmc.ghi999999');
@@ -163,6 +164,102 @@ test('audit: exits 0 when ledgerOverlap is empty, even with advisory findings pr
   const parsed = JSON.parse(result.stdout);
   assert.equal(parsed.checks.ledgerOverlap.count, 0);
   assert.equal(parsed.checks.surfaceFamilyMatch.count, 1, 'advisory finding present but must not fail the exit');
+
+  fs.rmSync(tmp, { recursive: true, force: true });
+});
+
+// ---- LEMA-10634: editorial_redundant_syndication overlap must not gate ----
+
+test('audit: an editorial_redundant_syndication overlap does NOT gate the exit code and lands in ledgerOverlapAdvisory', () => {
+  const tmp = mkRepo();
+  const ledgerPath = writeLedger(tmp, [
+    {
+      url: 'https://m.imdb.com/news/ni64735557/?ref_=tt_nwr_1',
+      permanentSkip: true,
+      skipReason: 'editorial_redundant_syndication',
+      reviewable: false,
+      failCount: 0,
+      history: [],
+    },
+  ]);
+  const dataPath = writeData(tmp, [
+    {
+      outlet: 'IMDb',
+      headline: 'Canonical article',
+      url: 'https://www.imdb.com/news/ni64735557/',
+      date: 'Sep 2, 2026',
+      ts: 20260902,
+      lang: 'EN',
+      market: 'US',
+      type: 'Entertainment',
+      excerpt: 'x',
+    },
+  ]);
+  commit(tmp, 'add canonical row', '2026-09-02T00:00:00Z');
+
+  const result = runCli(['audit', '--data', dataPath, '--fetch-blocklist', ledgerPath, '--json']);
+  assert.equal(result.status, 0, 'redundant-syndication overlap must not fail the exit');
+  const parsed = JSON.parse(result.stdout);
+  assert.equal(parsed.checks.ledgerOverlap.count, 0, 'must not appear in the assertable bucket');
+  assert.equal(parsed.checks.ledgerOverlapAdvisory.count, 1);
+  assert.equal(parsed.checks.ledgerOverlapAdvisory.findings[0].url, 'https://www.imdb.com/news/ni64735557/');
+  assert.equal(parsed.checks.ledgerOverlapAdvisory.findings[0].skipReason, 'editorial_redundant_syndication');
+
+  fs.rmSync(tmp, { recursive: true, force: true });
+});
+
+test('audit: a non-syndication skipReason overlap still gates the exit code, alongside an unrelated redundant_syndication row', () => {
+  const tmp = mkRepo();
+  const ledgerPath = writeLedger(tmp, [
+    {
+      url: 'https://m.imdb.com/news/ni64735557/?ref_=tt_nwr_1',
+      permanentSkip: true,
+      skipReason: 'editorial_redundant_syndication',
+      reviewable: false,
+      failCount: 0,
+      history: [],
+    },
+    {
+      url: 'https://youtube.com/watch?v=abc123',
+      permanentSkip: true,
+      skipReason: 'editorial_personal_repost',
+      failCount: 0,
+      history: [],
+    },
+  ]);
+  const dataPath = writeData(tmp, [
+    {
+      outlet: 'IMDb',
+      headline: 'Canonical article',
+      url: 'https://www.imdb.com/news/ni64735557/',
+      date: 'Sep 2, 2026',
+      ts: 20260902,
+      lang: 'EN',
+      market: 'US',
+      type: 'Entertainment',
+      excerpt: 'x',
+    },
+    {
+      outlet: 'Some Outlet',
+      headline: 'Already-ledgered video',
+      url: 'https://www.youtube.com/watch?v=abc123',
+      date: 'Sep 1, 2026',
+      ts: 20260901,
+      lang: 'EN',
+      market: 'US',
+      type: 'Entertainment',
+      excerpt: 'x',
+    },
+  ]);
+  commit(tmp, 'add both rows', '2026-09-02T00:00:00Z');
+
+  const result = runCli(['audit', '--data', dataPath, '--fetch-blocklist', ledgerPath, '--json']);
+  assert.equal(result.status, 1, 'genuine (non-syndication) overlap must still gate');
+  const parsed = JSON.parse(result.stdout);
+  assert.equal(parsed.checks.ledgerOverlap.count, 1);
+  assert.equal(parsed.checks.ledgerOverlap.findings[0].url, 'https://www.youtube.com/watch?v=abc123');
+  assert.equal(parsed.checks.ledgerOverlapAdvisory.count, 1);
+  assert.equal(parsed.checks.ledgerOverlapAdvisory.findings[0].url, 'https://www.imdb.com/news/ni64735557/');
 
   fs.rmSync(tmp, { recursive: true, force: true });
 });

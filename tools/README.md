@@ -158,9 +158,21 @@ editorial call. Same division of labour as the rest of this kit -- mechanics her
 with the agent. Three checks:
 
 1. **`ledgerOverlap` (assertable).** `data.json` rows whose normalized key matches a
-   `permanentSkip` ledger row. A row cannot legitimately be both live coverage and a permanent
-   exclusion -- this is the only one of the three checks that affects the exit code.
-2. **`surfaceFamilyMatch` (advisory, high signal).** `data.json` rows whose host+path shape
+   `permanentSkip` ledger row, **excluding** `skipReason=editorial_redundant_syndication` (see
+   `ledgerOverlapAdvisory` below). A row cannot legitimately be both live coverage and a
+   permanent exclusion for any other skip reason -- this is the only one of the four checks
+   that affects the exit code.
+2. **`ledgerOverlapAdvisory` (advisory, never gates).** The `editorial_redundant_syndication`
+   rows carved out of check 1 ([LEMA-10634](/LEMA/issues/LEMA-10634)). This is expected overlap,
+   not a conflict: `redundant_syndication` means "this is a second address (an AMP page, an `m.`
+   mobile subdomain, a `?ref_=`-tagged reprint, etc.) for a document that IS in `data.json`",
+   and `normalize` folding that second address onto the same key as its live canonical row is
+   the category working as designed. Asserting on it would make `ledgerOverlap` permanently
+   red on a clean tree, since a genuine dedup pair like this can never be "fixed" by editing
+   data. (A `redundant_syndication` row whose key matches *nothing* live would be the actual
+   anomaly -- it would mean a second address was skipped for a document never kept -- but that
+   is not currently checked here.)
+3. **`surfaceFamilyMatch` (advisory, high signal).** `data.json` rows whose host+path shape
    match a family the ledger has already `permanentSkip`ped (`editorial_listing_or_database`
    only -- see below) at other locales/paths. Families are *derived from the live ledger*, not
    hard-coded, so this stays current as new locales get ledgered. A "family" is a `(host,
@@ -173,7 +185,7 @@ with the agent. Three checks:
    also carries 12+ legitimate `imdb.com/news/...` rows. Only Rule F
    (`editorial_listing_or_database`, "no written content, pure database/listing page") is a
    structural, shape-based judgment a URL-shape family can legitimately generalize from.
-3. **`runDateProxySuspects` (advisory only, never gates a run).** Rows whose `ts` equals the
+4. **`runDateProxySuspects` (advisory only, never gates a run).** Rows whose `ts` equals the
    UTC date of the git commit that first introduced them in `data.json` -- the Rule A
    `firstSeen`-substitution proxy. Noisy on its own (a daily sweep naturally picks up same-day
    news); intersected with check 2 it is nearly conclusive, and that intersection is reported
@@ -183,9 +195,10 @@ with the agent. Three checks:
 
 ```
 $ node tools/sweep-integrity.js audit
-- Ledger overlap (assertable): 3 row(s)
+- Ledger overlap (assertable): 1 row(s)
   - https://www.youtube.com/watch?v=wUvSOg3pNmY -- ledger: https://youtube.com/watch?v=wUvSOg3pNmY skipReason=editorial_personal_repost reviewable=false
-  ...
+- Ledger overlap, redundant-syndication (advisory, never gates): 1 row(s)
+  - https://www.imdb.com/news/ni64735557/ -- ledger: https://m.imdb.com/news/ni64735557/?ref_=tt_nwr_1 skipReason=editorial_redundant_syndication reviewable=false
 - Surface-family match (advisory): 4 row(s) against 27 derived listing-page families
   - https://tv.apple.com/lu/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39 -- tv.apple.com/…/show/… (precedent=9)
   ...
@@ -196,12 +209,13 @@ $ node tools/sweep-integrity.js audit
   - https://tv.apple.com/es/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39
 ```
 
-`--repo path` overrides where check 3 runs its `git log`/`git show` calls (defaults to the
+`--repo path` overrides where check 4 runs its `git log`/`git show` calls (defaults to the
 directory containing `--data`); only useful for pointing the check at a different checkout,
 e.g. in tests. Prints the same `[audit] ... rows=<N> sha256=<hash>` stderr fingerprints as
-`lookup` (LEMA-10448) for both input files. Exit is **1** only when `ledgerOverlap` is
-non-empty -- the two advisory checks and their intersection never affect the exit code, per
-the ticket's explicit requirement.
+`lookup` (LEMA-10448) for both input files. Exit is **1** only when `ledgerOverlap` (the
+assertable bucket, excluding `editorial_redundant_syndication`) is non-empty -- the
+`ledgerOverlapAdvisory` bucket, the two other advisory checks, and their intersection never
+affect the exit code, per the ticket's explicit requirement.
 
 ## Flag parsing (LEMA-10595)
 

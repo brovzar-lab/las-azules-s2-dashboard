@@ -39,12 +39,24 @@ function pathSegments(rawUrl) {
     });
 }
 
-// ---- Check 1: ledger overlap (assertable) ----
+// ---- Check 1: ledger overlap (assertable, with one carve-out) ----
 //
 // A row cannot legitimately be both live coverage and a permanent
 // exclusion. This is `lookup --strict`'s `inDataJson` signal (LEMA-10591)
 // inverted into a first-class report: instead of checking one candidate
 // against data.json, this checks every data.json row against the ledger.
+//
+// Carve-out (LEMA-10634): `editorial_redundant_syndication` means "this is
+// a second address for a document that IS in data.json" -- an AMP page, a
+// `m.` mobile subdomain, a `?ref_=`-tagged reprint, etc. `normalize` folds
+// exactly those variations away for dedup, which means a redundant-
+// syndication ledger row colliding with a live row is the category working
+// as designed, not a contradiction. Asserting on it would make this check
+// permanently red on a clean tree, since a genuine dedup pair like this can
+// never be "fixed" by editing data. Every other skipReason overlapping a
+// live row is a real conflict and stays assertable.
+const NON_ASSERTABLE_OVERLAP_SKIP_REASONS = new Set(['editorial_redundant_syndication']);
+
 function ledgerOverlapCheck(dataset, ledgerEntries) {
   const permanentSkipByKey = new Map();
   for (const row of ledgerEntries) {
@@ -53,21 +65,27 @@ function ledgerOverlapCheck(dataset, ledgerEntries) {
     if (!permanentSkipByKey.has(key)) permanentSkipByKey.set(key, row);
   }
 
-  const findings = [];
+  const assertable = [];
+  const advisory = [];
   for (const row of dataset) {
     const { key } = normalizeUrl(row.url);
     const ledgerRow = permanentSkipByKey.get(key);
     if (!ledgerRow) continue;
-    findings.push({
+    const finding = {
       url: row.url,
       key,
       ledgerUrl: ledgerRow.url,
       skipReason: ledgerRow.skipReason || null,
       skipNote: ledgerRow.skipNote || null,
       reviewable: ledgerRow.reviewable === true,
-    });
+    };
+    if (NON_ASSERTABLE_OVERLAP_SKIP_REASONS.has(finding.skipReason)) {
+      advisory.push(finding);
+    } else {
+      assertable.push(finding);
+    }
   }
-  return findings;
+  return { assertable, advisory };
 }
 
 // ---- Check 2: surface-family match (advisory) ----
@@ -289,4 +307,5 @@ module.exports = {
   getFirstSeenDates,
   FAMILY_MIN_PRECEDENT,
   FAMILY_SKIP_REASON,
+  NON_ASSERTABLE_OVERLAP_SKIP_REASONS,
 };

@@ -463,7 +463,7 @@ function cmdAudit(flags) {
   console.error(`[audit] fetch-blocklist path=${ledgerPath} rows=${ledgerEntries.length} sha256=${sha256(ledgerRaw)}`);
   console.error(`[audit] data.json path=${dataPath} rows=${datasetEntries.length} sha256=${sha256(dataRaw)}`);
 
-  const ledgerOverlap = ledgerOverlapCheck(datasetEntries, ledgerEntries);
+  const { assertable: ledgerOverlap, advisory: ledgerOverlapAdvisory } = ledgerOverlapCheck(datasetEntries, ledgerEntries);
 
   const families = deriveListingFamilies(ledgerEntries);
   const surfaceFamilyMatch = surfaceFamilyCheck(datasetEntries, families);
@@ -486,9 +486,15 @@ function cmdAudit(flags) {
     checks: {
       ledgerOverlap: {
         description:
-          'Assertable: data.json rows whose normalized key matches a permanentSkip ledger row. A row cannot legitimately be both live coverage and a permanent exclusion.',
+          'Assertable: data.json rows whose normalized key matches a permanentSkip ledger row, excluding skipReason=editorial_redundant_syndication (see ledgerOverlapAdvisory below). A row cannot legitimately be both live coverage and a permanent exclusion for any other skip reason.',
         count: ledgerOverlap.length,
         findings: ledgerOverlap,
+      },
+      ledgerOverlapAdvisory: {
+        description:
+          "Advisory, never gates: data.json rows whose normalized key matches a permanentSkip ledger row with skipReason=editorial_redundant_syndication. This is expected, not a conflict -- redundant_syndication means \"this is a second address (AMP page, m. subdomain, ref_=-tagged reprint, etc.) for a document that IS in data.json\", so overlap with the live canonical row is the defining property of the category. A redundant_syndication row whose key matches nothing live would be the actual anomaly (not currently checked here).",
+        count: ledgerOverlapAdvisory.length,
+        findings: ledgerOverlapAdvisory,
       },
       surfaceFamilyMatch: {
         description:
@@ -519,6 +525,10 @@ function cmdAudit(flags) {
   } else {
     console.log(`- Ledger overlap (assertable): ${ledgerOverlap.length} row(s)`);
     for (const f of ledgerOverlap) {
+      console.log(`  - ${f.url} -- ledger: ${f.ledgerUrl} skipReason=${f.skipReason} reviewable=${f.reviewable}`);
+    }
+    console.log(`- Ledger overlap, redundant-syndication (advisory, never gates): ${ledgerOverlapAdvisory.length} row(s)`);
+    for (const f of ledgerOverlapAdvisory) {
       console.log(`  - ${f.url} -- ledger: ${f.ledgerUrl} skipReason=${f.skipReason} reviewable=${f.reviewable}`);
     }
     console.log(

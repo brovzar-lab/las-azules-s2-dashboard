@@ -67,26 +67,46 @@ test('pathSegments: a malformed URL degrades to an empty segment list instead of
 
 // ---- Check 1: ledger overlap ----
 
-test('ledgerOverlapCheck: flags a data.json row whose normalized key matches a permanentSkip ledger row', () => {
+test('ledgerOverlapCheck: flags a data.json row whose normalized key matches a permanentSkip ledger row (assertable, non-syndication reason)', () => {
+  const ledger = [ledgerRow('https://example.com/a', { skipReason: 'editorial_personal_repost' })];
+  const dataset = [dataRow('https://example.com/a')];
+  const { assertable, advisory } = ledgerOverlapCheck(dataset, ledger);
+  assert.equal(assertable.length, 1);
+  assert.equal(assertable[0].url, 'https://example.com/a');
+  assert.equal(assertable[0].ledgerUrl, 'https://example.com/a');
+  assert.equal(assertable[0].skipReason, 'editorial_personal_repost');
+  assert.equal(advisory.length, 0);
+});
+
+// LEMA-10634: this is Rule I working as designed, not a conflict -- the m.
+// mobile variant is a correctly-permanentSkipped second address for the
+// canonical row that IS live in data.json. It must not gate the exit code,
+// so it belongs in `advisory`, not `assertable`.
+test('ledgerOverlapCheck: an editorial_redundant_syndication overlap is advisory, not assertable, and does not gate', () => {
   const ledger = [ledgerRow('https://m.imdb.com/news/ni1/?ref_=tt_nwr_1', { skipReason: 'editorial_redundant_syndication' })];
   const dataset = [dataRow('https://www.imdb.com/news/ni1/')];
-  const findings = ledgerOverlapCheck(dataset, ledger);
-  assert.equal(findings.length, 1);
-  assert.equal(findings[0].url, 'https://www.imdb.com/news/ni1/');
-  assert.equal(findings[0].ledgerUrl, 'https://m.imdb.com/news/ni1/?ref_=tt_nwr_1');
-  assert.equal(findings[0].skipReason, 'editorial_redundant_syndication');
+  const { assertable, advisory } = ledgerOverlapCheck(dataset, ledger);
+  assert.equal(assertable.length, 0);
+  assert.equal(advisory.length, 1);
+  assert.equal(advisory[0].url, 'https://www.imdb.com/news/ni1/');
+  assert.equal(advisory[0].ledgerUrl, 'https://m.imdb.com/news/ni1/?ref_=tt_nwr_1');
+  assert.equal(advisory[0].skipReason, 'editorial_redundant_syndication');
 });
 
 test('ledgerOverlapCheck: a ledger row with permanentSkip=false does not count as an overlap', () => {
   const ledger = [ledgerRow('https://example.com/a', { permanentSkip: false, skipReason: null })];
   const dataset = [dataRow('https://example.com/a')];
-  assert.equal(ledgerOverlapCheck(dataset, ledger).length, 0);
+  const { assertable, advisory } = ledgerOverlapCheck(dataset, ledger);
+  assert.equal(assertable.length, 0);
+  assert.equal(advisory.length, 0);
 });
 
 test('ledgerOverlapCheck: no match when keys differ', () => {
   const ledger = [ledgerRow('https://example.com/a')];
   const dataset = [dataRow('https://example.com/b')];
-  assert.equal(ledgerOverlapCheck(dataset, ledger).length, 0);
+  const { assertable, advisory } = ledgerOverlapCheck(dataset, ledger);
+  assert.equal(assertable.length, 0);
+  assert.equal(advisory.length, 0);
 });
 
 // ---- Check 2: surface-family match ----
