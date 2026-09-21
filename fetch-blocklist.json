@@ -12064,7 +12064,35 @@
           "note": "Confirmed bare episode-listing page, no editorial prose; classified Rule F and removed from data.json per Rule D retroactivity."
         }
       ]
+    },
+    {
+      "url": "https://decine21.com/series/las-azules-48764",
+      "firstSeen": "2026-09-21T12:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-21T12:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Page contains a real, byline-authored critical review (\"Las mujeres policias\" by Jose Maria Areste) alongside catalog data (cast, ratings, synopsis), so it is genuine editorial content, not a Rule F database row. WebFetch returned the full review body with no publish date field. Firecrawl scrape (2026-09-21, LEMA-10709) was then run explicitly to check for article:published_time / datePublished / a visible dateline: neither the raw HTML nor the rendered markdown contains any date metadata or byline date anywhere on the page; the only date present is the show's own premiere date (31-07-2024), which is not the review's publish date. Both WebFetch and Firecrawl are exhausted per Rule A. Skipped as editorial_undateable, reviewable=true so this stays listable for a future manual date lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-21T12:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10709",
+          "note": "Returned full review content (byline: Jose Maria Areste) plus catalog metadata; no publish date field present."
+        },
+        {
+          "attempt": "2026-09-21T12:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10709",
+          "note": "Confirmed via markdown+html scrape: no article:published_time, datePublished, or visible dateline anywhere on the page. Only date present is the show's own 31-07-2024 Spain premiere date, not an article publish date."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-21T10:06:44Z"
+  "lastUpdated": "2026-09-21T12:05:00Z"
 }
