@@ -880,10 +880,10 @@
     {
       "url": "https://www.dailydot.com/pop-culture/women-in-blue-interview",
       "firstSeen": "2026-09-04T08:06:33Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-13T12:01:22Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-22T20:05:17Z",
+      "cooldownUntil": "2026-10-22T20:05:17Z",
       "history": [
         {
           "attempt": "2026-09-13T12:01:22Z",
@@ -891,6 +891,13 @@
           "status": 404,
           "issue": "LEMA-10033",
           "note": "Retry after prior 404 (firstSeen 2026-09-04). Both WebFetch and Firecrawl scrape confirm the page no longer exists (Firecrawl returned the Daily Dot's own 404 template). failCount now 2 of 3; still not on cooldown."
+        },
+        {
+          "attempt": "2026-09-22T20:05:17Z",
+          "method": "WebFetch+Firecrawl",
+          "status": 404,
+          "issue": "LEMA-10837",
+          "note": "Retry after prior 404s (firstSeen 2026-09-04, prior retry 2026-09-13). Both WebFetch and Firecrawl scrape confirm the page still does not exist (Firecrawl returned the Daily Dot's own 404 template, statusCode 404). failCount now 3 of 3: cooldownUntil set to 30 days out."
         }
       ]
     },
@@ -12350,7 +12357,26 @@
           "note": "WebFetch succeeded; confirmed article is about a different show (Monster: The Lizzie Borden Story), unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://imdb.com/es/name/nm0746370",
+      "firstSeen": "2026-09-22T20:05:17Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-22T20:05:17Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "ES-locale IMDb name/bio page for Barbara Mori (nm0746370), surfaced by the Exa ES pass (LEMA-10837) via a Instagram-adjacent broad query. No fetch attempted: per Rule F (LEMA-9927/LEMA-10632), imdb.com/name/* is Rule F by family regardless of locale or depth -- structurally identical to the already-ledgered imdb.com/name/nm00605224 (Barbara Mori's non-locale bio page). Stripping the bio/filmography table leaves no written editorial content about Las Azules / Women in Blue Season 2 specifically. Not coverage of the show, no fetch-fallback-chain attempt spent per Rule F (dateability irrelevant). reviewable omitted: Rule F entries are not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-09-22T20:05:17Z",
+          "method": "none (Rule F classification, no fetch required)",
+          "status": null,
+          "issue": "LEMA-10837"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-22T14:03:00Z"
+  "lastUpdated": "2026-09-22T20:05:17Z"
 }
