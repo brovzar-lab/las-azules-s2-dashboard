@@ -896,11 +896,26 @@
     },
     {
       "url": "https://www.tiktok.com/discover/final-explicado-las-azules-serie",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-05T22:00:36.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": false
+      "lastAttempt": "2026-09-22T08:00:00Z",
+      "cooldownUntil": "2026-10-22T08:00:00Z",
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-22T08:00:00Z",
+          "method": "WebFetch",
+          "status": "empty_shell",
+          "issue": "LEMA-10775"
+        },
+        {
+          "attempt": "2026-09-22T08:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10775",
+          "note": "Firecrawl returned its standing 'we do not support this site' refusal for tiktok.com, a valid documented exhaustion of the method (same posture as the facebook.com precedent under Rule A). Full-chain failure, failCount now 3, 30-day cooldown set."
+        }
+      ]
     },
     {
       "url": "https://soundtrackwiki.com/tv-shows/women-in-blue-songs/",
@@ -12184,7 +12199,53 @@
           "note": "success:false, error: \"We apologize for the inconvenience but we do not support this site.\" Blanket tiktok.com policy refusal, not a per-URL failure. Full-chain failure, failCount=1."
         }
       ]
+    },
+    {
+      "url": "https://filasiete.com/critica-serie/la-delgada-linea-azul-2/",
+      "firstSeen": "2026-09-22T08:00:00Z",
+      "failCount": 1,
+      "lastStatus": "webfetch_empty_shell;firecrawl_202_empty",
+      "lastAttempt": "2026-09-22T08:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-09-22T08:00:00Z",
+          "method": "WebFetch",
+          "status": "empty_shell",
+          "issue": "LEMA-10775"
+        },
+        {
+          "attempt": "2026-09-22T08:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 202,
+          "issue": "LEMA-10775",
+          "note": "Firecrawl returned success=true but markdown body was empty (\"...\"), statusCode 202 -- bot-wall/JS-gated page, full-chain failure. Could not determine if this candidate (surfaced by a broad 'Las Azules finale critica' query, title reads 'La delgada linea azul 2', a different, unrelated show) is on-topic at all; content remains unverified."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=T4G07yebmUU",
+      "firstSeen": "2026-09-22T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-22T08:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Uploaded by 'The Watchout Media' (@thewatchoutmedia), a small third-party trailer-reposting/aggregator channel (200 views), not the studio/Apple TV's official channel and not a recognized press/trade outlet. Video is a narrated repost of Apple TV's own Season 2 trailer announcement with generic engagement bait ('like, share, and subscribe'), uploaded 2026-03-26. Fails Rule B relevance gate on the same grounds as the existing 'Trailer Ñ' (4fSobqwcLDQ) and 'Filmaholic' (wUvSOg3pNmY) precedents; dateability not evaluated per Rule B.",
+      "history": [
+        {
+          "attempt": "2026-09-22T08:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10775",
+          "note": "Fetch succeeded (WebFetch returned an empty shell, Firecrawl succeeded as fallback); excluded on Rule B relevance grounds, not for fetch failure."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-22T00:04:49Z"
+  "lastUpdated": "2026-09-22T08:00:00Z"
 }
