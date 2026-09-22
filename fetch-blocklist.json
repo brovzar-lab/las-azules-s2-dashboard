@@ -12158,7 +12158,33 @@
           "note": "success:false, error: \"We apologize for the inconvenience but we do not support this site.\" Blanket facebook.com policy block, documented exhaustion of method per Rule A."
         }
       ]
+    },
+    {
+      "url": "https://www.tiktok.com/@loslunesseriefilos/video/7688039943561579798",
+      "firstSeen": "2026-09-22T00:04:49Z",
+      "failCount": 1,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-22T00:04:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "history": [
+        {
+          "attempt": "2026-09-22T00:04:49Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10767",
+          "note": "WebFetch returned only TikTok's generic 'TikTok - Make Your Day' placeholder shell, no caption/date/content -- empty-body failure (JS-rendered page, bot wall)."
+        },
+        {
+          "attempt": "2026-09-22T00:04:49Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10767",
+          "note": "success:false, error: \"We apologize for the inconvenience but we do not support this site.\" Blanket tiktok.com policy refusal, not a per-URL failure. Full-chain failure, failCount=1."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-21T20:04:10Z"
+  "lastUpdated": "2026-09-22T00:04:49Z"
 }
