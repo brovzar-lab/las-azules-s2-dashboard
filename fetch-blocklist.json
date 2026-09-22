@@ -12245,7 +12245,65 @@
           "note": "Fetch succeeded (WebFetch returned an empty shell, Firecrawl succeeded as fallback); excluded on Rule B relevance grounds, not for fetch failure."
         }
       ]
+    },
+    {
+      "url": "https://mundiario.com/articulo/appletv/resumen-azules-capitulo-7-revelado-encuerador-tlalpan/20240906084436416383.html",
+      "firstSeen": "2026-09-22T10:01:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-22T10:01:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Second address for the Mundiario capitulo 7 recap (\"Resumen de Las Azules, capitulo 7: revelado el Encuerador de Tlalpan\", byline Pablo Silva Duran, published 2026-09-06) already tracked in data.json at the /cineseries/articulo/appletv/... path (ts 20240906, outlet Mundiario). Fetched this candidate: identical headline, byline, publish date and lede as the tracked URL, differing only in URL path prefix (/articulo/appletv/ vs /cineseries/articulo/appletv/) -- same CMS post at two addresses. Rule I mechanical shortcut applied.",
+      "history": [
+        {
+          "attempt": "2026-09-22T10:01:13Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10776"
+        }
+      ]
+    },
+    {
+      "url": "https://ww11.cuevana3.to/serie/las-azules",
+      "firstSeen": "2026-09-22T10:01:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-22T10:01:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_piracy_or_unauthorized_distribution",
+      "skipNote": "On-topic show catalog/index page on cuevana3 (a well-known unauthorized streaming aggregator domain, ww11.cuevana3.to mirror). Page hosts episode-thumbnail listings for S1 (10 eps) and S2 (6 eps) that route to unauthorized streams/embeds, plus footer links to sibling piracy sites (5Movies, Andyday, 1Flex). No original editorial writing about the show; primary function is supplying access to unauthorized copies. Rule E, both prongs met. reviewable omitted (not coverage at all, same posture as vendor/personal-repost/listing skips).",
+      "history": [
+        {
+          "attempt": "2026-09-22T10:01:13Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10776"
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/Variety/status/1924903066861531178",
+      "firstSeen": "2026-09-22T10:01:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-22T10:01:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Variety official X account (@Variety) post dated 2025-05-20: bare headline + link repost (\"'Women in Blue' Renewed for Season 2 at Apple TV+ https://variety.com/2025/tv/news/women-in-blue-renewed-season-2-apple-tv-1236404908/\"), no original commentary of its own. The linked Variety article is already tracked in data.json (ts 20250531, outlet Variety). Bare social link-post carrying no text of its own = second address per Rule I amendment, not a distinct document.",
+      "history": [
+        {
+          "attempt": "2026-09-22T10:01:13Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10776",
+          "note": "WebFetch returned HTTP 402 Payment Required; Firecrawl scrape (x-twitter postprocessor) succeeded as fallback."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-22T08:00:00Z"
+  "lastUpdated": "2026-09-22T10:01:13Z"
 }
