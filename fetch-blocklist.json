@@ -12303,7 +12303,54 @@
           "note": "WebFetch returned HTTP 402 Payment Required; Firecrawl scrape (x-twitter postprocessor) succeeded as fallback."
         }
       ]
+    },
+    {
+      "url": "https://oem.com.mx/elsoldemexico/gossip/las-azules-explora-las-complejidades-de-ser-mexicano-31640766",
+      "firstSeen": "2026-09-22T14:03:00Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-22T14:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "El Sol de Mexico (OEM), 'Las azules vuelve con un asesino de policias y el secreto de Tlatelolco', byline Araceli Madrigal, genuine on-topic S2 coverage (interview material with producer Fernando Rovzar on the season's Tlatelolco/halconazo themes). Rule A date-recovery gate: WebFetch returned HTTP 403 (real failure, not a soft-pass empty body). Firecrawl scrape succeeded (200, full body retrieved) but surfaced no publish date by any method: no og/article:published_time meta tag, no JSON-LD datePublished block (page has zero ld+json script tags), no <time datetime> element, and no visible dateline/byline date in the rendered body -- checked against both the Firecrawl markdown output and the raw HTML. The only date string on the page is the site's top-nav 'today' banner (22 de septiembre de 2026), which is a site-chrome artifact, not the article's publish date, and is exactly the kind of crawler/page-render proxy Rule A prohibits using as ts. Both methods exhausted; undateable.",
+      "history": [
+        {
+          "attempt": "2026-09-22T14:03:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10781"
+        },
+        {
+          "attempt": "2026-09-22T14:03:00Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10781",
+          "note": "Fetched successfully; no publish date present in metadata, JSON-LD, HTML <time> elements, or visible body."
+        }
+      ]
+    },
+    {
+      "url": "https://sensacine.com/noticias/series/noticia-1000223894",
+      "firstSeen": "2026-09-22T14:03:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-22T14:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "SensaCine.com article headlined on Ella Beatty discussing her role in Netflix's 'Monster: The Lizzie Borden Story' (an animal-cruelty scene). No mention of Las Azules / Women in Blue anywhere in the piece; surfaced only as a broad-query match from the Exa Spanish-language query.",
+      "history": [
+        {
+          "attempt": "2026-09-22T14:03:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10781",
+          "note": "WebFetch succeeded; confirmed article is about a different show (Monster: The Lizzie Borden Story), unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-22T10:01:13Z"
+  "lastUpdated": "2026-09-22T14:03:00Z"
 }
