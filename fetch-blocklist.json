@@ -12376,6 +12376,18 @@
           "issue": "LEMA-10837"
         }
       ]
+    },
+    {
+      "url": "https://instagram.com/reel/DdlYfNGS66i",
+      "firstSeen": "2026-09-22T22:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic false positive (Rule G): reel by fan/trivia-repost account @capcutuela is about actress Bridget Moynahan's role as a prosecutor in 'Blue Bloods', not Las Azules / Women in Blue. Surfaced only via loose semantic match on Exa ES query ('la fiscal mas famosa de la television era capitana de...'). Not fetched beyond confirming topic via WebFetch (LEMA-10838).",
+      "history": []
     }
   ],
   "lastUpdated": "2026-09-22T20:05:17Z"
