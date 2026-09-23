@@ -12814,7 +12814,113 @@
           "note": "Body fetched successfully; confirmed no mention of Las Azules anywhere in the article."
         }
       ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=f-gynYq0tP0",
+      "firstSeen": "2026-09-23T22:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T22:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Firecrawl scrape succeeded (200, JSON-LD datePublished 2024-06-20). Channel 'The Original Domain' is a low-effort reupload account: title/description is a generic hashtag-spammed repost of Apple's own trailer ('Women in Blue (Las Azules) (Apple TV+) Release: 07/31/2024 #latinos #latinoamerica #cops #polica #mexico'), no original editorial content, not an outlet or official show/network account. Rule B fan-repost gate: permanentSkip, dateability irrelevant to the classification though a date was in fact recovered.",
+      "history": [
+        {
+          "attempt": "2026-09-23T22:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10880",
+          "note": "Returned only YouTube's footer navigation, no video content (bot wall), treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-23T22:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10880",
+          "note": "Succeeded, real metadata recovered. Excluded on Rule B relevance grounds (fan-repost account), not a fetch failure."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=MzMsVAR43Mw",
+      "firstSeen": "2026-09-23T22:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T22:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "Firecrawl scrape succeeded (200, JSON-LD datePublished 2024-06-17). Channel 'The Movie Times' is a movie-ticket vendor account (description: \"Don't wait in line! Buy movie tickets in over 70 countries at http://movie-times.net...\") reposting the trailer to drive ticket sales, not an outlet. Rule B vendor/supplier gate: permanentSkip, dateability irrelevant to the classification though a date was in fact recovered.",
+      "history": [
+        {
+          "attempt": "2026-09-23T22:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10880",
+          "note": "Returned only YouTube's footer navigation, no video content (bot wall), treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-23T22:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10880",
+          "note": "Succeeded, real metadata recovered. Excluded on Rule B relevance grounds (vendor/ticketing promo account), not a fetch failure."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=-pKDdbOHutU",
+      "firstSeen": "2026-09-23T22:00:00Z",
+      "failCount": 1,
+      "lastStatus": 401,
+      "lastAttempt": "2026-09-23T22:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "history": [
+        {
+          "attempt": "2026-09-23T22:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10880",
+          "note": "Returned only YouTube's footer navigation, no video content (bot wall), treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-23T22:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 401,
+          "issue": "LEMA-10880",
+          "note": "Firecrawl returned a 200 wrapper but the scraped body is YouTube's own 'Error 401 (Bad Request)' page, not the video page. Full-chain failure, failCount now 1."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_iW1-NxOR8o",
+      "firstSeen": "2026-09-23T22:00:00Z",
+      "failCount": 1,
+      "lastStatus": 401,
+      "lastAttempt": "2026-09-23T22:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "history": [
+        {
+          "attempt": "2026-09-23T22:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10880",
+          "note": "Returned only YouTube's footer navigation, no video content (bot wall), treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-23T22:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 401,
+          "issue": "LEMA-10880",
+          "note": "Firecrawl returned a 200 wrapper but the scraped body is YouTube's own 'Error 401 (Bad Request)' page, not the video page. Full-chain failure, failCount now 1."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-23T20:10:00Z"
+  "lastUpdated": "2026-09-23T22:00:00Z"
 }
