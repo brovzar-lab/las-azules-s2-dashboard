@@ -3067,11 +3067,11 @@
       "firstSeen": "2026-09-10T04:30:00Z",
       "failCount": 0,
       "lastStatus": 200,
-      "lastAttempt": "2026-09-10T04:30:00Z",
+      "lastAttempt": "2026-09-23T08:10:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_listing_or_database",
-      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Rotten Tomatoes season-2 overview page. Review-aggregator database page (critic/audience score widgets), no page-level editorial publish date. Same issue as the per-episode RT pages in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all. MINING RECORD (added 2026-09-17, LEMA-10458, CEO ruling on LEMA-10424 extending Rule H's mining duty to whichever surface renders named critic attribution regardless of exclusion rule): re-verified live via WebFetch. Page renders a 'Critics Reviews' section with three individually-attributed reviews: Jared Richards / The Age (Australia), Aug 18, 2026, 3/5, \"While heavy-handed at times, the tense, vibrant Women in Blue links Mexico's past to a global present.\"; Belen Prieto / Espinof, Aug 14, 2026, \"It's a triumphant return for a fantastic series.\" (Spanish); Peter Martin / ScreenAnarchy, Aug 12, 2026, 4/5, \"Season 2 feels more on-point and certain of its tone... remains a likable, lively, and thoughtful show.\" Same three critics as the 2026-09-17 LEMA-10423 pass; no new attribution has appeared since. Cross-checked against live data.json: Espinof (espinof.com/criticas/hoy-streaming-regreso-oscuro-thriller-trasfondo-real-serie-crimen-que-destapo-peligrosa-trama-corrupcion, ts 20260814) and Screen Anarchy (screenanarchy.com/2026/08/women-in-blue-las-azules-s2-review-two-steps-forward-one-step-back.html, ts 20260812) are already present under their own URLs -- no action needed. Jared Richards / The Age: searched theage.com.au and smh.com.au directly (Exa neural search, domain-scoped and broad queries for 'Women in Blue'/'Las Azules' plus this critic's byline) and found only his other, unrelated TV reviews on theage.com.au -- no Women in Blue piece exists at either domain as of this run. No findable direct URL, same conclusion as the LEMA-10423 pass; recorded as an explicit negative result per Rule A, not fabricated. Row stays permanentSkip / editorial_listing_or_database (Rule F) -- this pass records the mining duty as discharged, it does not reclassify the row. Put on a weekly re-mine cadence per the Media Sweep routine's Pass 0b (LEMA-10458), through 2026-10-14.",
+      "skipNote": "Full-feed audit on LEMA-9882 (Rule D remediation, CEO ruling on LEMA-9880). Rotten Tomatoes season-2 overview page. Review-aggregator database page (critic/audience score widgets), no page-level editorial publish date. Same issue as the per-episode RT pages in this ledger. Per Rule A/Rule D, not eligible for data.json; corresponding data.json entry removed in this same commit. CEO ruling on LEMA-9880 (Rule D, 2026-09-10): these pages carry no editorial publish date at all, so there is no true value to correct to; ts must not be nulled either since index.html sorts on b.ts - a.ts, so the entry is removed and ledgered as permanentSkip/editorial_undateable rather than date-corrected. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all. MINING RECORD (added 2026-09-17, LEMA-10458, CEO ruling on LEMA-10424 extending Rule H's mining duty to whichever surface renders named critic attribution regardless of exclusion rule): re-verified live via WebFetch. Page renders a 'Critics Reviews' section with three individually-attributed reviews: Jared Richards / The Age (Australia), Aug 18, 2026, 3/5, \"While heavy-handed at times, the tense, vibrant Women in Blue links Mexico's past to a global present.\"; Belen Prieto / Espinof, Aug 14, 2026, \"It's a triumphant return for a fantastic series.\" (Spanish); Peter Martin / ScreenAnarchy, Aug 12, 2026, 4/5, \"Season 2 feels more on-point and certain of its tone... remains a likable, lively, and thoughtful show.\" Same three critics as the 2026-09-17 LEMA-10423 pass; no new attribution has appeared since. Cross-checked against live data.json: Espinof (espinof.com/criticas/hoy-streaming-regreso-oscuro-thriller-trasfondo-real-serie-crimen-que-destapo-peligrosa-trama-corrupcion, ts 20260814) and Screen Anarchy (screenanarchy.com/2026/08/women-in-blue-las-azules-s2-review-two-steps-forward-one-step-back.html, ts 20260812) are already present under their own URLs -- no action needed. Jared Richards / The Age: searched theage.com.au and smh.com.au directly (Exa neural search, domain-scoped and broad queries for 'Women in Blue'/'Las Azules' plus this critic's byline) and found only his other, unrelated TV reviews on theage.com.au -- no Women in Blue piece exists at either domain as of this run. No findable direct URL, same conclusion as the LEMA-10423 pass; recorded as an explicit negative result per Rule A, not fabricated. Row stays permanentSkip / editorial_listing_or_database (Rule F) -- this pass records the mining duty as discharged, it does not reclassify the row. Put on a weekly re-mine cadence per the Media Sweep routine's Pass 0b (LEMA-10458), through 2026-10-14. WEEKLY RE-MINE (2026-09-23, LEMA-10843, RT s02 cadence per LEMA-10458, through 2026-10-14): re-verified live via WebFetch. Same three critics as the 2026-09-17 pass, no new attribution: Jared Richards / The Age (Aug 18, 2026, 3/5), Belen Prieto / Espinof (Aug 14, 2026), Peter Martin / ScreenAnarchy (Aug 12, 2026, 4/5). Cross-checked against live data.json: Espinof and Screen Anarchy rows already present under their own URLs. 0 new addable rows this pass.",
       "history": [
         {
           "attempt": "2026-09-10T04:30:00Z",
@@ -3086,6 +3086,13 @@
           "status": 200,
           "issue": "LEMA-10458",
           "note": "Rule H mining-duty extension applied to this Rule F row per LEMA-10424 ruling. 3 critics found, cross-checked against data.json, 0 new addable rows (2 duplicates, 1 negative result recorded in skipNote)."
+        },
+        {
+          "attempt": "2026-09-23T08:10:00Z",
+          "method": "WebFetch (mining re-verification, no reclassification)",
+          "status": 200,
+          "issue": "LEMA-10843",
+          "note": "RT s02 weekly re-mine cadence (LEMA-10458). 3 critics found, same as 2026-09-17 pass, 0 new addable rows."
         }
       ]
     },
@@ -9995,9 +10002,9 @@
     {
       "url": "https://www.rottentomatoes.com/tv/women_in_blue_2024/s02/reviews",
       "firstSeen": "2026-09-17T18:20:00Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": "webfetch_empty/firecrawl_200_no_reviews",
-      "lastAttempt": "2026-09-17T18:20:00Z",
+      "lastAttempt": "2026-09-23T08:10:00Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
@@ -10014,6 +10021,18 @@
           "method": "Firecrawl scrape",
           "status": "200 (no substantive content: login/newsletter modal markup plus a client-side 'Load More' placeholder, no review rows)",
           "issue": "LEMA-10458"
+        },
+        {
+          "attempt": "2026-09-23T08:10:00Z",
+          "method": "WebFetch",
+          "status": "empty/JS-gated (Load More placeholder, no critic review content rendered)",
+          "issue": "LEMA-10843"
+        },
+        {
+          "attempt": "2026-09-23T08:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": "200 (no substantive content: nav/newsletter modal markup plus client-side 'Load More' placeholder, no review rows)",
+          "issue": "LEMA-10843"
         }
       ]
     },
@@ -12470,5 +12489,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-23T04:05:47Z"
+  "lastUpdated": "2026-09-23T08:10:00Z"
 }
