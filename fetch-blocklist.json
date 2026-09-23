@@ -12727,7 +12727,94 @@
           "note": "Firecrawl again returned a blanket 'we do not support this site' refusal for facebook.com. Full-chain fetch failure (3rd occurrence); not added to data.json, relevance/date undetermined this run. failCount now 3, cooldownUntil set to 30 days out (2026-10-23T16:05:00Z)."
         }
       ]
+    },
+    {
+      "url": "https://fangirlish.com/2026/09/23/ted-lasso-season-4-episode-8-review-follow-the-anger-and-do-it-scared/",
+      "firstSeen": "2026-09-23T20:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T20:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Fangirlish review of Ted Lasso Season 4 Episode 8, an unrelated Apple TV+ show. No mention of Las Azules or Women in Blue anywhere in the piece; surfaced only as a broad-query match (Exa EN pass, LEMA-10879) on generic Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-23T20:10:00Z",
+          "method": "title-inspection",
+          "status": null,
+          "issue": "LEMA-10879",
+          "note": "Title alone (\"Ted Lasso Season 4, Episode 8 Review\") makes the off-topic call unambiguous; no fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://tvmaze.com/episodes/2859062/las-azules-1x10-valentina",
+      "firstSeen": "2026-09-23T20:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T20:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "TVMaze individual episode listing page (S1E10 \"Valentina\"). Same surface family as the already-ledgered tvmaze.com/shows/62238/las-azules/episodeguide (Rule F, editorial_listing_or_database): a bare episode-guide database row with no written editorial content about the show. Strip the metadata (episode number, title, air date) and nothing written remains.",
+      "history": [
+        {
+          "attempt": "2026-09-23T20:10:00Z",
+          "method": "family-classification",
+          "status": null,
+          "issue": "LEMA-10879",
+          "note": "Classified by surface family per Rule F clarification (LEMA-10632): TVMaze episode-guide pages are a database surface regardless of which episode ID they carry; no fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://9to5mac.com/2026/09/23/heres-everything-new-apple-tv-has-coming-in-october-2026",
+      "firstSeen": "2026-09-23T20:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T20:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "9to5Mac roundup of everything new coming to Apple TV in October 2026 (new movies/shows: The Last First: Winter K2, Small Prophets, Matchbox The Movie, Tenzing, Nocturne, etc.). Confirmed via WebFetch: article does not mention Las Azules or Women in Blue anywhere. Surfaced only as a broad-query match (Exa EN pass, LEMA-10879) on generic Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-23T20:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10879",
+          "note": "Body fetched successfully; no mention of Las Azules/Women in Blue found."
+        }
+      ]
+    },
+    {
+      "url": "https://cincodias.elpais.com/smartlife/smart-tv/2026-09-23/estrenos-apple-tv-mes-octubre-2026.html",
+      "firstSeen": "2026-09-23T20:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T20:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Cinco Días (El País) roundup of October 2026 Apple TV premieres (Spanish-language). WebFetch failed to retrieve the page; Firecrawl scrape succeeded (200) and returned the full body. Confirmed no mention of \"Las Azules\"/\"azules\" anywhere in the article. Surfaced only as a broad-query match (Exa EN pass, LEMA-10879) on generic Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-23T20:10:00Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10879",
+          "note": "WebFetch failed to retrieve content."
+        },
+        {
+          "attempt": "2026-09-23T20:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10879",
+          "note": "Body fetched successfully; confirmed no mention of Las Azules anywhere in the article."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-23T16:05:00Z"
+  "lastUpdated": "2026-09-23T20:10:00Z"
 }
