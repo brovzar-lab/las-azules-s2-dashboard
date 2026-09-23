@@ -12634,7 +12634,72 @@
           "note": "Confirmed page is about an unrelated El Hormiguero segment, no mention of Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.apple.com/de/tv-pr/originals/women-in-blue-las-azules/episodes-images/",
+      "firstSeen": "2026-09-23T12:05:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T12:05:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "German-locale Apple TV Press episodes/images gallery hub for Women in Blue (Las Azules). WebFetch succeeded (200) and returned only a structural navigation page (\"Folgen und Bilder\"/Episodes and Images) linking to Cast & Crew and Trailers sections, with no written editorial prose about the show and no visible publish date. Rule F (surface family, LEMA-10632/LEMA-10630 clarification): matches the apple.com/{locale}/tv-pr/originals/ show-page family already ledgered for other locales (see apple.com/tv-pr/originals/women-in-blue-las-azules/, apple.com/ca/fr/tv-pr/originals/..., apple.com/it/tv-pr/originals/...). Surfaced by Pass 1 Exa EN query. Found on LEMA-10845.",
+      "history": [
+        {
+          "attempt": "2026-09-23T12:05:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10845",
+          "note": "Gallery/navigation hub page, no editorial prose, no publish date. Rule F."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/eg/tv-show/dark-matter-2024/season-2",
+      "firstSeen": "2026-09-23T12:05:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T12:05:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic false positive from Pass 1 Exa EN broad query. Page is JustWatch's Egypt-locale listing for 'Dark Matter' (2024) Season 2, an unrelated science-fiction series, not Las Azules / Women in Blue. Confirmed via WebFetch (200): page header reads 'Dark Matter - موسم 2 (2026)'. Found on LEMA-10845.",
+      "history": [
+        {
+          "attempt": "2026-09-23T12:05:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10845",
+          "note": "Confirmed off-topic: page is about Dark Matter (2024), not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/comic.basics/posts/las-azules-season-2-episode-8-release-date-time-and-where-to-watch-the-finale/122267507372247280/",
+      "firstSeen": "2026-09-23T12:05:04Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-23T12:05:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-23T12:05:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10845",
+          "note": "WebFetch returned only a page-title fragment ('Las Azules' Season... - Comic Basics - Movie & TV Show News), not enough content to confirm post body, publish date, or official-vs-fan account status."
+        },
+        {
+          "attempt": "2026-09-23T12:05:04Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10845",
+          "note": "Firecrawl returned a blanket 'we do not support this site' refusal for facebook.com. Full-chain fetch failure; not added to data.json, relevance/date undetermined this run."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-23T10:08:55Z"
+  "lastUpdated": "2026-09-23T12:05:04Z"
 }
