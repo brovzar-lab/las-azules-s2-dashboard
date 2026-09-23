@@ -12487,7 +12487,154 @@
           "note": "WebFetch tool errored on this host; Firecrawl scrape succeeded (9365 chars) and confirmed no mention of Las Azules or Women in Blue anywhere in the body."
         }
       ]
+    },
+    {
+      "url": "https://facebook.com/fictionhorizon/posts/1868739494932119",
+      "firstSeen": "2026-09-23T10:08:55Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T10:08:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "skipNote": "Fiction Horizon (editorial brand account, passes Rule B) Facebook post surfaced via Exa Pass 1 EN query, teasing the Women in Blue S2 finale (\"the final chapter... is almost here\"). WebFetch succeeded (real content returned, not a bot-wall stub) but confirmed the post is a promotional repost/link-share with no original commentary and no visible publish date. Firecrawl scrape returned the documented blanket facebook.com refusal (\"we do not support this site\", 403), a valid documented exhaustion of the method per Rule A. Both methods exhausted, no real publish date found. Not added to data.json. reviewable=true for a future manual lookup.",
+      "reviewable": true,
+      "history": [
+        {
+          "attempt": "2026-09-23T10:08:55Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10844",
+          "note": "Real content returned: promotional repost teasing the S2 finale, no original commentary, no visible date."
+        },
+        {
+          "attempt": "2026-09-23T10:08:55Z",
+          "method": "Firecrawl",
+          "status": 403,
+          "issue": "LEMA-10844",
+          "note": "Documented blanket facebook.com refusal (\"we do not support this site\")."
+        }
+      ]
+    },
+    {
+      "url": "https://imdb.com/fr/news/ni66028676",
+      "firstSeen": "2026-09-23T10:08:55Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T10:08:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "IMDb news item titled \"'Ted Lasso' Season 4 Episode 9 Release Date, Time, Where...\" -- about Ted Lasso, not Las Azules/Women in Blue. Surfaced only as a broad-query match via Exa Pass 1 EN query. WebFetch returned 403; Firecrawl returned an ad-blocker-detection interstitial page with no real article content. Classification is based on the unambiguous search-result title (both fetch methods failed to retrieve real body content).",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-23T10:08:55Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10844",
+          "note": "403 Forbidden."
+        },
+        {
+          "attempt": "2026-09-23T10:08:55Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10844",
+          "note": "Returned an ad-blocker-detection interstitial page (\"s.amazon-adsystem.com is blocked\"), no real article content."
+        }
+      ]
+    },
+    {
+      "url": "https://dizibox.live/diziler/brothers",
+      "firstSeen": "2026-09-23T10:08:55Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T10:08:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish streaming-catalog page (\"izle\" = watch) for the show 'Brothers', not Las Azules/Women in Blue. Surfaced only as a broad-query match via Exa Pass 1 EN query. Firecrawl scrape (200, 452078 chars) confirms the only occurrence of \"Azules\" on the page is a sidebar/catalog nav link to the site's separate 'Las Azules' show page (dizibox.live/diziler/las-azules/), not article content about the show. Page body is entirely about 'Brothers'.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-23T10:08:55Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10844",
+          "note": "Confirmed page is about 'Brothers'; sole 'Azules' occurrence is an unrelated sidebar catalog nav link."
+        }
+      ]
+    },
+    {
+      "url": "https://statesman.com/entertainment/article/mcconaughey-harrelson-brothers-apple-tv-austin-22426332.php",
+      "firstSeen": "2026-09-23T10:08:55Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T10:08:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Austin American-Statesman article \"In 'Brothers,' Austin brings Matthew McConaughey, Woody Harrelson's friendship home\" -- about the Apple TV+ series 'Brothers', not Las Azules/Women in Blue. Surfaced only as a broad-query match via Exa Pass 1 EN query. WebFetch returned a client-side error/loading page (no real content); Firecrawl scrape (200, 18011 chars) confirmed the full article body with zero mentions of \"azules\" or \"women in blue\".",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-23T10:08:55Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10844",
+          "note": "Returned a client-side error/loading interstitial, no real content."
+        },
+        {
+          "attempt": "2026-09-23T10:08:55Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10844",
+          "note": "Full article body retrieved, confirmed off-topic (about 'Brothers', no mention of Las Azules)."
+        }
+      ]
+    },
+    {
+      "url": "https://sensacine.com/series/serie-1000001476/video-20644226",
+      "firstSeen": "2026-09-23T10:08:55Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T10:08:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "SensaCine video page for a Season 2 trailer of 'Las hermanas Grimm' (The Grimm Sisters), not Las Azules/Women in Blue. Surfaced only as a broad-query match via Exa Pass 1 ES query. WebFetch (200) confirmed the page is exclusively about Las hermanas Grimm (cast: Ariel Winter, Leah Newman, Laraine Newman, Abubakar Salim, Billy Harris; premiere Oct 3, 2025), with no mention of Las Azules or Women in Blue.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-23T10:08:55Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10844",
+          "note": "Confirmed page is about 'Las hermanas Grimm', unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://antena3.com/programas/el-hormiguero/entrevista/son-hermanos-parejas-trancas-barrancas-ponen-prueba-intuicion-pepa-charro-julian-lopez_202609236ab38710f4115f10bf49971a.html",
+      "firstSeen": "2026-09-23T10:08:55Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T10:08:55Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Antena 3 (El Hormiguero) article about a segment testing Pepa Charro and Julian Lopez's intuition with the comedy duo Trancas y Barrancas -- unrelated Spanish TV segment, not Las Azules/Women in Blue. Surfaced only as a broad-query match via Exa Pass 1 ES query. Firecrawl scrape (200, 12998 chars) confirmed zero mentions of \"azules\" or \"women in blue\" anywhere on the page.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-23T10:08:55Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10844",
+          "note": "Confirmed page is about an unrelated El Hormiguero segment, no mention of Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-23T08:10:00Z"
+  "lastUpdated": "2026-09-23T10:08:55Z"
 }
