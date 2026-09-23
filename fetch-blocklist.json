@@ -12678,9 +12678,9 @@
     {
       "url": "https://www.facebook.com/comic.basics/posts/las-azules-season-2-episode-8-release-date-time-and-where-to-watch-the-finale/122267507372247280/",
       "firstSeen": "2026-09-23T12:05:04Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-23T12:05:04Z",
+      "lastAttempt": "2026-09-23T14:03:00Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "history": [
@@ -12697,9 +12697,23 @@
           "status": 403,
           "issue": "LEMA-10845",
           "note": "Firecrawl returned a blanket 'we do not support this site' refusal for facebook.com. Full-chain fetch failure; not added to data.json, relevance/date undetermined this run."
+        },
+        {
+          "attempt": "2026-09-23T14:03:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10849",
+          "note": "WebFetch again returned only a page-title fragment, not enough content to confirm post body, publish date, or official-vs-fan account status."
+        },
+        {
+          "attempt": "2026-09-23T14:03:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10849",
+          "note": "Firecrawl again returned a blanket 'we do not support this site' refusal for facebook.com. Full-chain fetch failure (2nd occurrence); not added to data.json, relevance/date undetermined this run. failCount now 2, cooldown not yet triggered (threshold is 3)."
         }
       ]
     }
   ],
-  "lastUpdated": "2026-09-23T12:05:04Z"
+  "lastUpdated": "2026-09-23T14:03:00Z"
 }
