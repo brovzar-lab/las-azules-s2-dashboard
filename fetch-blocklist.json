@@ -12388,7 +12388,87 @@
       "skipReason": "editorial_off_topic_false_positive",
       "skipNote": "Off-topic false positive (Rule G): reel by fan/trivia-repost account @capcutuela is about actress Bridget Moynahan's role as a prosecutor in 'Blue Bloods', not Las Azules / Women in Blue. Surfaced only via loose semantic match on Exa ES query ('la fiscal mas famosa de la television era capitana de...'). Not fetched beyond confirming topic via WebFetch (LEMA-10838).",
       "history": []
+    },
+    {
+      "url": "https://cartermatt.com/729004/boston-blue-season-2-spoilers-more-big-danny-baez-news",
+      "firstSeen": "2026-09-23T04:05:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T04:05:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "CarterMatt article about Boston Blue season 2 (Danny/Baez storyline), a different police procedural show. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Blue\"/\"Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-23T04:05:47Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10841",
+          "note": "WebFetch returned 403; Firecrawl scrape succeeded and confirmed the article is about Boston Blue, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://trainerscity.org/posts/a-glimpse-of-the-truth-lastseen-now-streaming",
+      "firstSeen": "2026-09-23T04:05:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T04:05:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TrainersCity post about \"Last Seen\", a different Apple TV Australian thriller series starring Patrick Brammall. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-23T04:05:47Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10841",
+          "note": "WebFetch succeeded; confirmed post is about Last Seen, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://sdpnoticias.com/espectaculos/famosos/a-eugenio-derbez-lo-consumio-su-personaje-en-el-juicio-serie-de-prime-video",
+      "firstSeen": "2026-09-23T04:05:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T04:05:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "SDP Noticias article about Eugenio Derbez discussing depression while filming Prime Video series \"El Juicio\". No mention of Las Azules or Women in Blue; surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-09-23T04:05:47Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10841",
+          "note": "WebFetch succeeded; confirmed article is about El Juicio / Eugenio Derbez, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://elpais.com/mexico/2026-09-23/equidad-de-genero-una-pelicula-a-la-que-aun-le-faltan-historias-por-contar.html",
+      "firstSeen": "2026-09-23T04:05:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-23T04:05:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El País Mexico op-ed by Ricardo Pineda (published Sep 22, 2026) on gender equity in Mexican film generally. No mention of Las Azules or Women in Blue anywhere in the body; surfaced only as a broad-query match on gender/Mexico terms.",
+      "history": [
+        {
+          "attempt": "2026-09-23T04:05:47Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10841",
+          "note": "WebFetch tool errored on this host; Firecrawl scrape succeeded (9365 chars) and confirmed no mention of Las Azules or Women in Blue anywhere in the body."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-22T20:05:17Z"
+  "lastUpdated": "2026-09-23T04:05:47Z"
 }
