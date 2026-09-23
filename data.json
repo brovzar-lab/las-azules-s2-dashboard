@@ -21,7 +21,47 @@
     "lang": "EN",
     "market": "US",
     "type": "Entertainment",
-    "excerpt": "The finale of Apple TV's crime drama Women in Blue (Las Azules) premieres September 30, 2026, as the Azules race to stop the Executioner before another victim falls; the season-long investigation connects a student activist's murder to Mexico City's 1968 tragedy."
+    "excerpt": "The finale of Apple TV's crime drama Women in Blue (Las Azules) premieres September 30, 2026, as the Azules race to stop the Executioner before another victim falls; the season-long investigation connects a student activist's murder to Mexico City's 1968 tragedy.",
+    "storyGroup": "comicbasics-s2-ep8-finale-20260923"
+  },
+  {
+    "outlet": "Fiction Horizon",
+    "headline": "'Women in Blue' Season 2 Episode 8 Finale: Release Date, Time, and Where to Watch",
+    "url": "https://fictionhorizon.com/women-in-blue-season-2-episode-8-finale-release-date-time-and-where-to-watch/",
+    "date": "Sep 23, 2026",
+    "ts": 20260923,
+    "dateSource": "jsonld_datepublished",
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "The finale of Apple TV's Spanish-language crime drama arrives Wednesday, September 30, 2026, with the episode titled \"Goyo\" premiering at midnight Eastern time; the season follows detective Maria and her team as they investigate murders connected to Mexico's 1968 student massacre.",
+    "storyGroup": "fictionhorizon-s2-ep8-finale-20260923"
+  },
+  {
+    "outlet": "IMDb",
+    "headline": "'Women in Blue' Season 2 Episode 8 Finale: Release Date, Time, and Where to Watch",
+    "url": "https://www.imdb.com/news/ni66028668/",
+    "date": "Sep 23, 2026",
+    "ts": 20260923,
+    "dateSource": "visible_dateline",
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Syndicated republication of the Fiction Horizon article (byline Robert Milakovic) on IMDb News: the Season 2 finale, titled \"Goyo,\" caps an eight-episode run built around the investigation into Mexico's 1968 student massacre.",
+    "storyGroup": "fictionhorizon-s2-ep8-finale-20260923"
+  },
+  {
+    "outlet": "IMDb",
+    "headline": "'Las Azules' Season 2 Episode 8 Release Date, Time and Where to Watch the Finale",
+    "url": "https://www.imdb.com/fr/news/ni66028675/",
+    "date": "Sep 23, 2026",
+    "ts": 20260923,
+    "dateSource": "visible_dateline",
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Syndicated republication of the Comic Basics article (byline Arthur S. Poe) on IMDb News (fr-locale surface): the finale caps an eight-episode run as the Azules confront the killer tied to the season-long investigation.",
+    "storyGroup": "comicbasics-s2-ep8-finale-20260923"
   },
   {
     "outlet": "Midgard Times",
