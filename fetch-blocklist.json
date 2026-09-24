@@ -2209,10 +2209,10 @@
     {
       "url": "https://www.tiktok.com/@postcreditscenepodcast/video/7398269390321372449",
       "firstSeen": "2026-09-08T12:06:02Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-21T14:07:40Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-24T08:03:45Z",
+      "cooldownUntil": "2026-10-24T08:03:45Z",
       "history": [
         {
           "attempt": "2026-09-08T12:06:02Z",
@@ -2241,6 +2241,20 @@
           "status": 403,
           "issue": "LEMA-10715",
           "note": "Blanket 'we do not support this site' refusal for tiktok.com, same as prior attempt. Full-chain failure, failCount now 2."
+        },
+        {
+          "attempt": "2026-09-24T08:03:45Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10885",
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only) again, no post caption/content -- bot wall."
+        },
+        {
+          "attempt": "2026-09-24T08:03:45Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10885",
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com, same as prior attempts. Full-chain failure, failCount now 3 -- setting 30-day cooldown."
         }
       ]
     },
@@ -12151,9 +12165,9 @@
     {
       "url": "https://www.tiktok.com/@postcreditscenepodcast/video/7398648399765015841",
       "firstSeen": "2026-09-21T14:07:40Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-21T14:07:40Z",
+      "lastAttempt": "2026-09-24T08:03:45Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -12169,6 +12183,20 @@
           "status": 403,
           "issue": "LEMA-10715",
           "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 1. @postcreditscenepodcast is a podcast/media outlet account (editorial-brand per Rule B), not a fan-repost -- relevance gate does not apply; this is a pure fetch failure, candidate remains eligible on retry."
+        },
+        {
+          "attempt": "2026-09-24T08:03:45Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10885",
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only) again, no post caption/content -- bot wall."
+        },
+        {
+          "attempt": "2026-09-24T08:03:45Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10885",
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com, same as prior attempt. Full-chain failure, failCount now 2."
         }
       ]
     },
@@ -13006,5 +13034,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-24T04:10:00Z"
+  "lastUpdated": "2026-09-24T08:03:45Z"
 }
