@@ -11386,9 +11386,9 @@
     {
       "url": "https://www.tiktok.com/discover/segunda-temporada-de-las-azules",
       "firstSeen": "2026-09-20T06:04:57Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-20T06:04:57Z",
+      "lastAttempt": "2026-09-24T18:05:05Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -11404,6 +11404,13 @@
           "status": 403,
           "issue": "LEMA-10585",
           "note": "Firecrawl returned 403: site not supported (\"we do not support this site\"). Full-chain failure, failCount now 1."
+        },
+        {
+          "attempt": "2026-09-24T18:05:05Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10921",
+          "note": "Re-attempted full fallback chain: WebFetch returned TikTok's generic landing page again (near-empty body), Firecrawl scrape returned 403 'we do not support this site'. Full-chain failure, failCount now 2."
         }
       ]
     },
@@ -13328,7 +13335,127 @@
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
       "skipNote": "Surfaced via Pass 2 query ('Las Azules Reforma OR El Universal OR El Pais'). Page is El Universal's generic tag-archive index for the keyword 'reforma' (the Mexican political/urban-planning term), not about Las Azules; matched only on the query's use of the word 'Reforma' as a possible outlet name. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://www.comingsoon.net/tv/news/2196605-hugh-lauries-new-apple-tv-show-reveals-first-look-sets-release-date",
+      "firstSeen": "2026-09-24T18:05:05Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T18:05:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ComingSoon.net article about Hugh Laurie's new (unrelated) Apple TV show and its first-look photo/release date. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Apple TV show release date\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-24T18:05:05Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-10921",
+          "note": "Title/snippet unambiguously about a different Apple TV show (Hugh Laurie); confirmed off-topic without fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.apple.com/tv-pr/news/2026/09/theres-no-place-like-apple-tv-for-the-holidays/",
+      "firstSeen": "2026-09-24T18:05:05Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T18:05:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Apple TV Press holiday-programming roundup (Snoopy Presents: 12 Days of Snoopy, Fraggle Rock: A Holiday Gift, Peanuts classics, etc.). Confirmed via WebFetch that the page does not mention Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic Apple TV press terms.",
+      "history": [
+        {
+          "attempt": "2026-09-24T18:05:05Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10921",
+          "note": "WebFetch succeeded; confirmed page is a holiday lineup roundup with no Las Azules/Women in Blue mention."
+        }
+      ]
+    },
+    {
+      "url": "https://www.elperiodicodearagon.com/ocio/tv/2026/09/24/avance-belen-esteban-viernes-guerra-muerte-jesulin-hombre-invisible-julia-janeiro-miente-134650232.html",
+      "firstSeen": "2026-09-24T18:05:05Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T18:05:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Periodico de Aragon preview of the Spanish gossip/talk show '¡De viernes!' covering Belén Esteban and Jesulín de Ubrique. No relation to Las Azules; surfaced only as a broad-query match from the Spanish-language Exa query on generic 'entrevista' terms.",
+      "history": [
+        {
+          "attempt": "2026-09-24T18:05:05Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-10921",
+          "note": "Title unambiguously about unrelated Spanish celebrity gossip programming; confirmed off-topic without fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lavanguardia.com/television/20260924/11643153/atresmedia-resucita-companeros-25-anos-quimi-valle-vida-adulta.html",
+      "firstSeen": "2026-09-24T18:05:05Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T18:05:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Vanguardia article about Atresmedia reviving the Spanish series 'Compañeros' 25 years later. No relation to Las Azules; surfaced only as a broad-query match from the Spanish-language Exa query.",
+      "history": [
+        {
+          "attempt": "2026-09-24T18:05:05Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-10921",
+          "note": "Title unambiguously about an unrelated Spanish series revival; confirmed off-topic without fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/angelesazulesmx",
+      "firstSeen": "2026-09-24T18:05:05Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T18:05:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "X/Twitter account for Los Ángeles Azules, a Mexican cumbia band, unrelated to the TV show Las Azules. Surfaced only as a name-match on the #LasAzules hashtag search.",
+      "history": [
+        {
+          "attempt": "2026-09-24T18:05:05Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-10921",
+          "note": "Account name/bio unambiguously identifies an unrelated musical group; confirmed off-topic without fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.rottentomatoes.com/m/goyo",
+      "firstSeen": "2026-09-24T18:05:05Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T18:05:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rotten Tomatoes movie page for 'Goyo' (2024), a Spanish-language Netflix film about an autistic museum guide, directed by Marcos Carnevale. Unrelated to Las Azules; coincidental title match with Season 2 Episode 8's episode title 'Goyo'. Confirmed via WebFetch.",
+      "history": [
+        {
+          "attempt": "2026-09-24T18:05:05Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10921",
+          "note": "WebFetch confirmed page is for an unrelated 2024 film, not the Las Azules S2E8 episode."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-24T16:07:50Z"
+  "lastUpdated": "2026-09-24T18:05:05Z"
 }
