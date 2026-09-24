@@ -13052,7 +13052,88 @@
           "note": "Gallery/navigation hub page, no editorial prose, no publish date. Rule F, matches DE episodes-images sibling."
         }
       ]
+    },
+    {
+      "url": "https://predb.net/rls/Las.Azules.S02E07.iTALiAN.MULTi.HDR.2160p.WEB.H265-NTROPiC",
+      "firstSeen": "2026-09-24T12:05:58Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T12:05:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_piracy_or_unauthorized_distribution",
+      "skipNote": "PreDB.net scene-release database entry for Las.Azules.S02E07.iTALiAN.MULTi.HDR.2160p.WEB.H265-NTROPiC, surfaced by Pass 2 standard sweep on this run (LEMA-10887) via a piracy-release predb.net URL. Firecrawl scrape succeeded (200): page is a scene-release catalog record (release date 22.09.2026, group NTROPiC, section TV-WEB-HD-X265) with release-quality labelling (2160p, HDR, WEB, H265) in the release name itself, an NFO download link, and a TMDB synopsis blurb wrapped around the release metadata -- no reporting, review, or promotional prose about the show. Matches Rule E signals directly: release-quality labelling in the title, and a synopsis blurb that exists only as an SEO/metadata wrapper. Primary function is cataloging an unauthorized scene release of the episode, not reporting on/reviewing/promoting it. Dateability irrelevant per Rule E.",
+      "history": [
+        {
+          "attempt": "2026-09-24T12:05:58Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10887",
+          "note": "WebFetch returned only the page header/title, no body content."
+        },
+        {
+          "attempt": "2026-09-24T12:05:58Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10887",
+          "note": "Full scene-release record retrieved: release date 22.09.2026, group NTROPiC, TV-WEB-HD-X265 section, 2160p/HDR/WEB/H265 quality tags, TMDB synopsis wrapper, NFO download link. Classified Rule E, no download/magnet link hosted directly on the page itself but function is unauthorized-release cataloging."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.com/news/ni64655699/",
+      "firstSeen": "2026-09-24T12:05:58Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T12:05:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "IMDb News syndication (\"'Women In Blue'\") of a Season 1 announcement originally published by sneakpeek.ca (http://www.sneakpeek.ca/2024/06/women-in-blue.html, not itself tracked in data.json). Surfaced by Pass 2 standard sweep on this run (LEMA-10887). WebFetch failed (403). Firecrawl scrape succeeded (200) and returned full article body (show synopsis, cast, July 31, 2024 premiere reference) but no article:published_time, JSON-LD datePublished, or any other publish-date field anywhere in the scraped content; the only date string present (\"July 31, 2024\") is the show's premiere date referenced in the article body, not the article's own publish date. Both fetch methods exhausted per Rule A, no proxy date substituted. reviewable=true so this stays listable for a future manual date lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-24T12:05:58Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10887"
+        },
+        {
+          "attempt": "2026-09-24T12:05:58Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10887",
+          "note": "Full body retrieved (syndicated from sneakpeek.ca, Season 1 announcement), no publish-date field found anywhere in the scraped markdown or metadata."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.com/news/ni64648585/",
+      "firstSeen": "2026-09-24T12:05:58Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T12:05:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "IMDb News syndication (\"Women in Blue Trailer Released by Apple TV+\") of a Season 1 trailer announcement originally published by vitalthrills.com (https://www.vitalthrills.com/women-in-blue-trailer-released-by-apple-tv/, not itself tracked in data.json -- distinct from the four other vitalthrills.com Season 2-era URLs already in data.json). Surfaced by Pass 2 standard sweep on this run (LEMA-10887). WebFetch failed (403). Firecrawl scrape succeeded (200) and returned full article body (trailer announcement, cast, creators) but no article:published_time, JSON-LD datePublished, or any other publish-date field anywhere in the scraped content; the only date string present (\"July 31, 2024\") is the show's premiere date referenced in the article body, not the article's own publish date. Both fetch methods exhausted per Rule A, no proxy date substituted. reviewable=true so this stays listable for a future manual date lookup.",
+      "history": [
+        {
+          "attempt": "2026-09-24T12:05:58Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10887"
+        },
+        {
+          "attempt": "2026-09-24T12:05:58Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10887",
+          "note": "Full body retrieved (syndicated from vitalthrills.com, Season 1 trailer announcement), no publish-date field found anywhere in the scraped markdown or metadata."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-24T10:00:00Z"
+  "lastUpdated": "2026-09-24T12:05:58Z"
 }
