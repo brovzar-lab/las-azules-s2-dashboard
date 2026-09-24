@@ -13616,7 +13616,53 @@
           "note": "Classified on inspection without a fetch attempt: same family reasoning as the existing x.com/AppleTV Rule F row."
         }
       ]
+    },
+    {
+      "url": "https://tvsboy.com/country/mx/",
+      "firstSeen": "2026-09-24T22:05:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T22:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "TVSBoy Mexico-country show directory page, surfaced by Exa EN pass (LEMA-10932). WebFetch returned an error; Firecrawl scrape succeeded (200) and returned a grid of show-tile listings (title, next-episode date, episode-count progress) for many unrelated shows, one tile of which is \"Women in Blue s2\" (Sept 23, 2026, 7 of 8 episodes). Strip the tile grid and nothing written about the show remains: this is a bare directory/schedule-grid page, not prose about the show, so it is Rule F (editorial_listing_or_database), not coverage.",
+      "history": [
+        {
+          "attempt": "2026-09-24T22:05:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10932"
+        },
+        {
+          "attempt": "2026-09-24T22:05:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10932",
+          "note": "Full page content retrieved: a directory grid of show tiles for Mexico. No written editorial content about Las Azules specifically, just a schedule-grid tile. Rule F."
+        }
+      ]
+    },
+    {
+      "url": "https://oregonlive.com/tv/2026/09/how-to-watch-knife-edge-chasing-michelin-stars-season-2-streaming-free.html",
+      "firstSeen": "2026-09-24T22:05:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T22:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "OregonLive article by Amy Leona Havin about \"Knife Edge: Chasing Michelin Stars\" Season 2 (a different Apple TV cooking competition show) returning Sept 25, 2026. No mention of Las Azules or Women in Blue anywhere in the body; surfaced only as a broad-query match on generic \"Apple TV season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-24T22:05:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10932",
+          "note": "WebFetch failed to fetch; Firecrawl scrape succeeded and confirmed the article is entirely about Knife Edge: Chasing Michelin Stars, unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-24T20:02:00Z"
+  "lastUpdated": "2026-09-24T22:05:00Z"
 }
