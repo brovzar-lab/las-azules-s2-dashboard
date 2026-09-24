@@ -13032,7 +13032,27 @@
           "note": "Firecrawl returned a hard refusal: 'we do not support this site' for facebook.com. Documented method exhaustion per Rule A; full-chain failure, failCount=1. Account type (outlet vs. vendor/fan) could not be determined due to the fetch failure, so Rule B relevance was not evaluated this run."
         }
       ]
+    },
+    {
+      "url": "https://www.apple.com/es/tv-pr/originals/women-in-blue-las-azules/episodes-images/",
+      "firstSeen": "2026-09-24T10:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T10:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Spanish-locale Apple TV Press episodes/images gallery hub for Women in Blue (Las Azules), surfaced by Pass 1 Exa EN query on this run (LEMA-10886). WebFetch succeeded (200) and returned only a structural navigation/hub page (\"Episodios e imágenes\") linking to Cast & Crew / News / Trailers sections, plus a watch-now link and promotional thumbnail; no written editorial prose about the show and no visible publish date. Rule F (surface family, LEMA-10632/LEMA-10630 clarification): matches the apple.com/{locale}/tv-pr/originals/ show-page family already ledgered for other locales and paths, most directly the same episodes-images path already ledgered for the DE locale (https://www.apple.com/de/tv-pr/originals/women-in-blue-las-azules/episodes-images/, LEMA-10845) and the base ES show page (https://www.apple.com/es/tv-pr/originals/women-in-blue-las-azules/, LEMA-10627/LEMA-10628).",
+      "history": [
+        {
+          "attempt": "2026-09-24T10:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10886",
+          "note": "Gallery/navigation hub page, no editorial prose, no publish date. Rule F, matches DE episodes-images sibling."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-24T08:03:45Z"
+  "lastUpdated": "2026-09-24T10:00:00Z"
 }
