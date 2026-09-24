@@ -13133,7 +13133,67 @@
           "note": "Full body retrieved (syndicated from vitalthrills.com, Season 1 trailer announcement), no publish-date field found anywhere in the scraped markdown or metadata."
         }
       ]
+    },
+    {
+      "url": "https://justwatch.com/in/tv-show/the-rookie/season-8",
+      "firstSeen": "2026-09-24T14:05:35Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T14:05:35Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch (India) streaming-availability page for The Rookie Season 8 (police procedural starring Nathan Fillion), a different, unrelated show. No mention of Las Azules or Women in Blue. Surfaced only via Exa's broad English query match. Confirmed via WebFetch.",
+      "history": [
+        {
+          "attempt": "2026-09-24T14:05:35Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10892",
+          "note": "WebFetch succeeded; confirmed page is about The Rookie Season 8, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://justwatch.com/ca/tv-show/slow-horses/season-6",
+      "firstSeen": "2026-09-24T14:05:35Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T14:05:35Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch (Canada) streaming-availability page for Slow Horses Season 6, a different, unrelated show. Las Azules appears only once as a 'people who liked this also liked' recommendation, not as page subject matter. Surfaced only via Exa's broad English query match. Confirmed via WebFetch.",
+      "history": [
+        {
+          "attempt": "2026-09-24T14:05:35Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10892",
+          "note": "WebFetch succeeded; confirmed page is about Slow Horses Season 6, unrelated to Las Azules (only a sidebar recommendation mention)."
+        }
+      ]
+    },
+    {
+      "url": "https://deadline.com/2025/07/acapulco-season-4-trailer-apple-1236452092",
+      "firstSeen": "2026-09-24T14:05:35Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T14:05:35Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Deadline article (July 8, 2025) about the Season 4 trailer for Apple TV+'s 'Acapulco', a different, unrelated Apple TV+ show. No mention of Las Azules or Women in Blue. Surfaced only via WebSearch broad trade-press query match. WebFetch hit a 402 paywall gateway; confirmed via Firecrawl scrape fallback.",
+      "history": [
+        {
+          "attempt": "2026-09-24T14:05:35Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-10892",
+          "note": "WebFetch returned 402 (tollbit paywall gateway); Firecrawl scrape succeeded and confirmed page is about Acapulco Season 4, unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-24T12:05:58Z"
+  "lastUpdated": "2026-09-24T14:05:35Z"
 }
