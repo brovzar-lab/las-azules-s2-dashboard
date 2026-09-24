@@ -13455,7 +13455,168 @@
           "note": "WebFetch confirmed page is for an unrelated 2024 film, not the Las Azules S2E8 episode."
         }
       ]
+    },
+    {
+      "url": "https://screenrant.com/stephen-king-last-seen-apple-tv-review-praise/",
+      "firstSeen": "2026-09-24T20:02:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T20:02:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ScreenRant article about Apple TV's \"Last Seen\" (Stephen King praising the thriller series, based on Ryan David Jahn's novel \"The Dispatcher\", starring Patrick Brammall). No mention of Las Azules / Women in Blue; surfaced only as a broad Exa EN query match on \"Apple TV\".",
+      "history": [
+        {
+          "attempt": "2026-09-24T20:02:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10925",
+          "note": "WebFetch succeeded; confirmed article is about a different show (Last Seen), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://tvtonight.com.au/2026/09/returning-wheres-wanda.html",
+      "firstSeen": "2026-09-24T20:02:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T20:02:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Tonight (AU) article about the German-language dark comedy series \"Where's Wanda?\" returning to Apple TV in October. No mention of Las Azules / Women in Blue; surfaced only as a broad Exa EN query match on \"Apple TV\".",
+      "history": [
+        {
+          "attempt": "2026-09-24T20:02:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10925",
+          "note": "WebFetch returned 403."
+        },
+        {
+          "attempt": "2026-09-24T20:02:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10925",
+          "note": "Firecrawl scrape succeeded; confirmed article is about a different show (Where's Wanda?), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/AppleTV/status/1751968526544277995",
+      "firstSeen": "2026-09-24T20:02:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T20:02:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Apple TV (@AppleTV) post from Jan 29, 2024 containing only a bare t.co short link with no accompanying text, predating the Las Azules season 1 premiere (Jul 2024). Cannot be linked to Las Azules / Women in Blue; surfaced only as a broad web-search match on \"#LasAzules Apple TV twitter x.com\". (Original candidate URL twitter.com/AppleTV/status/1751968526544277995 redirects here per the twitter.com->x.com host alias; ledgered at the canonical x.com address.)",
+      "history": [
+        {
+          "attempt": "2026-09-24T20:02:00Z",
+          "method": "WebFetch",
+          "status": 402,
+          "issue": "LEMA-10925",
+          "note": "WebFetch returned 402 Payment Required."
+        },
+        {
+          "attempt": "2026-09-24T20:02:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10925",
+          "note": "Firecrawl scrape succeeded; post body is a bare t.co link with no text, no mention of Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/AppleTV/status/1874093159828914478",
+      "firstSeen": "2026-09-24T20:02:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T20:02:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Apple TV (@AppleTV) post from Dec 31, 2024: generic Apple TV+ free-trial promo (\"Stream Apple TV+ for free Jan 4-5\"), no mention of Las Azules / Women in Blue. Surfaced only as a broad web-search match on \"#LasAzules Apple TV twitter x.com\".",
+      "history": [
+        {
+          "attempt": "2026-09-24T20:02:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-10925",
+          "note": "WebFetch returned 403."
+        },
+        {
+          "attempt": "2026-09-24T20:02:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10925",
+          "note": "Firecrawl scrape succeeded; post is a generic Apple TV+ promo unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.hojasmagicas.cl/search/label/Boston%20Blue",
+      "firstSeen": "2026-09-24T20:02:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T20:02:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Hojas Mágicas (blog) label/archive index page for the \"Boston Blue\" category tag, a different show. No mention of Las Azules / Women in Blue anywhere on the page; surfaced only as a broad Exa ES query match on \"temporada 2\".",
+      "history": [
+        {
+          "attempt": "2026-09-24T20:02:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10925",
+          "note": "WebFetch succeeded; confirmed page is a label archive for a different show (Boston Blue), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/AppleTV/highlights",
+      "firstSeen": "2026-09-24T20:02:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-24T20:02:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Apple TV's X/Twitter profile \"highlights\" tab: a listing of pinned/selected posts, not a single document with written editorial content about the show. Same surface family as the already-ledgered x.com/AppleTV profile page (Rule F), but normalizes to a distinct key (/highlights path segment) so it required its own row.",
+      "history": [
+        {
+          "attempt": "2026-09-24T20:02:00Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10925",
+          "note": "Classified on inspection without a fetch attempt: structurally a profile listing page, same family reasoning as the existing x.com/AppleTV Rule F row."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/appletv?lang=en",
+      "firstSeen": "2026-09-24T20:02:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-24T20:02:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Apple TV's X/Twitter profile page (lang=en query-string variant of the already-ledgered x.com/AppleTV profile). No written editorial content, a profile/feed listing page. Normalizes to a distinct key from the bare profile URL (case-folded path + surviving lang query param), so it required its own row.",
+      "history": [
+        {
+          "attempt": "2026-09-24T20:02:00Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10925",
+          "note": "Classified on inspection without a fetch attempt: same family reasoning as the existing x.com/AppleTV Rule F row."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-24T18:05:05Z"
+  "lastUpdated": "2026-09-24T20:02:00Z"
 }
