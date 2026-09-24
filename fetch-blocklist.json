@@ -12940,7 +12940,71 @@
           "note": "Classified as Rule F (editorial_listing_or_database) by surface family match to existing imdb.com/{de,es-es,es,it}/title/tt20516590/ ledger rows. No fetch performed."
         }
       ]
+    },
+    {
+      "url": "https://canalrgz.com/serie/las-azules-13881/temporada/2/capitulo/7",
+      "firstSeen": "2026-09-24T04:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T04:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Surfaced by Standard EN/ES sweep (Pass 2, LEMA-10883). Spanish-language episode directory/listing page for S2E7: episode navigation, platform-availability info, 'Sinopsis no disponible', no written editorial content about the show. Strip test: no prose remains once the listing/nav chrome is removed. Only date-like field is a future broadcast date (Spain, Sept 22 2026), which is an air date, not a publish date, and inadmissible under Rule A regardless. No download/torrent links or embedded player present, so Rule E does not apply. Rule F (editorial_listing_or_database).",
+      "history": [
+        {
+          "attempt": "2026-09-24T04:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10883",
+          "note": "Directory/listing page confirmed via WebFetch; classified Rule F, not added to data.json."
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/popular/las-azules-apple-tv-series",
+      "firstSeen": "2026-09-24T04:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T04:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Surfaced by Standard EN/ES sweep (Pass 2, LEMA-10883). Instagram 'topic' aggregator page for the search term, not a single post: a grid of unrelated reels/posts from many accounts under related hashtag pills, dynamically updated, with no fixed publish date and no editorial content of its own. Not a Rule B account-type candidate (it is not one account's post) and not Rule G (it is on-topic, just a database/listing surface). Rule F (editorial_listing_or_database).",
+      "history": [
+        {
+          "attempt": "2026-09-24T04:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10883",
+          "note": "Topic aggregator page confirmed via WebFetch; classified Rule F, not added to data.json."
+        }
+      ]
+    },
+    {
+      "url": "https://facebook.com/MDSMX999/videos/778443031066527",
+      "firstSeen": "2026-09-24T04:10:00Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-24T04:10:00Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-24T04:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10883",
+          "note": "WebFetch returned only the literal word 'Video' with no metadata, account info, caption, or date -- an empty-success bot wall response, treated as a failure per the fetch fallback chain."
+        },
+        {
+          "attempt": "2026-09-24T04:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10883",
+          "note": "Firecrawl returned a hard refusal: 'we do not support this site' for facebook.com. Documented method exhaustion per Rule A; full-chain failure, failCount=1. Account type (outlet vs. vendor/fan) could not be determined due to the fetch failure, so Rule B relevance was not evaluated this run."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-24T00:03:51Z"
+  "lastUpdated": "2026-09-24T04:10:00Z"
 }
