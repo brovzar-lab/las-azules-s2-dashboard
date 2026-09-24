@@ -12920,7 +12920,27 @@
           "note": "Firecrawl returned a 200 wrapper but the scraped body is YouTube's own 'Error 401 (Bad Request)' page, not the video page. Full-chain failure, failCount now 1."
         }
       ]
+    },
+    {
+      "url": "https://www.imdb.com/pt/title/tt20516590/",
+      "firstSeen": "2026-09-24T00:03:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Portuguese (Brazil)-locale IMDb title page for Las Azules / Women in Blue (tt20516590), surfaced by the Exa EN pass (LEMA-10881). Classified directly under Rule F's surface-family clarification (LEMA-10632, CEO ruling LEMA-10630, extended by LEMA-10638): imdb.com/title/* is a named Rule F surface family at any locale/depth regardless of dateability, matching the already-ledgered es-es/, es/, de/, it/ sibling locale variants of this same title record. Not fetched: Rule F classifies the surface, not the page content, so no WebFetch/Firecrawl attempt or dateability determination is required before ledgering. reviewable omitted (Rule F entries are not coverage at all, same posture as the sibling locale rows).",
+      "history": [
+        {
+          "attempt": "2026-09-24T00:03:51Z",
+          "method": "surface-family-classification",
+          "status": null,
+          "issue": "LEMA-10881",
+          "note": "Classified as Rule F (editorial_listing_or_database) by surface family match to existing imdb.com/{de,es-es,es,it}/title/tt20516590/ ledger rows. No fetch performed."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-23T22:00:00Z"
+  "lastUpdated": "2026-09-24T00:03:51Z"
 }
