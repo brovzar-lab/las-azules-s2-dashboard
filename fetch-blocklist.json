@@ -12165,10 +12165,10 @@
     {
       "url": "https://www.tiktok.com/@postcreditscenepodcast/video/7398648399765015841",
       "firstSeen": "2026-09-21T14:07:40Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-24T08:03:45Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": "2026-10-24T16:07:50Z",
       "history": [
         {
           "attempt": "2026-09-21T14:07:40Z",
@@ -12197,6 +12197,20 @@
           "status": 403,
           "issue": "LEMA-10885",
           "note": "Blanket 'we do not support this site' refusal for tiktok.com, same as prior attempt. Full-chain failure, failCount now 2."
+        },
+        {
+          "attempt": "2026-09-24T16:07:50Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10910",
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only) again, no post caption/content -- bot wall."
+        },
+        {
+          "attempt": "2026-09-24T16:07:50Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10910",
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com, third consecutive full-chain failure. failCount now 3, cooldownUntil set to 30 days out (2026-10-24T16:07:50Z)."
         }
       ]
     },
@@ -13193,7 +13207,128 @@
           "note": "WebFetch returned 402 (tollbit paywall gateway); Firecrawl scrape succeeded and confirmed page is about Acapulco Season 4, unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.justwatch.com/uk/tv-series/peppa-pig/season-6",
+      "firstSeen": "2026-09-24T16:07:50Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad English query ('Las Azules Women in Blue Season 2 Apple TV'). Page is a JustWatch listing for 'Peppa Pig' Season 6, an unrelated children's show. No mention of Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://www.abqjournal.com/lifestyles/down-under-thriller/3125660",
+      "firstSeen": "2026-09-24T16:07:50Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad English query. Article is about the unrelated Apple TV+ thriller 'Last Seen' starring Patrick Brammall; does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://appleinsider.com/articles/26/09/24/hugh-laurie-turns-crime-boss-for-new-apple-tv-drama-the-wanted-man",
+      "firstSeen": "2026-09-24T16:07:50Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad English query. Article is about the unrelated Apple TV+ drama 'Wanted Man' starring Hugh Laurie; does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://www.cbr.com/dark-matter-season-2-clip/",
+      "firstSeen": "2026-09-24T16:07:50Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad English query. Article is about the unrelated Apple TV+ series 'Dark Matter' Season 2 (Joel Edgerton); does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G, same pattern as the previously-ledgered macobserver.com Dark Matter S2 entry."
+    },
+    {
+      "url": "https://www.hojasmagicas.cl/search/label/Entrevista%20a%20Jos%C3%A9%20Ignacio%20Valenzuela",
+      "firstSeen": "2026-09-24T16:07:50Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad Spanish query ('Barbara Mori entrevista Las Azules temporada 2'). Page is a blog label/tag index of interviews with writer Jose Ignacio Valenzuela, unrelated to Las Azules or Barbara Mori. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://folhadecuritiba.com.br/debora-falabella-comenta-sobre-o-retorno-em-avenida-brasil-2-e-suas-expectativas/",
+      "firstSeen": "2026-09-24T16:07:50Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad Spanish query. Article is about actress Debora Falabella and the unrelated Brazilian telenovela 'Avenida Brasil 2'; does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://www.lasexta.com/programas/zapeando/video-rey-emerito-habla-dani-mateo-foto-desnudo-cetro-aun-aguanta-pero-cojines-estan-colganderos_202609246ab53c09d5f3ae10c7346a73.html",
+      "firstSeen": "2026-09-24T16:07:50Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad Spanish query. Article is about Spanish TV program 'Zapeando' and the former king emeritus Juan Carlos I; entirely unrelated to Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://radio-mejor.com/asi-luce-el-elenco-de-la-serie-de-timbiriche/",
+      "firstSeen": "2026-09-24T16:07:50Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad Spanish query. Article is about a cast reveal for an unrelated series about the Mexican pop group Timbiriche; does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://www.justwatch.com/ec/pelicula/la-habitacion-azul",
+      "firstSeen": "2026-09-24T16:07:50Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 2 general web query ('Las Azules Apple TV reddit review'). Page is a JustWatch listing for the unrelated film 'La Habitacion Azul'; does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://support.apple.com/es-lamr/guide/tv/atvb0d26676e/15.0/tvos",
+      "firstSeen": "2026-09-24T16:07:50Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 2 general web query. Page is a generic Apple Support tvOS user guide page about the TV app store screen; does not mention Las Azules/Women in Blue specifically. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://www.eluniversal.com.mx/tag/reforma/",
+      "firstSeen": "2026-09-24T16:07:50Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-24T16:07:50Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 2 query ('Las Azules Reforma OR El Universal OR El Pais'). Page is El Universal's generic tag-archive index for the keyword 'reforma' (the Mexican political/urban-planning term), not about Las Azules; matched only on the query's use of the word 'Reforma' as a possible outlet name. Off-topic false positive from the broad query per Rule G."
     }
   ],
-  "lastUpdated": "2026-09-24T14:05:35Z"
+  "lastUpdated": "2026-09-24T16:07:50Z"
 }
