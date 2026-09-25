@@ -1,5 +1,17 @@
 [
   {
+    "outlet": "Cine Geek",
+    "headline": "Natalia Téllez y Las Azules Temporada 2 en Apple TV | Entrevista",
+    "url": "https://cinegeek.net/2026/09/24/natalia-tellez-y-las-azules-temporada-2-en-apple-tv-entrevista",
+    "date": "Sep 24, 2026",
+    "ts": 20260924,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Actress Natalia Téllez discusses Las Azules Season 2 on Apple TV, calling it the only Spanish-language Latino production currently premiering on the platform, and addresses how machismo persists in Mexico and the series bold portrayal of the 1968 Tlatelolco student massacre."
+  },
+  {
     "outlet": "MacObserver",
     "headline": "Women in Blue Season 2 Episode 7 Release Date and Preview: Why Gerardo's Desperate Move Puts Gabina and Valentina at Odds",
     "url": "https://www.macobserver.com/appletv/women-in-blue-season-2-episode-7-release-date-preview-gerardo-gabina-valentina/",
@@ -7359,6 +7371,18 @@
     "market": "International",
     "type": "Social",
     "excerpt": "French outlet melty posts the release date and time for Las Azules Season 1, Episode 4, linking to its article on melty.fr."
+  },
+  {
+    "outlet": "Hidalgo Multimedios (YouTube)",
+    "headline": "Entrevista con la actriz de la Serie Las Azules por Apple TV",
+    "url": "https://www.youtube.com/watch?v=60fdiNbhrqw",
+    "date": "Aug 11, 2024",
+    "ts": 20240811,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Social",
+    "excerpt": "Interview with a Las Azules cast member who plays Chela, the archive department secretary, discussing her path into acting and the challenge of embodying the character."
   },
   {
     "outlet": "Melty",
