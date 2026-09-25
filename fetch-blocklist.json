@@ -13767,7 +13767,27 @@
           "note": "Firecrawl scrape blocked (403). Full-chain failure; not added to data.json this run."
         }
       ]
+    },
+    {
+      "url": "https://bostonglobe.com/2026/09/25/arts/tv-crime-drama-women-heroes-villains",
+      "firstSeen": "2026-09-25T12:03:25Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-25T12:03:25Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Boston Globe piece by Chris Vognar, \"New in TV's Crime Wave: So Many Women as Heroes and Villains\" -- a general trend roundup about women-led crime dramas on TV. Confirmed via WebFetch: no mention of Las Azules or Women in Blue anywhere in the article. Surfaced only as a broad-query match on generic crime-drama/women terms via Exa.",
+      "history": [
+        {
+          "attempt": "2026-09-25T12:03:25Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11125",
+          "note": "WebFetch succeeded; confirmed article is a general TV-crime-drama trend piece with no mention of Las Azules/Women in Blue."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-25T08:05:54Z"
+  "lastUpdated": "2026-09-25T12:03:25Z"
 }
