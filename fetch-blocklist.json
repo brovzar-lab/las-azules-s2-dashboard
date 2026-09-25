@@ -13744,25 +13744,6 @@
       ]
     },
     {
-      "url": "https://imdb.com/title/tt20516590/cast",
-      "firstSeen": "2026-09-25T08:05:54Z",
-      "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-25T08:05:54Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": "IMDb title record cast subpage for tt20516590 (Women in Blue / Las Azules), surfaced by Pass 2 web sweep on 2026-09-25. Rule F per the LEMA-10632 clarification: imdb.com/title/* is Rule F at any locale and any depth, explicitly including /cast and /episodes. No fetch needed to establish this -- classification is by surface family, matching the existing tt20516590 sibling rows already ledgered under Rule F (e.g. the /de/ and /es-es/ locale variants).",
-      "history": [
-        {
-          "attempt": "2026-09-25T08:05:54Z",
-          "method": "classification-by-family (no fetch required per Rule F clarification, LEMA-10632)",
-          "status": null,
-          "issue": "LEMA-11095"
-        }
-      ]
-    },
-    {
       "url": "https://tiktok.com/discover/periodo-azul-habra-segunda-temporada",
       "firstSeen": "2026-09-25T08:05:54Z",
       "failCount": 1,
