@@ -13682,7 +13682,47 @@
           "note": "Surfaced via Pass 2 web sweep; classified Rule F on first fetch, never added to data.json."
         }
       ]
+    },
+    {
+      "url": "https://tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-09-25T06:07:38Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "US Apple TV show landing page for Las Azules under the Spanish-title URL slug, same content ID (umc.cmc.73wmdmkfpta5ul1vbwckmme39) as the already-ledgered https://tv.apple.com/us/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39 (permanentSkip, editorial_listing_or_database). Surfaced during Pass 2 standard web sweep (LEMA-11059). Classified by surface family per the Rule F clarification (LEMA-10632/LEMA-10630, apple-locale-show-pages-are-rule-f precedent): this is the same tv.apple.com/{locale}/show/ database/catalog page family already established as Rule F across the us/women-in-blue and lu/las-azules siblings; it is an alias slug, not a distinct document, so no separate fetch was spent to confirm what the sibling rows already establish for this exact content ID. Not added to data.json.",
+      "history": [
+        {
+          "attempt": "2026-09-25T06:07:38Z",
+          "method": "classification-by-sibling (no fetch spent)",
+          "status": null,
+          "issue": "LEMA-11059",
+          "note": "Same content ID and URL template as tv.apple.com/us/show/women-in-blue (already Rule F) and tv.apple.com/lu/show/las-azules (already Rule F). Classified as Rule F by surface family without a fresh fetch, per Rule F clarification (LEMA-10632)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.allocine.fr/series/ficheserie-31977/saison-1000001953/",
+      "firstSeen": "2026-09-25T06:07:38Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-25T06:07:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_user_review_aggregate",
+      "skipNote": "AlloCine season 2 hub page for Las Azules. WebFetch succeeded (200): page carries a Season 2 synopsis, cast list, and per-episode listing (the metadata Rule F's strip test removes), plus one embedded audience review under a \"Critique Spectateur\" tab: 1 critique spectateur, 1.0/5 stars, user \"frdric m.\" (\"...la première saison était pleine de nouveauté...là les policières sont fades, inexistantes, moribondes\"). No press/critic-authored review present, only the public-submitted spectateur rating -- this is the AlloCine critiques spectateurs surface Rule H (LEMA-10163) names explicitly as an example, so classified editorial_user_review_aggregate rather than editorial_listing_or_database despite the page also carrying database-style season/episode content. Surfaced during Pass 3 Firecrawl FR-market search (LEMA-11059). Not added to data.json; reviewable omitted (not coverage at all, per Rule H).",
+      "history": [
+        {
+          "attempt": "2026-09-25T06:07:38Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11059",
+          "note": "Confirmed page content: Season 2 synopsis + episode/cast listing + 1 audience \"Critique Spectateur\" (1.0/5, user frdric m.). No press critic reviews present."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-25T00:06:00Z"
+  "lastUpdated": "2026-09-25T06:07:38Z"
 }
