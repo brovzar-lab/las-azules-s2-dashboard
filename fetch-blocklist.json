@@ -13787,7 +13787,47 @@
           "note": "WebFetch succeeded; confirmed article is a general TV-crime-drama trend piece with no mention of Las Azules/Women in Blue."
         }
       ]
+    },
+    {
+      "url": "https://www.hola.com/us-es/entretenimiento/20260630910048/natalia-tellez-operacion-triunfo-telemundo-entrevista/",
+      "firstSeen": "2026-09-25T14:05:07Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-25T14:05:07Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "¡HOLA! article primarily about Natalia Téllez being named host of Operación Triunfo Estados Unidos on Telemundo (premiering July 7, 2026). Las Azules is mentioned only in passing as a project she shared with coach Ximena Sariñana; the piece is not coverage of the show. Surfaced only as a broad-query match on a Natalia Téllez search.",
+      "history": [
+        {
+          "attempt": "2026-09-25T14:05:07Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11131",
+          "note": "WebFetch succeeded; confirmed article is about Operación Triunfo hosting news, not Las Azules coverage."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=5ocEqom3pgs",
+      "firstSeen": "2026-09-25T14:05:07Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-25T14:05:07Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "\"Nunca pases por encima de ti con Bárbara Mori\" -- a 1h49m personal wellness/therapy podcast episode (channel Romina Sacre, \"Sensibles y Chingonas\") about Bárbara Mori's ayahuasca and AA-related therapy work, her foundation Amorinfinito, and her personal life. Las Azules is mentioned only once, in passing, as premiere-timing context (\"a días de estrenar su serie Las Azules\"). Not coverage of the show; surfaced only as a broad-query match on a Bárbara Mori search.",
+      "history": [
+        {
+          "attempt": "2026-09-25T14:05:07Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11131",
+          "note": "WebFetch returned empty JS-rendered shell; Firecrawl scrape succeeded and confirmed video is a personal wellness podcast, not Las Azules coverage."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-25T12:03:25Z"
+  "lastUpdated": "2026-09-25T14:05:07Z"
 }
