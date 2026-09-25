@@ -13662,7 +13662,27 @@
           "note": "WebFetch failed to fetch; Firecrawl scrape succeeded and confirmed the article is entirely about Knife Edge: Chasing Michelin Stars, unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.tvmaze.com/shows/62238",
+      "firstSeen": "2026-09-25T00:06:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-25T00:06:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "LEMA-10935 sweep. Bare TVmaze show page (distinct normalize() key from the already-ledgered /shows/62238/las-azules, /shows/62238/show-slug, and /shows/62238/las-azules/episodeguide siblings -- path suffix is not collapsed). WebFetch confirms this is the show database/listing page: network/status/schedule/genre metadata table, episode listing with airdates, cast roster, streaming availability grid. Only prose element is a single boilerplate one-line synopsis; stripping the metadata table per Rule F's test leaves nothing written about the show. Same surface family as the four TVmaze siblings already classified editorial_listing_or_database under Rule F (LEMA-9927/LEMA-10217/LEMA-10632). reviewable omitted: Rule F entries are not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-09-25T00:06:00Z",
+          "method": "webfetch",
+          "status": 200,
+          "issue": "LEMA-10935",
+          "note": "Surfaced via Pass 2 web sweep; classified Rule F on first fetch, never added to data.json."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-24T22:05:00Z"
+  "lastUpdated": "2026-09-25T00:06:00Z"
 }
