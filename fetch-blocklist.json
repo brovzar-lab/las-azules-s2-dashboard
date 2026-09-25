@@ -13722,7 +13722,71 @@
           "note": "Confirmed page content: Season 2 synopsis + episode/cast listing + 1 audience \"Critique Spectateur\" (1.0/5, user frdric m.). No press critic reviews present."
         }
       ]
+    },
+    {
+      "url": "https://inews.zoombangla.com/the-wanted-man-apple-tv-premiere-january-2027",
+      "firstSeen": "2026-09-25T08:05:54Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-25T08:05:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by the Pass 1 Exa EN broad query (\"Las Azules Women in Blue Season 2 Apple TV\") on the 2026-09-25 08:00Z sweep. Page is entirely about Apple TV's announcement of 'The Wanted Man' (Hugh Laurie crime drama, premiering Jan 6, 2027); WebFetch confirmed no mention of Las Azules/Women in Blue anywhere in the body. Broad-query false positive, not editorial content about this show.",
+      "history": [
+        {
+          "attempt": "2026-09-25T08:05:54Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11095",
+          "note": "Confirmed off-topic: article is about a different Apple TV series entirely, no mention of Las Azules/Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://imdb.com/title/tt20516590/cast",
+      "firstSeen": "2026-09-25T08:05:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-25T08:05:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "IMDb title record cast subpage for tt20516590 (Women in Blue / Las Azules), surfaced by Pass 2 web sweep on 2026-09-25. Rule F per the LEMA-10632 clarification: imdb.com/title/* is Rule F at any locale and any depth, explicitly including /cast and /episodes. No fetch needed to establish this -- classification is by surface family, matching the existing tt20516590 sibling rows already ledgered under Rule F (e.g. the /de/ and /es-es/ locale variants).",
+      "history": [
+        {
+          "attempt": "2026-09-25T08:05:54Z",
+          "method": "classification-by-family (no fetch required per Rule F clarification, LEMA-10632)",
+          "status": null,
+          "issue": "LEMA-11095"
+        }
+      ]
+    },
+    {
+      "url": "https://tiktok.com/discover/periodo-azul-habra-segunda-temporada",
+      "firstSeen": "2026-09-25T08:05:54Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-25T08:05:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-09-25T08:05:54Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11095",
+          "note": "WebFetch returned only generic TikTok branding text ('TikTok - Make Your Day'), a near-empty body with no page-specific content -- treated as a soft failure per the fetch fallback chain rule."
+        },
+        {
+          "attempt": "2026-09-25T08:05:54Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11095",
+          "note": "Firecrawl scrape blocked (403). Full-chain failure; not added to data.json this run."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-25T06:07:38Z"
+  "lastUpdated": "2026-09-25T08:05:54Z"
 }
