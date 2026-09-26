@@ -14007,7 +14007,87 @@
           "note": "WebFetch succeeded; confirmed page is about a different show (Una familia de diez), unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://malaysia.news.yahoo.com/good-apple-tv-october-video-063046673.html",
+      "firstSeen": "2026-09-26T08:05:32Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T08:05:32Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Yahoo News Malaysia roundup of 'what's good on Apple TV in October 2026', covering documentaries and other shows (The Last First: Winter K2, Tenzing, The Sisters Grimm, Where's Wanda?, etc). No mention of Las Azules or Women in Blue anywhere; surfaced only as an Exa broad-match on generic Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-26T08:05:32Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11345",
+          "note": "WebFetch succeeded; confirmed article is an Apple TV October slate roundup with no mention of Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://indianbroadcastingworld.com/apple-tv-unveils-first-look-a",
+      "firstSeen": "2026-09-26T08:05:32Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T08:05:32Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Indian Broadcasting World piece about Apple TV's first look at Hugh Laurie's 'The Wanted Man'. No mention of Las Azules or Women in Blue anywhere; surfaced only as an Exa broad-match on generic Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-26T08:05:32Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11345",
+          "note": "WebFetch succeeded; confirmed article is about a different Apple TV show (The Wanted Man), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://portalmaispop.com.br/segunda-temporada-de-sobre-essa-pele-estreia-em-5-de-marco-no-discovery-home-health-e-na-hbo-max",
+      "firstSeen": "2026-09-26T08:05:32Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-26T08:05:32Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Portal +POP piece about the Season 2 premiere of the Brazilian show 'Sobre Essa Pele' on Discovery Home & Health / HBO Max. Unrelated to Las Azules / Women in Blue; surfaced only as an Exa broad-match on generic 'temporada 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-09-26T08:05:32Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-11345",
+          "note": "Title/snippet alone establishes this is about an unrelated Brazilian series; not fetched."
+        }
+      ]
+    },
+    {
+      "url": "https://deadline.com/2026/09/2026-international-emmys-nominations-list-1237111469",
+      "firstSeen": "2026-09-26T08:05:32Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T08:05:32Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Deadline's 2026 International Emmy nominations roundup ('UK, India, Argentina In Top Series Races'), published 2026-09-23. Full-text fetch (Firecrawl, WebFetch blocked by a 402 tollbit paywall gate) confirms no mention of Las Azules, Women in Blue, or Mexico's nomination anywhere in the body, despite Las Azules being nominated per other outlets' coverage (e.g. Hollywood Reporter en Español, already tracked). This specific Deadline article does not cover the show; surfaced only as a broad-query match on 'International Emmy' terms.",
+      "history": [
+        {
+          "attempt": "2026-09-26T08:05:32Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11345",
+          "note": "WebFetch hit a 402 tollbit.deadline.com paywall gate; Firecrawl scrape succeeded and confirmed no Las Azules mention in body text."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-26T06:05:00Z"
+  "lastUpdated": "2026-09-26T08:05:32Z"
 }
