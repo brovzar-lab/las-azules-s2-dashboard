@@ -14127,7 +14127,51 @@
           "note": "WebFetch succeeded; confirmed page is about the football club, unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.broadwayworld.com/shows/Troubled-Waters-or-The-Brother-Who-Protects-And-Loves-328236/news/page/2",
+      "firstSeen": "2026-09-26T12:04:52Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-26T12:04:52Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad English query ('Las Azules Women in Blue Season 2 Apple TV'). Page is BroadwayWorld's news archive for the unrelated stage production \"Troubled Waters or The Brother Who Protects And Loves\"; does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://www.cosmopolitan.com/es/entretenimiento-cultura/a73879956/serie-de-suspense-a-la-deriva/",
+      "firstSeen": "2026-09-26T12:04:52Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-26T12:04:52Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad English and Spanish queries. Article is about the unrelated Spanish suspense series \"A la deriva\", filmed in Gran Canaria; does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://www.justwatch.com/it/serie-tv/gomorra-le-origini-2026",
+      "firstSeen": "2026-09-26T12:04:52Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-26T12:04:52Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad English query. Page is JustWatch's Italian listing for \"Gomorra: Le Origini\" (2026), an unrelated Italian crime series; does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://www.elconfidencialdigital.com/articulo/series/atresmedia-presenta-sira-13-anos-despues-recupera-sorprendente-ramiro/202609261223071488437.html",
+      "firstSeen": "2026-09-26T12:04:52Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-26T12:04:52Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa Spanish query ('Barbara Mori entrevista Las Azules temporada 2'). Article is about Atresmedia's unrelated series \"Sira\"; does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
     }
   ],
-  "lastUpdated": "2026-09-26T10:06:00Z"
+  "lastUpdated": "2026-09-26T12:04:52Z"
 }
