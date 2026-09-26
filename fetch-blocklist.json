@@ -8400,10 +8400,10 @@
     {
       "url": "https://www.youtube.com/playlist?list=OLAK5uy_leGHXkX51Wp-Gak0qlj6aOgC-XIJk4cFc",
       "firstSeen": "2026-09-15T06:04:36Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 401,
-      "lastAttempt": "2026-09-17T06:12:12.919Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-26T16:07:22.000Z",
+      "cooldownUntil": "2026-10-26T16:07:22.000Z",
       "history": [
         {
           "attempt": "2026-09-15T06:04:36Z",
@@ -8425,6 +8425,13 @@
           "status": 401,
           "issue": "LEMA-10426",
           "note": "Retried per expired-cooldown-retry (this is the one retry). WebFetch again returned only a truncated fragment (playlist title only, no channel/date). Firecrawl scrape hit the same YouTube sign-in/bot wall (401 error page body, no real playlist content). Full-chain failure again; failCount incremented to 2. Not added to data.json this run."
+        },
+        {
+          "attempt": "2026-09-26T16:07:22.000Z",
+          "method": "Firecrawl scrape",
+          "status": 401,
+          "issue": "LEMA-11547",
+          "note": "Retried per expired-cooldown-retry (one retry after prior cooldown-eligible failures). WebFetch returned only nav chrome/no real playlist description. Firecrawl scrape again hit the YouTube sign-in/bot wall (401 error page body, no real playlist content or date). Full-chain failure again; failCount reached 3, cooldownUntil set to 30 days out. Not added to data.json this run."
         }
       ]
     },
@@ -14251,7 +14258,127 @@
           "note": "WebFetch succeeded; confirmed page is off-topic, unrelated to Las Azules / Women in Blue."
         }
       ]
+    },
+    {
+      "url": "https://businessupturn.com/entertainment/hollywood/hollywood-web-series/nocturne-release-date-cast-and-everything-known-about-the-apple-tv-crime-thriller/",
+      "firstSeen": "2026-09-26T16:07:22.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T16:07:22.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About Apple TV+'s different crime thriller \"Nocturne\" (release date, cast), not Las Azules/Women in Blue. Surfaced only as a broad-query match on shared \"Apple TV crime thriller\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-26T16:07:22.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11547",
+          "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. About Apple TV+'s different crime thriller \"Nocturne\" (release date, cast), not Las Azules/Women in Blue. Surfaced only as a broad-query match on shared \"Apple TV crime thriller\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.forbes.com/sites/paultassi/2026/09/26/big-new-updates-on-lioness-season-4-and-neagley-season-2/",
+      "firstSeen": "2026-09-26T16:07:22.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T16:07:22.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About Paramount+'s \"Lioness\" Season 4 and spinoff \"Neagley\" Season 2, unrelated shows. No mention of Las Azules; surfaced only as a broad-query match on generic \"Season 2\"/Apple-adjacent terms.",
+      "history": [
+        {
+          "attempt": "2026-09-26T16:07:22.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11547",
+          "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. About Paramount+'s \"Lioness\" Season 4 and spinoff \"Neagley\" Season 2, unrelated shows. No mention of Las Azules; surfaced only as a broad-query match on generic \"Season 2\"/Apple-adjacent terms."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/WomenInBlueDoc",
+      "firstSeen": "2026-09-26T16:07:22.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T16:07:22.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "X account for an unrelated 2021 documentary following female officers in the Minneapolis Police Department (\"Women in Blue\" doc, dir. Deirdre Fishel). Not connected to the Apple TV+ series Las Azules/Women in Blue; surfaced only on the shared title phrase \"Women in Blue\".",
+      "history": [
+        {
+          "attempt": "2026-09-26T16:07:22.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11547",
+          "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. X account for an unrelated 2021 documentary following female officers in the Minneapolis Police Department (\"Women in Blue\" doc, dir. Deirdre Fishel). Not connected to the Apple TV+ series Las Azules/Women in Blue; surfaced only on the shared title phrase \"Women in Blue\"."
+        }
+      ]
+    },
+    {
+      "url": "https://twitter.com/womeninbluedoc",
+      "firstSeen": "2026-09-26T16:07:22.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T16:07:22.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Same account as https://x.com/WomenInBlueDoc (unrelated 2021 Minneapolis Police Department documentary), reached via the twitter.com host form. Not connected to Las Azules/Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-26T16:07:22.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11547",
+          "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. Same account as https://x.com/WomenInBlueDoc (unrelated 2021 Minneapolis Police Department documentary), reached via the twitter.com host form. Not connected to Las Azules/Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/IWomensCricket",
+      "firstSeen": "2026-09-26T16:07:22.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T16:07:22.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "X account \"Women In Blue - Memories\" (@IWomensCricket) is an Indian women's cricket fan account (team nicknamed \"Women in Blue\"), unrelated to the Apple TV+ series Las Azules/Women in Blue. Surfaced only on the shared phrase \"Women in Blue\".",
+      "history": [
+        {
+          "attempt": "2026-09-26T16:07:22.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11547",
+          "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. X account \"Women In Blue - Memories\" (@IWomensCricket) is an Indian women's cricket fan account (team nicknamed \"Women in Blue\"), unrelated to the Apple TV+ series Las Azules/Women in Blue. Surfaced only on the shared phrase \"Women in Blue\"."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Nacha_Mar%C3%ADa_S%C3%A1nchez",
+      "firstSeen": "2026-09-26T16:07:22.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T16:07:22.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia biography of Nacha Maria Sanchez, a Spanish trans actress/activist known for the 1983 documentary \"Vestida de azul\" (Dressed in Blue). No connection to Las Azules/Women in Blue; surfaced only on shared \"azul\"/\"blue\" keyword overlap.",
+      "history": [
+        {
+          "attempt": "2026-09-26T16:07:22.000Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11547",
+          "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. Wikipedia biography of Nacha Maria Sanchez, a Spanish trans actress/activist known for the 1983 documentary \"Vestida de azul\" (Dressed in Blue). No connection to Las Azules/Women in Blue; surfaced only on shared \"azul\"/\"blue\" keyword overlap."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-26T14:05:49Z"
+  "lastUpdated": "2026-09-26T16:07:22.000Z"
 }
