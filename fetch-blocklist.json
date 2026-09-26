@@ -14171,7 +14171,87 @@
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
       "skipNote": "Surfaced via Pass 1 Exa Spanish query ('Barbara Mori entrevista Las Azules temporada 2'). Article is about Atresmedia's unrelated series \"Sira\"; does not mention Las Azules/Women in Blue. Off-topic false positive from the broad query per Rule G."
+    },
+    {
+      "url": "https://infobae.com/mexico/2026/09/26/entro-al-cuarto-de-mi-mama-barbara-islas-denuncia-acoso-de-un-fan-desde-hace-mas-de-siete-anos-y-teme-por-su-seguridad",
+      "firstSeen": "2026-09-26T14:05:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T14:05:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Infobae Mexico article about actress/TV host Bárbara Islas publicly denouncing years of stalking harassment by a fan and advocating for the proposed \"Ley Valeria\" anti-stalking law. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on the name \"Bárbara\".",
+      "history": [
+        {
+          "attempt": "2026-09-26T14:05:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11546",
+          "note": "WebFetch succeeded; confirmed page is off-topic, unrelated to Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "http://anarquialcelofan.blogspot.com/2011/04/entrevistas-con-descuento.html",
+      "firstSeen": "2026-09-26T14:05:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T14:05:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Personal blog post from April 2011 (predates the show entirely) about buying discounted interview clothing (blazer, blouse) at a Chilean department store. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on the name \"Bárbara\" in the blog title/author.",
+      "history": [
+        {
+          "attempt": "2026-09-26T14:05:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11546",
+          "note": "WebFetch succeeded; confirmed page is off-topic, unrelated to Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "http://albee-barbara.blogspot.com/",
+      "firstSeen": "2026-09-26T14:05:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T14:05:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Personal blog \"Bárbara en España\" documenting a student's exchange-year journal entries in Spain (Three Kings Day parade, Andorra trip, etc.). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on the name \"Bárbara\".",
+      "history": [
+        {
+          "attempt": "2026-09-26T14:05:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11546",
+          "note": "WebFetch succeeded; confirmed page is off-topic, unrelated to Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://sites.google.com/site/eosdiasazules/",
+      "firstSeen": "2026-09-26T14:05:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T14:05:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Educational Google Sites page by 2nd ESO students at IES La Cañada (Madrid) presenting class projects inspired by Antonio Machado's \"Campos de Castilla\". No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on the word \"azules\" in the site slug (\"eosdiasazules\").",
+      "history": [
+        {
+          "attempt": "2026-09-26T14:05:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11546",
+          "note": "WebFetch succeeded; confirmed page is off-topic, unrelated to Las Azules / Women in Blue."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-26T12:04:52Z"
+  "lastUpdated": "2026-09-26T14:05:49Z"
 }
