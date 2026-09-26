@@ -14378,7 +14378,71 @@
           "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. Wikipedia biography of Nacha Maria Sanchez, a Spanish trans actress/activist known for the 1983 documentary \"Vestida de azul\" (Dressed in Blue). No connection to Las Azules/Women in Blue; surfaced only on shared \"azul\"/\"blue\" keyword overlap."
         }
       ]
+    },
+    {
+      "url": "https://www.tomsguide.com/entertainment/streaming/these-3-apple-tv-shows-are-the-ultimate-cozy-escapes-you-need-to-weather-this-rainy-weekend",
+      "firstSeen": "2026-09-26T20:12:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T20:12:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Tom's Guide listicle \"These 3 Apple TV shows are the ultimate 'cozy escapes'...\" (published 2026-09-26). Full page text checked directly: contains no mention of \"Las Azules\" or \"Women in Blue\" anywhere. Surfaced only as a broad-query match on generic \"Apple TV shows\" phrasing.",
+      "history": [
+        {
+          "attempt": "2026-09-26T20:12:06Z",
+          "method": "WebFetch (direct curl confirm)",
+          "status": 200,
+          "issue": "LEMA-11554",
+          "note": "Fetched full page, grepped for 'las azules'/'women in blue': zero matches. Off-topic false positive."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eldictamen.mx/nini-pabon-revela-el-reto-de-interpretar-a-una-madre-exigente-en-un-paso-hacia-ti/",
+      "firstSeen": "2026-09-26T20:12:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T20:12:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Dictamen article (published 2026-09-26) about actress Nini Pabon discussing her role in ViX's unrelated series \"Un paso hacia ti.\" No mention of Las Azules or Women in Blue anywhere in the article; off-topic match from a broad Spanish-language query.",
+      "history": [
+        {
+          "attempt": "2026-09-26T20:12:06Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11554",
+          "note": "Confirmed article is about a different show (Un paso hacia ti), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/presenciapr/posts/-entretenimiento-natalia-t%C3%A9llez-regresa-como-valentina-en-la-segunda-temporada-d/1982082049846621/",
+      "firstSeen": "2026-09-26T20:12:06Z",
+      "failCount": 1,
+      "lastStatus": 400,
+      "lastAttempt": "2026-09-26T20:12:06Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-26T20:12:06Z",
+          "method": "WebFetch",
+          "status": 400,
+          "issue": "LEMA-11554",
+          "note": "Direct fetch returned HTTP 400 (Facebook post requires auth/JS rendering)."
+        },
+        {
+          "attempt": "2026-09-26T20:12:06Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11554",
+          "note": "Firecrawl returned blanket 'we do not support this site' refusal for facebook.com. Full-chain failure, failCount=1. Note: outlet 'Presencia (Puerto Rico)' already has a Natalia Tellez / Las Azules article in data.json at presenciapr.com dated 2026-09-25 (storyGroup cinegeek-s2-tellez-interview-20260924); this Facebook post's title matches that article closely and it may be a link-post promoting it, but this could not be confirmed since the page could not be fetched."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-26T16:07:22.000Z"
+  "lastUpdated": "2026-09-26T20:12:06Z"
 }
