@@ -13827,7 +13827,167 @@
           "note": "WebFetch returned empty JS-rendered shell; Firecrawl scrape succeeded and confirmed video is a personal wellness podcast, not Las Azules coverage."
         }
       ]
+    },
+    {
+      "url": "https://saffarazzi.com/entertainment/widow-s-bay-official-teaser-trailer-the-boogeyman",
+      "firstSeen": "2026-09-26T02:06:54.822Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T02:06:54.822Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Exa EN pass (LEMA-11250, 2026-09-26 run). Page is about \"Widow's Bay\" / \"The Boogeyman\" teaser trailer, an unrelated Apple TV title. No mention of Las Azules / Women in Blue; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-26T02:06:54.822Z",
+          "method": "search-result-title-only",
+          "status": 200,
+          "issue": "LEMA-11250",
+          "note": "Off-topic false positive, ledgered per Rule G, no fetch spent beyond confirming subject via title/snippet."
+        }
+      ]
+    },
+    {
+      "url": "https://larazon.es/gente/famosos/barbara-goenaga-borja-semper-cine-politica-todo-demas_202609266ab715525e0dc70596ac3573.html",
+      "firstSeen": "2026-09-26T02:06:54.822Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T02:06:54.822Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Exa ES pass (LEMA-11250, 2026-09-26 run). Page is about actress Barbara Goenaga and politician Borja Semper (Spanish cinema/politics), not Barbara Mori or Las Azules. Broad-query false positive on the \"Barbara\" name match.",
+      "history": [
+        {
+          "attempt": "2026-09-26T02:06:54.822Z",
+          "method": "search-result-title-only",
+          "status": 200,
+          "issue": "LEMA-11250",
+          "note": "Off-topic false positive, ledgered per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://veu.ua.es/es/noticias/2026/9/odio-a-la-gente-humor-sin-filtro-en-formato-podcast.html",
+      "firstSeen": "2026-09-26T02:06:54.822Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T02:06:54.822Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Exa ES pass (LEMA-11250, 2026-09-26 run). University of Alicante cultural-magazine piece about a podcast called \"Odio a la Gente\"; no connection to Las Azules. Broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-26T02:06:54.822Z",
+          "method": "search-result-title-only",
+          "status": 200,
+          "issue": "LEMA-11250",
+          "note": "Off-topic false positive, ledgered per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://metacritic.com/tv/women-in-blue",
+      "firstSeen": "2026-09-26T02:06:54.822Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T02:06:54.822Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_user_review_aggregate",
+      "skipNote": "Added 2026-09-26 (LEMA-11250). Root show-overview URL (https://www.metacritic.com/tv/women-in-blue/), distinct from the already-ledgered /season-2/ (Rule F) and /critic-reviews/ (Rule H) URLs. WebFetch confirms this is a combined hub page: Metascore 76 from 6 critic reviews plus a 6.7 user score from 11 ratings, cast/production info and season breakdown. Both the critic-review and user-review aggregation prongs of Rule H apply. Cross-checked against the existing critic-reviews ledger row (LEMA-10454): same Metascore 76, same critic set (Variety, RogerEbert.com, The Guardian, The Telegraph, Collider, Decider), no new Season 2 critic reviews surfaced here beyond what that mining pass already harvested. Mined per Rule H exemption #1: no new individual reviews found on this surface.",
+      "history": [
+        {
+          "attempt": "2026-09-26T02:06:54.822Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11250",
+          "note": "Rule H mining check: confirmed same 6 critics / Metascore 76 as the existing critic-reviews ledger row, no new reviews."
+        }
+      ]
+    },
+    {
+      "url": "https://popticular.com/2026/05/14/natalia-tellez-operacion-triunfo-estados-unidos-telemundo/50788",
+      "firstSeen": "2026-09-26T02:06:54.822Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T02:06:54.822Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by standard EN/ES pass (LEMA-11250, 2026-09-26 run). Article is about Natalia Tellez being hired to host \"Operacion Triunfo Estados Unidos\" on Telemundo; no Las Azules content. Broad-query false positive on the actress name match.",
+      "history": [
+        {
+          "attempt": "2026-09-26T02:06:54.822Z",
+          "method": "search-result-title-only",
+          "status": 200,
+          "issue": "LEMA-11250",
+          "note": "Off-topic false positive, ledgered per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://los40.us/2026/07/13/quien-es-natalia-tellez-y-como-se-convirtio-en-presentadora-de-ot-usa",
+      "firstSeen": "2026-09-26T02:06:54.822Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T02:06:54.822Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by standard EN/ES pass (LEMA-11250, 2026-09-26 run). Profile piece about Natalia Tellez becoming a presenter on \"Operacion Triunfo USA\"; no Las Azules content. Same false-positive pattern as the Popticular row added in this same run.",
+      "history": [
+        {
+          "attempt": "2026-09-26T02:06:54.822Z",
+          "method": "search-result-title-only",
+          "status": 200,
+          "issue": "LEMA-11250",
+          "note": "Off-topic false positive, ledgered per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/us/person/natalia-tellez/umc.cpc.4q3jfix198i1t6pbkq6iwibwx",
+      "firstSeen": "2026-09-26T02:06:54.822Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T02:06:54.822Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Added 2026-09-26 (LEMA-11250). Apple TV person/filmography page for Natalia Tellez. WebFetch confirms: one boilerplate bio paragraph plus a database-style list of Shows (incl. Women in Blue) and Movies, no written editorial content about Las Azules specifically. Same surface family as imdb.com/name/* per the Apple-locale/IMDb Rule F family rulings (LEMA-10287/LEMA-10630): a person/cast database record, strip test leaves nothing written about the show.",
+      "history": [
+        {
+          "attempt": "2026-09-26T02:06:54.822Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11250",
+          "note": "Confirmed database/filmography page, no article prose about the show."
+        }
+      ]
+    },
+    {
+      "url": "https://youtube.com/shorts/SSsG4MybyTU",
+      "firstSeen": "2026-09-26T02:06:54.822Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T02:06:54.822Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Added 2026-09-26 (LEMA-11250). YouTube Short \"Imparable Natalia Tellez en Las Azules de AppleTV\", posted by channel \"Chano Jurado\" (confirmed via Firecrawl scrape metadata), not an official studio/network/show account. Fan repost of clip content per Rule B. Published 2024-08-01 (Season 1 era); in-scope under Rule C (no publish-date floor) but excluded on the Rule B relevance gate regardless of date.",
+      "history": [
+        {
+          "attempt": "2026-09-26T02:06:54.822Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11250",
+          "note": "Confirmed non-official channel (Chano Jurado) via og:metadata; fan repost, Rule B."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-25T14:05:07Z"
+  "lastUpdated": "2026-09-26T02:06:54.822Z"
 }
