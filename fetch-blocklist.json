@@ -14422,9 +14422,9 @@
     {
       "url": "https://www.facebook.com/presenciapr/posts/-entretenimiento-natalia-t%C3%A9llez-regresa-como-valentina-en-la-segunda-temporada-d/1982082049846621/",
       "firstSeen": "2026-09-26T20:12:06Z",
-      "failCount": 1,
-      "lastStatus": 400,
-      "lastAttempt": "2026-09-26T20:12:06Z",
+      "failCount": 2,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-26T22:04:47Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -14440,9 +14440,63 @@
           "status": 403,
           "issue": "LEMA-11554",
           "note": "Firecrawl returned blanket 'we do not support this site' refusal for facebook.com. Full-chain failure, failCount=1. Note: outlet 'Presencia (Puerto Rico)' already has a Natalia Tellez / Las Azules article in data.json at presenciapr.com dated 2026-09-25 (storyGroup cinegeek-s2-tellez-interview-20260924); this Facebook post's title matches that article closely and it may be a link-post promoting it, but this could not be confirmed since the page could not be fetched."
+        },
+        {
+          "attempt": "2026-09-26T22:04:47Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11555",
+          "note": "WebFetch returned a 2xx response but only the page title/header (\"Presencia PR ... Entretenimiento\"); no post body text or publish date recoverable, effectively a near-empty body for extraction purposes."
+        },
+        {
+          "attempt": "2026-09-26T22:04:47Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11555",
+          "note": "Firecrawl returned blanket \"we do not support this site\" refusal for facebook.com again. Full-chain failure, failCount now 2."
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/Ddw18ciE67z/",
+      "firstSeen": "2026-09-26T22:04:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T22:04:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Instagram post by @plutotvar (Pluto TV Argentina), a meme/quote post about the character Gail Peck from the unrelated show \"Rookie Blue\" (caption: \"En la vida soy Gail Peck, la amo... #PlutoTV #RookieBlue\"). No mention of Las Azules or Women in Blue anywhere in the post; surfaced only as a broad-query match via Exa Pass 1 (EN query) on generic Apple TV / character-name terms.",
+      "history": [
+        {
+          "attempt": "2026-09-26T22:04:47Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11555",
+          "note": "WebFetch succeeded; confirmed post is about Rookie Blue (character Gail Peck), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.cbr.com/apple-tv-the-100-best-tv-shows-of-the-21st-century/",
+      "firstSeen": "2026-09-26T22:04:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T22:04:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "CBR listicle \"Only 3 Apple TV Shows Made the 100 Best TV Shows of the 21st Century\" (Severance, Slow Horses, Ted Lasso). Las Azules / Women in Blue is not mentioned anywhere in the article; surfaced only as a broad-query match on \"Apple TV\" terms via Exa Pass 1 (EN query).",
+      "history": [
+        {
+          "attempt": "2026-09-26T22:04:47Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11555",
+          "note": "WebFetch succeeded; confirmed Las Azules/Women in Blue is not mentioned in the article."
         }
       ]
     }
   ],
-  "lastUpdated": "2026-09-26T20:12:06Z"
+  "lastUpdated": "2026-09-26T22:04:47Z"
 }
