@@ -13987,7 +13987,27 @@
           "note": "Confirmed non-official channel (Chano Jurado) via og:metadata; fan repost, Rule B."
         }
       ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Una_familia_de_diez_season_2",
+      "firstSeen": "2026-09-26T06:05:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T06:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about Una familia de diez Season 2, an unrelated Mexican sitcom (Las Estrellas, aired Aug-Oct 2019). No mention of Las Azules or Women in Blue anywhere on the page; surfaced only as a broad-query match on Season 2 / Mexican TV terms.",
+      "history": [
+        {
+          "attempt": "2026-09-26T06:05:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11322",
+          "note": "WebFetch succeeded; confirmed page is about a different show (Una familia de diez), unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-26T02:06:54.822Z"
+  "lastUpdated": "2026-09-26T06:05:00Z"
 }
