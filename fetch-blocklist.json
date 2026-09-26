@@ -14087,7 +14087,47 @@
           "note": "WebFetch hit a 402 tollbit.deadline.com paywall gate; Firecrawl scrape succeeded and confirmed no Las Azules mention in body text."
         }
       ]
+    },
+    {
+      "url": "https://www.macobserver.com/appletv/knife-edge-season-2-premiere-apple-tv-michelin-stars/",
+      "firstSeen": "2026-09-26T10:06:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T10:06:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "MacObserver article about Knife Edge: Chasing Michelin Stars season 2, an unrelated Apple TV documentary series about restaurants pursuing Michelin recognition. No mention of Las Azules or Women in Blue anywhere in the article; surfaced only as a broad Exa query match on generic \"Apple TV season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-26T10:06:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11414",
+          "note": "WebFetch succeeded; confirmed article is about Knife Edge, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Cruz_Azul",
+      "firstSeen": "2026-09-26T10:06:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T10:06:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about Cruz Azul, a Mexico City professional football club. No mention of the TV show Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on the word \"Azules\".",
+      "history": [
+        {
+          "attempt": "2026-09-26T10:06:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11414",
+          "note": "WebFetch succeeded; confirmed page is about the football club, unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-26T08:05:32Z"
+  "lastUpdated": "2026-09-26T10:06:00Z"
 }
