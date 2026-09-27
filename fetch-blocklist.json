@@ -14939,7 +14939,28 @@
           "note": "Confirmed off-topic false positive from Pass 1/2 (Exa/web search); JustWatch streaming-availability listing for \"Dark Matter\" (2024), an unrelated sci-fi series. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple TV Season 2\"."
         }
       ]
+    },
+    {
+      "url": "https://www.larazon.es/tecnologia-consumo/series/este-thriller-misterio-te-atrapara-primer-episodio-esta-apple-tv-tiene-2-temporadas_202609276ab69923a520494aafd6a721.html",
+      "firstSeen": "2026-09-27T20:05:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T20:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Razon (Spain) recommendation piece about \"The Last Thing He Told Me\" (Jennifer Garner, Nikolaj Coster-Waldau, Angourie Rice), a different Apple TV+ thriller with 2 seasons. No mention of Las Azules / Women in Blue. Surfaced via Exa broad EN query (\"Las Azules Women in Blue Season 2 Apple TV\") as a generic Apple TV / two-season-thriller match.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-27T20:05:00Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11583",
+          "note": "WebFetch failed (tool refused domain); Firecrawl scrape succeeded and confirmed article is about a different show."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-27T18:05:02Z"
+  "lastUpdated": "2026-09-27T20:05:00Z"
 }
