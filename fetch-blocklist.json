@@ -1962,9 +1962,9 @@
     {
       "url": "https://www.tiktok.com/discover/las-azules-final-serie-episodio-8",
       "firstSeen": "2026-09-07T16:03:42Z",
-      "failCount": 1,
-      "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-07T16:03:42Z",
+      "failCount": 2,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-27T06:05:38Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "history": [
@@ -1981,6 +1981,20 @@
           "status": 403,
           "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 1.",
           "issue": "LEMA-9826"
+        },
+        {
+          "attempt": "2026-09-27T06:05:38Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11565",
+          "note": "WebFetch returned only TikTok's generic app-shell tagline ('TikTok - Make Your Day'), no page content rendered (JS-gated). Treated as empty/near-empty body per Pass 0 fetch-fallback guidance, not a soft pass."
+        },
+        {
+          "attempt": "2026-09-27T06:05:38Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11565",
+          "note": "Firecrawl scrape blocked (403). Full-chain failure, failCount now 2."
         }
       ]
     },
@@ -14655,7 +14669,57 @@
           "note": "WebFetch succeeded; confirmed page is a region-selector/clip-embed page with no editorial prose about the show."
         }
       ]
+    },
+    {
+      "url": "https://www.primevideo.com/-/es/detail/0JFCKSNHTRBNJA50K5E6QG2HHN?tr=pr",
+      "firstSeen": "2026-09-27T06:05:38Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T06:05:38Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Amazon Prime Video (Spain locale) show/season detail page for Las Azules Season 2, surfaced by the standard EN/ES web sweep (Pass 2, LEMA-11565). WebFetch returned HTTP 503. Firecrawl scrape succeeded (200) and returned the full page: title, one-line synopsis, genre tags, season selector, cast list, and full episode listing with per-episode thumbnails. Strip test per Rule F (LEMA-9927): removing the metadata table (cast/genre/season/episode grid) leaves only a single generic boilerplate synopsis line, no written editorial content about the show. This is a platform listing/database surface, not coverage, consistent with the already-ledgered JustWatch and Apple TV show-page rows for this title. reviewable=false, not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-09-27T06:05:38Z",
+          "method": "WebFetch",
+          "status": 503,
+          "issue": "LEMA-11565"
+        },
+        {
+          "attempt": "2026-09-27T06:05:38Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11565",
+          "note": "Full page retrieved: season/episode listing + cast + one-line synopsis, no written editorial content. Classified Rule F (editorial_listing_or_database)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/las-azules-capitulo-8-completo",
+      "firstSeen": "2026-09-27T06:05:38Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-27T06:05:38Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-27T06:05:38Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11565",
+          "note": "WebFetch returned only TikTok's generic app-shell tagline ('TikTok - Make Your Day'), no page content rendered (JS-gated). Treated as empty/near-empty body per Pass 0 fetch-fallback guidance, not a soft pass."
+        },
+        {
+          "attempt": "2026-09-27T06:05:38Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11565",
+          "note": "Firecrawl scrape blocked (403). Full-chain failure, failCount now 1."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-27T04:00:00Z"
+  "lastUpdated": "2026-09-27T06:05:38Z"
 }
