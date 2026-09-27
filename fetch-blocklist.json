@@ -14779,7 +14779,27 @@
           "note": "WebFetch/raw fetch succeeded; confirmed article is about \"Trying\" Season 5, unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://justwatch.com/in/tv-show/dark-matter-2024/season-1",
+      "firstSeen": "2026-09-27T14:04:36Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T14:04:36Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch (India locale) page about Dark Matter Season 1 (2024), an unrelated Apple TV+ sci-fi series starring Joel Edgerton. Las Azules appears only once, in a \"People who liked Season 1 also liked\" recommendation widget; surfaced only as a broad-query match on generic Apple TV terms in this run's Exa EN pass.",
+      "history": [
+        {
+          "attempt": "2026-09-27T14:04:36Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11575",
+          "note": "WebFetch succeeded; confirmed page is about Dark Matter (2024), unrelated to Las Azules aside from a recommendation-widget mention."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-27T12:03:00Z"
+  "lastUpdated": "2026-09-27T14:04:36Z"
 }
