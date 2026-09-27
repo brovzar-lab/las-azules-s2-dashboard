@@ -14568,7 +14568,94 @@
       "lastStatus": 200,
       "lastAttempt": "2026-09-27T02:03:57.000Z",
       "note": "Official Apple TV general show page (Costa Rica locale variant), part of the same tv.apple.com/{locale}/show/las-azules/... surface family as the US/LU/PE/BO/ES/MX/FR rows already in this ledger (Rule F, adopted 2026-09-10, LEMA-9927; family classification per LEMA-10627/10628). WebFetch confirms a show landing/database page: synopsis, episode list, cast/crew, technical specs, no written editorial content about the show. Strip test: nothing written remains once the metadata table is removed. Added LEMA-11563 sweep 2026-09-27."
+    },
+    {
+      "url": "https://br.justwatch.com/br/serie/blue-box/temporada-2",
+      "firstSeen": "2026-09-27T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch Brazil page for 'Blue Box' Season 2, a Japanese anime series (badminton/basketball romance) streaming on Netflix Oct 4, 2026. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on \"Season 2 Apple TV\" terms in the Exa EN pass.",
+      "history": [
+        {
+          "attempt": "2026-09-27T04:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11564",
+          "note": "WebFetch succeeded; confirmed page is about a different show (Blue Box), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://elpais.com/television/2026-09-27/perder-a-proposito-una-estrella-michelin-para-intentar-recuperarla-en-52-dias-los-milagros-gastronomicos-de-apple-tv.html",
+      "firstSeen": "2026-09-27T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Pais article (byline Hector Llanos Martinez, Sep 26, 2026) about a different Apple TV+ show concerning a chef trying to regain a lost Michelin star. No mention of Las Azules or Women in Blue anywhere in the body; surfaced only as a broad-query match on \"Apple TV\" terms in the Exa EN pass. WebFetch failed on this domain; Firecrawl scrape succeeded (200) and confirmed the body text contains no reference to the show.",
+      "history": [
+        {
+          "attempt": "2026-09-27T04:00:00Z",
+          "method": "WebFetch",
+          "status": 0,
+          "issue": "LEMA-11564",
+          "note": "WebFetch failed to retrieve elpais.com content."
+        },
+        {
+          "attempt": "2026-09-27T04:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11564",
+          "note": "Firecrawl succeeded; confirmed article is about a different Apple TV+ show, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://s.ua.es/es/cvyA",
+      "firstSeen": "2026-09-27T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "University of Alicante cultural-magazine (VEU) page announcing a live comedy podcast event (\"Odio a la Gente\") on Sept 29, 2026. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on the Exa ES pass (Barbara Mori query).",
+      "history": [
+        {
+          "attempt": "2026-09-27T04:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11564",
+          "note": "WebFetch succeeded; confirmed page is about an unrelated comedy podcast event, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/hu/clip/las-mujeres-season-1/umc.cmc.dfqcxumy8pgbu8c3016pkf68?targetId=umc.cmc.73wmdmkfpta5ul1vbwckmme39&targetType=Show",
+      "firstSeen": "2026-09-27T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Hungarian-locale Apple TV clip page (Season 1 trailer) for Las Azules/Women in Blue, same surface family as the tv.apple.com/{locale}/show/ pages already ruled Rule F. WebFetch confirmed the page carries no written editorial content: title only (\"Las Mujeres: Season 1\"), no synopsis, cast, or episode text; the overwhelming majority of the page is a country/region selector dropdown for Apple TV+ regional sites. Strip the nav/selector chrome and nothing written about the show remains.",
+      "history": [
+        {
+          "attempt": "2026-09-27T04:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11564",
+          "note": "WebFetch succeeded; confirmed page is a region-selector/clip-embed page with no editorial prose about the show."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-27T02:03:57.000Z"
+  "lastUpdated": "2026-09-27T04:00:00Z"
 }
