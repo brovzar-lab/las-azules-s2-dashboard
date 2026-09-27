@@ -14719,7 +14719,27 @@
           "note": "Firecrawl scrape blocked (403). Full-chain failure, failCount now 1."
         }
       ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Penske_Media_Corporation",
+      "firstSeen": "2026-09-27T08:03:45Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about Penske Media Corporation, the parent holding company of Variety/Deadline/The Hollywood Reporter. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on a Pass 2 trade-press query (\"Las Azules Variety Deadline Hollywood Reporter\").",
+      "history": [
+        {
+          "attempt": "2026-09-27T08:03:45Z",
+          "method": "title/relevance-only (Rule G, no fetch required per Pass 0b)",
+          "status": null,
+          "issue": "LEMA-11568",
+          "note": "Off-topic by title/subject alone; not the show, its cast, or its production."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-27T06:05:38Z"
+  "lastUpdated": "2026-09-27T08:03:45Z"
 }
