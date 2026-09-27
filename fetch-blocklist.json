@@ -14759,7 +14759,27 @@
           "note": "Surfaced by Pass 2 WebSearch; confirmed redirect to already-tracked Senal News URL before any data.json write."
         }
       ]
+    },
+    {
+      "url": "https://tomsguide.com/entertainment/apple-tv/i-just-caught-up-on-the-new-season-of-apple-tvs-best-comfort-watch-and-no-its-not-ted-lasso",
+      "firstSeen": "2026-09-27T12:03:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T12:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Tom's Guide article about Apple TV+ comedy series \"Trying\" Season 5 (\"I binge-watched all of 'Trying' season 5 in a single day...\"). No mention of Las Azules or Women in Blue anywhere in the page; surfaced only as a broad-query match on generic \"Apple TV new season\" terms in the Pass 1 Exa broad English query.",
+      "history": [
+        {
+          "attempt": "2026-09-27T12:03:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11570",
+          "note": "WebFetch/raw fetch succeeded; confirmed article is about \"Trying\" Season 5, unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-27T10:04:58Z"
+  "lastUpdated": "2026-09-27T12:03:00Z"
 }
