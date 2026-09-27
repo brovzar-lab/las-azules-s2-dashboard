@@ -14739,7 +14739,27 @@
           "note": "Off-topic by title/subject alone; not the show, its cast, or its production."
         }
       ]
+    },
+    {
+      "url": "https://senalnews.com/es/digital/apple-tv-muestra-primer-adelanto-de-la-segunda-temporada-de-las-azules-",
+      "firstSeen": "2026-09-27T10:04:58Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T10:04:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "HTTP 301/redirect canonicalizes to https://senalnews.com/es/digital/apple-tv-estrenara-en-agosto-la-segunda-temporada-de-las-azules-su-drama-criminal-en-espanol- (already tracked in data.json, ts=20260326, Senal News ES entry). Confirmed via curl -L: effective URL matches the tracked article exactly, same outlet, same March 26 2026 premiere-date announcement. Second address for a document already in the feed, per Rule I.",
+      "history": [
+        {
+          "attempt": "2026-09-27T10:04:58Z",
+          "method": "curl -L redirect check",
+          "status": 200,
+          "issue": "LEMA-11569",
+          "note": "Surfaced by Pass 2 WebSearch; confirmed redirect to already-tracked Senal News URL before any data.json write."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-27T08:03:45Z"
+  "lastUpdated": "2026-09-27T10:04:58Z"
 }
