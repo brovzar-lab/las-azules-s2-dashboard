@@ -14422,10 +14422,10 @@
     {
       "url": "https://www.facebook.com/presenciapr/posts/-entretenimiento-natalia-t%C3%A9llez-regresa-como-valentina-en-la-segunda-temporada-d/1982082049846621/",
       "firstSeen": "2026-09-26T20:12:06Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 403,
-      "lastAttempt": "2026-09-26T22:04:47Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-27T00:10:00Z",
+      "cooldownUntil": "2026-10-27T00:10:00Z",
       "history": [
         {
           "attempt": "2026-09-26T20:12:06Z",
@@ -14454,6 +14454,20 @@
           "status": 403,
           "issue": "LEMA-11555",
           "note": "Firecrawl returned blanket \"we do not support this site\" refusal for facebook.com again. Full-chain failure, failCount now 2."
+        },
+        {
+          "attempt": "2026-09-27T00:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11556",
+          "note": "WebFetch returned 2xx but insufficient content (page shell only, no post body/date recoverable). Near-empty for extraction purposes."
+        },
+        {
+          "attempt": "2026-09-27T00:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11556",
+          "note": "Firecrawl returned blanket 'we do not support this site' refusal for facebook.com again. Full-chain failure, failCount now 3, cooldownUntil set to 30 days (2026-10-27)."
         }
       ]
     },
@@ -14496,7 +14510,55 @@
           "note": "WebFetch succeeded; confirmed Las Azules/Women in Blue is not mentioned in the article."
         }
       ]
+    },
+    {
+      "url": "https://twitter.com/appletvplus",
+      "firstSeen": "2026-09-27T00:10:00Z",
+      "failCount": 1,
+      "lastStatus": 402,
+      "lastAttempt": "2026-09-27T00:10:00Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-27T00:10:00Z",
+          "method": "WebFetch",
+          "status": 402,
+          "issue": "LEMA-11556",
+          "note": "WebFetch on twitter.com/appletvplus (redirects to x.com/appletvplus) returned HTTP 402 Payment Required."
+        },
+        {
+          "attempt": "2026-09-27T00:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11556",
+          "note": "Firecrawl returned 200 but empty content: bare account profile page (\"@unknown\", \"No recent top-level posts were returned\"), not a specific post about the show. Full-chain failure for extraction purposes, failCount=1."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/in/tv-show/black-clover/season-5",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "firstSeen": "2026-09-27T00:10:00Z",
+      "skipNote": "Off-topic false positive (Rule G): JustWatch listing page for 'Black Clover' Season 5, an unrelated anime series. Surfaced via Exa Pass 1 EN broad query match on LEMA-11556, no connection to Las Azules / Women in Blue."
+    },
+    {
+      "url": "https://www.justwatch.com/au/tv-show/ted-lasso",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "firstSeen": "2026-09-27T00:10:00Z",
+      "skipNote": "Off-topic false positive (Rule G): JustWatch listing page for 'Ted Lasso', an unrelated comedy series. Surfaced via Exa Pass 1 EN broad query match on LEMA-11556, no connection to Las Azules / Women in Blue."
+    },
+    {
+      "url": "https://tribuna.com.mx/espectaculos/2026/09/26/barbara-islas-denuncia-presunto-acoso-de-un-fan-esto-se-puso-muy-preocupante_694376/",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "firstSeen": "2026-09-27T00:10:00Z",
+      "skipNote": "Off-topic false positive (Rule G): article about actress Bárbara Islas (unrelated to the Las Azules cast) reporting an alleged multi-year fan stalking/harassment case. WebFetch confirmed no mention of Las Azules, Bárbara Mori, or any cast member. Surfaced via Exa Pass 1 ES broad query match on 'Bárbara' + 'temporada 2' on LEMA-11556."
     }
   ],
-  "lastUpdated": "2026-09-26T22:04:47Z"
+  "lastUpdated": "2026-09-27T00:10:00Z"
 }
