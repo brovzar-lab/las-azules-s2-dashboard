@@ -14799,7 +14799,147 @@
           "note": "WebFetch succeeded; confirmed page is about Dark Matter (2024), unrelated to Las Azules aside from a recommendation-widget mention."
         }
       ]
+    },
+    {
+      "url": "http://algomasquelibross.blogspot.com/2012/10/resena-56-palabras-envenenadas-de-maite.html",
+      "firstSeen": "2026-09-27T18:05:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T18:05:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2012 book-review blog post about the novel \"Palabras envenenadas\" by Maite Carranza, featuring a fictional character named Barbara Molina. No mention of Las Azules, Women in Blue, or Bárbara Mori anywhere; surfaced only as a fuzzy match on the name \"Barbara\" from the Spanish-language Exa query.",
+      "history": [
+        {
+          "attempt": "2026-09-27T18:05:02Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11580",
+          "note": "Confirmed off-topic false positive from Pass 1/2 (Exa/web search); 2012 book-review blog post about the novel \"Palabras envenenadas\" by Maite Carranza, featuring a fictional character named Barbara Molina. No mention of Las Azules, Women in Blue, or Bárbara Mori anywhere; surfaced only as a fuzzy match on the name \"Barbara\" from the Spanish-language Exa query."
+        }
+      ]
+    },
+    {
+      "url": "https://cms-articles.softonic.io/en/dark-matter-season-2-has-premiered-on-apple-tv-it-goes-beyond-the-book/",
+      "firstSeen": "2026-09-27T18:05:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T18:05:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Softonic article about \"Dark Matter\" Season 2 premiering on Apple TV+, an unrelated sci-fi series. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple TV Season 2\".",
+      "history": [
+        {
+          "attempt": "2026-09-27T18:05:02Z",
+          "method": "search-snippet",
+          "status": 200,
+          "issue": "LEMA-11580",
+          "note": "Confirmed off-topic false positive from Pass 1/2 (Exa/web search); Softonic article about \"Dark Matter\" Season 2 premiering on Apple TV+, an unrelated sci-fi series. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple TV Season 2\"."
+        }
+      ]
+    },
+    {
+      "url": "https://en.softonic.com/articles/dark-matter-season-2-has-premiered-on-apple-tv-it-goes-beyond-the-book",
+      "firstSeen": "2026-09-27T18:05:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T18:05:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Same Softonic \"Dark Matter\" Season 2 article as the cms-articles.softonic.io mirror, published on Softonic's main English site. Unrelated show; surfaced only as a broad-query match on \"Apple TV Season 2\".",
+      "history": [
+        {
+          "attempt": "2026-09-27T18:05:02Z",
+          "method": "search-snippet",
+          "status": 200,
+          "issue": "LEMA-11580",
+          "note": "Confirmed off-topic false positive from Pass 1/2 (Exa/web search); Same Softonic \"Dark Matter\" Season 2 article as the cms-articles.softonic.io mirror, published on Softonic's main English site. Unrelated show; surfaced only as a broad-query match on \"Apple TV Season 2\"."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/%C2%BFQui%C3%A9n_es_la_m%C3%A1scara%3F_(Mexican_TV_series)_season_2",
+      "firstSeen": "2026-09-27T18:05:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T18:05:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about season 2 of \"¿Quién es la máscara?\", the Mexican adaptation of The Masked Singer, an unrelated singing-competition show. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Mexican TV series season 2\".",
+      "history": [
+        {
+          "attempt": "2026-09-27T18:05:02Z",
+          "method": "search-snippet",
+          "status": 200,
+          "issue": "LEMA-11580",
+          "note": "Confirmed off-topic false positive from Pass 1/2 (Exa/web search); Wikipedia article about season 2 of \"¿Quién es la máscara?\", the Mexican adaptation of The Masked Singer, an unrelated singing-competition show. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Mexican TV series season 2\"."
+        }
+      ]
+    },
+    {
+      "url": "https://infocronos.com.ar/nota/44597/mas-risas-que-nunca-netflix-revelo-el-avance-de-la-segunda-temporada-de-envidiosa/",
+      "firstSeen": "2026-09-27T18:05:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T18:05:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Cronos Noticias article about Netflix revealing the trailer for season 2 of \"Envidiosa\", an unrelated comedy series. No mention of Las Azules, Bárbara Mori, or Women in Blue; surfaced only as a broad-query match on \"temporada 2\".",
+      "history": [
+        {
+          "attempt": "2026-09-27T18:05:02Z",
+          "method": "search-snippet",
+          "status": 200,
+          "issue": "LEMA-11580",
+          "note": "Confirmed off-topic false positive from Pass 1/2 (Exa/web search); Cronos Noticias article about Netflix revealing the trailer for season 2 of \"Envidiosa\", an unrelated comedy series. No mention of Las Azules, Bárbara Mori, or Women in Blue; surfaced only as a broad-query match on \"temporada 2\"."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/id/tv-show/dark-matter-2024/season-2",
+      "firstSeen": "2026-09-27T18:05:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T18:05:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch streaming-availability listing for \"Dark Matter\" (2024) Season 2, an unrelated sci-fi series. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple TV Season 2\".",
+      "history": [
+        {
+          "attempt": "2026-09-27T18:05:02Z",
+          "method": "search-snippet",
+          "status": 200,
+          "issue": "LEMA-11580",
+          "note": "Confirmed off-topic false positive from Pass 1/2 (Exa/web search); JustWatch streaming-availability listing for \"Dark Matter\" (2024) Season 2, an unrelated sci-fi series. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple TV Season 2\"."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/uk/tv-series/dark-matter-2024",
+      "firstSeen": "2026-09-27T18:05:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T18:05:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch streaming-availability listing for \"Dark Matter\" (2024), an unrelated sci-fi series. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple TV Season 2\".",
+      "history": [
+        {
+          "attempt": "2026-09-27T18:05:02Z",
+          "method": "search-snippet",
+          "status": 200,
+          "issue": "LEMA-11580",
+          "note": "Confirmed off-topic false positive from Pass 1/2 (Exa/web search); JustWatch streaming-availability listing for \"Dark Matter\" (2024), an unrelated sci-fi series. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple TV Season 2\"."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-27T14:04:36Z"
+  "lastUpdated": "2026-09-27T18:05:02Z"
 }
