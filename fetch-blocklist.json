@@ -14558,7 +14558,17 @@
       "reviewable": false,
       "firstSeen": "2026-09-27T00:10:00Z",
       "skipNote": "Off-topic false positive (Rule G): article about actress Bárbara Islas (unrelated to the Las Azules cast) reporting an alleged multi-year fan stalking/harassment case. WebFetch confirmed no mention of Las Azules, Bárbara Mori, or any cast member. Surfaced via Exa Pass 1 ES broad query match on 'Bárbara' + 'temporada 2' on LEMA-11556."
+    },
+    {
+      "url": "https://tv.apple.com/cr/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "cooldownUntil": null,
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-27T02:03:57.000Z",
+      "note": "Official Apple TV general show page (Costa Rica locale variant), part of the same tv.apple.com/{locale}/show/las-azules/... surface family as the US/LU/PE/BO/ES/MX/FR rows already in this ledger (Rule F, adopted 2026-09-10, LEMA-9927; family classification per LEMA-10627/10628). WebFetch confirms a show landing/database page: synopsis, episode list, cast/crew, technical specs, no written editorial content about the show. Strip test: nothing written remains once the metadata table is removed. Added LEMA-11563 sweep 2026-09-27."
     }
   ],
-  "lastUpdated": "2026-09-27T00:10:00Z"
+  "lastUpdated": "2026-09-27T02:03:57.000Z"
 }
