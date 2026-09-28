@@ -15208,7 +15208,27 @@
           "note": "WebFetch failed with 403; Firecrawl scrape succeeded and confirmed the page is about an unrelated anime series, no mention of Las Azules/Women in Blue."
         }
       ]
+    },
+    {
+      "url": "https://movieweb.com/dark-matter-season-2-other-jasons/",
+      "firstSeen": "2026-09-28T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-28T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "MovieWeb article \"Apple TV's Near-Perfect Sci-Fi Adaptation Finally Continues an Abandoned Book Storyline\" is about Dark Matter (Apple TV+ sci-fi series based on Blake Crouch's novel), Season 2 Episode 5. No mention of Las Azules or Women in Blue anywhere; surfaced only as an Exa broad-query match on generic Apple TV Season 2 terms.",
+      "history": [
+        {
+          "attempt": "2026-09-28T20:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11731",
+          "note": "WebFetch succeeded; confirmed article is about Dark Matter, unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-28T18:10:38Z"
+  "lastUpdated": "2026-09-28T20:00:00Z"
 }
