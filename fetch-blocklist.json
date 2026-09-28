@@ -15228,7 +15228,27 @@
           "note": "WebFetch succeeded; confirmed article is about Dark Matter, unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897",
+      "firstSeen": "2026-09-28T20:20:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-28T20:20:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Second address (query-string-free URL) for the same Reforma CMS post already tracked in data.json at https://www.reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897?v=3 (identical outlet, headline, and date). Firecrawl-fetched body confirmed identical article content. Self-caught this run (LEMA-11731): tools/sweep-integrity.js normalize() does not strip the ?v= cache-buster/version query parameter (it only strips recognized tracking params like utm_*), so lookup --strict returned not-found/inDataJson=false for the bare URL even though the ?v=3 variant was already in data.json. The row was briefly and incorrectly added to data.json this run, then removed in a follow-up commit the same run once the duplicate was discovered.",
+      "history": [
+        {
+          "attempt": "2026-09-28T20:20:00Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11731",
+          "note": "Firecrawl scrape succeeded (WebFetch had returned 403); confirmed content is identical to the already-tracked ?v=3 variant of the same URL."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-28T20:00:00Z"
+  "lastUpdated": "2026-09-28T20:20:00Z"
 }
