@@ -15000,7 +15000,135 @@
           "note": "Confirmed pure episode metadata record, no editorial content."
         }
       ]
+    },
+    {
+      "url": "https://www.justwatch.com/ch/Film/Antonio-Machado-los-dias-azules",
+      "firstSeen": "2026-09-28T06:20:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch (Switzerland) listing for the 2026 documentary film \"Antonio Machado: los días azules\" about the Spanish poet Antonio Machado, unrelated to the Las Azules / Women in Blue TV series. Surfaced only via \"azules\" keyword overlap in a broad web search. Not fetched: Rule B/E/F/G/H all agree dateability is irrelevant once an off-topic relevance miss is confirmed.",
+      "history": [
+        {
+          "attempt": "2026-09-28T06:20:00Z",
+          "method": "none (relevance miss confirmed from search result metadata)",
+          "status": null,
+          "issue": "LEMA-11619",
+          "note": "Off-topic false positive, Rule G. Different film entirely."
+        }
+      ]
+    },
+    {
+      "url": "https://seriesreminder.com/series/las-azules",
+      "firstSeen": "2026-09-28T06:20:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-28T06:20:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "SeriesReminder tracker page for Las Azules / Women in Blue. Body is an episode-schedule table, streaming links, FAQ, and an algorithmically-generated \"Industry Oracle\"/\"AI Critic Analysis\" blurb stamped only \"Analysis Refined: March 2026\" (month-only, no day). Both WebFetch and Firecrawl scrape were attempted; neither surfaced a datePublished, article:published_time, or day-precise visible dateline anywhere on the page. Rule A: no proxy dates permitted, episode air-date table excluded as a substitute; genuinely undateable after exhausting both fetch methods.",
+      "history": [
+        {
+          "attempt": "2026-09-28T06:20:00Z",
+          "method": "WebFetch+Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11619",
+          "note": "Fetched successfully both ways; no sourced publish date found on the page. Rule A undateable."
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PLqb7k9-lcW4RbJHYVY3zXFq3FHsfjIQOJ",
+      "firstSeen": "2026-09-28T06:20:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "YouTube playlist for \"Los Angeles Azules\" (Mexican cumbia band), unrelated to the Las Azules / Women in Blue TV series. Surfaced only via \"azules\" keyword overlap.",
+      "history": [
+        {
+          "attempt": "2026-09-28T06:20:00Z",
+          "method": "none (relevance miss confirmed from search result metadata)",
+          "status": null,
+          "issue": "LEMA-11619",
+          "note": "Off-topic false positive, Rule G. Different subject (music group), not the TV series."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/El_Azul_(song)",
+      "firstSeen": "2026-09-28T06:20:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about the song \"El Azul\", unrelated to the Las Azules / Women in Blue TV series. Surfaced only via \"azul\" keyword overlap.",
+      "history": [
+        {
+          "attempt": "2026-09-28T06:20:00Z",
+          "method": "none (relevance miss confirmed from search result metadata)",
+          "status": null,
+          "issue": "LEMA-11619",
+          "note": "Off-topic false positive, Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Perdonarte,_%C2%BFPara_Qu%C3%A9%3F",
+      "firstSeen": "2026-09-28T06:20:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about the song \"Perdonarte, ¿Para Qué?\", unrelated to the Las Azules / Women in Blue TV series. Surfaced only via broad keyword overlap in a YouTube-focused search.",
+      "history": [
+        {
+          "attempt": "2026-09-28T06:20:00Z",
+          "method": "none (relevance miss confirmed from search result metadata)",
+          "status": null,
+          "issue": "LEMA-11619",
+          "note": "Off-topic false positive, Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://www.clintonherald.com/news/national_news/tv---las-azules---women-in-blue/image_ccf74c6e-3830-59be-8e87-decba4891520.html",
+      "firstSeen": "2026-09-28T06:20:00Z",
+      "failCount": 1,
+      "lastStatus": 429,
+      "lastAttempt": "2026-09-28T06:20:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": "Full fallback-chain failure: WebFetch returned HTTP 429 (rate-limited). Firecrawl scrape returned success=true but the resolved body is the Clinton Herald's own 404 \"page cannot be found\" template (BLOX CMS), not the article -- the URL does not currently resolve to real content. Not added to data.json this run. Retry next run before this failCount reaches 3 / 30-day cooldown.",
+      "history": [
+        {
+          "attempt": "2026-09-28T06:20:00Z",
+          "method": "WebFetch",
+          "status": 429,
+          "issue": "LEMA-11619",
+          "note": "Rate-limited by clintonherald.com."
+        },
+        {
+          "attempt": "2026-09-28T06:20:00Z",
+          "method": "Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11619",
+          "note": "Firecrawl succeeded but resolved to the site's 404 template, not the article body. Treated as a full-chain failure."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-28T04:06:09Z"
+  "lastUpdated": "2026-09-28T06:20:00Z"
 }
