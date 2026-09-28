@@ -15128,7 +15128,47 @@
           "note": "Firecrawl succeeded but resolved to the site's 404 template, not the article body. Treated as a full-chain failure."
         }
       ]
+    },
+    {
+      "url": "http://thefutoncritic.com/news/2026/10/16/abc-announces-early-renewal-of-the-popular-summer-drama-series-rookie-blue-903312",
+      "firstSeen": "2026-09-28T10:05:10.540Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-28T10:05:10.540Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TheFutonCritic news item about ABC renewing the unrelated series \"Rookie Blue\" (a Canadian police procedural, no connection to Las Azules / Women in Blue). Surfaced only as a broad-query match on generic police-drama-renewal terms via Exa. Classification made from headline/URL alone (unambiguous title mismatch); no full-body fetch attempted.",
+      "history": [
+        {
+          "attempt": "2026-09-28T10:05:10.540Z",
+          "method": "title-only",
+          "status": null,
+          "issue": "LEMA-11696",
+          "note": "Headline and URL unambiguously identify a different show (Rookie Blue); no fetch needed to resolve."
+        }
+      ]
+    },
+    {
+      "url": "https://harrahssocal.com/entertainment/events/los-%C3%A1ngeles-azules-us-tour-2026",
+      "firstSeen": "2026-09-28T10:05:10.540Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-28T10:05:10.540Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Harrah's SoCal events listing for a Los Ángeles Azules (cumbia music group) US concert tour date. Unrelated to the Las Azules / Women in Blue TV series; surfaced only as a broad-query match on the shared \"Azules\" term via Exa. Classification made from headline/URL alone (unambiguous topic mismatch); no full-body fetch attempted.",
+      "history": [
+        {
+          "attempt": "2026-09-28T10:05:10.540Z",
+          "method": "title-only",
+          "status": null,
+          "issue": "LEMA-11696",
+          "note": "Headline unambiguously identifies a music tour listing for a band, not the TV show; no fetch needed to resolve."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-28T06:20:00Z"
+  "lastUpdated": "2026-09-28T10:05:10.540Z"
 }
