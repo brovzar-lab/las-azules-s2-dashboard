@@ -1000,7 +1000,7 @@
 <!-- ═══ DATA-AS-OF BAR (sitewide, visible on every tab) ═══ -->
 <div id="databar">
   <div class="databar-inner">
-    <span class="databar-crit">Critical reception data as of <strong id="databar-crit-date">Aug 28, 2026</strong></span>
+    <span class="databar-crit">Critical reception verified <strong id="databar-crit-date">Aug 28, 2026</strong><span id="databar-crit-changed-wrap"> · unchanged since <strong id="databar-crit-changed-date">Aug 18, 2026</strong></span></span>
     <span class="databar-sep">·</span>
     <span class="databar-cov"><span class="live-dot"></span>Coverage feed: auto-updating</span>
   </div>
@@ -1109,7 +1109,7 @@
         <h2 class="sec-h2">Scores &amp; reviews</h2>
         <hr class="sec-rule">
       </div>
-      <p class="sec-caption">Season 2, as of Aug 28, 2026 — final tally of the Aug 12–28 monitoring arc. Links go to the live pages for anyone checking after this date.</p>
+      <p class="sec-caption">Season 2 critic figures, verified as of <strong id="sec-caption-crit-date">Aug 28, 2026</strong> — monitoring continues through the finale. Links go to the live pages for the latest score.</p>
     </div>
 
     <!-- Score tiles -->
@@ -2807,7 +2807,10 @@ document.addEventListener('keydown', function(e) {
 /* Critical Reception + Updates timeline are hand-curated from the research-report
    document, not the data.json sweep. content-meta.json is the single source of
    truth for when that curated content was last touched — update it in the same
-   commit as any Critical Reception / Updates edit, both stamps read from here. */
+   commit as any Critical Reception / Updates edit, both stamps read from here.
+   criticalReceptionChangedAt is a distinct, optional field: the last time a
+   headline critic figure actually moved, vs. criticalReceptionAsOf which is
+   the last time it was re-verified (may be unchanged run after run). */
 (async function loadContentMeta() {
   try {
     const res = await fetch('./content-meta.json?_=' + Date.now());
@@ -2822,6 +2825,20 @@ document.addEventListener('keydown', function(e) {
       const text = fmt(meta.criticalReceptionAsOf);
       const el = document.getElementById('databar-crit-date');
       if (text && el) el.textContent = text;
+      const capEl = document.getElementById('sec-caption-crit-date');
+      if (text && capEl) capEl.textContent = text;
+    }
+    const changedWrap = document.getElementById('databar-crit-changed-wrap');
+    if (meta.criticalReceptionChangedAt) {
+      const changedText = fmt(meta.criticalReceptionChangedAt);
+      const changedEl = document.getElementById('databar-crit-changed-date');
+      if (changedText && changedEl) {
+        changedEl.textContent = changedText;
+      } else if (changedWrap) {
+        changedWrap.style.display = 'none';
+      }
+    } else if (changedWrap) {
+      changedWrap.style.display = 'none';
     }
     if (meta.updatesAsOf) {
       const text = fmt(meta.updatesAsOf);
