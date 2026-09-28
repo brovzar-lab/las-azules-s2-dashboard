@@ -15139,6 +15139,26 @@
           "note": "Firecrawl returned 'we do not support this site' refusal for instagram.com. Full-chain failure."
         }
       ]
+    },
+    {
+      "url": "https://notatamaulipas.com/2026/09/28/la-carrera-azul-ya-arranco",
+      "firstSeen": "2026-09-28T22:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-28T22:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Off-topic false positive (Rule G). Surfaced via web search on the keyword \"azul\"/\"azules\". WebFetch succeeded and confirmed the page is a Sept 28, 2026 political opinion column by Juan Antonio Lerma in Nota Tamaulipas about internal PAN party dynamics ahead of Mexico's 2027 elections (\"la carrera panista ya arranco\"), unrelated to the TV series Las Azules / Women in Blue. Ledgered LEMA-11740.",
+      "history": [
+        {
+          "attempt": "2026-09-28T22:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11740",
+          "note": "Fetch succeeded; content confirmed off-topic (Mexican PAN party politics column), not about Las Azules."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-09-28T20:20:00Z"
