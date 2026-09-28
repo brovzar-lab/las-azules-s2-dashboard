@@ -658,44 +658,6 @@
       ]
     },
     {
-      "url": "https://www.tiktok.com/discover/segunda-temporada-de-las-azules?lang=en",
-      "failCount": 3,
-      "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-05T02:05:44.000Z",
-      "cooldownUntil": "2026-10-05T02:05:44.000Z",
-      "permanentSkip": false,
-      "history": [
-        {
-          "attempt": "2026-09-04T18:05:15.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
-          "issue": "LEMA-9737"
-        },
-        {
-          "attempt": "2026-09-04T18:05:15.000Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 2.",
-          "issue": "LEMA-9737"
-        },
-        {
-          "attempt": "2026-09-05T02:05:44.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
-          "issue": "LEMA-9741"
-        },
-        {
-          "attempt": "2026-09-05T02:05:44.000Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days.",
-          "issue": "LEMA-9741"
-        }
-      ]
-    },
-    {
       "url": "https://www.themoviedb.org/tv/253983-las-azules/season/2",
       "firstSeen": "2026-09-04T02:00:50Z",
       "failCount": 0,
@@ -920,73 +882,6 @@
           "status": 200,
           "issue": "LEMA-9732",
           "note": "Success 200. No article-level publish date field found in markdown or metadata; only the show's release date (2026-08-12) is present, which is a proxy and cannot be used per Rule A. Marked editorial_undateable."
-        }
-      ]
-    },
-    {
-      "url": "https://www.tiktok.com/discover/la-serie-de-las-azules-tendr%C3%A1-segunda-temporada",
-      "firstSeen": "2026-09-04T18:05:15.000Z",
-      "failCount": 3,
-      "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-08T16:03:07.000Z",
-      "cooldownUntil": "2026-10-05T10:05:00.000Z",
-      "permanentSkip": false,
-      "history": [
-        {
-          "attempt": "2026-09-04T18:05:15.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
-          "issue": "LEMA-9737"
-        },
-        {
-          "attempt": "2026-09-04T18:05:15.000Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "note": "Blanket 'we do not support this site' refusal for tiktok.com.",
-          "issue": "LEMA-9737"
-        },
-        {
-          "attempt": "2026-09-05T02:05:44.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
-          "issue": "LEMA-9741"
-        },
-        {
-          "attempt": "2026-09-05T02:05:44.000Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 2.",
-          "issue": "LEMA-9741"
-        },
-        {
-          "attempt": "2026-09-05T10:05:00.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
-          "issue": "LEMA-9745"
-        },
-        {
-          "attempt": "2026-09-05T10:05:00.000Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days.",
-          "issue": "LEMA-9745"
-        },
-        {
-          "attempt": "2026-09-08T16:03:07.000Z",
-          "method": "WebFetch",
-          "status": 200,
-          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content. Same pattern as sibling tiktok.com/discover/segunda-temporada-de-las-azules entry.",
-          "issue": "LEMA-9856"
-        },
-        {
-          "attempt": "2026-09-08T16:03:07.000Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 1.",
-          "issue": "LEMA-9856"
         }
       ]
     },
@@ -2228,33 +2123,6 @@
       "permanentSkip": true,
       "skipReason": "editorial_listing_or_database",
       "skipNote": "TheTVDB database entry for Las Azules Season 2. Both WebFetch and Firecrawl scrape succeeded and returned full page content (Italian/Spanish season synopsis), but the only date fields present are TheTVDB's own 'Created' (May 24, 2022) and 'Modified' (September 3, 2026) database metadata, not a real editorial publish date. Per Rule A these crawler/DB artifacts cannot substitute for a sourced publish date. Same pattern as the already-ledgered thetvdb.com/series/las-azules/seasons/official/1 entry. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all."
-    },
-    {
-      "url": "https://www.tiktok.com/discover/la-serie-de-las-azules-tendr%C3%A1-segunda-temporada?lang=es",
-      "firstSeen": "2026-09-08T20:15:00Z",
-      "failCount": 3,
-      "lastStatus": "webfetch_near_empty;firecrawl_403_unsupported_site",
-      "lastAttempt": "2026-09-12T04:00:00Z",
-      "cooldownUntil": "2026-10-12T04:00:00Z",
-      "permanentSkip": false,
-      "skipReason": null,
-      "skipNote": "WebFetch returned only the generic TikTok tagline ('Make Your Day', no post content). Firecrawl scrape returned 403 'we do not support this site' for this TikTok discover page. Full-chain failure, failCount now 3 -- cooldown set to 30 days per step 4d.",
-      "history": [
-        {
-          "attempt": "2026-09-12T04:00:00Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-10012",
-          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content."
-        },
-        {
-          "attempt": "2026-09-12T04:00:00Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "issue": "LEMA-10012",
-          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days."
-        }
-      ]
     },
     {
       "url": "https://www.tiktok.com/discover/serie-en-apple-tv-tendencia",
@@ -6470,26 +6338,6 @@
       ]
     },
     {
-      "url": "https://x.com/angelesazulesmx?lang=en",
-      "permanentSkip": true,
-      "skipReason": "editorial_off_topic_false_positive",
-      "reviewable": false,
-      "failCount": 0,
-      "cooldownUntil": null,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-13T14:01:02Z",
-      "firstSeen": "2026-09-13T14:01:02Z",
-      "history": [
-        {
-          "attempt": "2026-09-13T14:01:02Z",
-          "method": "search-snippet",
-          "status": null,
-          "issue": "LEMA-10037",
-          "note": "Official X account for musical group Los Angeles Azules, unrelated to the TV show. Same off-topic 'Azules' band confusion already ledgered for losangelesazules.com.mx, facebook.com/angelesazulesmx, and the Wikipedia/Hoodline/JustWatch band entries. Rule G, reviewable=false."
-        }
-      ]
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Ptazeta",
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
@@ -7202,33 +7050,6 @@
           "status": 200,
           "issue": "LEMA-10043",
           "note": "Confirmed same: country selector menu only, no synopsis/cast/episode content."
-        }
-      ]
-    },
-    {
-      "url": "https://tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39?l=es",
-      "firstSeen": "2026-09-14T02:11:49Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-14T02:11:49Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": "Rule D retroactive remediation (LEMA-10043): this exact URL was live in data.json with ts=20260903/date='Sep 3, 2026', but both WebFetch and Firecrawl confirm the page is a purely evergreen Apple TV show catalog page (cast, episodes, synopsis, release year '2024' only) with no publish/last-updated date anywhere in the body. The ts was an approximated crawl-date substitute, a Rule A violation. Matches the identical, already-established pattern for sibling locale variants of this same show page already ledgered as permanentSkip/editorial_undateable (e.g. the '--la-brigade-bleue'/l=es-MX variant, LEMA-9766). Removed from data.json in the same commit per Rule D/ledger-precedence guardrail. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all.",
-      "history": [
-        {
-          "attempt": "2026-09-14T02:11:49Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-10043",
-          "note": "Evergreen catalog page, no publish date found, only release year 2024."
-        },
-        {
-          "attempt": "2026-09-14T02:11:49Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-10043",
-          "note": "Confirmed same: no date field in body or metadata."
         }
       ]
     },
@@ -11324,37 +11145,6 @@
       ]
     },
     {
-      "url": "https://www.tiktok.com/discover/segunda-temporada-de-las-azules",
-      "firstSeen": "2026-09-20T06:04:57Z",
-      "failCount": 2,
-      "lastStatus": 403,
-      "lastAttempt": "2026-09-24T18:05:05Z",
-      "cooldownUntil": null,
-      "history": [
-        {
-          "attempt": "2026-09-20T06:04:57Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-10585",
-          "note": "WebFetch returned 200 but body is TikTok's generic landing page (\"TikTok - Make Your Day\"), no discover content or editorial text. Treated as a near-empty-body failure per the fetch fallback chain rule."
-        },
-        {
-          "attempt": "2026-09-20T06:04:57Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "issue": "LEMA-10585",
-          "note": "Firecrawl returned 403: site not supported (\"we do not support this site\"). Full-chain failure, failCount now 1."
-        },
-        {
-          "attempt": "2026-09-24T18:05:05Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "issue": "LEMA-10921",
-          "note": "Re-attempted full fallback chain: WebFetch returned TikTok's generic landing page again (near-empty body), Firecrawl scrape returned 403 'we do not support this site'. Full-chain failure, failCount now 2."
-        }
-      ]
-    },
-    {
       "url": "https://www.gameblog.fr/geek/ed/news/apple-tv-sorties-confirmees-octobre-2026-723233",
       "firstSeen": "2026-09-20T08:04:43Z",
       "failCount": 0,
@@ -13357,26 +13147,6 @@
       ]
     },
     {
-      "url": "https://x.com/angelesazulesmx",
-      "firstSeen": "2026-09-24T18:05:05Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-24T18:05:05Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "X/Twitter account for Los Ángeles Azules, a Mexican cumbia band, unrelated to the TV show Las Azules. Surfaced only as a name-match on the #LasAzules hashtag search.",
-      "history": [
-        {
-          "attempt": "2026-09-24T18:05:05Z",
-          "method": "WebSearch snippet",
-          "status": 200,
-          "issue": "LEMA-10921",
-          "note": "Account name/bio unambiguously identifies an unrelated musical group; confirmed off-topic without fetch."
-        }
-      ]
-    },
-    {
       "url": "https://www.rottentomatoes.com/m/goyo",
       "firstSeen": "2026-09-24T18:05:05Z",
       "failCount": 0,
@@ -13620,26 +13390,6 @@
           "status": 200,
           "issue": "LEMA-10935",
           "note": "Surfaced via Pass 2 web sweep; classified Rule F on first fetch, never added to data.json."
-        }
-      ]
-    },
-    {
-      "url": "https://tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
-      "firstSeen": "2026-09-25T06:07:38Z",
-      "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": null,
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": "US Apple TV show landing page for Las Azules under the Spanish-title URL slug, same content ID (umc.cmc.73wmdmkfpta5ul1vbwckmme39) as the already-ledgered https://tv.apple.com/us/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39 (permanentSkip, editorial_listing_or_database). Surfaced during Pass 2 standard web sweep (LEMA-11059). Classified by surface family per the Rule F clarification (LEMA-10632/LEMA-10630, apple-locale-show-pages-are-rule-f precedent): this is the same tv.apple.com/{locale}/show/ database/catalog page family already established as Rule F across the us/women-in-blue and lu/las-azules siblings; it is an alias slug, not a distinct document, so no separate fetch was spent to confirm what the sibling rows already establish for this exact content ID. Not added to data.json.",
-      "history": [
-        {
-          "attempt": "2026-09-25T06:07:38Z",
-          "method": "classification-by-sibling (no fetch spent)",
-          "status": null,
-          "issue": "LEMA-11059",
-          "note": "Same content ID and URL template as tv.apple.com/us/show/women-in-blue (already Rule F) and tv.apple.com/lu/show/las-azules (already Rule F). Classified as Rule F by surface family without a fresh fetch, per Rule F clarification (LEMA-10632)."
         }
       ]
     },
@@ -15207,6 +14957,207 @@
           "status": 200,
           "issue": "LEMA-11565",
           "note": "Full page retrieved: season/episode listing + cast + one-line synopsis, no written editorial content. Classified Rule F (editorial_listing_or_database)."
+        }
+      ]
+    },
+    {
+      "url": "https://tiktok.com/discover/segunda-temporada-de-las-azules",
+      "firstSeen": "2026-09-20T06:04:57Z",
+      "failCount": 2,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-24T18:05:05Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-09-04T18:05:15.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
+          "issue": "LEMA-9737"
+        },
+        {
+          "attempt": "2026-09-04T18:05:15.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 2.",
+          "issue": "LEMA-9737"
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
+          "issue": "LEMA-9741"
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days.",
+          "issue": "LEMA-9741"
+        },
+        {
+          "attempt": "2026-09-20T06:04:57Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10585",
+          "note": "WebFetch returned 200 but body is TikTok's generic landing page (\"TikTok - Make Your Day\"), no discover content or editorial text. Treated as a near-empty-body failure per the fetch fallback chain rule."
+        },
+        {
+          "attempt": "2026-09-20T06:04:57Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10585",
+          "note": "Firecrawl returned 403: site not supported (\"we do not support this site\"). Full-chain failure, failCount now 1."
+        },
+        {
+          "attempt": "2026-09-24T18:05:05Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10921",
+          "note": "Re-attempted full fallback chain: WebFetch returned TikTok's generic landing page again (near-empty body), Firecrawl scrape returned 403 'we do not support this site'. Full-chain failure, failCount now 2."
+        }
+      ]
+    },
+    {
+      "url": "https://tiktok.com/discover/la-serie-de-las-azules-tendr%C3%A1-segunda-temporada",
+      "firstSeen": "2026-09-04T18:05:15.000Z",
+      "failCount": 3,
+      "lastStatus": "webfetch_near_empty;firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-12T04:00:00Z",
+      "cooldownUntil": "2026-10-12T04:00:00Z",
+      "skipNote": "WebFetch returned only the generic TikTok tagline ('Make Your Day', no post content). Firecrawl scrape returned 403 'we do not support this site' for this TikTok discover page. Full-chain failure, failCount now 3 -- cooldown set to 30 days per step 4d.",
+      "history": [
+        {
+          "attempt": "2026-09-04T18:05:15.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
+          "issue": "LEMA-9737"
+        },
+        {
+          "attempt": "2026-09-04T18:05:15.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com.",
+          "issue": "LEMA-9737"
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
+          "issue": "LEMA-9741"
+        },
+        {
+          "attempt": "2026-09-05T02:05:44.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 2.",
+          "issue": "LEMA-9741"
+        },
+        {
+          "attempt": "2026-09-05T10:05:00.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content.",
+          "issue": "LEMA-9745"
+        },
+        {
+          "attempt": "2026-09-05T10:05:00.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days.",
+          "issue": "LEMA-9745"
+        },
+        {
+          "attempt": "2026-09-08T16:03:07.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content. Same pattern as sibling tiktok.com/discover/segunda-temporada-de-las-azules entry.",
+          "issue": "LEMA-9856"
+        },
+        {
+          "attempt": "2026-09-08T16:03:07.000Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 1.",
+          "issue": "LEMA-9856"
+        },
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10012",
+          "note": "Empty shell ('TikTok - Make Your Day' boilerplate only), no post content."
+        },
+        {
+          "attempt": "2026-09-12T04:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10012",
+          "note": "Blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/angelesazulesmx",
+      "firstSeen": "2026-09-13T14:01:02Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-24T18:05:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "X/Twitter account for Los Ángeles Azules, a Mexican cumbia band, unrelated to the TV show Las Azules. Surfaced only as a name-match on the #LasAzules hashtag search.",
+      "history": [
+        {
+          "attempt": "2026-09-13T14:01:02Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-10037",
+          "note": "Official X account for musical group Los Angeles Azules, unrelated to the TV show. Same off-topic 'Azules' band confusion already ledgered for losangelesazules.com.mx, facebook.com/angelesazulesmx, and the Wikipedia/Hoodline/JustWatch band entries. Rule G, reviewable=false."
+        },
+        {
+          "attempt": "2026-09-24T18:05:05Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-10921",
+          "note": "Account name/bio unambiguously identifies an unrelated musical group; confirmed off-topic without fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-09-14T02:11:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-14T02:11:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Rule D retroactive remediation (LEMA-10043): this exact URL was live in data.json with ts=20260903/date='Sep 3, 2026', but both WebFetch and Firecrawl confirm the page is a purely evergreen Apple TV show catalog page (cast, episodes, synopsis, release year '2024' only) with no publish/last-updated date anywhere in the body. The ts was an approximated crawl-date substitute, a Rule A violation. Matches the identical, already-established pattern for sibling locale variants of this same show page already ledgered as permanentSkip/editorial_undateable (e.g. the '--la-brigade-bleue'/l=es-MX variant, LEMA-9766). Removed from data.json in the same commit per Rule D/ledger-precedence guardrail. UPDATE 2026-09-15 (LEMA-10217): reclassified skipReason from editorial_undateable to editorial_listing_or_database (Rule F, adopted 2026-09-10 forward-only, LEMA-9927 -- this row predates it). Basis (from the row's own existing note): the note itself already describes this as a database/catalog/listing surface. This is a database/catalog/listing page with no written editorial content about the show (strip the metadata table/grid and nothing written about the show remains), so it was never coverage at any date and dateability was never the operative gate. reviewable dropped: Rule F entries are not coverage at all. Prior note (LEMA-11059): US Apple TV show landing page for Las Azules under the Spanish-title URL slug, same content ID (umc.cmc.73wmdmkfpta5ul1vbwckmme39) as the already-ledgered https://tv.apple.com/us/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39 (permanentSkip, editorial_listing_or_database). Surfaced during Pass 2 standard web sweep (LEMA-11059). Classified by surface family per the Rule F clarification (LEMA-10632/LEMA-10630, apple-locale-show-pages-are-rule-f precedent): this is the same tv.apple.com/{locale}/show/ database/catalog page family already established as Rule F across the us/women-in-blue and lu/las-azules siblings; it is an alias slug, not a distinct document, so no separate fetch was spent to confirm what the sibling rows already establish for this exact content ID. Not added to data.json.",
+      "history": [
+        {
+          "attempt": "2026-09-14T02:11:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-10043",
+          "note": "Evergreen catalog page, no publish date found, only release year 2024."
+        },
+        {
+          "attempt": "2026-09-14T02:11:49Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-10043",
+          "note": "Confirmed same: no date field in body or metadata."
+        },
+        {
+          "attempt": "2026-09-25T06:07:38Z",
+          "method": "classification-by-sibling (no fetch spent)",
+          "status": null,
+          "issue": "LEMA-11059",
+          "note": "Same content ID and URL template as tv.apple.com/us/show/women-in-blue (already Rule F) and tv.apple.com/lu/show/las-azules (already Rule F). Classified as Rule F by surface family without a fresh fetch, per Rule F clarification (LEMA-10632)."
         }
       ]
     }

@@ -349,38 +349,50 @@ test('tv.apple.com: showId/targetId/targetType (constant show-id echoes) are dro
   );
   assert.equal(episode.key, 'tv.apple.com/pe/episode/alma/umc.cmc.5g6l2hlovopmmxtypma7v3j3u');
 
+  // `l` is also dropped as of LEMA-11736 (was preserved under LEMA-11733) --
+  // see the next test.
   const clip = normalizeUrl(
     'https://tv.apple.com/gt/clip/las-mujeres-season-1/umc.cmc.dfqcxumy8pgbu8c3016pkf68?l=en&targetId=umc.cmc.73wmdmkfpta5ul1vbwckmme39&targetType=Show'
   );
-  assert.equal(clip.key, 'tv.apple.com/gt/clip/las-mujeres-season-1/umc.cmc.dfqcxumy8pgbu8c3016pkf68?l=en');
+  assert.equal(clip.key, 'tv.apple.com/gt/clip/las-mujeres-season-1/umc.cmc.dfqcxumy8pgbu8c3016pkf68');
 });
 
-test('tv.apple.com: ?l= locale flag is deliberately preserved, not resolved by this ticket', () => {
+test('tv.apple.com: ?l= locale flag is now dropped -- CEO resolved the LEMA-11733 deferral on LEMA-11736', () => {
   const es = normalizeUrl('https://tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39?l=es');
   const en = normalizeUrl('https://tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39?l=en');
-  assert.notEqual(es.key, en.key);
+  const bare = normalizeUrl('https://tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39');
+  assert.equal(es.key, en.key);
+  assert.equal(es.key, bare.key);
+  assert.equal(es.key, 'tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39');
 });
 
-// Deliberately NOT touched by this ticket: hosts whose only observed extra
-// param is a locale/language flag stay on the generic deny-list default
-// (param survives) pending the separate, evidence-backed global
-// locale-param proposal in the LEMA-11733 deliverable.
+// LEMA-11736: hl/lang/locale added to the global TRACKING_PARAM_NAMES deny
+// list (CEO approval, following the LEMA-11733 deliverable's global
+// locale-param proposal). facebook.com/instagram.com/tiktok.com/x.com have
+// no HOST_PARAM_ALLOWLIST entry of their own -- these params are now
+// dropped for them (and every other host) via the generic deny-list path,
+// not a per-host entry.
 
-test('facebook.com ?locale=, instagram.com ?hl=, tiktok.com ?lang=, x.com ?lang= are unchanged by this ticket', () => {
+test('facebook.com ?locale=, instagram.com ?hl=, tiktok.com ?lang=, x.com ?lang= are now dropped globally (LEMA-11736)', () => {
   assert.equal(
     normalizeUrl('https://www.facebook.com/SomePage/posts/a-slug/1234?locale=bg_BG').key,
-    'facebook.com/SomePage/posts/1234?locale=bg_BG'
+    'facebook.com/SomePage/posts/1234'
   );
   assert.equal(
     normalizeUrl('https://www.instagram.com/someuser/?hl=en').key,
-    'instagram.com/someuser?hl=en'
+    'instagram.com/someuser'
   );
   assert.equal(
     normalizeUrl('https://www.tiktok.com/@someuser/video/123?lang=es').key,
-    'tiktok.com/@someuser/video/123?lang=es'
+    'tiktok.com/@someuser/video/123'
   );
   assert.equal(
     normalizeUrl('https://x.com/someuser?lang=en').key,
-    'x.com/someuser?lang=en'
+    'x.com/someuser'
   );
+});
+
+test('hl/lang/locale strip is case-insensitive like every other tracking param, and a non-locale param on the same host survives', () => {
+  const { key } = normalizeUrl('https://example.com/article?LOCALE=es&keep=1');
+  assert.equal(key, 'example.com/article?keep=1');
 });

@@ -202,12 +202,16 @@ with the agent. Five checks:
    `assert-integrity` can structurally see it (both only compare against the *current*
    normalization rule). This check groups URLs from `data.json` **and** `fetch-blocklist.json`
    combined (the `reforma.com` case itself was a cross-file pair) by host+path, and flags any
-   group -- on a host with **no** `HOST_PARAM_ALLOWLIST` entry -- that produces two or more
-   distinct normalized keys because of a query-string difference. Deliberately restricted to
-   unlisted hosts: a listed host has already had this exact judgment call made (its allow-list
-   entry *is* the record of that decision), so re-flagging it would just re-litigate a closed
-   decision and would be noisy on hosts like `diarioimagen.net` where two different query values
-   are legitimately two different documents by design.
+   group -- on a host with **no DECIDED** `HOST_PARAM_ALLOWLIST` entry -- that produces two or
+   more distinct normalized keys because of a query-string difference. Deliberately restricted
+   to undecided hosts: a decided host has already had this exact judgment call made (its
+   allow-list entry *is* the record of that decision), so re-flagging it would just re-litigate
+   a closed decision and would be noisy on hosts like `diarioimagen.net` where two different
+   query values are legitimately two different documents by design. **"Decided" excludes a host
+   whose entry is marked `provisional: true` (LEMA-11736)** -- an entry can record a keep/drop
+   call that is itself still an open judgment call (e.g. `tv.apple.com`'s `l` was between
+   LEMA-11733 and LEMA-11736), and that host must stay visible to this advisory until the
+   provisional flag is cleared. See the LEMA-11736 section below.
 
 ```
 $ node tools/sweep-integrity.js audit
@@ -219,10 +223,15 @@ $ node tools/sweep-integrity.js audit
   - https://tv.apple.com/lu/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39 -- tv.apple.com/…/show/… (precedent=9)
   ...
 - Query-variant pairs (advisory, never gates): 5 group(s)
-  - [instagram.com/normantorregrosa] 2 distinct key(s):
-      - instagram.com/normantorregrosa?hl=en: https://www.instagram.com/normantorregrosa/?hl=en (fetch-blocklist.json)
-      - instagram.com/normantorregrosa: https://www.instagram.com/normantorregrosa/ (fetch-blocklist.json)
+  - [example.com/some-article] 2 distinct key(s):
+      - example.com/some-article?variant=alt: https://example.com/some-article?variant=alt (data.json)
+      - example.com/some-article: https://example.com/some-article (fetch-blocklist.json)
   ...
+  (this illustrative pair is stale post-LEMA-11736: the real `instagram.com/normantorregrosa`
+  `?hl=en` pair shown here in earlier revisions of this doc no longer appears in
+  `queryVariantPairs` at all, since `hl` is now globally dropped -- that pair's *dispositions*
+  disagree, so it now surfaces as a `fetch-blocklist.json` duplicate-key conflict instead. See
+  the LEMA-11736 section below.)
 - Run-date proxy suspects (advisory, never gates): 73 row(s)
   ...
 - Intersection (surface-family AND run-date proxy -- near-conclusive): 2 row(s)
@@ -365,26 +374,26 @@ surviving query param in `data.json`/`fetch-blocklist.json` as of 2026-09-28:
 | `movistarplus.es` | `id` | Bare `/ficha` path; `id` is the catalog identity, `tipo` (dropped) is a type-classifier flag |
 | `filmaffinity.com` | `movie-id` | Bare `/movie-awards.php` / `/pro-reviews.php` paths, no id elsewhere |
 | `thetvdb.com` | `page` | Paginated company-listing page -- unlike the referral tags above, different page numbers genuinely show different content |
-| `tv.apple.com` | `l` | `showId`/`targetId`/`targetType` are dropped: every occurrence carries the *same* fixed show-id value this whole dataset already tracks, echoed onto episode/clip pages whose own path already has a distinct id, so they never disambiguate two documents. `l` (locale, e.g. `es-MX`) is kept -- see below, deliberately unresolved |
+| `tv.apple.com` | *(none)* | `showId`/`targetId`/`targetType` are dropped: every occurrence carries the *same* fixed show-id value this whole dataset already tracks, echoed onto episode/clip pages whose own path already has a distinct id, so they never disambiguate two documents. `l` was kept-but-deliberately-unresolved as of this ticket; **resolved and dropped under LEMA-11736** -- see that section below |
 
-**Deliberately not added:** `facebook.com` (`?locale=`), `instagram.com` (`?hl=`),
-`tiktok.com` (`?lang=`), `twitter.com`/`x.com` (`?lang=`). Each host's only observed extra
-param is a locale/language flag -- exactly the family proposed for a *separate*, global rule
-below, not decided host-by-host here.
+**Shipped globally under LEMA-11736** (see that section below for the full writeup):
+`facebook.com` (`?locale=`), `instagram.com` (`?hl=`), `tiktok.com` (`?lang=`),
+`twitter.com`/`x.com` (`?lang=`) never got their own `HOST_PARAM_ALLOWLIST` entry -- their
+locale/language param is now dropped via the global `TRACKING_PARAM_NAMES` deny-list instead,
+alongside `tv.apple.com`'s `l`.
 
-**Locale-param proposal (not shipped, needs CEO approval before it ships globally).** The
-ledger also carries `lang`/`hl`/`locale`/`l` on the four hosts just listed (9 rows as of the
-2026-09-28 measurement) -- the query-string twin of the already-documented `/es-es/`
-locale-*path* gap (ambiguity #1 above). All four look like genuine display-language selectors
+**Locale-param proposal: shipped LEMA-11736 (CEO-approved), historical context preserved
+below.** The ledger also carried `lang`/`hl`/`locale`/`l` on the four hosts just listed (9 rows
+as of the 2026-09-28 measurement) -- the query-string twin of the already-documented `/es-es/`
+locale-*path* gap (ambiguity #1 above). All four looked like genuine display-language selectors
 with no bearing on document identity, which would make them safe to add to the *global*
 deny-list (`TRACKING_PARAM_NAMES`) the same way `srsltid`/`SESSIONID`/`ref_` were added on
-LEMA-9942. Per the CEO ruling, this is **not** shipped here: "do not ship it on judgment alone."
-`l` on `tv.apple.com` is the one param the ruling explicitly flagged as the least certain
-("least sure is always a locale") -- kept in the per-host table above rather than folded into
-this proposal, since an incorrect per-host call only affects one host, while an incorrect
-global call would affect every host that ever gets one of these four param names. If approved,
-this proposal would let `tv.apple.com`'s `l` and the four now-`HOST_PARAM_ALLOWLIST`-absent
-hosts above all be handled by one global rule instead of a growing set of one-off host entries.
+LEMA-9942. This ticket (LEMA-11733) deliberately did **not** ship it: "do not ship it on
+judgment alone" (CEO ruling). `l` on `tv.apple.com` was the one param the ruling explicitly
+flagged as the least certain ("least sure is always a locale") -- kept in the per-host table
+above rather than folded into the proposal, since an incorrect per-host call only affects one
+host, while an incorrect global call would affect every host that ever gets one of these four
+param names.
 
 **Re-key migration performed on ship.** Verified against the live tree (2026-09-28) by diffing
 every row's `normalizeUrl(...).key` under the pre-ticket normalize.js against this ticket's
@@ -422,3 +431,93 @@ at the correct key," as required.
 Full suite: 86 (pre-LEMA-10625 baseline noted elsewhere in this file) is long since stale;
 as of this ticket the suite is **140** (`npm test`), all green, including the two
 `real-fixtures.test.js` checks against the live, post-merge artifacts.
+
+## Locale-param global drop, `tv.apple.com` `l` resolved, provisional allow-list entries (LEMA-11736)
+
+CEO follow-up to LEMA-11733 above, approving its held-back proposal and fixing a detector gap
+the CEO found while verifying that ticket.
+
+**Item 1 -- shipped, per CEO measurement against commit `99e463d`:** `hl`, `lang`, `locale`
+added to the global `TRACKING_PARAM_NAMES` deny-list (so every host without its own
+`HOST_PARAM_ALLOWLIST` entry now drops these three regardless of host). `tv.apple.com`'s `l` --
+the one param LEMA-11733 deliberately deferred rather than folding into this proposal -- is
+resolved separately and scoped to that host only (`HOST_PARAM_ALLOWLIST` entry becomes
+`{ keep: [] }`, was `{ keep: ['l'] }`): the `umc.cmc.*` id in the path is already the identity,
+`/us/`/`/gt/`/`/fi/` etc. already carry locale in the *path*, and every observed `l` value
+(`es`, `en`, `es-MX`) is a language tag. Proof: a same-path, same-show-id, two-row merge group
+existed (`.../us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39` bare + `?l=es`) purely
+because `l` was still being kept.
+
+**Item 2 -- `HOST_PARAM_ALLOWLIST` entries can now be marked `provisional: true`.** Table
+values changed shape from a bare `string[]` to `{ keep: string[], provisional?: true }`. A new
+`isDecidedAllowlistHost(host)` export (`tools/lib/normalize.js`) is `true` only for a host with
+an entry that is *not* provisional; `tools/lib/audit.js`'s `queryVariantPairs` check now calls
+this instead of the old bare `HOST_PARAM_ALLOWLIST.has(host)`. Root cause this closes: between
+LEMA-11733 and this ticket, `tv.apple.com` sat in the table with `l` explicitly deferred to the
+CEO -- the judgment call had NOT been made for that one param, but the bare `.has(host)` check
+treated the whole host as decided and hid it from the exact advisory built to catch an
+unresolved param decision. No entry in the live table is provisional as of this ticket (the
+only prior candidate, `tv.apple.com`'s `l`, was resolved by item 1 in the same commit) -- the
+mechanism exists so the *next* deferred param doesn't disappear the same way. Regression tests
+(`tools/test/audit.test.js`) reproduce the exact shape with a synthetic host (temporarily
+inserted into the live `HOST_PARAM_ALLOWLIST` for the duration of the test, then removed):
+a `provisional: true` entry with a kept param IS surfaced by `queryVariantPairs`, and the
+identical shape with `provisional` unset is NOT.
+
+**Blast radius, re-measured live at ship time (matches the CEO's pre-approval measurement
+exactly):**
+
+| File | Distinct keys before | After code change | After `assert-integrity --fix` |
+|---|---|---|---|
+| `data.json` | 758 | 758 (0 collisions) | 758 (`--fix` run, 0 auto-merged, confirms no write) |
+| `fetch-blocklist.json` | 687 | 681 (6 same-key groups) | 683 rows / 681 distinct keys (4 auto-merged, 2 escalated) |
+
+**The 6 same-key groups, named, both files:**
+
+1. `tiktok.com/@ledcardenas/video/7398259345248488710` (bare + `?lang=es`) -- **ESCALATED, not
+   merged** (disposition conflict, see below)
+2. `tiktok.com/discover/segunda-temporada-de-las-azules` (bare + `?lang=en`) -- auto-merged,
+   `failCount=2` preserved (most-recent row by `lastAttempt` was the bare row, 2026-09-24)
+3. `tiktok.com/discover/la-serie-de-las-azules-tendr%C3%A1-segunda-temporada` (bare + `?lang=es`)
+   -- auto-merged, `failCount=3` preserved (most-recent row was the `?lang=es` variant,
+   2026-09-12)
+4. `x.com/angelesazulesmx` (bare + `?lang=en`) -- auto-merged, `failCount=0` preserved
+   (`permanentSkip=true`, `skipReason=editorial_off_topic_false_positive` on both inputs)
+5. `instagram.com/normantorregrosa` (bare + `?hl=en`) -- **ESCALATED, not merged** (disposition
+   conflict, see below)
+6. `tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39` (bare + `?l=es`) --
+   auto-merged, `failCount=0` preserved (`permanentSkip=true`,
+   `skipReason=editorial_listing_or_database` on both inputs)
+
+All four `failCount` values above were read off the merged row post-`--fix` and verified against
+both pre-merge input rows' own `failCount` fields -- none were zeroed or reset; `mergeLedgerGroup`
+always takes the most-recent-by-`lastAttempt` row's `failCount` verbatim (pre-existing behavior,
+unchanged by this ticket).
+
+**Groups 1 and 5 are genuine disposition conflicts, found by this ticket, NOT resolved here.**
+Both are the same shape: one query-variant already has an editorial `permanentSkip` ruling
+(group 1: `editorial_personal_repost`, Rule B, ruled on LEMA-9769; group 5:
+`editorial_off_topic_false_positive`, Rule G, ruled on LEMA-10038), while the sibling
+query-variant is a still-open, never-classified retry-pending row (`failCount`/`cooldownUntil`
+set, no `permanentSkip` field at all) for what the normalizer now recognizes as the identical
+URL. `assertLedgerIntegrity`'s `groupAgrees()` correctly declines to auto-merge a group whose
+rows disagree on `permanentSkip` -- these two rows disagree (`true` vs. implicit `false`), so
+they were reported as `escalated (unresolved disagreement)` by `assert-integrity --fix` rather
+than merged. This makes `tools/test/real-fixtures.test.js`'s "no duplicate normalized-key
+groups" ledger check **known-red (2 groups)** until resolved -- same pattern as
+LEMA-9943/LEMA-10275/LEMA-10602: a code change correctly surfacing a pre-existing data issue,
+not a regression in this ticket. Data remediation (an editorial call on `fetch-blocklist.json`
+content, Research Specialist's ownership per LEMA-10163) is intentionally not made here; routed
+as a follow-up ticket parented under this one.
+
+**`data.json`: confirmed unchanged at ship time**, per the CEO's own pre-approval requirement
+("if live churn has changed that, stop and tell me"). `node tools/sweep-integrity.js
+assert-integrity --target data --fix` reports `rows=758, distinct normalized URLs=758,
+duplicate groups=0` both before and after this ticket's code change -- byte-for-byte the same
+count the CEO measured against `99e463d`, confirming no drift between approval and ship.
+
+Suite 140 -> 143 (3 new tests: the provisional/decided `queryVariantCheck` regression pair, plus
+a case-insensitivity guard for the three new global params). All green except the one
+known-red `real-fixtures.test.js` ledger-duplicates check documented above (2 groups, both
+pre-existing conflicts this ticket's code surfaced, matching the file's established
+surfaced-not-caused pattern).

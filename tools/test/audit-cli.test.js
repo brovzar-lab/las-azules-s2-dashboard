@@ -151,6 +151,10 @@ test('audit --json: reports ledgerOverlap, surfaceFamilyMatch, runDateProxySuspe
 // ---- LEMA-11733: query-variant pairs on unlisted hosts ----
 
 test('audit --json: reports queryVariantPairs for a same-path/different-query pair on an unlisted host, and does not gate the exit code', () => {
+  // Uses a made-up, never-classified param name (`variant`) rather than
+  // `hl` -- LEMA-11736 added `hl`/`lang`/`locale` to the global
+  // tracking-param deny-list, so a real `?hl=` pair on any unlisted host
+  // no longer survives normalization differently.
   const tmp = mkRepo();
   const ledgerPath = writeLedger(tmp, [
     { url: 'https://www.instagram.com/someuser/', permanentSkip: false, failCount: 0, history: [] },
@@ -159,7 +163,7 @@ test('audit --json: reports queryVariantPairs for a same-path/different-query pa
     {
       outlet: 'Instagram',
       headline: 'Some post',
-      url: 'https://www.instagram.com/someuser/?hl=en',
+      url: 'https://www.instagram.com/someuser/?variant=alt',
       date: 'Sep 2, 2026',
       ts: 20260902,
       lang: 'EN',

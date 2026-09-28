@@ -10,7 +10,7 @@
 // LEMA-9933: mechanics in the tool, judgment with the agent.
 
 const { execFileSync } = require('child_process');
-const { normalizeUrl, HOST_PARAM_ALLOWLIST } = require('./normalize');
+const { normalizeUrl, isDecidedAllowlistHost } = require('./normalize');
 
 // ---- shared path/host helpers ----
 
@@ -262,12 +262,22 @@ function runDateProxyCheck(dataset, firstSeenDates) {
 // cross-file pair -- one row in each) that share the same normalized
 // host+path but produce two or more distinct full normalized keys, i.e.
 // their query strings survive normalization differently. Restricted to
-// hosts with NO entry in HOST_PARAM_ALLOWLIST: a listed host has already
-// had this exact judgment call made (its allow-list entry IS the record
-// of that decision), so re-flagging it here would just re-litigate a
-// closed decision and would be noisy on exactly the hosts (e.g.
+// hosts with no DECIDED entry in HOST_PARAM_ALLOWLIST: a decided host has
+// already had this exact judgment call made (its allow-list entry IS the
+// record of that decision), so re-flagging it here would just re-litigate
+// a closed decision and would be noisy on exactly the hosts (e.g.
 // diarioimagen.net) where two different query values are legitimately two
 // different documents by design.
+//
+// LEMA-11736: a host whose entry is marked `provisional: true` is NOT
+// treated as decided, so it is NOT excluded here. tv.apple.com sat in this
+// table with `l` explicitly deferred to the CEO between LEMA-11733 and
+// LEMA-11736 -- the judgment call had NOT been made for that param, and
+// the effect was that the one param both the reporter and the CEO knew was
+// unresolved became invisible to the detector built to catch exactly this
+// class. isDecidedAllowlistHost() (tools/lib/normalize.js) is what encodes
+// "has an entry AND that entry isn't provisional"; do not replace this
+// with a bare `HOST_PARAM_ALLOWLIST.has(host)` check again.
 function queryVariantCheck(dataset, ledgerEntries) {
   const groups = new Map(); // pathOnlyKey -> Map(fullKey -> {urls, sources})
   const seenUrls = new Set();
@@ -284,7 +294,7 @@ function queryVariantCheck(dataset, ledgerEntries) {
     }
     const slashIndex = fullKey.indexOf('/');
     const host = slashIndex === -1 ? fullKey.split('?')[0] : fullKey.slice(0, slashIndex);
-    if (HOST_PARAM_ALLOWLIST.has(host)) return;
+    if (isDecidedAllowlistHost(host)) return;
 
     const qIndex = fullKey.indexOf('?');
     const pathOnlyKey = qIndex === -1 ? fullKey : fullKey.slice(0, qIndex);

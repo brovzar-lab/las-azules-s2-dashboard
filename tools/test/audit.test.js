@@ -17,6 +17,7 @@ const {
   computeFirstSeenDates,
   runDateProxyCheck,
 } = require('../lib/audit');
+const { HOST_PARAM_ALLOWLIST } = require('../lib/normalize');
 
 function ledgerRow(url, overrides = {}) {
   return {
@@ -198,15 +199,56 @@ test('queryVariantCheck: flags a cross-file pair on an unlisted host (the reform
   // instagram.com has no HOST_PARAM_ALLOWLIST entry, so this reproduces the
   // reforma.com defect shape on a still-unlisted host: same path, one row
   // in data.json with a query param, one permanentSkip row in the ledger
-  // without it.
-  const dataset = [dataRow('https://www.instagram.com/someuser/?hl=en')];
+  // without it. Uses a made-up, never-classified param name (`variant`)
+  // rather than `hl` -- LEMA-11736 added `hl`/`lang`/`locale` to the global
+  // tracking-param deny-list, so a real `?hl=` pair on any unlisted host no
+  // longer survives normalization differently and would no longer
+  // reproduce this shape.
+  const dataset = [dataRow('https://www.instagram.com/someuser/?variant=alt')];
   const ledger = [ledgerRow('https://www.instagram.com/someuser/')];
   const findings = queryVariantCheck(dataset, ledger);
   assert.equal(findings.length, 1);
   assert.equal(findings[0].pathOnlyKey, 'instagram.com/someuser');
   assert.equal(findings[0].variantCount, 2);
   const fullKeys = findings[0].variants.map((v) => v.fullKey).sort();
-  assert.deepEqual(fullKeys, ['instagram.com/someuser', 'instagram.com/someuser?hl=en']);
+  assert.deepEqual(fullKeys, ['instagram.com/someuser', 'instagram.com/someuser?variant=alt']);
+});
+
+test('queryVariantCheck: a PROVISIONAL allow-list entry IS still surfaced, unlike a decided one (LEMA-11736)', () => {
+  // Reproduces the exact shape of the gap this ticket closed: tv.apple.com
+  // sat in HOST_PARAM_ALLOWLIST with `l` kept but explicitly deferred to
+  // the CEO between LEMA-11733 and LEMA-11736, so the judgment call had
+  // NOT been made -- a provisional entry must not silently exclude its
+  // host from this advisory the way a decided entry correctly does (see
+  // the next test). Mutates the live HOST_PARAM_ALLOWLIST with a synthetic
+  // host for the duration of this test only.
+  const testHost = 'provisional-test-host.example';
+  HOST_PARAM_ALLOWLIST.set(testHost, { keep: ['l'], provisional: true });
+  try {
+    const dataset = [dataRow(`https://${testHost}/show/las-azules?l=es`)];
+    const ledger = [ledgerRow(`https://${testHost}/show/las-azules`)];
+    const findings = queryVariantCheck(dataset, ledger);
+    assert.equal(findings.length, 1);
+    assert.equal(findings[0].pathOnlyKey, `${testHost}/show/las-azules`);
+    assert.equal(findings[0].variantCount, 2);
+  } finally {
+    HOST_PARAM_ALLOWLIST.delete(testHost);
+  }
+});
+
+test('queryVariantCheck: the same shape on a non-provisional (decided) entry is NOT surfaced', () => {
+  // Control for the test above: identical keep-list and identical pair
+  // shape, only the provisional flag differs, to isolate that the flag
+  // (not the keep-list contents) is what drives exclusion.
+  const testHost = 'decided-test-host.example';
+  HOST_PARAM_ALLOWLIST.set(testHost, { keep: ['l'] });
+  try {
+    const dataset = [dataRow(`https://${testHost}/show/las-azules?l=es`)];
+    const ledger = [ledgerRow(`https://${testHost}/show/las-azules`)];
+    assert.equal(queryVariantCheck(dataset, ledger).length, 0);
+  } finally {
+    HOST_PARAM_ALLOWLIST.delete(testHost);
+  }
 });
 
 test('queryVariantCheck: a host already in HOST_PARAM_ALLOWLIST is never flagged (decision already on record)', () => {

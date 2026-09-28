@@ -10,10 +10,21 @@
 // routine prose says "drop tracking query parameters" without enumerating
 // which ones count. This list is an implementation decision, not specified
 // in the source prose. Flagged as an ambiguity in the LEMA-9933 deliverable.
+// hl/lang/locale added under LEMA-11736 (CEO approval, following the
+// LEMA-11733 deliverable's global locale-param proposal): live-data
+// measurement against commit 99e463d found 9 ledger rows across
+// instagram.com/tiktok.com/x.com carrying exactly one of these three
+// params with no other observed extra query param, each a locale/language
+// flag with no bearing on document identity. Blast radius re-verified at
+// ship time (LEMA-11736 deliverable): 0 data.json collisions, 6
+// fetch-blocklist.json same-key groups (4 auto-merged on agreeing
+// disposition, 2 escalated as pre-existing disposition conflicts -- see
+// that ticket for the conflict detail and remediation routing).
 const TRACKING_PARAM_NAMES = new Set([
   'fbclid', 'gclid', 'gclsrc', 'dclid', 'msclkid',
   'mc_cid', 'mc_eid', 'igshid', 'ref', 'ref_src', 'ref_url', 'ref_',
   'spm', 'si', 'cmpid', 'icid', 'srsltid', 'sessionid',
+  'hl', 'lang', 'locale',
 ]);
 const TRACKING_PARAM_PREFIX = /^utm_/i;
 
@@ -92,43 +103,72 @@ const YOUTUBE_FAMILY_HOSTS = new Set(['youtube.com', 'm.youtube.com', 'youtu.be'
 //   page (`/companies/apple-tv-plus`); unlike the referral tags above,
 //   different page numbers genuinely show different content, so this is
 //   an identity param, not a tracking one.
-// - tv.apple.com: ['l'] -- deliberately does NOT include `showId`,
-//   `targetId`, or `targetType`, which are dropped: every occurrence in
-//   the live data carries the *same* fixed value (this dataset's own
+// - tv.apple.com: [] (LEMA-11736; was ['l'] under LEMA-11733) -- drops
+//   `showId`/`targetId`/`targetType` for the reason already established
+//   under LEMA-11733 (every occurrence carries this dataset's own fixed
 //   show id, `umc.cmc.73wmdmkfpta5ul1vbwckmme39`, echoed back on episode/
-//   clip pages whose own path already has a distinct id), so they never
-//   disambiguate two different documents. `l` (a locale/language code,
-//   e.g. `es-MX`, `en`, `es`) IS kept -- explicitly NOT resolved here.
-//   The CEO ruling flagged `l` as the one param it is least sure is
-//   "just a locale" pending a separate, evidence-backed global
-//   locale-param proposal (LEMA-11733 deliverable); until that proposal
-//   is reviewed, the conservative default is to preserve it rather than
-//   risk silently merging two rows that may turn out to be distinct.
+//   clip pages whose own path already has a distinct id, so they never
+//   disambiguate two different documents), and now also drops `l`. The
+//   CEO resolved the `l` deferral on LEMA-11736 rather than extending it:
+//   scoped to this host specifically (not the global proposal below,
+//   which was evidence-gathered separately and excluded `l` for being too
+//   generic to trust globally), because the `umc.cmc.*` id in the path is
+//   already the identity, `/us/`, `/gt/`, `/fi/` etc. already carry locale
+//   in the *path*, and every observed `l` value (`es`, `en`, `es-MX`) is a
+//   language tag -- proven by a same-path, same-show-id, two-row merge
+//   group (`.../us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39` bare
+//   + `?l=es`) that existed only because `l` was still being kept.
 //
-// Deliberately NOT added here (left on the generic deny-list default, for
-// the same "don't ship a locale-param call without evidence" reason as
-// `l` above): facebook.com (`?locale=`), instagram.com (`?hl=`),
-// tiktok.com (`?lang=`), twitter.com/x.com (`?lang=`). Each host's only
-// observed extra param is a locale/language flag -- exactly the family
-// the LEMA-11733 deliverable proposes a *global* rule for, separately,
-// with per-param evidence, rather than deciding host-by-host here.
+// The following three hosts had their locale/language param dropped
+// globally instead of per-host (LEMA-11736, see the TRACKING_PARAM_NAMES
+// comment above for the evidence and blast-radius summary), so they do
+// NOT get their own HOST_PARAM_ALLOWLIST entry: facebook.com (`?locale=`),
+// instagram.com (`?hl=`), tiktok.com (`?lang=`), twitter.com/x.com
+// (`?lang=`, alias-folded to x.com by HOST_ALIASES above). Each host's
+// only observed extra param was exactly one of hl/lang/locale with no
+// other extra query param -- the case the global rule was written for.
+//
+// PROVISIONAL ENTRIES (LEMA-11736): an entry may be marked
+// `provisional: true` when it keeps a param whose identity-vs-tracking
+// status is a known, explicitly-not-yet-resolved judgment call (what
+// tv.apple.com's `l` was between LEMA-11733 and LEMA-11736) rather than a
+// closed decision. queryVariantPairs (tools/lib/audit.js) excludes a host
+// from its advisory scan specifically because "a listed host has already
+// had the judgment call made" -- a rationale that only applies to
+// non-provisional entries. isDecidedAllowlistHost() below is the single
+// place that distinction lives, so the advisory only ever loses visibility
+// into a host once its allow-list entry stops being provisional. No entry
+// currently in this table is provisional (tv.apple.com's only prior
+// provisional param, `l`, was resolved above); the mechanism exists so the
+// next deferred-param host doesn't disappear from the advisory the same
+// way tv.apple.com did.
 const HOST_PARAM_ALLOWLIST = new Map([
-  ['youtube.com', ['v', 'list']],
-  ['m.youtube.com', ['v', 'list']],
-  ['youtu.be', ['v', 'list']],
-  ['163.com', []],
-  ['macprime.ch', []],
-  ['reforma.com', []],
-  ['primevideo.com', []],
-  ['issuu.com', []],
-  ['diarioimagen.net', ['p']],
-  ['es.hollywoodreporter.com', ['p']],
-  ['webwire.com', ['aId']],
-  ['movistarplus.es', ['id']],
-  ['filmaffinity.com', ['movie-id']],
-  ['thetvdb.com', ['page']],
-  ['tv.apple.com', ['l']],
+  ['youtube.com', { keep: ['v', 'list'] }],
+  ['m.youtube.com', { keep: ['v', 'list'] }],
+  ['youtu.be', { keep: ['v', 'list'] }],
+  ['163.com', { keep: [] }],
+  ['macprime.ch', { keep: [] }],
+  ['reforma.com', { keep: [] }],
+  ['primevideo.com', { keep: [] }],
+  ['issuu.com', { keep: [] }],
+  ['diarioimagen.net', { keep: ['p'] }],
+  ['es.hollywoodreporter.com', { keep: ['p'] }],
+  ['webwire.com', { keep: ['aId'] }],
+  ['movistarplus.es', { keep: ['id'] }],
+  ['filmaffinity.com', { keep: ['movie-id'] }],
+  ['thetvdb.com', { keep: ['page'] }],
+  ['tv.apple.com', { keep: [] }],
 ]);
+
+// True only for a host with an allow-list entry that is NOT provisional --
+// i.e. the judgment call this table records has actually been made. Used
+// by tools/lib/audit.js's queryVariantPairs check to decide which hosts to
+// skip; see the PROVISIONAL ENTRIES comment above for why a provisional
+// entry must not be skipped.
+function isDecidedAllowlistHost(host) {
+  const entry = HOST_PARAM_ALLOWLIST.get(host);
+  return Boolean(entry) && entry.provisional !== true;
+}
 
 function stripTrailingSlash(pathname) {
   if (pathname.length > 1 && pathname.endsWith('/')) {
@@ -226,11 +266,11 @@ function foldFacebookPath(host, path) {
 // Sorted here so two URLs whose params differ only in order produce the
 // same key. Implementation decision, flagged as an ambiguity.
 function buildQueryString(searchParams, host) {
-  const allowList = HOST_PARAM_ALLOWLIST.get(host);
+  const allowEntry = HOST_PARAM_ALLOWLIST.get(host);
   const kept = [];
   for (const [key, value] of searchParams.entries()) {
-    if (allowList) {
-      if (allowList.includes(key)) kept.push([key, value]);
+    if (allowEntry) {
+      if (allowEntry.keep.includes(key)) kept.push([key, value]);
     } else if (!isTrackingParam(key)) {
       kept.push([key, value]);
     }
@@ -329,4 +369,4 @@ function normalizedKey(rawUrl) {
   return normalizeUrl(rawUrl).key;
 }
 
-module.exports = { normalizeUrl, normalizedKey, isTrackingParam, HOST_PARAM_ALLOWLIST };
+module.exports = { normalizeUrl, normalizedKey, isTrackingParam, HOST_PARAM_ALLOWLIST, isDecidedAllowlistHost };
