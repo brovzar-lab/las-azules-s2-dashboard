@@ -171,7 +171,7 @@
     "dateSource": "jsonld_datepublished",
     "lang": "EN",
     "market": "International",
-    "type": "Review",
+    "type": "Entertainment",
     "excerpt": "This episode centers on a desperate decision by Gerardo that threatens the friendship between Gabina and Valentina, as the series shifts focus from its corruption investigation to how pressure affects personal relationships among the Azules officers."
   },
   {
@@ -273,7 +273,7 @@
     "ts": 20260915,
     "lang": "EN",
     "market": "International",
-    "type": "Review",
+    "type": "Entertainment",
     "excerpt": "Review of Episode 6 (\"Gilberto\"): as anti-police sentiment escalates following the Executioner's latest killing, the Azules investigate within an increasingly hostile public environment where doing the right thing may not make them look like the good guys, deepening the moral complexity beyond a typical detective narrative."
   },
   {
@@ -471,7 +471,7 @@
     "ts": 20260909,
     "lang": "EN",
     "market": "International",
-    "type": "Review",
+    "type": "Entertainment",
     "excerpt": "Review of Episode 5 (\"Lozano\"): another detective's disappearance heightens personal stakes and makes the investigation feel more dangerous, as the Azules operate where simply being correct may no longer be enough to keep them safe. Rated 7.5/10."
   },
   {
@@ -680,7 +680,7 @@
     "ts": 20260901,
     "lang": "EN",
     "market": "International",
-    "type": "Review",
+    "type": "Entertainment",
     "excerpt": "Review of episode 4 (\"Arizmendi\"): detectives believe they have identified the killer of corrupt police officers, but the Azules remain skeptical of that conclusion, keeping the season-long murder investigation tense."
   },
   {
@@ -1099,7 +1099,7 @@
     "ts": 20260825,
     "lang": "EN",
     "market": "US",
-    "type": "Review",
+    "type": "Entertainment",
     "excerpt": "Reviews Episode 3 as the Azules dig into a student activist's murder while institutional pressure mounts; praises the ensemble's distinct characterizations and the show's growing confidence, awarding 7/10."
   },
   {
@@ -1738,7 +1738,7 @@
     "ts": 20260819,
     "lang": "EN",
     "market": "International",
-    "type": "Review",
+    "type": "Entertainment",
     "excerpt": "Review of Season 2 Episode 2 finds the show settling into a more confident rhythm, with the four leads now operating from experience rather than proving themselves, as the investigation takes on darker, more political dimensions tied to 1970s Mexican institutions."
   },
   {
@@ -3208,7 +3208,7 @@
     "ts": 20260812,
     "lang": "EN",
     "market": "International",
-    "type": "Review",
+    "type": "Entertainment",
     "excerpt": "Episode 1 establishes a politically charged investigation tied to Mexico's 1968 student massacre, with Maria's promotion to lieutenant introducing internal conflict about fighting corruption from within a broken system. By Anjali Sharma."
   },
   {
