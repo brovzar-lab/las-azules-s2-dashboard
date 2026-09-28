@@ -1159,7 +1159,7 @@
     </div>
 
     <div style="background:var(--white);border:1px solid var(--bd);border-top:none;padding:14px 22px;margin-bottom:48px">
-      <p style="font-size:11px;color:var(--ink3)">Despite the Aug 25 Variety / Hollywood Reporter trade-outreach push, no Variety or Hollywood Reporter Season 2 review has published as of Aug 28, 2026.</p>
+      <p style="font-size:11px;color:var(--ink3)">Despite the Aug 25 Variety / Hollywood Reporter trade-outreach push, no Variety or Hollywood Reporter Season 2 review has published as of <strong id="trade-outreach-crit-date">Aug 28, 2026</strong>.</p>
     </div>
 
     <!-- Key Quotes -->
@@ -2827,6 +2827,8 @@ document.addEventListener('keydown', function(e) {
       if (text && el) el.textContent = text;
       const capEl = document.getElementById('sec-caption-crit-date');
       if (text && capEl) capEl.textContent = text;
+      const tradeEl = document.getElementById('trade-outreach-crit-date');
+      if (text && tradeEl) tradeEl.textContent = text;
     }
     const changedWrap = document.getElementById('databar-crit-changed-wrap');
     if (meta.criticalReceptionChangedAt) {
