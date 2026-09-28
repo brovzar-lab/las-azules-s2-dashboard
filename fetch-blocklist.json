@@ -318,58 +318,6 @@
       ]
     },
     {
-      "url": "https://www.tiktok.com/@ledcardenas/video/7398259345248488710?lang=es",
-      "firstSeen": "2026-09-03T02:00:00Z",
-      "failCount": 3,
-      "lastStatus": 403,
-      "lastAttempt": "2026-09-03T16:03:21Z",
-      "cooldownUntil": "2026-10-03T16:03:21Z",
-      "history": [
-        {
-          "attempt": "2026-09-03T02:00:00Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-9636",
-          "note": "WebFetch returned 200 but body contained only TikTok header boilerplate, no post caption/content (bot wall), treated as empty-body failure."
-        },
-        {
-          "attempt": "2026-09-03T02:00:00Z",
-          "method": "Firecrawl scrape",
-          "status": null,
-          "issue": "LEMA-9636",
-          "note": "Firecrawl scrape returned success:false."
-        },
-        {
-          "attempt": "2026-09-03T06:00:25Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-9638",
-          "note": "WebFetch returned 200 but body contained only TikTok header boilerplate, no post caption/content (bot wall), treated as empty-body failure."
-        },
-        {
-          "attempt": "2026-09-03T06:00:25Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "issue": "LEMA-9638",
-          "note": "Firecrawl: 'we do not support this site'. Full-chain failure, failCount now 2."
-        },
-        {
-          "attempt": "2026-09-03T16:03:21Z",
-          "method": "WebFetch",
-          "status": null,
-          "issue": "LEMA-9649",
-          "note": "Returned only TikTok platform header/image URL, no caption, account, or date metadata -- empty-content failure."
-        },
-        {
-          "attempt": "2026-09-03T16:03:21Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "issue": "LEMA-9649",
-          "note": "Firecrawl returned a blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days."
-        }
-      ]
-    },
-    {
       "url": "https://guides.justwatch.com/gt/serie/las-azules",
       "firstSeen": "2026-09-03T02:00:00Z",
       "failCount": 3,
@@ -1501,26 +1449,6 @@
           "status": 403,
           "issue": "LEMA-9769",
           "note": "Blanket 'we do not support this site' refusal, consistent with facebook.com/instagram.com pattern."
-        }
-      ]
-    },
-    {
-      "url": "https://www.tiktok.com/@ledcardenas/video/7398259345248488710",
-      "firstSeen": "2026-09-06T20:00:00Z",
-      "failCount": 0,
-      "lastStatus": "not_attempted_relevance_gate",
-      "lastAttempt": "2026-09-06T20:00:00Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_personal_repost",
-      "reviewable": false,
-      "note": "TikTok post by individual account @ledcardenas captioned 'Opinion de las Azules' -- a personal fan-opinion repost, not media coverage. Skipped on relevance per Rule B before any fetch attempt; dateability is irrelevant once the relevance gate fails, so no fetch-fallback-chain attempt was spent on this URL.",
-      "history": [
-        {
-          "attempt": "2026-09-06T20:00:00Z",
-          "method": "Relevance gate (Rule B), no fetch attempted",
-          "status": null,
-          "issue": "LEMA-9769"
         }
       ]
     },
@@ -6378,26 +6306,6 @@
       ]
     },
     {
-      "url": "https://www.instagram.com/normantorregrosa/?hl=en",
-      "firstSeen": "2026-09-13T16:05:06Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-13T16:05:06Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Instagram profile of Norman Torregrosa, a Marvel/DC/Star Wars geek content creator and collector who posts unboxings/reviews of unrelated pop-culture merchandise. No connection to Las Azules/Women in Blue; surfaced only as a broad-query false positive on \"Las Azules\" (matches unrelated \"azules\" content).",
-      "history": [
-        {
-          "attempt": "2026-09-13T16:05:06Z",
-          "method": "WebSearch",
-          "status": 200,
-          "issue": "LEMA-10038",
-          "note": "Instagram profile of Norman Torregrosa, a Marvel/DC/Star Wars geek content creator and collector who posts unboxings/reviews of unrelated pop-culture merchandise. No connection to Las Azules/Women in Blue; surfaced only as a broad-query false positive on \"Las Azules\" (matches unrelated \"azules\" content)."
-        }
-      ]
-    },
-    {
       "url": "https://www.facebook.com/viastreamingarg/posts/ya-tiene-27-a%C3%B1os-y-vive-en-otro-pa%C3%ADsel-mayor-de-los-cuatro-hijos-de-la-modelo-y-/1695015869291336/",
       "firstSeen": "2026-09-13T16:05:06Z",
       "failCount": 0,
@@ -7641,29 +7549,6 @@
           "status": 200,
           "issue": "LEMA-10122",
           "note": "Firecrawl scrape resolved canonical URL; confirmed duplicate of existing data.json entry."
-        }
-      ]
-    },
-    {
-      "url": "https://www.instagram.com/normantorregrosa/",
-      "firstSeen": "2026-09-14T20:00:00Z",
-      "failCount": 1,
-      "lastStatus": 429,
-      "lastAttempt": "2026-09-14T20:00:00Z",
-      "cooldownUntil": null,
-      "history": [
-        {
-          "attempt": "2026-09-14T20:00:00Z",
-          "method": "WebFetch",
-          "status": 429,
-          "issue": "LEMA-10147"
-        },
-        {
-          "attempt": "2026-09-14T20:00:00Z",
-          "method": "Firecrawl scrape",
-          "status": 403,
-          "issue": "LEMA-10147",
-          "note": "Firecrawl returned 'we do not support this site' refusal for instagram.com. Full-chain failure."
         }
       ]
     },
@@ -15158,6 +15043,100 @@
           "status": null,
           "issue": "LEMA-11059",
           "note": "Same content ID and URL template as tv.apple.com/us/show/women-in-blue (already Rule F) and tv.apple.com/lu/show/las-azules (already Rule F). Classified as Rule F by surface family without a fresh fetch, per Rule F clarification (LEMA-10632)."
+        }
+      ]
+    },
+    {
+      "url": "https://tiktok.com/@ledcardenas/video/7398259345248488710",
+      "firstSeen": "2026-09-03T02:00:00Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-06T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "TikTok post by individual account @ledcardenas captioned 'Opinion de las Azules' -- a personal fan-opinion repost, not media coverage. Skipped on relevance per Rule B before any fetch attempt; dateability is irrelevant once the relevance gate fails, so no fetch-fallback-chain attempt was spent on this URL.",
+      "history": [
+        {
+          "attempt": "2026-09-03T02:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9636",
+          "note": "WebFetch returned 200 but body contained only TikTok header boilerplate, no post caption/content (bot wall), treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-03T02:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": null,
+          "issue": "LEMA-9636",
+          "note": "Firecrawl scrape returned success:false."
+        },
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-9638",
+          "note": "WebFetch returned 200 but body contained only TikTok header boilerplate, no post caption/content (bot wall), treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-03T06:00:25Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9638",
+          "note": "Firecrawl: 'we do not support this site'. Full-chain failure, failCount now 2."
+        },
+        {
+          "attempt": "2026-09-03T16:03:21Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-9649",
+          "note": "Returned only TikTok platform header/image URL, no caption, account, or date metadata -- empty-content failure."
+        },
+        {
+          "attempt": "2026-09-03T16:03:21Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-9649",
+          "note": "Firecrawl returned a blanket 'we do not support this site' refusal for tiktok.com. Full-chain failure, failCount now 3, cooldown set to 30 days."
+        },
+        {
+          "attempt": "2026-09-06T20:00:00Z",
+          "method": "Relevance gate (Rule B), no fetch attempted",
+          "status": null,
+          "issue": "LEMA-9769"
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/normantorregrosa",
+      "firstSeen": "2026-09-13T16:05:06Z",
+      "failCount": 1,
+      "lastStatus": 429,
+      "lastAttempt": "2026-09-14T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Prior note (LEMA-10038): Instagram profile of Norman Torregrosa, a Marvel/DC/Star Wars geek content creator and collector who posts unboxings/reviews of unrelated pop-culture merchandise. No connection to Las Azules/Women in Blue; surfaced only as a broad-query false positive on \"Las Azules\" (matches unrelated \"azules\" content).",
+      "history": [
+        {
+          "attempt": "2026-09-13T16:05:06Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-10038",
+          "note": "Instagram profile of Norman Torregrosa, a Marvel/DC/Star Wars geek content creator and collector who posts unboxings/reviews of unrelated pop-culture merchandise. No connection to Las Azules/Women in Blue; surfaced only as a broad-query false positive on \"Las Azules\" (matches unrelated \"azules\" content)."
+        },
+        {
+          "attempt": "2026-09-14T20:00:00Z",
+          "method": "WebFetch",
+          "status": 429,
+          "issue": "LEMA-10147"
+        },
+        {
+          "attempt": "2026-09-14T20:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-10147",
+          "note": "Firecrawl returned 'we do not support this site' refusal for instagram.com. Full-chain failure."
         }
       ]
     }
