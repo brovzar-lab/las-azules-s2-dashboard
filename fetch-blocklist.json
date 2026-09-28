@@ -15168,7 +15168,27 @@
           "note": "Headline unambiguously identifies a music tour listing for a band, not the TV show; no fetch needed to resolve."
         }
       ]
+    },
+    {
+      "url": "https://www.amazon.com/-/es/Las-Azules-Temporada-1/dp/B0DG655R4V",
+      "firstSeen": "2026-09-28T12:09:31Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-28T12:09:31Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Amazon Prime Video channel/product listing page for Las Azules Season 1 (Apple TV+ channel add-on). Surfaced by Pass 2 Google News search (LEMA-11716). Firecrawl scrape succeeded (200): page is a streaming-purchase listing with synopsis, IMDb rating badge, genre tags, cast, and episode list -- no written editorial content about the show. Strip the metadata/listing chrome and nothing authored about the show remains (Rule F, LEMA-9927). Also references Season 1, not Season 2. reviewable omitted: not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-09-28T12:09:31Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11716",
+          "note": "Retail/streaming listing page, no editorial prose. Rule F."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-28T10:05:10.540Z"
+  "lastUpdated": "2026-09-28T12:09:31Z"
 }
