@@ -155,7 +155,7 @@ survived 18 days and two cleanup waves this way -- see [LEMA-10623](/LEMA/issues
 
 Read-only, report-only: never edits `data.json` or `fetch-blocklist.json`, never makes an
 editorial call. Same division of labour as the rest of this kit -- mechanics here, judgment
-with the agent. Three checks:
+with the agent. Five checks:
 
 1. **`ledgerOverlap` (assertable).** `data.json` rows whose normalized key matches a
    `permanentSkip` ledger row, **excluding** `skipReason=editorial_redundant_syndication` (see
@@ -192,6 +192,22 @@ with the agent. Three checks:
    separately as `checks.intersection`. Needs git history: degrades cleanly (`skipped: true`,
    with a `reason`, checks 1/2 still run) when the checkout isn't a git repo, is shallow, or the
    file has no history there -- never crashes, never silently drops the check.
+5. **`queryVariantPairs` (advisory, never gates).** [LEMA-11733](/LEMA/issues/LEMA-11733): the
+   detection half of the CEO ruling on [LEMA-11732](/LEMA/issues/LEMA-11732) (a `reforma.com
+   ?v=3` cache-buster surviving normalization undetected until a human happened to re-fetch the
+   bare URL and notice). `normalize()`'s per-host param allow-list (see the `normalize` section
+   below) is forward-only and only ever covers a host once a human has looked at real URLs for
+   it -- an unlisted host still keeps every unrecognized query param by default, so the same
+   defect class can recur on the next host nobody has looked at yet, and neither `lookup` nor
+   `assert-integrity` can structurally see it (both only compare against the *current*
+   normalization rule). This check groups URLs from `data.json` **and** `fetch-blocklist.json`
+   combined (the `reforma.com` case itself was a cross-file pair) by host+path, and flags any
+   group -- on a host with **no** `HOST_PARAM_ALLOWLIST` entry -- that produces two or more
+   distinct normalized keys because of a query-string difference. Deliberately restricted to
+   unlisted hosts: a listed host has already had this exact judgment call made (its allow-list
+   entry *is* the record of that decision), so re-flagging it would just re-litigate a closed
+   decision and would be noisy on hosts like `diarioimagen.net` where two different query values
+   are legitimately two different documents by design.
 
 ```
 $ node tools/sweep-integrity.js audit
@@ -201,6 +217,11 @@ $ node tools/sweep-integrity.js audit
   - https://www.imdb.com/news/ni64735557/ -- ledger: https://m.imdb.com/news/ni64735557/?ref_=tt_nwr_1 skipReason=editorial_redundant_syndication reviewable=false
 - Surface-family match (advisory): 4 row(s) against 27 derived listing-page families
   - https://tv.apple.com/lu/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39 -- tv.apple.com/…/show/… (precedent=9)
+  ...
+- Query-variant pairs (advisory, never gates): 5 group(s)
+  - [instagram.com/normantorregrosa] 2 distinct key(s):
+      - instagram.com/normantorregrosa?hl=en: https://www.instagram.com/normantorregrosa/?hl=en (fetch-blocklist.json)
+      - instagram.com/normantorregrosa: https://www.instagram.com/normantorregrosa/ (fetch-blocklist.json)
   ...
 - Run-date proxy suspects (advisory, never gates): 73 row(s)
   ...
@@ -258,7 +279,9 @@ confirmation.
 2. **Which query parameters count as "tracking."** Not enumerated in the prose. Implemented as
    `utm_*` plus a fixed list (`fbclid`, `gclid`, `gclsrc`, `dclid`, `msclkid`, `mc_cid`,
    `mc_eid`, `igshid`, `ref`, `ref_src`, `ref_url`, `spm`, `si`, `cmpid`, `icid`) in
-   `tools/lib/normalize.js`.
+   `tools/lib/normalize.js`. This is a deny-list default (keep unless recognized as tracking);
+   see the `HOST_PARAM_ALLOWLIST` section below for the per-host allow-list mechanism that
+   overrides this default on specific, evidenced hosts.
 3. **Ordering of surviving (non-tracking) query params in the comparison key.** Not specified.
    Sorted alphabetically so param order in the source URL never affects the key.
 4. **URL fragments (`#...`).** Not mentioned by the rule at all. Dropped entirely from both the
@@ -309,3 +332,93 @@ normalized=132, duplicate groups=0." Directly counting `entries` in that file at
 commit (`git show e87a3c5:fetch-blocklist.json`) gives **135**, not 132. `data.json`'s reported
 667 is correct. Both files pass integrity either way (0 duplicate groups), so this doesn't
 change the finding that motivated this ticket, but the row count itself was off by 3.
+
+## `HOST_PARAM_ALLOWLIST`: generalized per-host query-param table (LEMA-11733)
+
+CEO ruling on [LEMA-11732](/LEMA/issues/LEMA-11732): a `reforma.com` URL's `?v=3`
+cache-buster survived normalization because the generic tracking-param deny-list's default is
+*keep*, not drop, and the reported case (a version/cache-buster param) isn't on the fixed
+tracking-param list above. Rejected fixes: adding `v` to the *global* deny-list (a landmine --
+`v` is YouTube's own identity param, safe today only by evaluation order) and inverting to a
+global default-*drop* (refuted by live data: several hosts, e.g. `diarioimagen.net`'s bare
+`/?p=<id>`, carry their *only* identity in the query string -- a blind global strip would
+silently merge distinct articles into one row).
+
+Adopted fix: generalize the YouTube-only allow-list (LEMA-9942: keep only `v`/`list` on
+`youtube.com`/`m.youtube.com`/`youtu.be`, drop everything else) into `HOST_PARAM_ALLOWLIST`, a
+`host -> [kept param names]` table in `tools/lib/normalize.js`. A host with an entry switches
+from the generic deny-list (keep-unless-known-tracking) to an allow-list (drop-unless-listed);
+a host with no entry keeps the old, safe default. Seeded from a live measurement of every
+surviving query param in `data.json`/`fetch-blocklist.json` as of 2026-09-28:
+
+| Host | Kept params | Why |
+|---|---|---|
+| `youtube.com` / `m.youtube.com` / `youtu.be` | `v`, `list` | Pre-existing (LEMA-9942) |
+| `163.com` | *(none)* | `?f=` is a static recommendation-widget referrer tag; article id is in the path |
+| `macprime.ch` | *(none)* | `?s=rss-artikel` is a static referrer tag; slug is in the path |
+| `reforma.com` | *(none)* | `?v=` is a cache-buster (the reported LEMA-11732 case); article id is in the path |
+| `primevideo.com` | *(none)* | `?tr=<territory>` is a storefront-referral tag: the same title id was seen under `?tr=mx`/`?tr=cl`/`?tr=pr` and with no `tr` at all, all four already independently classified identically -- proof it never gated distinct content |
+| `issuu.com` | *(none)* | `?fr=<hash>` is an opaque partner-referral token; the doc slug is the full path identity |
+| `diarioimagen.net` | `p` | Bare `/?p=<id>`, no other path segment -- `p` is the only identity the URL carries |
+| `es.hollywoodreporter.com` | `p` | Same WordPress `?p=<id>` shape as diarioimagen.net |
+| `webwire.com` | `aId` | `ViewPressRel.asp?aId=<id>` -- the path alone is shared by every WebWire release |
+| `movistarplus.es` | `id` | Bare `/ficha` path; `id` is the catalog identity, `tipo` (dropped) is a type-classifier flag |
+| `filmaffinity.com` | `movie-id` | Bare `/movie-awards.php` / `/pro-reviews.php` paths, no id elsewhere |
+| `thetvdb.com` | `page` | Paginated company-listing page -- unlike the referral tags above, different page numbers genuinely show different content |
+| `tv.apple.com` | `l` | `showId`/`targetId`/`targetType` are dropped: every occurrence carries the *same* fixed show-id value this whole dataset already tracks, echoed onto episode/clip pages whose own path already has a distinct id, so they never disambiguate two documents. `l` (locale, e.g. `es-MX`) is kept -- see below, deliberately unresolved |
+
+**Deliberately not added:** `facebook.com` (`?locale=`), `instagram.com` (`?hl=`),
+`tiktok.com` (`?lang=`), `twitter.com`/`x.com` (`?lang=`). Each host's only observed extra
+param is a locale/language flag -- exactly the family proposed for a *separate*, global rule
+below, not decided host-by-host here.
+
+**Locale-param proposal (not shipped, needs CEO approval before it ships globally).** The
+ledger also carries `lang`/`hl`/`locale`/`l` on the four hosts just listed (9 rows as of the
+2026-09-28 measurement) -- the query-string twin of the already-documented `/es-es/`
+locale-*path* gap (ambiguity #1 above). All four look like genuine display-language selectors
+with no bearing on document identity, which would make them safe to add to the *global*
+deny-list (`TRACKING_PARAM_NAMES`) the same way `srsltid`/`SESSIONID`/`ref_` were added on
+LEMA-9942. Per the CEO ruling, this is **not** shipped here: "do not ship it on judgment alone."
+`l` on `tv.apple.com` is the one param the ruling explicitly flagged as the least certain
+("least sure is always a locale") -- kept in the per-host table above rather than folded into
+this proposal, since an incorrect per-host call only affects one host, while an incorrect
+global call would affect every host that ever gets one of these four param names. If approved,
+this proposal would let `tv.apple.com`'s `l` and the four now-`HOST_PARAM_ALLOWLIST`-absent
+hosts above all be handled by one global rule instead of a growing set of one-off host entries.
+
+**Re-key migration performed on ship.** Verified against the live tree (2026-09-28) by diffing
+every row's `normalizeUrl(...).key` under the pre-ticket normalize.js against this ticket's
+version: **13 rows change key** (5 in `data.json`, 8 in `fetch-blocklist.json`). A changed key
+does not by itself mean a file edit is needed -- see LEMA-10553's precedent ("key-affecting is
+not necessarily file-affecting"), which held for 9 of these 13:
+
+- `data.json` (5 keys changed, 0 file edits): `163.com` `?f=`, `macprime.ch` `?s=` (x2),
+  `tv.apple.com` `pe/episode/.../umc.cmc.5g6l2...?showId=`, and the reported
+  `reforma.com/...ar2848897?v=3` row. None collides with another row *within* `data.json`
+  (`assertDatasetIntegrity`: 0 duplicate groups before and after), so no merge, no file write.
+- `fetch-blocklist.json` (8 keys changed, 4 rows -> 1 via one real merge): `movistarplus.es`
+  `?tipo=E&id=...` (param-order/drop only, no collision), `issuu.com` `?fr=`,
+  `tv.apple.com` `gt/clip/.../umc.cmc.dfqcx...` and `fi/episode/.../umc.cmc.4p8rfi4...`
+  (no collision each) -- and the one genuine collision, the `primevideo.com` `tr=mx`/`tr=cl`/
+  `tr=pr` triple, which already had a fourth, already-bare sibling row in the same file. All
+  four agreed on `permanentSkip=true`/`skipReason=editorial_listing_or_database`, so
+  `assert-integrity --target ledger --fix` cleanly auto-merged them (not an escalation) into
+  `https://primevideo.com/-/es/detail/0JFCKSNHTRBNJA50K5E6QG2HHN` (687 rows, was 690;
+  `failCount` on the merged row is `0`, the same value all four inputs already had -- not reset
+  for tidiness; full history from all four preserved on the merged row).
+
+**The reforma.com pair named in the ruling is the 13th row's cross-file counterpart, not a
+14th row.** `data.json`'s `...ar2848897?v=3` row (one of the 5 above) and
+`fetch-blocklist.json`'s already-`permanentSkip`/`editorial_redundant_syndication` bare-path
+row (added same-day on [LEMA-11731](/LEMA/issues/LEMA-11731) when the routine self-caught this
+exact defect) now normalize to the same key across both files. `assertDatasetIntegrity`/
+`assertLedgerIntegrity` each only look *within* their own file, so this cross-file coincidence
+triggers no merge in either -- it is exactly what `audit`'s `ledgerOverlapCheck` exists to
+catch, and it correctly reports it under `ledgerOverlapAdvisory` (expected Rule I overlap), not
+the assertable `ledgerOverlap` bucket: confirmed via `node tools/sweep-integrity.js audit`,
+exit 0. One live document, one correctly-classified ledger row for its second address: "one row
+at the correct key," as required.
+
+Full suite: 86 (pre-LEMA-10625 baseline noted elsewhere in this file) is long since stale;
+as of this ticket the suite is **140** (`npm test`), all green, including the two
+`real-fixtures.test.js` checks against the live, post-merge artifacts.

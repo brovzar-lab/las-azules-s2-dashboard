@@ -13,6 +13,7 @@ const {
   ledgerOverlapCheck,
   deriveListingFamilies,
   surfaceFamilyCheck,
+  queryVariantCheck,
   computeFirstSeenDates,
   runDateProxyCheck,
 } = require('../lib/audit');
@@ -189,6 +190,65 @@ test('surfaceFamilyCheck: a row on a different host entirely is never flagged ev
   const families = deriveListingFamilies(ledger);
   const dataset = [dataRow('https://example.com/show/las-azules')];
   assert.equal(surfaceFamilyCheck(dataset, families).length, 0);
+});
+
+// ---- Check: query-variant pairs on unlisted hosts (LEMA-11733) ----
+
+test('queryVariantCheck: flags a cross-file pair on an unlisted host (the reforma.com shape, pre-fix)', () => {
+  // instagram.com has no HOST_PARAM_ALLOWLIST entry, so this reproduces the
+  // reforma.com defect shape on a still-unlisted host: same path, one row
+  // in data.json with a query param, one permanentSkip row in the ledger
+  // without it.
+  const dataset = [dataRow('https://www.instagram.com/someuser/?hl=en')];
+  const ledger = [ledgerRow('https://www.instagram.com/someuser/')];
+  const findings = queryVariantCheck(dataset, ledger);
+  assert.equal(findings.length, 1);
+  assert.equal(findings[0].pathOnlyKey, 'instagram.com/someuser');
+  assert.equal(findings[0].variantCount, 2);
+  const fullKeys = findings[0].variants.map((v) => v.fullKey).sort();
+  assert.deepEqual(fullKeys, ['instagram.com/someuser', 'instagram.com/someuser?hl=en']);
+});
+
+test('queryVariantCheck: a host already in HOST_PARAM_ALLOWLIST is never flagged (decision already on record)', () => {
+  // reforma.com IS listed (LEMA-11733 ships it with an empty keep-list), so
+  // a same-path pair there must not be re-flagged even though the raw
+  // query strings differ -- normalize() already collapses them to one key,
+  // and re-flagging an already-decided host would be noise.
+  const dataset = [
+    dataRow('https://www.reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897?v=3'),
+  ];
+  const ledger = [
+    ledgerRow('https://www.reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897'),
+  ];
+  assert.equal(queryVariantCheck(dataset, ledger).length, 0);
+});
+
+test('queryVariantCheck: diarioimagen.net is never flagged even though two rows share a bare path with different ?p= values (identity param, not a bug)', () => {
+  // diarioimagen.net IS listed (keep=['p']) precisely because ?p= is the
+  // identity here -- two different articles legitimately share the bare
+  // "/" path. This must not be treated as a query-variant defect.
+  const dataset = [
+    dataRow('https://www.diarioimagen.net/?p=736623'),
+    dataRow('https://www.diarioimagen.net/?p=736624'),
+  ];
+  assert.equal(queryVariantCheck(dataset, []).length, 0);
+});
+
+test('queryVariantCheck: a single occurrence of a path (no variant) is not flagged', () => {
+  const dataset = [dataRow('https://www.instagram.com/someuser/?hl=en')];
+  assert.equal(queryVariantCheck(dataset, []).length, 0);
+});
+
+test('queryVariantCheck: same URL string appearing in both files is not double-counted as its own variant', () => {
+  const url = 'https://www.instagram.com/someuser/?hl=en';
+  const dataset = [dataRow(url)];
+  const ledger = [ledgerRow(url)];
+  assert.equal(queryVariantCheck(dataset, ledger).length, 0);
+});
+
+test('queryVariantCheck: two distinct, unlisted-host paths with no query overlap at all are not flagged', () => {
+  const dataset = [dataRow('https://example.com/article-one'), dataRow('https://example.com/article-two')];
+  assert.equal(queryVariantCheck(dataset, []).length, 0);
 });
 
 // ---- Check 3: run-date proxy suspects (pure computation) ----

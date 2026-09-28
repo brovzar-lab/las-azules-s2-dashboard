@@ -112,17 +112,15 @@ test('ref_ (IMDb nav referrer) is stripped, the news id survives, host is m.-fol
   assert.equal(key, 'imdb.com/news/ni64735557');
 });
 
-// Regression guard: these params are identity-bearing on non-YouTube hosts
-// and must survive the generic strip list untouched.
+// Regression guard: on a host with NO per-host allow-list entry, an
+// arbitrary unrecognized query param still survives the generic deny-list
+// default untouched (this is the "unlisted host never silently merges"
+// guarantee the LEMA-11733 per-host table is built to preserve).
 
-test('non-YouTube identity params survive: aId, s (macprime.ch), p, f, v (reforma.com)', () => {
+test('unlisted-host params survive untouched: aId, p, f (generic hosts)', () => {
   assert.equal(
-    normalizeUrl('https://www.webwire.com/ViewPressRel.asp?aId=358842').key,
-    'webwire.com/ViewPressRel.asp?aId=358842'
-  );
-  assert.equal(
-    normalizeUrl('https://www.macprime.ch/a/news/some-article?s=rss-artikel').key,
-    'macprime.ch/a/news/some-article?s=rss-artikel'
+    normalizeUrl('https://example.com/article?aId=1').key,
+    'example.com/article?aId=1'
   );
   assert.equal(
     normalizeUrl('https://example.com/article?p=1').key,
@@ -131,10 +129,6 @@ test('non-YouTube identity params survive: aId, s (macprime.ch), p, f, v (reform
   assert.equal(
     normalizeUrl('https://example.com/article?f=1').key,
     'example.com/article?f=1'
-  );
-  assert.equal(
-    normalizeUrl('https://www.reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897?v=3').key,
-    'reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897?v=3'
   );
 });
 
@@ -257,4 +251,136 @@ test('facebook.com bare /<page>/videos/<id> (no slug) is unchanged by the fold',
 test('a non-facebook host with a similar /page/videos/slug/id path shape is left alone', () => {
   const { key } = normalizeUrl('https://example.com/SomePage/videos/some-slug-here/1122334455');
   assert.equal(key, 'example.com/SomePage/videos/some-slug-here/1122334455');
+});
+
+// LEMA-11733: generalized per-host query-param allow-list, CEO ruling on
+// LEMA-11732 (reforma.com's ?v=3 cache-buster surviving normalization
+// because the generic deny-list's default is keep, not drop). Same
+// mechanism as the YouTube allow-list above, applied to hosts measured
+// against the live data.json/fetch-blocklist.json as of 2026-09-28. See
+// tools/lib/normalize.js's HOST_PARAM_ALLOWLIST comment for the full
+// per-host evidence writeup.
+
+test('the reported bug: reforma.com ?v=3 cache-buster no longer survives (LEMA-11732)', () => {
+  const withParam = normalizeUrl(
+    'https://www.reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897?v=3'
+  );
+  const bare = normalizeUrl(
+    'https://www.reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897'
+  );
+  assert.equal(withParam.key, bare.key);
+  assert.equal(withParam.key, 'reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897');
+});
+
+test('163.com recommendation-widget referrer ?f= is dropped, article id stays in the path', () => {
+  const { key } = normalizeUrl('https://www.163.com/dy/article/L6950I8E05561FX4.html?f=post2020_dy_recommends');
+  assert.equal(key, '163.com/dy/article/L6950I8E05561FX4.html');
+});
+
+test('macprime.ch referrer ?s=rss-artikel is dropped, distinct articles stay distinct by path', () => {
+  const a = normalizeUrl('https://www.macprime.ch/a/news/article-one?s=rss-artikel');
+  const b = normalizeUrl('https://www.macprime.ch/a/news/article-two?s=rss-artikel');
+  assert.notEqual(a.key, b.key);
+  assert.equal(a.key, 'macprime.ch/a/news/article-one');
+});
+
+test('primevideo.com storefront-referral ?tr= is dropped; same title id under different tr values collapses', () => {
+  const mx = normalizeUrl('https://www.primevideo.com/-/es/detail/0JFCKSNHTRBNJA50K5E6QG2HHN?tr=mx');
+  const cl = normalizeUrl('https://www.primevideo.com/-/es/detail/0JFCKSNHTRBNJA50K5E6QG2HHN?tr=cl');
+  const bare = normalizeUrl('https://www.primevideo.com/-/es/detail/0JFCKSNHTRBNJA50K5E6QG2HHN');
+  assert.equal(mx.key, cl.key);
+  assert.equal(mx.key, bare.key);
+  assert.equal(mx.key, 'primevideo.com/-/es/detail/0JFCKSNHTRBNJA50K5E6QG2HHN');
+});
+
+test('primevideo.com locale PATH (not query) stays distinct: /it/ is a different page than /es/', () => {
+  const es = normalizeUrl('https://www.primevideo.com/-/es/detail/0JFCKSNHTRBNJA50K5E6QG2HHN');
+  const it = normalizeUrl('https://www.primevideo.com/-/it/detail/0JFCKSNHTRBNJA50K5E6QG2HHN');
+  assert.notEqual(es.key, it.key);
+});
+
+test('issuu.com partner-referral ?fr= is dropped, doc slug is the full identity', () => {
+  const { key } = normalizeUrl(
+    'https://issuu.com/deadlinehollywood/docs/deadline_hollywood_-_contenders_television_-_docum?fr=sYzhhYTgzOTIxODk'
+  );
+  assert.equal(key, 'issuu.com/deadlinehollywood/docs/deadline_hollywood_-_contenders_television_-_docum');
+});
+
+// Regression guard (explicit deliverable requirement): a bare-path
+// identity param (WordPress-style ?p=<id>, no other path segment) must
+// NEVER be stripped, even though the pattern superficially looks like a
+// single throwaway query param the way the cache-buster hosts above do.
+
+test('diarioimagen.net WordPress ?p= identity param is NOT stripped (bare-path regression guard)', () => {
+  const { key } = normalizeUrl('https://www.diarioimagen.net/?p=736623');
+  assert.equal(key, 'diarioimagen.net/?p=736623');
+});
+
+test('es.hollywoodreporter.com WordPress ?p= identity param is NOT stripped (bare-path regression guard)', () => {
+  const { key } = normalizeUrl('https://es.hollywoodreporter.com/?p=9808');
+  assert.equal(key, 'es.hollywoodreporter.com/?p=9808');
+});
+
+test('webwire.com ?aId= identity param is NOT stripped, still survives after this ticket', () => {
+  const { key } = normalizeUrl('https://www.webwire.com/ViewPressRel.asp?aId=358842');
+  assert.equal(key, 'webwire.com/ViewPressRel.asp?aId=358842');
+});
+
+test('movistarplus.es: ?id= identity param survives, ?tipo= type-classifier flag is dropped', () => {
+  const { key } = normalizeUrl('https://www.movistarplus.es/series/las-azules/ficha?tipo=E&id=3958475');
+  assert.equal(key, 'movistarplus.es/series/las-azules/ficha?id=3958475');
+});
+
+test('filmaffinity.com ?movie-id= identity param is NOT stripped (bare-path regression guard)', () => {
+  const { key } = normalizeUrl('https://www.filmaffinity.com/es/movie-awards.php?movie-id=786793');
+  assert.equal(key, 'filmaffinity.com/es/movie-awards.php?movie-id=786793');
+});
+
+test('thetvdb.com ?page= is identity-bearing on a paginated listing, NOT stripped', () => {
+  const p6 = normalizeUrl('https://thetvdb.com/companies/apple-tv-plus?page=6');
+  const p7 = normalizeUrl('https://thetvdb.com/companies/apple-tv-plus?page=7');
+  assert.notEqual(p6.key, p7.key);
+  assert.equal(p6.key, 'thetvdb.com/companies/apple-tv-plus?page=6');
+});
+
+test('tv.apple.com: showId/targetId/targetType (constant show-id echoes) are dropped, path id stays the identity', () => {
+  const episode = normalizeUrl(
+    'https://tv.apple.com/pe/episode/alma/umc.cmc.5g6l2hlovopmmxtypma7v3j3u?showId=umc.cmc.73wmdmkfpta5ul1vbwckmme39'
+  );
+  assert.equal(episode.key, 'tv.apple.com/pe/episode/alma/umc.cmc.5g6l2hlovopmmxtypma7v3j3u');
+
+  const clip = normalizeUrl(
+    'https://tv.apple.com/gt/clip/las-mujeres-season-1/umc.cmc.dfqcxumy8pgbu8c3016pkf68?l=en&targetId=umc.cmc.73wmdmkfpta5ul1vbwckmme39&targetType=Show'
+  );
+  assert.equal(clip.key, 'tv.apple.com/gt/clip/las-mujeres-season-1/umc.cmc.dfqcxumy8pgbu8c3016pkf68?l=en');
+});
+
+test('tv.apple.com: ?l= locale flag is deliberately preserved, not resolved by this ticket', () => {
+  const es = normalizeUrl('https://tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39?l=es');
+  const en = normalizeUrl('https://tv.apple.com/us/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39?l=en');
+  assert.notEqual(es.key, en.key);
+});
+
+// Deliberately NOT touched by this ticket: hosts whose only observed extra
+// param is a locale/language flag stay on the generic deny-list default
+// (param survives) pending the separate, evidence-backed global
+// locale-param proposal in the LEMA-11733 deliverable.
+
+test('facebook.com ?locale=, instagram.com ?hl=, tiktok.com ?lang=, x.com ?lang= are unchanged by this ticket', () => {
+  assert.equal(
+    normalizeUrl('https://www.facebook.com/SomePage/posts/a-slug/1234?locale=bg_BG').key,
+    'facebook.com/SomePage/posts/1234?locale=bg_BG'
+  );
+  assert.equal(
+    normalizeUrl('https://www.instagram.com/someuser/?hl=en').key,
+    'instagram.com/someuser?hl=en'
+  );
+  assert.equal(
+    normalizeUrl('https://www.tiktok.com/@someuser/video/123?lang=es').key,
+    'tiktok.com/@someuser/video/123?lang=es'
+  );
+  assert.equal(
+    normalizeUrl('https://x.com/someuser?lang=en').key,
+    'x.com/someuser?lang=en'
+  );
 });

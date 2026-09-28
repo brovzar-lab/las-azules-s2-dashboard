@@ -10,7 +10,7 @@
 // LEMA-9933: mechanics in the tool, judgment with the agent.
 
 const { execFileSync } = require('child_process');
-const { normalizeUrl } = require('./normalize');
+const { normalizeUrl, HOST_PARAM_ALLOWLIST } = require('./normalize');
 
 // ---- shared path/host helpers ----
 
@@ -239,6 +239,85 @@ function runDateProxyCheck(dataset, firstSeenDates) {
   return findings;
 }
 
+// ---- Check: same-path-different-query pairs on unlisted hosts (advisory) ----
+//
+// LEMA-11733: the detection half of the CEO ruling on LEMA-11732 (a
+// reforma.com ?v=3 cache-buster surviving normalization undetected until a
+// human happened to re-fetch the bare URL and notice). normalize()'s
+// per-host param allow-list (LEMA-9942, generalized on LEMA-11733) is
+// forward-only and, by design, only ever covers a host once someone has
+// looked at real URLs for it and made an explicit keep/drop call -- a host
+// with no entry keeps every unrecognized query param by default (the
+// deliberately safe, never-silently-merge default from that same ruling).
+// That means the exact defect class just fixed can still recur on the next
+// host nobody has looked at yet, and neither `lookup` nor `assert-integrity`
+// can structurally see it (they only compare rows against the *current*
+// normalization rule, which by definition treats two different-query
+// full keys as two different documents). This check closes that hole the
+// same way `surfaceFamilyMatch` closes the retroactivity hole for Rule F:
+// report-only, never edits data, never makes an editorial call.
+//
+// A "pair" here is two or more URLs (drawn from data.json and
+// fetch-blocklist.json combined, since the reforma.com case itself was a
+// cross-file pair -- one row in each) that share the same normalized
+// host+path but produce two or more distinct full normalized keys, i.e.
+// their query strings survive normalization differently. Restricted to
+// hosts with NO entry in HOST_PARAM_ALLOWLIST: a listed host has already
+// had this exact judgment call made (its allow-list entry IS the record
+// of that decision), so re-flagging it here would just re-litigate a
+// closed decision and would be noisy on exactly the hosts (e.g.
+// diarioimagen.net) where two different query values are legitimately two
+// different documents by design.
+function queryVariantCheck(dataset, ledgerEntries) {
+  const groups = new Map(); // pathOnlyKey -> Map(fullKey -> {urls, sources})
+  const seenUrls = new Set();
+
+  function ingest(rawUrl, source) {
+    if (seenUrls.has(`${source}|${rawUrl}`)) return;
+    seenUrls.add(`${source}|${rawUrl}`);
+
+    let fullKey;
+    try {
+      ({ key: fullKey } = normalizeUrl(rawUrl));
+    } catch {
+      return;
+    }
+    const slashIndex = fullKey.indexOf('/');
+    const host = slashIndex === -1 ? fullKey.split('?')[0] : fullKey.slice(0, slashIndex);
+    if (HOST_PARAM_ALLOWLIST.has(host)) return;
+
+    const qIndex = fullKey.indexOf('?');
+    const pathOnlyKey = qIndex === -1 ? fullKey : fullKey.slice(0, qIndex);
+
+    let byFullKey = groups.get(pathOnlyKey);
+    if (!byFullKey) {
+      byFullKey = new Map();
+      groups.set(pathOnlyKey, byFullKey);
+    }
+    let entry = byFullKey.get(fullKey);
+    if (!entry) {
+      entry = { fullKey, urls: [] };
+      byFullKey.set(fullKey, entry);
+    }
+    entry.urls.push({ url: rawUrl, source });
+  }
+
+  for (const row of dataset) ingest(row.url, 'data.json');
+  for (const row of ledgerEntries) ingest(row.url, 'fetch-blocklist.json');
+
+  const findings = [];
+  for (const [pathOnlyKey, byFullKey] of groups) {
+    if (byFullKey.size < 2) continue;
+    const variants = [...byFullKey.values()].map((v) => ({
+      fullKey: v.fullKey,
+      urls: v.urls,
+    }));
+    findings.push({ pathOnlyKey, variantCount: variants.length, variants });
+  }
+  findings.sort((a, b) => a.pathOnlyKey.localeCompare(b.pathOnlyKey));
+  return findings;
+}
+
 function git(repoDir, args) {
   return execFileSync('git', ['-C', repoDir, ...args], { encoding: 'utf8', maxBuffer: 1024 * 1024 * 128 }).trim();
 }
@@ -302,6 +381,7 @@ module.exports = {
   ledgerOverlapCheck,
   deriveListingFamilies,
   surfaceFamilyCheck,
+  queryVariantCheck,
   computeFirstSeenDates,
   runDateProxyCheck,
   getFirstSeenDates,

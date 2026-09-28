@@ -148,6 +148,75 @@ test('audit --json: reports ledgerOverlap, surfaceFamilyMatch, runDateProxySuspe
   fs.rmSync(tmp, { recursive: true, force: true });
 });
 
+// ---- LEMA-11733: query-variant pairs on unlisted hosts ----
+
+test('audit --json: reports queryVariantPairs for a same-path/different-query pair on an unlisted host, and does not gate the exit code', () => {
+  const tmp = mkRepo();
+  const ledgerPath = writeLedger(tmp, [
+    { url: 'https://www.instagram.com/someuser/', permanentSkip: false, failCount: 0, history: [] },
+  ]);
+  const dataPath = writeData(tmp, [
+    {
+      outlet: 'Instagram',
+      headline: 'Some post',
+      url: 'https://www.instagram.com/someuser/?hl=en',
+      date: 'Sep 2, 2026',
+      ts: 20260902,
+      lang: 'EN',
+      market: 'US',
+      type: 'Social',
+      excerpt: 'x',
+    },
+  ]);
+  commit(tmp, 'add instagram pair', '2026-09-02T00:00:00Z');
+
+  const result = runCli(['audit', '--data', dataPath, '--fetch-blocklist', ledgerPath, '--json']);
+  assert.equal(result.status, 0, 'queryVariantPairs is advisory and must never gate the exit code');
+  const parsed = JSON.parse(result.stdout);
+  assert.equal(parsed.checks.queryVariantPairs.count, 1);
+  const finding = parsed.checks.queryVariantPairs.findings[0];
+  assert.equal(finding.pathOnlyKey, 'instagram.com/someuser');
+  assert.equal(finding.variantCount, 2);
+
+  fs.rmSync(tmp, { recursive: true, force: true });
+});
+
+test('audit --json: queryVariantPairs stays empty for a host already in HOST_PARAM_ALLOWLIST (reforma.com)', () => {
+  const tmp = mkRepo();
+  const ledgerPath = writeLedger(tmp, [
+    {
+      url: 'https://www.reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897',
+      permanentSkip: true,
+      skipReason: 'editorial_redundant_syndication',
+      reviewable: false,
+      failCount: 0,
+      history: [],
+    },
+  ]);
+  const dataPath = writeData(tmp, [
+    {
+      outlet: 'Reforma',
+      headline: 'x',
+      url: 'https://www.reforma.com/muestran-las-azules-a-las-mujeres-policias-en-mexico/ar2848897?v=3',
+      date: 'Jul 31, 2024',
+      ts: 20240731,
+      lang: 'ES',
+      market: 'Mexico',
+      type: 'Regional',
+      excerpt: 'x',
+    },
+  ]);
+  commit(tmp, 'add reforma pair', '2026-09-02T00:00:00Z');
+
+  const result = runCli(['audit', '--data', dataPath, '--fetch-blocklist', ledgerPath, '--json']);
+  assert.equal(result.status, 0);
+  const parsed = JSON.parse(result.stdout);
+  assert.equal(parsed.checks.queryVariantPairs.count, 0, 'reforma.com already has an explicit allow-list entry');
+  assert.equal(parsed.checks.ledgerOverlapAdvisory.count, 1, 'still correctly reported as a Rule I overlap, just via the other check');
+
+  fs.rmSync(tmp, { recursive: true, force: true });
+});
+
 test('audit: exits 0 when ledgerOverlap is empty, even with advisory findings present', () => {
   const tmp = mkRepo();
   const ledgerPath = writeLedger(tmp, [

@@ -28,6 +28,7 @@ const {
   ledgerOverlapCheck,
   deriveListingFamilies,
   surfaceFamilyCheck,
+  queryVariantCheck,
   runDateProxyCheck,
   getFirstSeenDates,
 } = require('./lib/audit');
@@ -468,6 +469,8 @@ function cmdAudit(flags) {
   const families = deriveListingFamilies(ledgerEntries);
   const surfaceFamilyMatch = surfaceFamilyCheck(datasetEntries, families);
 
+  const queryVariantPairs = queryVariantCheck(datasetEntries, ledgerEntries);
+
   const relDataPath = path.relative(repoDir, dataPath) || path.basename(dataPath);
   const gitResult = getFirstSeenDates(repoDir, relDataPath);
   const runDateProxySuspects = gitResult.skipped ? [] : runDateProxyCheck(datasetEntries, gitResult.firstSeenDates);
@@ -503,6 +506,12 @@ function cmdAudit(flags) {
         count: surfaceFamilyMatch.length,
         findings: surfaceFamilyMatch,
       },
+      queryVariantPairs: {
+        description:
+          "Advisory, never gates (LEMA-11733): host+path groups (drawn from data.json and fetch-blocklist.json combined) that share the same normalized path but produce two or more distinct normalized keys because their query strings differ, on a host with no HOST_PARAM_ALLOWLIST entry yet in tools/lib/normalize.js. This is the detector half of the LEMA-11732 fix -- normalize()'s per-host table only ever covers a host once a human has looked at it, so a future host nobody has looked at yet can still produce the same 'false not-found on a query-string variant' defect the reforma.com ?v=3 case did. A finding here means: look at the URLs and either add an explicit per-host allow-list entry (keep the identity param, or drop the tracking param) or confirm the variants are genuinely distinct documents.",
+        count: queryVariantPairs.length,
+        findings: queryVariantPairs,
+      },
       runDateProxySuspects: {
         description:
           'Advisory only, never gates a run: rows whose ts equals the UTC date of the git commit that introduced them (the Rule A firstSeen-substitution proxy). Noisy on its own -- a daily sweep naturally picks up same-day news.',
@@ -537,6 +546,14 @@ function cmdAudit(flags) {
     for (const f of surfaceFamilyMatch) {
       const fam = f.matchedFamilies.map((m) => `${m.host}/…/${m.keyword}/… (precedent=${m.precedentCount})`).join('; ');
       console.log(`  - ${f.url} -- ${fam}`);
+    }
+    console.log(`- Query-variant pairs (advisory, never gates): ${queryVariantPairs.length} group(s)`);
+    for (const g of queryVariantPairs) {
+      console.log(`  - [${g.pathOnlyKey}] ${g.variantCount} distinct key(s):`);
+      for (const v of g.variants) {
+        const urls = v.urls.map((u) => `${u.url} (${u.source})`).join(', ');
+        console.log(`      - ${v.fullKey}: ${urls}`);
+      }
     }
     if (gitResult.skipped) {
       console.log(`- Run-date proxy suspects (advisory): skipped -- ${gitResult.reason}`);

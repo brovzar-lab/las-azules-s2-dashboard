@@ -22,15 +22,113 @@ function isTrackingParam(name) {
   return TRACKING_PARAM_PREFIX.test(lower) || TRACKING_PARAM_NAMES.has(lower);
 }
 
-// Per-host whitelist for the YouTube family (youtube.com, m.youtube.com,
-// youtu.be -- checked after the existing www. strip). Approved on
-// LEMA-9904 Item 5, shipped on LEMA-9942: `v` (video id) and `list`
-// (playlist id) are the only identity-bearing params on these hosts, so
-// everything else (locale flags like `vl`, session/share params, etc.) is
-// dropped instead of running through the generic tracking-param strip.
-// Video/playlist IDs are case-sensitive and must never be lowercased.
+// YouTube family hosts (youtube.com, m.youtube.com, youtu.be). Kept as its
+// own constant because stripLeadingMobile() below needs it independently of
+// the param policy: m.youtube.com must keep its own distinct host identity
+// rather than fold into youtube.com (LEMA-9942), which is a host-identity
+// decision, not a query-param decision.
 const YOUTUBE_FAMILY_HOSTS = new Set(['youtube.com', 'm.youtube.com', 'youtu.be']);
-const YOUTUBE_KEPT_PARAMS = new Set(['v', 'list']);
+
+// Per-host query-param ALLOW-list, checked after the existing
+// www./m. strip and host-alias fold (so entries are written in
+// already-canonicalized host form). A host in this table gets an
+// allow-list policy: keep only the named params, drop everything else,
+// including any param not yet seen for that host. A host NOT in this
+// table keeps the generic deny-list default below (keep-unless-known-
+// tracking-param), so an unlisted host can never silently merge two
+// distinct documents -- only hosts with an explicit, evidenced entry here
+// switch away from that safe default. See LEMA-11733 for the full
+// per-host justification writeup and the live-data measurement each entry
+// below is seeded from.
+//
+// YouTube family (LEMA-9942, approved LEMA-9904 Item 5): `v` (video id)
+// and `list` (playlist id) are the only identity-bearing params on these
+// hosts; everything else (locale flags like `vl`, session/share params,
+// etc.) is dropped. Video/playlist IDs are case-sensitive -- this table
+// only ever gates *which* params survive, never lowercases a value (see
+// buildQueryString below), so that guarantee holds for every host here.
+//
+// The following seven entries were added under LEMA-11733, generalizing
+// this mechanism per the CEO ruling on LEMA-11732 (a bare `?v=3` cache-
+// buster on reforma.com surviving normalization because the generic
+// deny-list's default is keep, not drop). Each was verified against the
+// live URLs in data.json/fetch-blocklist.json as of 2026-09-28, not
+// assumed from the param name alone:
+//
+// - 163.com: [] -- `?f=post2020_dy_recommends` is a static recommendation-
+//   widget referrer tag (single observed value); the article id is
+//   already the path's last segment.
+// - macprime.ch: [] -- `?s=rss-artikel` is a static referrer tag
+//   (identical value on both observed rows, which have distinct path
+//   slugs); the slug already carries the article's identity.
+// - reforma.com: [] -- `?v=3` is a cache-buster/version param (the
+//   reported case on LEMA-11732); the article id (`ar2848897`-style) is
+//   already the path's last segment.
+// - primevideo.com: [] -- `?tr=<territory>` is a storefront-referral tag,
+//   not a content selector: the live ledger has the *same* title id
+//   (`0JFCKSNHTRBNJA50K5E6QG2HHN`) under `?tr=mx`, `?tr=cl`, `?tr=pr`, and
+//   with no `tr` at all, all four already independently classified
+//   `editorial_listing_or_database` -- proof the param never gated
+//   distinct content. (`/it/detail/...`, a different locale *path*, is
+//   unaffected -- this entry only touches the query string.)
+// - issuu.com: [] -- `?fr=<hash>` is an opaque partner-referral token; the
+//   document slug is already the full path.
+// - diarioimagen.net: ['p'] -- WordPress `?p=<id>` is the *only* identity
+//   the URL carries (bare `/?p=736623`, no other path segment), so unlike
+//   the entries above this is a param that must survive.
+// - es.hollywoodreporter.com: ['p'] -- same WordPress `?p=<id>` shape and
+//   same reasoning as diarioimagen.net above.
+// - webwire.com: ['aId'] -- `ViewPressRel.asp?aId=<id>` carries the only
+//   identity in the query string; the path alone is shared by every
+//   WebWire release.
+// - movistarplus.es: ['id'] -- `?tipo=E&id=<id>` on a bare `/ficha` path;
+//   `id` is the catalog identity (kept), `tipo` is a type-classifier flag
+//   that duplicates no distinguishing information Movistar's own catalog
+//   ids don't already carry (dropped).
+// - filmaffinity.com: ['movie-id'] -- `?movie-id=<id>` on bare
+//   `/movie-awards.php` / `/pro-reviews.php` paths with no id elsewhere in
+//   the URL.
+// - thetvdb.com: ['page'] -- `?page=<n>` on a paginated company-listing
+//   page (`/companies/apple-tv-plus`); unlike the referral tags above,
+//   different page numbers genuinely show different content, so this is
+//   an identity param, not a tracking one.
+// - tv.apple.com: ['l'] -- deliberately does NOT include `showId`,
+//   `targetId`, or `targetType`, which are dropped: every occurrence in
+//   the live data carries the *same* fixed value (this dataset's own
+//   show id, `umc.cmc.73wmdmkfpta5ul1vbwckmme39`, echoed back on episode/
+//   clip pages whose own path already has a distinct id), so they never
+//   disambiguate two different documents. `l` (a locale/language code,
+//   e.g. `es-MX`, `en`, `es`) IS kept -- explicitly NOT resolved here.
+//   The CEO ruling flagged `l` as the one param it is least sure is
+//   "just a locale" pending a separate, evidence-backed global
+//   locale-param proposal (LEMA-11733 deliverable); until that proposal
+//   is reviewed, the conservative default is to preserve it rather than
+//   risk silently merging two rows that may turn out to be distinct.
+//
+// Deliberately NOT added here (left on the generic deny-list default, for
+// the same "don't ship a locale-param call without evidence" reason as
+// `l` above): facebook.com (`?locale=`), instagram.com (`?hl=`),
+// tiktok.com (`?lang=`), twitter.com/x.com (`?lang=`). Each host's only
+// observed extra param is a locale/language flag -- exactly the family
+// the LEMA-11733 deliverable proposes a *global* rule for, separately,
+// with per-param evidence, rather than deciding host-by-host here.
+const HOST_PARAM_ALLOWLIST = new Map([
+  ['youtube.com', ['v', 'list']],
+  ['m.youtube.com', ['v', 'list']],
+  ['youtu.be', ['v', 'list']],
+  ['163.com', []],
+  ['macprime.ch', []],
+  ['reforma.com', []],
+  ['primevideo.com', []],
+  ['issuu.com', []],
+  ['diarioimagen.net', ['p']],
+  ['es.hollywoodreporter.com', ['p']],
+  ['webwire.com', ['aId']],
+  ['movistarplus.es', ['id']],
+  ['filmaffinity.com', ['movie-id']],
+  ['thetvdb.com', ['page']],
+  ['tv.apple.com', ['l']],
+]);
 
 function stripTrailingSlash(pathname) {
   if (pathname.length > 1 && pathname.endsWith('/')) {
@@ -128,11 +226,11 @@ function foldFacebookPath(host, path) {
 // Sorted here so two URLs whose params differ only in order produce the
 // same key. Implementation decision, flagged as an ambiguity.
 function buildQueryString(searchParams, host) {
-  const isYoutubeFamily = YOUTUBE_FAMILY_HOSTS.has(host);
+  const allowList = HOST_PARAM_ALLOWLIST.get(host);
   const kept = [];
   for (const [key, value] of searchParams.entries()) {
-    if (isYoutubeFamily) {
-      if (YOUTUBE_KEPT_PARAMS.has(key)) kept.push([key, value]);
+    if (allowList) {
+      if (allowList.includes(key)) kept.push([key, value]);
     } else if (!isTrackingParam(key)) {
       kept.push([key, value]);
     }
@@ -231,4 +329,4 @@ function normalizedKey(rawUrl) {
   return normalizeUrl(rawUrl).key;
 }
 
-module.exports = { normalizeUrl, normalizedKey, isTrackingParam };
+module.exports = { normalizeUrl, normalizedKey, isTrackingParam, HOST_PARAM_ALLOWLIST };
