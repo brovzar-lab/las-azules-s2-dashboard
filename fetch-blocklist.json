@@ -15219,7 +15219,35 @@
           "note": "WebFetch tool error (unable to fetch la100.cienradios.com). Classification made from the Exa search result title alone, which unambiguously identifies unrelated Argentine celebrity/talk-radio content; no ambiguity to resolve via full body fetch."
         }
       ]
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.sfloat.afloat&hl=en_US",
+      "firstSeen": "2026-09-29T02:06:17Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-29T02:06:17Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Surfaced via Pass 2 Google News query for \"Las Azules\" (keyword collision only). Page is the Google Play Store listing for the mobile game/app \"Macro de las Bolitas Azules\" (developer: Yeudi Developer, 5M+ downloads), a color-matching puzzle game with no relation to the TV series. WebFetch returned truncated/empty content; Firecrawl scrape succeeded and confirmed the app name/description. Off-topic false positive, ledgered per Rule G so future runs stop re-fetching it.",
+      "history": [
+        {
+          "attempt": "2026-09-29T02:06:17Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-11742",
+          "note": "Returned truncated/empty content, no page text recoverable."
+        },
+        {
+          "attempt": "2026-09-29T02:06:17Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11742",
+          "note": "Confirmed page is the Google Play Store listing for the mobile game 'Macro de las Bolitas Azules', unrelated to the TV show. Classified Rule G off-topic false positive."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-29T00:04:00Z"
+  "lastUpdated": "2026-09-29T02:06:17Z"
 }
