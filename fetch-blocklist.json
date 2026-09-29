@@ -15420,7 +15420,80 @@
           "note": "Confirmed off-topic: unrelated personal/academic account, not the show."
         }
       ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/2025_Premios_Aura",
+      "firstSeen": "2026-09-29T20:01:33Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-29T20:01:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Pass 2 standard web sweep on LEMA-11756. Wikipedia's results article for the 2025 Premios Aura ceremony: a category-by-category winners/nominees table across many unrelated shows, not prose about Las Azules specifically. Strip test (Rule F): Las Azules appears only as a row value (Winner, Best Cast; nominee, Best Acting Debut and Best Directing) inside the awards-results table, with no written editorial content about the show itself once that table is removed. Mining note (Rule H extension, LEMA-10458 precedent -- applying the same 'mine whichever surface renders the finding' logic even though this is a Rule F not Rule H row): the Best Cast win is real and was mined to its primary press source this same run -- see El Imparcial (elimparcial.com, Apr 7 2025, jsonld_datepublished) added to data.json in this commit, which reports the same win with full editorial context.",
+      "history": [
+        {
+          "attempt": "2026-09-29T20:01:33Z",
+          "method": "WebFetch",
+          "status": "not_attempted_relevance_gate",
+          "issue": "LEMA-11756",
+          "note": "Awards-ceremony results listing; Las Azules is one row in a winners/nominees table, no dedicated prose. Primary source for the Best Cast win mined separately (El Imparcial)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/jp/%E3%83%86%E3%83%AC%E3%83%93%E7%95%AA%E7%B5%84/las-azules",
+      "firstSeen": "2026-09-29T20:01:33Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-29T20:01:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Discovered via Pass 2 standard web sweep on LEMA-11756. JustWatch Japan streaming-availability listing page for the show, same pattern as the already-ledgered justwatch.com/it and /at entries (Rule F, LEMA-10217): a streaming catalog/database page with no written editorial content about the show. Ledgered directly under Rule F without a separate fetch, matching the sibling rows' final classification.",
+      "history": [
+        {
+          "attempt": "2026-09-29T20:01:33Z",
+          "method": "WebFetch",
+          "status": "not_attempted_relevance_gate",
+          "issue": "LEMA-11756",
+          "note": "Streaming-availability/database listing page, matches justwatch.com/it and /at sibling rows already classified editorial_listing_or_database."
+        }
+      ]
+    },
+    {
+      "url": "https://deadline.com/lists/emmy-nominations-full-list-nominees-scorecard/",
+      "firstSeen": "2026-09-29T20:01:33Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-29T20:01:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 2 standard web sweep (broad Emmy-related query) on LEMA-11756. Page is Deadline's full 2026 Emmy nominations scorecard across all categories. WebFetch confirmed the text 'Las Azules' and 'Women in Blue' are both completely absent from the page body. Off-topic false positive per Rule G: Las Azules did not figure in the 2026 Primetime Emmy nominee slate this list covers."
+    },
+    {
+      "url": "https://editorial.rottentomatoes.com/article/2026-emmy-nominations/",
+      "firstSeen": "2026-09-29T20:01:33Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-29T20:01:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 2 standard web sweep (broad Emmy-related query) on LEMA-11756. Rotten Tomatoes editorial roundup of the full 2026 Emmy nominations list. WebFetch confirmed 'Las Azules' and 'Women in Blue' are both completely absent from the page body. Off-topic false positive per Rule G, same basis as the Deadline Emmy scorecard row ledgered in this same commit."
+    },
+    {
+      "url": "https://www.hollywoodreporter.com/tv/tv-news/apple-tv-most-emmy-wins-2026-1236700994/",
+      "firstSeen": "2026-09-29T20:01:33Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-09-29T20:01:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 2 standard web sweep (broad Emmy-related query) on LEMA-11756. WebFetch hit a hard paywall (HTTP 402 via the tollbit.hollywoodreporter.com redirect); Firecrawl scrape succeeded (200, full body, ~15.7k chars) and confirmed 'azules' and 'women in blue' are both completely absent from the body text. Article (by Rick Porter, published Sep 14, 2026) is about Apple TV's 2026 Emmy wins for 'Widow's Bay' and 'Pluribus'. Off-topic false positive per Rule G."
     }
   ],
-  "lastUpdated": "2026-09-29T18:04:53Z"
+  "lastUpdated": "2026-09-29T20:01:33Z"
 }
