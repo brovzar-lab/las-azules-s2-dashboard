@@ -12538,9 +12538,9 @@
     {
       "url": "https://www.youtube.com/watch?v=-pKDdbOHutU",
       "firstSeen": "2026-09-23T22:00:00Z",
-      "failCount": 1,
-      "lastStatus": 401,
-      "lastAttempt": "2026-09-23T22:00:00Z",
+      "failCount": 2,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-29T18:04:53Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
@@ -12558,6 +12558,20 @@
           "status": 401,
           "issue": "LEMA-10880",
           "note": "Firecrawl returned a 200 wrapper but the scraped body is YouTube's own 'Error 401 (Bad Request)' page, not the video page. Full-chain failure, failCount now 1."
+        },
+        {
+          "attempt": "2026-09-29T18:04:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11755",
+          "note": "Returned only YouTube footer/navigation boilerplate again, no video content (bot wall), treated as empty-body failure."
+        },
+        {
+          "attempt": "2026-09-29T18:04:53Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11755",
+          "note": "Firecrawl returned a 200 wrapper; scraped body is YouTube's own \"This video isn't available anymore\" / \"Video unavailable\" page, not the video page. Full-chain failure, failCount now 2."
         }
       ]
     },
@@ -15408,5 +15422,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-29T16:05:33Z"
+  "lastUpdated": "2026-09-29T18:04:53Z"
 }
