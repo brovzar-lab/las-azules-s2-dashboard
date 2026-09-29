@@ -15267,7 +15267,54 @@
           "note": "Classified off-topic on inspection without a fetch: page is Wikipedia's own article on the newspaper Reforma, unrelated to the show by title and subject."
         }
       ]
+    },
+    {
+      "url": "https://www.abc.es/play/series/noticias/llega-prime-video-serie-basada-novela-juan-20260929070000-nt.html",
+      "firstSeen": "2026-09-29T06:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-29T06:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ABC Play (abc.es) piece about a different Prime Video series based on a Juan Gomez-Jurado novel, starring Vicky Luengo and Hovik Keuchkerian, six episodes. No mention of Las Azules or Women in Blue; surfaced only via Exa broad-query match on \"Las Azules\" (a homonym collision, not the Apple TV show).",
+      "history": [
+        {
+          "attempt": "2026-09-29T06:10:00Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-11745",
+          "note": "Search snippet confirms subject is an unrelated Prime Video series; off-topic false positive, Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://thefeastoflegends.net/women-in-blue-season-2/",
+      "firstSeen": "2026-09-29T06:10:00Z",
+      "failCount": 1,
+      "lastStatus": "DNS_RESOLUTION_ERROR",
+      "lastAttempt": "2026-09-29T06:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": "Full fetch-chain failure: WebFetch returned getaddrinfo ENOTFOUND; Firecrawl scrape returned SCRAPE_DNS_RESOLUTION_ERROR. Domain thefeastoflegends.net does not currently resolve (expired/defunct/DNS not propagated). Not added to data.json this run.",
+      "history": [
+        {
+          "attempt": "2026-09-29T06:10:00Z",
+          "method": "WebFetch",
+          "status": "ENOTFOUND",
+          "issue": "LEMA-11745",
+          "note": "getaddrinfo ENOTFOUND thefeastoflegends.net"
+        },
+        {
+          "attempt": "2026-09-29T06:10:00Z",
+          "method": "Firecrawl",
+          "status": "SCRAPE_DNS_RESOLUTION_ERROR",
+          "issue": "LEMA-11745",
+          "note": "Firecrawl scrape confirmed DNS resolution failure for the domain."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-29T04:04:22Z"
+  "lastUpdated": "2026-09-29T06:10:00Z"
 }
