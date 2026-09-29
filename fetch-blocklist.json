@@ -15314,7 +15314,47 @@
           "note": "Firecrawl scrape confirmed DNS resolution failure for the domain."
         }
       ]
+    },
+    {
+      "url": "https://newsdigitales.com/nota/341120/es-mi-sueno-famosos-los-12-famosos-confirmados-para-el-reality-de-guido-kaczka",
+      "firstSeen": "2026-09-29T08:06:25.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-29T08:06:25.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Exa Spanish-language query (Pass 1) on LEMA-11747. Article is about \"Es mi sueno famosos\", a reality singing competition on Argentina's eltrece channel hosted by Guido Kaczka, announcing 12 celebrity mentors. No mention of Las Azules or Women in Blue anywhere in the piece; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-29T08:06:25.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11747",
+          "note": "WebFetch succeeded; confirmed article is about an unrelated Argentine reality show, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "http://holofotevirtual.blogspot.com/2022/09/encantados-sa-esta-de-volta-aos-palcos.html",
+      "firstSeen": "2026-09-29T08:06:25.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-29T08:06:25.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Exa Spanish-language query (Pass 1) on LEMA-11747. Article is a 2022 local-culture piece about \"Encantados S/A\", a theatrical production returning to stages in Belem, Para, Brazil. No mention of Las Azules or Women in Blue anywhere in the piece; broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-09-29T08:06:25.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11747",
+          "note": "WebFetch succeeded; confirmed article is about an unrelated Brazilian theater production, not Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-29T06:10:00Z"
+  "lastUpdated": "2026-09-29T08:06:25.000Z"
 }
