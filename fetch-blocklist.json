@@ -15159,7 +15159,67 @@
           "note": "Fetch succeeded; content confirmed off-topic (Mexican PAN party politics column), not about Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://collider.com/widows-bay-streaming-hit-150-days-apple-tv-september-2026/",
+      "firstSeen": "2026-09-29T00:04:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-29T00:04:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Collider article about \"Widow's Bay\", an unrelated Apple TV+ comedy-horror series starring Matthew Rhys, covering its streaming milestone and Emmy wins. No mention of Las Azules or Women in Blue anywhere in the body; surfaced only as a broad-query Exa match on generic \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-29T00:04:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11741",
+          "note": "WebFetch succeeded; confirmed article is about a different show (Widow's Bay), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://collider.com/alien-earth-season-2-ridley-scott-ed-moore-director-silo/",
+      "firstSeen": "2026-09-29T00:04:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-29T00:04:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Collider article about 'Alien: Earth' Season 2 casting news (director Ed Moore joining for the finale), a Ridley Scott-produced sci-fi series with no connection to Las Azules. No mention of Las Azules or Women in Blue anywhere in the body; surfaced only as a broad-query Exa match on generic Apple TV / Season 2 terms.",
+      "history": [
+        {
+          "attempt": "2026-09-29T00:04:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11741",
+          "note": "WebFetch succeeded; confirmed article is about a different show (Alien: Earth), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://la100.cienradios.com/videos/moria-casan-rompio-el-silencio-tras-la-polemica-entrevista-a-facundo-moyano-no-estaba-totalmente-en-eje/",
+      "firstSeen": "2026-09-29T00:04:00Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-09-29T00:04:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La 100 (Argentina) video piece about Moria Casan responding to controversy over her interview with Facundo Moyano, a local Argentine talk-radio/entertainment topic with no relation to Las Azules or Women in Blue. WebFetch was unable to retrieve the page; classification made from the Exa search result title, which unambiguously identifies unrelated Argentine celebrity-news content (same precedent as the afr.com row above: title alone is sufficient when it unambiguously identifies a different subject). Surfaced only as a broad-query Exa Spanish-language match.",
+      "history": [
+        {
+          "attempt": "2026-09-29T00:04:00Z",
+          "method": "WebFetch",
+          "status": 0,
+          "issue": "LEMA-11741",
+          "note": "WebFetch tool error (unable to fetch la100.cienradios.com). Classification made from the Exa search result title alone, which unambiguously identifies unrelated Argentine celebrity/talk-radio content; no ambiguity to resolve via full body fetch."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-28T20:20:00Z"
+  "lastUpdated": "2026-09-29T00:04:00Z"
 }
