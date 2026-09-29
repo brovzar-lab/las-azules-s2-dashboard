@@ -14860,10 +14860,10 @@
     {
       "url": "https://tiktok.com/discover/segunda-temporada-de-las-azules",
       "firstSeen": "2026-09-20T06:04:57Z",
-      "failCount": 2,
-      "lastStatus": 403,
-      "lastAttempt": "2026-09-24T18:05:05Z",
-      "cooldownUntil": null,
+      "failCount": 3,
+      "lastStatus": "webfetch_near_empty;firecrawl_403_unsupported_site",
+      "lastAttempt": "2026-09-29T16:05:33Z",
+      "cooldownUntil": "2026-10-29T16:05:33Z",
       "history": [
         {
           "attempt": "2026-09-04T18:05:15.000Z",
@@ -14913,6 +14913,13 @@
           "status": 403,
           "issue": "LEMA-10921",
           "note": "Re-attempted full fallback chain: WebFetch returned TikTok's generic landing page again (near-empty body), Firecrawl scrape returned 403 'we do not support this site'. Full-chain failure, failCount now 2."
+        },
+        {
+          "attempt": "2026-09-29T16:05:33Z",
+          "method": "WebFetch then Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11754",
+          "note": "Re-attempted full fallback chain: WebFetch returned TikTok generic landing page again (near-empty body), Firecrawl scrape returned 403 we do not support this site. Full-chain failure, failCount now 3, cooldown set to 30 days."
         }
       ]
     },
@@ -15378,7 +15385,28 @@
       "skipReason": "editorial_off_topic_false_positive",
       "skipNote": "Surfaced by Pass 1 Exa broad EN query ('Las Azules Women in Blue Season 2 Apple TV') on keyword overlap only. Page is Rotten Tomatoes' critic-reviews tab for 'Blue Lights' Season 2, an unrelated BBC/Britbox Belfast police drama, not Las Azules / Women in Blue. Not fetched, per Rule G relevance-gate-first posture (dateability irrelevant once off-topic).",
       "history": []
+    },
+    {
+      "url": "https://x.com/lasosl",
+      "firstSeen": "2026-09-29T16:05:33Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-29T16:05:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 2 broad #LasAzules/twitter query. Firecrawl scrape confirms this is Sandra Laso (@LasoSl), a university education researcher at Universidad de Valladolid (Dpto. Didactica de las CCEE, Sociales y de la Matematica) posting about classroom/teaching projects (Cuadernos Inteligentes, CEIP school visits). No connection to Las Azules / Women in Blue; matched only on the surname string.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-29T16:05:33Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11754",
+          "note": "Confirmed off-topic: unrelated personal/academic account, not the show."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-29T12:04:40Z"
+  "lastUpdated": "2026-09-29T16:05:33Z"
 }
