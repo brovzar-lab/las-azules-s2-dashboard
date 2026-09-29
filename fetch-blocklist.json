@@ -15247,7 +15247,27 @@
           "note": "Confirmed page is the Google Play Store listing for the mobile game 'Macro de las Bolitas Azules', unrelated to the TV show. Classified Rule G off-topic false positive."
         }
       ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Reforma",
+      "firstSeen": "2026-09-29T04:04:22Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-29T04:04:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wikipedia article about the Mexican newspaper Reforma itself (masthead, history, ownership), not about Las Azules or Women in Blue. Surfaced only as a broad-query match on a Pass 2 search for \"Las Azules\" Reforma OR El Universal OR El Pais temporada 2, which matched the outlet name rather than any show content.",
+      "history": [
+        {
+          "attempt": "2026-09-29T04:04:22Z",
+          "method": "none (classified from WebSearch result title/snippet; unambiguous topic mismatch, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-11744",
+          "note": "Classified off-topic on inspection without a fetch: page is Wikipedia's own article on the newspaper Reforma, unrelated to the show by title and subject."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-29T02:06:17Z"
+  "lastUpdated": "2026-09-29T04:04:22Z"
 }
