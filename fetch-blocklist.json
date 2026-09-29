@@ -1735,7 +1735,7 @@
       "lastStatus": 403,
       "lastAttempt": "2026-09-27T06:05:38Z",
       "cooldownUntil": null,
-      "permanentSkip": false,
+      "permanentSkip": true,
       "history": [
         {
           "attempt": "2026-09-07T16:03:42Z",
@@ -1765,7 +1765,9 @@
           "issue": "LEMA-11565",
           "note": "Firecrawl scrape blocked (403). Full-chain failure, failCount now 2."
         }
-      ]
+      ],
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "TikTok #lasazules 'discover' hashtag aggregation page for 'final-serie-episodio-8', same surface family as the already-ledgered las-azules-capitulo-8 discover page (LEMA-10551): TikTok's generic Discover topic-index interface, not a single dateable post. Two full-chain fetch attempts on record (LEMA-9826, LEMA-11565) both returned TikTok's generic app-shell tagline with no rendered post content (WebFetch) and a 403 blanket refusal (Firecrawl), consistent with a JS-gated listing surface rather than written editorial content. Classified without a further fetch attempt per Rule F (dateability irrelevant once the surface-family test is met)."
     },
     {
       "url": "https://tv.apple.com/no/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
@@ -14253,7 +14255,10 @@
           "issue": "LEMA-11565",
           "note": "Firecrawl scrape blocked (403). Full-chain failure, failCount now 1."
         }
-      ]
+      ],
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "TikTok #lasazules 'discover' hashtag aggregation page for 'capitulo-8-completo', same surface family as the already-ledgered las-azules-capitulo-8 discover page (LEMA-10551): TikTok's generic Discover topic-index interface, not a single dateable post. One full-chain fetch attempt on record (LEMA-11565) returned TikTok's generic app-shell tagline with no rendered post content (WebFetch) and a 403 blanket refusal (Firecrawl), consistent with a JS-gated listing surface rather than written editorial content. Classified without a further fetch attempt per Rule F (dateability irrelevant once the surface-family test is met)."
     },
     {
       "url": "https://en.wikipedia.org/wiki/Penske_Media_Corporation",
@@ -15361,7 +15366,19 @@
           "note": "WebFetch succeeded; confirmed article is about an unrelated Brazilian theater production, not Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.rottentomatoes.com/tv/blue_lights/s02/reviews",
+      "firstSeen": "2026-09-29T12:04:40Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa broad EN query ('Las Azules Women in Blue Season 2 Apple TV') on keyword overlap only. Page is Rotten Tomatoes' critic-reviews tab for 'Blue Lights' Season 2, an unrelated BBC/Britbox Belfast police drama, not Las Azules / Women in Blue. Not fetched, per Rule G relevance-gate-first posture (dateability irrelevant once off-topic).",
+      "history": []
     }
   ],
-  "lastUpdated": "2026-09-29T10:04:37.000Z"
+  "lastUpdated": "2026-09-29T12:04:40Z"
 }
