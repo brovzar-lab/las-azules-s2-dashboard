@@ -15585,12 +15585,12 @@
       "url": "https://www.facebook.com/revistaHolaUSA/posts/barbara-mori-ximena-sari%C3%B1ana-and-fernando-rovzar-open-up-about-las-azules-most-p/1344266924565295/",
       "firstSeen": "2026-09-30T00:05:03Z",
       "failCount": 1,
-      "lastStatus": 403,
-      "lastAttempt": "2026-09-30T00:05:03Z",
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-30T22:00:00Z",
       "cooldownUntil": null,
-      "permanentSkip": false,
-      "skipReason": null,
-      "skipNote": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "WebFetch succeeded this run (visible dateline read as \"August 20\", no year shown, Facebook current-year omission convention implies 2026). Content is a second address (distinct Facebook post/story id 1344266924565295) for the same ¡HOLA! USA (Facebook) interview already tracked in data.json at post id 1345534067771914 (ts=20260821): identical headline \"Barbara Mori, Ximena Sariñana and Fernando Rovzar open up about Las Azules' most painful storyline yet\", same account, same story. Rule I: second address for a document already in the feed, not a distinct document. Not added to data.json.",
       "history": [
         {
           "attempt": "2026-09-30T00:05:03Z",
@@ -15605,6 +15605,13 @@
           "status": 403,
           "issue": "LEMA-11761",
           "note": "Firecrawl returned a blanket refusal: \"we do not support this site\" for facebook.com. Full-chain failure; not added to data.json this run."
+        },
+        {
+          "attempt": "2026-09-30T22:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11794",
+          "note": "Fetch succeeded (unlike the prior run's partial fragment). Step 4f story-level dedup identified this as a second address for the already-tracked ¡HOLA! USA Facebook post (1345534067771914, ts=20260821). Reclassified permanentSkip under Rule I (editorial_redundant_syndication)."
         }
       ]
     },
