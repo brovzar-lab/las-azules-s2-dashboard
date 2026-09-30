@@ -15493,7 +15493,74 @@
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
       "skipNote": "Surfaced via Pass 2 standard web sweep (broad Emmy-related query) on LEMA-11756. WebFetch hit a hard paywall (HTTP 402 via the tollbit.hollywoodreporter.com redirect); Firecrawl scrape succeeded (200, full body, ~15.7k chars) and confirmed 'azules' and 'women in blue' are both completely absent from the body text. Article (by Rick Porter, published Sep 14, 2026) is about Apple TV's 2026 Emmy wins for 'Widow's Bay' and 'Pluribus'. Off-topic false positive per Rule G."
+    },
+    {
+      "url": "http://thefutoncritic.com/news/2026/05/27/apple-tv-unveils-first-look-at-new-thriller-last-seen-starring-patrick-brammall-28214/20260527apple01/",
+      "firstSeen": "2026-09-30T00:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-30T00:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TheFutonCritic breaking-news item about a different Apple TV+ title entirely: the thriller \"Last Seen\" starring Patrick Brammall. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Apple TV\" + \"new\" + \"season\" terms via Exa Pass 1.",
+      "history": [
+        {
+          "attempt": "2026-09-30T00:05:03Z",
+          "method": "WebSearch (title/snippet only, not fetched)",
+          "status": null,
+          "issue": "LEMA-11761",
+          "note": "Off-topic determination made from search-result title alone (different show name, different cast); Rule G does not require dateability or a body fetch to exclude, relevance gate applies before the fetch chain."
+        }
+      ]
+    },
+    {
+      "url": "https://www.farandulashow.com/2026/09/moria-casan-es-tremenda-lo-que-hace.html",
+      "firstSeen": "2026-09-30T00:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-30T00:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "FarandulaShow post about Moria Casan and Sofia Gala in an unrelated Netflix series. No mention of Las Azules, Women in Blue, or Apple TV; surfaced only as a broad-query match via Exa Pass 1 (Spanish query).",
+      "history": [
+        {
+          "attempt": "2026-09-30T00:05:03Z",
+          "method": "WebSearch (title/snippet only, not fetched)",
+          "status": null,
+          "issue": "LEMA-11761",
+          "note": "Off-topic determination made from search-result title alone (different show, different network, different cast); Rule G relevance gate applies before the fetch chain."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/revistaHolaUSA/posts/barbara-mori-ximena-sari%C3%B1ana-and-fernando-rovzar-open-up-about-las-azules-most-p/1344266924565295/",
+      "firstSeen": "2026-09-30T00:05:03Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-30T00:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-09-30T00:05:03Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11761",
+          "note": "WebFetch returned only a partial headline fragment (\"HOLA USA - Barbara Mori, Ximena Sarinana and Fernando...\"), no publish date, no body: an empty/near-empty success per the fetch fallback chain rule, not a usable body."
+        },
+        {
+          "attempt": "2026-09-30T00:05:03Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11761",
+          "note": "Firecrawl returned a blanket refusal: \"we do not support this site\" for facebook.com. Full-chain failure; not added to data.json this run."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-29T20:01:33Z"
+  "lastUpdated": "2026-09-30T00:05:03Z"
 }
