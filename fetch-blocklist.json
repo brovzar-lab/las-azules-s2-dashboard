@@ -15343,13 +15343,13 @@
     {
       "url": "https://thefeastoflegends.net/women-in-blue-season-2/",
       "firstSeen": "2026-09-29T06:10:00Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": "DNS_RESOLUTION_ERROR",
-      "lastAttempt": "2026-09-30T02:10:00Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-09-30T16:05:20Z",
+      "cooldownUntil": "2026-10-30T16:05:20Z",
       "permanentSkip": false,
       "skipReason": null,
-      "skipNote": "Full fetch-chain failure (2nd consecutive): WebFetch returned getaddrinfo ENOTFOUND; Firecrawl scrape returned SCRAPE_DNS_RESOLUTION_ERROR. Domain thefeastoflegends.net still does not resolve. Not added to data.json this run. One more consecutive full-chain failure sets a 30-day cooldown per this ledger's own policy.",
+      "skipNote": "Full fetch-chain failure (3rd consecutive): WebFetch returned getaddrinfo ENOTFOUND; Firecrawl scrape returned SCRAPE_DNS_RESOLUTION_ERROR. Domain thefeastoflegends.net still does not resolve. Not added to data.json this run. Third consecutive full-chain failure, 30-day cooldown set per this ledger's own policy.",
       "history": [
         {
           "attempt": "2026-09-29T06:10:00Z",
@@ -15378,6 +15378,20 @@
           "status": "SCRAPE_DNS_RESOLUTION_ERROR",
           "issue": "LEMA-11780",
           "note": "Firecrawl scrape confirmed DNS resolution failure for the domain again, failCount now 2."
+        },
+        {
+          "attempt": "2026-09-30T16:05:20Z",
+          "method": "WebFetch",
+          "status": "ENOTFOUND",
+          "issue": "LEMA-11791",
+          "note": "getaddrinfo ENOTFOUND thefeastoflegends.net"
+        },
+        {
+          "attempt": "2026-09-30T16:05:20Z",
+          "method": "Firecrawl",
+          "status": "SCRAPE_DNS_RESOLUTION_ERROR",
+          "issue": "LEMA-11791",
+          "note": "Firecrawl scrape confirmed DNS resolution failure for the domain again, failCount now 3, 30-day cooldown set."
         }
       ]
     },
@@ -15899,7 +15913,47 @@
           "note": "URL path (/tag/barbara-mori/) is self-evidently a tag archive index, not a single article; no fetch needed to confirm structure."
         }
       ]
+    },
+    {
+      "url": "https://mcnews.iol.pt/geral/30-09-2026/mulheres-as-armas-nomeada-no-festival-de-veneza",
+      "firstSeen": "2026-09-30T16:05:20Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-30T16:05:20Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "MC News (Portugal) article about TVI's Portuguese miniseries \"Mulheres, às Armas\" (a different, unrelated production) receiving a Series nomination at the Venice TV Award 2026. No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on \"Mulheres\" (Women) keyword overlap.",
+      "history": [
+        {
+          "attempt": "2026-09-30T16:05:20Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11791",
+          "note": "WebFetch succeeded; confirmed article is about a different Portuguese miniseries (Mulheres, às Armas), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.minutoneuquen.com/entretenimiento/2026/9/30/jimena-baron-abandona-es-mi-sueno-y-ya-tiene-reemplazo-quien-ocupara-su-lugar-411777.html",
+      "firstSeen": "2026-09-30T16:05:20Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-30T16:05:20Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Minuto Neuquen (Argentina) article about singer/actress Jimena Barón leaving her judging role on the unrelated Argentine TV show \"Es mi sueño\", replaced by Ángela Leiva. No mention of Las Azules / Women in Blue; surfaced only as a broad-query Spanish entertainment-press match.",
+      "history": [
+        {
+          "attempt": "2026-09-30T16:05:20Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11791",
+          "note": "WebFetch succeeded; confirmed article is about a different Argentine show (Es mi sueño), unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-30T14:06:14Z"
+  "lastUpdated": "2026-09-30T16:05:20Z"
 }
