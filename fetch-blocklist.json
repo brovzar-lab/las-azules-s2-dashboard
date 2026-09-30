@@ -15779,7 +15779,127 @@
           "note": "WebFetch succeeded; confirmed article is about Zoe Saldaña / Taylor Sheridan's Lioness, unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://businessupturn.com/entertainment/hollywood/hollywood-web-series/the-hunting-wives-season-2-release-date-cast-plot-and-everything-known-about-sophie-and-margos-explosive-return",
+      "firstSeen": "2026-09-30T14:06:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-30T14:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Business Upturn piece about \"The Hunting Wives\" season 2 (a different Hollywood web series), not Las Azules/Women in Blue. Surfaced only as a broad-query match on generic \"season 2 release date\" terms.",
+      "history": [
+        {
+          "attempt": "2026-09-30T14:06:14Z",
+          "method": "search-snippet-only",
+          "status": null,
+          "issue": "LEMA-11790",
+          "note": "Title/snippet unambiguously identify a different show (\"The Hunting Wives\"); no fetch needed to confirm off-topic status."
+        }
+      ]
+    },
+    {
+      "url": "https://culturecues.co.uk/blue-lights-season-4-review",
+      "firstSeen": "2026-09-30T14:06:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-30T14:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "CultureCues review of BBC's \"Blue Lights\" season 4, not Las Azules/Women in Blue. Surfaced only as a broad-query false positive (both are crime dramas, unrelated titles).",
+      "history": [
+        {
+          "attempt": "2026-09-30T14:06:14Z",
+          "method": "search-snippet-only",
+          "status": null,
+          "issue": "LEMA-11790",
+          "note": "Title/snippet unambiguously identify a different show (\"Blue Lights\"); no fetch needed to confirm off-topic status."
+        }
+      ]
+    },
+    {
+      "url": "https://otempo.com.br/opiniao/diego-almeida/2026/9/30/medusa-critica-serie-da-netflix-dobra-a-aposta-no-veneno-na-2-temporada",
+      "firstSeen": "2026-09-30T14:06:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-30T14:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "O Tempo review of Netflix's \"Medusa\" season 2, not Las Azules/Women in Blue. Surfaced only as a broad-query false positive on a Portuguese-language \"season 2 review\" query.",
+      "history": [
+        {
+          "attempt": "2026-09-30T14:06:14Z",
+          "method": "search-snippet-only",
+          "status": null,
+          "issue": "LEMA-11790",
+          "note": "Title/snippet unambiguously identify a different show (\"Medusa\"); no fetch needed to confirm off-topic status."
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/angelesazulesmx",
+      "firstSeen": "2026-09-30T14:06:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-30T14:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Instagram account for the Mexican cumbia band \"Los Angeles Azules\" (angelesazulesmx), not the Las Azules/Women in Blue TV series. Same off-topic account already ledgered on its Facebook address (facebook.com/angelesazulesmx/); surfaced only as a broad #LasAzules-style hashtag match.",
+      "history": [
+        {
+          "attempt": "2026-09-30T14:06:14Z",
+          "method": "search-snippet-only",
+          "status": null,
+          "issue": "LEMA-11790",
+          "note": "Account identity unambiguous from prior Facebook-sibling ruling in this same ledger; no fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://primevideo.com/-/es_419/detail/0JFCKSNHTRBNJA50K5E6QG2HHN",
+      "firstSeen": "2026-09-30T14:06:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-30T14:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Prime Video (es_419/Canada tracking variant) platform detail page for Las Azules season 2. Same product listing page as the already-ledgered es/tr=mx variant of this title (same UMC-style product id 0JFCKSNHTRBNJA50K5E6QG2HHN), but normalizes to a distinct key due to the es_419 locale-path segment. Platform detail page carries no written editorial content about the show (cast/synopsis/availability grid only); strip test leaves nothing written about the show, per Rule F.",
+      "history": [
+        {
+          "attempt": "2026-09-30T14:06:14Z",
+          "method": "search-snippet-only",
+          "status": null,
+          "issue": "LEMA-11790",
+          "note": "Classified by analogy to the already-fetched/ledgered es/tr=mx sibling row for the same product id; page structure (Prime Video detail page) is unambiguous from the URL/title alone."
+        }
+      ]
+    },
+    {
+      "url": "https://eluniversal.com.mx/tag/barbara-mori",
+      "firstSeen": "2026-09-30T14:06:14Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-30T14:06:14Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "El Universal tag/archive index page aggregating the outlet's articles tagged \"barbara-mori\", including its own already-tracked article (eluniversal.com.mx/espectaculos/las-azules-indagan-en-las-sombras-del-68/, ts 20260806, already in data.json). A tag or archive index surfacing an already-tracked post is a named second-address example under Rule I; carries no content of its own beyond linking to already-tracked (and other unrelated) posts.",
+      "history": [
+        {
+          "attempt": "2026-09-30T14:06:14Z",
+          "method": "search-snippet-only",
+          "status": null,
+          "issue": "LEMA-11790",
+          "note": "URL path (/tag/barbara-mori/) is self-evidently a tag archive index, not a single article; no fetch needed to confirm structure."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-30T08:06:26Z"
+  "lastUpdated": "2026-09-30T14:06:14Z"
 }
