@@ -15953,7 +15953,27 @@
           "note": "WebFetch succeeded; confirmed article is about a different Argentine show (Es mi sueño), unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://sinsitio.site/series/19787-las-azules-t1.html",
+      "firstSeen": "2026-09-30T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-30T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_piracy_or_unauthorized_distribution",
+      "skipNote": "Spanish-language torrent portal hosting unauthorized HDTV XviD-quality episode downloads for Las Azules Seasons 1-2 (file sizes ~473-765MB per episode), explicitly advertised as \"Portal De Peliculas Gratuitas, Sin Registros y Todo Gratis\" (free movies, no registration). Page carries a synopsis wrapper and a DMCA nav link but its primary function is supplying unauthorized copies, not reporting on/reviewing/promoting the show. Rule E (CEO ruling LEMA-9923/LEMA-9924): both prongs met (on-topic, primary function is unauthorized distribution). reviewable=false per Rule E (not coverage omitted for lack of a date; not coverage at all). No sourced publish date sought, per Rule E's dateability-irrelevant clause.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-09-30T20:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11793"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-30T16:05:20Z"
+  "lastUpdated": "2026-09-30T20:00:00Z"
 }
