@@ -15601,7 +15601,46 @@
           "note": "Full body retrieved, confirmed off-topic per Rule G (see skipNote)."
         }
       ]
+    },
+    {
+      "url": "https://larepublica.pe/cine-series/2026/09/29/estrenos-octubre-2026-peliculas-y-series-nuevas-en-netflix-prime-video-apple-tv-y-otras-plataformas-de-streaming-2184222",
+      "firstSeen": "2026-09-30T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-30T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa EN query (\"Las Azules Women in Blue Season 2 Apple TV\") on LEMA-11781. WebFetch confirmed (200): La Republica (Peru) roundup of October 2026 streaming premieres across Netflix, Prime Video, Apple TV+, HBO Max and Disney+, published Sept 29, 2026 22:05h local dateline. Does not mention Las Azules or Women in Blue anywhere in the body; surfaced only as a broad-query match on generic Apple TV + streaming terms.",
+      "history": [
+        {
+          "attempt": "2026-09-30T04:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11781",
+          "note": "Confirmed off-topic: article covers October 2026 streaming slate broadly, no mention of Las Azules/Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://pro.imdb.com/title/tt36992358/details",
+      "firstSeen": "2026-09-30T04:00:00Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-09-30T04:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Surfaced via Pass 2 web sweep on LEMA-11781. pro.imdb.com/title/* details page (episode record), same surface family as the existing pro.imdb.com/title/*/cast and /episodes rows already ledgered under Rule F (LEMA-10632 clarification: imdb.com/title/* and pro.imdb.com/title/* are Rule F at any locale/depth, bare record or /cast or /episodes or /details). WebFetch returned 403 (IMDbPro login/paywall gate), consistent with sibling IMDbPro rows. Classified by surface family per Rule F clarification; no further fetch-fallback attempted since dateability/content depth is irrelevant once family is established.",
+      "history": [
+        {
+          "attempt": "2026-09-30T04:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-11781"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-30T02:10:00Z"
+  "lastUpdated": "2026-09-30T04:00:00Z"
 }
