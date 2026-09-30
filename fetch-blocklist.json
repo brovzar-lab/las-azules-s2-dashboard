@@ -15640,7 +15640,107 @@
           "issue": "LEMA-11781"
         }
       ]
+    },
+    {
+      "url": "https://www.absolutegeeks.com/tv-2/apple-tvs-october-lineup-says-goodbye-to-its-two-biggest-shows/",
+      "firstSeen": "2026-09-30T06:08:05Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-30T06:08:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "AbsoluteGeeks piece on Apple TV's October 2026 lineup changes. Full body fetched via WebFetch: the \"two biggest shows\" saying goodbye are Ted Lasso (season 4 finale, Oct 7) and Slow Horses (season 6 finale, Oct 21). No mention of Las Azules or Women in Blue anywhere in the piece; surfaced only as a broad-query match on \"Apple TV\" + \"Season 2\" + timing near the Las Azules S2 finale window.",
+      "history": [
+        {
+          "attempt": "2026-09-30T06:08:05Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11782",
+          "note": "WebFetch succeeded; confirmed the article is about Ted Lasso and Slow Horses finales, not Las Azules/Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://www.bluradio.com/entretenimiento/medusa-regresa-con-mas-secretos-venganzas-y-personajes-al-limite-en-su-segunda-temporada-rs15",
+      "firstSeen": "2026-09-30T06:08:05Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-30T06:08:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "BluRadio piece about 'Medusa' (a different telenovela/series) returning for its second season. No connection to Las Azules/Women in Blue. Classified from Exa Spanish-language search result title alone (unambiguous: names a different show, \"Medusa\", by title); not fetched. Surfaced only as a broad-query match on \"segunda temporada\".",
+      "history": [
+        {
+          "attempt": "2026-09-30T06:08:05Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-11782",
+          "note": "Title unambiguously identifies 'Medusa' season 2, a different show; not fetched."
+        }
+      ]
+    },
+    {
+      "url": "https://www.elheraldo.co/sociedad/2026/09/30/medusa-2-llega-con-mas-poder-traicion-y-sed-de-venganza/",
+      "firstSeen": "2026-09-30T06:08:05Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-30T06:08:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Heraldo (Colombia) piece about 'Medusa 2', a different series entirely. No connection to Las Azules/Women in Blue. Classified from Exa Spanish-language search result title alone (unambiguous: names \"Medusa 2\" by title); not fetched. Surfaced only as a broad-query match on \"temporada 2\"/\"venganza\" themes.",
+      "history": [
+        {
+          "attempt": "2026-09-30T06:08:05Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-11782",
+          "note": "Title unambiguously identifies 'Medusa 2', a different show; not fetched."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lavanguardia.com/series/20260930/11643997/adults-critica-temporada-2-comedia-disney.html",
+      "firstSeen": "2026-09-30T06:08:05Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-30T06:08:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Vanguardia review of 'Adults', a Disney comedy series season 2, unrelated to Las Azules/Women in Blue. Classified from Exa Spanish-language search result title alone (unambiguous: names \"Adults\" and \"comedia Disney\" by title); not fetched. Surfaced only as a broad-query match on \"critica temporada 2\".",
+      "history": [
+        {
+          "attempt": "2026-09-30T06:08:05Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-11782",
+          "note": "Title unambiguously identifies 'Adults' (Disney comedy), a different show; not fetched."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvcentral.com.au/streaming/apple-tv/careme-season-2-apple-tv/",
+      "firstSeen": "2026-09-30T06:08:05Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-30T06:08:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Central (Australia) piece about 'Careme' being renewed for Season 2 on Apple TV+, a different show entirely, unrelated to Las Azules/Women in Blue. Classified from Exa search result title alone (unambiguous: names \"Careme\" by title); not fetched. Surfaced only as a broad-query match on \"Season 2\" + \"Apple TV\".",
+      "history": [
+        {
+          "attempt": "2026-09-30T06:08:05Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-11782",
+          "note": "Title unambiguously identifies 'Careme', a different show; not fetched."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-30T04:00:00Z"
+  "lastUpdated": "2026-09-30T06:08:05Z"
 }
