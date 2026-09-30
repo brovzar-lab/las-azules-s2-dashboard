@@ -15324,13 +15324,13 @@
     {
       "url": "https://thefeastoflegends.net/women-in-blue-season-2/",
       "firstSeen": "2026-09-29T06:10:00Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": "DNS_RESOLUTION_ERROR",
-      "lastAttempt": "2026-09-29T06:10:00Z",
+      "lastAttempt": "2026-09-30T02:10:00Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
-      "skipNote": "Full fetch-chain failure: WebFetch returned getaddrinfo ENOTFOUND; Firecrawl scrape returned SCRAPE_DNS_RESOLUTION_ERROR. Domain thefeastoflegends.net does not currently resolve (expired/defunct/DNS not propagated). Not added to data.json this run.",
+      "skipNote": "Full fetch-chain failure (2nd consecutive): WebFetch returned getaddrinfo ENOTFOUND; Firecrawl scrape returned SCRAPE_DNS_RESOLUTION_ERROR. Domain thefeastoflegends.net still does not resolve. Not added to data.json this run. One more consecutive full-chain failure sets a 30-day cooldown per this ledger's own policy.",
       "history": [
         {
           "attempt": "2026-09-29T06:10:00Z",
@@ -15345,6 +15345,20 @@
           "status": "SCRAPE_DNS_RESOLUTION_ERROR",
           "issue": "LEMA-11745",
           "note": "Firecrawl scrape confirmed DNS resolution failure for the domain."
+        },
+        {
+          "attempt": "2026-09-30T02:10:00Z",
+          "method": "WebFetch",
+          "status": "ENOTFOUND",
+          "issue": "LEMA-11780",
+          "note": "getaddrinfo ENOTFOUND thefeastoflegends.net"
+        },
+        {
+          "attempt": "2026-09-30T02:10:00Z",
+          "method": "Firecrawl",
+          "status": "SCRAPE_DNS_RESOLUTION_ERROR",
+          "issue": "LEMA-11780",
+          "note": "Firecrawl scrape confirmed DNS resolution failure for the domain again, failCount now 2."
         }
       ]
     },
@@ -15560,7 +15574,34 @@
           "note": "Firecrawl returned a blanket refusal: \"we do not support this site\" for facebook.com. Full-chain failure; not added to data.json this run."
         }
       ]
+    },
+    {
+      "url": "https://x.com/AppleTV/status/1673730750095712256",
+      "firstSeen": "2026-09-30T02:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-30T02:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: surfaced only as a broad #LasAzules/AppleTV Twitter query match. Firecrawl scrape (200, full body retrieved) shows this is a generic @AppleTV promotional post dated 2023-06-30T20:08:18.000Z (\"If you enjoyed the first episode, you can stream the entire season now on Apple TV+\") -- posted roughly 13 months before Women in Blue / Las Azules even premiered (2024-07-31) and containing no reference to the show by name. Not coverage of Las Azules; ledgered to stop re-fetching this exact tweet URL every run.",
+      "history": [
+        {
+          "attempt": "2026-09-30T02:10:00Z",
+          "method": "WebFetch",
+          "status": 402,
+          "issue": "LEMA-11780",
+          "note": "HTTP 402 Payment Required"
+        },
+        {
+          "attempt": "2026-09-30T02:10:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11780",
+          "note": "Full body retrieved, confirmed off-topic per Rule G (see skipNote)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-30T00:05:03Z"
+  "lastUpdated": "2026-09-30T02:10:00Z"
 }
