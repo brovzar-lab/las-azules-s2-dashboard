@@ -16280,7 +16280,91 @@
           "note": "Fetched successfully; classified Rule F (listing/database) on content, not a fetch failure."
         }
       ]
+    },
+    {
+      "url": "https://imdb.com/de/news/ni66041136",
+      "firstSeen": "2026-10-01T14:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T14:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I mechanical shortcut (no fetch spent): same IMDb CMS post id (ni66041136) as https://www.imdb.com/news/ni66041136/, rendered at a German locale path. Primary EN address is in data.json (tag-and-keep, storyGroup=fictionhorizon-s2-ep8-finalerecap-20261001). Second-address locale variant, not a distinct document. Also closes the documented /XX-locale normalization gap for this specific pair (Pass 0 known-gap note) by giving the /de/ address its own ledger row.",
+      "history": []
+    },
+    {
+      "url": "https://diariodecuyo.com.ar/noticias/final-con-criticas-y-mucho-rating-637681.html",
+      "firstSeen": "2026-10-01T14:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T14:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: WebFetch confirms this is a Sep 11, 2015 Diario de Cuyo (Argentina) piece about the finale of the Turkish telenovela 'Las mil y una noches' ('Final con criticas y mucho rating'). No mention of Las Azules, Women in Blue, or Apple TV anywhere in the body. Surfaced only via broad 'Las Azules finale episodio 8 reaccion critica' query matching on 'final'+'criticas' keywords.",
+      "history": [
+        {
+          "attempt": "2026-10-01T14:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11808",
+          "note": "Confirmed off-topic (2015 Turkish telenovela), not fetched for inclusion."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/Kilik116/status/2083630050553864207",
+      "firstSeen": "2026-10-01T14:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T14:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: French-language tweet referencing a different show's finale via the hashtag #TLMASMAD (a French reality/variety broadcast), unrelated to Las Azules/Women in Blue. Surfaced only via broad '#LasAzules finale twitter' query matching on 'finale'. Not fetched (relevance gate fails before dateability per Rule G/B posture).",
+      "history": []
+    },
+    {
+      "url": "https://x.com/azulesesportsla",
+      "firstSeen": "2026-10-01T14:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T14:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: 'Azules Esports LA', a Mexican esports team account, unrelated to the show. Surfaced only via '#LasAzules' keyword overlap on the word 'Azules'. Not fetched (relevance gate fails before dateability).",
+      "history": []
+    },
+    {
+      "url": "https://facebook.com/quiencom/videos/2104267097189910",
+      "firstSeen": "2026-10-01T14:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T14:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Rule A: Quien.com (editorial-brand outlet, passes Rule B) Facebook video covering the Las Azules S2 press presentation with Fernando Rovzar, Barbara Mori, Natalia Tellez, Ximena Sarinana and guest Atala Perez Rodriguez. WebFetch returned a content summary but no visible publish date. Firecrawl declined to scrape facebook.com ('we do not support this site'), a documented exhaustion of the method per Rule A. reviewable=true for future manual date lookup.",
+      "history": [
+        {
+          "attempt": "2026-10-01T14:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11808",
+          "note": "Content summarized, no visible publish date found."
+        },
+        {
+          "attempt": "2026-10-01T14:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11808",
+          "note": "Firecrawl refused: 'we do not support this site' (facebook.com blanket refusal)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-01T12:05:29Z"
+  "lastUpdated": "2026-10-01T14:05:00Z"
 }
