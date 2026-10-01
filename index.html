@@ -545,6 +545,7 @@
       background: var(--teal);
       flex-shrink: 0;
     }
+    .live-dot.is-stale { background: var(--coral); }
 
     /* ── Bar chart ── */
     .bar-track {
@@ -1002,7 +1003,7 @@
   <div class="databar-inner">
     <span class="databar-crit">Critical reception verified <strong id="databar-crit-date">Aug 28, 2026</strong><span id="databar-crit-changed-wrap"> · unchanged since <strong id="databar-crit-changed-date">Aug 18, 2026</strong></span></span>
     <span class="databar-sep">·</span>
-    <span class="databar-cov"><span class="live-dot"></span>Coverage feed: auto-updating</span>
+    <span class="databar-cov"><span class="live-dot" id="databar-cov-dot"></span><span id="databar-cov-text">Coverage feed: auto-updating</span></span>
   </div>
 </div>
 
@@ -2790,18 +2791,52 @@ document.addEventListener('keydown', function(e) {
 });
 
 /* ─── REMOTE DATA LOADER ─── */
-/* Fetches data.json (populated by sweep routine) and refreshes all dynamic sections */
+/* Fetches data.json (populated by sweep routine) and refreshes all dynamic sections.
+   The databar "Coverage feed" stamp reports the newest dated entry actually present
+   in the fetched feed (via excludeFutureTs, same guard the home/latest derivations
+   use) rather than a page-load clock, so a stalled/dead sweep is visible without
+   needing to check git history (LEMA-11806). A failed or malformed fetch surfaces
+   a visible warning instead of silently keeping the hardcoded August baseline. */
+const DATA_JSON_REQUIRED_KEYS = ['outlet', 'headline', 'url', 'date', 'ts', 'lang', 'market', 'type'];
+function isValidCoverageRow(r) {
+  return !!r && typeof r === 'object' && Number.isInteger(r.ts) &&
+    DATA_JSON_REQUIRED_KEYS.every(k => k in r);
+}
 (async function loadRemoteData() {
+  const dot = document.getElementById('databar-cov-dot');
+  const covText = document.getElementById('databar-cov-text');
+  function showFetchWarning(reason) {
+    console.error('[loadRemoteData] coverage feed refresh failed: ' + reason);
+    if (dot) dot.classList.add('is-stale');
+    if (covText) covText.textContent = `Coverage feed: refresh failed (${reason}) — showing last loaded snapshot`;
+  }
   try {
     const res = await fetch('./data.json?_=' + Date.now());
-    if (!res.ok) return;
+    if (!res.ok) { showFetchWarning('HTTP ' + res.status); return; }
     const remote = await res.json();
-    if (!Array.isArray(remote) || remote.length <= MEDIA.length) return;
+    if (!Array.isArray(remote) || remote.length === 0 || !remote.every(isValidCoverageRow)) {
+      showFetchWarning('malformed data.json');
+      return;
+    }
     MEDIA = remote;
     buildCharts();
     buildHome();
     renderCoverage();
-  } catch(e) { /* fail silently — hardcoded MEDIA remains as fallback */ }
+    if (covText) {
+      const newest = excludeFutureTs(remote).reduce((a, b) => (b.ts > a.ts ? b : a));
+      const s = String(newest.ts);
+      const d = s.length === 8 ? new Date(Date.UTC(+s.slice(0,4), +s.slice(4,6) - 1, +s.slice(6,8))) : null;
+      const newestLabel = d && !isNaN(d.getTime())
+        ? d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
+        : null;
+      const unit = remote.length === 1 ? 'article' : 'articles';
+      covText.textContent = newestLabel
+        ? `Coverage feed: ${remote.length} ${unit} · newest dated ${newestLabel}`
+        : `Coverage feed: ${remote.length} ${unit}`;
+    }
+  } catch(e) {
+    showFetchWarning(e && e.message ? e.message : 'fetch threw');
+  }
 })();
 
 /* Critical Reception + Updates timeline are hand-curated from the research-report
