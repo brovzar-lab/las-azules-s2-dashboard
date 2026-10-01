@@ -16213,7 +16213,54 @@
           "note": "WebFetch succeeded; confirmed individual crew-personal account, not an editorial/outlet account."
         }
       ]
+    },
+    {
+      "url": "https://elconfidencial.com/television/series-tv/2026-10-01/carlota-baro-las-hijas-de-la-criada-renata-entrevista_4434505",
+      "firstSeen": "2026-10-01T08:05:03Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T08:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Confidencial interview with actress Carlota Baro about her role as 'Renata' in the unrelated Spanish series 'Las hijas de la criada'. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match (Exa ES query) on generic Spanish-drama/actress-interview terms. WebFetch failed (tool error) and Firecrawl scrape returned HTTP 500; classification made on the article's title and topic, which is unambiguous (different show entirely), per Rule G, which does not require a successful body fetch to establish off-topic relevance.",
+      "history": [
+        {
+          "attempt": "2026-10-01T08:05:03Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-11799",
+          "note": "WebFetch tool error (unable to fetch host)."
+        },
+        {
+          "attempt": "2026-10-01T08:05:03Z",
+          "method": "Firecrawl scrape",
+          "status": 500,
+          "issue": "LEMA-11799",
+          "note": "Firecrawl scrape failed with HTTP 500. Off-topic classification made from title/search metadata: article is about 'Las hijas de la criada', not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://as.com/meristation/series/maria-adanez-lucia-en-anhqv-confiesa-el-origen-de-esta-iconica-frase-de-la-serie-se-inventaba-la-mitad-de-los-dialogos-f202610-n",
+      "firstSeen": "2026-10-01T08:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T08:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "AS.com/Meristation interview with actress Maria Adanez about her role 'Lucia' in the unrelated Spanish sitcom 'Aqui No Hay Quien Viva' (ANHQV). No mention of Las Azules or Women in Blue anywhere in the fetched body. Surfaced only as a broad-query match (Exa ES query) on generic Spanish-actress-interview terms.",
+      "history": [
+        {
+          "attempt": "2026-10-01T08:05:03Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11799",
+          "note": "Firecrawl scrape succeeded; confirmed article body contains no mention of Las Azules/Women in Blue and is about a different show (ANHQV)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-01T04:02:01Z"
+  "lastUpdated": "2026-10-01T08:05:03Z"
 }
