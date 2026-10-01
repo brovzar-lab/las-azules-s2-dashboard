@@ -16498,7 +16498,47 @@
           "note": "Blocked. Full fallback-chain failure this attempt; content too incomplete to make a Rule B/G classification call, so ledgered as a fetch failure rather than guessed."
         }
       ]
+    },
+    {
+      "url": "https://latination.com/october-streaming-releases-movies-series/",
+      "firstSeen": "2026-10-01T18:07:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T18:07:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "LatiNation's October 2026 'what to watch' streaming roundup (Netflix, Prime Video, Apple TV and more). WebFetch confirmed the article contains no mention of Las Azules or Women in Blue anywhere in the body; surfaced only as a broad Exa query match on general Apple TV / streaming terms.",
+      "history": [
+        {
+          "attempt": "2026-10-01T18:07:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11813",
+          "note": "WebFetch succeeded; confirmed article covers the October 2026 streaming slate across multiple platforms with no reference to Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/p/Dd9QZmcsIV2",
+      "firstSeen": "2026-10-01T18:07:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T18:07:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "Posted by @tycoon_movies_mwanza, a commercial vendor account (Mwanza, Tanzania) advertising paid movie/series file access via WhatsApp/Telegram. Caption is an SEO-style synopsis wrapper ('NEw Series (2026)', IMDb rating, storyline blurb) promoting the account's own download/access service, not media coverage of the show. Not a Rule E case: Rule E's scope limit explicitly excludes social candidates (Instagram/YouTube/etc.) from the piracy gate, routing this account type to Rule B's vendor-promo category instead.",
+      "history": [
+        {
+          "attempt": "2026-10-01T18:07:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11813",
+          "note": "WebFetch returned the post caption and account identity. Confirmed commercial vendor account selling movie/series access, not an editorial or fan account; skipped on relevance per Rule B, dateability not evaluated."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-01T16:08:37Z"
+  "lastUpdated": "2026-10-01T18:07:04Z"
 }
