@@ -16260,7 +16260,27 @@
           "note": "Firecrawl scrape succeeded; confirmed article body contains no mention of Las Azules/Women in Blue and is about a different show (ANHQV)."
         }
       ]
+    },
+    {
+      "url": "https://www.themoviedb.org/tv/253983-las-azules?language=en-US",
+      "firstSeen": "2026-10-01T12:05:29Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T12:05:29Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "TMDB (The Movie Database) show page for Women in Blue / Las Azules. WebFetch succeeded (200): page is cast list, series/season overview blurbs, technical metadata (status, network, language), keywords, awards notation, and navigation/community links. No substantive written analysis or journalistic prose about the show. Rule F strip test: remove the metadata table and nothing written about the show remains. Classified editorial_listing_or_database, same family as IMDb/TheTVDB entries already ledgered. Surfaced on LEMA-11802.",
+      "history": [
+        {
+          "attempt": "2026-10-01T12:05:29Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11802",
+          "note": "Fetched successfully; classified Rule F (listing/database) on content, not a fetch failure."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-01T08:05:03Z"
+  "lastUpdated": "2026-10-01T12:05:29Z"
 }
