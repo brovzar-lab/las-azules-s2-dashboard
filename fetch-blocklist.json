@@ -16584,7 +16584,27 @@
           "note": "301 Moved Permanently (Cloudflare) to the canonical /articulo/... URL already present in data.json. lookup --strict confirmed inDataJson=true for the canonical URL (dataJsonTs=20260701, dataJsonOutlet=Mundiario)."
         }
       ]
+    },
+    {
+      "url": "https://instagram.com/p/Dd9P_IusUV3",
+      "firstSeen": "2026-10-01T22:06:16Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T22:06:16Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "Posted by @tycoon_movies_mwanza, the same commercial vendor account (Mwanza, Tanzania) already ledgered at instagram.com/p/Dd9QZmcsIV2 (LEMA-11813), advertising paid movie/series file access via WhatsApp/Telegram. Caption: 'NEw Series (2026) Name | Women In Blue Season 02 (Episode 08) Complete ... IMDb 7.3/10'. SEO-style synopsis wrapper promoting the account's own download/access service, not media coverage of the show. Not a Rule E case: Rule E's scope limit explicitly excludes social candidates (Instagram/YouTube/etc.) from the piracy gate, routing this account type to Rule B's vendor-promo category instead.",
+      "history": [
+        {
+          "attempt": "2026-10-01T22:06:16Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11816",
+          "note": "WebFetch returned the post caption and account identity. Confirmed same commercial vendor account as the Dd9QZmcsIV2 sibling post, selling movie/series access via WhatsApp/Telegram, not an editorial or fan account; skipped on relevance per Rule B, dateability not evaluated."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-01T20:05:59Z"
+  "lastUpdated": "2026-10-01T22:06:16Z"
 }
