@@ -16538,7 +16538,53 @@
           "note": "WebFetch returned the post caption and account identity. Confirmed commercial vendor account selling movie/series access, not an editorial or fan account; skipped on relevance per Rule B, dateability not evaluated."
         }
       ]
+    },
+    {
+      "url": "https://www.imdb.com/es/news/ni64664090/",
+      "firstSeen": "2026-10-01T20:05:59Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T20:05:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via broad Exa EN query match (\"Las Azules Women in Blue Season 2 Apple TV\"). WebFetch returned 403; Firecrawl scrape confirmed the page is a syndicated ScreenRant article, \"Perfect Wife: What Happened To James Reyes After Sherri Papini Hoax\" republished on IMDb's /es/news/ locale tab -- an unrelated true-crime piece about the Sherri Papini kidnapping hoax case, not about Las Azules / Women in Blue. Rule G off-topic false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-01T20:05:59Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-11814"
+        },
+        {
+          "attempt": "2026-10-01T20:05:59Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11814",
+          "note": "Confirmed off-topic content: \"Perfect Wife: What Happened To James Reyes After Sherri Papini Hoax\". Classified Rule G, no fetch-dateability work spent beyond this confirmation."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mundiario.com/cineseries/articulo/appletv/azules-thriller-mexicano-que-conecta-pasado-presente/20260701052352054483.html",
+      "firstSeen": "2026-10-01T20:05:59Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T20:05:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "On-topic Las Azules S2 review (\"Las azules: un thriller mexicano que conecta pasado y presente\"), but this exact URL (path segment /cineseries/articulo/... with numeric slug ...054483) 301-redirects (Cloudflare) to the outlet's own canonical URL https://www.mundiario.com/articulo/appletv/azules-thriller-mexicano-que-conecta-pasado-presente/20260701052352424978.html (same title, dropped /cineseries/ segment, different numeric suffix), which is already in data.json at ts=20260701, outlet=Mundiario. Second address for an already-tracked document per Rule I; not added as a new data.json row.",
+      "history": [
+        {
+          "attempt": "2026-10-01T20:05:59Z",
+          "method": "curl -L (redirect trace)",
+          "status": 301,
+          "issue": "LEMA-11814",
+          "note": "301 Moved Permanently (Cloudflare) to the canonical /articulo/... URL already present in data.json. lookup --strict confirmed inDataJson=true for the canonical URL (dataJsonTs=20260701, dataJsonOutlet=Mundiario)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-01T18:07:04Z"
+  "lastUpdated": "2026-10-01T20:05:59Z"
 }
