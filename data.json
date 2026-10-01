@@ -6532,6 +6532,18 @@
     "excerpt": "Official Instagram announcement from Hollywood Reporter en Español revealing Las Azules Season 2's August 12 premiere date, with cast photos credited to Julieta Chavez and Apple TV+."
   },
   {
+    "outlet": "TV Central",
+    "headline": "Las Azules on Apple TV returns for season 2",
+    "url": "https://www.tvcentral.com.au/streaming/apple-tv/las-azules-on-apple-tv-returns-for-season-2/",
+    "date": "Mar 27, 2026",
+    "ts": 20260327,
+    "dateSource": "jsonld_datepublished",
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Apple TV announced that the Spanish-language crime drama 'Las Azules' will premiere its second season on Wednesday, August 12, with new episodes releasing weekly through September 30. The season follows Maria, now promoted to lieutenant, investigating a student activist's death tied to the 1968 student massacre while navigating corruption within her department."
+  },
+  {
     "outlet": "VitalThrills",
     "headline": "Women in Blue (Las Azules) Season 2 Sets August Debut",
     "url": "https://www.vitalthrills.com/women-in-blue-las-azules-season-2-sets-august-debut/",
@@ -7192,6 +7204,19 @@
     "market": "US",
     "type": "Trade",
     "excerpt": "Deadline reports Apple TV+ has renewed the Spanish-language crime drama Women in Blue (Las Azules) for a second season, confirming the show's return after its acclaimed debut.",
+    "storyGroup": "deadline-s2-renewal-20250501"
+  },
+  {
+    "outlet": "Apple TV Press (UK)",
+    "headline": "Apple's critically acclaimed Spanish-language drama 'Women in Blue' ('Las Azules') lands season two renewal",
+    "url": "https://www.apple.com/uk/tv-pr/news/2025/05/apples-critically-acclaimed-spanish-language-drama-women-in-blue-las-azules-lands-season-two-renewal/",
+    "date": "May 20, 2025",
+    "ts": 20250520,
+    "dateSource": "jsonld_datepublished",
+    "lang": "EN",
+    "market": "International",
+    "type": "Trade",
+    "excerpt": "Apple TV+ renewed the Spanish-language crime drama 'Women in Blue' ('Las Azules') for a second season, with the original cast returning. The eight-episode season continues the story of four women who became Mexico's first female police force in 1971.",
     "storyGroup": "deadline-s2-renewal-20250501"
   },
   {
