@@ -9567,9 +9567,9 @@
     {
       "url": "https://www.rottentomatoes.com/tv/women_in_blue_2024/s01/reviews",
       "firstSeen": "2026-09-17T16:06:18Z",
-      "failCount": 1,
-      "lastStatus": "webfetch_empty/firecrawl_500",
-      "lastAttempt": "2026-09-17T16:06:18Z",
+      "failCount": 2,
+      "lastStatus": "webfetch_empty/firecrawl_authwall",
+      "lastAttempt": "2026-10-01T04:02:01Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
@@ -9586,6 +9586,12 @@
           "method": "Firecrawl scrape",
           "status": 500,
           "issue": "LEMA-10452"
+        },
+        {
+          "attempt": "2026-10-01T04:02:01Z",
+          "method": "WebFetch + Firecrawl scrape",
+          "status": "empty/JS-gated (Load More, no review content) + Firecrawl 200 but auth/login-wall content only, no reviews rendered",
+          "issue": "LEMA-11797"
         }
       ]
     },
@@ -16085,7 +16091,129 @@
           "note": "Classified off-topic from search snippet metadata alone (title/description clearly identify a different, unrelated show)."
         }
       ]
+    },
+    {
+      "url": "https://senalnews.com/en/events/international-emmy-awards-nominations-span-22-countries/",
+      "firstSeen": "2026-10-01T04:02:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T04:02:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Señal News roundup of the 2026 International Emmy Awards nominees (announced 2026-09-23). WebFetch confirms no mention of Las Azules or Women in Blue anywhere in the nominee list (Mexico entries listed are Bárbara Mori in Lucca's World, Marcial Maciel: El Lobo de Dios, and La Peor Vuelta al Mundo, none of which are this show). Surfaced only as a broad-query match on 'International Emmy' terms, same pattern as the already-ledgered Deadline entry for this same nominations cycle.",
+      "history": [
+        {
+          "attempt": "2026-10-01T04:02:01Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11797",
+          "note": "WebFetch succeeded; confirmed article does not mention Las Azules/Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://www.hollywoodreporter.com/tv/tv-news/2026-international-emmy-nominees-1236708664/",
+      "firstSeen": "2026-10-01T04:02:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T04:02:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Hollywood Reporter (English) roundup of the 2026 International Emmy Awards nominees (announced 2026-09-23). WebFetch confirms no mention of Las Azules or Women in Blue anywhere in the nominee list (Mexico entries listed are Bárbara Mori in Lucca's World, División Palermo, Marcial Maciel: El Lobo de Dios, and La Peor Vuelta al Mundo, none of which are this show). Surfaced only as a broad-query match on 'International Emmy' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-01T04:02:01Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11797",
+          "note": "WebFetch succeeded (via tollbit redirect); confirmed article does not mention Las Azules/Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://www.iemmys.tv/2026-international-emmy-awards-nominees-announced/",
+      "firstSeen": "2026-10-01T04:02:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T04:02:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Official International Emmy Awards site's own nominee announcement (2026-09-23 cycle). WebFetch confirms a full scan of the nominee list for 'Azules' or 'Blue' in any category returns zero matches; Mexico's four nominated entries (Bárbara Mori in Lucca's World, División Palermo, Marcial Maciel: El Lobo de Dios, La Peor Vuelta al Mundo) do not include Las Azules. Note for audit: this conflicts with the already-tracked es.hollywoodreporter.com entry (already in data.json) which claims Las Azules received a Best Drama Series nomination for the 53rd International Emmy Awards; this primary-source nominee list does not corroborate that claim. Not resolved here (outside this routine's editorial-exclusion rules, which govern candidate classification, not retroactive fact-checking of an existing entry's claims); flagged for visibility only.",
+      "history": [
+        {
+          "attempt": "2026-10-01T04:02:01Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11797",
+          "note": "WebFetch succeeded; confirmed article does not mention Las Azules/Women in Blue anywhere in the full nominee list."
+        }
+      ]
+    },
+    {
+      "url": "https://www.todotvnews.com/en/nominees-announced-for-the-2026-international-emmy-awards/",
+      "firstSeen": "2026-10-01T04:02:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T04:02:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TTV News roundup of the 2026 International Emmy Awards nominees (announced 2026-09-23). WebFetch confirms no mention of Las Azules or Women in Blue anywhere in the nominee list. Surfaced only as a broad-query match on 'International Emmy' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-01T04:02:01Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11797",
+          "note": "WebFetch succeeded; confirmed article does not mention Las Azules/Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://www.apple.com/mx/tv-pr/originals/women-in-blue-las-azules/",
+      "firstSeen": "2026-10-01T04:02:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T04:02:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "MX locale of Apple TV Press evergreen show page, same surface family as the already-ledgered es/lu/it/uk/fr/do/no/pe tv.apple.com show pages and apple.com/{locale}/tv-pr/originals/ press-kit pages (Rule F clarification, LEMA-10632). WebFetch confirms this is the same static press-kit template: key art, synopsis, cast list, executive producer credits, premiere date, trailer links, press contact -- no dated written editorial content once that metadata is stripped. No publish date anywhere on the page.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-01T04:02:01Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11797",
+          "note": "WebFetch succeeded; confirmed static press-kit template matching the already-ledgered sibling locale pages."
+        }
+      ]
+    },
+    {
+      "url": "https://www.threads.com/@luiscurieel/post/Dcj2Tc9gUt3/video-ya-estan-viendo-las-azules-el-tercer-capitulo-ya-esta-disponible-en-appletv-que/",
+      "firstSeen": "2026-10-01T04:02:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T04:02:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Threads post by @luiscurieel ('Ya están viendo las azules? El tercer capítulo ya está disponible en @appletv !! Que gusto trabajar con este equipo @elrovzar @ericasanchezsu thelemonstudios delamori @natalia_tellez amoritarasgado @horacio_garcia_rojas'), dated to the Episode 3 period (August 2026). WebFetch confirms this is an individual's personal account, not an outlet/publisher/brand account; the post's own text ('pleasure working with this team', tagging the showrunner/producer/cast) identifies the poster as a crew-personal account reposting show content, not media coverage. Rule B gate fails on relevance; dateability not evaluated per Rule B.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-01T04:02:01Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11797",
+          "note": "WebFetch succeeded; confirmed individual crew-personal account, not an editorial/outlet account."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-01T00:05:37Z"
+  "lastUpdated": "2026-10-01T04:02:01Z"
 }
