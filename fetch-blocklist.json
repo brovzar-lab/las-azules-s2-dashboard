@@ -15980,7 +15980,112 @@
           "issue": "LEMA-11793"
         }
       ]
+    },
+    {
+      "url": "https://www.filmink.com.au/public-notice/apple-announces-murder-mystery-comedy-the-afterparty-returns-for-a-second-season-on-12-july/",
+      "firstSeen": "2026-10-01T00:05:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T00:05:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "FilmInk (Australia) public-notice item announcing Apple's \"The Afterparty\" returning for a second season on 12 July. A different Apple TV+ title entirely; no mention of Las Azules / Women in Blue. Surfaced by Pass 1 Exa broad EN query on generic \"Apple\" + \"second season\" keyword overlap. Not fetched, per Rule G relevance-gate-first posture.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-01T00:05:37Z",
+          "method": "none (Rule G relevance gate, no fetch required)",
+          "status": null,
+          "issue": "LEMA-11795",
+          "note": "Classified off-topic from search snippet metadata alone (title/description clearly identify a different show)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.filmink.com.au/public-notice/apple-original-thriller-series-shining-girls-starring-emmy-award-winner-elisabeth-moss-to-premiere-globally-friday-29-april-2022-on-apple-tv/",
+      "firstSeen": "2026-10-01T00:05:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T00:05:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "FilmInk (Australia) public-notice item about Apple's thriller \"Shining Girls\" starring Elisabeth Moss premiering April 2022. Unrelated Apple TV+ title; no mention of Las Azules / Women in Blue. Surfaced by Pass 1 Exa broad EN query on generic \"Apple TV\" keyword overlap. Not fetched, per Rule G relevance-gate-first posture.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-01T00:05:37Z",
+          "method": "none (Rule G relevance gate, no fetch required)",
+          "status": null,
+          "issue": "LEMA-11795",
+          "note": "Classified off-topic from search snippet metadata alone (title/description clearly identify a different show)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.desdesoria.es/articulo/noticias/numancia-protagonista-hoy-en-el-estreno-de-la-segunda-temporada-de-el-condensador-de-fluzo-en-la-2/20220113190155619250.html",
+      "firstSeen": "2026-10-01T00:05:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T00:05:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Desde Soria (Spain) local-news piece about the Season 2 premiere of the unrelated Spanish TV program \"El Condensador de Fluzo\" on La 2, featuring Numancia FC. No mention of Las Azules / Women in Blue. Surfaced by Pass 1 Exa broad ES query on generic \"segunda temporada\" keyword overlap. Not fetched, per Rule G relevance-gate-first posture.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-01T00:05:37Z",
+          "method": "none (Rule G relevance gate, no fetch required)",
+          "status": null,
+          "issue": "LEMA-11795",
+          "note": "Classified off-topic from search snippet metadata alone (title/description clearly identify a different, unrelated TV program)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lasprovincias.es/culturas/tv/serie-mafiosos-guy-ritchie-estrenado-segunda-temporada-20260930003955-nt.html",
+      "firstSeen": "2026-10-01T00:05:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T00:05:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Las Provincias (Spain) piece about a Guy Ritchie-created mafia series that just premiered its second season and topped global charts. Unrelated to Las Azules / Women in Blue; no mention of the show. Surfaced by Pass 1 Exa broad ES query on generic \"segunda temporada\" keyword overlap. Not fetched, per Rule G relevance-gate-first posture.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-01T00:05:37Z",
+          "method": "none (Rule G relevance gate, no fetch required)",
+          "status": null,
+          "issue": "LEMA-11795",
+          "note": "Classified off-topic from search snippet metadata alone (title/description clearly identify a different, unrelated series)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.macobserver.com/es/entretenimiento/el-final-de-la-temporada-2-episodio-2-de-best-medicine-explicado-quien-robo-la-farmacia-de-port-wenn-y-por-que/",
+      "firstSeen": "2026-10-01T00:05:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T00:05:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "MacObserver (Spanish edition) recap piece explaining the Season 2 Episode 2 finale of the unrelated show \"Best Medicine\" (Port Wenn pharmacy storyline). No mention of Las Azules / Women in Blue. Surfaced by Pass 1 Exa broad ES query on generic \"temporada 2\" keyword overlap. Not fetched, per Rule G relevance-gate-first posture.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-01T00:05:37Z",
+          "method": "none (Rule G relevance gate, no fetch required)",
+          "status": null,
+          "issue": "LEMA-11795",
+          "note": "Classified off-topic from search snippet metadata alone (title/description clearly identify a different, unrelated show)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-09-30T20:00:00Z"
+  "lastUpdated": "2026-10-01T00:05:37Z"
 }
