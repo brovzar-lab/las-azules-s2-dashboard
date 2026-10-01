@@ -1,5 +1,29 @@
 [
   {
+    "outlet": "Mundiario",
+    "headline": "Las azules convierte el dolor del 68 en una historia imposible de ignorar",
+    "url": "https://mundiario.com/articulo/appletv/azules-convierte-dolor-68-historia-imposible-ignorar/20261001080418444331.html",
+    "date": "Oct 1, 2026",
+    "ts": 20261001,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Review",
+    "excerpt": "Opinion piece calling Las Azules Season 2 one of the best series of the year, praising its exploration of death, trauma and corruption tied to the 1968 Tlatelolco massacre; singles out Ximena Sarinana as the standout performer alongside Barbara Mori, Natalia Tellez and Amorita Rasgado."
+  },
+  {
+    "outlet": "Fiction Horizon",
+    "headline": "'Women in Blue' Season 2 Episode 8 Finale Recap & Ending Explained: How the Azules Stop the Executioner",
+    "url": "https://fictionhorizon.com/women-in-blue-season-2-episode-8-finale-recap-ending-explained-how-the-azules-stop-the-executioner",
+    "date": "Oct 1, 2026",
+    "ts": 20261001,
+    "dateSource": "article_published_time",
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Recap and ending-explained piece on the Season 2 finale, detailing how Goyo is revealed as the Executioner tied to the 1968 massacre cover-up, and how the Azules earn institutional recognition without fully resolving the department's corruption."
+  },
+  {
     "outlet": "Comic Basics",
     "headline": "Will 'Las Azules' Return for a Season 3 as Apple TV Weighs the Show's Future?",
     "url": "https://www.comicbasics.com/will-las-azules-return-for-a-season-3-as-apple-tv-weighs-the-shows-future/",
@@ -8639,6 +8663,18 @@
     "market": "US",
     "type": "Trade",
     "excerpt": "Apple TV+ announced a global premiere date of July 31, 2024 for its ten-episode Spanish-language crime drama Women in Blue, set in 1970 and inspired by true events, following four women who join Mexico first female police force and uncover a serial killer investigation."
+  },
+  {
+    "outlet": "Mas Telenovelas",
+    "headline": "Elenco de la serie Las Azules",
+    "url": "https://mastelenovelas.com/elenco-de-la-serie-las-azules",
+    "date": "Oct 19, 2022",
+    "ts": 20221019,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Cast announcement article detailing Apple TV+'s reveal of the Las Azules ensemble, including Barbara Mori as Maria, with background on the show's premise, 1970s setting and executive producers Fernando Rovzar and Pablo Aramendi."
   },
   {
     "outlet": "Deadline",
