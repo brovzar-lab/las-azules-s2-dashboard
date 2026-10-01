@@ -16364,7 +16364,141 @@
           "note": "Firecrawl refused: 'we do not support this site' (facebook.com blanket refusal)."
         }
       ]
+    },
+    {
+      "url": "https://descargawarez.com/threads/las-azules-2026-temporada-2-web-dl-1080p-dual-mediafire-transfer-mega.91399/",
+      "firstSeen": "2026-10-01T16:08:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T16:08:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_piracy_or_unauthorized_distribution",
+      "reviewable": false,
+      "skipNote": "Classified by Rule E on search-result title/metadata alone, no fetch attempted (dateability is irrelevant to Rule E, so no fallback-chain attempt is spent): page is a forum download listing titled 'Las azules [2026] Temporada 2 [WEB-DL 1080p][Dual][MediaFire/Transfer/Mega]', carrying release-quality labelling (WEB-DL 1080p, Dual audio) and multiple unauthorized-host download links (MediaFire/Transfer/Mega), matching Rule E's named signals exactly. Surfaced by LEMA-11812 Exa ES Pass 1.",
+      "history": [
+        {
+          "attempt": "2026-10-01T16:08:37Z",
+          "method": "Classified from search-result title (no fetch; Rule E dateability-irrelevant)",
+          "status": null,
+          "issue": "LEMA-11812"
+        }
+      ]
+    },
+    {
+      "url": "https://piratawarez.com/threads/las-azules-2026-temporada-2-web-dl-1080p-dual-mediafire-transfer-mega.22326/",
+      "firstSeen": "2026-10-01T16:08:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T16:08:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_piracy_or_unauthorized_distribution",
+      "reviewable": false,
+      "skipNote": "Classified by Rule E on search-result title/metadata alone, no fetch attempted: page is a forum download listing titled 'Las azules [2026] Temporada 2 [WEB-DL 1080p][Dual][MediaFire/Transfer/Mega]', same release-quality labelling and unauthorized-host links pattern as the descargawarez.com sibling row. Surfaced by LEMA-11812 Exa ES Pass 1.",
+      "history": [
+        {
+          "attempt": "2026-10-01T16:08:37Z",
+          "method": "Classified from search-result title (no fetch; Rule E dateability-irrelevant)",
+          "status": null,
+          "issue": "LEMA-11812"
+        }
+      ]
+    },
+    {
+      "url": "https://flixlandia.com.br/ted-lasso-temporada-4-episodio-9-critica-final-explicado-resumo/",
+      "firstSeen": "2026-10-01T16:08:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-01T16:08:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Page is a Flixlandia review/recap of the Ted Lasso Season 4 finale, a completely different Apple TV show; surfaced only via broad Exa ES query match on shared site/format (Flixlândia also covers Las Azules on other URLs). No fetch needed: title alone ('Ted Lasso temporada 4 episodio 9: crítica, final explicado e resumo') confirms it is off-topic for Las Azules. Surfaced by LEMA-11812 Exa ES Pass 1.",
+      "history": [
+        {
+          "attempt": "2026-10-01T16:08:37Z",
+          "method": "Classified from search-result title (off-topic, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-11812"
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd6LLNxlqYH/",
+      "firstSeen": "2026-10-01T16:08:37Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T16:08:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "reviewable": false,
+      "skipNote": "WebFetch succeeded: account is 'stewarttalentnewyork', a talent/booking agency account posting \"Be sure to see Bruno Bichir in the season two finale of LAS AZULES, streaming today on Apple TV+!\" (posted Sep 30, 2026). This is a vendor/representation agency promoting a client's work, not an outlet or editorial-brand account -- Rule B vendor/supplier gate applies regardless of dateability. Surfaced by LEMA-11812 Exa EN Pass 1.",
+      "history": [
+        {
+          "attempt": "2026-10-01T16:08:37Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11812",
+          "note": "Succeeded; classified as vendor/promo account per Rule B, not a fetch failure."
+        }
+      ]
+    },
+    {
+      "url": "https://www.articulo14.es/cultura/las-azules-20240801.html",
+      "firstSeen": "2026-10-01T16:08:37Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-01T16:08:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-10-01T16:08:37Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-11812"
+        },
+        {
+          "attempt": "2026-10-01T16:08:37Z",
+          "method": "Firecrawl scrape",
+          "status": 500,
+          "issue": "LEMA-11812",
+          "note": "Firecrawl returned a 500 error (not a per-site refusal). Full fallback-chain failure this attempt."
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/groups/868196790014259/posts/3523075744526337/",
+      "firstSeen": "2026-10-01T16:08:37Z",
+      "failCount": 1,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-01T16:08:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-10-01T16:08:37Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11812",
+          "note": "Returned only a truncated group/post title fragment ('Feria local vc | Quien es la mejor actriz sonriendo?'), no usable post body -- treated as an empty/near-empty-body failure, not a soft pass."
+        },
+        {
+          "attempt": "2026-10-01T16:08:37Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11812",
+          "note": "Blocked. Full fallback-chain failure this attempt; content too incomplete to make a Rule B/G classification call, so ledgered as a fetch failure rather than guessed."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-01T14:05:00Z"
+  "lastUpdated": "2026-10-01T16:08:37Z"
 }
