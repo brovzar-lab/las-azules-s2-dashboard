@@ -18106,7 +18106,194 @@
           "note": "Confirmed same post as latinamedia.co/las-azules/ (already in data.json); excluded as Rule I second address."
         }
       ]
+    },
+    {
+      "url": "https://www.tvinsider.com/1294683/boston-blue-season-2-danny-sean-reagan-donnie-wahlberg-mika-amonsen/",
+      "firstSeen": "2026-10-02T20:04:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-02T20:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Insider article about 'Boston Blue' Season 2 (Danny & Sean Reagan, Donnie Wahlberg). No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic 'Season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T20:04:53Z",
+          "method": "Editorial relevance skip (Rule G, no fetch attempted)",
+          "status": null,
+          "issue": "LEMA-11883",
+          "note": "Off-topic false positive surfaced by Pass 1 (Exa) broad-query match; disposed on relevance per Rule G, no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://ppagkc.org/article/boston-blue-season-2-unraveling-the-cliffhanger-what-we-know-so-far",
+      "firstSeen": "2026-10-02T20:04:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-02T20:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Boston Blue' Season 2 cliffhanger. Unrelated show; surfaced only as a broad-query match on generic 'Season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T20:04:53Z",
+          "method": "Editorial relevance skip (Rule G, no fetch attempted)",
+          "status": null,
+          "issue": "LEMA-11883",
+          "note": "Off-topic false positive surfaced by Pass 1 (Exa) broad-query match; disposed on relevance per Rule G, no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://soltohotel.com/article/liev-schreiber-zazie-beetz-and-stephen-graham-star-in-apple-tv-s-nocturne-a-chilling-thriller",
+      "firstSeen": "2026-10-02T20:04:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-02T20:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Apple TV's 'Nocturne' (Liev Schreiber, Zazie Beetz, Stephen Graham). Different Apple TV+ title entirely; surfaced only as a broad-query match on 'Apple TV' + thriller terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T20:04:53Z",
+          "method": "Editorial relevance skip (Rule G, no fetch attempted)",
+          "status": null,
+          "issue": "LEMA-11883",
+          "note": "Off-topic false positive surfaced by Pass 1 (Exa) broad-query match; disposed on relevance per Rule G, no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://noidallas.org/article/will-estes-returns-boston-blue-season-2-cast-update",
+      "firstSeen": "2026-10-02T20:04:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-02T20:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Boston Blue' Season 2 cast update (Will Estes). Unrelated show; surfaced only as a broad-query match on generic 'Season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T20:04:53Z",
+          "method": "Editorial relevance skip (Rule G, no fetch attempted)",
+          "status": null,
+          "issue": "LEMA-11883",
+          "note": "Off-topic false positive surfaced by Pass 1 (Exa) broad-query match; disposed on relevance per Rule G, no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://flixlandia.com.br/rainha-vermelha-2-temporada-loba-negra-resumo-critica-final-explicado/",
+      "firstSeen": "2026-10-02T20:04:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-02T20:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Brazilian recap/review of 'Rainha Vermelha' (Red Queen) Season 2 'Loba Negra'. Different Netflix title entirely; surfaced only as a broad-query match on Spanish/Portuguese 'segunda temporada' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T20:04:53Z",
+          "method": "Editorial relevance skip (Rule G, no fetch attempted)",
+          "status": null,
+          "issue": "LEMA-11883",
+          "note": "Off-topic false positive surfaced by Pass 1 (Exa) broad-query match; disposed on relevance per Rule G, no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvazteca.com/aztecauno/venga-la-alegria/exclusiva-malinche-el-musical-regresa-segunda-temporada/",
+      "firstSeen": "2026-10-02T20:04:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-02T20:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Azteca piece about 'Malinche, el musical' returning for a second season (a stage musical, not Las Azules). Unrelated; surfaced only as a broad-query match on 'segunda temporada' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T20:04:53Z",
+          "method": "Editorial relevance skip (Rule G, no fetch attempted)",
+          "status": null,
+          "issue": "LEMA-11883",
+          "note": "Off-topic false positive surfaced by Pass 1 (Exa) broad-query match; disposed on relevance per Rule G, no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://farandula.co/ya-esta-disponible-en-netflix-la-segunda-temporada-de-medusa-con-mas-traicion-mas-poder-y-mas-caribe/",
+      "firstSeen": "2026-10-02T20:04:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-02T20:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Netflix's 'Medusa' Season 2. Different streamer and title entirely; surfaced only as a broad-query match on 'segunda temporada' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T20:04:53Z",
+          "method": "Editorial relevance skip (Rule G, no fetch attempted)",
+          "status": null,
+          "issue": "LEMA-11883",
+          "note": "Off-topic false positive surfaced by Pass 1 (Exa) broad-query match; disposed on relevance per Rule G, no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://golpepolitico.com/2026/10/02/de-los-juguetes-a-la-pantalla-grande-el-elenco-de-matchbox-conecta-con-los-fans-mexicanos/",
+      "firstSeen": "2026-10-02T20:04:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-02T20:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about the 'Matchbox' toy movie cast connecting with Mexican fans. Unrelated film; surfaced only as a broad-query match on generic Mexican-cast entertainment terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T20:04:53Z",
+          "method": "Editorial relevance skip (Rule G, no fetch attempted)",
+          "status": null,
+          "issue": "LEMA-11883",
+          "note": "Off-topic false positive surfaced by Pass 1 (Exa) broad-query match; disposed on relevance per Rule G, no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/reel/DchqgFlyKJA/",
+      "firstSeen": "2026-10-02T20:04:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T20:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Instagram reel posted by @embichannel, an individual content-creator/fan-commentary account (YouTube/TikTok/Instagram personality covering TV/book fandoms, e.g. Pretty Little Liars, Teen Wolf) -- not a publisher, outlet, or official show/network account. Caption: \"Las AZULES es una serie imperdible de Apple TV y tiene un reparto orgullosamente mexicano!\" Posted 2026-08-26, promoting S2's Mexican cast; fan-repost of show content under Rule B, not media coverage.",
+      "history": [
+        {
+          "attempt": "2026-10-02T20:04:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11883",
+          "note": "WebFetch succeeded; confirmed account is an individual fan/content-creator channel (@embichannel), not an editorial brand or official show account."
+        },
+        {
+          "attempt": "2026-10-02T20:04:53Z",
+          "method": "Editorial relevance skip (Rule B, account-type gate)",
+          "status": null,
+          "issue": "LEMA-11883",
+          "note": "Disposed on relevance per Rule B (fan-repost account), not fetched for dateability purposes beyond confirming account type."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-02T18:00:00Z"
+  "lastUpdated": "2026-10-02T20:04:53Z"
 }
