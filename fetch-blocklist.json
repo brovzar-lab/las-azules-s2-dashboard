@@ -18086,7 +18086,27 @@
           "note": "India (kn) locale Apple TV show landing page for Women in Blue, same surface family as the already-ledgered US/IT/FR locale show pages (Rule F, per LEMA-10217/LEMA-10632: classify by surface family, n"
         }
       ]
+    },
+    {
+      "url": "https://latinamedia.co/?p=6280",
+      "firstSeen": "2026-10-02T18:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T18:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "WordPress post-ID permalink (?p=6280) for the same LatinaMedia.Co article already tracked at https://latinamedia.co/las-azules/ (in data.json, ts=20240809). Fetched successfully via WebFetch: identical outlet, headline (\"'Las Azules' Tells the Story of Mexico City's First Women Police Squad\"), and Aug 9, 2024 publish date confirm this is the same CMS post at a second address, not a distinct document. Second-address duplicate per Rule I.",
+      "history": [
+        {
+          "attempt": "2026-10-02T18:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11882",
+          "note": "Confirmed same post as latinamedia.co/las-azules/ (already in data.json); excluded as Rule I second address."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-02T14:07:10Z"
+  "lastUpdated": "2026-10-02T18:00:00Z"
 }
