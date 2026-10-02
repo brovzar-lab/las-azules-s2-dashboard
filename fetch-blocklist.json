@@ -17846,7 +17846,247 @@
       "skipReason": "editorial_redundant_syndication",
       "skipNote": "Rule I second address: WordPress query-string permalink (link rel=canonical confirmed via raw fetch) for the same post as already-tracked https://www.theupcoming.co.uk/2024/07/12/the-feeling-of-wanting-to-be-a-part-of-something-and-youre-unwelcome-just-because-youre-a-woman-is-unfortunately-not-a-strange-thing-to-feel-barbara-mori-ximena-sarinana-ferna/ (ts 20240712, data.json). Caught by manual canonical check, not by lookup's normalized key (same ?p= vs dated-path normalization gap as the HighOnFilms/CultOfMac rows above).",
       "reviewable": false
+    },
+    {
+      "url": "https://mynorthminster.org/article/widow-s-bay-season-2-release-date-everything-we-know-apple-tv-news",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about \"Widow's Bay\" Season 2, an entirely different show. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on \"Apple TV Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "Article about \"Widow's Bay\" Season 2, an entirely different show. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on \"Apple TV Season 2\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://api.okm-model.lawpavilion.com/get-ready-for-the-queen-of-the-south-meet-the-cast-and-characters-of-la-reina-del-sur-season-2",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about \"La Reina del Sur\" Season 2 cast, an entirely different show. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "Article about \"La Reina del Sur\" Season 2 cast, an entirely different show. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match."
+        }
+      ]
+    },
+    {
+      "url": "https://meowystudio.com/article/widow-s-bay-season-2-all-the-latest-updates-and-release-date-speculations",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about \"Widow's Bay\" Season 2, an entirely different show. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "Article about \"Widow's Bay\" Season 2, an entirely different show. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match."
+        }
+      ]
+    },
+    {
+      "url": "https://pottingshed.org/article/kerry-washington-elisabeth-moss-star-in-imperfect-women-first-look-apple-tv-thriller",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about \"Imperfect Women\", a different Apple TV+ title starring Kerry Washington and Elisabeth Moss. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "Article about \"Imperfect Women\", a different Apple TV+ title starring Kerry Washington and Elisabeth Moss. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on Apple TV term"
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/maussan_television",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Maussan Televisión is Jaime Maussan's paranormal/UFO content channel profile page, entirely unrelated to Las Azules / Women in Blue. Surfaced via Exa broad-query match, likely on generic Spanish terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "Maussan Televisión is Jaime Maussan's paranormal/UFO content channel profile page, entirely unrelated to Las Azules / Women in Blue. Surfaced via Exa broad-query match, likely on generic Spanish terms"
+        }
+      ]
+    },
+    {
+      "url": "https://youtube.com/@loslunesseriefilosTV/videos",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Channel /videos listing page for \"Los Lunes Seriéfilos TV\", a general Spanish-language TV review channel. WebFetch returned only YouTube's generic footer/navigation chrome, no video titles or descriptions; no content specifically about Las Azules could be identified on this URL. Treated as a relevance miss (channel listing, not a specific piece of coverage), surfaced via broad semantic match.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "WebFetch (JS-gated, returned no video listing content)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "Channel /videos listing page for \"Los Lunes Seriéfilos TV\", a general Spanish-language TV review channel. WebFetch returned only YouTube's generic footer/navigation chrome, no video titles or descript"
+        }
+      ]
+    },
+    {
+      "url": "https://abc.com.py/internacionales/2026/10/02/liliana-bocanegra-reivindica-a-directoras-de-cine-latinas-nadie-nos-ha-regalado-nada",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Interview with director Liliana Bocanegra about Latin American women film directors generally. No mention of Las Azules / Women in Blue, Fernando Rovzar, or any Lemon Studios production. Surfaced via Exa broad-query match on \"directoras\"/\"Azules\"-adjacent terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "Interview with director Liliana Bocanegra about Latin American women film directors generally. No mention of Las Azules / Women in Blue, Fernando Rovzar, or any Lemon Studios production. Surfaced via "
+        }
+      ]
+    },
+    {
+      "url": "https://stories.rtve.es/play/newstory/la-1/echamos-muchisimo-de-menos-los-duelos-de-eltuneltve",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RTVE piece about the Spanish game show \"El Túnel\" (#ElTunelTVE). Entirely unrelated to Las Azules / Women in Blue. Surfaced via Exa broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "RTVE piece about the Spanish game show \"El Túnel\" (#ElTunelTVE). Entirely unrelated to Las Azules / Women in Blue. Surfaced via Exa broad-query match."
+        }
+      ]
+    },
+    {
+      "url": "https://cadenaser.com/murcia/2026/10/02/ni-verano-ni-azul-el-modo-viernes-mas-pasado-por-agua-radio-murcia",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Cadena SER Murcia radio segment \"Modo Viernes\", a weather/local-affairs piece using \"azul\" as a wordplay (rainy weather), not a reference to the show. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on \"azul\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "Cadena SER Murcia radio segment \"Modo Viernes\", a weather/local-affairs piece using \"azul\" as a wordplay (rainy weather), not a reference to the show. No mention of Las Azules / Women in Blue. Surface"
+        }
+      ]
+    },
+    {
+      "url": "https://mtnewsinforma.com.br/spider-noir-produtor-revela-o-que-poderia-acontecer-na-segunda-temporada",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about \"Spider Noir\" Season 2, an entirely different show/franchise. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on \"segunda temporada\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "Article about \"Spider Noir\" Season 2, an entirely different show/franchise. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on \"segunda temporada\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/p/Dd-6a8oySLk",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_vendor_promo",
+      "skipNote": "Instagram account \"SeriesRoly\", a TV series distribution/reseller vendor account. Post announces the complete Season 2 is available and provides a synopsis plus contact information (phone/website) for obtaining the series, posted 2026-10-02. This is vendor/reseller promotional content, not media coverage of the show, per Rule B (vendor/supplier account gate); dateability was not pursued because relevance already fails.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "WebFetch (confirmed vendor account and promotional content)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "Instagram account \"SeriesRoly\", a TV series distribution/reseller vendor account. Post announces the complete Season 2 is available and provides a synopsis plus contact information (phone/website) for"
+        }
+      ]
+    },
+    {
+      "url": "https://tv.apple.com/kn/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T14:07:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "India (kn) locale Apple TV show landing page for Women in Blue, same surface family as the already-ledgered US/IT/FR locale show pages (Rule F, per LEMA-10217/LEMA-10632: classify by surface family, not per-locale). Bare show/catalog page: cast, synopsis, subscription info, no written editorial content about the show once the metadata is stripped. No critic attribution rendered on this surface (unlike the RT s02 score page), so no Rule H mining duty applies.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "not fetched (Rule F evaluated before dateability; surface family already established via sibling US/IT/FR locale rows)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "India (kn) locale Apple TV show landing page for Women in Blue, same surface family as the already-ledgered US/IT/FR locale show pages (Rule F, per LEMA-10217/LEMA-10632: classify by surface family, n"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-02T10:10:13Z"
+  "lastUpdated": "2026-10-02T14:07:10Z"
 }
