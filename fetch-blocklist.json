@@ -17390,9 +17390,9 @@
     {
       "url": "https://legacy.prod.metacritic.com/tv/women-in-blue/season-2",
       "firstSeen": "2026-10-02T04:06:42Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 403,
-      "lastAttempt": "2026-10-02T04:06:42Z",
+      "lastAttempt": "2026-10-02T10:10:13Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -17407,6 +17407,13 @@
           "status": 403,
           "issue": "LEMA-11827",
           "note": "Firecrawl returned HTTP 200 envelope but body was literally '403 Forbidden' (13 bytes) -- full-chain failure, not a soft pass. Note: this 'legacy.prod.' hostname is distinct from the canonical www.metacritic.com host, which already has ledgered rows for the season-2 (Rule F, LEMA-9882/LEMA-10217) and critic-reviews (Rule H, LEMA-10454) surfaces for this title; this candidate could not be fetched to confirm whether it mirrors either of those, so it is logged as a plain fetch failure rather than classified."
+        },
+        {
+          "attempt": "2026-10-02T10:10:13Z",
+          "method": "WebFetch+Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11871",
+          "note": "Both methods still 403 (Firecrawl envelope 200 but body literally '403 Forbidden'). Second consecutive full-chain failure for this staging-subdomain mirror of already-permanentSkip www.metacritic.com/tv/women-in-blue/season-2 (Rule F)."
         }
       ]
     },
@@ -17707,7 +17714,139 @@
           "note": "og:url / article:published_time confirm canonical already tracked in data.json."
         }
       ]
+    },
+    {
+      "url": "https://www.apple.com/au/tv-pr/originals/women-in-blue-las-azules",
+      "firstSeen": "2026-10-02T10:10:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T10:10:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "AU locale mirror of the Apple TV Press show-overview page (apple.com/{locale}/tv-pr/originals/women-in-blue-las-azules family, same family already ruled Rule F on LEMA-10627/10628). Confirmed via WebFetch: press-kit style page (cast, synopsis, episode list, photos, press contact); no substantive written editorial prose; only a release date (Aug 12, 2026) is visible, no article publish date.",
+      "reviewable": false
+    },
+    {
+      "url": "https://www.apple.com/ca/tv-pr/originals/women-in-blue-las-azules",
+      "firstSeen": "2026-10-02T10:10:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T10:10:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "CA locale mirror of the Apple TV Press show-overview page, same family as the AU/ES/LU mirrors already ruled Rule F (LEMA-10627/10628). Confirmed via WebFetch: press-kit style page, no substantive written editorial prose, only a release date visible.",
+      "reviewable": false
+    },
+    {
+      "url": "https://www.justwatch.com/de/Serie/women-in-blue/Staffel-2",
+      "firstSeen": "2026-10-02T10:10:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T10:10:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch DE legal-streaming-availability aggregator page for Staffel 2. Confirmed via WebFetch: episode listing, cast/crew, aggregated ratings (JustWatch/IMDb/RT scores), streaming-chart ranking, and a one-line boilerplate synopsis; the only date on the page is the crawler's own 'we searched N streaming services on <date>' update stamp, not a publish date. Stripped of the listing/ratings tables, no written editorial content remains. Not a Rule E candidate (legal-availability guides are explicitly out of Rule E's scope) but fails Rule F's strip test.",
+      "reviewable": false
+    },
+    {
+      "url": "https://macdailynews.com/2026/03/26/apple-tvs-spanish-language-crime-drama-women-in-blue-las-azules-returns-for-season-two/amp/",
+      "firstSeen": "2026-10-02T10:10:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T10:10:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second address: AMP rendering variant of already-tracked https://macdailynews.com/2026/03/26/apple-tvs-spanish-language-crime-drama-women-in-blue-las-azules-returns-for-season-two/ (ts 20260326, data.json). Same CMS post, confirmed via WebFetch body match; no distinct content.",
+      "reviewable": false
+    },
+    {
+      "url": "https://macdailynews.com/2026/08/11/apple-tv-series-las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth-reuters/amp/",
+      "firstSeen": "2026-10-02T10:10:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T10:10:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second address: AMP rendering variant of already-tracked https://macdailynews.com/2026/08/11/apple-tv-series-las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth-reuters/ (ts 20260811, data.json). Same CMS post (Reuters pickup), no distinct content.",
+      "reviewable": false
+    },
+    {
+      "url": "https://www.mactech.com/2025/09/25/apple-tvs-women-in-blue-nominated-for-international-emmy-award/amp/",
+      "firstSeen": "2026-10-02T10:10:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T10:10:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second address: AMP rendering variant of already-tracked https://www.mactech.com/2025/09/25/apple-tvs-women-in-blue-nominated-for-international-emmy-award/ (ts 20250925, data.json). Same CMS post, no distinct content.",
+      "reviewable": false
+    },
+    {
+      "url": "https://appleworld.today/?p=118534",
+      "firstSeen": "2026-10-02T10:10:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T10:10:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second address: WordPress query-string permalink for the same post as already-tracked https://appleworld.today/2025/09/apple-tvs-women-in-blue-nominated-for-international-emmy-award/ (ts 20250925, data.json). Confirmed via WebFetch body/headline match (‘Apple TV+'s “Women in Blue” nominated for International Emmy Award’).",
+      "reviewable": false
+    },
+    {
+      "url": "https://depor.com/noticias/las-azules/",
+      "firstSeen": "2026-10-02T10:10:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T10:10:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "DEPOR tag/archive index page, not a standalone article. Confirmed via WebFetch: page is primarily navigation/footer plus a single embedded teaser for an undated-URL article (‘Las azules’: ¿de qué trata y fecha de estreno de la serie de Apple TV+?’, dated 2024-08-20); that article's own distinct permalink could not be located via site crawl or web search. Stripped of nav/teaser, no substantive written content remains on this URL itself.",
+      "reviewable": false
+    },
+    {
+      "url": "https://www.highonfilms.com/?p=200909",
+      "firstSeen": "2026-10-02T10:10:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T10:10:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second address: WordPress query-string permalink (link rel=canonical confirmed via raw fetch) for the same post as already-tracked https://www.highonfilms.com/women-in-blue-season-2-episodes-release-date/ (ts 20260906, data.json).",
+      "reviewable": false
+    },
+    {
+      "url": "https://www.cultofmac.com/?p=856035",
+      "firstSeen": "2026-10-02T10:10:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T10:10:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second address: WordPress query-string permalink (link rel=canonical confirmed via raw fetch) for the same post as already-tracked https://www.cultofmac.com/news/women-in-blue-crime-series-on-apple-tv (ts 20240510, data.json).",
+      "reviewable": false
+    },
+    {
+      "url": "https://theupcoming.co.uk/?p=491255",
+      "firstSeen": "2026-10-02T10:10:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T10:10:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second address: WordPress query-string permalink (link rel=canonical confirmed via raw fetch) for the same post as already-tracked https://www.theupcoming.co.uk/2024/07/12/the-feeling-of-wanting-to-be-a-part-of-something-and-youre-unwelcome-just-because-youre-a-woman-is-unfortunately-not-a-strange-thing-to-feel-barbara-mori-ximena-sarinana-ferna/ (ts 20240712, data.json). Caught by manual canonical check, not by lookup's normalized key (same ?p= vs dated-path normalization gap as the HighOnFilms/CultOfMac rows above).",
+      "reviewable": false
     }
   ],
-  "lastUpdated": "2026-10-02T08:07:51.000Z"
+  "lastUpdated": "2026-10-02T10:10:13Z"
 }
