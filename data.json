@@ -259,6 +259,18 @@
     "storyGroup": "appletv-s2-allstreaming-20260930"
   },
   {
+    "outlet": "Télé Star",
+    "headline": "Las Azules (Apple TV) : la fin de la saison 2 expliquée",
+    "url": "https://www.telestar.fr/serie_tv/las-azules-apple-tv-la-fin-de-la-saison-2-expliquee-1784538",
+    "date": "Sep 30, 2026",
+    "ts": 20260930,
+    "dateSource": "visible_dateline",
+    "lang": "FR",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Finale explainer for the Goyo episode: covers the reveal about the Verdugo, Escobedo's fate, and how the Azules' final case blurs the line between justice and vengeance."
+  },
+  {
     "outlet": "Midgard Times",
     "headline": "Apple TV 'Women in Blue' Season 2 Episode 8 Review - The Pieces Finally Have to Fit",
     "url": "https://moviesr.net/p-apple-tv-women-in-blue-season-2-episode-8-review-the-pieces-finally-have-to-fit",
@@ -7030,6 +7042,18 @@
     "excerpt": "El actor luso-venezolano Albi De Abreu se une al elenco de 'Las Azules', serie que recibió una nominación a Mejor Serie Dramática en los 53 International Emmy Awards."
   },
   {
+    "outlet": "N+ (Nmas.com.mx)",
+    "headline": "Premios Emmy Internacionales 2025: Ellos Son los Mexicanos que Brillaron en la Ceremonia",
+    "url": "https://www.nmas.com.mx/entretenimiento/premios-emmy-internacionales-2025-ellos-son-los-mexicanos-que-brillaron-en-la-ceremonia/",
+    "date": "Nov 25, 2025",
+    "ts": 20251125,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Recap of Mexican talent at the International Emmy Awards ceremony; notes that Las Azules, produced by Estudios Lemon for Apple TV+, competed for Best Drama Series, inspired by Mexico's first female police officers and recognized for its narrative strength and visual craft."
+  },
+  {
     "outlet": "Hollywood Reporter en Español",
     "headline": "Las Azules: la serie mexicana nominada al Emmy Internacional",
     "url": "https://es.hollywoodreporter.com/?p=9808",
@@ -7075,6 +7099,18 @@
     "market": "Mexico",
     "type": "Entertainment",
     "excerpt": "Fernando Rovzar attended a charity race for the Amorinfinito foundation and expressed enthusiasm about Las Azules' International Emmy nomination, saying he will compete for the award on November 24 in New York."
+  },
+  {
+    "outlet": "VideoAge International",
+    "headline": "2025 International Emmy® Noms Unveiled",
+    "url": "https://www.videoageinternational.net/2025/09/26/news/2025-international-emmy-noms-unveiled/",
+    "date": "Sep 26, 2025",
+    "ts": 20250926,
+    "dateSource": "article_published_time",
+    "lang": "EN",
+    "market": "International",
+    "type": "Trade",
+    "excerpt": "Announcement of the 2025 International Emmy nominations; Las Azules (Women in Blue) from Lemon Studios/Apple TV+ (Mexico) is named among the nominated drama series."
   },
   {
     "outlet": "Apple World Today",
@@ -8617,6 +8653,18 @@
     "excerpt": "Profiles the Apple TV+ series dramatizing Mexico's first all-female police force, created by Fernando Rovzar and Pablo Aramendi, following four women -- Maria, Valentina, Angeles and Gabina -- who join the force and conduct a secret investigation into a serial killer male officers could not find."
   },
   {
+    "outlet": "Film Music Reporter",
+    "headline": "‘Women in Blue’ (‘Las Azules’) Soundtrack Album Released",
+    "url": "https://filmmusicreporter.com/2024/07/31/women-in-blue-las-azules-soundtrack-album-released/",
+    "date": "Jul 31, 2024",
+    "ts": 20240731,
+    "dateSource": "visible_dateline",
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Platoon has released the soundtrack album for the Mexican Apple TV+ series, featuring original compositions by Lucas Vidal plus the main title song “No Soy Tuya” performed by Ximena Sariñana."
+  },
+  {
     "outlet": "Tom's Guide",
     "headline": "How to watch 'Women in Blue' online and from anywhere now",
     "url": "https://www.tomsguide.com/entertainment/apple-tv-plus/how-to-watch-women-in-blue-online-and-from-anywhere-now",
@@ -9253,5 +9301,17 @@
     "market": "International",
     "type": "Trade",
     "excerpt": "Trade press report on Apple TV+'s original series order for Las Azules, about four women joining Mexico's first female police force who discover their unit is a publicity stunt masking a serial-killer investigation."
+  },
+  {
+    "outlet": "Apple World Today",
+    "headline": "Apple TV+ orders Las Azules, a new Spanish-language crime drama",
+    "url": "https://appleworld.today/2022/05/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama/",
+    "date": "May 24, 2022",
+    "ts": 20220524,
+    "dateSource": "article_published_time",
+    "lang": "EN",
+    "market": "US",
+    "type": "Tech",
+    "excerpt": "Apple TV+ has ordered a 10-episode Spanish-language crime drama centered on four women who defy ultra-conservative norms to join Mexico's first female police force, only to discover their squad is a publicity stunt distracting from a real serial-killer investigation."
   }
 ]
