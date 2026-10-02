@@ -6391,6 +6391,18 @@
     "storyGroup": "appletv-s2-trailer-20260721"
   },
   {
+    "outlet": "Cinefilos.it",
+    "headline": "Las Azules - Stagione 2: ecco il trailer della serie crime dal 12 agosto su Apple Tv",
+    "url": "https://cinefilos.it/serie-tv/news/las-azules-stagione-2-ecco-il-trailer-della-serie-crime-dal-12-agosto-su-apple-tv-715167",
+    "date": "Jul 21, 2026",
+    "ts": 20260721,
+    "dateSource": "article_published_time",
+    "lang": "IT",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Ecco il trailer di Las Azules - Stagione 2, la serie crime in lingua spagnola con un cast e una troupe interamente latinoamericani."
+  },
+  {
     "outlet": "Mexico News Daily",
     "headline": "Great Mexican television series that have returned in 2026 (and two more we can't wait to see)",
     "url": "https://mexiconewsdaily.com/culture/great-mexican-television-series-that-have-returned-in-2026-and-two-more-we-cant-wait-to-see/",
@@ -8087,6 +8099,18 @@
     "excerpt": "Axios coverage of the Season 1 premiere of Las Azules (Women in Blue), the AppleTV+ series depicting Mexico's first female police force."
   },
   {
+    "outlet": "The Daily Dot",
+    "headline": "Women Tackle Crime and Prejudice in Apple TV's 'Women in Blue'",
+    "url": "https://dailydot.com/women-in-blue-interview",
+    "date": "Aug 7, 2024",
+    "ts": 20240807,
+    "dateSource": "article_published_time",
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Interview with the cast and director of Apple TV's 'Women in Blue' (Las Azules). Director Fernando Rovzar discusses the real-life research behind the series, and the cast discusses how the women officers were given impractical uniforms (mini skirts, knee-high boots) despite training in pants, underscoring that the squad was conceived as a publicity stunt to distract from a serial killer investigation."
+  },
+  {
     "outlet": "Collider",
     "headline": "Women in Blue Face Insubordination and Suspension in Episode 3 Sneak Peek",
     "url": "https://collider.com/women-in-blue-episode-3-sneak-peek/",
@@ -8879,6 +8903,18 @@
     "market": "Mexico",
     "type": "Social",
     "excerpt": "Official Spanish-language trailer for Las Azules, set in 1971 Mexico and inspired by true events, premiering July 31 on Apple TV+."
+  },
+  {
+    "outlet": "Apple TV Press",
+    "headline": "Apple TV debuts trailer for new Spanish-language crime drama 'Women in Blue (Las Azules)'",
+    "url": "https://apple.com/tv-pr/news/2024/06/apple-tv-debuts-trailer-for-new-spanish-language-crime-drama-women-in-blue-las-azules-starring-ariel-award-nominee-brbara-mori-ximena-sariana-natalia-tllez-and-amorita-rasgado",
+    "date": "Jun 17, 2024",
+    "ts": 20240617,
+    "dateSource": "jsonld_datepublished",
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Apple TV+ announced a new Spanish-language crime drama titled 'Women in Blue' ('Las Azules'), set to premiere globally on July 31, 2024, featuring an all-Hispanic cast and crew led by Ariel Award nominee Barbara Mori. Set in 1971, the series follows four women who defy ultraconservative norms to join Mexico's first female police force, only to discover their squad is a publicity distraction from a serial killer investigation."
   },
   {
     "outlet": "El Universal",
