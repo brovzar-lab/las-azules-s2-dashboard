@@ -17390,10 +17390,10 @@
     {
       "url": "https://legacy.prod.metacritic.com/tv/women-in-blue/season-2",
       "firstSeen": "2026-10-02T04:06:42Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 403,
-      "lastAttempt": "2026-10-02T10:10:13Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-10-02T22:10:00Z",
+      "cooldownUntil": "2026-11-01T22:10:00Z",
       "history": [
         {
           "attempt": "2026-10-02T04:06:42Z",
@@ -17414,6 +17414,13 @@
           "status": 403,
           "issue": "LEMA-11871",
           "note": "Both methods still 403 (Firecrawl envelope 200 but body literally '403 Forbidden'). Second consecutive full-chain failure for this staging-subdomain mirror of already-permanentSkip www.metacritic.com/tv/women-in-blue/season-2 (Rule F)."
+        },
+        {
+          "attempt": "2026-10-02T22:10:00Z",
+          "method": "WebFetch+Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11884",
+          "note": "Third consecutive full-chain failure (both methods 403; Firecrawl envelope 200 but body literally '403 Forbidden'). failCount reaches 3: 30-day cooldown set per step 4d."
         }
       ]
     },
@@ -18293,7 +18300,107 @@
           "note": "Disposed on relevance per Rule B (fan-repost account), not fetched for dateability purposes beyond confirming account type."
         }
       ]
+    },
+    {
+      "url": "https://laceyantle.com/article/anya-taylor-joy-s-new-series-lucky-on-apple-tv-a-thrilling-crime-drama",
+      "firstSeen": "2026-10-02T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Anya Taylor-Joy's new Apple TV+ series 'Lucky' (a thrilling crime drama). Entirely unrelated to Las Azules/Women in Blue; surfaced only as a broad Exa 'Apple TV' query match. Not fetched (Rule B/G: relevance gate evaluated before dateability).",
+      "history": [
+        {
+          "attempt": "2026-10-02T22:10:00Z",
+          "method": "classification-only (no fetch)",
+          "status": null,
+          "issue": "LEMA-11884",
+          "note": "Off-topic per title/snippet: different show entirely, no ambiguity."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eldiario.es/cantabria/premiada-produccion-cantabra-barbara-musical-regresa-escenarios-madrid_1_13558480.html",
+      "firstSeen": "2026-10-02T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about the Cantabria stage musical 'Bárbara, el musical' returning to Madrid venues. Unrelated to Las Azules; matched the Spanish-language Exa query only on the name 'Bárbara'. Not fetched (Rule B/G: relevance gate evaluated before dateability).",
+      "history": [
+        {
+          "attempt": "2026-10-02T22:10:00Z",
+          "method": "classification-only (no fetch)",
+          "status": null,
+          "issue": "LEMA-11884",
+          "note": "Off-topic per title/snippet: different subject (regional theatre musical), no ambiguity."
+        }
+      ]
+    },
+    {
+      "url": "https://www.comicbasics.com/every-movie-and-tv-show-coming-to-apple-tv-in-october-2026/",
+      "firstSeen": "2026-10-02T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T22:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "October 2026 Apple TV+ content roundup (The Sisters Grimm, The Last First: Winter K2, Small Prophets, Matchbox the Movie, Tenzing, Where's Wanda?, Nocturne). Confirmed via WebFetch (2026-10-02, published Oct 2, 2026): Las Azules/Women in Blue is not mentioned anywhere in the article body. Surfaced only as a broad Exa 'Apple TV' query match.",
+      "history": [
+        {
+          "attempt": "2026-10-02T22:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11884",
+          "note": "Fetched and confirmed show is not mentioned in body."
+        }
+      ]
+    },
+    {
+      "url": "https://www.themovieblog.com/?p=1027185",
+      "firstSeen": "2026-10-02T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T22:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "URL-param address (WordPress ?p=) for 'Women in Blue Season 2 Trailer Released by Apple TV', already tracked in data.json at its canonical URL https://www.themovieblog.com/2026/07/women-in-blue-season-2-trailer-released-by-apple-tv/ (ts=20260723, outlet=The Movie Blog). Confirmed via direct fetch: page's <link rel=canonical> points at the tracked URL. Second address, not a distinct document, per Rule I.",
+      "history": [
+        {
+          "attempt": "2026-10-02T22:10:00Z",
+          "method": "curl + canonical-tag check",
+          "status": 200,
+          "issue": "LEMA-11884",
+          "note": "Canonical URL already present in data.json at matching ts/outlet."
+        }
+      ]
+    },
+    {
+      "url": "https://www.themovieblog.com/?p=1026848",
+      "firstSeen": "2026-10-02T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T22:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "URL-param address (WordPress ?p=) for 'Women in Blue Returns for Season Two', already tracked in data.json at its canonical URL https://www.themovieblog.com/2026/07/women-in-blue-returns-for-season-two/ (ts=20260716, outlet=The Movie Blog). Confirmed via direct fetch: page's <link rel=canonical> points at the tracked URL. Second address, not a distinct document, per Rule I.",
+      "history": [
+        {
+          "attempt": "2026-10-02T22:10:00Z",
+          "method": "curl + canonical-tag check",
+          "status": 200,
+          "issue": "LEMA-11884",
+          "note": "Canonical URL already present in data.json at matching ts/outlet."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-02T20:04:53Z"
+  "lastUpdated": "2026-10-02T22:10:00Z"
 }
