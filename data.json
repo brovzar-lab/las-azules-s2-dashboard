@@ -4470,6 +4470,18 @@
     "excerpt": "Brazilian outlet publishes the full Season 2 episode release calendar; the Mexican series returns with four female police officers investigating a young activist's death tied to Mexico's political repression of the late 1960s/early 1970s."
   },
   {
+    "outlet": "Diario de México",
+    "headline": "'Las Azules' celebra el éxito de México en Apple TV",
+    "url": "https://www.diariodemexico.com/escena/azules-celebra-exito-mexico-en-apple-tv",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "dateSource": "article_published_time",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Covers the Season 2 premiere, with cast and creators discussing the responsibility of portraying Mexico's first female police force and the 1968 Tlatelolco massacre, and celebrating the Spanish-language production's global platform reach."
+  },
+  {
     "outlet": "Fiction Horizon",
     "headline": "'Las Azules' Recap Revisits a Defiant Season 1 Finale as Season 2 Arrives on Apple TV+",
     "url": "https://fictionhorizon.com/las-azules-recap-revisits-a-defiant-season-1-finale-as-season-2-arrives-on-apple-tv/",
@@ -8169,6 +8181,18 @@
     "excerpt": "Spanish-language recap noting Las Azules is available on Apple TV+ and addressing reader questions about when season 2 will premiere; written while season 1 was airing and before any official season 2 renewal announcement, it notes no renewal had been confirmed yet and speculates a late-2026 window pending audience reception."
   },
   {
+    "outlet": "Chic Magazine",
+    "headline": "Bárbara Mori cambia de look y aparece irreconocible",
+    "url": "https://www.chicmagazine.com.mx/personajes/barbara-mori-cambia-de-look-y-aparece-irreconocible",
+    "date": "Aug 6, 2024",
+    "ts": 20240806,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Covers Barbara Mori's dramatic 1970s-styled makeover (eyeliner, blonde hair) for her role in 'Las Azules', clarifying the look was intentional period-accurate wardrobe/makeup for the Apple TV show rather than a personal style change."
+  },
+  {
     "outlet": "EscribiendoCine",
     "headline": "Crítica de \"Las Azules\": Una audaz mezcla de thriller, comedia y crítica social con Leonardo Sbaraglia y Bárbara Mori",
     "url": "https://www.escribiendocine.com/noticias/2024/08/03/18061-critica-de-las-azules-una-audaz-mezcla-de-thriller-comedia-y-critica-social-con-leonardo-sbaraglia-y-barbara-mori",
@@ -8567,6 +8591,30 @@
     "market": "Mexico",
     "type": "Entertainment",
     "excerpt": "Official Vogue México y Latinoamérica YouTube video: the Las Azules cast (Ximena Sariñana, Bárbara Mori, Natalia Téllez, Amorita Rasgado) play the 'Yo Nunca, Nunca' game and reveal personal secrets, tied to the Apple TV+ Season 1 premiere."
+  },
+  {
+    "outlet": "Diario de Yucatán",
+    "headline": "“Las Azules”, una historia basada en hechos reales",
+    "url": "https://www.yucatan.com.mx/espectaculos/2024/07/31/las-azules-una-historia-basada-en-hechos-reales.html",
+    "date": "Jul 31, 2024",
+    "ts": 20240731,
+    "dateSource": "article_published_time",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Background piece on Apple TV+'s 'Las Azules', noting the drama about four women who join Mexico City's police force in 1971, during a period when a serial killer targets women and the government seeks to improve the force's public image; the series is based on true events."
+  },
+  {
+    "outlet": "Publimetro México",
+    "headline": "'Las Azules' cuenta la historia del primer cuerpo policial femenino de México",
+    "url": "https://www.publimetro.com.mx/entretenimiento/2024/08/01/las-azules-cuenta-la-historia-del-primer-cuerpo-policial-femenino-de-mexico/",
+    "date": "Jul 31, 2024",
+    "ts": 20240731,
+    "dateSource": "article_published_time",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Profiles the Apple TV+ series dramatizing Mexico's first all-female police force, created by Fernando Rovzar and Pablo Aramendi, following four women -- Maria, Valentina, Angeles and Gabina -- who join the force and conduct a secret investigation into a serial killer male officers could not find."
   },
   {
     "outlet": "Tom's Guide",
