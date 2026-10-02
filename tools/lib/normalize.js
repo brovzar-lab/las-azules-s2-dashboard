@@ -234,6 +234,48 @@ function applyHostAlias(host) {
   return HOST_ALIASES.get(host) || host;
 }
 
+// Per-host case-insensitive PATH folding. Checked after host alias
+// resolution (so entries are keyed on the canonicalized host) and applied
+// to the path only -- never the host (already lowercased unconditionally
+// above) and never query-param values (case-sensitive IDs, e.g. YouTube/
+// Instagram/Facebook/Threads, must never collide -- see the measurement
+// below). This is an explicit per-host opt-in, not a global path
+// case-fold: LEMA-11825 measured all 1514 URLs in data.json +
+// fetch-blocklist.json (0 unparseable) and found case-significant
+// characters in the normalized key on 39 hosts, led by youtube.com (166
+// keys), instagram.com (35), facebook.com (28), en.wikipedia.org (28),
+// x.com (22), broadwayworld.com (13), threads.com (9) -- almost entirely
+// short IDs where case is load-bearing. Folding globally would silently
+// merge genuinely distinct documents, a worse failure than the duplicate-
+// row cost this table exists to prevent. Only a host with an explicit,
+// evidence-backed entry here switches away from the safe (case-preserving)
+// default, same posture as HOST_PARAM_ALLOWLIST/HOST_ALIASES above.
+//
+// - upi.com: UPI's own CMS serves the identical article at both
+//   `/entertainment_news/tv/...` and `/Entertainment_News/TV/...` -- same
+//   numeric post id (8811784644272), same outlet, same Jul 21 2026 trailer
+//   story, both forms confirmed live (LEMA-11824/LEMA-11823). 1 key in the
+//   live corpus carries uppercase in this path as of LEMA-11825.
+// - x.com: X handles are case-insensitive by X's own product rule
+//   (x.com/AppleTV and x.com/appletv resolve to the same account) --
+//   case never carries document identity on this host's handle/status
+//   paths. The LEMA-11824 ruling cited two live merge groups
+//   (x.com/AppleTV||x.com/appletv, x.com/WomenInBlueDoc||
+//   x.com/womeninbluedoc) as evidence; re-measured live at ship time
+//   (LEMA-11825) and **neither group exists in the current corpus** --
+//   `x.com/appletv` (bare handle, from an already-stripped `?lang=en`) and
+//   `x.com/WomenInBlueDoc` each appear exactly once, with no case-variant
+//   sibling. Shipped anyway per the ruling's own stated authority (a
+//   mechanical, product-level fact about how X resolves handles, not
+//   conditioned on a collision existing today) but the discrepancy from
+//   the ruling-time measurement is reported on LEMA-11825 rather than
+//   silently reconciled, per that ticket's explicit instruction.
+const HOST_CASE_INSENSITIVE_PATH = new Set(['upi.com', 'x.com']);
+
+function foldPathCase(host, path) {
+  return HOST_CASE_INSENSITIVE_PATH.has(host) ? path.toLowerCase() : path;
+}
+
 // Facebook /<page>/<type>/<slug>/<id> -> /<page>/<type>/<id> path fold.
 // LEMA-10602: Facebook generates the <slug> segment from the post's own
 // body text -- it carries no identity of its own, so a slug-form URL and
@@ -310,6 +352,22 @@ function buildQueryString(searchParams, host) {
  * a new editorial/technical rule (what if the /es-es/ page is a genuinely
  * distinct translated article with its own publish date?), which is out
  * of scope for a "behaviour-preserving port" per the ticket's constraints.
+ * This is a DIFFERENT class of gap than the path case-sensitivity question
+ * below -- that one is a mechanical same-document fact with no editorial
+ * component, this one is blocked on an unresolved editorial question. CEO
+ * ruling on LEMA-11824/LEMA-11825 declined to bundle the two.
+ *
+ * PATH CASE-SENSITIVITY (LEMA-11825, CEO ruling on LEMA-11824): path
+ * segments are case-PRESERVING by default (see "host and scheme are
+ * lowercased, path case is preserved" above) -- this is deliberate, not an
+ * oversight. A per-host opt-in, HOST_CASE_INSENSITIVE_PATH above, folds the
+ * path to lowercase for two evidence-backed hosts (upi.com, x.com) whose
+ * servers are demonstrably case-insensitive. Every other host, including
+ * the short-ID hosts (youtube.com/instagram.com/facebook.com/
+ * en.wikipedia.org/threads.com/broadwayworld.com and 33 more) where case is
+ * load-bearing, keeps today's case-preserving behaviour and is NOT folded
+ * by this change. See HOST_CASE_INSENSITIVE_PATH's own comment for the
+ * full per-host evidence and the live-measurement methodology.
  *
  * Fragments (#...) are dropped entirely from both url and key. The routine
  * prose does not mention fragments; this is also an implementation
@@ -360,8 +418,18 @@ function normalizeUrl(rawUrl) {
   const path = foldFacebookPath(host, stripTrailingSlash(parsed.pathname));
   const query = buildQueryString(parsed.searchParams, host);
 
+  // Path case-folding (LEMA-11825, HOST_CASE_INSENSITIVE_PATH above) is
+  // applied to the COMPARISON key only, never to the display url -- same
+  // posture as query-param values never being lowercased (see
+  // buildQueryString/HOST_PARAM_ALLOWLIST comment): case is a real part of
+  // how the document is actually addressed on the web, even on a host
+  // whose server happens to treat two cases as the same document, so a
+  // merge that rewrites a stored url (mergeLedgerGroup/mergeDatasetGroup)
+  // must not silently lowercase someone's real display handle.
+  const keyPath = foldPathCase(host, path);
+
   const url = `${scheme}//${host}${path}${query}`;
-  const key = `${host}${path}${query}`;
+  const key = `${host}${keyPath}${query}`;
   return { url, key };
 }
 

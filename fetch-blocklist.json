@@ -5071,26 +5071,6 @@
       ]
     },
     {
-      "url": "https://twitter.com/AppleTV",
-      "firstSeen": "2026-09-12T06:00:33Z",
-      "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-12T06:00:33Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": "Bare @AppleTV account homepage (X/Twitter profile), not a specific post. Surfaced via the mandated '#LasAzules twitter Apple TV' Pass 2 query. Stripped of its live tweet stream, the page carries no fixed written content about Las Azules specifically -- same disposition as a directory/listing placeholder page under Rule F.",
-      "history": [
-        {
-          "attempt": "2026-09-12T06:00:33Z",
-          "method": "WebSearch (Pass 2)",
-          "status": null,
-          "issue": "LEMA-10013",
-          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
-        }
-      ]
-    },
-    {
       "url": "https://twitter.com/AppleTV/status/1666105302134009856?lang=en-GB",
       "firstSeen": "2026-09-12T06:00:33Z",
       "failCount": 0,
@@ -13241,26 +13221,6 @@
       ]
     },
     {
-      "url": "https://x.com/appletv?lang=en",
-      "firstSeen": "2026-09-24T20:02:00Z",
-      "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-24T20:02:00Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_listing_or_database",
-      "skipNote": "Apple TV's X/Twitter profile page (lang=en query-string variant of the already-ledgered x.com/AppleTV profile). No written editorial content, a profile/feed listing page. Normalizes to a distinct key from the bare profile URL (case-folded path + surviving lang query param), so it required its own row.",
-      "history": [
-        {
-          "attempt": "2026-09-24T20:02:00Z",
-          "method": "WebFetch",
-          "status": null,
-          "issue": "LEMA-10925",
-          "note": "Classified on inspection without a fetch attempt: same family reasoning as the existing x.com/AppleTV Rule F row."
-        }
-      ]
-    },
-    {
       "url": "https://tvsboy.com/country/mx/",
       "firstSeen": "2026-09-24T22:05:00Z",
       "failCount": 0,
@@ -13912,46 +13872,6 @@
           "status": 200,
           "issue": "LEMA-11547",
           "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. About Paramount+'s \"Lioness\" Season 4 and spinoff \"Neagley\" Season 2, unrelated shows. No mention of Las Azules; surfaced only as a broad-query match on generic \"Season 2\"/Apple-adjacent terms."
-        }
-      ]
-    },
-    {
-      "url": "https://x.com/WomenInBlueDoc",
-      "firstSeen": "2026-09-26T16:07:22.000Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-26T16:07:22.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "X account for an unrelated 2021 documentary following female officers in the Minneapolis Police Department (\"Women in Blue\" doc, dir. Deirdre Fishel). Not connected to the Apple TV+ series Las Azules/Women in Blue; surfaced only on the shared title phrase \"Women in Blue\".",
-      "history": [
-        {
-          "attempt": "2026-09-26T16:07:22.000Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-11547",
-          "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. X account for an unrelated 2021 documentary following female officers in the Minneapolis Police Department (\"Women in Blue\" doc, dir. Deirdre Fishel). Not connected to the Apple TV+ series Las Azules/Women in Blue; surfaced only on the shared title phrase \"Women in Blue\"."
-        }
-      ]
-    },
-    {
-      "url": "https://twitter.com/womeninbluedoc",
-      "firstSeen": "2026-09-26T16:07:22.000Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-09-26T16:07:22.000Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Same account as https://x.com/WomenInBlueDoc (unrelated 2021 Minneapolis Police Department documentary), reached via the twitter.com host form. Not connected to Las Azules/Women in Blue.",
-      "history": [
-        {
-          "attempt": "2026-09-26T16:07:22.000Z",
-          "method": "Firecrawl scrape",
-          "status": 200,
-          "issue": "LEMA-11547",
-          "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. Same account as https://x.com/WomenInBlueDoc (unrelated 2021 Minneapolis Police Department documentary), reached via the twitter.com host form. Not connected to Las Azules/Women in Blue."
         }
       ]
     },
@@ -17025,6 +16945,53 @@
           "method": "Firecrawl scrape",
           "status": 200,
           "note": "Also resolves to the imore.com homepage, no thread content recovered. Full-chain failure."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/AppleTV",
+      "firstSeen": "2026-09-12T06:00:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-09-24T20:02:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Apple TV's X/Twitter profile page (lang=en query-string variant of the already-ledgered x.com/AppleTV profile). No written editorial content, a profile/feed listing page. Normalizes to a distinct key from the bare profile URL (case-folded path + surviving lang query param), so it required its own row. Prior note (LEMA-10013): Bare @AppleTV account homepage (X/Twitter profile), not a specific post. Surfaced via the mandated '#LasAzules twitter Apple TV' Pass 2 query. Stripped of its live tweet stream, the page carries no fixed written content about Las Azules specifically -- same disposition as a directory/listing placeholder page under Rule F.",
+      "history": [
+        {
+          "attempt": "2026-09-12T06:00:33Z",
+          "method": "WebSearch (Pass 2)",
+          "status": null,
+          "issue": "LEMA-10013",
+          "note": "Surfaced during mandated sweep passes; confirmed off-topic/non-coverage, ledgered so future runs stop re-surfacing it."
+        },
+        {
+          "attempt": "2026-09-24T20:02:00Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-10925",
+          "note": "Classified on inspection without a fetch attempt: same family reasoning as the existing x.com/AppleTV Rule F row."
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/WomenInBlueDoc",
+      "firstSeen": "2026-09-26T16:07:22.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-09-26T16:07:22.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "X account for an unrelated 2021 documentary following female officers in the Minneapolis Police Department (\"Women in Blue\" doc, dir. Deirdre Fishel). Not connected to the Apple TV+ series Las Azules/Women in Blue; surfaced only on the shared title phrase \"Women in Blue\". Prior note (LEMA-11547): Same account as https://x.com/WomenInBlueDoc (unrelated 2021 Minneapolis Police Department documentary), reached via the twitter.com host form. Not connected to Las Azules/Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-09-26T16:07:22.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11547",
+          "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. X account for an unrelated 2021 documentary following female officers in the Minneapolis Police Department (\"Women in Blue\" doc, dir. Deirdre Fishel). Not connected to the Apple TV+ series Las Azules/Women in Blue; surfaced only on the shared title phrase \"Women in Blue\"."
         }
       ]
     }

@@ -179,29 +179,31 @@ test('twitter.com collapses to the same key as x.com', () => {
   const tw = normalizeUrl('https://twitter.com/AppleTV/status/1837519173062479974');
   const x = normalizeUrl('https://x.com/AppleTV/status/1837519173062479974');
   assert.equal(tw.key, x.key);
-  assert.equal(tw.key, 'x.com/AppleTV/status/1837519173062479974');
+  // x.com is case-insensitive-path-folded for the key (LEMA-11825); url
+  // display form below keeps the real-world handle case regardless.
+  assert.equal(tw.key, 'x.com/appletv/status/1837519173062479974');
 });
 
 test('www.twitter.com also collapses to x.com (www strip runs before the alias)', () => {
   const { key, url } = normalizeUrl('https://www.twitter.com/AppleTV');
-  assert.equal(key, 'x.com/AppleTV');
+  assert.equal(key, 'x.com/appletv');
   assert.equal(url, 'https://x.com/AppleTV');
 });
 
 test('mobile.twitter.com collapses to x.com even though it does not match the generic m. fold', () => {
   const { key, url } = normalizeUrl('https://mobile.twitter.com/AppleTV/status/1837519173062479974');
-  assert.equal(key, 'x.com/AppleTV/status/1837519173062479974');
+  assert.equal(key, 'x.com/appletv/status/1837519173062479974');
   assert.equal(url, 'https://x.com/AppleTV/status/1837519173062479974');
 });
 
-test('canonical url display form uses the aliased host, real scheme kept', () => {
+test('canonical url display form uses the aliased host, real scheme kept, and keeps real-world case (LEMA-11825: case-folding applies to the key, never to url)', () => {
   const { url } = normalizeUrl('http://twitter.com/AppleTV/status/1837519173062479974');
   assert.equal(url, 'http://x.com/AppleTV/status/1837519173062479974');
 });
 
 test('twitter.com alias composes with tracking-param stripping', () => {
   const { key } = normalizeUrl('https://twitter.com/AppleTV/status/1666105302134009856?ref_src=twsrc%5Etfw');
-  assert.equal(key, 'x.com/AppleTV/status/1666105302134009856');
+  assert.equal(key, 'x.com/appletv/status/1666105302134009856');
 });
 
 // Facebook /<page>/<type>/<slug>/<id> -> /<page>/<type>/<id> path fold
@@ -395,4 +397,57 @@ test('facebook.com ?locale=, instagram.com ?hl=, tiktok.com ?lang=, x.com ?lang=
 test('hl/lang/locale strip is case-insensitive like every other tracking param, and a non-locale param on the same host survives', () => {
   const { key } = normalizeUrl('https://example.com/article?LOCALE=es&keep=1');
   assert.equal(key, 'example.com/article?keep=1');
+});
+
+// LEMA-11825 (CEO ruling on LEMA-11824): per-host case-insensitive path
+// folding for upi.com (the reported duplicate) and x.com (X handles are
+// case-insensitive by X's own product rule). Every other host, including
+// the short-ID hosts where case is load-bearing, must keep case-preserving
+// behaviour -- the youtube.com/youtu.be pin below is the regression this
+// ruling exists to prevent.
+
+test('upi.com: mixed-case and lowercase path variants of the same article collapse to the same key (LEMA-11824)', () => {
+  const a = normalizeUrl('https://www.upi.com/Entertainment_News/TV/2026/07/21/las-azules-season-2-trailer/8811784644272/');
+  const b = normalizeUrl('https://www.upi.com/entertainment_news/tv/2026/07/21/las-azules-season-2-trailer/8811784644272/');
+  assert.equal(a.key, b.key);
+  assert.equal(a.key, 'upi.com/entertainment_news/tv/2026/07/21/las-azules-season-2-trailer/8811784644272');
+});
+
+test('x.com: case-varied handle forms collapse to the same key', () => {
+  const a = normalizeUrl('https://x.com/AppleTV');
+  const b = normalizeUrl('https://x.com/appletv');
+  assert.equal(a.key, b.key);
+  assert.equal(a.key, 'x.com/appletv');
+
+  const c = normalizeUrl('https://x.com/WomenInBlueDoc');
+  const d = normalizeUrl('https://x.com/womeninbluedoc');
+  assert.equal(c.key, d.key);
+});
+
+test('x.com case-fold applies to status-path handles too, not just bare handles', () => {
+  const a = normalizeUrl('https://x.com/AppleTV/status/123456789');
+  const b = normalizeUrl('https://x.com/appletv/status/123456789');
+  assert.equal(a.key, b.key);
+});
+
+test('case-insensitive path folding is a per-host opt-in, not global: a case-varied youtube.com/shorts/<ID> and youtu.be/<ID> do NOT collide (regression guard)', () => {
+  const shorts = normalizeUrl('https://www.youtube.com/shorts/AbC123xyz');
+  const shortsLower = normalizeUrl('https://www.youtube.com/shorts/abc123xyz');
+  assert.notEqual(shorts.key, shortsLower.key);
+
+  const youtuBe = normalizeUrl('https://youtu.be/AbC123xyz');
+  const youtuBeLower = normalizeUrl('https://youtu.be/abc123xyz');
+  assert.notEqual(youtuBe.key, youtuBeLower.key);
+});
+
+test('case-insensitive path folding does not affect unlisted hosts at all (instagram/facebook short IDs stay case-preserving)', () => {
+  const a = normalizeUrl('https://www.instagram.com/p/AbCdEfGhIjK/');
+  const b = normalizeUrl('https://www.instagram.com/p/abcdefghijk/');
+  assert.notEqual(a.key, b.key);
+});
+
+test('case-fold applies to the comparison key only, never to the display url (a stored/canonical url must keep the real-world handle case)', () => {
+  const { url, key } = normalizeUrl('https://x.com/AppleTV');
+  assert.equal(url, 'https://x.com/AppleTV');
+  assert.equal(key, 'x.com/appletv');
 });

@@ -521,3 +521,94 @@ a case-insensitivity guard for the three new global params). All green except th
 known-red `real-fixtures.test.js` ledger-duplicates check documented above (2 groups, both
 pre-existing conflicts this ticket's code surfaced, matching the file's established
 surfaced-not-caused pattern).
+
+## `HOST_CASE_INSENSITIVE_PATH`: per-host case-insensitive path folding (LEMA-11825)
+
+CEO ruling on LEMA-11824 (observation: a UPI article tracked under both a lowercase and a
+mixed-case path produced two distinct normalized keys). Path case was, and for every host
+not listed below still is, deliberately
+**preserved**, not folded -- see "host and scheme are lowercased, path case is preserved" in
+`tools/test/normalize.test.js`. Folding it globally was explicitly rejected: measuring all 1514
+URLs across `data.json` + `fetch-blocklist.json` (0 unparseable) found case-significant
+characters in the normalized key on 39 hosts, led by `youtube.com` (166 keys), `instagram.com`
+(35), `facebook.com` (28), `en.wikipedia.org` (28), `x.com` (22), `broadwayworld.com` (13),
+`threads.com` (9) -- almost all short IDs where case is load-bearing identity, not incidental
+styling. A global fold would silently merge genuinely distinct documents, a worse failure than
+the duplicate-row cost this ticket exists to prevent.
+
+**Shipped instead:** a per-host opt-in table, `HOST_CASE_INSENSITIVE_PATH` (`tools/lib/normalize.js`),
+same safe-default posture as `HOST_PARAM_ALLOWLIST`/`HOST_ALIASES` -- a host absent from the
+table keeps today's case-preserving behavior unconditionally. Checked after host-alias
+resolution, so it sees already-canonicalized host names (an aliased `twitter.com` row is
+evaluated as `x.com`). Two seed entries, each evidence-backed against live data at ship time:
+
+- **`upi.com`** -- the reported case. UPI's own CMS serves the identical article (same numeric
+  post id `8811784644272`, same Jul 21 2026 trailer story) at both
+  `/entertainment_news/tv/...` and `/Entertainment_News/TV/...`. 1 key in the live corpus
+  carries uppercase in this path as of this ticket.
+- **`x.com`** -- not in the original report, surfaced by the full-corpus case measurement above.
+  X handles are case-insensitive by X's own product rule (`x.com/AppleTV` and `x.com/appletv`
+  resolve to the same account); case never carries document identity on this host's
+  handle/status paths.
+
+**Important: the fold applies to the comparison `key` only, never to the display `url`.** This
+is a deliberate asymmetry from every other path transform in this module (www-strip, m.-fold,
+host-alias, Facebook slug-fold all apply identically to both): case is a real part of how a
+document is actually addressed on the web even when the origin server treats two cases as
+identical, so a future `mergeLedgerGroup`/`mergeDatasetGroup` merge must not silently rewrite
+someone's real display handle to lowercase. `normalizeUrl()` now computes the Facebook-folded
+path once, then derives `keyPath = foldPathCase(host, path)` for the key only; `url` keeps the
+un-folded path. Pinned by a dedicated test (`case-fold applies to the comparison key only, never
+to the display url`).
+
+**Ruling 2 (not folded into the `/es-es/` locale-path gap):** declined for two reasons, both
+recorded in the `KNOWN SPEC GAP` / `PATH CASE-SENSITIVITY` comment block on `normalizeUrl` in
+`tools/lib/normalize.js`: the `/es-es/` gap lives as a comment on a `done` ticket with no open
+issue to track anything on, and it is blocked on an unresolved *editorial* question (is a
+locale-path variant a genuinely distinct translated article?) that this ticket's fix has no
+analog of -- case-folding a host whose server is demonstrably case-insensitive is a purely
+*mechanical* same-document fact.
+
+**Blast radius, re-measured live at ship time (checkout `313926f`, NOT assumed from the ruling's
+own ticket-time numbers):**
+
+| File | Distinct keys before | After code change |
+|---|---|---|
+| `data.json` | 805 | 805 (0 collisions) |
+| `fetch-blocklist.json` | 769 | 767 (2 same-key groups, both auto-merged -> 767 rows) |
+
+**The `upi.com` collision is cross-file, not same-file, and was already correctly reconciled
+in-run** (LEMA-11823/LEMA-11824, before this ticket started): the mixed-case form lives in
+`data.json`, the lowercase form was manually ledgered in `fetch-blocklist.json` as Rule I
+(`editorial_redundant_syndication`, `permanentSkip: true`). `assertDatasetIntegrity`/
+`assertLedgerIntegrity` never merge across files -- this is `audit`'s `ledgerOverlapAdvisory`
+bucket, the expected shape for a Rule I second address (see the standing note that this gate
+is permanently non-zero by design), not a defect this ticket needed to fix.
+
+**The two `x.com` same-file groups the CEO ruling predicted (`x.com/AppleTV`/`x.com/appletv` and
+`x.com/WomenInBlueDoc`/`x.com/womeninbluedoc`) do exist live, but not in the form the ruling's
+own measurement described.** A host-literal scan of rows whose stored `url` already says
+`x.com` found *zero* collisions for either pair -- `x.com/appletv` and `x.com/WomenInBlueDoc`
+each appear exactly once with no same-host case-variant sibling. The actual collisions only
+appear once `HOST_ALIASES`' `twitter.com` -> `x.com` fold is included: one side of each pair is
+stored as a `twitter.com` URL (`https://twitter.com/AppleTV`, `https://twitter.com/womeninbluedoc`),
+which only resolves to the colliding `x.com` key after both the alias fold and this ticket's
+case fold apply together. Both groups agreed on disposition (group 1:
+`permanentSkip: true` / `editorial_listing_or_database` on both rows; group 2:
+`permanentSkip: true` / `editorial_off_topic_false_positive` on both rows), so
+`assert-integrity --target ledger --fix` auto-merged both cleanly -- no escalation needed,
+unlike the LEMA-11736 precedent where agreeing-vs-conflicting groups split. `failCount`
+preserved at `0` on both merged rows (not zeroed), verified against both pre-merge inputs.
+
+**`data.json`: confirmed unchanged.** `assert-integrity --target data --fix` reports
+`rows=805, distinct normalized URLs=805, duplicate groups=0` both before and after this
+ticket's code change.
+
+Suite 143 -> 149 (6 new tests: upi.com collision, x.com bare-handle and status-path collision,
+the youtube.com/youtu.be case-preserving regression guard, the instagram.com case-preserving
+guard, and the key-only-not-url asymmetry pin). 5 pre-existing `twitter.com`/`x.com` alias tests
+updated in the same commit: their `key` assertions now expect the case-folded form
+(`x.com/appletv/...`), while their `url` assertions are unchanged (display form still preserves
+the real-world `AppleTV` case) -- this split is the direct, intended consequence of the
+key-only fold described above, not a loosening of the alias tests. All green, including both
+`real-fixtures.test.js` live-data checks (0 duplicate groups in both files post-merge).
