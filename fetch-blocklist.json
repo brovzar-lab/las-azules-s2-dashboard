@@ -16927,9 +16927,9 @@
     {
       "url": "https://forums.imore.com/threads/apple-announces-new-spanish-crime-drama-las-azules-for-tv.454101/latest",
       "firstSeen": "2026-10-02T00:11:48.000Z",
-      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
       "lastStatus": 301,
-      "failCount": 1,
+      "failCount": 2,
       "cooldownUntil": null,
       "history": [
         {
@@ -16945,6 +16945,20 @@
           "method": "Firecrawl scrape",
           "status": 200,
           "note": "Also resolves to the imore.com homepage, no thread content recovered. Full-chain failure."
+        },
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 301,
+          "issue": "LEMA-11826",
+          "note": "Retried per Pass 0 rule. Still 301-redirects to bare imore.com homepage, no thread content."
+        },
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Also resolves to the imore.com homepage skip-link only, no thread content recovered. Full-chain failure again."
         }
       ]
     },
@@ -16994,7 +17008,238 @@
           "note": "Confirmed off-topic per Rule G evaluation before this run's data.json write. X account for an unrelated 2021 documentary following female officers in the Minneapolis Police Department (\"Women in Blue\" doc, dir. Deirdre Fishel). Not connected to the Apple TV+ series Las Azules/Women in Blue; surfaced only on the shared title phrase \"Women in Blue\"."
         }
       ]
+    },
+    {
+      "url": "https://www.todotvnews.com/en/?p=119045",
+      "firstSeen": "2026-10-02T02:11:59.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Same CMS post ID (119045) as already-tracked https://todotvnews.com/en/119045/ (ts 20250521, data.json). www+query-string address of the same article; Rule I second address, no distinct content.",
+      "history": [
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Classified and permanentSkip'd on first sight, see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/es/etiquetas/lemon-studios",
+      "firstSeen": "2026-10-02T02:11:59.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Tag/archive index page (\"etiquetas/lemon-studios\") surfacing links to already-tracked senalnews.com articles; not a distinct document per Rule I (named example: tag or archive index surfacing an already-tracked post).",
+      "history": [
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Classified and permanentSkip'd on first sight, see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://9to5mac.com/?p=1064285",
+      "firstSeen": "2026-10-02T02:11:59.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Confirmed via fetch: identical headline (\"Women in Blue's second season premieres on Apple TV\") and date (Aug 11, 2026) as already-tracked https://9to5mac.com/2026/08/11/women-in-blues-second-season-premieres-on-apple-tv/. Same CMS post, ?p= shortlink alias.",
+      "history": [
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Classified and permanentSkip'd on first sight, see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mactrast.com/?p=172897",
+      "firstSeen": "2026-10-02T02:11:59.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Confirmed via fetch: identical headline (\"Apple TV Releases Trailer for Second Season of Spanish Language Crime Drama Women in Blue\") and date (Jul 22, 2026) as already-tracked https://www.mactrast.com/2026/07/apple-tv-releases-trailer-for-second-season-of-spanish-language-crime-drama-women-in-blue/. Same CMS post, ?p= shortlink alias.",
+      "history": [
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Classified and permanentSkip'd on first sight, see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://cinemachords.com/apple-tv-debuts-trailer-for-spanish-language-crime-drama-las-azules-inspired-by-mexicos-first-female-police-force/",
+      "firstSeen": "2026-10-02T02:11:59.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Identical headline to already-tracked https://cinemachords.com/?p=24939 (ts 20240620, \"Apple TV+ Debuts Trailer for Spanish-language Crime Drama 'Las Azules' Inspired by Mexico's First Female Police Force\"). Same CMS post, full-slug alias of the ?p= shortlink.",
+      "history": [
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Classified and permanentSkip'd on first sight, see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://worldscreen.com/tvdrama/?p=16905",
+      "firstSeen": "2026-10-02T02:11:59.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Identical headline to already-tracked https://worldscreen.com/tvdrama/international-emmy-winner-fernando-rovzar-preps-new-apple-tv-crime-drama/ (ts 20220524, \"Fernando Rovzar Preps New Apple TV+ Crime Drama\"). Same CMS post, ?p= shortlink alias.",
+      "history": [
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Classified and permanentSkip'd on first sight, see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://intheseats.ca/?p=38634",
+      "firstSeen": "2026-10-02T02:11:59.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Identical headline to already-tracked https://intheseats.ca/las-azules-women-in-blue-we-hear-from-the-cast-and-creator/ (ts 20240730). Same CMS post, ?p= shortlink alias.",
+      "history": [
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Classified and permanentSkip'd on first sight, see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://latinamedia.co/?p=8469",
+      "firstSeen": "2026-10-02T02:11:59.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Identical headline to already-tracked https://latinamedia.co/las-azules-season-two/ (ts 20260811, \"'Las Azules' Season Two Explores Female Resistance and Institutional Impunity\"). Same CMS post, ?p= shortlink alias.",
+      "history": [
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Classified and permanentSkip'd on first sight, see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://images.apple.com/tv-pr/originals/women-in-blue-las-azules/",
+      "firstSeen": "2026-10-02T02:11:59.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "Image-asset host mirror of the Apple TV press-kit/show page already permanentSkip'd under www.apple.com/tv-pr/originals/women-in-blue-las-azules/ and its locale variants (Rule F family per LEMA-10632 clarification). Confirmed via this run's Pass 3 fetches of the fr/it apple.com tv-pr/originals pages showing identical press-kit gallery content, no written editorial prose.",
+      "history": [
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Classified and permanentSkip'd on first sight, see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://www.formulatv.com/series/las-azules/",
+      "firstSeen": "2026-10-02T02:11:59.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "Confirmed via direct fetch: bare TV series database/catalog page (series metadata, episode guide, cast list, promotional synopsis copied from studio materials). No original written editorial content or journalist byline; Rule F strip test leaves nothing.",
+      "history": [
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Classified and permanentSkip'd on first sight, see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.de/title/tt2378281/news/",
+      "firstSeen": "2026-10-02T02:11:59.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "Confirmed via fetch (301 redirects to www.imdb.com/title/tt2378281/news/): this is IMDb's title-level News INDEX tab, a list of headline links with excerpts pointing to other outlets' articles, not original IMDb-written prose about the show. Distinct surface from imdb.com/news/ni... standalone articles (Rule H scope limit 3 / Rule F clarification carve-out), which remain untouched. Rule F listing/database gate applies to this index-tab surface.",
+      "history": [
+        {
+          "attempt": "2026-10-02T02:11:59.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11826",
+          "note": "Classified and permanentSkip'd on first sight, see skipNote."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-02T00:11:48.000Z"
+  "lastUpdated": "2026-10-02T02:11:59.000Z"
 }
