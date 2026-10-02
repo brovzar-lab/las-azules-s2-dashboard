@@ -17395,7 +17395,158 @@
           "note": "Firecrawl returned HTTP 200 envelope but body was literally '403 Forbidden' (13 bytes) -- full-chain failure, not a soft pass. Note: this 'legacy.prod.' hostname is distinct from the canonical www.metacritic.com host, which already has ledgered rows for the season-2 (Rule F, LEMA-9882/LEMA-10217) and critic-reviews (Rule H, LEMA-10454) surfaces for this title; this candidate could not be fetched to confirm whether it mirrors either of those, so it is logged as a plain fetch failure rather than classified."
         }
       ]
+    },
+    {
+      "url": "https://sayviours.com/article/kerry-washington-elisabeth-moss-and-kate-mara-on-imperfect-women-sisterhood-and-diversity",
+      "firstSeen": "2026-10-02T06:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T06:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Imperfect Women' starring Kerry Washington, Elisabeth Moss and Kate Mara -- an unrelated show. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on the Exa EN pass.",
+      "history": [
+        {
+          "attempt": "2026-10-02T06:00:00Z",
+          "method": "search-result title",
+          "status": 200,
+          "issue": "LEMA-11828",
+          "note": "Confirmed off-topic from title/snippet alone, different show and cast; no fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://abc.es/play/cine/noticias/llega-hoy-prime-video-serie-basada-novela-20261002070000-nt.html",
+      "firstSeen": "2026-10-02T06:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T06:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about a different Prime Video series based on a novel by Juan Gomez-Jurado, starring Vicky Luengo and Hovik Keuchkerian -- unrelated show. Surfaced only as a broad-query match on the Exa ES pass.",
+      "history": [
+        {
+          "attempt": "2026-10-02T06:00:00Z",
+          "method": "search-result title",
+          "status": 200,
+          "issue": "LEMA-11828",
+          "note": "Confirmed off-topic from title/snippet alone, different show and cast; no fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://justwatch.com/ca/tv-show/las-azules/season-2",
+      "firstSeen": "2026-10-02T06:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T06:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch streaming-availability aggregator page (platform badges, episode list, ratings). The only prose present beyond that metadata is Apple's own generic season synopsis boilerplate, not original editorial commentary -- strip test leaves nothing written about the show by this page's own authorship.",
+      "history": [
+        {
+          "attempt": "2026-10-02T06:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11828",
+          "note": "Confirmed bare availability-listing page with only reused marketing synopsis, no original prose."
+        }
+      ]
+    },
+    {
+      "url": "https://ground.news/article/blues-search-for-methodical-killer-in-las-azules-season-2_e0ba16",
+      "firstSeen": "2026-10-02T06:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T06:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Ground News aggregation page compiling headlines/snippets from 12 outlets (UPI, Que.es, La Razon, Apple World Today, HeyUGuys, 9to5Mac and others) with a bias-distribution chart; no original editorial prose of its own, functions purely as a link aggregator over already-published coverage.",
+      "history": [
+        {
+          "attempt": "2026-10-02T06:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11828",
+          "note": "Confirmed aggregation-only page, no original written content; cites UPI/9to5Mac among others, both already tracked/ledgered separately."
+        }
+      ]
+    },
+    {
+      "url": "https://filmaffinity.com/ca/film786793.html",
+      "firstSeen": "2026-10-02T06:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T06:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "FilmAffinity bare title/database record for Women in Blue (cast, trailers, image gallery, movie awards, episode/season list, add-to-lists). No original written editorial content beyond the generic one-line synopsis and metadata table. The outlet's separate pro-reviews.php critic-aggregation surface for this title was already reclassified under Rule H and mined (LEMA-10454 backfill); this base title-record page is a distinct Rule F surface.",
+      "history": [
+        {
+          "attempt": "2026-10-02T06:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-11828",
+          "note": "WebFetch blocked (403)."
+        },
+        {
+          "attempt": "2026-10-02T06:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11828",
+          "note": "Firecrawl succeeded; confirmed bare title/database record, Rule F."
+        }
+      ]
+    },
+    {
+      "url": "https://criticsir.com/media/tv/253983",
+      "firstSeen": "2026-10-02T06:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T06:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Critic, Sir! bare metadata/database record (title, rating, genre, air date, episode count, synopsis, cast listings). The page's own 'What critics are saying' section states: 'Nobody on Critic, Sir! has logged a verdict for this title yet' -- confirming zero individually-attributed critic content currently exists on this surface.",
+      "history": [
+        {
+          "attempt": "2026-10-02T06:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11828",
+          "note": "Confirmed bare database record with no critic reviews logged."
+        }
+      ]
+    },
+    {
+      "url": "https://dailydot.com/?p=1641721",
+      "firstSeen": "2026-10-02T06:00:00Z",
+      "failCount": 1,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T06:00:00Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-10-02T06:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11828",
+          "note": "WebFetch returned 200 but body is The Daily Dot's homepage shell (title 'The Daily Dot', unrelated trending articles), not a distinct article about the show."
+        },
+        {
+          "attempt": "2026-10-02T06:00:00Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11828",
+          "note": "Firecrawl also resolved to the homepage (og:url=https://dailydot.com/, title 'The Daily Dot'). Full-chain failure: this legacy ?p= permalink does not resolve to distinct article content server-side. failCount now 1."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-02T04:06:42Z"
+  "lastUpdated": "2026-10-02T06:00:00Z"
 }
