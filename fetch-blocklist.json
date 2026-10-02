@@ -16604,7 +16604,430 @@
           "note": "WebFetch returned the post caption and account identity. Confirmed same commercial vendor account as the Dd9QZmcsIV2 sibling post, selling movie/series access via WhatsApp/Telegram, not an editorial or fan account; skipped on relevance per Rule B, dateability not evaluated."
         }
       ]
+    },
+    {
+      "url": "https://www.macobserver.com/es/apple-tv/ted-lasso-temporada-4-episodio-9-que-le-paso-a-mae-y-por-que-el-final-silencioso-impacto-tanto-a-los-fans/",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Page is about Ted Lasso season 4 episode 9's finale, not Las Azules/Women in Blue. Surfaced via Pass 1 Exa broad English query (\"Las Azules Women in Blue Season 2 Apple TV\") as an Apple TV false-positive match.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "Title/relevance check (no fetch spent per Rule G)",
+          "status": null,
+          "note": "Page is about Ted Lasso season 4 episode 9's finale, not Las Azules/Women in Blue. Surfaced via Pass 1 Exa broad English query (\"Las Azules Women in Blue Season 2 Apple TV\") as an Apple TV false-positive match."
+        }
+      ]
+    },
+    {
+      "url": "https://kinocheck.com/show/0ut/women-in-blue",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "TV show database/catalog page (Kinocheck): rating, genre tags, release dates, and a trailer/clip video catalog organized by season. No substantive written editorial analysis; strip test leaves only a one-line plot synopsis boilerplate.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "TV show database/catalog page (Kinocheck): rating, genre tags, release dates, and a trailer/clip video catalog organized by season. No substantive written editorial analysis; strip test leaves only a one-line plot synopsis boilerplate."
+        }
+      ]
+    },
+    {
+      "url": "https://isitback.com/show/las-azules",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "Renewal-status/episode-tracker database page (\"Currently airing — last episode September 23, 2026\"), full episode air-date schedule, cast listing with images. No editorial commentary beyond boilerplate premise description.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Renewal-status/episode-tracker database page (\"Currently airing — last episode September 23, 2026\"), full episode air-date schedule, cast listing with images. No editorial commentary beyond boilerplate premise description."
+        }
+      ]
+    },
+    {
+      "url": "https://www.milenio.com/temas/barbara-mori",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "Milenio tag/topic index page aggregating articles about Bárbara Mori across 6 paginated pages; teaser cards only (headline, thumbnail, date), no original written content on the page itself. Two Las Azules-tagged headlines seen (\"Las Azules: de la hermandad de sus protagonistas...\" Aug 12 2026; \"'Las Azules' temporada 2: Fernando Rovzar...\" Aug 11 2026) are not yet individually tracked at their own URLs -- this index page itself gets no row per the one-document-one-row rule; the two underlying articles were not separately mined this run (no named-critic-attribution signal triggering the Rule H mining-duty extension).",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Milenio tag/topic index page aggregating articles about Bárbara Mori across 6 paginated pages; teaser cards only (headline, thumbnail, date), no original written content on the page itself. Two Las Azules-tagged headlines seen (\"Las Azules: de la hermandad de sus protagonistas...\" Aug 12 2026; \"'Las Azules' temporada 2: Fernando Rovzar...\" Aug 11 2026) are not yet individually tracked at their own URLs -- this index page itself gets no row per the one-document-one-row rule; the two underlying articles were not separately mined this run (no named-critic-attribution signal triggering the Rule H mining-duty extension)."
+        }
+      ]
+    },
+    {
+      "url": "https://airmail.news/arts-intel/events/women-in-blue",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "Air Mail \"Arts Intel\" events-calendar listing entry (Where/Etc venue-style fields plus one boilerplate cast sentence). Both WebFetch and Firecrawl retrieved the page; neither surfaces a publish date or any substantive written editorial content once the listing fields are stripped.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch + Firecrawl scrape",
+          "status": 200,
+          "note": "Air Mail \"Arts Intel\" events-calendar listing entry (Where/Etc venue-style fields plus one boilerplate cast sentence). Both WebFetch and Firecrawl retrieved the page; neither surfaces a publish date or any substantive written editorial content once the listing fields are stripped."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/ae/tv-show/women-in-blue/season-2",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "JustWatch streaming-availability page (UAE locale). Same JustWatch listing-page pattern as the other JustWatch entries already in this ledger (e.g. /bo/serie/las-azules/temporada-2).",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "Pattern match (no fetch spent, established JustWatch family)",
+          "status": null,
+          "note": "JustWatch streaming-availability page (UAE locale). Same JustWatch listing-page pattern as the other JustWatch entries already in this ledger (e.g. /bo/serie/las-azules/temporada-2)."
+        }
+      ]
+    },
+    {
+      "url": "https://images.apple.com/tv-pr/news/2026/03/apple-tvs-spanish-language-crime-drama-women-in-blue-las-azules-returns-for-season-two-on-wednesday-august-12/",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "images.apple.com CDN/image-subdomain mirror of the identical Apple TV Press release already tracked at https://www.apple.com/tv-pr/news/2026/03/apple-tvs-spanish-language-crime-drama-women-in-blue-las-azules-returns-for-season-two-on-wednesday-august-12/ (same headline, same March 26, 2026 dateline). Second address, not a distinct document.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "images.apple.com CDN/image-subdomain mirror of the identical Apple TV Press release already tracked at https://www.apple.com/tv-pr/news/2026/03/apple-tvs-spanish-language-crime-drama-women-in-blue-las-azules-returns-for-season-two-on-wednesday-august-12/ (same headline, same March 26, 2026 dateline). Second address, not a distinct document."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/en/digital/apple-tv-to-launch-spanish-language-women-in-blue-second-season-in-august/amp",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "AMP variant of the already-tracked https://senalnews.com/en/digital/apple-tv-to-launch-spanish-language-women-in-blue-second-season-in-august (same headline, same March 26, 2026 date). Second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "AMP variant of the already-tracked https://senalnews.com/en/digital/apple-tv-to-launch-spanish-language-women-in-blue-second-season-in-august (same headline, same March 26, 2026 date). Second address."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/es/digital/apple-tv-producira-una-segunda-temporada-de-las-azules/amp",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "AMP variant of the already-tracked https://senalnews.com/es/digital/apple-tv-producira-una-segunda-temporada-de-las-azules (same headline, same May 21, 2025 date). Second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "AMP variant of the already-tracked https://senalnews.com/es/digital/apple-tv-producira-una-segunda-temporada-de-las-azules (same headline, same May 21, 2025 date). Second address."
+        }
+      ]
+    },
+    {
+      "url": "https://todotvnews.com/en/?p=138863",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "WordPress ID-form permalink for the same CMS post already tracked at its slug URL https://www.todotvnews.com/en/apple-tv-unveils-trailer-for-season-two-of-spanish-language-crime-drama-women-in-blue/ (identical headline, July 22, 2026 date). Second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "WordPress ID-form permalink for the same CMS post already tracked at its slug URL https://www.todotvnews.com/en/apple-tv-unveils-trailer-for-season-two-of-spanish-language-crime-drama-women-in-blue/ (identical headline, July 22, 2026 date). Second address."
+        }
+      ]
+    },
+    {
+      "url": "https://cinemachords.com/?p=27668",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "WordPress ID-form permalink for the same CMS post already tracked at its slug URL https://cinemachords.com/apple-tv-renews-las-azules-women-in-blue-season-2-now-in-production/ (identical headline \"Apple TV+ Renews 'Las Azules': Women in Blue Season 2 Now in Production\", May 21, 2025 date). Second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "WordPress ID-form permalink for the same CMS post already tracked at its slug URL https://cinemachords.com/apple-tv-renews-las-azules-women-in-blue-season-2-now-in-production/ (identical headline \"Apple TV+ Renews 'Las Azules': Women in Blue Season 2 Now in Production\", May 21, 2025 date). Second address."
+        }
+      ]
+    },
+    {
+      "url": "https://www.sopitas.com/?p=1934560",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "WordPress ID-form permalink for the same CMS post already tracked at its slug URL https://www.sopitas.com/cine-y-tv/checa-trailer-temporada-2-las-azules-barbara-mori-ximena-sarinana/ (identical headline, author Greta Padilla, July 21, 2026 date). Second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "WordPress ID-form permalink for the same CMS post already tracked at its slug URL https://www.sopitas.com/cine-y-tv/checa-trailer-temporada-2-las-azules-barbara-mori-ximena-sarinana/ (identical headline, author Greta Padilla, July 21, 2026 date). Second address."
+        }
+      ]
+    },
+    {
+      "url": "https://www.sopitas.com/cine-y-tv/checa-trailer-temporada-2-las-azules-barbara-mori-ximena-sarinana/amp/",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "AMP variant of the same already-tracked sopitas.com slug URL (identical headline/author/date). Second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "AMP variant of the same already-tracked sopitas.com slug URL (identical headline/author/date). Second address."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mactrast.com/2026/07/apple-tv-releases-trailer-for-second-season-of-spanish-language-crime-drama-women-in-blue/amp/",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "AMP variant of the already-tracked https://www.mactrast.com/2026/07/apple-tv-releases-trailer-for-second-season-of-spanish-language-crime-drama-women-in-blue/ (same headline, same byline Chris Hauk). Second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "AMP variant of the already-tracked https://www.mactrast.com/2026/07/apple-tv-releases-trailer-for-second-season-of-spanish-language-crime-drama-women-in-blue/ (same headline, same byline Chris Hauk). Second address."
+        }
+      ]
+    },
+    {
+      "url": "https://www.broadwayworld.com/videoplay/Video-Apple-TV-Shares-WOMEN-IN-BLUE-Sneak-Peek-Clip-20240829",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Video-player page rendering of the same post already tracked at its article URL https://www.broadwayworld.com/bwwtv/article/Video-Apple-TV-Shares-WOMEN-IN-BLUE-Sneak-Peek-Clip-20240829 (identical slug/date). Second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Video-player page rendering of the same post already tracked at its article URL https://www.broadwayworld.com/bwwtv/article/Video-Apple-TV-Shares-WOMEN-IN-BLUE-Sneak-Peek-Clip-20240829 (identical slug/date). Second address."
+        }
+      ]
+    },
+    {
+      "url": "https://www.apple.com/au/tv-pr/news/2025/05/apples-critically-acclaimed-spanish-language-drama-women-in-blue-las-azules-lands-season-two-renewal",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "AU locale mirror of the Apple TV Press renewal release already tracked at the US/UK addresses (identical headline, 20 May 2025 dateline). Second address, same pattern as other Apple locale press-release mirrors in this ledger.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "AU locale mirror of the Apple TV Press renewal release already tracked at the US/UK addresses (identical headline, 20 May 2025 dateline). Second address, same pattern as other Apple locale press-release mirrors in this ledger."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mactech.com/2026/08/13/season-two-of-women-in-blue-las-azules-is-now-streaming-on-apple-tv/amp/",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "AMP variant of the already-tracked https://www.mactech.com/2026/08/13/season-two-of-women-in-blue-las-azules-is-now-streaming-on-apple-tv/ (same slug, same outlet). Second address, not separately fetched (mechanical AMP-suffix shortcut).",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "Pattern match (mechanical AMP-suffix shortcut, no fetch spent)",
+          "status": null,
+          "note": "AMP variant of the already-tracked https://www.mactech.com/2026/08/13/season-two-of-women-in-blue-las-azules-is-now-streaming-on-apple-tv/ (same slug, same outlet). Second address, not separately fetched (mechanical AMP-suffix shortcut)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.upi.com/entertainment_news/tv/2026/07/21/las-azules-season-2-trailer/8811784644272/",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Lowercase-path variant of the already-tracked https://www.upi.com/Entertainment_News/TV/2026/07/21/las-azules-season-2-trailer/8811784644272/ -- same post ID (8811784644272), same outlet, same July 21, 2026 trailer story. Second address; confirms a normalization-gap pattern (case-sensitivity) beyond the already-documented /es-es/ locale gap. Flagged separately to the tool's own ticket, not patched here.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Lowercase-path variant of the already-tracked https://www.upi.com/Entertainment_News/TV/2026/07/21/las-azules-season-2-trailer/8811784644272/ -- same post ID (8811784644272), same outlet, same July 21, 2026 trailer story. Second address; confirms a normalization-gap pattern (case-sensitivity) beyond the already-documented /es-es/ locale gap. Flagged separately to the tool's own ticket, not patched here."
+        }
+      ]
+    },
+    {
+      "url": "https://produ.com/ushispanic/noticias/lemon-studios-with-las-azules-we-tell-a-story-about-women-pioneers-in-a-male-dominated-field",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "US-Hispanic section mirror of the identical PRODU article (same headline, byline Vanessa Maldonado, Aug 9, 2024 date) added to data.json this run at its /english/ section address. Second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "US-Hispanic section mirror of the identical PRODU article (same headline, byline Vanessa Maldonado, Aug 9, 2024 date) added to data.json this run at its /english/ section address. Second address."
+        }
+      ]
+    },
+    {
+      "url": "https://forums.imore.com/threads/apple-announces-new-spanish-crime-drama-las-azules-for-tv.454101/latest",
+      "firstSeen": "2026-10-02T00:11:48.000Z",
+      "lastAttempt": "2026-10-02T00:11:48.000Z",
+      "lastStatus": 301,
+      "failCount": 1,
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "WebFetch",
+          "status": 301,
+          "note": "301 redirect to https://www.imore.com/ (bare homepage, no thread content). Thread appears removed/archived off this forum."
+        },
+        {
+          "attempt": "2026-10-02T00:11:48.000Z",
+          "issue": "LEMA-11823",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "note": "Also resolves to the imore.com homepage, no thread content recovered. Full-chain failure."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-01T22:06:16Z"
+  "lastUpdated": "2026-10-02T00:11:48.000Z"
 }
