@@ -17239,7 +17239,163 @@
           "note": "Classified and permanentSkip'd on first sight, see skipNote."
         }
       ]
+    },
+    {
+      "url": "https://9to5mac.com/?p=1045273",
+      "firstSeen": "2026-10-02T04:06:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T04:06:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second-address: WordPress query-string ID URL (?p=1045273) redirects/canonicalizes to https://9to5mac.com/2026/03/26/apple-tv-has-acclaimed-crime-drama-returning-this-summer/ (confirmed via <link rel=\"canonical\">), which is already in data.json (ts=20260326, outlet=9to5Mac). Same document, second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T04:06:42Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11827"
+        }
+      ]
+    },
+    {
+      "url": "https://www.videoageinternational.net/?p=45327",
+      "firstSeen": "2026-10-02T04:06:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T04:06:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second-address: WordPress query-string ID URL (?p=45327) canonicalizes to https://www.videoageinternational.net/2022/05/24/news/apple-tv-orders-spanish-crime-drama-las-azules/ (confirmed via <link rel=\"canonical\">), already in data.json (ts=20220524, outlet=VideoAge International). Same document, second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T04:06:42Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11827"
+        }
+      ]
+    },
+    {
+      "url": "https://www.produ.com/?p=978147",
+      "firstSeen": "2026-10-02T04:06:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T04:06:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second-address: WordPress query-string ID URL (?p=978147) canonicalizes to https://www.produ.com/ushispanic/noticias/apple-tvs-spanish-language-crime-drama-las-azules-returns-for-season-two-on-wednesday-august-12/ (confirmed via <link rel=\"canonical\">), already in data.json (ts=20260401, outlet=PRODU). Same document, second address.",
+      "history": [
+        {
+          "attempt": "2026-10-02T04:06:42Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11827"
+        }
+      ]
+    },
+    {
+      "url": "https://charlie-www.soapcentral.com/shows/is-women-blue-getting-season-2-here-s-know",
+      "firstSeen": "2026-10-02T04:06:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T04:06:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second-address: 'charlie-www' is a staging/preview subdomain mirror of soapcentral.com (page shows 'Your login session has expired' auth banner; og:url points at the production host). Canonical https://www.soapcentral.com/shows/is-women-blue-getting-season-2-here-s-know is already in data.json (ts=20250521, outlet=Soap Central). Same document, second address. Fetched via Firecrawl scrape (WebFetch returned 403 on this subdomain).",
+      "history": [
+        {
+          "attempt": "2026-10-02T04:06:42Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11827"
+        }
+      ]
+    },
+    {
+      "url": "https://britishcinematographer.co.uk/?p=111839",
+      "firstSeen": "2026-10-02T04:06:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T04:06:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second-address: WordPress query-string ID URL (?p=111839) canonicalizes to https://britishcinematographer.co.uk/maria-sarasvati-herrera-women-in-blue-las-azules/ (confirmed via Firecrawl metadata og:url, publishedTime 2024-09-17), already in data.json (ts=20240917, outlet=British Cinematographer). Same document, second address. Fetched via Firecrawl scrape (WebFetch returned 403 on the query-string URL).",
+      "history": [
+        {
+          "attempt": "2026-10-02T04:06:42Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11827"
+        }
+      ]
+    },
+    {
+      "url": "https://www.motionpictures.org/tag/women-in-blue/",
+      "firstSeen": "2026-10-02T04:06:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T04:06:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Rule F: Motion Picture Association tag-archive page for 'Women in Blue'. Strip test: beyond a generic boilerplate show synopsis paragraph (standard description text, not original journalism), the page carries no written editorial content of its own -- it is a tag index linking to one article (a British Cinematographer interview with cinematographer Maria Sarasvati Herrera, already captured and already in data.json at its own URL, ts=20240917). No named critic attribution rendered on this surface, so no Rule H mining duty applies.",
+      "history": [
+        {
+          "attempt": "2026-10-02T04:06:42Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11827"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mactech.com/author/dennis-sellers/page/47/",
+      "firstSeen": "2026-10-02T04:06:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-02T04:06:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: author-archive pagination page (\"Page 47 of 2,895\") for MacTech writer Dennis Sellers. This specific page carries zero content about Las Azules / Women in Blue -- the articles listed are unrelated Apple topics (a Yahoo Sports deal, a Jewish-employee-policies recognition list, an internal Apple memo). Surfaced only as a broad-query false positive because Sellers separately authored MacTech's actual Las Azules pieces (already tracked at their own URLs, e.g. ts=20260813/20260722/20240510), which live on different pagination pages of this same archive.",
+      "history": [
+        {
+          "attempt": "2026-10-02T04:06:42Z",
+          "method": "WebFetch/Firecrawl",
+          "status": 200,
+          "issue": "LEMA-11827"
+        }
+      ]
+    },
+    {
+      "url": "https://legacy.prod.metacritic.com/tv/women-in-blue/season-2",
+      "firstSeen": "2026-10-02T04:06:42Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-02T04:06:42Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-10-02T04:06:42Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-11827"
+        },
+        {
+          "attempt": "2026-10-02T04:06:42Z",
+          "method": "Firecrawl scrape",
+          "status": 403,
+          "issue": "LEMA-11827",
+          "note": "Firecrawl returned HTTP 200 envelope but body was literally '403 Forbidden' (13 bytes) -- full-chain failure, not a soft pass. Note: this 'legacy.prod.' hostname is distinct from the canonical www.metacritic.com host, which already has ledgered rows for the season-2 (Rule F, LEMA-9882/LEMA-10217) and critic-reviews (Rule H, LEMA-10454) surfaces for this title; this candidate could not be fetched to confirm whether it mirrors either of those, so it is logged as a plain fetch failure rather than classified."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-02T02:11:59.000Z"
+  "lastUpdated": "2026-10-02T04:06:42Z"
 }
