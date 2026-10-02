@@ -16927,10 +16927,10 @@
     {
       "url": "https://forums.imore.com/threads/apple-announces-new-spanish-crime-drama-las-azules-for-tv.454101/latest",
       "firstSeen": "2026-10-02T00:11:48.000Z",
-      "lastAttempt": "2026-10-02T02:11:59.000Z",
+      "lastAttempt": "2026-10-02T08:07:51.000Z",
       "lastStatus": 301,
-      "failCount": 2,
-      "cooldownUntil": null,
+      "failCount": 3,
+      "cooldownUntil": "2026-11-01T08:07:51Z",
       "history": [
         {
           "attempt": "2026-10-02T00:11:48.000Z",
@@ -16959,6 +16959,20 @@
           "status": 200,
           "issue": "LEMA-11826",
           "note": "Also resolves to the imore.com homepage skip-link only, no thread content recovered. Full-chain failure again."
+        },
+        {
+          "attempt": "2026-10-02T08:07:51.000Z",
+          "method": "WebFetch",
+          "status": 301,
+          "issue": "LEMA-11862",
+          "note": "Still 301-redirects to bare imore.com homepage, no thread content."
+        },
+        {
+          "attempt": "2026-10-02T08:07:51.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11862",
+          "note": "Also resolves to the imore.com homepage only (51-byte markdown, nav skip-link), no thread content recovered. Full-chain failure, 3rd consecutive. cooldownUntil set to 30 days (2026-11-01)."
         }
       ]
     },
@@ -17546,7 +17560,154 @@
           "note": "Firecrawl also resolved to the homepage (og:url=https://dailydot.com/, title 'The Daily Dot'). Full-chain failure: this legacy ?p= permalink does not resolve to distinct article content server-side. failCount now 1."
         }
       ]
+    },
+    {
+      "url": "https://amp.milenio.com/temas/barbara-mori",
+      "firstSeen": "2026-10-02T08:07:51.000Z",
+      "lastAttempt": "2026-10-02T08:07:51.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "AMP mirror of www.milenio.com/temas/barbara-mori, already ledgered permanentSkip/editorial_listing_or_database: a tag/archive listing page of news headlines about Barbara Mori, no single editorial article. Same surface family, classified by family per the Apple-show-pages precedent (ledgered without a fetch).",
+      "history": [
+        {
+          "attempt": "2026-10-02T08:07:51.000Z",
+          "method": "Classified by surface family (no fetch)",
+          "status": null,
+          "issue": "LEMA-11862",
+          "note": "Rule F family match to the already-ledgered www.milenio.com/temas/barbara-mori tag-archive row."
+        }
+      ]
+    },
+    {
+      "url": "https://www.chilango.com/cine-y-tv/series/las-azules-temporada-2/amp/",
+      "firstSeen": "2026-10-02T08:07:51.000Z",
+      "lastAttempt": "2026-10-02T08:07:51.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "AMP page for https://www.chilango.com/cine-y-tv/series/las-azules-temporada-2/, already in data.json (ts 20260812, outlet Chilango). Rule I: an AMP page is a second address for a document already tracked, not a distinct document. Ledgered without a fetch per Rule I's explicit AMP clause.",
+      "history": [
+        {
+          "attempt": "2026-10-02T08:07:51.000Z",
+          "method": "Classified per Rule I (no fetch)",
+          "status": null,
+          "issue": "LEMA-11862",
+          "note": "AMP second address of an already-tracked www.chilango.com article."
+        }
+      ]
+    },
+    {
+      "url": "https://www.sensacine.com.mx/actores/actor-41018/news/",
+      "firstSeen": "2026-10-02T08:07:51.000Z",
+      "lastAttempt": "2026-10-02T08:07:51.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "Confirmed via WebFetch: an actor news archive/tag page (Ximena Sarinana) listing headline+thumbnail+date for each pickup chronologically, not a single editorial article. Rule F: no written editorial content survives the strip-the-metadata-table test.",
+      "history": [
+        {
+          "attempt": "2026-10-02T08:07:51.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11862",
+          "note": "Confirmed archive/tag listing structure, no standalone prose."
+        }
+      ]
+    },
+    {
+      "url": "https://www.rogerebert.com/?p=242484",
+      "firstSeen": "2026-10-02T08:07:51.000Z",
+      "lastAttempt": "2026-10-02T08:07:51.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Firecrawl scrape (WebFetch returned 403) confirms this ?p= shortlink's own canonical (og:url) is https://www.rogerebert.com/streaming/women-in-blue-apple-tv-review-2024, already in data.json (ts 20240731, outlet RogerEbert.com). Rule I: second address for an already-tracked document.",
+      "history": [
+        {
+          "attempt": "2026-10-02T08:07:51.000Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-11862",
+          "note": "403 Forbidden."
+        },
+        {
+          "attempt": "2026-10-02T08:07:51.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11862",
+          "note": "Succeeded; og:url canonical points to the already-tracked rogerebert.com/streaming/... review. Second address, not a distinct document."
+        }
+      ]
+    },
+    {
+      "url": "https://www.comicbasics.com/?p=189428",
+      "firstSeen": "2026-10-02T08:07:51.000Z",
+      "lastAttempt": "2026-10-02T08:07:51.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "WebFetch + Firecrawl metadata confirm this ?p= shortlink's canonical (og:url / article:published_time 2026-09-16T09:00:00+02:00) is https://www.comicbasics.com/las-azules-season-2-episode-7-release-date-time-and-where-to-watch/, already in data.json (ts 20260916, outlet Comic Basics). Rule I: second address for an already-tracked document. Content confirmed conditional/hedging preview-style language (consistent with this outlet's typical Entertainment typing), not that it matters here since the canonical is already tracked.",
+      "history": [
+        {
+          "attempt": "2026-10-02T08:07:51.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11862",
+          "note": "Real content returned."
+        },
+        {
+          "attempt": "2026-10-02T08:07:51.000Z",
+          "method": "Firecrawl scrape (metadata precision)",
+          "status": 200,
+          "issue": "LEMA-11862",
+          "note": "og:url / article:published_time confirm canonical already tracked in data.json."
+        }
+      ]
+    },
+    {
+      "url": "https://www.comicbasics.com/?p=191144",
+      "firstSeen": "2026-10-02T08:07:51.000Z",
+      "lastAttempt": "2026-10-02T08:07:51.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "WebFetch + Firecrawl metadata confirm this ?p= shortlink's canonical (og:url / article:published_time 2026-09-23T09:00:00+02:00) is https://www.comicbasics.com/las-azules-season-2-episode-8-release-date-time-and-where-to-watch-the-finale/, already in data.json (ts 20260923, outlet Comic Basics). Rule I: second address for an already-tracked document. Content confirmed conditional/hedging preview-style language, not that it matters here since the canonical is already tracked.",
+      "history": [
+        {
+          "attempt": "2026-10-02T08:07:51.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11862",
+          "note": "Real content returned."
+        },
+        {
+          "attempt": "2026-10-02T08:07:51.000Z",
+          "method": "Firecrawl scrape (metadata precision)",
+          "status": 200,
+          "issue": "LEMA-11862",
+          "note": "og:url / article:published_time confirm canonical already tracked in data.json."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-02T06:00:00Z"
+  "lastUpdated": "2026-10-02T08:07:51.000Z"
 }
