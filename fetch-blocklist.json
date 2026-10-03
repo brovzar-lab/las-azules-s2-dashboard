@@ -19218,7 +19218,107 @@
           "note": "Full page retrieved: JustWatch streaming-provider widget + synopsis blurb + cast/crew metadata table + S1/S2 episode guide. No original editorial prose about the show. Rule F (editorial_listing_or_database)."
         }
       ]
+    },
+    {
+      "url": "https://ncasweb.org/article/widow-s-bay-season-2-release-date-everything-we-know-about-apple-tv-horror-comedy",
+      "firstSeen": "2026-10-03T22:06:04Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T22:06:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad-query noise (EN query). Page is about 'Widow's Bay' Season 2, an unrelated Apple TV horror-comedy series. No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic 'season 2 Apple TV' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-03T22:06:04Z",
+          "method": "Search result title/metadata only (no fetch)",
+          "status": null,
+          "issue": "LEMA-11907",
+          "note": "Off-topic on its face from Exa result title; not fetched, per Rule G no fetch-fallback spend is required once relevance fails."
+        }
+      ]
+    },
+    {
+      "url": "https://seahorsedivingibiza.com/article/emmy-rossum-s-furious-returns-all-about-season-2-and-the-female-serial-killer-thriller",
+      "firstSeen": "2026-10-03T22:06:04Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T22:06:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad-query noise (EN query). Page is about Emmy Rossum's 'Furious', an unrelated female-serial-killer thriller series. No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic 'season 2 female serial killer thriller' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-03T22:06:04Z",
+          "method": "Search result title/metadata only (no fetch)",
+          "status": null,
+          "issue": "LEMA-11907",
+          "note": "Off-topic on its face from Exa result title; not fetched, per Rule G no fetch-fallback spend is required once relevance fails."
+        }
+      ]
+    },
+    {
+      "url": "https://elconfidencial.com/cultura/cine/2026-10-03/netflix-guerreras-kpop-2-2029-cines-ted-sarandos-1qrt_4436981",
+      "firstSeen": "2026-10-03T22:06:04Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T22:06:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad-query noise (ES query). Page is about Netflix's 'Guerreras K-pop 2' theatrical sequel plans, an unrelated film. No mention of Las Azules / Bárbara Mori; surfaced only as a broad-query match on generic 'temporada 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-03T22:06:04Z",
+          "method": "Search result title/metadata only (no fetch)",
+          "status": null,
+          "issue": "LEMA-11907",
+          "note": "Off-topic on its face from Exa result title; not fetched, per Rule G no fetch-fallback spend is required once relevance fails."
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/reel/Dc-EXmSNpKT",
+      "firstSeen": "2026-10-03T22:06:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T22:06:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Instagram reel posted by @maca_online (Maca Carriedo), a media personality's personal/influencer account, not an official show/network account or a publication's bylined outlet account. Reel discusses Las Azules S2 with other content creators, posted Sept 6, 2026. Under Rule B, individual personal accounts reposting/discussing show content are not media coverage regardless of topicality; classified editorial_personal_repost (not editorial_vendor_promo) since this is an individual creator, not a vendor/supplier company.",
+      "history": [
+        {
+          "attempt": "2026-10-03T22:06:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11907",
+          "note": "WebFetch succeeded; confirmed account is a personal media-personality account, not an outlet/network/studio account. Skipped on Rule B relevance grounds."
+        }
+      ]
+    },
+    {
+      "url": "https://videoageinternational.net/?p=60416",
+      "firstSeen": "2026-10-03T22:06:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T22:06:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Unresolved WordPress ?p=60416 ID-permalink on videoageinternational.net (host not in the ?p= canonical allow-list). curl -L resolves this to https://www.videoageinternational.net/2025/09/26/news/2025-international-emmy-noms-unveiled/, which is already in data.json (ts=20250926, outlet 'VideoAge International'). Second address for an already-tracked document; not fetched further per step 4a2's looksLikeIdPermalink redirect-resolution instruction.",
+      "history": [
+        {
+          "attempt": "2026-10-03T22:06:04Z",
+          "method": "curl -L redirect resolution (no body fetch)",
+          "status": 200,
+          "issue": "LEMA-11907",
+          "note": "Redirect target confirmed already present in data.json under its canonical dated-slug URL."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-03T20:04:01Z"
+  "lastUpdated": "2026-10-03T22:06:04Z"
 }
