@@ -19012,7 +19012,187 @@
           "note": "Title/snippet confirm this is an unrelated opinion piece about organizational reform."
         }
       ]
+    },
+    {
+      "url": "https://mybeaconhotel.com/article/widow-s-bay-season-2-release-date-everything-we-know-apple-tv-s-emmy-winning-horror-comedy",
+      "firstSeen": "2026-10-03T18:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T18:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Apple TV+'s \"Widow's Bay\" Season 2, an unrelated Emmy-winning horror-comedy series. No mention of Las Azules / Women in Blue; surfaced only as a broad Exa-query match on generic \"season 2\"/\"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-03T18:05:03Z",
+          "method": "WebSearch/Exa",
+          "status": 200,
+          "issue": "LEMA-11905",
+          "note": "Title/content confirmed off-topic (different Apple TV+ show); not fetched further."
+        }
+      ]
+    },
+    {
+      "url": "https://ayso372.org/article/imperfect-women-episode-2-bombshell-explained-what-it-means-for-youtube",
+      "firstSeen": "2026-10-03T18:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T18:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about an unrelated show/web series titled \"Imperfect Women\", episode 2. No connection to Las Azules / Women in Blue; surfaced only as a broad Exa-query match.",
+      "history": [
+        {
+          "attempt": "2026-10-03T18:05:03Z",
+          "method": "WebSearch/Exa",
+          "status": 200,
+          "issue": "LEMA-11905",
+          "note": "Title/content confirmed off-topic; not fetched further."
+        }
+      ]
+    },
+    {
+      "url": "https://gimiansociety.org/article/tony-dalton-s-menacing-performance-in-sugar-season-2",
+      "firstSeen": "2026-10-03T18:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T18:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about actor Tony Dalton's performance in Apple TV+'s \"Sugar\" Season 2, an unrelated series. Tony Dalton is not part of the Las Azules cast; surfaced only as a broad Exa-query match on \"season 2\"/\"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-03T18:05:03Z",
+          "method": "WebSearch/Exa",
+          "status": 200,
+          "issue": "LEMA-11905",
+          "note": "Title/content confirmed off-topic (different Apple TV+ show); not fetched further."
+        }
+      ]
+    },
+    {
+      "url": "https://vedicpalmistry.org/article/dark-matter-season-2-exploring-the-multiverse-with-blake-crouch-s-vision",
+      "firstSeen": "2026-10-03T18:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T18:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Apple TV+'s \"Dark Matter\" Season 2 (Blake Crouch sci-fi adaptation), an unrelated series. No mention of Las Azules / Women in Blue; surfaced only as a broad Exa-query match.",
+      "history": [
+        {
+          "attempt": "2026-10-03T18:05:03Z",
+          "method": "WebSearch/Exa",
+          "status": 200,
+          "issue": "LEMA-11905",
+          "note": "Title/content confirmed off-topic (different Apple TV+ show); not fetched further."
+        }
+      ]
+    },
+    {
+      "url": "https://images.apple.com/tv-pr/news/2025/05/apples-critically-acclaimed-spanish-language-drama-women-in-blue-las-azules-lands-season-two-renewal/",
+      "firstSeen": "2026-10-03T18:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T18:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "images.apple.com mirror of the Season 2 renewal press release already tracked in data.json at https://www.apple.com/tv-pr/news/2025/05/apples-critically-acclaimed-spanish-language-drama-women-in-blue-las-azules-lands-season-two-renewal (ts 20250520, outlet \"Apple TV Press\"). WebFetch confirmed identical headline and first paragraph; no canonical link tag present, but body content matches verbatim. Second address for the same CMS post per Rule I.",
+      "history": [
+        {
+          "attempt": "2026-10-03T18:05:03Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11905",
+          "note": "Confirmed identical headline/body to already-tracked www.apple.com version; excluded as redundant, not a fetch failure."
+        }
+      ]
+    },
+    {
+      "url": "https://appleworld.today/?p=90067",
+      "firstSeen": "2026-10-03T18:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T18:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "WordPress ID-permalink (?p=90067) that redirects to https://appleworld.today/2022/05/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama/, already tracked in data.json (ts 20220524, outlet \"Apple World Today\"). Confirmed via curl -L redirect resolution. Second address for an already-tracked document per Rule I.",
+      "history": [
+        {
+          "attempt": "2026-10-03T18:05:03Z",
+          "method": "curl -L (redirect resolution)",
+          "status": 200,
+          "issue": "LEMA-11905",
+          "note": "Redirect target already present in data.json; excluded as redundant, not a fetch failure."
+        }
+      ]
+    },
+    {
+      "url": "https://appleworld.today/?p=130547",
+      "firstSeen": "2026-10-03T18:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T18:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "WordPress ID-permalink (?p=130547) that redirects to https://appleworld.today/2026/08/season-two-of-women-in-blue-las-azules-is-now-streaming-on-apple-tv/, already tracked in data.json (ts 20260813, outlet \"Apple World Today\"). Confirmed via curl -L redirect resolution. Second address for an already-tracked document per Rule I.",
+      "history": [
+        {
+          "attempt": "2026-10-03T18:05:03Z",
+          "method": "curl -L (redirect resolution)",
+          "status": 200,
+          "issue": "LEMA-11905",
+          "note": "Redirect target already present in data.json; excluded as redundant, not a fetch failure."
+        }
+      ]
+    },
+    {
+      "url": "https://cinemachords.com/tag/las-azules/",
+      "firstSeen": "2026-10-03T18:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T18:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Tag/archive index page listing three cinemachords.com posts about Las Azules (May 21 2025 renewal piece, July 30 2024 showrunner/cast piece, June 20 2024 trailer piece), carrying no original written content of its own. The May 21 2025 renewal post is already tracked in data.json at https://cinemachords.com/apple-tv-renews-las-azules-women-in-blue-season-2-now-in-production (ts 20250521). Archive index surfacing already-tracked posts, per Rule I.",
+      "history": [
+        {
+          "attempt": "2026-10-03T18:05:03Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11905",
+          "note": "Confirmed tag/archive index page with no standalone prose; excluded as redundant, not a fetch failure."
+        }
+      ]
+    },
+    {
+      "url": "https://www.primevideo.com/detail/0RMO1EJVZG03W0PUOQZ4XW98PT/ref=atv_wl_tog_sign_in",
+      "firstSeen": "2026-10-03T18:05:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T18:05:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Amazon Prime Video platform detail/catalog page for \"Women in Blue\" Season 1 (plot synopsis, episode titles, cast list, IMDb rating). No original written editorial content about the show; strip the metadata table and nothing remains. Rule F listing/database page.",
+      "history": [
+        {
+          "attempt": "2026-10-03T18:05:03Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11905",
+          "note": "Confirmed platform catalog/detail page, no standalone prose; excluded under Rule F, not a fetch failure."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-03T16:00:00Z"
+  "lastUpdated": "2026-10-03T18:05:03Z"
 }
