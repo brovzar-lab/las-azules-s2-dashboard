@@ -48,10 +48,10 @@
     {
       "url": "https://www.aol.com/entertainment/women-blue-renewed-season-2-190000238.html",
       "firstSeen": "2026-09-02T18:06:40Z",
-      "failCount": 3,
+      "failCount": 4,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-03T00:15:00Z",
-      "cooldownUntil": "2026-10-03T00:15:00Z",
+      "lastAttempt": "2026-10-03T02:01:30Z",
+      "cooldownUntil": "2026-11-02T02:01:30Z",
       "history": [
         {
           "attempt": "2026-09-02T18:06:40Z",
@@ -91,6 +91,20 @@
           "status": 200,
           "issue": "LEMA-9635",
           "note": "Firecrawl returned 200 but body is AOL's generic page-not-found placeholder again. Full-chain failure, failCount now 3, cooldown set to 30 days."
+        },
+        {
+          "attempt": "2026-10-03T02:01:30Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-11886",
+          "note": "WebFetch returned 404."
+        },
+        {
+          "attempt": "2026-10-03T02:01:30Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11886",
+          "note": "Firecrawl returned 200 but body is AOL's generic page-not-found placeholder again. Full-chain failure, failCount now 4, cooldown reset to 30 days."
         }
       ]
     },
@@ -18491,7 +18505,67 @@
           "note": "Different topic entirely (musical group, not the TV show); classified Rule G on relevance grounds without spending a fetch."
         }
       ]
+    },
+    {
+      "url": "https://deuitdaging.info/article/widow-s-bay-season-2-release-date-everything-we-know-apple-tv-news",
+      "firstSeen": "2026-10-03T02:01:30Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T02:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article (redirects to custommapposter.com/article/widow-s-bay-season-2-release-date-everything-we-know-apple-tv-news/11981) is about \"Widow's Bay\", a different Apple TV+ series (horror-comedy). No mention of Las Azules or Women in Blue anywhere in the body; surfaced only as a broad-query match on generic \"Season 2\"/\"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-03T02:01:30Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11886",
+          "note": "WebFetch followed 302 redirect to custommapposter.com; confirmed article is about Widow's Bay, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://movieweb.com/see-jason-momoa-action-stream-apple-october-2026/",
+      "firstSeen": "2026-10-03T02:01:30Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T02:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about \"SEE\", a different Apple TV+ series starring Jason Momoa, streaming resurgence angle. No mention of Las Azules or Women in Blue anywhere in the body; surfaced only as a broad-query match on generic \"Apple\"/\"stream\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-03T02:01:30Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11886",
+          "note": "WebFetch succeeded; confirmed article is about SEE (Jason Momoa), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://appleworld.today/?p=129727",
+      "firstSeen": "2026-10-03T02:01:30Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T02:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "WordPress `?p=129727` ID-permalink on appleworld.today; HTTP 301 redirects to https://appleworld.today/2026/07/apple-tv-unveils-trailer-for-season-two-of-spanish-language-crime-drama-women-in-blue-las-azules/, which is already present in data.json (ts=20260721, outlet=\"Apple World Today\"). Confirmed via direct curl -L redirect chain and article:published_time meta tag match. Second address for a document already tracked, per Rule I; not a distinct document. Same recurring normalize.js `?p=`-style ID-permalink gap pattern as prior findings (LEMA-11823/11824, LEMA-11827, LEMA-11862) -- flagged as a fresh escalation on this run's execution issue rather than re-escalated under an old ticket.",
+      "history": [
+        {
+          "attempt": "2026-10-03T02:01:30Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11886",
+          "note": "WebFetch resolved the article content behind ?p=129727; curl -L confirmed 301 redirect to the already-tracked canonical slug URL."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-03T00:01:29.000Z"
+  "lastUpdated": "2026-10-03T02:01:30Z"
 }
