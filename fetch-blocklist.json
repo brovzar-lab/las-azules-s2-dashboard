@@ -18400,7 +18400,98 @@
           "note": "Canonical URL already present in data.json at matching ts/outlet."
         }
       ]
+    },
+    {
+      "url": "https://www.macobserver.com/features/apple-tv-it/",
+      "firstSeen": "2026-10-03T00:01:29.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T00:01:29.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "Rule F: MacObserver's 'Apple TV' tag/category archive page. Firecrawl scrape shows a list of unrelated Apple TV show article teasers (Tenzing, Matchbox The Movie, Awkwafina: The Unlikely Cook, The Last First Winter) with no written content about Las Azules / Women in Blue at all. Strip test: nothing about this show remains.",
+      "history": [
+        {
+          "attempt": "2026-10-03T00:01:29.000Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-11885",
+          "note": "WebFetch returned 403 Forbidden."
+        },
+        {
+          "attempt": "2026-10-03T00:01:29.000Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11885",
+          "note": "Firecrawl succeeded; page is a generic tag archive listing other Apple TV shows, no Las Azules content. Classified Rule F (editorial_listing_or_database), not added to data.json."
+        }
+      ]
+    },
+    {
+      "url": "https://www.threads.com/@latinaspoderosas/post/Dd_xcV3FcQL/sammmmeeeeeee/",
+      "firstSeen": "2026-10-03T00:01:29.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T00:01:29.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Rule G: Threads post reads only 'Sammmmeeeeeee' with no hashtags or content referencing Las Azules / Women in Blue. Surfaced only as a broad Exa EN query match ('Las Azules Women in Blue Season 2 Apple TV'); confirmed off-topic via direct fetch.",
+      "history": [
+        {
+          "attempt": "2026-10-03T00:01:29.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11885",
+          "note": "Fetched content confirmed as unrelated, content-free post. Classified Rule G, not added to data.json."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/es/serie/blue-lights",
+      "firstSeen": "2026-10-03T00:01:29.000Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T00:01:29.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Rule G: JustWatch page is for the unrelated British TV series 'Blue Lights', not Las Azules / Women in Blue. Surfaced only as a broad Exa EN query match; no fetch needed to confirm given the explicit distinct show title and URL slug.",
+      "history": [
+        {
+          "attempt": "2026-10-03T00:01:29.000Z",
+          "method": "Title/URL review (no fetch)",
+          "status": null,
+          "issue": "LEMA-11885",
+          "note": "Different show entirely ('Blue Lights'); classified Rule G on relevance grounds without spending a fetch, consistent with Rule G/B posture that dateability/fetch is irrelevant once relevance fails."
+        }
+      ]
+    },
+    {
+      "url": "https://vanguardia.com.mx/articulo/los-angeles-azules-conquistan-las-mamas-saltillenses",
+      "firstSeen": "2026-10-03T00:01:29.000Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T00:01:29.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Rule G: article is about the Mexican band 'Los Angeles Azules' performing in Saltillo, unrelated to the TV series Las Azules. Surfaced only as a broad Exa EN query match on the word 'Azules'.",
+      "history": [
+        {
+          "attempt": "2026-10-03T00:01:29.000Z",
+          "method": "Title/URL review (no fetch)",
+          "status": null,
+          "issue": "LEMA-11885",
+          "note": "Different topic entirely (musical group, not the TV show); classified Rule G on relevance grounds without spending a fetch."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-02T22:10:00Z"
+  "lastUpdated": "2026-10-03T00:01:29.000Z"
 }
