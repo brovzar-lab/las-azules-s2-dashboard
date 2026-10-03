@@ -18912,7 +18912,107 @@
           "note": "WebFetch returned 403; Firecrawl scrape succeeded. Confirmed page is a database/metadata record (synopsis, cast, crew, rating, related-titles), not editorial prose."
         }
       ]
+    },
+    {
+      "url": "http://ringside-wrestling.blogspot.com/2015/11/lutadores-falam-sobre-segunda-temporada.html",
+      "firstSeen": "2026-10-03T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Blogspot post (2015) about wrestlers discussing season 2 of Lucha Underground, an unrelated wrestling show. No mention of Las Azules/Women in Blue; surfaced only as a broad-query match on generic \"segunda temporada\" terms via Exa.",
+      "history": [
+        {
+          "attempt": "2026-10-03T16:00:00Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-11904",
+          "note": "Title/snippet confirm this is about Lucha Underground, unrelated to Las Azules; surfaced by Exa ES broad query."
+        }
+      ]
+    },
+    {
+      "url": "https://www.primicias.ec/entretenimiento/asalto-angeles-azules-carretera-mexico-claudia-sheinbaum-96195/",
+      "firstSeen": "2026-10-03T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Primicias.ec article about the Mexican musical group \"Los Angeles Azules\" being assaulted on a highway, and references President Claudia Sheinbaum. Entirely unrelated to the Las Azules TV series; surfaced only as a broad-query match on \"azules\" + Mexico terms.",
+      "history": [
+        {
+          "attempt": "2026-10-03T16:00:00Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-11904",
+          "note": "Title/snippet confirm this is about the band Los Angeles Azules, not the TV series."
+        }
+      ]
+    },
+    {
+      "url": "https://www.cnnchile.com/tag/javier-milei-/page/108/",
+      "firstSeen": "2026-10-03T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "CNN Chile tag-archive page for Argentine politician Javier Milei. No connection to Las Azules/Women in Blue; surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-10-03T16:00:00Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-11904",
+          "note": "Title/snippet confirm this is a Javier Milei politics tag page, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.washingtontimes.com/topics/reforma/",
+      "firstSeen": "2026-10-03T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Washington Times topic-tag index page for \"reforma\" (immigration/political reform coverage). No connection to Las Azules/Women in Blue; surfaced only as a broad-query match on \"Reforma\" (mistaken for the Mexican newspaper of the same name).",
+      "history": [
+        {
+          "attempt": "2026-10-03T16:00:00Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-11904",
+          "note": "Title/snippet confirm this is a political-reform topic tag page, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://oem.com.mx/elheraldodechihuahua/analisis/innovacion-y-creatividad-el-ser-de-la-reforma-15162741",
+      "firstSeen": "2026-10-03T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Heraldo de Chihuahua (OEM) opinion/analysis piece titled \"Innovacion y creatividad: el ser de la reforma\", about organizational reform, not the TV series. No connection to Las Azules/Women in Blue; surfaced only as a broad-query match on \"Reforma\".",
+      "history": [
+        {
+          "attempt": "2026-10-03T16:00:00Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-11904",
+          "note": "Title/snippet confirm this is an unrelated opinion piece about organizational reform."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-03T14:05:25Z"
+  "lastUpdated": "2026-10-03T16:00:00Z"
 }
