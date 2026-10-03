@@ -18771,7 +18771,148 @@
           "note": "Exa EN query result; title/snippet confirm this is about Dark Matter, not Las Azules."
         }
       ]
+    },
+    {
+      "url": "http://imcmedia.org/article/dark-matter-season-2-review-a-bold-twist-for-apple-tv-s-sci-fi-series",
+      "firstSeen": "2026-10-03T14:05:25Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T14:05:25Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "IMC Media article about Apple TV+'s \"Dark Matter\" Season 2 (Blake Crouch sci-fi adaptation, multiverse reset plot). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Apple TV\" + \"season 2\" + \"review\" terms via Exa Pass 1. URL 302-redirects to custommapposter.com, confirmed via WebFetch at the redirect target.",
+      "history": [
+        {
+          "attempt": "2026-10-03T14:05:25Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11903",
+          "note": "WebFetch (via 302 redirect to custommapposter.com) confirmed article is about Dark Matter, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://news.lavx.hu/article/apple-tv-releases-the-sisters-grimm-season-2-in-full",
+      "firstSeen": "2026-10-03T14:05:25Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T14:05:25Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "LavX News article about Apple TV+'s animated fantasy series \"The Sisters Grimm\" Season 2. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Apple TV\" + \"season 2\" terms via Exa Pass 1.",
+      "history": [
+        {
+          "attempt": "2026-10-03T14:05:25Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11903",
+          "note": "WebFetch confirmed article is about The Sisters Grimm, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://antena3.com/series/entre-tierras/asi-son-nicolas-manuela-hijos-que-desvive-maria-segunda-temporada_202610036ac0f0bba4297764c3a8c118.html",
+      "firstSeen": "2026-10-03T14:05:25Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T14:05:25Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Antena 3 article about its own Spanish drama \"Entre tierras\" Season 2 and its character Maria's children Nicolas and Manuela. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on the Spanish query's generic \"temporada 2\" + \"Maria\" terms via Pass 2.",
+      "history": [
+        {
+          "attempt": "2026-10-03T14:05:25Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11903",
+          "note": "WebFetch errored (unable to fetch antena3.com); Firecrawl scrape succeeded and confirmed article is about Entre tierras, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://europesays.com/es/799024",
+      "firstSeen": "2026-10-03T14:05:25Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T14:05:25Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "EuropeSays article about Amazon Prime Video's \"Neagley\" (Reacher spin-off) viewership records. No mention of Las Azules, Women in Blue, or Apple TV; surfaced only as a broad-query match on generic \"nueva serie\" + \"temporada\" terms via Pass 2.",
+      "history": [
+        {
+          "attempt": "2026-10-03T14:05:25Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11903",
+          "note": "WebFetch errored (socket hang up); Firecrawl scrape succeeded and confirmed article is about Neagley/Reacher on Amazon Prime Video, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://telediario.mx/espectaculos/mariana-trevino-brilla-en-monterrey-con-mentiras-all-starr",
+      "firstSeen": "2026-10-03T14:05:25Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T14:05:25Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Telediario Mexico article about actress Mariana Trevino's stage performance in the musical \"Mentiras: All Starr\" in Monterrey. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic Mexican-entertainment terms via Exa Pass 1 Spanish query.",
+      "history": [
+        {
+          "attempt": "2026-10-03T14:05:25Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11903",
+          "note": "WebFetch confirmed article is about Mariana Trevino's stage musical performance, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://wykeradio.org/article/sugar-season-2-review-colin-farrell-s-noir-masterpiece-returns-with-a-genre-bending-twist",
+      "firstSeen": "2026-10-03T14:05:25Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T14:05:25Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Wyke Radio article about Apple TV+'s \"Sugar\" Season 2 (Colin Farrell noir detective series). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Apple TV\" + \"season 2\" + \"review\" terms via Exa Pass 1. URL 302-redirects to custommapposter.com, confirmed via WebFetch at the redirect target.",
+      "history": [
+        {
+          "attempt": "2026-10-03T14:05:25Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11903",
+          "note": "WebFetch (via 302 redirect to custommapposter.com) confirmed article is about Sugar, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://filmaffinity.com/mx/film786793.html",
+      "firstSeen": "2026-10-03T14:05:25Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-03T14:05:25Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "FilmAffinity's main 'Ficha' (show record) page for Las Azules: rating, cast/crew metadata table, synopsis blurb, and links to separate Creditos/Criticas/Trailers/Imagenes/pro-reviews pages. No written editorial prose of its own; stripping the metadata table leaves nothing. Distinct URL from the already-ledgered pro-reviews.php critic-aggregation page (mined under Rule H per LEMA-10454 backfill) and from the user-reviews tab (not surfaced this run); this Ficha page itself renders only a critic-review count (8) with a link out, not the critic excerpts themselves, so no Rule H mining duty attaches here.",
+      "history": [
+        {
+          "attempt": "2026-10-03T14:05:25Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11903",
+          "note": "WebFetch returned 403; Firecrawl scrape succeeded. Confirmed page is a database/metadata record (synopsis, cast, crew, rating, related-titles), not editorial prose."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-03T12:03:46Z"
+  "lastUpdated": "2026-10-03T14:05:25Z"
 }
