@@ -18565,7 +18565,133 @@
           "note": "WebFetch resolved the article content behind ?p=129727; curl -L confirmed 301 redirect to the already-tracked canonical slug URL."
         }
       ]
+    },
+    {
+      "url": "https://atomiccitymodels.com/article/vince-gilligan-s-pluribus-season-2-update-filming-soon-premiere-date-revealed",
+      "firstSeen": "2026-10-03T08:04:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa broad EN query ('Las Azules Women in Blue Season 2 Apple TV') on keyword overlap only. Page is about Vince Gilligan's 'Pluribus' Season 2 filming/premiere update, an unrelated series. No mention of Las Azules or Women in Blue. Not fetched, per Rule G relevance-gate-first posture.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-03T08:04:33Z",
+          "method": "WebSearch (title/snippet only, not fetched)",
+          "status": null,
+          "issue": "LEMA-11898",
+          "note": "Off-topic determination made from search-result title alone (different show, different creator); Rule G does not require a body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.larazon.es/television/series/segunda-temporada-reina-roja-nada-que-parece_202610036ac00560a4297764c3a85ad4.html",
+      "firstSeen": "2026-10-03T08:04:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa broad EN query on keyword overlap only. Article about 'Reina Roja' Season 2, an unrelated Spanish-language thriller series, not Las Azules / Women in Blue. Not fetched, per Rule G relevance-gate-first posture.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-03T08:04:33Z",
+          "method": "WebSearch (title/snippet only, not fetched)",
+          "status": null,
+          "issue": "LEMA-11898",
+          "note": "Off-topic determination made from search-result title alone (different show title, 'Reina Roja'); Rule G does not require a body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://la100.cienradios.com/espectaculos/cine-y-series/la-segunda-temporada-de-coppola-el-representante-llega-a-disney-en-octubre-mucho-mas-picante/",
+      "firstSeen": "2026-10-03T08:04:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa broad ES query ('Barbara Mori entrevista Las Azules temporada 2') on generic 'segunda temporada' keyword overlap only. Article about 'Coppola, el representante' Season 2 landing on Disney+, an unrelated series. No mention of Las Azules or Barbara Mori. Not fetched, per Rule G relevance-gate-first posture.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-03T08:04:33Z",
+          "method": "WebSearch (title/snippet only, not fetched)",
+          "status": null,
+          "issue": "LEMA-11898",
+          "note": "Off-topic determination made from search-result title alone (different show, different platform); Rule G does not require a body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mundodeportivo.com/elotromundo/television/20261003/1004233994/rtve-confirma-tunel-avanza-gana-jesus-vazquez-tendra-segunda-temporada-sera-mes-octubre-dct.html",
+      "firstSeen": "2026-10-03T08:04:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa broad ES query on generic 'segunda temporada' keyword overlap only. Article about RTVE's 'El Tunel: avanza y gana' (host Jesus Vazquez) getting a second season, an unrelated game show. No mention of Las Azules. Not fetched, per Rule G relevance-gate-first posture.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-03T08:04:33Z",
+          "method": "WebSearch (title/snippet only, not fetched)",
+          "status": null,
+          "issue": "LEMA-11898",
+          "note": "Off-topic determination made from search-result title alone (different show, different network/outlet); Rule G does not require a body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://remezcla.com/music/los-angeles-azules-announce-2026-cumbia-sin-fronteras-u-s-tour/",
+      "firstSeen": "2026-10-03T08:04:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 2 standard web sweep on generic 'Azules' keyword overlap only. Article about Los Angeles Azules, a Mexican cumbia band, announcing a 2026 US tour -- unrelated to Las Azules / Women in Blue the TV series. Not fetched, per Rule G relevance-gate-first posture.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-03T08:04:33Z",
+          "method": "WebSearch (title/snippet only, not fetched)",
+          "status": null,
+          "issue": "LEMA-11898",
+          "note": "Off-topic determination made from search-result title alone (band name collision on 'Azules', unrelated entity); Rule G does not require a body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://remezcla.com/?p=442354",
+      "firstSeen": "2026-10-03T08:04:33Z",
+      "failCount": 0,
+      "lastStatus": 301,
+      "lastAttempt": "2026-10-03T08:04:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ID-permalink shortlink (curl -L confirms 301 redirect) to https://remezcla.com/music/los-angeles-azules-announce-2026-cumbia-sin-fronteras-u-s-tour/, ledgered this same run under editorial_off_topic_false_positive (Los Angeles Azules cumbia band, unrelated to the Las Azules TV series). Same off-topic determination applies to this address.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-03T08:04:33Z",
+          "method": "curl -L (redirect resolution only, not a content fetch)",
+          "status": 301,
+          "issue": "LEMA-11898",
+          "note": "Resolved per step 4a2's looksLikeIdPermalink branch; redirect target is the off-topic canonical URL ledgered alongside this row."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-03T02:01:30Z"
+  "lastUpdated": "2026-10-03T08:04:33Z"
 }
