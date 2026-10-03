@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 const fs = require('fs');
 const path = require('path');
 
-const { lookupAll, assertLedgerIntegrity } = require('../lib/ledger');
+const { lookupAll, lookupCandidate, buildLedgerIndex, assertLedgerIntegrity } = require('../lib/ledger');
 
 const FIXTURE_LEDGER = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'fixtures', 'mini-ledger.json'), 'utf8')
@@ -84,6 +84,28 @@ test('lookup: a data.json duplicate group (same normalized key, two rows) resolv
   assert.equal(r.inDataJson, true);
   assert.equal(r.dataJsonTs, 20260905); // the more recent of the two rows, not the first one in the array
   assert.equal(r.dataJsonOutlet, 'Some Outlet');
+});
+
+// looksLikeUnresolvedIdPermalink wiring (LEMA-11889)
+
+test('lookup: looksLikeUnresolvedIdPermalink=true for a not-found WordPress-shaped candidate, disposition unaffected', () => {
+  const index = buildLedgerIndex(FIXTURE_LEDGER);
+  const r = lookupCandidate('https://appleworld.today/?p=129727', index, NOW);
+  assert.equal(r.disposition, 'not-found');
+  assert.equal(r.looksLikeUnresolvedIdPermalink, true);
+});
+
+test('lookup: looksLikeUnresolvedIdPermalink=false for an ordinary slug-path candidate', () => {
+  const index = buildLedgerIndex(FIXTURE_LEDGER);
+  const r = lookupCandidate('https://example.com/news/brand-new-story', index, NOW);
+  assert.equal(r.looksLikeUnresolvedIdPermalink, false);
+});
+
+test('lookup: looksLikeUnresolvedIdPermalink is present even when datasetIndex is omitted (not gated by the dataset param)', () => {
+  const results = lookupAll(FIXTURE_CANDIDATES, FIXTURE_LEDGER, NOW);
+  for (const r of results) {
+    assert.equal(typeof r.looksLikeUnresolvedIdPermalink, 'boolean');
+  }
 });
 
 test('lookup: permanentSkip disposition, matched via a www/trailing-slash variant', () => {

@@ -292,7 +292,12 @@ function cmdLookup(positional, flags) {
     const dataJsonExtra = r.inDataJson
       ? ` inDataJson=true dataJsonTs=${r.dataJsonTs} dataJsonOutlet=${JSON.stringify(r.dataJsonOutlet)}`
       : ' inDataJson=false';
-    console.log(`${r.url}\t${r.disposition}${extra}${dataJsonExtra}`);
+    // LEMA-11889: offline shape flag for a WordPress-style bare `?p=<id>`
+    // permalink -- true means "verify with curl -L before treating this as
+    // new," never a disposition change. See looksLikeUnresolvedIdPermalink
+    // in normalize.js.
+    const idPermalinkExtra = r.looksLikeUnresolvedIdPermalink ? ' looksLikeIdPermalink=true (verify redirect target before including)' : '';
+    console.log(`${r.url}\t${r.disposition}${extra}${dataJsonExtra}${idPermalinkExtra}`);
   }
 }
 

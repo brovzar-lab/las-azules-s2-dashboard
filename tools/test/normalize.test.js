@@ -3,7 +3,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-const { normalizeUrl } = require('../lib/normalize');
+const { normalizeUrl, looksLikeUnresolvedIdPermalink } = require('../lib/normalize');
 
 test('trailing-slash variant collapses to the same key', () => {
   const a = normalizeUrl('https://example.com/article/las-azules');
@@ -450,4 +450,50 @@ test('case-fold applies to the comparison key only, never to the display url (a 
   const { url, key } = normalizeUrl('https://x.com/AppleTV');
   assert.equal(url, 'https://x.com/AppleTV');
   assert.equal(key, 'x.com/appletv');
+});
+
+// looksLikeUnresolvedIdPermalink (LEMA-11889)
+
+test('looksLikeUnresolvedIdPermalink: true for the reported appleworld.today case (bare root path, single numeric p= param)', () => {
+  assert.equal(looksLikeUnresolvedIdPermalink('https://appleworld.today/?p=129727'), true);
+});
+
+test('looksLikeUnresolvedIdPermalink: true regardless of host -- the check is a pure URL shape, not a per-host config entry', () => {
+  assert.equal(looksLikeUnresolvedIdPermalink('https://some-brand-new-outlet.example/?p=42'), true);
+});
+
+test('looksLikeUnresolvedIdPermalink: true survives a tracking param riding alongside p= (utm_source is stripped before the shape check)', () => {
+  assert.equal(looksLikeUnresolvedIdPermalink('https://appleworld.today/?p=129727&utm_source=newsletter'), true);
+});
+
+test('looksLikeUnresolvedIdPermalink: false when a real path segment is present (not a bare root permalink)', () => {
+  assert.equal(
+    looksLikeUnresolvedIdPermalink('https://appleworld.today/2026/07/apple-tv-unveils-trailer-for-season-two-of-spanish-language-crime-drama-women-in-blue-las-azules/'),
+    false
+  );
+});
+
+test('looksLikeUnresolvedIdPermalink: false when the p value is not purely numeric', () => {
+  assert.equal(looksLikeUnresolvedIdPermalink('https://example.com/?p=abc123'), false);
+});
+
+test('looksLikeUnresolvedIdPermalink: false when another non-tracking param rides alongside p= (ambiguous shape, not the bare WordPress form)', () => {
+  assert.equal(looksLikeUnresolvedIdPermalink('https://example.com/?p=129727&preview=true'), false);
+});
+
+test('looksLikeUnresolvedIdPermalink: false with no query string at all', () => {
+  assert.equal(looksLikeUnresolvedIdPermalink('https://example.com/'), false);
+});
+
+test('looksLikeUnresolvedIdPermalink: false for diarioimagen.net -- already-decided host where ?p=<id> IS the real identity, not a redirect alias', () => {
+  assert.equal(looksLikeUnresolvedIdPermalink('https://diarioimagen.net/?p=736623'), false);
+});
+
+test('looksLikeUnresolvedIdPermalink: false for es.hollywoodreporter.com -- same already-decided-host exclusion as diarioimagen.net', () => {
+  assert.equal(looksLikeUnresolvedIdPermalink('https://es.hollywoodreporter.com/?p=123456'), false);
+});
+
+test('looksLikeUnresolvedIdPermalink: www./m. variants of a flagged host still flag true (host is canonicalized before the allow-list check)', () => {
+  assert.equal(looksLikeUnresolvedIdPermalink('https://www.appleworld.today/?p=129727'), true);
+  assert.equal(looksLikeUnresolvedIdPermalink('https://m.appleworld.today/?p=129727'), true);
 });

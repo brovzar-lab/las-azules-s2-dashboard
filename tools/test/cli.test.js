@@ -386,6 +386,41 @@ test('lookup CLI: single-URL form with --strict does not fail spuriously (Rule C
   assert.doesNotMatch(result.stderr, /--strict guard failed/);
 });
 
+// looksLikeUnresolvedIdPermalink CLI wiring (LEMA-11889)
+
+test('lookup CLI: flags a WordPress-shaped bare ?p=<id> candidate in the plain-text line', () => {
+  const url = 'https://appleworld.today/?p=129727';
+  const result = runCli(['lookup', url, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH]);
+
+  assert.equal(result.status, 0);
+  assert.equal(result.stdout, 'https://appleworld.today/?p=129727\tnot-found inDataJson=false looksLikeIdPermalink=true (verify redirect target before including)\n');
+});
+
+test('lookup CLI: an ordinary slug-path candidate shows no looksLikeIdPermalink text at all (omitted, not printed false)', () => {
+  const url = 'https://example.com/news/brand-new-story';
+  const result = runCli(['lookup', url, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH]);
+
+  assert.equal(result.status, 0);
+  assert.doesNotMatch(result.stdout, /looksLikeIdPermalink/);
+});
+
+test('lookup CLI --json: results carry a boolean looksLikeUnresolvedIdPermalink field', () => {
+  const url = 'https://appleworld.today/?p=129727';
+  const result = runCli(['lookup', url, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH, '--json']);
+
+  assert.equal(result.status, 0);
+  const results = JSON.parse(result.stdout);
+  assert.equal(results[0].looksLikeUnresolvedIdPermalink, true);
+});
+
+test('lookup CLI: an allow-listed WordPress-identity host (diarioimagen.net) is never flagged', () => {
+  const url = 'https://diarioimagen.net/?p=736623';
+  const result = runCli(['lookup', url, '--fetch-blocklist', FIXTURE_LEDGER_PATH, '--data', DATA_PATH]);
+
+  assert.equal(result.status, 0);
+  assert.doesNotMatch(result.stdout, /looksLikeIdPermalink/);
+});
+
 test('lookup CLI: a non-URL positional is still treated as a candidates-file path (regression)', () => {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
   const missingPath = path.join(tmp, 'does-not-exist.json');

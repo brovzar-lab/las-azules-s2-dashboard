@@ -402,14 +402,20 @@ function buildQueryString(searchParams, host) {
  * aliases are not folded. A URL that 302-redirects to (or declares via
  * og:url / <link rel="canonical">) a different URL already in data.json is
  * a duplicate this function cannot see -- e.g. a Senal News piece whose
- * live URL differs from its canonical one. Following redirects or fetching
- * canonical tags would require a network call per URL, which would change
- * this module's contract from deterministic/offline to network-dependent
- * and add fetch-failure/timeout handling this tool doesn't otherwise need.
- * Recommendation (not yet decided, see LEMA-10275 comment thread): leave
- * this class of duplicate to editorial judgment
- * (`editorial_redundant_syndication`) rather than the normalizer, the same
- * way the routine already handles it today.
+ * live URL differs from its canonical one, or a WordPress `?p=<id>` legacy
+ * permalink that 301-redirects to the same post's slug URL (LEMA-11825,
+ * LEMA-11827, LEMA-11862, LEMA-11889 -- four different outlets, same gap,
+ * re-confirmed on LEMA-11889 as the identical class rather than a new one).
+ * Following redirects or fetching canonical tags would require a network
+ * call per URL, which would change this module's contract from
+ * deterministic/offline to network-dependent and add fetch-failure/timeout
+ * handling this tool doesn't otherwise need. Recommendation (not yet
+ * decided, see LEMA-10275 comment thread): leave this class of duplicate to
+ * editorial judgment (`editorial_redundant_syndication`) rather than the
+ * normalizer, the same way the routine already handles it today.
+ * `looksLikeUnresolvedIdPermalink` below gives the WordPress `?p=<id>`
+ * instance of this gap a cheap, offline, host-agnostic early-warning flag
+ * (verify before including), but does not close the gap itself.
  */
 function normalizeUrl(rawUrl) {
   const parsed = new URL(rawUrl);
@@ -437,4 +443,68 @@ function normalizedKey(rawUrl) {
   return normalizeUrl(rawUrl).key;
 }
 
-module.exports = { normalizeUrl, normalizedKey, isTrackingParam, HOST_PARAM_ALLOWLIST, isDecidedAllowlistHost };
+// Offline, host-agnostic SHAPE heuristic for a WordPress-style bare "ID
+// permalink" (root path, a single `p=<digits>` query param, e.g.
+// `https://appleworld.today/?p=129727`). WordPress's default permalink
+// structure serves every post at `/?p=<id>` before a site switches to
+// pretty (slug) permalinks, and 301-redirects the old `?p=<id>` form to
+// the slug URL forever after -- so this shape is frequently a *second*
+// address for a document already tracked under its slug URL. Four
+// different outlets have surfaced this exact shape as a sweep candidate
+// so far (LEMA-11825, LEMA-11827, LEMA-11862, LEMA-11889/appleworld.today),
+// each one caught only because a human happened to run `curl -L` by hand.
+//
+// This is NOT redirect resolution (see the KNOWN GAP comment on
+// normalizeUrl above re: canonical/redirect aliases, LEMA-10275 -- putting
+// a network call in this module was already evaluated and declined there
+// for the Senal News case, and the appleworld.today occurrence is the same
+// gap class, not a new one). It is also NOT a per-URL alias map -- a map
+// from a specific numeric id to its slug would need a fresh, manually-
+// discovered entry for every single article on every outlet that uses
+// this permalink form, which is the same recurring manual-discovery labor
+// as ledgering it by hand, just moved to a different file (LEMA-11889
+// evaluated and rejected this option explicitly: it does not generalize
+// the way a host-level policy does).
+//
+// What this DOES do: flag the URL *shape* itself, which generalizes
+// across every host and every future id with zero new config -- a true
+// structural fix for "don't let anyone forget to check," even though the
+// actual canonical target still has to be resolved by a human (or a
+// future network-aware tool) before the candidate can be safely included
+// or excluded. A true result never changes `disposition` and is never by
+// itself grounds to exclude a URL -- it is a prompt to manually verify
+// (`curl -L`) before treating the candidate as new, nothing more.
+//
+// Hosts with an explicit HOST_PARAM_ALLOWLIST entry that KEEPS `p`
+// (diarioimagen.net, es.hollywoodreporter.com) are excluded on purpose:
+// those two were specifically verified (see the allow-list comment above)
+// to have no slug URL at all, so `?p=<id>` IS their real, permanent
+// identity. Flagging them here would be a false positive on a host whose
+// shape has already been investigated and settled.
+function looksLikeUnresolvedIdPermalink(rawUrl) {
+  const parsed = new URL(rawUrl);
+  const host = applyHostAlias(stripLeadingMobile(stripLeadingWww(parsed.host.toLowerCase())));
+  const allowEntry = HOST_PARAM_ALLOWLIST.get(host);
+  if (allowEntry && allowEntry.keep.includes('p')) return false;
+
+  const path = stripTrailingSlash(parsed.pathname);
+  if (path !== '' && path !== '/') return false;
+
+  const survivors = [];
+  for (const [key, value] of parsed.searchParams.entries()) {
+    if (isTrackingParam(key)) continue;
+    survivors.push([key, value]);
+  }
+  if (survivors.length !== 1) return false;
+  const [key, value] = survivors[0];
+  return key === 'p' && /^\d+$/.test(value);
+}
+
+module.exports = {
+  normalizeUrl,
+  normalizedKey,
+  isTrackingParam,
+  HOST_PARAM_ALLOWLIST,
+  isDecidedAllowlistHost,
+  looksLikeUnresolvedIdPermalink,
+};

@@ -95,6 +95,26 @@ https://example.com/news/other      active-cooldown cooldownUntil=2026-10-03T00:
 https://example.com/news/new        not-found
 ```
 
+**Every result also carries an offline `looksLikeIdPermalink` shape flag (LEMA-11889).** WordPress's
+default permalink structure serves every post at `/?p=<id>` before a site switches to pretty (slug)
+permalinks, and 301-redirects the old `?p=<id>` form to the slug URL forever after -- so a bare
+`https://<host>/?p=<digits>` candidate is frequently a *second* address for a document already
+tracked under its slug URL (four different outlets have surfaced this shape as of LEMA-11889: see
+`looksLikeUnresolvedIdPermalink` in `tools/lib/normalize.js` for the full history and the two hosts
+it deliberately excludes). This is a pure, deterministic check on the URL's shape alone -- no
+network call, no per-URL/per-host config to maintain, so it catches every future occurrence on any
+host automatically. It is **not** redirect resolution: a `true` result never changes `disposition`
+and is never by itself grounds to exclude a URL. It means "run `curl -L` and check whether the
+redirect target is already tracked before treating this candidate as new":
+
+```
+$ node tools/sweep-integrity.js lookup "https://appleworld.today/?p=129727"
+https://appleworld.today/?p=129727  not-found inDataJson=false looksLikeIdPermalink=true (verify redirect target before including)
+```
+
+Omitted from the plain-text line when false, always present in `--json` output as a boolean
+`looksLikeUnresolvedIdPermalink` field.
+
 ### `assert-integrity [--target ledger|data|both] [--fix] [--json]`
 
 Recomputes normalized keys across `fetch-blocklist.json` (Step 10) and/or `data.json`

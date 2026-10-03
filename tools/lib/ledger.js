@@ -1,6 +1,6 @@
 'use strict';
 
-const { normalizeUrl } = require('./normalize');
+const { normalizeUrl, looksLikeUnresolvedIdPermalink } = require('./normalize');
 const { buildDatasetIndex, lookupInDataJson } = require('./dataset');
 
 // Builds the URL -> entry lookup dict described in Pass 0, keyed on the
@@ -37,6 +37,14 @@ function pickAuthoritativeRow(rows) {
 // never changing it. Omitting `datasetIndex` (the pre-LEMA-10591 call
 // shape) omits those fields entirely, so existing callers see byte-
 // identical output to before this change.
+//
+// Every result also carries `looksLikeUnresolvedIdPermalink` (LEMA-11889):
+// an offline URL-shape check (see normalize.js) flagging a WordPress-style
+// bare `?p=<id>` permalink that is frequently a second address for a
+// document already tracked under its slug URL. Unlike `inDataJson` this
+// field has no gating param -- it's a pure function of `candidateUrl`
+// alone, so it's always present and cannot be backward-compat-broken by
+// omitting an argument. It never changes `disposition`.
 function lookupCandidate(candidateUrl, index, now = new Date(), datasetIndex = null) {
   const { key } = normalizeUrl(candidateUrl);
   const rows = index.get(key);
@@ -80,6 +88,8 @@ function lookupCandidate(candidateUrl, index, now = new Date(), datasetIndex = n
       }
     }
   }
+
+  result.looksLikeUnresolvedIdPermalink = looksLikeUnresolvedIdPermalink(candidateUrl);
 
   if (datasetIndex) {
     Object.assign(result, lookupInDataJson(candidateUrl, datasetIndex));
