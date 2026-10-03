@@ -19192,7 +19192,33 @@
           "note": "Confirmed platform catalog/detail page, no standalone prose; excluded under Rule F, not a fetch failure."
         }
       ]
+    },
+    {
+      "url": "https://www.prisma.de/streaming/Women-in-Blue-sdpYb1OK0",
+      "firstSeen": "2026-10-03T20:04:01Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-03T20:04:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "German TV guide Prisma.de streaming-availability page for 'Women in Blue' (Las Azules), surfaced by Firecrawl DE market pass (LEMA-11906). WebFetch returned 403; Firecrawl scrape succeeded (200). Body is a JustWatch-sourced 'where to stream' widget (provider logos, clickout links), a one-paragraph JustWatch synopsis blurb, a cast/crew/subtitle metadata table, and a full per-episode episode guide (S1 + S2) -- no original written editorial content about the show. Per Rule F (strip the metadata table/grid test), nothing written about the show remains once those are removed, so this is editorial_listing_or_database, not editorial_undateable: dateability was never reached.",
+      "history": [
+        {
+          "attempt": "2026-10-03T20:04:01Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-11906"
+        },
+        {
+          "attempt": "2026-10-03T20:04:01Z",
+          "method": "Firecrawl scrape",
+          "status": 200,
+          "issue": "LEMA-11906",
+          "note": "Full page retrieved: JustWatch streaming-provider widget + synopsis blurb + cast/crew metadata table + S1/S2 episode guide. No original editorial prose about the show. Rule F (editorial_listing_or_database)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-03T18:05:03Z"
+  "lastUpdated": "2026-10-03T20:04:01Z"
 }
