@@ -18691,7 +18691,87 @@
           "note": "Resolved per step 4a2's looksLikeIdPermalink branch; redirect target is the off-topic canonical URL ledgered alongside this row."
         }
       ]
+    },
+    {
+      "url": "https://www.cosmopolitan.com/es/entretenimiento-cultura/a73988832/prime-video-serie-policiaca-reina-roja-2/",
+      "firstSeen": "2026-10-03T12:03:46Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T12:03:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Cosmopolitan Spain article about Prime Video's 'Reina Roja' season 2, an unrelated Spanish crime series based on a different book franchise. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic Spanish-language crime-series terms from the Exa ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-03T12:03:46Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-11900",
+          "note": "Exa ES query result; title/snippet confirm this is about Reina Roja, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://jennifergreenhilltaylor.com/article/boston-blue-season-2-release-date-cast-and-what-to-expect",
+      "firstSeen": "2026-10-03T12:03:46Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T12:03:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Boston Blue' season 2, an unrelated CBS/Paramount+ police procedural. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic 'season 2' + police-drama terms from the Exa EN query.",
+      "history": [
+        {
+          "attempt": "2026-10-03T12:03:46Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-11900",
+          "note": "Exa EN query result; title/snippet confirm this is about Boston Blue, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://app.danielwalters.com/unveiling-the-mysteries-behind-defending-jacob-season-2-release-date-and-revelations",
+      "firstSeen": "2026-10-03T12:03:46Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T12:03:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Defending Jacob' season 2, an unrelated Apple TV+ limited-series title. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic 'season 2 Apple TV' terms from the Exa EN query.",
+      "history": [
+        {
+          "attempt": "2026-10-03T12:03:46Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-11900",
+          "note": "Exa EN query result; title/snippet confirm this is about Defending Jacob, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://ojnoonsnckas.com/article/dark-matter-season-2-release-date-time-cast-and-everything-you-need-to-know",
+      "firstSeen": "2026-10-03T12:03:46Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-03T12:03:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Dark Matter' season 2, an unrelated Apple TV+ sci-fi series. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic 'season 2 Apple TV' terms from the Exa EN query.",
+      "history": [
+        {
+          "attempt": "2026-10-03T12:03:46Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-11900",
+          "note": "Exa EN query result; title/snippet confirm this is about Dark Matter, not Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-03T08:04:33Z"
+  "lastUpdated": "2026-10-03T12:03:46Z"
 }
