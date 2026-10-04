@@ -19755,7 +19755,47 @@
           "note": "WebFetch succeeded; confirmed page is about a mountain hiking ascent event, unrelated to Las Azules TV show."
         }
       ]
+    },
+    {
+      "url": "https://hiddenremote.com/boston-blue-season-2-confirmed-feature-wedding-two-beloved-characters",
+      "firstSeen": "2026-10-04T16:01:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T16:01:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about CBS drama \"Boston Blue\" (season 2 wedding plot for characters Sarah Silver and Seth Yates). No mention of Las Azules, Women in Blue, Barbara Mori, or Apple TV anywhere in the piece; surfaced only as a broad-query match on generic \"blue\"/\"season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-04T16:01:23Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11947",
+          "note": "WebFetch succeeded; confirmed article is about a different show (Boston Blue), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://informador.mx/entretenimiento/Peliculas-Deja-que-la-vida-te-lleve-al-baile-20260910-0019.html",
+      "firstSeen": "2026-10-04T16:01:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T16:01:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about the Mexican comedy film \"El Club del Pie Izquierdo\" (released Sept 10, 2026, starring Adrian Uribe and Maria Leon). No mention of Las Azules, Women in Blue, Barbara Mori, or Apple TV anywhere in the piece; surfaced only as a broad-query match on generic Spanish-language entertainment terms.",
+      "history": [
+        {
+          "attempt": "2026-10-04T16:01:23Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11947",
+          "note": "WebFetch succeeded; confirmed article is about an unrelated film, not Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-04T14:00:57Z"
+  "lastUpdated": "2026-10-04T16:01:23Z"
 }
