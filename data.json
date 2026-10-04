@@ -1,5 +1,17 @@
 [
   {
+    "outlet": "Excélsior",
+    "headline": "Horacio García Rojas en 'Las Azules': \"El arte debe cuestionar las estructuras de poder\"",
+    "url": "https://excelsior.com.mx/espectaculos/horacio-garcia-rojas-azules-arte-debe-cuestionar-estructuras-poder",
+    "date": "Oct 4, 2026",
+    "ts": 20261004,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Actor Horacio García Rojas discusses his role in Apple TV's 'Las Azules,' saying art must actively challenge power structures and patriarchal narratives, and advocating for diverse representation of women, Indigenous and LGBTQ+ voices in audiovisual media."
+  },
+  {
     "outlet": "Old Ain't Dead",
     "headline": "Women in Blue, S1, the first women in Mexico's police",
     "url": "https://oldaintdead.com/women-in-blue-s1-the-first-women-in-mexicos-police/",
