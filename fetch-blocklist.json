@@ -19338,7 +19338,49 @@
           "note": "Gallery/navigation hub page, no editorial prose, no publish date. Rule F, matches DE/ES episodes-images siblings."
         }
       ]
+    },
+    {
+      "url": "https://aubeausoleil.com/article/why-ted-lasso-season-2-ruined-the-show-the-exact-moment-it-went-wrong",
+      "firstSeen": "2026-10-04T02:03:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa broad EN query (\"Las Azules Women in Blue Season 2 Apple TV\") on keyword overlap only (\"Season 2\"). Page (aubeausoleil.com) is an opinion piece about Ted Lasso Season 2, an unrelated Apple TV+ comedy series. No mention of Las Azules or Women in Blue. Not fetched, per Rule G relevance-gate-first posture (title alone is unambiguous; dateability irrelevant once off-topic).",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-04T02:03:18Z",
+          "method": "title-only (not fetched, Rule G)",
+          "status": null,
+          "issue": "LEMA-11911",
+          "note": "Off-topic false positive, confirmed from search result title/snippet: article is about Ted Lasso, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "http://en.mantan-web.jp/e_article/20260923dog00m200036000a.html",
+      "firstSeen": "2026-10-04T02:03:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa Spanish query (\"Barbara Mori entrevista Las Azules temporada 2\") on keyword overlap only (\"Season 2\"/\"interview\" terms). Page (MANTANWEB, en.mantan-web.jp) is a cast interview about the anime/manga \"Blue Box\" Season 2 (Shoya Chiba, Reina Ueda, Yoshino Aoyama), an entirely unrelated title. No mention of Las Azules, Women in Blue, or Barbara Mori. Not fetched, per Rule G relevance-gate-first posture (title alone is unambiguous; dateability irrelevant once off-topic).",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-04T02:03:18Z",
+          "method": "title-only (not fetched, Rule G)",
+          "status": null,
+          "issue": "LEMA-11911",
+          "note": "Off-topic false positive, confirmed from search result title/snippet: article is about Blue Box anime cast interview, not Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-04T00:05:01Z"
+  "lastUpdated": "2026-10-04T02:03:18Z"
 }
