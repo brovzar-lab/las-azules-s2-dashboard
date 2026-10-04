@@ -304,6 +304,61 @@ function foldFacebookPath(host, path) {
   return `/${page}/${type}/${id}`;
 }
 
+// AMP second-address fold (LEMA-11953). An AMP-served copy of a page is a
+// second address for a document already tracked under its non-AMP URL, the
+// same "same document, different address" principle as the www./m. strip
+// and foldFacebookPath above -- not the `?p=<id>` gap (LEMA-10275/
+// LEMA-11889), where the canonical address is genuinely unknown without a
+// network call. Here the canonical path IS mechanically reconstructable
+// from the AMP path alone, so this folds the real path (both the display
+// url and the comparison key), rather than only flagging the shape.
+//
+// Three of the four shapes found in this corpus are generic, standards-
+// driven AMP URL conventions (Google's AMP markup popularized all three
+// across the web, not any one outlet's CMS quirk), so they're folded for
+// every host:
+//   1. trailing /amp or /amp/ path segment (e.g. reviewnation.net/<slug>/amp/)
+//   3. leading /amp/ path prefix right after the host (e.g. eltiempo.com/amp/cultura/...)
+//   4. .amp.html extension infix (e.g. theweek.in/<path>/<slug>.amp.html)
+// Every pattern below is anchored to the specific marker position (end of
+// path / start of path / file extension), never a bare substring match --
+// `de-campeones` (contains "amp" mid-segment) and `camp-rock-3` (same) do
+// NOT match any of these and must not be touched; both are pinned by a
+// regression test.
+//
+// Shape 2 -- bollywoodshaadis.com's /amp-articles/<slug> vs /articles/<slug>
+// -- is different in kind: it's a path-segment RENAME, not a strip, and is
+// this one outlet's own CMS routing choice rather than a web-wide AMP
+// convention (unlike shapes 1/3/4, no second outlet in this corpus or prior
+// tickets uses "amp-articles" as a URL marker). Generalizing "strip any
+// amp-prefixed segment" would misfire the day a host's real, non-AMP
+// section is itself named starting with "amp-". The canonical form IS
+// known for this specific, evidenced host though (the live sibling row
+// proves it), so this still gets a real fold rather than an advisory flag
+// -- just scoped to the one evidenced host, same posture as
+// HOST_PARAM_ALLOWLIST/FACEBOOK_SLUG_ID_PATH being host-scoped tables
+// rather than global rules.
+const AMP_PATH_SEGMENT_RENAME_HOSTS = new Map([
+  ['bollywoodshaadis.com', { from: /^\/amp-articles\//, to: '/articles/' }],
+]);
+
+function foldAmpPath(host, path) {
+  // Shape 3: leading /amp/ path prefix.
+  let next = path.replace(/^\/amp(\/.+)$/, '$1');
+  // Shape 1: trailing /amp or /amp/ path segment (trailing slash is already
+  // gone by the time this runs -- see stripTrailingSlash above -- so only
+  // the bare-/amp suffix needs matching here). Requires at least one path
+  // segment survives, so a bare "/amp" path itself is left alone rather
+  // than folded to an empty path.
+  next = next.replace(/^(\/.+)\/amp$/, '$1');
+  // Shape 4: .amp.html extension infix.
+  next = next.replace(/\.amp\.html$/, '.html');
+  // Shape 2: host-scoped path-segment rename.
+  const rename = AMP_PATH_SEGMENT_RENAME_HOSTS.get(host);
+  if (rename) next = next.replace(rename.from, rename.to);
+  return next;
+}
+
 // The routine prose does not specify an order for surviving query params.
 // Sorted here so two URLs whose params differ only in order produce the
 // same key. Implementation decision, flagged as an ambiguity.
@@ -382,6 +437,14 @@ function buildQueryString(searchParams, host) {
  * appears in a candidate stream or artifact -- ship it with a test and a
  * note on that ticket, no new escalation needed.
  *
+ * AMP PATH FOLD (LEMA-11953): a trailing /amp or /amp/ path segment, a
+ * leading /amp/ path prefix, and a .amp.html extension infix are folded to
+ * their non-AMP canonical path for every host; bollywoodshaadis.com's own
+ * /amp-articles/ -> /articles/ CMS rename additionally folds, scoped to
+ * that one evidenced host. See foldAmpPath above for the implementation,
+ * the anchoring that keeps `de-campeones`/`camp-rock-3` untouched, and the
+ * reasoning for why shape 2 is host-scoped while the other three are not.
+ *
  * FACEBOOK PATH FOLD (LEMA-10602): facebook.com URLs of the form
  * /<page>/<type>/<slug>/<id> (type is videos, posts, or reel) fold to
  * /<page>/<type>/<id>, dropping the body-text slug segment. See
@@ -421,7 +484,7 @@ function normalizeUrl(rawUrl) {
   const parsed = new URL(rawUrl);
   const scheme = parsed.protocol.toLowerCase(); // e.g. "https:"
   const host = applyHostAlias(stripLeadingMobile(stripLeadingWww(parsed.host.toLowerCase()))); // host includes port, if any
-  const path = foldFacebookPath(host, stripTrailingSlash(parsed.pathname));
+  const path = foldAmpPath(host, foldFacebookPath(host, stripTrailingSlash(parsed.pathname)));
   const query = buildQueryString(parsed.searchParams, host);
 
   // Path case-folding (LEMA-11825, HOST_CASE_INSENSITIVE_PATH above) is

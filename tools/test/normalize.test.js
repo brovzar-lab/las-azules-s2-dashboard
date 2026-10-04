@@ -497,3 +497,90 @@ test('looksLikeUnresolvedIdPermalink: www./m. variants of a flagged host still f
   assert.equal(looksLikeUnresolvedIdPermalink('https://www.appleworld.today/?p=129727'), true);
   assert.equal(looksLikeUnresolvedIdPermalink('https://m.appleworld.today/?p=129727'), true);
 });
+
+// ---- AMP second-address fold (LEMA-11953) ----
+
+test('AMP shape 1: trailing /amp/ path segment collapses to the canonical non-AMP key (reviewnation.net live pair)', () => {
+  const amp = normalizeUrl('https://reviewnation.net/the-women-in-blue-return-for-season-2-interview/amp/');
+  const canonical = normalizeUrl('https://reviewnation.net/the-women-in-blue-return-for-season-2-interview/');
+  assert.equal(amp.key, canonical.key);
+  assert.equal(amp.url, canonical.url);
+});
+
+test('AMP shape 1: bare trailing /amp (no trailing slash) also collapses (senalnews.com ledger case)', () => {
+  const amp = normalizeUrl('https://senalnews.com/en/digital/apple-tv-to-launch-spanish-language-women-in-blue-second-season-in-august/amp');
+  assert.equal(amp.key, 'senalnews.com/en/digital/apple-tv-to-launch-spanish-language-women-in-blue-second-season-in-august');
+});
+
+test('AMP shape 1: www.-stripped host still folds (mactech.com ledger family)', () => {
+  const withWww = normalizeUrl('https://www.mactech.com/2026/08/13/season-two-of-women-in-blue-las-azules-is-now-streaming-on-apple-tv/amp/');
+  assert.equal(withWww.key, 'mactech.com/2026/08/13/season-two-of-women-in-blue-las-azules-is-now-streaming-on-apple-tv');
+});
+
+test('AMP shape 1: a bare "/amp" path by itself is left alone (guard against folding to an empty path)', () => {
+  const { key } = normalizeUrl('https://example.com/amp');
+  assert.equal(key, 'example.com/amp');
+});
+
+test('AMP shape 1: the two pre-S2-window mactech.com orphans fold to their own distinct keys, not to each other or anything live', () => {
+  const a = normalizeUrl('https://mactech.com/2025/05/21/apple-tv-renews-spanish-language-crime-series-women-in-blue-for-a-second-season/amp');
+  const b = normalizeUrl('https://www.mactech.com/2022/05/24/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama/amp/');
+  assert.notEqual(a.key, b.key);
+  assert.equal(a.key, 'mactech.com/2025/05/21/apple-tv-renews-spanish-language-crime-series-women-in-blue-for-a-second-season');
+  assert.equal(b.key, 'mactech.com/2022/05/24/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama');
+});
+
+test('AMP shape 2 (bollywoodshaadis.com only): /amp-articles/<slug> renames to /articles/<slug>, collapsing to the canonical key', () => {
+  const amp = normalizeUrl('https://www.bollywoodshaadis.com/amp-articles/women-in-blue-season-2-review-83240');
+  const canonical = normalizeUrl('https://www.bollywoodshaadis.com/articles/women-in-blue-season-2-review-83240');
+  assert.equal(amp.key, canonical.key);
+  assert.equal(amp.url, 'https://bollywoodshaadis.com/articles/women-in-blue-season-2-review-83240');
+});
+
+test('AMP shape 2 is host-scoped: an unrelated host with the same /amp-articles/ path shape is NOT renamed', () => {
+  const { key } = normalizeUrl('https://some-other-outlet.example/amp-articles/unrelated-story');
+  assert.equal(key, 'some-other-outlet.example/amp-articles/unrelated-story');
+});
+
+test('AMP shape 3: leading /amp/ path prefix collapses to the canonical non-AMP key (eltiempo.com live pair)', () => {
+  const amp = normalizeUrl(
+    'https://www.eltiempo.com/amp/cultura/cine-y-tv/vuelven-las-azules-el-increible-grupo-de-mujeres-que-se-abrio-camino-en-la-policia-de-mexico-a-pesar-del-machismo-la-corrupcion-y-las-mentiras-3577681'
+  );
+  const canonical = normalizeUrl(
+    'https://www.eltiempo.com/cultura/cine-y-tv/vuelven-las-azules-el-increible-grupo-de-mujeres-que-se-abrio-camino-en-la-policia-de-mexico-a-pesar-del-machismo-la-corrupcion-y-las-mentiras-3577681'
+  );
+  assert.equal(amp.key, canonical.key);
+  assert.equal(amp.url, canonical.url);
+});
+
+test('AMP shape 4: .amp.html extension infix folds to .html, collapsing to the canonical key (theweek.in live pair)', () => {
+  const amp = normalizeUrl('https://www.theweek.in/news/entertainment/2026/08/10/women-in-blue-season-2-premiere.amp.html');
+  const canonical = normalizeUrl('https://www.theweek.in/news/entertainment/2026/08/10/women-in-blue-season-2-premiere.html');
+  assert.equal(amp.key, canonical.key);
+  assert.equal(amp.url, canonical.url);
+});
+
+test('AMP fold is segment/extension-anchored, not a substring match: "de-campeones" is never touched', () => {
+  const { key } = normalizeUrl(
+    'https://www.facebook.com/PlanoCinema/videos/cu%C3%A1l-es-el-verdadero-desayuno-de-campeones-de-una-azul-%EF%B8%8Fen-la-alfombra-azul-de-l/2080974666112141/'
+  );
+  // Facebook's own slug-drop fold (LEMA-10602) removes the slug here, which
+  // is what actually accounts for "de-campeones" disappearing from the key
+  // -- confirming that, not the AMP fold, is the point of this guard.
+  assert.equal(key, 'facebook.com/PlanoCinema/videos/2080974666112141');
+});
+
+test('AMP fold is segment/extension-anchored, not a substring match: "camp-rock-3" is never touched', () => {
+  const { key } = normalizeUrl(
+    'https://streamingbetter.com/what-to-watch-this-weekend-camp-rock-3-lanterns-reacher-and-more-streaming-aug-14-2026/'
+  );
+  assert.equal(
+    key,
+    'streamingbetter.com/what-to-watch-this-weekend-camp-rock-3-lanterns-reacher-and-more-streaming-aug-14-2026'
+  );
+});
+
+test('a path segment that merely contains "amp" mid-word is not folded by the leading-prefix or trailing-segment rules', () => {
+  assert.equal(normalizeUrl('https://example.com/campaign-launch/').key, 'example.com/campaign-launch');
+  assert.equal(normalizeUrl('https://example.com/amphitheater-tour/').key, 'example.com/amphitheater-tour');
+});

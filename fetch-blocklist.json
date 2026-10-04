@@ -20002,6 +20002,86 @@
           "note": "Confirmed off-topic from search result metadata; not about Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://reviewnation.net/the-women-in-blue-return-for-season-2-interview/amp/",
+      "firstSeen": "2026-08-18T00:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-08-18T00:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "AMP-served second address for the canonical, already-tracked Review Nation article (https://reviewnation.net/the-women-in-blue-return-for-season-2-interview/) -- same Aug 18, 2026 entertainment piece, scrape-variance differences only (headline punctuation/excerpt wording). Normalized key now folds to the same comparison key as the canonical row (LEMA-11953: trailing/leading /amp path fold and .amp.html/amp-articles folds shipped in tools/lib/normalize.js), so this row is purely a disposition record for a future sweep's evidence line, not something the normalizer still needs taught. Removed from data.json in the same commit (851 -> 847); canonical row kept byte-for-byte unchanged, no field merge performed.",
+      "history": [
+        {
+          "attempt": "2026-10-04T22:21:15Z",
+          "method": "Structural dedup (normalize.js AMP fold)",
+          "status": null,
+          "issue": "LEMA-11953",
+          "note": "Dropped from data.json as the AMP-shaped duplicate of https://reviewnation.net/the-women-in-blue-return-for-season-2-interview/; canonical kept unchanged. See skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://www.bollywoodshaadis.com/amp-articles/women-in-blue-season-2-review-83240",
+      "firstSeen": "2026-08-12T00:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-08-12T00:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "AMP-served second address for the canonical, already-tracked BollywoodShaadis article (https://www.bollywoodshaadis.com/articles/women-in-blue-season-2-review-83240) -- same Aug 12, 2026 review piece, scrape-variance differences only (headline punctuation/excerpt wording). Normalized key now folds to the same comparison key as the canonical row (LEMA-11953: trailing/leading /amp path fold and .amp.html/amp-articles folds shipped in tools/lib/normalize.js), so this row is purely a disposition record for a future sweep's evidence line, not something the normalizer still needs taught. Removed from data.json in the same commit (851 -> 847); canonical row kept byte-for-byte unchanged, no field merge performed.",
+      "history": [
+        {
+          "attempt": "2026-10-04T22:21:15Z",
+          "method": "Structural dedup (normalize.js AMP fold)",
+          "status": null,
+          "issue": "LEMA-11953",
+          "note": "Dropped from data.json as the AMP-shaped duplicate of https://www.bollywoodshaadis.com/articles/women-in-blue-season-2-review-83240; canonical kept unchanged. See skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eltiempo.com/amp/cultura/cine-y-tv/vuelven-las-azules-el-increible-grupo-de-mujeres-que-se-abrio-camino-en-la-policia-de-mexico-a-pesar-del-machismo-la-corrupcion-y-las-mentiras-3577681",
+      "firstSeen": "2026-08-11T00:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-08-11T00:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "AMP-served second address for the canonical, already-tracked El Tiempo article (https://www.eltiempo.com/cultura/cine-y-tv/vuelven-las-azules-el-increible-grupo-de-mujeres-que-se-abrio-camino-en-la-policia-de-mexico-a-pesar-del-machismo-la-corrupcion-y-las-mentiras-3577681) -- same Aug 11, 2026 entertainment piece, scrape-variance differences only (headline punctuation/excerpt wording). Normalized key now folds to the same comparison key as the canonical row (LEMA-11953: trailing/leading /amp path fold and .amp.html/amp-articles folds shipped in tools/lib/normalize.js), so this row is purely a disposition record for a future sweep's evidence line, not something the normalizer still needs taught. Removed from data.json in the same commit (851 -> 847); canonical row kept byte-for-byte unchanged, no field merge performed.",
+      "history": [
+        {
+          "attempt": "2026-10-04T22:21:15Z",
+          "method": "Structural dedup (normalize.js AMP fold)",
+          "status": null,
+          "issue": "LEMA-11953",
+          "note": "Dropped from data.json as the AMP-shaped duplicate of https://www.eltiempo.com/cultura/cine-y-tv/vuelven-las-azules-el-increible-grupo-de-mujeres-que-se-abrio-camino-en-la-policia-de-mexico-a-pesar-del-machismo-la-corrupcion-y-las-mentiras-3577681; canonical kept unchanged. See skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://www.theweek.in/news/entertainment/2026/08/10/women-in-blue-season-2-premiere.amp.html",
+      "firstSeen": "2026-08-10T00:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-08-10T00:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "AMP-served second address for the canonical, already-tracked The Week article (https://www.theweek.in/news/entertainment/2026/08/10/women-in-blue-season-2-premiere.html) -- same Aug 10, 2026 entertainment piece, scrape-variance differences only (headline punctuation/excerpt wording). Normalized key now folds to the same comparison key as the canonical row (LEMA-11953: trailing/leading /amp path fold and .amp.html/amp-articles folds shipped in tools/lib/normalize.js), so this row is purely a disposition record for a future sweep's evidence line, not something the normalizer still needs taught. Removed from data.json in the same commit (851 -> 847); canonical row kept byte-for-byte unchanged, no field merge performed.",
+      "history": [
+        {
+          "attempt": "2026-10-04T22:21:15Z",
+          "method": "Structural dedup (normalize.js AMP fold)",
+          "status": null,
+          "issue": "LEMA-11953",
+          "note": "Dropped from data.json as the AMP-shaped duplicate of https://www.theweek.in/news/entertainment/2026/08/10/women-in-blue-season-2-premiere.html; canonical kept unchanged. See skipNote."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-10-04T22:20:00Z"
