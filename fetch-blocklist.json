@@ -19735,7 +19735,27 @@
           "note": "Firecrawl returned 402 Insufficient credits (account-wide credit exhaustion, tracked on LEMA-11913; not a per-URL failure). Full-chain failure, failCount=1."
         }
       ]
+    },
+    {
+      "url": "https://www.diariodecuyo.com.ar/ascenso-las-sierras-azules-a24932",
+      "firstSeen": "2026-10-04T14:00:57Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T14:00:57Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Diario de Cuyo (San Juan, Argentina) article about \"Ascenso a las Sierras Azules\", a hiking/mountaineering ascent event in the Sierras Azules mountain range, covering participation details and police security arrangements for climbers. Most recent article content dated April 5, 2023. No mention of the Las Azules / Women in Blue TV show anywhere; surfaced only as a broad-query match on the shared \"Las Azules\"/\"Sierras Azules\" term.",
+      "history": [
+        {
+          "attempt": "2026-10-04T14:00:57Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11936",
+          "note": "WebFetch succeeded; confirmed page is about a mountain hiking ascent event, unrelated to Las Azules TV show."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-04T12:03:44Z"
+  "lastUpdated": "2026-10-04T14:00:57Z"
 }
