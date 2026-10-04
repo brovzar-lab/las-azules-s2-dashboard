@@ -19506,7 +19506,107 @@
           "note": "Canonical tag points away to appleworld.today, confirmed already in data.json."
         }
       ]
+    },
+    {
+      "url": "https://apple.com/au/tv-pr/news/2024/05/apple-tv-shares-first-look-at-women-in-blue-las-azules-new-spanish-language-crime-drama-from-international-emmy-award-winner-fernando-rovzar",
+      "firstSeen": "2026-10-04T06:07:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T06:07:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "AU-locale mirror of Apple's own May 9, 2024 press release, already tracked at https://www.apple.com/tv-pr/news/2024/05/apple-tv-shares-first-look-at-women-in-blue-las-azules-new-spanish-language-crime-drama-from-international-emmy-award-winner-fernando-rovzar/ (ts=20240509, outlet Apple TV Press). Fetched via WebFetch (200): headline and body text are identical to the already-tracked US version. Second-address locale mirror per Rule I, not a distinct document.",
+      "history": [
+        {
+          "attempt": "2026-10-04T06:07:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11914",
+          "note": "Confirmed content-identical to already-tracked US apple.com/tv-pr/news/2024/05 entry; treated as redundant locale mirror."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mactech.com/2022/05/24/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama/amp/",
+      "firstSeen": "2026-10-04T06:07:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T06:07:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "AMP page's own <link rel=\"canonical\"> points to https://www.appleworld.today/2022/05/24/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama/, already tracked in data.json (ts=20220524, outlet Apple World Today). Fetched via direct HTML pull (200); canonical tag is decisive per Rule I (\"a URL that redirects or canonicalizes to a tracked URL\"). Not a distinct MacTech document.",
+      "history": [
+        {
+          "attempt": "2026-10-04T06:07:53Z",
+          "method": "WebFetch/curl (raw HTML)",
+          "status": 200,
+          "issue": "LEMA-11914",
+          "note": "canonical link tag resolves to already-tracked appleworld.today URL; treated as redundant second address."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mactech.com/2024/05/10/apple-tv-shares-first-look-at-women-in-blue-las-azules/amp/",
+      "firstSeen": "2026-10-04T06:07:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-04T06:07:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "AMP rendering variant of https://www.mactech.com/2024/05/10/apple-tv-shares-first-look-at-women-in-blue-las-azules (no trailing /amp/), already tracked in data.json (ts=20240510, outlet MacTech). Not fetched (Rule I amendment lists AMP pages as second addresses categorically); no new content expected beyond the already-tracked non-AMP sibling.",
+      "history": [
+        {
+          "attempt": "2026-10-04T06:07:53Z",
+          "method": "none (Rule I mechanical AMP-sibling classification)",
+          "status": null,
+          "issue": "LEMA-11914",
+          "note": "Non-AMP sibling already in data.json at ts=20240510; AMP variant classified as second address without a fetch per Rule I's amendment."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mactech.com/2026/03/27/second-season-of-women-in-blue-las-azules-arrives-on-apple-tv-august-12/amp/",
+      "firstSeen": "2026-10-04T06:07:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-04T06:07:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "AMP rendering variant of https://www.mactech.com/2026/03/27/second-season-of-women-in-blue-las-azules-arrives-on-apple-tv-august-12/ (no trailing /amp/), already tracked in data.json (ts=20260327, outlet MacTech). Not fetched (Rule I amendment lists AMP pages as second addresses categorically).",
+      "history": [
+        {
+          "attempt": "2026-10-04T06:07:53Z",
+          "method": "none (Rule I mechanical AMP-sibling classification)",
+          "status": null,
+          "issue": "LEMA-11914",
+          "note": "Non-AMP sibling already in data.json at ts=20260327; AMP variant classified as second address without a fetch per Rule I's amendment."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mactech.com/2026/07/22/apple-tv-unveils-trailer-for-season-two-of-spanish-language-crime-drama-women-in-blue-las-azules/amp/",
+      "firstSeen": "2026-10-04T06:07:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-04T06:07:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "AMP rendering variant of https://www.mactech.com/2026/07/22/apple-tv-unveils-trailer-for-season-two-of-spanish-language-crime-drama-women-in-blue-las-azules/ (no trailing /amp/), already tracked in data.json (ts=20260722, outlet MacTech). Not fetched (Rule I amendment lists AMP pages as second addresses categorically).",
+      "history": [
+        {
+          "attempt": "2026-10-04T06:07:53Z",
+          "method": "none (Rule I mechanical AMP-sibling classification)",
+          "status": null,
+          "issue": "LEMA-11914",
+          "note": "Non-AMP sibling already in data.json at ts=20260722; AMP variant classified as second address without a fetch per Rule I's amendment."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-04T04:01:31.000Z"
+  "lastUpdated": "2026-10-04T06:07:53Z"
 }
