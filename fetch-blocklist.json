@@ -19654,7 +19654,88 @@
       "skipReason": "editorial_off_topic_false_positive",
       "skipNote": "Surfaced by Pass 1 Exa broad EN query ('Las Azules Women in Blue Season 2 Apple TV') on keyword overlap only. WebFetch confirmed the article is a roundup of Apple TV+ October 2026 new releases and does not mention Las Azules / Women in Blue anywhere in the body (consistent with the show's Aug 12-Sep 30 2026 run having already concluded before October). Fetched and confirmed off-topic, per Rule G.",
       "history": []
+    },
+    {
+      "url": "https://www.macobserver.com/de/apple-tv-de/women-in-blue-staffel-2-episode-8-ende-erklart-stoppen-die-azules-den-vollstrecker-in-goyo/",
+      "firstSeen": "2026-10-04T12:03:44Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-04T12:03:44Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-10-04T12:03:44Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-11930",
+          "note": "WebFetch returned HTTP 403 Forbidden."
+        },
+        {
+          "attempt": "2026-10-04T12:03:44Z",
+          "method": "Firecrawl scrape",
+          "status": 402,
+          "issue": "LEMA-11930",
+          "note": "Firecrawl returned 402 Insufficient credits (account-wide credit exhaustion, tracked on LEMA-11913; not a per-URL failure). Full-chain failure, failCount=1."
+        }
+      ]
+    },
+    {
+      "url": "https://www.melty.fr/series/las-azules-saison-2-fin-de-lepisode-1-expliquee-2339733.html",
+      "firstSeen": "2026-10-04T12:03:44Z",
+      "failCount": 1,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-04T12:03:44Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-10-04T12:03:44Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-11930",
+          "note": "WebFetch could not fetch the host (tool-reported fetch block, no HTTP status returned)."
+        },
+        {
+          "attempt": "2026-10-04T12:03:44Z",
+          "method": "Firecrawl scrape",
+          "status": 402,
+          "issue": "LEMA-11930",
+          "note": "Firecrawl returned 402 Insufficient credits (account-wide credit exhaustion, tracked on LEMA-11913; not a per-URL failure). Full-chain failure, failCount=1."
+        }
+      ]
+    },
+    {
+      "url": "https://www.cinematographe.it/recensioni-serie/las-azules-recensione-serie-tv-apple-tv/",
+      "firstSeen": "2026-10-04T12:03:44Z",
+      "failCount": 1,
+      "lastStatus": 522,
+      "lastAttempt": "2026-10-04T12:03:44Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-10-04T12:03:44Z",
+          "method": "WebFetch",
+          "status": 522,
+          "issue": "LEMA-11930",
+          "note": "WebFetch returned HTTP 522 Unknown Status."
+        },
+        {
+          "attempt": "2026-10-04T12:03:44Z",
+          "method": "Firecrawl scrape",
+          "status": 402,
+          "issue": "LEMA-11930",
+          "note": "Firecrawl returned 402 Insufficient credits (account-wide credit exhaustion, tracked on LEMA-11913; not a per-URL failure). Full-chain failure, failCount=1."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-04T08:00:00Z"
+  "lastUpdated": "2026-10-04T12:03:44Z"
 }
