@@ -19380,7 +19380,133 @@
           "note": "Off-topic false positive, confirmed from search result title/snippet: article is about Blue Box anime cast interview, not Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://informador.mx/entretenimiento/la-granja-vip-2-lista-de-los-nominados-en-la-primera-semana-del-reality-20260910-0061.html",
+      "firstSeen": "2026-10-04T04:01:31.000Z",
+      "lastAttempt": "2026-10-04T04:01:31.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Page is about 'La Granja VIP 2' reality show nominees for its first week; no mention of Las Azules / Women in Blue. Surfaced only as a broad-query Spanish-language match (Pass 2).",
+      "history": [
+        {
+          "attempt": "2026-10-04T04:01:31.000Z",
+          "issue": "LEMA-11912",
+          "method": "none (relevance gate, not fetched)",
+          "status": null,
+          "note": "Rule G off-topic false positive, ledgered without a fetch per Rule G's relevance-gate posture."
+        }
+      ]
+    },
+    {
+      "url": "https://mexiconewsdaily.com/mexico-living/the-town-of-tequilas-best-kept-secret",
+      "firstSeen": "2026-10-04T04:01:31.000Z",
+      "lastAttempt": "2026-10-04T04:01:31.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Page is about the 'Blue Falls' (Cascadas Azules) waterfalls near Tequila, Mexico; no connection to the Las Azules TV show. Surfaced only as a broad-query match on 'Azules' (Pass 2).",
+      "history": [
+        {
+          "attempt": "2026-10-04T04:01:31.000Z",
+          "issue": "LEMA-11912",
+          "method": "none (relevance gate, not fetched)",
+          "status": null,
+          "note": "Rule G off-topic false positive, ledgered without a fetch per Rule G's relevance-gate posture."
+        }
+      ]
+    },
+    {
+      "url": "https://comicbasics.com/las-azules-season-2-episode-8-recap-and-ending-explained-what-the-finale-changes-everything-for-the-azules",
+      "firstSeen": "2026-10-04T04:01:31.000Z",
+      "lastAttempt": "2026-10-04T04:01:31.000Z",
+      "lastStatus": 301,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "301-redirects to the already-tracked canonical https://comicbasics.com/las-azules-season-2-episode-8-recap-and-ending-explained-why-the-finale-changes-everything-for-the-azules (data.json ts=20260930, outlet=Comic Basics). Slug mismatch (what- vs why-) traced to a stale/retitled search-index snippet; confirmed via curl -IL redirect chain.",
+      "history": [
+        {
+          "attempt": "2026-10-04T04:01:31.000Z",
+          "issue": "LEMA-11912",
+          "method": "curl -IL",
+          "status": 301,
+          "note": "Resolved redirect target matches existing data.json row ts=20260930."
+        }
+      ]
+    },
+    {
+      "url": "https://comicbasics.com/?p=193199",
+      "firstSeen": "2026-10-04T04:01:31.000Z",
+      "lastAttempt": "2026-10-04T04:01:31.000Z",
+      "lastStatus": 301,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "WordPress ID-permalink (looksLikeIdPermalink); 301-redirects to the already-tracked canonical https://comicbasics.com/las-azules-season-2-episode-8-recap-and-ending-explained-why-the-finale-changes-everything-for-the-azules (data.json ts=20260930, outlet=Comic Basics).",
+      "history": [
+        {
+          "attempt": "2026-10-04T04:01:31.000Z",
+          "issue": "LEMA-11912",
+          "method": "curl -IL",
+          "status": 301,
+          "note": "Resolved redirect target matches existing data.json row ts=20260930."
+        }
+      ]
+    },
+    {
+      "url": "https://comicbasics.com/?p=192977",
+      "firstSeen": "2026-10-04T04:01:31.000Z",
+      "lastAttempt": "2026-10-04T04:01:31.000Z",
+      "lastStatus": 301,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "WordPress ID-permalink (looksLikeIdPermalink); 301-redirects to the already-tracked canonical https://comicbasics.com/will-las-azules-return-for-a-season-3-as-apple-tv-weighs-the-shows-future (data.json ts=20260930, outlet=Comic Basics).",
+      "history": [
+        {
+          "attempt": "2026-10-04T04:01:31.000Z",
+          "issue": "LEMA-11912",
+          "method": "curl -IL",
+          "status": 301,
+          "note": "Resolved redirect target matches existing data.json row ts=20260930."
+        }
+      ]
+    },
+    {
+      "url": "https://mactech.com/2025/05/21/apple-tv-renews-spanish-language-crime-series-women-in-blue-for-a-second-season/amp",
+      "firstSeen": "2026-10-04T04:01:31.000Z",
+      "lastAttempt": "2026-10-04T04:01:31.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "This page's own <link rel=\"canonical\"> points to https://appleworld.today/2025/05/apple-tv-renews-spanish-language-crime-series-women-in-blue-for-a-second-season/ (same Dennis Sellers byline, same JSON-LD datePublished 2025-05-21T11:04:00+00:00), which is already tracked in data.json (ts=20250521, outlet=Apple World Today). MacTech.com and AppleWorld.Today are the same syndication network; this is a second address per Rule I's canonical-tag test.",
+      "history": [
+        {
+          "attempt": "2026-10-04T04:01:31.000Z",
+          "issue": "LEMA-11912",
+          "method": "WebFetch + curl (canonical tag check)",
+          "status": 200,
+          "note": "Canonical tag points away to appleworld.today, confirmed already in data.json."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-04T02:03:18Z"
+  "lastUpdated": "2026-10-04T04:01:31.000Z"
 }
