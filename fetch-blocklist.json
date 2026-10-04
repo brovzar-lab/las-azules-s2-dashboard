@@ -19606,7 +19606,55 @@
           "note": "Non-AMP sibling already in data.json at ts=20260722; AMP variant classified as second address without a fetch per Rule I's amendment."
         }
       ]
+    },
+    {
+      "url": "https://www.martincid.com/tv-shows/blue-box-season-2/",
+      "firstSeen": "2026-10-04T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa broad EN query ('Las Azules Women in Blue Season 2 Apple TV') on keyword overlap only. Page is Martin Cid Magazine's piece on 'Blue Box' returning to Netflix October 4, an unrelated Japanese-manga-based Netflix series, not Las Azules / Women in Blue. Not fetched, per Rule G relevance-gate-first posture.",
+      "history": []
+    },
+    {
+      "url": "https://en.mantan-web.jp/e_article/20260913dog00m200012000a.html",
+      "firstSeen": "2026-10-04T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa broad ES query ('Barbara Mori entrevista Las Azules temporada 2') on keyword overlap only. Page is MANTANWEB's interview about 'Aoashi' Season 2, an unrelated Japanese anime, not Las Azules / Women in Blue. Not fetched, per Rule G relevance-gate-first posture.",
+      "history": []
+    },
+    {
+      "url": "https://www.informador.mx/entretenimiento/siete-veces-adios-llega-al-galerias-con-maria-leon-y-osvaldo-benavides-20260910-0192.html",
+      "firstSeen": "2026-10-04T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa broad ES query ('Barbara Mori entrevista Las Azules temporada 2') on keyword overlap only. Page is El Informador's piece on the play 'Siete Veces Adios' starring Maria Leon and Osvaldo Benavides, unrelated to Las Azules / Women in Blue. Not fetched, per Rule G relevance-gate-first posture.",
+      "history": []
+    },
+    {
+      "url": "https://www.analyticsinsight.net/entertainment/apple-tv-october-2026-new-movies-and-shows-to-watch",
+      "firstSeen": "2026-10-04T08:00:00Z",
+      "failCount": 0,
+      "lastStatus": "200",
+      "lastAttempt": "2026-10-04T08:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa broad EN query ('Las Azules Women in Blue Season 2 Apple TV') on keyword overlap only. WebFetch confirmed the article is a roundup of Apple TV+ October 2026 new releases and does not mention Las Azules / Women in Blue anywhere in the body (consistent with the show's Aug 12-Sep 30 2026 run having already concluded before October). Fetched and confirmed off-topic, per Rule G.",
+      "history": []
     }
   ],
-  "lastUpdated": "2026-10-04T06:07:53Z"
+  "lastUpdated": "2026-10-04T08:00:00Z"
 }
