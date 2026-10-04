@@ -19862,7 +19862,47 @@
           "note": "WebFetch succeeded; body matches the already-tracked /ushispanic/ PRODU article (same headline, date, announcement content) published under a different category path."
         }
       ]
+    },
+    {
+      "url": "http://www.thefutoncritic.com/news/2026/10/11/disney-channel-to-debut-second-season-of-hit/",
+      "firstSeen": "2026-10-04T20:06:16Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T20:06:16Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TheFutonCritic daily news-digest page listing unrelated TV industry news (Prime Video, WNBA, MLB ratings, Disney/Marvel/Netflix renewals, etc.) for Oct 2026 dates (the URL's own date segments are a navigation artifact, not an article publish date). No mention of Las Azules / Women in Blue, Apple TV, Barbara Mori, or Fernando Rovzar anywhere on the page. Surfaced via Exa broad EN query keyword overlap on generic 'Apple TV' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-04T20:06:16Z",
+          "method": "Tavily Extract",
+          "status": "advanced",
+          "issue": "LEMA-11949",
+          "note": "WebFetch failed (connect ECONNREFUSED); Tavily Extract (advanced) succeeded and confirmed page is an unrelated daily TV-news digest, not about Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eltrecetv.com.ar/puro-show/2026/10/04/juan-minujin-adelanto-como-sera-la-segunda-temporada-de-coppola-va-a-ser-mucho-mas-fuerte/",
+      "firstSeen": "2026-10-04T20:06:16Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T20:06:16Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "eltrece (Argentina) article about actor Juan Minujin previewing Season 2 of 'Coppola', a biographical drama about Guillermo Coppola. Entirely unrelated to Las Azules / Women in Blue; no mention of Apple TV, Barbara Mori, or Fernando Rovzar. Surfaced via Exa broad ES query keyword overlap on generic 'temporada 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-04T20:06:16Z",
+          "method": "Tavily Extract",
+          "status": "advanced",
+          "issue": "LEMA-11949",
+          "note": "WebFetch failed (unable to fetch host); Tavily Extract (advanced) succeeded and confirmed page is about an unrelated show ('Coppola'), not Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-04T18:05:11Z"
+  "lastUpdated": "2026-10-04T20:06:16Z"
 }
