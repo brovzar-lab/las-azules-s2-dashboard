@@ -19795,7 +19795,74 @@
           "note": "WebFetch succeeded; confirmed article is about an unrelated film, not Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://collider.com/apple-tv-sci-fi-thriller-severance-streaming-success-october-2026/",
+      "firstSeen": "2026-10-04T18:05:11Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T18:05:11Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Collider article about Apple TV's Severance Season 3 production/streaming success, not Las Azules. No mention of Las Azules or Women in Blue anywhere in the body; surfaced only as a broad-query match on generic 'Apple TV' + season-return terms.",
+      "history": [
+        {
+          "attempt": "2026-10-04T18:05:11Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11948",
+          "note": "WebFetch succeeded; confirmed article is about Severance, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://npm.vehikl.com/blog/los-angeles-azules-concerts-and-tour-dates-in-2026-1764808867",
+      "firstSeen": "2026-10-04T18:05:11Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-04T18:05:11Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Blog post listing 2026 concert/tour dates for Los Angeles Azules, the Mexican cumbia band (Cumbia Sin Fronteras U.S. tour), not the TV series Las Azules/Women in Blue. Same underlying event already ledgered under remezcla.com entries. WebFetch failed (TLS hostname mismatch: npm.vehikl.com not in cert altnames for vehikl.com/www.vehikl.com); Tavily Extract (advanced) returned empty content. Classified from title/snippet metadata, corroborated by existing Rule G ledger rows covering the identical Los Angeles Azules 2026 tour announcement.",
+      "history": [
+        {
+          "attempt": "2026-10-04T18:05:11Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-11948",
+          "note": "WebFetch failed with TLS certificate hostname mismatch."
+        },
+        {
+          "attempt": "2026-10-04T18:05:11Z",
+          "method": "Tavily Extract (advanced)",
+          "status": null,
+          "issue": "LEMA-11948",
+          "note": "Tavily Extract returned empty content (full fetch-chain failure); classified off-topic from title/snippet metadata, corroborated by sibling Rule G rows for the same tour story."
+        }
+      ]
+    },
+    {
+      "url": "https://www.produ.com/english/noticias/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama-produced-by-lemon-studios",
+      "firstSeen": "2026-10-04T18:05:11Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T18:05:11Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Second address for a PRODU article already in data.json: identical headline (\"Apple TV+ Orders Las Azules, a New Spanish-Language Crime Drama Produced by Lemon Studios\"), identical date (May 25, 2022), same announcement content, mirrored under PRODU's /ushispanic/noticias/ category path (https://www.produ.com/ushispanic/noticias/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama-produced-by-lemon-studios/, already tracked, dataJsonTs=20220525). Both URLs resolve 200 independently (no HTTP redirect), confirmed by direct curl, but WebFetch of the /english/ copy shows the same CMS post republished under a different category path, not a distinct document (Rule I mechanical shortcut).",
+      "history": [
+        {
+          "attempt": "2026-10-04T18:05:11Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11948",
+          "note": "WebFetch succeeded; body matches the already-tracked /ushispanic/ PRODU article (same headline, date, announcement content) published under a different category path."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-04T16:01:23Z"
+  "lastUpdated": "2026-10-04T18:05:11Z"
 }
