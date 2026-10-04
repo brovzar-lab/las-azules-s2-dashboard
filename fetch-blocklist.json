@@ -19902,7 +19902,127 @@
           "note": "WebFetch failed (unable to fetch host); Tavily Extract (advanced) succeeded and confirmed page is about an unrelated show ('Coppola'), not Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.cinefilos.it/serie-tv/news/las-azules-il-nuovo-crime-drama-in-lingua-spagnola-di-apple-tv-621572",
+      "firstSeen": "2026-10-04T22:05:08Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T22:05:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "www subdomain issues a 301 redirect to the canonical apex URL (https://cinefilos.it/serie-tv/news/las-azules-il-nuovo-crime-drama-in-lingua-spagnola-di-apple-tv-621572), which this run added to data.json (ts=20240509, outlet Cinefilos.it). Second address for that same document, not new coverage.",
+      "history": [
+        {
+          "attempt": "2026-10-04T22:05:08Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11950",
+          "note": "Confirmed 301 redirect www->apex via curl; canonical apex article added to data.json this run."
+        }
+      ]
+    },
+    {
+      "url": "https://macdailynews.com/2026/07/21/apple-tv-unveils-trailer-for-season-two-of-women-in-blue-las-azules/amp/",
+      "firstSeen": "2026-10-04T22:05:08Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T22:05:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "AMP rendering variant; <link rel=canonical> on the AMP page points to the non-AMP URL (https://macdailynews.com/2026/07/21/apple-tv-unveils-trailer-for-season-two-of-women-in-blue-las-azules/), already tracked in data.json (ts=20260721, outlet MacDailyNews). Second address for that same document, not new coverage.",
+      "history": [
+        {
+          "attempt": "2026-10-04T22:05:08Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11950",
+          "note": "Confirmed canonical link tag points to already-tracked non-AMP URL."
+        }
+      ]
+    },
+    {
+      "url": "https://gayvalencia.org/article/lucky-unraveling-a-crime-drama-s-thrilling-mystery-apple-tv-review",
+      "firstSeen": "2026-10-04T22:05:08Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T22:05:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is a review of 'Lucky', an unrelated Apple TV+ crime drama. No mention of Las Azules or Women in Blue; surfaced only via Exa's broad 'Las Azules Women in Blue Season 2 Apple TV' query matching on generic Apple TV crime-drama terms.",
+      "history": [
+        {
+          "attempt": "2026-10-04T22:05:08Z",
+          "method": "Exa search result (title/snippet only)",
+          "status": 200,
+          "issue": "LEMA-11950",
+          "note": "Confirmed off-topic from Exa result metadata; not about Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://movieweb.com/dark-matter-apple-tv-hit-october-2026/",
+      "firstSeen": "2026-10-04T22:05:08Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T22:05:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about 'Dark Matter', an unrelated Apple TV+ sci-fi series. No mention of Las Azules or Women in Blue; surfaced only via Exa's broad 'Las Azules Women in Blue Season 2 Apple TV' query matching on generic Apple TV terms.",
+      "history": [
+        {
+          "attempt": "2026-10-04T22:05:08Z",
+          "method": "Exa search result (title/snippet only)",
+          "status": 200,
+          "issue": "LEMA-11950",
+          "note": "Confirmed off-topic from Exa result metadata; not about Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.europesays.com/es/801200/",
+      "firstSeen": "2026-10-04T22:05:08Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T22:05:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page lists upcoming guests on El Hormiguero (Spanish talk show): Carmen Maura, Maribel Verdu, Jose Mota, David Bustamante and Luis Zahera. No mention of Las Azules, Bárbara Mori, or Women in Blue; surfaced only via Exa's broad Spanish-language 'Bárbara Mori entrevista Las Azules temporada 2' query.",
+      "history": [
+        {
+          "attempt": "2026-10-04T22:05:08Z",
+          "method": "Exa search result (title/snippet only)",
+          "status": 200,
+          "issue": "LEMA-11950",
+          "note": "Confirmed off-topic from Exa result metadata; not about Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://filmmusicreporter.com/tag/elizabeth-taylor-the-lost-tapes/",
+      "firstSeen": "2026-10-04T22:05:08Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T22:05:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Tag archive page about an Elizabeth Taylor documentary project ('The Lost Tapes'). No mention of Las Azules or Women in Blue; surfaced only as a broad-query false match on generic entertainment-news search terms.",
+      "history": [
+        {
+          "attempt": "2026-10-04T22:05:08Z",
+          "method": "WebSearch result (title/snippet only)",
+          "status": 200,
+          "issue": "LEMA-11950",
+          "note": "Confirmed off-topic from search result metadata; not about Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-04T20:06:16Z"
+  "lastUpdated": "2026-10-04T22:05:08Z"
 }
