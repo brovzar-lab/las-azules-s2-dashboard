@@ -32,6 +32,7 @@ const {
   runDateProxyCheck,
   getFirstSeenDates,
 } = require('./lib/audit');
+const { computeReconciliation } = require('./lib/reconcile');
 
 const REPO_ROOT = path.join(__dirname, '..');
 const DEFAULT_LEDGER_PATH = path.join(REPO_ROOT, 'fetch-blocklist.json');
@@ -142,6 +143,7 @@ const KNOWN_FLAGS = {
   'assert-integrity': ['fetch-blocklist', 'data', 'target', 'fix', 'json'],
   evidence: ['candidates', 'fetch-blocklist', 'data', 'fix'],
   audit: ['fetch-blocklist', 'data', 'repo', 'json'],
+  reconcile: ['candidates', 'data', 'added', 'removed', 'json'],
 };
 
 // Flags that gate an on/off code path rather than carry a path/enum value.
@@ -581,6 +583,61 @@ function cmdAudit(flags) {
   process.exitCode = ledgerOverlap.length > 0 ? 1 : 0;
 }
 
+// LEMA-11956: computes this run's reconciliation terms A and R directly
+// from the normalized-key definition (LEMA-11952 ruling, shipped to the
+// routine as LEMA-11955), instead of by hand. Offline only: `--data` MUST
+// be the Pass-0-pinned data.json from BEFORE this run's step 8 writes, not
+// the post-write file -- this never reads data.json a second time after
+// writing it, and never re-runs `lookup` to obtain A/R (that prohibition,
+// and its fingerprint STOP, are untouched; see tools/README.md). `--added`
+// and `--removed` are JSON arrays of the full row objects this run's step 8
+// wrote into / removed from data.json, e.g. via `assert-integrity --fix`.
+function cmdReconcile(flags) {
+  const candidatesPath = flags.candidates;
+  if (!candidatesPath) {
+    console.error(
+      'Usage: sweep-integrity.js reconcile --candidates <candidates.json> --data <pre-write data.json> [--added <added-rows.json>] [--removed <removed-rows.json>] [--json]'
+    );
+    process.exit(2);
+  }
+  const dataPath = flags.data || DEFAULT_DATA_PATH;
+
+  const { raw: candidatesRaw, value: candidates } = readJsonWithRaw(candidatesPath, 'candidates file', {
+    urlHint: true,
+  });
+  const { raw: dataRaw, value: preWriteDataset } = readJsonWithRaw(dataPath, 'pre-write data.json');
+  const addedRows = flags.added ? readJson(flags.added) : [];
+  const removedRows = flags.removed ? readJson(flags.removed) : [];
+
+  // Same stderr fingerprint discipline as `lookup`/`audit` (LEMA-10448), so
+  // two reconcile runs claimed to be against the same pre-write snapshot
+  // can be diffed mechanically. Deliberately NOT named `[lookup] ...` --
+  // this is not the post-write `lookup` call the routine prohibits.
+  console.error(
+    `[reconcile] candidates path=${candidatesPath} count=${Array.isArray(candidates) ? candidates.length : 'INVALID'} sha256=${sha256(candidatesRaw)}`
+  );
+  console.error(
+    `[reconcile] pre-write data.json path=${dataPath} rows=${Array.isArray(preWriteDataset) ? preWriteDataset.length : 'INVALID'} sha256=${sha256(dataRaw)}`
+  );
+  console.error(
+    `[reconcile] added=${addedRows.length} removed=${removedRows.length}`
+  );
+
+  const result = computeReconciliation(candidates, preWriteDataset, addedRows, removedRows);
+
+  if (flags.json) {
+    console.log(JSON.stringify(result, null, 2));
+    return;
+  }
+  console.log(`A=${result.a} R=${result.r}`);
+  for (const m of result.addedMatches) {
+    console.log(`  - A: ${m.url} [${m.key}]`);
+  }
+  for (const m of result.removedMatches) {
+    console.log(`  - R: ${m.url} [${m.key}]`);
+  }
+}
+
 function main() {
   const [, , command, ...rest] = process.argv;
   const { positional, flags } = parseArgs(rest);
@@ -599,8 +656,10 @@ function main() {
       return cmdEvidence(flags);
     case 'audit':
       return cmdAudit(flags);
+    case 'reconcile':
+      return cmdReconcile(flags);
     default:
-      console.error('Usage: sweep-integrity.js <normalize|lookup|assert-integrity|evidence|audit> ...');
+      console.error('Usage: sweep-integrity.js <normalize|lookup|assert-integrity|evidence|audit|reconcile> ...');
       process.exit(2);
   }
 }

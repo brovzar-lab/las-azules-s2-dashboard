@@ -267,6 +267,54 @@ assertable bucket, excluding `editorial_redundant_syndication`) is non-empty -- 
 `ledgerOverlapAdvisory` bucket, the two other advisory checks, and their intersection never
 affect the exit code, per the ticket's explicit requirement.
 
+### `reconcile --candidates <candidates.json> --data <pre-write data.json> [--added <added-rows.json>] [--removed <removed-rows.json>] [--json]`
+
+Computes this run's `+ A - R` reconciliation terms directly from the normalized-key
+definition ([LEMA-11952](/LEMA/issues/LEMA-11952) CEO ruling, shipped to the Media Sweep
+routine as [LEMA-11955](/LEMA/issues/LEMA-11955)), instead of by hand
+([LEMA-11956](/LEMA/issues/LEMA-11956)). Hand arithmetic over normalized keys was the actual
+defect source behind LEMA-11952 (a within-batch key collision miscounted); this closes that
+surface the same way the rest of this kit closes mechanical surfaces -- by computing it, not by
+asking an agent to re-derive it from prose every run.
+
+- **A** = `candidates.json` entries whose key is **absent** from `--data` (Pass 0
+  `inDataJson=false`) **and** whose key equals the key of at least one row in `--added`. Gated on
+  the false-to-true flip, not on key match alone: a candidate that is already `inDataJson=true`
+  at Pass 0 and merely key-collides with an `--added` row (e.g. a re-add/update) does not count.
+- **R** = `candidates.json` entries whose key is **present** in `--data` (Pass 0
+  `inDataJson=true`) **and** where every pre-write row sharing that key appears in `--removed`.
+  Removing only some of a multi-row key's rows does not flip the flag and does not count.
+
+Counting is per `candidates.json` **entry**, not per distinct key -- two different literal
+strings in the same batch that share one normalized key (the `cinefilos` shape that motivated
+the ruling: `www.cinefilos.it/...621572` and apex `cinefilos.it/...621572`, only the apex
+written) each count toward A independently if both satisfy the condition, matching the ruling's
+own "entries in candidates.json" wording.
+
+**Offline only, same standing prohibition as the rest of this kit.** `--data` MUST be the
+Pass-0-pinned `data.json` from **before** this run's step 8 writes, never the post-write file --
+there is no post-write read here, and no new `lookup` fingerprint line is emitted. The existing
+prohibition on re-running `lookup` after a write to obtain A/R (see the `lookup` section above)
+is untouched; this is a different, offline code path, not a loophole in it. `--added`/`--removed`
+are the full row objects this run's step 8 actually wrote into / removed from `data.json` (e.g.
+via `assert-integrity --fix`'s auto-merge) -- both default to an empty list when omitted.
+
+```
+$ node tools/sweep-integrity.js reconcile --candidates candidates.json --data data.json.pre-write --added added.json --removed removed.json
+A=3 R=1
+  - A: https://www.cinefilos.it/review-621572 [cinefilos.it/review-621572]
+  - A: https://cinefilos.it/review-621572 [cinefilos.it/review-621572]
+  - A: https://example.com/literal-match [example.com/literal-match]
+  - R: https://example.com/full-remove [example.com/full-remove]
+```
+
+Prints the same `[reconcile] ... count/rows=<N> sha256=<hash>` stderr fingerprints as
+`lookup`/`audit` (LEMA-10448) for both input files, plus an `[reconcile] added=<N>
+removed=<N>` line, so two runs claimed to be against the same pre-write snapshot can be diffed
+mechanically. Exit is **2** on a missing/malformed input file (same `readJsonWithRaw` contract as
+every other command), otherwise **0** -- this command never fails on a reconciliation outcome
+itself, since A/R are a report, not a pass/fail gate.
+
 ## Flag parsing (LEMA-10595)
 
 Every command has an explicit allow-list of flag names. A flag outside it -- a typo
