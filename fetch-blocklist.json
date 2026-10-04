@@ -19318,7 +19318,27 @@
           "note": "Redirect target confirmed already present in data.json under its canonical dated-slug URL."
         }
       ]
+    },
+    {
+      "url": "https://www.apple.com/it/tv-pr/originals/women-in-blue-las-azules/episodes-images/",
+      "firstSeen": "2026-10-04T00:05:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-04T00:05:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Italian-locale Apple TV Press episodes/images gallery hub for Women in Blue (Las Azules), surfaced by Pass 3 Firecrawl IT query on this run (LEMA-11910). WebFetch succeeded (200) and returned only a structural navigation/hub page (\"Episodi e immagini\") linking to Cast e troupe / Trailer e video sections plus a watch-now link; no written editorial prose about the show and no visible publish date. Rule F (surface family, LEMA-10632/LEMA-10630 clarification): matches the apple.com/{locale}/tv-pr/originals/ show-page family already ledgered for other locales and paths, most directly the same episodes-images path already ledgered for the DE locale (https://www.apple.com/de/tv-pr/originals/women-in-blue-las-azules/episodes-images/, LEMA-10845) and the ES locale (https://www.apple.com/es/tv-pr/originals/women-in-blue-las-azules/episodes-images/, LEMA-10886).",
+      "history": [
+        {
+          "attempt": "2026-10-04T00:05:01Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11910",
+          "note": "Gallery/navigation hub page, no editorial prose, no publish date. Rule F, matches DE/ES episodes-images siblings."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-03T22:06:04Z"
+  "lastUpdated": "2026-10-04T00:05:01Z"
 }
