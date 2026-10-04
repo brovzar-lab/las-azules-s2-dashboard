@@ -19904,26 +19904,6 @@
       ]
     },
     {
-      "url": "https://www.cinefilos.it/serie-tv/news/las-azules-il-nuovo-crime-drama-in-lingua-spagnola-di-apple-tv-621572",
-      "firstSeen": "2026-10-04T22:05:08Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-10-04T22:05:08Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_redundant_syndication",
-      "skipNote": "www subdomain issues a 301 redirect to the canonical apex URL (https://cinefilos.it/serie-tv/news/las-azules-il-nuovo-crime-drama-in-lingua-spagnola-di-apple-tv-621572), which this run added to data.json (ts=20240509, outlet Cinefilos.it). Second address for that same document, not new coverage.",
-      "history": [
-        {
-          "attempt": "2026-10-04T22:05:08Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-11950",
-          "note": "Confirmed 301 redirect www->apex via curl; canonical apex article added to data.json this run."
-        }
-      ]
-    },
-    {
       "url": "https://macdailynews.com/2026/07/21/apple-tv-unveils-trailer-for-season-two-of-women-in-blue-las-azules/amp/",
       "firstSeen": "2026-10-04T22:05:08Z",
       "failCount": 0,
@@ -20024,5 +20004,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-10-04T22:05:08Z"
+  "lastUpdated": "2026-10-04T22:20:00Z"
 }
