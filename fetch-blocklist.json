@@ -20440,7 +20440,47 @@
           "issue": "LEMA-12066"
         }
       ]
+    },
+    {
+      "url": "https://apple.com/br/tv-pr/originals/women-in-blue-las-azules",
+      "firstSeen": "2026-10-05T12:06:37Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T12:06:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "BR locale of Apple TV Press show-overview page, same surface family as the already-ledgered uk/es/lu/it/fr/do/no/pe/mx/au/ca tv-pr/originals mirrors (Rule F clarification, LEMA-10632). Confirmed via WebFetch (LEMA-12072): press-kit style page (cast, exec-producer credits, Portuguese-language synopsis, trailers section, press contacts); no substantive written editorial prose about the show. Only 'Data de lançamento da temporada 2: 12 de agosto de 2026' appears in body copy, which is the show's own release date, not a page publish date; no article:published_time/JSON-LD datePublished/visible dateline present anywhere.",
+      "history": [
+        {
+          "attempt": "2026-10-05T12:06:37Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12072",
+          "note": "Confirmed same press-kit template as the other locale mirrors; no day-level date anywhere on page."
+        }
+      ]
+    },
+    {
+      "url": "https://allocine.fr/series/ficheserie-31977/critiques/saison-1000001953",
+      "firstSeen": "2026-10-05T12:06:37Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T12:06:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_user_review_aggregate",
+      "skipNote": "AlloCiné Season 2 reviews page for Las Azules (LEMA-12072). Page is split into a 'Critiques spectateurs' (audience reviews) tab and a 'Critiques presse' (press reviews) tab. Per Rule H (LEMA-10163), this is the aggregation surface itself, ledgered under the audience-review prong: 1 audience review visible (user 'frdric m.', 1 star, published Sep 11, 2026, excerpt re: Season 2 feeling flat vs Season 1), average rating shown as 3.0/5 across audience reviews. The 'Critiques presse' tab is present but currently empty (0 critic reviews rendered) -- per Rule H exemption #1, the mining duty attaches only when the surface actually renders named critic attribution; nothing to mine here yet. Re-check this URL's critiques presse tab on a future audit in case AlloCiné populates it with critic reviews later.",
+      "history": [
+        {
+          "attempt": "2026-10-05T12:06:37Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12072",
+          "note": "Confirmed audience-review tab populated (1 review), press tab empty."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-05T10:03:26Z"
+  "lastUpdated": "2026-10-05T12:06:37Z"
 }
