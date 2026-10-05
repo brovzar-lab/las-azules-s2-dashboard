@@ -122,6 +122,18 @@
     "excerpt": "Natalia Tellez tells HolaHello that returning to Valentina for Women in Blue Season 2 left her struggling with insomnia throughout filming, and discusses the toll of confronting Mexico's history and why mental health matters to her."
   },
   {
+    "outlet": "Spoiler Free Reviews",
+    "headline": "WOMEN IN BLUE S2",
+    "url": "https://spoilerfreereviews.com/post/women-in-blue-s2-%F0%9F%98%8A/",
+    "date": "Oct 1, 2026",
+    "ts": 20261001,
+    "dateSource": "visible_dateline",
+    "lang": "EN",
+    "market": "US",
+    "type": "Review",
+    "excerpt": "WOMEN IN BLUE completed its second season with intriguing excitement and a satisfying conclusion, documenting how the first four women police officers in 1970s Mexico helped solve a major serial killer case while enduring the department's machismo."
+  },
+  {
     "outlet": "Comic Basics",
     "headline": "Will 'Las Azules' Return for a Season 3 as Apple TV Weighs the Show's Future?",
     "url": "https://www.comicbasics.com/will-las-azules-return-for-a-season-3-as-apple-tv-weighs-the-shows-future/",
@@ -425,7 +437,21 @@
     "lang": "EN",
     "market": "US",
     "type": "Entertainment",
-    "excerpt": "Interview with Women in Blue (Las Azules) Season 2 cast members Miguel Rodarte, Horacio García Rojas, and Bruno Bichir discussing their roles in the second season of the Apple TV+ series."
+    "excerpt": "Interview with Women in Blue (Las Azules) Season 2 cast members Miguel Rodarte, Horacio García Rojas, and Bruno Bichir discussing their roles in the second season of the Apple TV+ series.",
+    "storyGroup": "nerdsthatgeek-s2-rodarte-garcia-rojas-bichir-interview-20260925"
+  },
+  {
+    "outlet": "Nerds That Geek (YouTube)",
+    "headline": "An Interview w/ Miguel Rodarte, Horacio Garcia Rojas, Bruno Bichir from 'Women in Blue (Las Azules)'",
+    "url": "https://www.youtube.com/watch?v=B97M9YTrimA",
+    "date": "Sep 25, 2026",
+    "ts": 20260925,
+    "dateSource": "visible_dateline",
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Video interview with Season 2 cast members Miguel Rodarte (Romandia), Horacio Garcia Rojas (Gerardo) and Bruno Bichir (Goyo), discussing police corruption, machismo and women's roles in 1970s Mexico ahead of the final two episodes.",
+    "storyGroup": "nerdsthatgeek-s2-rodarte-garcia-rojas-bichir-interview-20260925"
   },
   {
     "outlet": "Cine Geek",
@@ -3601,6 +3627,18 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "Analysis of the Las Azules Season 2 premiere episode's ending: the discovery of a student activist's body tied to 1968 shifts the show's focus from a lone killer to the state apparatus that decides which deaths count."
+  },
+  {
+    "outlet": "HolaHello",
+    "headline": "Women in Blue Season 2 Review: The Truth Is More Dangerous Than the Crime",
+    "url": "https://holahello.world/reviews/women-in-blue-season-2/",
+    "date": "Aug 13, 2026",
+    "ts": 20260813,
+    "dateSource": "visible_dateline",
+    "lang": "EN",
+    "market": "International",
+    "type": "Review",
+    "excerpt": "Spoiler-free review: Maria, Valentina, Gabina and Angeles return with a darker mystery and a sharper examination of institutional power, asking whether the force deserves the women rather than the reverse."
   },
   {
     "outlet": "uInterview",
