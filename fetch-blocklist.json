@@ -20284,7 +20284,87 @@
           "note": "Resolved redirect target per step 4a2 looksLikeIdPermalink flag; confirmed off-topic (Los Angeles Azules band, not the show)."
         }
       ]
+    },
+    {
+      "url": "https://butwhytho.net/2026/10/blue-box-season-2-episode-1-review",
+      "firstSeen": "2026-10-05T06:03:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T06:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Review of \"Blue Box\" Season 2 Episode 1 (\"Deja Vu\"), an unrelated anime/live-action title. No mention of Las Azules or Women in Blue; surfaced only via Exa Pass 1's broad EN query matching generic \"season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T06:03:00Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-11990",
+          "note": "Classified off-topic from Exa Pass 1 EN result title/metadata; no fetch needed, relevance gate fails before dateability per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://readsme.com/blue-box-season-2-episode-1-recap-does-taiki",
+      "firstSeen": "2026-10-05T06:03:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T06:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Recap of \"Blue Box\" Season 2 Episode 1 (\"Does Taiki Finally Confess His Feelings to Chinatsu?\"), an unrelated anime/live-action title. No mention of Las Azules or Women in Blue; surfaced only via Exa Pass 1's broad EN query matching generic \"season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T06:03:00Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-11990",
+          "note": "Classified off-topic from Exa Pass 1 EN result title/metadata; no fetch needed, relevance gate fails before dateability per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://pixeltwelve.com/articles/shari-belafonte-morning-show-aniston-witherspoon-cast",
+      "firstSeen": "2026-10-05T06:03:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T06:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Piece about Shari Belafonte and the cast of \"The Morning Show\" (a different Apple TV+ series). No mention of Las Azules or Women in Blue; surfaced only via Exa Pass 1's broad EN query matching generic \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T06:03:00Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-11990",
+          "note": "Classified off-topic from Exa Pass 1 EN result title/metadata; no fetch needed, relevance gate fails before dateability per Rule G."
+        }
+      ]
+    },
+    {
+      "url": "https://cadenaser.com/nacional/2026/10/05/samanta-ballenthines-los-drags-somos-artistas-no-somos-gays-pintados-como-puertas-cadena-ser",
+      "firstSeen": "2026-10-05T06:03:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T06:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Cadena SER interview with Samanta Ballenthines about drag performers, entirely unrelated to Las Azules or Women in Blue. Surfaced only via Exa Pass 1's broad ES query matching generic \"entrevista\"/\"temporada 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T06:03:00Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-11990",
+          "note": "Classified off-topic from Exa Pass 1 ES result title/metadata; no fetch needed, relevance gate fails before dateability per Rule G."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-05T04:04:36Z"
+  "lastUpdated": "2026-10-05T06:03:00Z"
 }
