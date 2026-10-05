@@ -20480,7 +20480,107 @@
           "note": "Confirmed audience-review tab populated (1 review), press tab empty."
         }
       ]
+    },
+    {
+      "url": "https://comingsoon.net/tv/news/2201592-widows-bay-star-betty-gilpin-season-2-return-update",
+      "firstSeen": "2026-10-05T14:03:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T14:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ComingSoon.net piece about Betty Gilpin and the unrelated series \"Widow's Bay\" getting a Season 2 update. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\" terms (Pass 1 Exa EN query).",
+      "history": [
+        {
+          "attempt": "2026-10-05T14:03:00Z",
+          "method": "title-metadata-only",
+          "status": null,
+          "issue": "LEMA-12083",
+          "note": "Determined off-topic from Exa search result title/metadata alone (unambiguous show-name mismatch: Widow's Bay vs Las Azules); no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://korvexaliumgornica.com/article/why-apple-tv-canceled-palm-royale-after-2-seasons-the-rise-and-fall-of-a-period-comedy-gem",
+      "firstSeen": "2026-10-05T14:03:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T14:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Apple TV canceling the unrelated period comedy \"Palm Royale\". No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Apple TV\" + \"2 seasons\" terms (Pass 1 Exa EN query).",
+      "history": [
+        {
+          "attempt": "2026-10-05T14:03:00Z",
+          "method": "title-metadata-only",
+          "status": null,
+          "issue": "LEMA-12083",
+          "note": "Determined off-topic from Exa search result title/metadata alone (unambiguous show-name mismatch: Palm Royale vs Las Azules); no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://zhongtezc.com/article/csi-star-marg-helgenberger-joins-boston-blue-season-2-tracker-season-4-casting-news",
+      "firstSeen": "2026-10-05T14:03:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T14:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Casting news about CSI star Marg Helgenberger joining the unrelated series \"Boston Blue\" Season 2 and \"Tracker\" Season 4. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\" casting terms (Pass 1 Exa EN query).",
+      "history": [
+        {
+          "attempt": "2026-10-05T14:03:00Z",
+          "method": "title-metadata-only",
+          "status": null,
+          "issue": "LEMA-12083",
+          "note": "Determined off-topic from Exa search result title/metadata alone (unambiguous show-name mismatch: Boston Blue/Tracker vs Las Azules); no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://20minutos.es/cinemania/series/linternas-lanterns-final-explicado-segunda-temporada-hbo-max-john-stewart-dcu_7044929_0.html",
+      "firstSeen": "2026-10-05T14:03:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T14:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "20minutos.es explainer about the finale of HBO Max's unrelated series \"Linternas\" (Lanterns) and a possible second season. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"segunda temporada\" terms (Pass 1 Exa ES query).",
+      "history": [
+        {
+          "attempt": "2026-10-05T14:03:00Z",
+          "method": "title-metadata-only",
+          "status": null,
+          "issue": "LEMA-12083",
+          "note": "Determined off-topic from Exa search result title/metadata alone (unambiguous show-name mismatch: Linternas/Lanterns, HBO Max, vs Las Azules); no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://adnradio.cl/2026/10/05/que-panoramas-ofrece-mori-en-octubre-estrenos-avello-y-espectaculos-familiares-en-cuatro-salas",
+      "firstSeen": "2026-10-05T14:03:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T14:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ADN Radio (Chile) roundup of October cultural programming at Centro Mori and other venues (\"Avello\", family shows). \"Mori\" here refers to the Centro Mori venue, not actress Bárbara Mori. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on the \"Mori\" + \"octubre\" terms from the Pass 1 Exa ES query (\"Bárbara Mori entrevista Las Azules temporada 2\").",
+      "history": [
+        {
+          "attempt": "2026-10-05T14:03:00Z",
+          "method": "title-metadata-only",
+          "status": null,
+          "issue": "LEMA-12083",
+          "note": "Determined off-topic from Exa search result title/metadata alone (venue name collision on 'Mori', unrelated to Bárbara Mori or Las Azules); no fetch spent."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-05T12:06:37Z"
+  "lastUpdated": "2026-10-05T14:03:00Z"
 }
