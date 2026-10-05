@@ -20364,7 +20364,83 @@
           "note": "Classified off-topic from Exa Pass 1 ES result title/metadata; no fetch needed, relevance gate fails before dateability per Rule G."
         }
       ]
+    },
+    {
+      "url": "https://wadedigitalcraft.com/article/imperfect-women-elisabeth-moss-kerry-washington-kate-mara-in-a-gripping-drama-apple-tv-review",
+      "firstSeen": "2026-10-05T10:03:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T10:03:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by the Pass 1 Exa broad-query sweep (query: 'Las Azules Women in Blue Season 2 Apple TV'). Page is a review of 'Imperfect Women', a different Apple TV+ drama starring Elisabeth Moss, Kerry Washington and Kate Mara. No mention of Las Azules / Women in Blue; matched only on the broad 'Apple TV' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T10:03:26Z",
+          "method": "Not fetched (Rule G relevance gate, title/URL review only)",
+          "status": null,
+          "issue": "LEMA-12066"
+        }
+      ]
+    },
+    {
+      "url": "https://hawksaloft.com/article/will-estes-returns-as-jamie-reagan-in-boston-blue-season-2",
+      "firstSeen": "2026-10-05T10:03:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T10:03:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by the Pass 1 Exa broad-query sweep (query: 'Las Azules Women in Blue Season 2 Apple TV'). Page is about 'Boston Blue' Season 2 (Will Estes as Jamie Reagan), an unrelated CBS drama. No mention of Las Azules / Women in Blue; matched only on 'Blue' + 'Season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T10:03:26Z",
+          "method": "Not fetched (Rule G relevance gate, title/URL review only)",
+          "status": null,
+          "issue": "LEMA-12066"
+        }
+      ]
+    },
+    {
+      "url": "https://areajugones.sport.es/anime/la-caja-azul-temporada-2-fecha-horario-y-donde-ver-el-episodio-2",
+      "firstSeen": "2026-10-05T10:03:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T10:03:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by the Pass 1 Exa Spanish-language sweep (query: 'Barbara Mori entrevista Las Azules temporada 2'). Page is about 'La Caja Azul' ('Blue Box'), an unrelated anime series, discussing its episode 2 air schedule. No mention of Las Azules / Barbara Mori; matched only on 'azul(es)'/'temporada 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T10:03:26Z",
+          "method": "Not fetched (Rule G relevance gate, title/URL review only)",
+          "status": null,
+          "issue": "LEMA-12066"
+        }
+      ]
+    },
+    {
+      "url": "https://threads.com/@comic_basics/post/Dd5scJBlqVz/will-las-azules-return-for-a-season-as-apple-tv-weighs-the-shows-future",
+      "firstSeen": "2026-10-05T10:03:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T10:03:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Threads repost by the Comic Basics editorial account: caption plus a bare link to the outlet's own article (https://www.comicbasics.com/will-las-azules-return-for-a-season-3-as-apple-tv-weighs-the-shows-future/), already tracked in data.json (ts=20260930, outlet Comic Basics). Carries no text of its own beyond the caption/headline. Second address for that same document under Rule I, not new coverage.",
+      "history": [
+        {
+          "attempt": "2026-10-05T10:03:26Z",
+          "method": "Not fetched (Rule I second-address, title/caption review only)",
+          "status": null,
+          "issue": "LEMA-12066"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-05T06:03:00Z"
+  "lastUpdated": "2026-10-05T10:03:26Z"
 }
