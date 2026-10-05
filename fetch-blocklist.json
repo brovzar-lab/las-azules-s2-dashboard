@@ -19658,9 +19658,9 @@
     {
       "url": "https://www.macobserver.com/de/apple-tv-de/women-in-blue-staffel-2-episode-8-ende-erklart-stoppen-die-azules-den-vollstrecker-in-goyo/",
       "firstSeen": "2026-10-04T12:03:44Z",
-      "failCount": 1,
-      "lastStatus": 403,
-      "lastAttempt": "2026-10-04T12:03:44Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T00:00:00Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
@@ -19679,15 +19679,22 @@
           "status": 402,
           "issue": "LEMA-11930",
           "note": "Firecrawl returned 402 Insufficient credits (account-wide credit exhaustion, tracked on LEMA-11913; not a per-URL failure). Full-chain failure, failCount=1."
+        },
+        {
+          "attempt": "2026-10-05T00:00:00Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-11958",
+          "note": "Tavily Extract (advanced) succeeded; article:published_time/JSON-LD datePublished confirmed 2026-09-30T21:24:34+00:00. Added to data.json as a Season 2 finale ending-explained piece. Ledger reset after successful retry."
         }
       ]
     },
     {
       "url": "https://www.melty.fr/series/las-azules-saison-2-fin-de-lepisode-1-expliquee-2339733.html",
       "firstSeen": "2026-10-04T12:03:44Z",
-      "failCount": 1,
-      "lastStatus": null,
-      "lastAttempt": "2026-10-04T12:03:44Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T00:00:00Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
@@ -19706,15 +19713,22 @@
           "status": 402,
           "issue": "LEMA-11930",
           "note": "Firecrawl returned 402 Insufficient credits (account-wide credit exhaustion, tracked on LEMA-11913; not a per-URL failure). Full-chain failure, failCount=1."
+        },
+        {
+          "attempt": "2026-10-05T00:00:00Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-11958",
+          "note": "Tavily Extract (advanced) succeeded; article:published_time/JSON-LD datePublished confirmed 2026-08-13T12:10:37+00:00. Added to data.json as a Season 2 Episode 1 ending-explained piece. Ledger reset after successful retry."
         }
       ]
     },
     {
       "url": "https://www.cinematographe.it/recensioni-serie/las-azules-recensione-serie-tv-apple-tv/",
       "firstSeen": "2026-10-04T12:03:44Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 522,
-      "lastAttempt": "2026-10-04T12:03:44Z",
+      "lastAttempt": "2026-10-05T00:00:00Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
@@ -19733,6 +19747,13 @@
           "status": 402,
           "issue": "LEMA-11930",
           "note": "Firecrawl returned 402 Insufficient credits (account-wide credit exhaustion, tracked on LEMA-11913; not a per-URL failure). Full-chain failure, failCount=1."
+        },
+        {
+          "attempt": "2026-10-05T00:00:00Z",
+          "method": "WebFetch + Tavily Extract",
+          "status": 522,
+          "issue": "LEMA-11958",
+          "note": "WebFetch returned a summary that could not be corroborated (byline/date matched an unrelated site, sorrisi.com); Tavily Extract returned no content; direct fetch confirmed HTTP 522 (Cloudflare origin-down). Discarded the uncorroborated WebFetch output and treated this as a full-chain failure. failCount now 2, not yet at the 3-fetch cooldown threshold."
         }
       ]
     },
@@ -20080,6 +20101,67 @@
           "status": null,
           "issue": "LEMA-11953",
           "note": "Dropped from data.json as the AMP-shaped duplicate of https://www.theweek.in/news/entertainment/2026/08/10/women-in-blue-season-2-premiere.html; canonical kept unchanged. See skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://www.csfd.cz/de/film/1517789-zeny-v-modrem/1681298-serie-2/kritik/",
+      "firstSeen": "2026-10-05T00:00:00Z",
+      "failCount": 1,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T00:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-10-05T00:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11958",
+          "note": "WebFetch returned a 'within.website BotStopper' bot-wall challenge page, not real content (HTTP 200 but access-denied body)."
+        },
+        {
+          "attempt": "2026-10-05T00:00:00Z",
+          "method": "Tavily Extract",
+          "status": null,
+          "issue": "LEMA-11958",
+          "note": "Tavily Extract (advanced) returned no usable content."
+        },
+        {
+          "attempt": "2026-10-05T00:00:00Z",
+          "method": "direct fetch (verification)",
+          "status": 200,
+          "issue": "LEMA-11958",
+          "note": "Direct fetch confirmed the bot-wall: page title 'Making sure you're not a bot!' (within.website BotStopper). Full-chain failure; not classified as Rule H pending a real content read."
+        }
+      ]
+    },
+    {
+      "url": "https://open.spotify.com/episode/3XI06xUiiU8DUSav8hlcgZ",
+      "firstSeen": "2026-10-05T00:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T00:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I: same 'Fuera de Series Plus' podcast episode ('Crítica de LAS AZULES (Temporada 2) | SIN SPOILERS | Apple TV') distributed on Spotify and Podimo. Podimo copy (podimo.com/de/shows/fuera-de-series/episode/6dae540c-3abe-50d9-8c2a-b49103ff496b, ts 20260825) is in data.json as the primary address with storyGroup fueradeseries-s2-critica-temporada2-20260825; this Spotify URL is a second-address platform mirror of the identical audio episode, not a distinct document, so it is skipped rather than added. No publish date was recoverable here either (WebFetch returned partial metadata with no date; Tavily Extract returned no usable content), which is moot given the redundant-syndication disposition.",
+      "history": [
+        {
+          "attempt": "2026-10-05T00:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11958",
+          "note": "Partial metadata only (show name, episode title), no publish date."
+        },
+        {
+          "attempt": "2026-10-05T00:00:00Z",
+          "method": "Tavily Extract",
+          "status": null,
+          "issue": "LEMA-11958",
+          "note": "Returned no usable content."
         }
       ]
     }
