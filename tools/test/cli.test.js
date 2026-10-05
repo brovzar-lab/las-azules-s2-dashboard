@@ -81,16 +81,35 @@ test('lookup CLI --strict fails loudly (non-zero exit, no stdout result lines) o
   assert.match(result.stderr, /entries.*empty/);
 });
 
-test('lookup CLI --strict fails loudly on an empty candidates array', () => {
+// LEMA-12040: a validly-empty candidates.json is a sanctioned "0 new" sweep
+// outcome (post-finale this is the common case), not an integrity failure --
+// --strict must exit 0, not 3, and must not share severity with a corrupted
+// ledger or an unusable data.json.
+test('lookup CLI --strict exits 0 on a validly-empty candidates array', () => {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
   const candidatesPath = path.join(tmp, 'empty-candidates.json');
   fs.writeFileSync(candidatesPath, JSON.stringify([]));
 
-  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--strict']);
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--data', DATA_PATH, '--strict', '--json']);
 
-  assert.notEqual(result.status, 0);
+  assert.equal(result.status, 0);
+  assert.doesNotMatch(result.stderr, /--strict guard failed/);
+  assert.match(result.stderr, /\[lookup\] candidates path=.*count=0/);
+  assert.match(result.stderr, /\[lookup\] strict=on/);
+  assert.deepEqual(JSON.parse(result.stdout), []);
+});
+
+test('lookup CLI --strict still fails loudly on a candidates file that is not a JSON array', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const candidatesPath = path.join(tmp, 'bad-candidates.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify({ not: 'an array' }));
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', LEDGER_PATH, '--data', DATA_PATH, '--strict']);
+
+  assert.equal(result.status, 3);
   assert.equal(result.stdout, '');
-  assert.match(result.stderr, /candidates file is an empty array/);
+  assert.match(result.stderr, /--strict guard failed/);
+  assert.match(result.stderr, /candidates file is not a JSON array/);
 });
 
 test('lookup CLI without --strict does not fail on the same empty-ledger input (guard is opt-in)', () => {

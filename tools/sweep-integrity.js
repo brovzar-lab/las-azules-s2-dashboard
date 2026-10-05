@@ -253,7 +253,10 @@ function cmdLookup(positional, flags) {
     if (!ledgerEntries) problems.push('fetch-blocklist ledger has no "entries" array');
     else if (ledgerEntries.length === 0) problems.push('fetch-blocklist ledger "entries" array is empty');
     if (!candidateList) problems.push('candidates file is not a JSON array');
-    else if (candidateList.length === 0) problems.push('candidates file is an empty array');
+    // LEMA-12040: a validly-empty candidates array is a sanctioned "0 new"
+    // sweep outcome, not an integrity failure -- unlike the ledger/data.json
+    // empty checks above (which guard states that should never legitimately
+    // occur), so it must not share their exit-3 severity.
     // LEMA-10592: without this, an unusable data.json silently degrades to
     // `datasetEntries || []` below -- lookupAll then reports inDataJson=false
     // for every candidate, including ones demonstrably present in the real
