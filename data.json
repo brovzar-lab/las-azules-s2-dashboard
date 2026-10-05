@@ -5404,6 +5404,18 @@
     "excerpt": "Italian review by Niccolò Della Seta Issaa for il manifesto examining how Las Azules Season 2 uses the police-procedural genre to expose state crimes and institutional corruption, following four female officers pursuing a killer targeting survivors of the 1968 Tlatelolco massacre."
   },
   {
+    "outlet": "ScreenHub (Australia)",
+    "headline": "Apple TV: best new shows streaming this week",
+    "url": "https://www.screenhub.com.au/news/what-to-watch/apple-tv-best-new-shows-streaming-this-week-50-2705781/",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "dateSource": "jsonld_datepublished",
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Weekly streaming guide naming Women in Blue (Las Azules) Season 2 as a top new Apple TV pick for 10-16 August 2026, with several paragraphs on María's (Bárbara Mori) promotion to lieutenant and the Azules' investigation linking a student activist's death to the 1968 student massacre, alongside entries for Ted Lasso S4, Silo S3 and other Apple TV titles. By Paul Dalgarno."
+  },
+  {
     "outlet": "Chic Magazine",
     "headline": "\"Las Azules\": Cuántos capítulos tendrá la segunda temporada y cuándo salen todos",
     "url": "https://www.chicmagazine.com.mx/personajes/las-azules-temporada-2-cuandos-capitulos-tendra-y-cuando-salen",
@@ -9221,6 +9233,18 @@
     "market": "US",
     "type": "Review",
     "excerpt": "Apple TV+'s Women in Blue is a stylish crime drama that’s at its best when it focuses on its layered characters and makes bold choices."
+  },
+  {
+    "outlet": "UnoTV",
+    "headline": "“Las Azules”, serie de Bárbara Mori sobre las primeras mujeres policía en México",
+    "url": "https://www.unotv.com/entretenimiento/las-azules-serie-de-barbara-mori-sobre-primeras-mujeres-policias-mexicanas/",
+    "date": "Jul 15, 2024",
+    "ts": 20240715,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Feature on 'Las Azules', Apple TV+'s drama about Mexico's first female police unit from the 1970s, whose formation served as a PR distraction from the Tlatelolco-era serial-killer investigation. Covers star Bárbara Mori, co-stars Natalia Téllez, Ximena Sariñana and Amorita Rasgado, and creator Fernando Rovzar's aim of spotlighting this overlooked chapter of Mexican history."
   },
   {
     "outlet": "The Brett Allan Show (YouTube)",
