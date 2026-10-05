@@ -20580,6 +20580,66 @@
           "note": "Determined off-topic from Exa search result title/metadata alone (venue name collision on 'Mori', unrelated to Bárbara Mori or Las Azules); no fetch spent."
         }
       ]
+    },
+    {
+      "url": "https://blog.reelgood.com/?p=251444",
+      "firstSeen": "2026-10-05T18:08:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T18:08:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "WordPress ID-permalink; canonical URL (confirmed via rel=canonical on fetch) is https://blog.reelgood.com/how-to-watch-women-in-blue-season-2-from-anywhere, already tracked in data.json (ts=20260812, outlet 'UpNext by Reelgood'). Second address, no distinct content.",
+      "history": [
+        {
+          "attempt": "2026-10-05T18:08:13Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12110",
+          "note": "looksLikeIdPermalink flag resolved per step 4a2: redirect/canonical target confirmed already in data.json."
+        }
+      ]
+    },
+    {
+      "url": "https://www.20minutos.es/cinemania/noticias/barbie-2-inevitable-warner-paramount-skydance_7044427_0.html",
+      "firstSeen": "2026-10-05T18:08:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T18:08:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about the prospect of a 'Barbie 2' film following the Warner-Paramount/Skydance merger. Zero mention of Las Azules or Women in Blue anywhere on the page (confirmed via direct fetch). Surfaced via the Pass 1 Exa Spanish broad query 'Bárbara Mori entrevista Las Azules temporada 2' as an off-topic false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-05T18:08:13Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12110",
+          "note": "Confirmed off-topic (Barbie 2 / Warner-Paramount-Skydance merger), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.europesays.com/es/802684/",
+      "firstSeen": "2026-10-05T18:08:13Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T18:08:13Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is entirely about HBO's 'Linternas' (Lanterns) series finale, with creators Damon Lindelof and Chris Mundy discussing the ending. Zero mention of Las Azules or Women in Blue anywhere on the page (confirmed via Tavily Extract). Surfaced via the Pass 1 Exa Spanish broad query 'Bárbara Mori entrevista Las Azules temporada 2' as an off-topic false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-05T18:08:13Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-12110",
+          "note": "Confirmed off-topic (HBO 'Linternas' finale), unrelated to Las Azules."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-10-05T14:03:00Z"
