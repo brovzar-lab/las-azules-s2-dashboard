@@ -20264,7 +20264,27 @@
           "note": "WebFetch succeeded; confirmed page is a tag/archive index with no original prose, Rule F."
         }
       ]
+    },
+    {
+      "url": "https://seitrackus.com/?p=15047",
+      "firstSeen": "2026-10-05T04:04:36Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T04:04:36Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "WordPress ID-permalink seitrackus.com/?p=15047 redirects to /los-angeles-azules-and-tini-present-pa-el/, an article about the Mexican cumbia band Los Angeles Azules and their collaboration with singer Tini, not about the TV show Las Azules / Women in Blue. Surfaced only as a broad-query match on the \"Las Azules\" name string.",
+      "history": [
+        {
+          "attempt": "2026-10-05T04:04:36Z",
+          "method": "curl -L (redirect resolution)",
+          "status": 200,
+          "issue": "LEMA-11961",
+          "note": "Resolved redirect target per step 4a2 looksLikeIdPermalink flag; confirmed off-topic (Los Angeles Azules band, not the show)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-05T02:01:59Z"
+  "lastUpdated": "2026-10-05T04:04:36Z"
 }
