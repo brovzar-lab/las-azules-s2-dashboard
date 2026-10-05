@@ -20164,7 +20164,107 @@
           "note": "Returned no usable content."
         }
       ]
+    },
+    {
+      "url": "https://eltrecetv.com.ar/mujeres-asesinas/2026/10/04/pasion-promesas-rotas-y-una-venganza-brutal-llega-paula-bailarina-un-capitulo-de-mujeres-asesinas-con-un-final-estremecedor",
+      "firstSeen": "2026-10-05T02:01:59Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-05T02:01:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Trece (Argentina) piece about a remastered 2006 episode of the anthology series 'Mujeres Asesinas' (\"Paula, bailarina\"), unrelated Argentine true-crime drama. No mention of Las Azules or Women in Blue anywhere in the article; surfaced only via Exa broad query matching generic 'mujeres' + 'season 2'-style terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T02:01:59Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-11960",
+          "note": "WebFetch failed on this host (fetch error, not a bot wall); Tavily Extract (advanced) succeeded and confirmed the article is entirely about Mujeres Asesinas with zero Las Azules/Women in Blue mentions."
+        }
+      ]
+    },
+    {
+      "url": "https://dev.wisepay.com.br/loot-season-2-youtubecom-full-plot-breakdown-cast-return-and-where-to-watch-legally",
+      "firstSeen": "2026-10-05T02:01:59Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T02:01:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Apple TV+ comedy series 'Loot' (starring a character named Molly). No mention of Las Azules or Women in Blue anywhere; surfaced only via Exa broad query matching generic 'season 2'/'Apple TV' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T02:01:59Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11960",
+          "note": "WebFetch succeeded; confirmed page is about Loot, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://produ.com/television/noticias/la-casa-de-los-famosos-mexico-4-de-televisaunivision-y-endemolshine-boomdog-elevo-consumo-en-vix-y-suma-mas-marcas",
+      "firstSeen": "2026-10-05T02:01:59Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T02:01:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Produ.com piece about reality show 'La Casa de los Famosos México 4' (TelevisaUnivision/EndemolShine Boomdog), covering ViX viewership metrics. No mention of Las Azules or Women in Blue anywhere; surfaced only via broad query match.",
+      "history": [
+        {
+          "attempt": "2026-10-05T02:01:59Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11960",
+          "note": "WebFetch succeeded; confirmed page is about La Casa de los Famosos México, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://produ.com/television/noticias/mas-vale-sola-de-televisaunivision-prepara-tercera-temporada-con-estreno-en-vix-y-las-estrellas-en-2027",
+      "firstSeen": "2026-10-05T02:01:59Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T02:01:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Produ.com piece about TelevisaUnivision comedy series 'Mas Vale Sola' season 3 (stars Maria Elena Saldana, Cecilia Galliano), premiering on ViX/Las Estrellas in 2027. No mention of Las Azules or Women in Blue anywhere; surfaced only via broad query match.",
+      "history": [
+        {
+          "attempt": "2026-10-05T02:01:59Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11960",
+          "note": "WebFetch succeeded; confirmed page is about Mas Vale Sola, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/es/etiquetas/apple-tv",
+      "firstSeen": "2026-10-05T02:01:59Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T02:01:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Señal News tag/archive index page for the 'apple-tv' tag: a paginated list of article previews/thumbnails with no original editorial prose of its own (Rule F strip test). Underlying Señal News articles about Las Azules are already tracked in data.json individually (e.g. the 2025-05-21 and 2026-03-26 Señal News rows).",
+      "history": [
+        {
+          "attempt": "2026-10-05T02:01:59Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-11960",
+          "note": "WebFetch succeeded; confirmed page is a tag/archive index with no original prose, Rule F."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-04T22:20:00Z"
+  "lastUpdated": "2026-10-05T02:01:59Z"
 }
