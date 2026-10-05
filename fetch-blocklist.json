@@ -20640,7 +20640,218 @@
           "note": "Confirmed off-topic (HBO 'Linternas' finale), unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://screenrant.com/imperfect-women-season-2-renewal-apple-tv-crime-series-limited/",
+      "firstSeen": "2026-10-05T20:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T20:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ScreenRant article about Apple TV's \"Imperfect Women\" (Joel Kinnaman, Kerry Washington) being renewed for Season 2. A different Apple TV limited-series-turned-ongoing show; no mention of Las Azules / Women in Blue. Surfaced only as a broad-query match on generic \"Apple TV Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12111",
+          "note": "Surfaced by Pass 2 broad EN/ES web sweep; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.jingletree.com/imperfect-women-renewed-for-season-2-at-apple-tv-with-kerry-washington-returning-282473.html",
+      "firstSeen": "2026-10-05T20:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T20:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Jingletree article: \"Imperfect Women\" renewed for Season 2 at Apple TV with Kerry Washington returning. Same unrelated Apple TV show as the ScreenRant hit above; no mention of Las Azules. Broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12111",
+          "note": "Surfaced by Pass 2 broad EN/ES web sweep; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://9to5mac.com/2026/10/05/apple-tv-brings-back-hit-limited-series-for-season-2-by-popular-demand/",
+      "firstSeen": "2026-10-05T20:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T20:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "9to5Mac article about Apple TV renewing \"Imperfect Women\" for Season 2. Unrelated show; no mention of Las Azules. Broad-query false positive on generic \"Apple TV Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12111",
+          "note": "Surfaced by Pass 2 broad EN/ES web sweep; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.headliner.nl/artikelen/apple-tv-bestelt-tweede-seizoen-imperfect-women-spin-off-rond-kerry-washingtons-eleanor-183570",
+      "firstSeen": "2026-10-05T20:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T20:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Dutch-language Headliner.nl article: Apple TV orders a second season / spin-off of \"Imperfect Women\" centered on Kerry Washington's character Eleanor. Unrelated show; no mention of Las Azules. Broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12111",
+          "note": "Surfaced by Pass 2 broad EN/ES web sweep; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://dnyuz.com/2026/10/05/imperfect-women-renewed-for-season-2-at-apple-tv-with-kerry-washington-returning/",
+      "firstSeen": "2026-10-05T20:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T20:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "DNyuz article: \"Imperfect Women\" renewed for Season 2 at Apple TV with Kerry Washington returning. Same unrelated show as the other \"Imperfect Women\" hits this run; no mention of Las Azules. Broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12111",
+          "note": "Surfaced by Pass 2 broad EN/ES web sweep; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DeHYkH-DrQy/",
+      "firstSeen": "2026-10-05T20:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T20:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Instagram post about Dominican actress/communicator Nashla Bogaert; unrelated personality and topic, no connection to Las Azules or Women in Blue. Surfaced only as a broad-query match.",
+      "history": [
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12111",
+          "note": "Surfaced by Pass 2 broad EN/ES web sweep; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://elcomercio.pe/mag/fama/que-ver/blue-box-temporada-2-guia-de-episodios-fecha-y-hora-de-estreno-de-cada-capitulo-del-anime-de-netflix-la-caja-azul-nnda-nnlt-noticia/",
+      "firstSeen": "2026-10-05T20:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T20:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Comercio (Peru) episode guide for \"Blue Box\" (La Caja Azul), a Netflix anime, Season 2. Different show entirely; matched only on generic \"temporada 2\" + \"azul\"-adjacent terms.",
+      "history": [
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12111",
+          "note": "Surfaced by Pass 2 broad EN/ES web sweep; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eldiario.es/vertele/entrevistas/david-janer-suenos-libertad-antena-3-aguila-roja-rtve-quedo-retina-gente_1_13554854.html",
+      "firstSeen": "2026-10-05T20:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T20:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "elDiario.es interview with actor David Janer about Antena 3's \"Sueños de libertad\" and his earlier RTVE show \"Águila Roja\". Unrelated Spanish drama; no mention of Las Azules. Broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12111",
+          "note": "Surfaced by Pass 2 broad EN/ES web sweep; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.elmundo.es/television/2026/10/05/6abf9553fc6c83ff078b457d.html",
+      "firstSeen": "2026-10-05T20:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T20:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Mundo interview with actor David Janer about \"Sueños de libertad\" and \"Águila Roja\". Same unrelated-show topic as the elDiario.es hit this run; no mention of Las Azules. Broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12111",
+          "note": "Surfaced by Pass 2 broad EN/ES web sweep; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://macobserver.com/?p=488827",
+      "firstSeen": "2026-10-05T20:04:41Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-05T20:04:41Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "curl -L (redirect check)",
+          "status": 403,
+          "issue": "LEMA-12111",
+          "note": "looksLikeIdPermalink=true; curl -L did not redirect (Cloudflare challenge page returned at the ?p= URL itself)."
+        },
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12111",
+          "note": "WebFetch returned HTTP 403 (Cloudflare bot-wall challenge)."
+        },
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "Tavily Extract (advanced)",
+          "status": "no_content",
+          "issue": "LEMA-12111",
+          "note": "Tavily Extract returned no content/empty result. Full-chain failure, failCount=1."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-05T14:03:00Z"
+  "lastUpdated": "2026-10-05T20:04:41Z"
 }
