@@ -84,14 +84,62 @@ test('YouTube playlist param is preserved intact', () => {
 });
 
 test('YouTube case-mixed video id is preserved byte-for-byte, not lowercased', () => {
-  const { key, url } = normalizeUrl('https://m.youtube.com/watch?v=Z9n3TkdcGLY');
-  assert.equal(key, 'm.youtube.com/watch?v=Z9n3TkdcGLY');
-  assert.equal(url, 'https://m.youtube.com/watch?v=Z9n3TkdcGLY');
+  const { key, url } = normalizeUrl('https://www.youtube.com/watch?v=Z9n3TkdcGLY');
+  assert.equal(key, 'youtube.com/watch?v=Z9n3TkdcGLY');
+  assert.equal(url, 'https://youtube.com/watch?v=Z9n3TkdcGLY');
 });
 
-test('youtu.be host also applies the YouTube whitelist', () => {
-  const { key } = normalizeUrl('https://youtu.be/Z9n3TkdcGLY?si=shareToken123');
-  assert.equal(key, 'youtu.be/Z9n3TkdcGLY');
+// youtu.be -> youtube.com/watch?v=<id> fold (LEMA-9942 pre-approval,
+// shipped LEMA-11959): youtu.be only ever redirects to the watch form, so
+// it folds to the same key as its youtube.com/watch?v= equivalent, with
+// the per-host param whitelist (si= share token dropped) still applying.
+
+test('youtu.be folds to the youtube.com/watch?v= key, the YouTube whitelist still applies (si= share token dropped)', () => {
+  const { key, url } = normalizeUrl('https://youtu.be/Z9n3TkdcGLY?si=shareToken123');
+  assert.equal(key, 'youtube.com/watch?v=Z9n3TkdcGLY');
+  assert.equal(url, 'https://youtube.com/watch?v=Z9n3TkdcGLY');
+});
+
+test('youtu.be and its watch?v= equivalent collapse to the same key', () => {
+  const short = normalizeUrl('https://youtu.be/Z9n3TkdcGLY');
+  const watch = normalizeUrl('https://www.youtube.com/watch?v=Z9n3TkdcGLY');
+  assert.equal(short.key, watch.key);
+});
+
+// youtube.com/shorts/<id> -> watch?v=<id> fold (LEMA-9942 pre-approval,
+// shipped LEMA-11959). The live trigger: a youtube.com/shorts/<id> row has
+// been in fetch-blocklist.json since 2026-09-26 (LEMA-11250), with no
+// competing watch?v= row for the same id -- this pins that exact id so a
+// regression would be caught against the real corpus shape, not just a
+// synthetic one.
+
+test('youtube.com/shorts/<id> folds to the watch?v= key (the live LEMA-11250 fetch-blocklist.json row)', () => {
+  const shorts = normalizeUrl('https://youtube.com/shorts/SSsG4MybyTU');
+  const watch = normalizeUrl('https://www.youtube.com/watch?v=SSsG4MybyTU');
+  assert.equal(shorts.key, watch.key);
+  assert.equal(shorts.key, 'youtube.com/watch?v=SSsG4MybyTU');
+  assert.equal(shorts.url, 'https://youtube.com/watch?v=SSsG4MybyTU');
+});
+
+test('m.youtube.com/shorts/<id> also folds to the watch?v= key (m. strip runs before the shorts fold)', () => {
+  const { key } = normalizeUrl('https://m.youtube.com/shorts/SSsG4MybyTU');
+  assert.equal(key, 'youtube.com/watch?v=SSsG4MybyTU');
+});
+
+test('youtube.com/shorts/<id> whitelist still applies: a tracking param alongside it is dropped', () => {
+  const { key } = normalizeUrl('https://youtube.com/shorts/SSsG4MybyTU?feature=share');
+  assert.equal(key, 'youtube.com/watch?v=SSsG4MybyTU');
+});
+
+test('youtube.com/<single-segment> that is NOT /shorts/ is left alone (a channel vanity path, not a video id)', () => {
+  const { key } = normalizeUrl('https://www.youtube.com/@SomeChannel');
+  assert.equal(key, 'youtube.com/@SomeChannel');
+});
+
+test('youtube.com/watch?v= itself is unaffected by the shorts/youtu.be fold (already canonical, passes through unchanged)', () => {
+  const { key, url } = normalizeUrl('https://www.youtube.com/watch?v=Z9n3TkdcGLY');
+  assert.equal(key, 'youtube.com/watch?v=Z9n3TkdcGLY');
+  assert.equal(url, 'https://youtube.com/watch?v=Z9n3TkdcGLY');
 });
 
 // Three evidence-backed params added to the generic strip list (LEMA-9942,
@@ -149,21 +197,24 @@ test('m.imdb.com collapses to the same key as www.imdb.com (the real LEMA-10247 
   assert.equal(tracked.key, mobileWithTracking.key);
 });
 
-test('YouTube family hosts are exempt from the m. fold: m.youtube.com keeps its own key', () => {
-  const { key, url } = normalizeUrl('https://m.youtube.com/watch?v=Z9n3TkdcGLY');
-  assert.equal(key, 'm.youtube.com/watch?v=Z9n3TkdcGLY');
-  assert.equal(url, 'https://m.youtube.com/watch?v=Z9n3TkdcGLY');
-});
+// m.youtube.com was exempted from the generic m. fold between LEMA-9942
+// and LEMA-11959 (kept its own distinct key, deliberately). LEMA-11959
+// found a live m.youtube.com candidate the exemption hid from the Pass 0
+// dedup gate and removed it -- m.youtube.com now folds like every other m.
+// host, the same CEO ruling that shipped the youtu.be/shorts video-ID fold
+// above.
 
-test('YouTube family per-host param whitelist still applies to m.youtube.com after the fold exists', () => {
-  const { key } = normalizeUrl('https://m.youtube.com/watch?v=Z9n3TkdcGLY&vl=en-US');
-  assert.equal(key, 'm.youtube.com/watch?v=Z9n3TkdcGLY');
-});
-
-test('m.youtube.com and youtube.com remain distinct keys (unchanged by this ticket)', () => {
+test('m.youtube.com now folds to the same key as youtube.com (LEMA-11959, exemption removed)', () => {
   const mobile = normalizeUrl('https://m.youtube.com/watch?v=Z9n3TkdcGLY');
   const desktop = normalizeUrl('https://www.youtube.com/watch?v=Z9n3TkdcGLY');
-  assert.notEqual(mobile.key, desktop.key);
+  assert.equal(mobile.key, desktop.key);
+  assert.equal(mobile.key, 'youtube.com/watch?v=Z9n3TkdcGLY');
+  assert.equal(mobile.url, 'https://youtube.com/watch?v=Z9n3TkdcGLY');
+});
+
+test('YouTube per-host param whitelist still applies to m.youtube.com after the fold (vl= locale flag dropped)', () => {
+  const { key } = normalizeUrl('https://m.youtube.com/watch?v=Z9n3TkdcGLY&vl=en-US');
+  assert.equal(key, 'youtube.com/watch?v=Z9n3TkdcGLY');
 });
 
 test('a host that merely starts with "m" but is not an m. subdomain is left alone', () => {

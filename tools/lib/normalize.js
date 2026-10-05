@@ -33,13 +33,6 @@ function isTrackingParam(name) {
   return TRACKING_PARAM_PREFIX.test(lower) || TRACKING_PARAM_NAMES.has(lower);
 }
 
-// YouTube family hosts (youtube.com, m.youtube.com, youtu.be). Kept as its
-// own constant because stripLeadingMobile() below needs it independently of
-// the param policy: m.youtube.com must keep its own distinct host identity
-// rather than fold into youtube.com (LEMA-9942), which is a host-identity
-// decision, not a query-param decision.
-const YOUTUBE_FAMILY_HOSTS = new Set(['youtube.com', 'm.youtube.com', 'youtu.be']);
-
 // Per-host query-param ALLOW-list, checked after the existing
 // www./m. strip and host-alias fold (so entries are written in
 // already-canonicalized host form). A host in this table gets an
@@ -52,12 +45,18 @@ const YOUTUBE_FAMILY_HOSTS = new Set(['youtube.com', 'm.youtube.com', 'youtu.be'
 // per-host justification writeup and the live-data measurement each entry
 // below is seeded from.
 //
-// YouTube family (LEMA-9942, approved LEMA-9904 Item 5): `v` (video id)
-// and `list` (playlist id) are the only identity-bearing params on these
-// hosts; everything else (locale flags like `vl`, session/share params,
-// etc.) is dropped. Video/playlist IDs are case-sensitive -- this table
-// only ever gates *which* params survive, never lowercases a value (see
-// buildQueryString below), so that guarantee holds for every host here.
+// YouTube (LEMA-9942, approved LEMA-9904 Item 5): `v` (video id) and `list`
+// (playlist id) are the only identity-bearing params; everything else
+// (locale flags like `vl`, session/share params, etc.) is dropped.
+// Video/playlist IDs are case-sensitive -- this table only ever gates
+// *which* params survive, never lowercases a value (see buildQueryString
+// below), so that guarantee holds here. One entry only, keyed on
+// 'youtube.com': m.youtube.com and youtu.be no longer reach this table
+// under their own host name as of LEMA-11959 -- both are folded to
+// 'youtube.com' upstream (stripLeadingMobile and HOST_ALIASES
+// respectively) before buildQueryString ever looks the host up here. See
+// foldYoutubeVideoPath and normalizeUrl's KNOWN GAP comment (now closed)
+// below for the full fold.
 //
 // The following seven entries were added under LEMA-11733, generalizing
 // this mechanism per the CEO ruling on LEMA-11732 (a bare `?v=3` cache-
@@ -144,8 +143,6 @@ const YOUTUBE_FAMILY_HOSTS = new Set(['youtube.com', 'm.youtube.com', 'youtu.be'
 // way tv.apple.com did.
 const HOST_PARAM_ALLOWLIST = new Map([
   ['youtube.com', { keep: ['v', 'list'] }],
-  ['m.youtube.com', { keep: ['v', 'list'] }],
-  ['youtu.be', { keep: ['v', 'list'] }],
   ['163.com', { keep: [] }],
   ['macprime.ch', { keep: [] }],
   ['reforma.com', { keep: [] }],
@@ -186,14 +183,15 @@ function stripLeadingWww(host) {
 // above: a mobile-site duplicate of an already-tracked page, not a
 // distinct one. LEMA-10275.
 //
-// Exception: hosts already in YOUTUBE_FAMILY_HOSTS are left alone.
-// m.youtube.com is a deliberate, pre-existing member of that set (LEMA-9942)
-// with its own key identity -- folding it here would collapse it into
-// youtube.com and change the comparison key, breaking that shipped
-// behavior. Checked against the pre-fold host so this only ever exempts
-// the literal 'm.youtube.com' entry, not every "m." host.
+// m.youtube.com was exempted from this fold between LEMA-9942 and
+// LEMA-11959 (kept its own distinct key identity, deliberately). That
+// exemption is now removed: LEMA-11959 found a live m.youtube.com candidate
+// that the exemption prevented the Pass 0 dedup gate from matching against
+// an existing youtube.com row, and the CEO ruling on that ticket folded
+// m.youtube.com into the generic m. strip as part of shipping the
+// LEMA-9942 video-ID fold (foldYoutubeVideoPath below), rather than
+// special-casing the host. See normalizeUrl's updated KNOWN GAP comment.
 function stripLeadingMobile(host) {
-  if (YOUTUBE_FAMILY_HOSTS.has(host)) return host;
   return host.startsWith('m.') ? host.slice(2) : host;
 }
 
@@ -215,8 +213,7 @@ function stripLeadingMobile(host) {
 // it does not match. Same same-entity rationale as the twitter.com entry.
 // No occurrence of this host was found in data.json/fetch-blocklist.json
 // as of LEMA-10553; folding it anyway costs nothing and closes the gap
-// pre-emptively rather than waiting for a real occurrence (contrast with
-// the youtu.be gap below, which is deliberately left open pending one).
+// pre-emptively rather than waiting for a real occurrence.
 //
 // This is a distinct, static, host-level alias and is NOT the same as the
 // open canonical/redirect gap (LEMA-10275) documented below on
@@ -225,9 +222,18 @@ function stripLeadingMobile(host) {
 // universally-known, permanent product-level rename that can be hardcoded
 // with no network dependency, so it is fixed here rather than left to
 // editorial judgment.
+//
+// youtu.be -> youtube.com: youtu.be exists solely to redirect to
+// youtube.com/watch?v=<id> -- there is no other page type on that host --
+// so this is the same static, product-level, no-network-call rename as
+// twitter.com -> x.com. Checked against the pre-alias host inside
+// foldYoutubeVideoPath (below) to pull the video id out of the path before
+// this alias is applied; by the time applyHostAlias runs here, that id has
+// already been captured. LEMA-9942/LEMA-11959.
 const HOST_ALIASES = new Map([
   ['twitter.com', 'x.com'],
   ['mobile.twitter.com', 'x.com'],
+  ['youtu.be', 'youtube.com'],
 ]);
 
 function applyHostAlias(host) {
@@ -302,6 +308,52 @@ function foldFacebookPath(host, path) {
   if (!match) return path;
   const [, page, type, id] = match;
   return `/${page}/${type}/${id}`;
+}
+
+// YouTube video-ID path fold (LEMA-9942 pre-approval, exercised on
+// LEMA-11959). `youtu.be/<id>` and `youtube.com/shorts/<id>` carry the same
+// video identity as `youtube.com/watch?v=<id>` -- same "same document,
+// different address" principle as foldFacebookPath/foldAmpPath, and the
+// canonical form is mechanically reconstructable from the given path alone
+// (no network call needed), so this folds the real path AND injects the
+// extracted id as the `v` query param, rather than only flagging the shape.
+//
+// Checked against the PRE-alias host (i.e. before youtu.be -> youtube.com
+// in HOST_ALIASES runs), because the two source hosts need different path
+// handling:
+//
+// - youtu.be: every non-root path on this host IS a video id -- the host
+//   exists solely to redirect to youtube.com/watch?v=<id>, there is no
+//   other page type -- so a single-segment path is unconditionally treated
+//   as the id. This must NOT be generalized to youtube.com itself: a bare
+//   youtube.com/<single-segment> path is frequently a channel vanity name
+//   (youtube.com/@channel, youtube.com/c/Name), not a video id.
+// - youtube.com: only the literal /shorts/<id> path shape is folded.
+//   youtube.com/watch?v=<id> is already the canonical form and passes
+//   through unchanged (no match), and every other youtube.com path
+//   (channel pages, /playlist, etc.) is deliberately left alone.
+//
+// This also subsumes the m.youtube.com gap reported on LEMA-11959: now
+// that m.youtube.com is no longer exempted from the generic m. strip (see
+// stripLeadingMobile above), m.youtube.com/watch?v=<id> already folds to
+// host 'youtube.com' with path '/watch' before this function is even
+// reached, for free -- and if an m.youtube.com/shorts/<id> URL ever
+// appears, the generic m. strip resolves the host to 'youtube.com' first,
+// so it hits the youtube.com branch below with no extra code.
+//
+// Returns the (possibly folded) path and the extracted video id, or `null`
+// for `videoId` when no fold applies (path returned unchanged).
+function foldYoutubeVideoPath(preAliasHost, path) {
+  if (preAliasHost === 'youtu.be') {
+    const id = path.slice(1);
+    if (id && !id.includes('/')) return { path: '/watch', videoId: id };
+    return { path, videoId: null };
+  }
+  if (preAliasHost === 'youtube.com') {
+    const match = /^\/shorts\/([^/]+)$/.exec(path);
+    if (match) return { path: '/watch', videoId: match[1] };
+  }
+  return { path, videoId: null };
 }
 
 // AMP second-address fold (LEMA-11953). An AMP-served copy of a page is a
@@ -384,11 +436,12 @@ function buildQueryString(searchParams, host) {
 /**
  * Applies the Pass 0 URL normalization rule: lowercase scheme and host,
  * strip a leading www. from the host, fold a leading m. mobile subdomain
- * into its parent host (except for the YouTube family, see
- * stripLeadingMobile above), fold known same-entity host aliases (e.g.
- * twitter.com/mobile.twitter.com -> x.com, see HOST_ALIASES above), strip
- * a trailing slash from the path, drop tracking query params, and exclude
- * the scheme from the comparison key (http/https treated as equivalent).
+ * into its parent host (see stripLeadingMobile above -- no host is exempt,
+ * including m.youtube.com as of LEMA-11959), fold known same-entity host
+ * aliases (e.g. twitter.com/mobile.twitter.com -> x.com, youtu.be ->
+ * youtube.com, see HOST_ALIASES above), strip a trailing slash from the
+ * path, drop tracking query params, and exclude the scheme from the
+ * comparison key (http/https treated as equivalent).
  *
  * Returns:
  *   url - canonical display form, real scheme kept, everything else
@@ -428,14 +481,23 @@ function buildQueryString(searchParams, host) {
  * prose does not mention fragments; this is also an implementation
  * decision, flagged in the deliverable.
  *
- * KNOWN GAP (not resolved here, flagged on LEMA-9942): `youtu.be/<id>` and
- * `youtube.com/shorts/<id>` are not folded into `watch?v=<id>` even though
- * they carry the same video identity. Zero occurrences of either form in
- * data.json or fetch-blocklist.json as of LEMA-9942, so this was not
- * invented speculatively. Pre-approved by the CEO on LEMA-9942 to implement
- * video-ID-based path folding for these forms the first time one actually
- * appears in a candidate stream or artifact -- ship it with a test and a
- * note on that ticket, no new escalation needed.
+ * YOUTUBE VIDEO-ID FOLD (LEMA-9942 pre-approval, shipped on LEMA-11959):
+ * `youtu.be/<id>` and `youtube.com/shorts/<id>` fold into `watch?v=<id>`,
+ * since they carry the same video identity. This was left unimplemented
+ * between LEMA-9942 and LEMA-11959 (zero occurrences of either form in
+ * data.json/fetch-blocklist.json as of LEMA-9942, so it was not invented
+ * speculatively) under a standing CEO pre-approval to ship it, with a test,
+ * the first time one of these forms actually appeared in a candidate stream
+ * or artifact. LEMA-11959 found both triggers at once: a live
+ * `youtube.com/shorts/<id>` fetch-blocklist.json row (added under
+ * LEMA-11250, predating this ticket) and a `m.youtube.com` candidate
+ * surfaced by the Media Sweep routine. The m.youtube.com case is folded by
+ * removing its stripLeadingMobile exemption (see that function's comment)
+ * rather than by a separate carve-out here, per the CEO ruling on
+ * LEMA-11959: a video-ID fold is a single host-family policy that covers
+ * watch?v=, youtu.be/, shorts/, and m. forms for every past and future URL,
+ * where a one-host exemption tweak would not. See foldYoutubeVideoPath
+ * above for the implementation.
  *
  * AMP PATH FOLD (LEMA-11953): a trailing /amp or /amp/ path segment, a
  * leading /amp/ path prefix, and a .amp.html extension infix are folded to
@@ -456,7 +518,8 @@ function buildQueryString(searchParams, host) {
  * name (facebook.com/<vanity>/posts/<id>) still produce different keys.
  * No occurrence of the *same* post under both page-identity forms has
  * been found, so folding page identity too was not invented speculatively
- * -- same "wait for a real occurrence" posture as the youtu.be gap below.
+ * -- same "wait for a real occurrence" posture the YouTube video-ID fold
+ * above was under before LEMA-11959 closed it.
  * facebook.com/groups/<gid>/posts/<id> is also explicitly NOT folded by
  * this rule (the <type> position there is a numeric group id, not one of
  * videos/posts/reel), and is pinned by a test.
@@ -483,9 +546,26 @@ function buildQueryString(searchParams, host) {
 function normalizeUrl(rawUrl) {
   const parsed = new URL(rawUrl);
   const scheme = parsed.protocol.toLowerCase(); // e.g. "https:"
-  const host = applyHostAlias(stripLeadingMobile(stripLeadingWww(parsed.host.toLowerCase()))); // host includes port, if any
-  const path = foldAmpPath(host, foldFacebookPath(host, stripTrailingSlash(parsed.pathname)));
-  const query = buildQueryString(parsed.searchParams, host);
+  // host includes port, if any. Captured pre-alias (and pre-video-path-fold)
+  // because foldYoutubeVideoPath needs to distinguish youtu.be from
+  // youtube.com, which HOST_ALIASES would otherwise already have merged.
+  const preAliasHost = stripLeadingMobile(stripLeadingWww(parsed.host.toLowerCase()));
+  const { path: videoFoldedPath, videoId } = foldYoutubeVideoPath(
+    preAliasHost,
+    stripTrailingSlash(parsed.pathname)
+  );
+  const host = applyHostAlias(preAliasHost);
+  const path = foldAmpPath(host, foldFacebookPath(host, videoFoldedPath));
+  // A youtu.be/shorts fold extracts the video id from the PATH, not the
+  // query string, so it has to be injected into the query here rather than
+  // simply surviving buildQueryString's existing param filter below. Never
+  // overwrites a real `v` (youtu.be/youtube.com/shorts paths never carry
+  // one of their own).
+  const searchParams = videoId === null
+    ? parsed.searchParams
+    : new URLSearchParams(parsed.searchParams);
+  if (videoId !== null) searchParams.set('v', videoId);
+  const query = buildQueryString(searchParams, host);
 
   // Path case-folding (LEMA-11825, HOST_CASE_INSENSITIVE_PATH above) is
   // applied to the COMPARISON key only, never to the display url -- same
