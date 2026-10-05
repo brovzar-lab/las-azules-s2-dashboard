@@ -20851,7 +20851,17 @@
           "note": "Tavily Extract returned no content/empty result. Full-chain failure, failCount=1."
         }
       ]
+    },
+    {
+      "url": "https://tv.apple.com/ec/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "cooldownUntil": null,
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-05T22:00:00.000Z",
+      "note": "Official Apple TV general show page (Ecuador locale variant), part of the same tv.apple.com/{locale}/show/las-azules/... surface family as the US/LU/PE/BO/ES/MX/FR/DO/CR rows already in this ledger (Rule F, adopted 2026-09-10, LEMA-9927; family classification per LEMA-10627/10628). Surfaced LEMA-12112 (candidate carried a ?ctx_agid= tracking param, which normalize.js correctly strips to the bare show-page key; the base key was not-found in the ledger, so this is a genuinely new row, not a duplicate). WebFetch confirms a show landing/database page: Spanish-language synopsis, Season 1 episode list with titles/descriptions/runtimes, cast/crew, technical specs (genre, rating, region, audio/subtitle options). Only date reference is a bare '2024' release year under Lanzamiento, not a publish date. No written editorial content about the show; strip test: nothing written remains once the metadata table is removed. Added LEMA-12112 sweep 2026-10-05."
     }
   ],
-  "lastUpdated": "2026-10-05T20:04:41Z"
+  "lastUpdated": "2026-10-05T22:10:00Z"
 }
