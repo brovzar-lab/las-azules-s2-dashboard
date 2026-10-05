@@ -24,6 +24,18 @@
     "excerpt": "Actor Miguel Rodarte discusses how Apple TV's 'Las Azules' serves as a mirror for Mexican social realities, saying examining historical mistakes is essential to avoid repeating them; he praises his character's respect for the female cadets' courage and capability, calling the struggles of women and youth the principal drivers of contemporary social transformation."
   },
   {
+    "outlet": "Entertainment Affair (YouTube)",
+    "headline": "Miguel Rodarte, Horacio García Rojas & Bruno Bichir Talk 'Women in Blue'",
+    "url": "https://youtube.com/watch?v=Dxz2nlAtlj4",
+    "date": "Oct 4, 2026",
+    "ts": 20261004,
+    "dateSource": "visible_dateline",
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Entertainment Affair's Rafael Alejandro Mejia talks with Miguel Rodarte, Horacio García Rojas and Bruno Bichir about Season 2 of Apple TV's Women in Blue (Las Azules), covering the evolution of their characters, bringing 1970s Mexico to life, and masculinity and change."
+  },
+  {
     "outlet": "Old Ain't Dead",
     "headline": "Women in Blue, S1, the first women in Mexico's police",
     "url": "https://oldaintdead.com/women-in-blue-s1-the-first-women-in-mexicos-police/",
@@ -317,6 +329,30 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "Finale explainer for the Goyo episode: covers the reveal about the Verdugo, Escobedo's fate, and how the Azules' final case blurs the line between justice and vengeance."
+  },
+  {
+    "outlet": "MacObserver",
+    "headline": "Women in Blue Staffel 2 Episode 8 Ende erklärt: Stoppen die Azules den Vollstrecker in „Goyo“?",
+    "url": "https://macobserver.com/de/apple-tv-de/women-in-blue-staffel-2-episode-8-ende-erklart-stoppen-die-azules-den-vollstrecker-in-goyo",
+    "date": "Sep 30, 2026",
+    "ts": 20260930,
+    "dateSource": "jsonld_datepublished",
+    "lang": "DE",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Season 2 finale ending explained: Goyo redirects the investigation back to Escobedo; the Azules solve the case but not the whole system, and the new office is presented as a victory with limits."
+  },
+  {
+    "outlet": "Series 80",
+    "headline": "Women in Blue : Explication de la finale par Natalia Téllez, ce que l'on sait",
+    "url": "https://series-80.net/women-in-blue-explication-de-la-finale-par-natalia-tellez-ce-que-lon-sait",
+    "date": "Sep 30, 2026",
+    "ts": 20260930,
+    "dateSource": "jsonld_datepublished",
+    "lang": "FR",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "French-language analysis of the Women in Blue (Las Azules) Season 2 finale, including comments from actress Natalia Téllez on the ending's emotional themes and historical significance."
   },
   {
     "outlet": "Midgard Times",
@@ -774,6 +810,18 @@
     "market": "US",
     "type": "Entertainment",
     "excerpt": "Recap of Season 2 Episode 6 ('Lozano') exploring how crime affects people emotionally and personally, depicting the disappearance and murder of a police officer and the lasting impact on families and colleagues within the department."
+  },
+  {
+    "outlet": "MacObserver",
+    "headline": "Women in Blue Staffel 2, Folge 5 – Rückblick: Lozanos Verschwinden erhöht den Einsatz",
+    "url": "https://macobserver.com/de/apple-tv-de/women-in-blue-staffel-2-folge-5-ruckblick-lozanos-verschwinden-erhoht-den-einsatz",
+    "date": "Sep 11, 2026",
+    "ts": 20260911,
+    "dateSource": "jsonld_datepublished",
+    "lang": "DE",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Recap of Women in Blue Season 2, Episode 5 („Lozano“): the disappearance of a fellow investigator brings the season's danger directly into the police station, raising the stakes for María and the Azules."
   },
   {
     "outlet": "BroadwayWorld",
@@ -1512,7 +1560,8 @@
     "lang": "ES",
     "market": "Spain",
     "type": "Review",
-    "excerpt": "Newsletter edition (Substack) review of Las Azules Season 2, describing it as 'más segura, política y ambiciosa' (safer, more political, and more ambitious) than season 1, with positive sentiment on character development and thematic depth."
+    "excerpt": "Newsletter edition (Substack) review of Las Azules Season 2, describing it as 'más segura, política y ambiciosa' (safer, more political, and more ambitious) than season 1, with positive sentiment on character development and thematic depth.",
+    "storyGroup": "fueradeseries-s2-critica-temporada2-20260825"
   },
   {
     "outlet": "Fuera de Series (Podcast/Spotify)",
@@ -1524,6 +1573,19 @@
     "market": "Spain",
     "type": "Review",
     "excerpt": "Podcast companion to Fuera de Series' written review, discussing how Season 2 becomes 'more secure, political and ambitious,' examining institutional discrimination and the contradiction of protagonists questioning the police force they fought to join."
+  },
+  {
+    "outlet": "Fuera de Series Plus (Podimo)",
+    "headline": "Crítica de LAS AZULES (Temporada 2) | SIN SPOILERS | Apple TV",
+    "url": "https://podimo.com/de/shows/fuera-de-series/episode/6dae540c-3abe-50d9-8c2a-b49103ff496b",
+    "date": "Aug 25, 2026",
+    "ts": 20260825,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "Spain",
+    "type": "Review",
+    "excerpt": "Spoiler-free podcast review of Las Azules Season 2: the hosts discuss the show's more political, more ambitious second season, the four lead officers' investigation into student movements, political violence and corruption, and the show's exploration of police discrimination.",
+    "storyGroup": "fueradeseries-s2-critica-temporada2-20260825"
   },
   {
     "outlet": "lissettgarduno (Instagram)",
@@ -3527,6 +3589,18 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "German Apple-focused blog covers Season 2's August 12 premiere with eight weekly episodes connecting Mexico City's first female police officers to the 1968 Tlatelolco massacre, framing the show as a milestone for Spanish-language content on major streaming platforms."
+  },
+  {
+    "outlet": "Melty",
+    "headline": "Las Azules saison 2 : fin de l'épisode 1 expliquée",
+    "url": "https://melty.fr/series/las-azules-saison-2-fin-de-lepisode-1-expliquee-2339733.html",
+    "date": "Aug 13, 2026",
+    "ts": 20260813,
+    "dateSource": "jsonld_datepublished",
+    "lang": "FR",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Analysis of the Las Azules Season 2 premiere episode's ending: the discovery of a student activist's body tied to 1968 shifts the show's focus from a lone killer to the state apparatus that decides which deaths count."
   },
   {
     "outlet": "uInterview",
