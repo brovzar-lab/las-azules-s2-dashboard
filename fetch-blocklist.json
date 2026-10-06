@@ -20933,7 +20933,87 @@
       "skipReason": "editorial_off_topic_false_positive",
       "skipNote": "La Vanguardia piece about actress Maribel Verdú describing a difficult shoot due to a co-star's attitude, on an unrelated production. No mention of Las Azules or Bárbara Mori; surfaced only as a broad-query match on generic cast-interview terms (Exa Pass 1 ES query).",
       "reviewable": false
+    },
+    {
+      "url": "https://tommystriplethreatbluesrevue.com/article/imperfect-women-renewed-for-season-2-at-apple-tv-kerry-washington-returns",
+      "firstSeen": "2026-10-06T02:10:00Z",
+      "failCount": 0,
+      "lastStatus": 302,
+      "lastAttempt": "2026-10-06T02:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Content-farm page (redirects to custommapposter.com) about \"Imperfect Women,\" an unrelated Apple TV series starring Kerry Washington, renewed for its own season 2. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Apple TV season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-06T02:10:00Z",
+          "method": "WebFetch",
+          "status": 302,
+          "issue": "LEMA-12116",
+          "note": "WebFetch followed redirect to custommapposter.com; confirmed article is about Imperfect Women (Kerry Washington), a different Apple TV show."
+        }
+      ]
+    },
+    {
+      "url": "https://campinglatimpa.com/article/unveiling-sugar-season-2-release-date-episodes-and-more",
+      "firstSeen": "2026-10-06T02:10:00Z",
+      "failCount": 0,
+      "lastStatus": 302,
+      "lastAttempt": "2026-10-06T02:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Content-farm page (redirects to custommapposter.com) about \"Sugar,\" an unrelated Apple TV+ neo-noir detective drama starring Colin Farrell. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Apple TV season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-06T02:10:00Z",
+          "method": "WebFetch",
+          "status": 302,
+          "issue": "LEMA-12116",
+          "note": "WebFetch followed redirect to custommapposter.com; confirmed article is about Sugar (Colin Farrell), a different Apple TV+ show."
+        }
+      ]
+    },
+    {
+      "url": "https://produ.com/television/videos/en-vivo-con-joanna-lombardi-de-el-arbol-azul-de-peru-en-iberseries",
+      "firstSeen": "2026-10-06T02:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-06T02:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "PRODU video segment: live interview with Joanna Lombardi about \"El Arbol Azul de Peru\" (The Blue Tree of Peru) at Iberseries & Platino Industria 2026. No mention of Las Azules or Women in Blue; surfaced only on the Spanish-language \"azules/azul\" keyword match.",
+      "history": [
+        {
+          "attempt": "2026-10-06T02:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12116",
+          "note": "WebFetch confirmed article is about El Arbol Azul de Peru, an unrelated Peruvian production, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://produ.com/television/videos/en-vivo-con-amparo-miralles-productora-ejecutiva-de-nadie-es-perfecto",
+      "firstSeen": "2026-10-06T02:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-06T02:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "PRODU video segment: live interview with Amparo Miralles, executive producer of \"Nadie es Perfecto,\" at Iberseries & Platino Industria 2026. No mention of Las Azules or Women in Blue; surfaced only as a broad Spanish-language query match.",
+      "history": [
+        {
+          "attempt": "2026-10-06T02:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12116",
+          "note": "WebFetch confirmed article is about Nadie es Perfecto, an unrelated production, not Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-06T00:08:00Z"
+  "lastUpdated": "2026-10-06T02:10:00Z"
 }
