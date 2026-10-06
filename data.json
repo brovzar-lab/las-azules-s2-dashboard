@@ -1,16 +1,5 @@
 [
   {
-    "outlet": "BadTaste.it",
-    "headline": "Women in Blue (Las Azules): la recensione",
-    "url": "https://www.badtaste.it/recensioni/women-in-blue-las-azules",
-    "date": "Jul 24, 2024",
-    "ts": 20240724,
-    "lang": "IT",
-    "market": "International",
-    "type": "Review",
-    "excerpt": "BadTaste.it's Teresa Soldani reviews the series as a pleasant surprise set in 1971 Mexico City, following four women who become the first female police officers while investigating a serial killer case, praising the character development and its balanced, non-heavy-handed treatment of feminist themes."
-  },
-  {
     "outlet": "Excélsior",
     "headline": "Horacio García Rojas en 'Las Azules': \"El arte debe cuestionar las estructuras de poder\"",
     "url": "https://excelsior.com.mx/espectaculos/horacio-garcia-rojas-azules-arte-debe-cuestionar-estructuras-poder",
@@ -9201,6 +9190,17 @@
     "excerpt": "Set in 1971, this Spanish-language crime drama follows four women who become Mexico's inaugural female police officers, only to discover their recruitment was orchestrated as a publicity stunt while a serial killer targets the capital's women."
   },
   {
+    "outlet": "BadTaste.it",
+    "headline": "Women in Blue (Las Azules): la recensione",
+    "url": "https://www.badtaste.it/recensioni/women-in-blue-las-azules",
+    "date": "Jul 24, 2024",
+    "ts": 20240724,
+    "lang": "IT",
+    "market": "International",
+    "type": "Review",
+    "excerpt": "BadTaste.it's Teresa Soldani reviews the series as a pleasant surprise set in 1971 Mexico City, following four women who become the first female police officers while investigating a serial killer case, praising the character development and its balanced, non-heavy-handed treatment of feminist themes."
+  },
+  {
     "outlet": "SDPnoticias",
     "headline": "¿Cuándo se estrena Las Azules? La serie de Apple TV lanzará pronto su primera temporada",
     "url": "https://www.sdpnoticias.com/espectaculos/television/cuando-se-estrena-las-azules-serie-de-apple-tv-lanzara-pronto-su-primera-temporada/",
@@ -9368,6 +9368,18 @@
     "market": "Mexico",
     "type": "Entertainment",
     "excerpt": "The Apple TV+ series follows four women who join Mexico's first female police force in 1971 while investigating a serial killer. Inspired by the real 'Cuerpo Femenino de Vigilancia y Protección' established in the late 1960s, though no record exists of four women directly involved in serial killer investigations at the time; the show blends historical fact with fictional crime drama elements."
+  },
+  {
+    "outlet": "SensaCine México",
+    "headline": "'Las Azules': La serie con Bárbara Mori sobre un asesino serial en México que llegará pronto a Apple TV+",
+    "url": "https://www.sensacine.com.mx/noticias/noticia-1000087437/",
+    "date": "Jun 18, 2024",
+    "ts": 20240618,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Apple TV+ prepara una nueva produccion en espanol basada en hechos reales sobre la primera unidad policiaca femenina de Mexico que investiga a un asesino serial; la serie protagonizada por Barbara Mori, Ximena Sarinana y Natalia Tellez estrenara con dos episodios el 31 de julio, seguidos de entregas semanales hasta el 25 de septiembre."
   },
   {
     "outlet": "Apple México (YouTube)",
@@ -9741,5 +9753,17 @@
     "market": "US",
     "type": "Tech",
     "excerpt": "Apple TV+ has ordered a 10-episode Spanish-language crime drama centered on four women who defy ultra-conservative norms to join Mexico's first female police force, only to discover their squad is a publicity stunt distracting from a real serial-killer investigation."
+  },
+  {
+    "outlet": "Estado del Tiempo",
+    "headline": "Bárbara Mori protagonizará 'Las Azules', la nueva serie de Apple TV+",
+    "url": "https://estadodeltiempo.mx/barbara-mori-protagonizara-las-azules-la-nueva-serie-de-apple-tv/",
+    "date": "May 24, 2022",
+    "ts": 20220524,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "La actriz mexicana Barbara Mori protagonizara este nuevo proyecto de Apple TV+ en espanol, creado por el productor ganador del Emmy Fernando Rovzar; interpreta a Maria, una esposa devota que descubre su verdadera vocacion al integrarse a la primera fuerza policiaca exclusivamente femenina de Mexico mientras investiga a un asesino serial en el Mexico de los anos setenta."
   }
 ]
