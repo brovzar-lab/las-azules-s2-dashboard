@@ -21053,7 +21053,29 @@
           "note": "Title and search snippet unambiguously identify a different show/person (Zoe Kazan, Al este del Eden); not fetched, per Rule G dateability-irrelevant treatment."
         }
       ]
+    },
+    {
+      "url": "https://pro.imdb.com/title/tt33054261",
+      "firstSeen": "2026-10-06T06:08:42.000Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T06:08:42.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "pro.imdb.com/title/tt33054261 IMDbPro title record, surfaced via Pass 2 general web sweep (LEMA-12118, 2026-10-06 06:xx UTC fire) while checking cast coverage. Per the Rule F clarification (LEMA-10632, CEO ruling on LEMA-10630), imdb.com/title/* and pro.imdb.com/title/* are Rule F by surface family at any locale/depth, classified mechanically without a fetch: a bare title database record carries the metadata table Rule F's strip test removes (cast/episode info, release date), not evidence against Rule F. No WebFetch/Tavily Extract spent per settled policy. reviewable=false, not coverage at all."
+    },
+    {
+      "url": "https://iemmys.tv/international-emmy-awards/nominees",
+      "firstSeen": "2026-10-06T06:08:42.000Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-06T06:08:42.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "International Academy of Television Arts & Sciences nominees database page, surfaced via Pass 2 general web sweep (LEMA-12118) while checking Emmy-nomination coverage for the show. WebFetch confirmed (200): the page is a structured nominees listing by award category (navigation menus plus rows of Title | Year | Production company | Country | Video clip link); the Las Azules row reads \"LAS AZULES [WOMEN IN BLUE] | 2025 | Lemon Studios / Apple TV+ | Mexico | [View Video Clip]\" with no descriptive or critical prose about the show anywhere on the page. Strip test (Rule F): removing the structured nominee row leaves nothing written about the show. reviewable=false, not coverage at all."
     }
   ],
-  "lastUpdated": "2026-10-06T04:10:00Z"
+  "lastUpdated": "2026-10-06T06:08:42.000Z"
 }
