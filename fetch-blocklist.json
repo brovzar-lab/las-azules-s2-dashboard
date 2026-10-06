@@ -20861,7 +20861,79 @@
       "lastStatus": 200,
       "lastAttempt": "2026-10-05T22:00:00.000Z",
       "note": "Official Apple TV general show page (Ecuador locale variant), part of the same tv.apple.com/{locale}/show/las-azules/... surface family as the US/LU/PE/BO/ES/MX/FR/DO/CR rows already in this ledger (Rule F, adopted 2026-09-10, LEMA-9927; family classification per LEMA-10627/10628). Surfaced LEMA-12112 (candidate carried a ?ctx_agid= tracking param, which normalize.js correctly strips to the bare show-page key; the base key was not-found in the ledger, so this is a genuinely new row, not a duplicate). WebFetch confirms a show landing/database page: Spanish-language synopsis, Season 1 episode list with titles/descriptions/runtimes, cast/crew, technical specs (genre, rating, region, audio/subtitle options). Only date reference is a bare '2024' release year under Lanzamiento, not a publish date. No written editorial content about the show; strip test: nothing written remains once the metadata table is removed. Added LEMA-12112 sweep 2026-10-05."
+    },
+    {
+      "url": "https://www.app4phone.fr/article-217337/apple-tv-eleanor-saison-2-imperfect-women",
+      "firstSeen": "2026-10-06T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "app4phone.fr piece is about the Apple TV+ show \"Imperfect Women\" (character Eleanor), a different, unrelated title. Surfaced only as a broad-query match on generic \"Apple TV season 2\" terms (Exa Pass 1 EN query).",
+      "reviewable": false
+    },
+    {
+      "url": "https://tvtonight.com.au/2026/10/renewed-imperfect-women.html",
+      "firstSeen": "2026-10-06T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Tonight piece about the renewal of \"Imperfect Women\", a different Apple TV+ show, unrelated to Las Azules. Surfaced only as a broad-query match on generic \"Apple TV season 2\" terms (Exa Pass 1 EN query).",
+      "reviewable": false
+    },
+    {
+      "url": "https://texasstamps.org/article/imperfect-women-season-2-renewed-at-apple-tv-kerry-washington-returns",
+      "firstSeen": "2026-10-06T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about \"Imperfect Women\" Season 2 renewal with Kerry Washington, a different Apple TV+ show, unrelated to Las Azules. Surfaced only as a broad-query match on generic \"Apple TV season 2\" terms (Exa Pass 1 EN query).",
+      "reviewable": false
+    },
+    {
+      "url": "https://8hy.org/article/boston-blue-season-2-will-estes-returns-as-jamie-reagan-cast-premiere-date-more",
+      "firstSeen": "2026-10-06T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about \"Boston Blue\" Season 2 (Will Estes as Jamie Reagan), an unrelated CBS show. Surfaced only as a broad-query match on generic \"season 2\"/\"blue\" terms (Exa Pass 1 EN query).",
+      "reviewable": false
+    },
+    {
+      "url": "https://www.facebook.com/TvMigrante/posts/-una-historia-policial-llega-a-tvmigrantesigue-a-cuatro-j%C3%B3venes-en-sus-pr%C3%A1cticas/1081851931284078/",
+      "firstSeen": "2026-10-06T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TvMigrante Facebook post about an unrelated police-themed program following four young people in their internships (\"TvMigrante\"), not Las Azules. Surfaced only as a broad-query match on generic \"historia policial\" terms (Exa Pass 1 ES query).",
+      "reviewable": false
+    },
+    {
+      "url": "https://www.lavanguardia.com/television/20261006/11652001/rodaje-mas-dificil-maribel-verdu-culpa-actitud-companero-ves-trabajan.html",
+      "firstSeen": "2026-10-06T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Vanguardia piece about actress Maribel Verdú describing a difficult shoot due to a co-star's attitude, on an unrelated production. No mention of Las Azules or Bárbara Mori; surfaced only as a broad-query match on generic cast-interview terms (Exa Pass 1 ES query).",
+      "reviewable": false
     }
   ],
-  "lastUpdated": "2026-10-05T22:10:00Z"
+  "lastUpdated": "2026-10-06T00:08:00Z"
 }
