@@ -21013,7 +21013,47 @@
           "note": "WebFetch confirmed article is about Nadie es Perfecto, an unrelated production, not Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://zonarcano.com/article/imperfect-women-season-2-renewed-at-apple-tv-kerry-washington-returns",
+      "firstSeen": "2026-10-06T04:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T04:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Zonarcano article titled \"Imperfect Women Season 2 Renewed at Apple TV+ | Kerry Washington Returns (2026)\" -- about a different, unrelated Apple TV+ series (\"Imperfect Women\", starring Kerry Washington), not Las Azules/Women in Blue. Surfaced only as a broad-query match on generic \"women\"/\"season 2\"/\"Apple TV\" terms via Pass 1 Exa EN query.",
+      "history": [
+        {
+          "attempt": "2026-10-06T04:10:00Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-12117",
+          "note": "Title and search snippet unambiguously identify a different show (Imperfect Women); not fetched, per Rule G dateability-irrelevant treatment."
+        }
+      ]
+    },
+    {
+      "url": "https://www.infobae.com/espana/cultura/2026/10/06/entrevista-a-zoe-kazan-creadora-de-la-serie-de-netflix-al-este-del-eden-y-nieta-de-un-mito-del-cine-clasico-no-supe-que-mi-abuelo-habia-dirigido-la-pelicula-hasta-despues-de-leer-el-libro/",
+      "firstSeen": "2026-10-06T04:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T04:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Infobae interview with Zoe Kazan about her Netflix series \"Al este del Eden\" (East of Eden). Unrelated to Las Azules/Women in Blue; surfaced only as a broad-query match on generic Spanish-language interview terms via Pass 1 Exa ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-06T04:10:00Z",
+          "method": "search-snippet",
+          "status": null,
+          "issue": "LEMA-12117",
+          "note": "Title and search snippet unambiguously identify a different show/person (Zoe Kazan, Al este del Eden); not fetched, per Rule G dateability-irrelevant treatment."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-06T02:10:00Z"
+  "lastUpdated": "2026-10-06T04:10:00Z"
 }
