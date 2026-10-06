@@ -334,10 +334,10 @@
     {
       "url": "https://guides.justwatch.com/gt/serie/las-azules",
       "firstSeen": "2026-09-03T02:00:00Z",
-      "failCount": 3,
+      "failCount": 4,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-08T06:07:40Z",
-      "cooldownUntil": "2026-10-03T16:03:21Z",
+      "lastAttempt": "2026-10-06T08:07:28Z",
+      "cooldownUntil": "2026-11-05T08:07:28Z",
       "history": [
         {
           "attempt": "2026-09-03T02:00:00Z",
@@ -391,6 +391,20 @@
           "status": 404,
           "issue": "LEMA-9834",
           "note": "success:true but body is a literal '404 page not found' placeholder; metadata statusCode 404. Dead link, treated as full-chain failure per the AOL placeholder precedent in this ledger."
+        },
+        {
+          "attempt": "2026-10-06T08:07:28Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-12121",
+          "note": "404 Not Found again."
+        },
+        {
+          "attempt": "2026-10-06T08:07:28Z",
+          "method": "Tavily Extract (advanced)",
+          "status": "empty",
+          "issue": "LEMA-12121",
+          "note": "Extract returned no content. Full-chain failure, failCount now 4, cooldown reset to 30 days. Page has been consistently dead across 4 attempts since 2026-09-03; JustWatch's main site (justwatch.com, non-guides subdomain) already carries the live Las Azules listing pages, which are separately ledgered as editorial_listing_or_database."
         }
       ]
     },
@@ -21075,7 +21089,87 @@
       "permanentSkip": true,
       "skipReason": "editorial_listing_or_database",
       "skipNote": "International Academy of Television Arts & Sciences nominees database page, surfaced via Pass 2 general web sweep (LEMA-12118) while checking Emmy-nomination coverage for the show. WebFetch confirmed (200): the page is a structured nominees listing by award category (navigation menus plus rows of Title | Year | Production company | Country | Video clip link); the Las Azules row reads \"LAS AZULES [WOMEN IN BLUE] | 2025 | Lemon Studios / Apple TV+ | Mexico | [View Video Clip]\" with no descriptive or critical prose about the show anywhere on the page. Strip test (Rule F): removing the structured nominee row leaves nothing written about the show. reviewable=false, not coverage at all."
+    },
+    {
+      "url": "https://matrixshopzz.com/article/boston-blue-season-2-release-date-announced-what-to-expect-after-the-shocking-finale",
+      "firstSeen": "2026-10-06T08:07:28Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T08:07:28Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about \"Boston Blue\" Season 2 release date and finale recap, a different, unrelated TV show. No mention of Las Azules / Women in Blue. Surfaced only as a broad-query match on generic \"season 2\" terms via Exa Pass 1.",
+      "history": [
+        {
+          "attempt": "2026-10-06T08:07:28Z",
+          "method": "title/metadata review (no fetch needed, relevance miss)",
+          "status": "n/a",
+          "issue": "LEMA-12121",
+          "note": "Classified off-topic from search-result title alone; Rule E/G dateability is irrelevant to the relevance gate."
+        }
+      ]
+    },
+    {
+      "url": "https://xeva.com.mx/espectaculos/296075/se-acabo-el-silencio-la-mansion-vip-2-ya-tiene-fecha-de-estreno",
+      "firstSeen": "2026-10-06T08:07:28Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T08:07:28Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about \"La Mansión VIP 2\", a different Mexican reality/variety show's premiere date. No mention of Las Azules / Women in Blue. Surfaced only as a broad-query match via Exa Pass 1 (ES query).",
+      "history": [
+        {
+          "attempt": "2026-10-06T08:07:28Z",
+          "method": "title/metadata review (no fetch needed, relevance miss)",
+          "status": "n/a",
+          "issue": "LEMA-12121",
+          "note": "Classified off-topic from search-result title alone."
+        }
+      ]
+    },
+    {
+      "url": "https://www.larazon.es/tecnologia-consumo/series/bloodaxe-creadores-vikingos-se-muestra-fin-primeras-imagenes-exclusiva-prime-video-ya-renovada-temporada-2_202610066ac49409375d34226274cfe8.html",
+      "firstSeen": "2026-10-06T08:07:28Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T08:07:28Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about \"Bloodaxe\", a Prime Video series from the creators of Vikings, renewed for its own season 2. No mention of Las Azules / Women in Blue. Surfaced only as a broad-query match via Exa Pass 1 (ES query).",
+      "history": [
+        {
+          "attempt": "2026-10-06T08:07:28Z",
+          "method": "title/metadata review (no fetch needed, relevance miss)",
+          "status": "n/a",
+          "issue": "LEMA-12121",
+          "note": "Classified off-topic from search-result title alone."
+        }
+      ]
+    },
+    {
+      "url": "https://www.cineplay.co.kr/es-es/articles/30054",
+      "firstSeen": "2026-10-06T08:07:28Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-06T08:07:28Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Spanish-language article on a South Korean entertainment site about actress Chae Jung-an and the Korean show \"Divorciados y vírgenes de nacimiento\". No mention of Las Azules / Women in Blue. Surfaced only as a broad-query match via Exa Pass 1 (ES query).",
+      "history": [
+        {
+          "attempt": "2026-10-06T08:07:28Z",
+          "method": "title/metadata review (no fetch needed, relevance miss)",
+          "status": "n/a",
+          "issue": "LEMA-12121",
+          "note": "Classified off-topic from search-result title alone."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-06T06:08:42.000Z"
+  "lastUpdated": "2026-10-06T08:07:28Z"
 }
