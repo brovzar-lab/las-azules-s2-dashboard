@@ -21357,7 +21357,175 @@
           "note": "IT-locale finale piece (title: 'Women in Blue Stagione 2 Episodio 8: il finale spiegato – Gli Azules fermano il Boia in «Goyo»?'); no IT-locale MacObserver finale row exists yet in data.json. WebFetch returned 403; Tavily Extract (basic, then advanced) returned no content. Full-chain failure, genuinely new content not yet added to data.json pending a successful fetch."
         }
       ]
+    },
+    {
+      "url": "https://wbcsvt.org/article/apple-tv-s-imperfect-women-returns-for-season-2-what-to-expect",
+      "firstSeen": "2026-10-08T02:07:40.967Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T02:07:40.967Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Article (redirects to custommapposter.com/article/.../16880) is about Apple TV show \"Imperfect Women\" (Kerry Washington, Elisabeth Moss, Kate Mara), Season 2 renewal. No mention of Las Azules or Women in Blue. Surfaced only as an Exa Pass 1 EN broad-query match on generic \"season 2\"/\"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T02:07:40.967Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12172",
+          "note": "Classified and permanentSkip'd on first sight (Pass 1 Exa broad-query noise / Pass 0b Rule G or Rule I archive-index), see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://ravensband.org/article/widow-s-bay-season-2-release-date-everything-we-know-apple-tv-s-emmy-winning-horror-comedy",
+      "firstSeen": "2026-10-08T02:07:40.967Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T02:07:40.967Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Article (redirects to custommapposter.com/article/.../16750) is about Apple TV horror-comedy \"Widow's Bay\". No mention of Las Azules or Women in Blue. Surfaced only as an Exa Pass 1 EN broad-query match on generic \"season 2\"/\"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T02:07:40.967Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12172",
+          "note": "Classified and permanentSkip'd on first sight (Pass 1 Exa broad-query noise / Pass 0b Rule G or Rule I archive-index), see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://declutterdaily.com/article/emmy-rossum-s-furious-returns-all-about-season-2-and-the-female-serial-killer-thriller",
+      "firstSeen": "2026-10-08T02:07:40.967Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T02:07:40.967Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Article (redirects to custommapposter.com/article/.../16713) is about Hulu series \"Furious\" starring Emmy Rossum, Season 2 renewal. No mention of Las Azules or Women in Blue. Surfaced only as an Exa Pass 1 EN broad-query match on generic \"season 2\"/\"female serial killer\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T02:07:40.967Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12172",
+          "note": "Classified and permanentSkip'd on first sight (Pass 1 Exa broad-query noise / Pass 0b Rule G or Rule I archive-index), see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://dd.jobartis.com/jessica-alba-gears-up-for-season-2-of-l-a-s-finest-and-here-s-what-fans-have-to-say-67819999.html",
+      "firstSeen": "2026-10-08T02:07:40.967Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T02:07:40.967Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Article is about \"L.A.'s Finest\" (Jessica Alba), Season 2. No mention of Las Azules or Women in Blue. Surfaced only as an Exa Pass 1 EN broad-query match on generic \"season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T02:07:40.967Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12172",
+          "note": "Classified and permanentSkip'd on first sight (Pass 1 Exa broad-query noise / Pass 0b Rule G or Rule I archive-index), see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://www.pueblaonline.com.mx/2026/espectaculos/timbiriche-la-serie-horario-y-donde-ver-el-primer-capitulo/166238/",
+      "firstSeen": "2026-10-08T02:07:40.967Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T02:07:40.967Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Article is about the ViX series \"Timbiriche\" (biopic of the 1980s Mexican pop group), premiering Oct 9, 2026. No mention of Las Azules or Women in Blue (WebFetch returned 403; topic confirmed by headline/URL slug and corroborated by the Milenio sibling hit on the same Timbiriche story this run). Surfaced only as an Exa Pass 1 ES broad-query match on generic \"temporada 2\"/\"serie\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T02:07:40.967Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12172",
+          "note": "Classified and permanentSkip'd on first sight (Pass 1 Exa broad-query noise / Pass 0b Rule G or Rule I archive-index), see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://www.milenio.com/espectaculos/television/quien-es-macarena-garcia-interprete-sasha-sokol-timbiriche",
+      "firstSeen": "2026-10-08T02:07:40.967Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T02:07:40.967Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Article (confirmed via Tavily Extract) is about actress Macarena Garcia playing Sasha Sokol in the ViX series \"Timbiriche\" (1980s pop group biopic). No mention of Las Azules or Women in Blue. Surfaced only as an Exa Pass 1 ES broad-query match on generic \"temporada 2\"/\"serie\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T02:07:40.967Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12172",
+          "note": "Classified and permanentSkip'd on first sight (Pass 1 Exa broad-query noise / Pass 0b Rule G or Rule I archive-index), see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/es/etiquetas/lemon-studios?pagina=1",
+      "firstSeen": "2026-10-08T02:07:40.967Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T02:07:40.967Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Paginated variant (?pagina=1) of the tag/archive index page \"etiquetas/lemon-studios\" (page 1 already ledgered, see sibling row) surfacing links to already-tracked senalnews.com articles, including existing Las Azules coverage; not a distinct document per Rule I (named example: tag or archive index surfacing an already-tracked post). Confirmed via WebFetch: link-aggregation page, no original editorial prose.",
+      "history": [
+        {
+          "attempt": "2026-10-08T02:07:40.967Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12172",
+          "note": "Classified and permanentSkip'd on first sight (Pass 1 Exa broad-query noise / Pass 0b Rule G or Rule I archive-index), see skipNote."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/es/etiquetas/apple-tv?pagina=4",
+      "firstSeen": "2026-10-08T02:07:40.967Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T02:07:40.967Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Paginated tag/archive index page (\"etiquetas/apple-tv\", page 4) surfacing links to Apple TV-related senalnews.com articles; not a distinct document per Rule I (named example: tag or archive index surfacing an already-tracked post). Confirmed via WebFetch: link-aggregation page, only headlines/snippets/dates, no original editorial prose.",
+      "history": [
+        {
+          "attempt": "2026-10-08T02:07:40.967Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12172",
+          "note": "Classified and permanentSkip'd on first sight (Pass 1 Exa broad-query noise / Pass 0b Rule G or Rule I archive-index), see skipNote."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-08T00:11:35Z"
+  "lastUpdated": "2026-10-08T02:07:47.145Z"
 }
