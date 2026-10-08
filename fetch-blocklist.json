@@ -21994,7 +21994,187 @@
           "note": "Article about \"Spider Noir\" Season 2, an entirely different show/franchise. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on \"segunda temporada\" terms."
         }
       ]
+    },
+    {
+      "url": "https://upflix.pl/aktualnosci/kobiety-niedoskonale-powroca-z-drugim-sezonem-2026-10-08",
+      "firstSeen": "2026-10-08T14:00:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T14:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Polish-language piece titled “'Kobiety niedoskonałe' powrócą z drugim sezonem” (“'Imperfect Women' will return with a second season”). Confirmed off-topic: covers the Apple TV+ drama 'Imperfect Women' (starring Kerry Washington, Elisabeth Moss, Kate Mara), not Las Azules/Women in Blue -- Las Azules' own Polish-language coverage on this same outlet uses the slug 'kobiety-w-blekicie' ('women in blue'), a different title entirely. Surfaced via Exa Pass 1 broad EN query on 'Apple TV Season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T14:00:42Z",
+          "method": "WebFetch (cross-referenced via sibling wbcsvt.org/custommapposter.com result)",
+          "status": 200,
+          "issue": "LEMA-12186",
+          "note": "Confirmed off-topic: Polish coverage of 'Imperfect Women', a different Apple TV+ show."
+        }
+      ]
+    },
+    {
+      "url": "https://deadline.com/2026/10/apple-tv-buys-dustfall-anna-torv-juliet-stevenson-australia-1237149789/",
+      "firstSeen": "2026-10-08T14:00:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T14:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About Apple TV's acquisition of 'Dustfall,' a different series starring Anna Torv and Juliet Stevenson set in Australia. No mention of Las Azules/Women in Blue. Surfaced via Exa Pass 1 broad EN query on 'Apple TV Season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T14:00:42Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-12186",
+          "note": "Different Apple TV show ('Dustfall'), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.dizibox.live/chicago-pd-14-sezon-1-bolum-izle/",
+      "firstSeen": "2026-10-08T14:00:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T14:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish-language streaming listing for 'Chicago P.D.' Season 14 Episode 1 (NBC procedural), unrelated to Las Azules/Women in Blue. Surfaced via Exa Pass 1 broad EN query on 'Apple TV Season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T14:00:42Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-12186",
+          "note": "Different show (Chicago P.D.), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.dizibox.live/chicago-fire-15-sezon-1-bolum-izle/",
+      "firstSeen": "2026-10-08T14:00:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T14:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish-language streaming listing for 'Chicago Fire' Season 15 Episode 1 (NBC procedural), unrelated to Las Azules/Women in Blue. Surfaced via Exa Pass 1 broad EN query on 'Apple TV Season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T14:00:42Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-12186",
+          "note": "Different show (Chicago Fire), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://mix929.com/2026/10/08/in-brief-alls-fair-returns-with-season-2-trailer-and-more/",
+      "firstSeen": "2026-10-08T14:00:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T14:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Radio station brief about 'All's Fair' returning with a Season 2 trailer, a different series. No mention of Las Azules/Women in Blue. Surfaced via Exa Pass 1 broad EN query on 'Apple TV Season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T14:00:42Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-12186",
+          "note": "Different show ('All's Fair'), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "http://profilefacts.blogspot.com/2010/05/barbara-mori.html",
+      "firstSeen": "2026-10-08T14:00:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T14:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2010 personal/fan blog biographical profile of Bárbara Mori, predating Las Azules (which premiered 2024) by over a decade; contains no coverage of the show. Surfaced via Exa Pass 1 broad ES query on the actress's name.",
+      "history": [
+        {
+          "attempt": "2026-10-08T14:00:42Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-12186",
+          "note": "Pre-dates the show by 14 years; generic actress bio, not show coverage."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mega.cl/teleseries/prohibida-obsesion/avances/221145-avance-dante-ayuda-luciano-barbara-aleje-gaspar.html",
+      "firstSeen": "2026-10-08T14:00:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T14:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Preview for the unrelated Chilean teleserie 'Prohibida Obsesión'; 'Bárbara' here is a character name in that separate show, not Bárbara Mori or Las Azules. Surfaced via Exa Pass 1 broad ES query on the name 'Bárbara'.",
+      "history": [
+        {
+          "attempt": "2026-10-08T14:00:42Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-12186",
+          "note": "Different telenovela; name-only coincidence."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lavanguardia.com/television/20261008/11654307/2cat-suma-toni-clapes-albert-pla-judit-martin-segunda-temporada-mas-prime-time.html",
+      "firstSeen": "2026-10-08T14:00:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T14:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About Catalan channel 'La 2Cat' adding talent for a second season of its own prime-time programming; no relation to Las Azules/Women in Blue. Surfaced via Exa Pass 1 broad ES query on 'segunda temporada' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T14:00:42Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-12186",
+          "note": "Unrelated Catalan TV channel programming story."
+        }
+      ]
+    },
+    {
+      "url": "https://www.elperiodico.com/es/tele/20261008/albert-pla-toni-clapes-la-2cat-programacion-135124402",
+      "firstSeen": "2026-10-08T14:00:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T14:00:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Same La 2Cat Catalan-channel programming story as the La Vanguardia entry above, different outlet; no relation to Las Azules/Women in Blue. Surfaced via Exa Pass 1 broad ES query on 'segunda temporada' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T14:00:42Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-12186",
+          "note": "Unrelated Catalan TV channel programming story (sibling outlet to La Vanguardia entry)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-08T12:00:56Z"
+  "lastUpdated": "2026-10-08T14:00:42Z"
 }
