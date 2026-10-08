@@ -22194,7 +22194,231 @@
           "note": "Confirmed ID-permalink duplicates already-tracked slug URL at identical headline/body; ledgered as Rule I second address, not added to data.json."
         }
       ]
+    },
+    {
+      "url": "https://www.dizibox.live/maschi-veri-2-sezon-2-bolum-izle/3/",
+      "firstSeen": "2026-10-08T20:08:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T20:08:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish streaming site DiziBOX page for 'Maschi Veri' Season 2 Episode 2 (a different, unrelated Turkish-dubbed show). Surfaced only as a broad-query match (Exa EN pass, generic \"season 2\" terms) in this run. No mention of Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "Exa search result (title/snippet review, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-12191",
+          "note": "Off-topic confirmed by title alone: unrelated Turkish series."
+        }
+      ]
+    },
+    {
+      "url": "https://www.dizibox.live/dizi/chicago-pd/14-sezon-chicago-pd/",
+      "firstSeen": "2026-10-08T20:08:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T20:08:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish streaming site DiziBOX page for 'Chicago P.D.' Season 14 (a different, unrelated show). Surfaced only as a broad-query match (Exa EN pass, generic \"season 2\"/\"apple tv\" terms) in this run. No mention of Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "Exa search result (title/snippet review, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-12191",
+          "note": "Off-topic confirmed by title alone: unrelated Chicago P.D. listing."
+        }
+      ]
+    },
+    {
+      "url": "https://www.dizibox.live/chicago-med-12-sezon-1-bolum-izle/2/",
+      "firstSeen": "2026-10-08T20:08:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T20:08:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish streaming site DiziBOX page for 'Chicago Med' Season 12 Episode 1 (a different, unrelated show). Surfaced only as a broad-query match (Exa EN pass) in this run. No mention of Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "Exa search result (title/snippet review, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-12191",
+          "note": "Off-topic confirmed by title alone: unrelated Chicago Med listing."
+        }
+      ]
+    },
+    {
+      "url": "https://www.dizibox.live/chicago-pd-14-sezon-1-bolum-izle/2/",
+      "firstSeen": "2026-10-08T20:08:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T20:08:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish streaming site DiziBOX page for 'Chicago P.D.' Season 14 Episode 1 (a different, unrelated show; distinct URL from the other Chicago P.D. DiziBOX row ledgered this run). Surfaced only as a broad-query match (Exa EN pass) in this run. No mention of Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "Exa search result (title/snippet review, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-12191",
+          "note": "Off-topic confirmed by title alone: unrelated Chicago P.D. listing."
+        }
+      ]
+    },
+    {
+      "url": "https://lahavepaving.com/article/stick-season-2-trailer-owen-wilson-timothy-olyphant-apple-tv",
+      "firstSeen": "2026-10-08T20:08:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T20:08:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Stick' Season 2 (Owen Wilson, Timothy Olyphant), a different Apple TV+ show. Surfaced only as a broad-query match (Exa EN pass, generic \"season 2\"/\"Apple TV\" terms) in this run. No mention of Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "Exa search result (title/snippet review, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-12191",
+          "note": "Off-topic confirmed by title alone: unrelated show 'Stick'."
+        }
+      ]
+    },
+    {
+      "url": "https://elcomercio.pe/mag/fama/que-ver/black-clover-temporada-2-las-peleas-mas-esperadas-en-la-ultima-entrega-del-anime-de-crunchyroll-nnda-nnlt-noticia/",
+      "firstSeen": "2026-10-08T20:08:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T20:08:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Comercio (Peru) article about 'Black Clover' Season 2, a Crunchyroll anime unrelated to Las Azules. Surfaced only as a broad-query match (Exa ES pass, generic \"temporada 2\" terms) in this run. No mention of Las Azules / Bárbara Mori.",
+      "history": [
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "Exa search result (title/snippet review, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-12191",
+          "note": "Off-topic confirmed by title alone: unrelated anime Black Clover."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/es/eventos/iberseries-platino-industria-imagina-presenta-las-novedades-de-sus-cinco-productoras",
+      "firstSeen": "2026-10-08T20:08:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T20:08:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Senal News piece on Imagina production group's Iberseries & Platino Industria announcements across its five production companies. Surfaced via Exa ES pass (generic Barbara Mori/temporada 2 terms matched the Lemon Studios/Imagina affiliation). Fetched directly (curl, HTTP 200) and confirmed: no mention of 'Las Azules', 'Women in Blue', 'Mujeres Azules', or 'Barbara Mori'/'Bárbara Mori' anywhere in the page.",
+      "history": [
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "curl (direct fetch)",
+          "status": 200,
+          "issue": "LEMA-12191",
+          "note": "Fetched full page; grep for show/cast names found zero matches. Confirmed off-topic."
+        }
+      ]
+    },
+    {
+      "url": "https://justwatch.com/eg/tv-show/women-in-blue/season-1",
+      "firstSeen": "2026-10-08T20:08:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T20:08:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch Egypt-locale 'where to watch' availability page for Season 1, same Rule F family as the other JustWatch locale pages already ledgered for this show (IT/BO/FR/ZA/SA stagione-2/saison-2/season-2 variants): a templated streaming-availability listing with no written editorial content about the show once the availability grid is stripped.",
+      "history": [
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "Pattern match (same surface family as existing ledgered JustWatch rows, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-12191"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mactrast.com/tag/las-azules/",
+      "firstSeen": "2026-10-08T20:08:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T20:08:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "MacTrast tag/archive index page for 'Las Azules': confirmed via WebFetch to be a tag listing (currently surfacing a single linked article, the July 2026 Season 2 trailer announcement) rather than a written article itself. Strip the archive grid and nothing written about the show remains on this URL.",
+      "history": [
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12191",
+          "note": "Confirmed tag/archive index page, not an article."
+        }
+      ]
+    },
+    {
+      "url": "https://fictionhorizon.com/?p=387894",
+      "firstSeen": "2026-10-08T20:08:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T20:08:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "WordPress ID-permalink (looksLikeIdPermalink flag) resolving via WebFetch to Fiction Horizon's canonical URL https://fictionhorizon.com/will-women-in-blue-get-a-season-3-at-apple-tv, which is already present in data.json (ts=20260930, outlet 'Fiction Horizon'). Second address for an already-tracked document, per Rule I / step 4a2.",
+      "history": [
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "WebFetch (canonical resolution)",
+          "status": 200,
+          "issue": "LEMA-12191",
+          "note": "Resolved ?p=387894 to the already-tracked canonical slug; no second fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "https://forums.imore.com/imore-com-news-discussion-contests/454101-apple-announces-new-spanish-crime-drama-las-azules-tv-plus-print.html",
+      "firstSeen": "2026-10-08T20:08:39Z",
+      "failCount": 1,
+      "lastStatus": 301,
+      "lastAttempt": "2026-10-08T20:08:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "WebFetch",
+          "status": 301,
+          "issue": "LEMA-12191",
+          "note": "301 redirect to https://www.imore.com/ (generic homepage); iMore forums appear to have been decommissioned (homepage banner: \"One more thing... Goodbye from iMore. Time to power down for good.\")."
+        },
+        {
+          "attempt": "2026-10-08T20:08:39Z",
+          "method": "Tavily Extract (advanced)",
+          "status": 200,
+          "issue": "LEMA-12191",
+          "note": "Returned only iMore site navigation/boilerplate content, no forum thread text and no mention of Las Azules. Full-chain failure per step 4d; not added to data.json."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-08T18:01:00Z"
+  "lastUpdated": "2026-10-08T20:08:39Z"
 }
