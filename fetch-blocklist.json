@@ -22174,7 +22174,27 @@
           "note": "Unrelated Catalan TV channel programming story (sibling outlet to La Vanguardia entry)."
         }
       ]
+    },
+    {
+      "url": "https://fictionhorizon.com/?p=378187",
+      "firstSeen": "2026-10-08T18:01:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T18:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "ID-permalink alias (?p=378187) for Fiction Horizon's own already-tracked slug URL https://fictionhorizon.com/las-azules-season-2-episode-3-streaming-schedule-and-what-time-it-lands-on-apple-tv/ (data.json ts=20260819). Same outlet, same CMS post, two addresses -- confirmed by WebFetch: both resolve to the identical headline/body (\"Las Azules Season 2 Episode 3 Streaming Schedule and What Time It Lands on Apple TV\"). curl -L did not resolve a redirect (403), so this was confirmed via direct content comparison against the slug URL per Rule I.",
+      "history": [
+        {
+          "attempt": "2026-10-08T18:01:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12189",
+          "note": "Confirmed ID-permalink duplicates already-tracked slug URL at identical headline/body; ledgered as Rule I second address, not added to data.json."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-08T14:00:42Z"
+  "lastUpdated": "2026-10-08T18:01:00Z"
 }
