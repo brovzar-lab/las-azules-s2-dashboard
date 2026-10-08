@@ -18070,26 +18070,6 @@
       ]
     },
     {
-      "url": "https://mtnewsinforma.com.br/spider-noir-produtor-revela-o-que-poderia-acontecer-na-segunda-temporada",
-      "firstSeen": "2026-10-02T14:07:10Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-10-02T14:07:10Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Article about \"Spider Noir\" Season 2, an entirely different show/franchise. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on \"segunda temporada\" terms.",
-      "history": [
-        {
-          "attempt": "2026-10-02T14:07:10Z",
-          "method": "title/snippet analysis (Exa search result)",
-          "status": 200,
-          "issue": "LEMA-11878",
-          "note": "Article about \"Spider Noir\" Season 2, an entirely different show/franchise. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on \"segunda temporada\" terms."
-        }
-      ]
-    },
-    {
       "url": "https://instagram.com/p/Dd-6a8oySLk",
       "firstSeen": "2026-10-02T14:07:10Z",
       "failCount": 0,
@@ -21906,7 +21886,115 @@
           "note": "Classification made from the Exa search result title/URL, which unambiguously identifies a different show; no ambiguity to resolve via full body fetch."
         }
       ]
+    },
+    {
+      "url": "https://raymignone.com/article/criminal-record-season-2-episodes-explained-release-dates-cast-where-to-watch",
+      "firstSeen": "2026-10-08T12:00:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T12:00:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Exa Pass 1 broad EN query ('Las Azules Women in Blue Season 2 Apple TV'). Page is about a different show entirely: 'Criminal Record' Season 2 (Apple TV+), a release-dates/cast/where-to-watch piece. No mention of Las Azules/Women in Blue anywhere; matched only on generic 'Season 2'/'Apple TV' terms."
+    },
+    {
+      "url": "https://tualatinvalleypreschool.org/article/apple-tv-s-sugar-season-2-trailer-big-twist-still-hidden",
+      "firstSeen": "2026-10-08T12:00:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T12:00:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Exa Pass 1 broad EN query. Page is about Apple TV+'s 'Sugar' Season 2 trailer, an unrelated show. No connection to Las Azules/Women in Blue."
+    },
+    {
+      "url": "https://2o12l.com/article/liev-schreiber-zazie-beetz-and-stephen-graham-in-apple-tv-s-nocturne-a-thrilling-premiere",
+      "firstSeen": "2026-10-08T12:00:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T12:00:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Exa Pass 1 broad EN query. Page covers Apple TV+'s 'Nocturne' premiere (Liev Schreiber, Zazie Beetz, Stephen Graham), an unrelated show."
+    },
+    {
+      "url": "https://dvergschnauzer.org/article/boston-blue-season-2-detective-lena-s-fate-and-new-family-drama",
+      "firstSeen": "2026-10-08T12:00:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T12:00:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Exa Pass 1 broad EN query. Page covers CBS's 'Boston Blue' Season 2 (Detective Lena storyline), an unrelated show matched only on generic 'Blue'/'Season 2' terms."
+    },
+    {
+      "url": "https://www.timeoutmexico.mx/ciudad-de-mexico/musica/ximena-sarinana-entrevista-alv-festival-hera-las-azules",
+      "firstSeen": "2026-10-08T12:00:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T12:00:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "WebFetch (2026-10-08) confirmed primary topic is Ximena Sariñana's new single 'ALV' and her Festival HERA HSBC appearance; Las Azules is mentioned only as brief bio/plot context (her dual role as actress and theme-song producer), no Season 2 plot/character/review content. Dated Aug 23, 2024 (pre-Season 2, Season 1 promotion window). Surfaced via Pass 2 broad ES query combining Bárbara Mori/Ximena Sariñana with Las Azules."
+    },
+    {
+      "url": "https://forbes.com.mx/exclusiva-ximena-sarinana-vuelve-a-los-escenarios-con-musica-nueva/",
+      "firstSeen": "2026-10-08T12:00:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T12:00:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Original candidate URL https://forbes.com.mx/?p=1240943 is an unresolved WordPress ID-permalink (looksLikeIdPermalink flag from lookup); resolved via curl -L to this canonical URL before evaluation, per the step 4a2 ID-permalink resolution instruction. WebFetch (2026-10-08) confirmed primary topic is Ximena Sariñana's return to live performing with a new single, dated Jul 2, 2024 (pre-Season 2). Las Azules mentioned only as brief bio/plot summary. Surfaced via Pass 2 broad ES query."
+    },
+    {
+      "url": "https://www.unotv.com/entretenimiento/ximena-sarinana-revela-como-fue-su-inicio-en-la-industria-hasta-convertirse-en-un-referente/",
+      "firstSeen": "2026-10-08T12:00:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T12:00:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "WebFetch (2026-10-08) confirmed primary topic is Ximena Sariñana's career retrospective and music career; includes a section on her Las Azules role but no plot/character/critical discussion, only one quote about representing women pioneers. Dated Aug 1, 2024 (pre-Season 2). Surfaced via Pass 2 broad ES query."
+    },
+    {
+      "url": "https://www.tvinsider.com/people/ximena-sarinana/",
+      "firstSeen": "2026-10-08T12:00:56Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-08T12:00:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "WebFetch returned 403; Tavily Extract (advanced depth) succeeded (2026-10-08) and confirmed this is a bare actor profile/credits database page (birth info plus a filmography table listing 'Women in Blue' as one row among dozens of other credits); no written editorial prose about Las Azules specifically. Strip the credits table and nothing about the show remains (Rule F strip test). Surfaced via Pass 2 broad ES query."
+    },
+    {
+      "url": "https://mtnewsinforma.com.br/spider-noir-produtor-revela-o-que-poderia-acontecer-na-segunda-temporada",
+      "firstSeen": "2026-10-02T14:07:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T12:00:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Exa Pass 1 broad ES query ('Bárbara Mori entrevista Las Azules temporada 2'). Page (Brazilian Portuguese) is about 'Spider-Noir' producer comments on a possible second season, an unrelated title. No connection to Las Azules. Prior note (LEMA-11878): Article about \"Spider Noir\" Season 2, an entirely different show/franchise. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on \"segunda temporada\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-02T14:07:10Z",
+          "method": "title/snippet analysis (Exa search result)",
+          "status": 200,
+          "issue": "LEMA-11878",
+          "note": "Article about \"Spider Noir\" Season 2, an entirely different show/franchise. No mention of Las Azules / Women in Blue. Surfaced via Exa broad-query match on \"segunda temporada\" terms."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-08T10:06:45Z"
+  "lastUpdated": "2026-10-08T12:00:56Z"
 }
