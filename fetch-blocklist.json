@@ -21626,7 +21626,167 @@
           "note": "Redirects to the canonical slug URL, which this run added to data.json."
         }
       ]
+    },
+    {
+      "url": "https://1001rss.com/article/3580917-surprise-la-serie-imperfect-women-d-apple-va-avoir-droit-a-une-saison-2-et-voila-les-details",
+      "firstSeen": "2026-10-08T08:07:29Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T08:07:29Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "1001rss.com (French RSS aggregator) article about Apple TV+'s 'Imperfect Women', a different Apple TV series entirely getting its own season 2 renewal. No mention of Las Azules, Women in Blue, Barbara Mori, or Mexico's female police force. Surfaced via Exa Pass 1 broad English query matching generic 'Apple TV season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T08:07:29Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12177",
+          "note": "WebFetch confirmed article is about the unrelated Apple TV+ series 'Imperfect Women', not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://lakalle.bluradio.com/noticias/artistas/la-formula-de-los-angeles-azules-para-traspasar-generaciones-40-anos-despues-cb20",
+      "firstSeen": "2026-10-08T08:07:29Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T08:07:29Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Kalle / Blu Radio article about the Mexican cumbia band Los Angeles Azules and how their sound endures across generations. Unrelated to the TV series Las Azules; surfaced only on the shared 'Azules' keyword.",
+      "history": [
+        {
+          "attempt": "2026-10-08T08:07:29Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-12177",
+          "note": "Title and snippet confirm this is about the music group Los Angeles Azules, not the TV show."
+        }
+      ]
+    },
+    {
+      "url": "https://lavozdelanacion.com/espectaculos/amor-en-segunda-vista-el-nuevo-proyecto-de-cassandra/",
+      "firstSeen": "2026-10-08T08:07:29Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T08:07:29Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Voz de la Nacion article about 'Amor en Segunda Vista', a different project starring an actress named Cassandra. No connection to Las Azules; surfaced via Exa Pass 1 broad Spanish query matching generic 'temporada 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T08:07:29Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-12177",
+          "note": "Title and snippet confirm this is about an unrelated show, 'Amor en Segunda Vista'."
+        }
+      ]
+    },
+    {
+      "url": "https://turkish.aawsat.com/ya%C5%9Fam/5327272-mini-dizi-olarak-ba%C5%9Flam%C4%B1%C5%9Ft%C4%B1-y%C4%B1ld%C4%B1zlar%C4%B1-bulu%C5%9Fturan-gerilime-5-ay-sonra-onay",
+      "firstSeen": "2026-10-08T08:07:29Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T08:07:29Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish-language Asharq Al-Awsat article about an unrelated Turkish mini-series renewal ('5 ay sonra onay' / renewed 5 months later). No mention of Las Azules or Women in Blue. Surfaced via Exa Pass 1 broad English query matching generic season-renewal terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T08:07:29Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-12177",
+          "note": "Title confirms this is about a different, unrelated Turkish miniseries."
+        }
+      ]
+    },
+    {
+      "url": "https://www.larazon.es/tecnologia-consumo/series/netflix-renueva-esposas-cazadoras-temporada-3-antes-incluso-estrenar-segunda_202610086ac73ec0b79b18452fbfab77.html",
+      "firstSeen": "2026-10-08T08:07:29Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T08:07:29Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Razon article about Netflix renewing 'Esposas Cazadoras' (a different series) for a third season. No connection to Las Azules; surfaced via Exa Pass 1 broad Spanish query matching generic 'temporada 2'/streaming-renewal terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T08:07:29Z",
+          "method": "WebSearch snippet",
+          "status": 200,
+          "issue": "LEMA-12177",
+          "note": "Title confirms this is about the unrelated Netflix series 'Esposas Cazadoras'."
+        }
+      ]
+    },
+    {
+      "url": "https://www.seitrackus.com/2026/05/",
+      "firstSeen": "2026-10-08T08:07:29Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T08:07:29Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Seitrack US May 2026 news archive page, entirely about Latin music touring and album news (Los Angeles Azules, Ha*Ash, Zoe, Mau y Ricky, Alejandro Sanz, Lola Indigo). No mention of the TV series Las Azules anywhere on the page.",
+      "history": [
+        {
+          "attempt": "2026-10-08T08:07:29Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12177",
+          "note": "WebFetch confirmed page is a music-industry news archive with no mention of the TV show."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/en/digital/apple-tv-to-launch-spanish-language-women-in-blue-second-season-in-august/news@senalnews.com",
+      "firstSeen": "2026-10-08T08:07:29Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T08:07:29Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Second address (malformed URL carrying a trailing 'news@senalnews.com' byline-contact fragment in the path) for the same Senal News article already tracked in data.json at the clean URL (ts=20260326, outlet 'Senal News'). WebFetch confirms identical title, date (March 26, 2026) and content as the already-tracked article; not a distinct document.",
+      "history": [
+        {
+          "attempt": "2026-10-08T08:07:29Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12177",
+          "note": "WebFetch returned the same article already tracked in data.json under the clean URL; confirmed second address, not distinct content."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/es/etiquetas/emmy-internacional",
+      "firstSeen": "2026-10-08T08:07:29Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T08:07:29Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Senal News tag-archive index page for 'emmy-internacional', listing article teasers across multiple unrelated stories under that tag. No standalone written content about Las Azules; same pattern as the already-ledgered /es/etiquetas/apple-tv tag page.",
+      "history": [
+        {
+          "attempt": "2026-10-08T08:07:29Z",
+          "method": "URL-structure inspection",
+          "status": 200,
+          "issue": "LEMA-12177",
+          "note": "Path is a tag-index route ('/es/etiquetas/<tag>'), consistent with the already-ledgered apple-tv tag page classified editorial_listing_or_database."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-08T06:05:42Z"
+  "lastUpdated": "2026-10-08T08:07:39Z"
 }
