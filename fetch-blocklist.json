@@ -21546,7 +21546,87 @@
           "note": "Fan-repost/edit account confirmed via video description self-identifying as a fan clip/edit ('#tvclips #tvshow #edit'); Rule B relevance gate fails."
         }
       ]
+    },
+    {
+      "url": "https://winstanleybaptist.org/article/kerry-washington-s-imperfect-women-returns-for-season-2-what-to-expect",
+      "firstSeen": "2026-10-08T06:05:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-08T06:05:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Exa EN broad query (\"Las Azules Women in Blue Season 2 Apple TV\"). Page is actually about a different show entirely: \"Kerry Washington's Imperfect Women\" Season 2, an unrelated Apple TV title. No mention of Las Azules or Women in Blue. Classified from the title alone (unambiguous, different show name); no fetch spent on relevance per Rule G.",
+      "history": [
+        {
+          "attempt": "2026-10-08T06:05:42Z",
+          "method": "title inspection (Exa search result)",
+          "status": null,
+          "issue": "LEMA-12175",
+          "note": "Off-topic by title: about \"Kerry Washington's Imperfect Women\", not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://ghs0282.org/article/maximum-pleasure-guaranteed-season-2-what-s-next-for-apple-tv-s-thriller",
+      "firstSeen": "2026-10-08T06:05:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-08T06:05:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Exa EN broad query (\"Las Azules Women in Blue Season 2 Apple TV\"). Page is actually about a different show entirely: \"Maximum Pleasure Guaranteed\" Season 2, an unrelated Apple TV thriller. No mention of Las Azules or Women in Blue. Classified from the title alone (unambiguous, different show name); no fetch spent on relevance per Rule G.",
+      "history": [
+        {
+          "attempt": "2026-10-08T06:05:42Z",
+          "method": "title inspection (Exa search result)",
+          "status": null,
+          "issue": "LEMA-12175",
+          "note": "Off-topic by title: about \"Maximum Pleasure Guaranteed\", not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://flicks.com.au/tv/women-in-blue-season-2",
+      "firstSeen": "2026-10-08T06:05:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T06:05:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Flicks.com.au (Australian streaming guide) Season 2 page. WebFetch succeeded (200): page contains only synopsis, cast list, rating, genre, episode titles/descriptions, and streaming-platform availability. No editorial review, critical analysis, or authored commentary about the show. Strip test leaves nothing written about the show -- Rule F listing/database page, not coverage.",
+      "history": [
+        {
+          "attempt": "2026-10-08T06:05:42Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12175",
+          "note": "Confirmed database/listing-only page, no written editorial content."
+        }
+      ]
+    },
+    {
+      "url": "https://minhaoperadora.com.br/?p=102356",
+      "firstSeen": "2026-10-08T06:05:42Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-08T06:05:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "WordPress ID-permalink (looksLikeIdPermalink flag from tools/sweep-integrity.js lookup). Confirmed via curl -L: redirects (200 final) to https://minhaoperadora.com.br/2022/05/apple-tv-investe-em-producoes-originais-latino-americanas-anunciando-serie-las-azules.html, which is now tracked in data.json (ts 20220530). Second address for an already-tracked document per Rule I; ledgered so future sweeps skip this address directly without re-resolving the redirect.",
+      "history": [
+        {
+          "attempt": "2026-10-08T06:05:42Z",
+          "method": "curl -L (redirect check)",
+          "status": 200,
+          "issue": "LEMA-12175",
+          "note": "Redirects to the canonical slug URL, which this run added to data.json."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-08T04:05:12.000Z"
+  "lastUpdated": "2026-10-08T06:05:42Z"
 }
