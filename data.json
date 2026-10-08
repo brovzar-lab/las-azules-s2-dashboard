@@ -5572,6 +5572,19 @@
     "excerpt": "Weekly streaming guide naming Women in Blue (Las Azules) Season 2 as a top new Apple TV pick for 10-16 August 2026, with several paragraphs on María's (Bárbara Mori) promotion to lieutenant and the Azules' investigation linking a student activist's death to the 1968 student massacre, alongside entries for Ted Lasso S4, Silo S3 and other Apple TV titles. By Paul Dalgarno."
   },
   {
+    "outlet": "The Daily Guardian (via Reuters)",
+    "headline": "'Las Azules' Season 2 blends fact and fiction for tale of corruption and growth",
+    "url": "https://thedailyguardian.com/entertainment-news/las-azules-season-2-blends-fact-and-fiction-for-tale-of-corruption-and-growth-746569/",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "dateSource": "article_published_time",
+    "lang": "EN",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Syndicated Reuters feature (via TDG Syndication) on how Season 2 blends historical events with fiction, following four officers navigating corruption and the lingering shadows of Mexico's student massacres across eight weekly episodes.",
+    "storyGroup": "reuters-s2-fact-fiction-20260810"
+  },
+  {
     "outlet": "Chic Magazine",
     "headline": "\"Las Azules\": Cuántos capítulos tendrá la segunda temporada y cuándo salen todos",
     "url": "https://www.chicmagazine.com.mx/personajes/las-azules-temporada-2-cuandos-capitulos-tendra-y-cuando-salen",
@@ -6435,6 +6448,18 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "Italian-language official trailer coverage for Las Azules Season 2, posted by Italian entertainment outlet Pressview ahead of the August 12, 2026 Apple TV premiere, previewing the season's conspiracy plot tied to the 1968 student massacre."
+  },
+  {
+    "outlet": "Gameblog.fr",
+    "headline": "Cette série policière Apple TV qui a marqué 2024 revient bientôt, la saison 2 se dévoile",
+    "url": "https://www.gameblog.fr/geek/ed/news/apple-tv-las-azules-saison-2-trailer-719553",
+    "date": "Jul 22, 2026",
+    "ts": 20260722,
+    "dateSource": "article_published_time",
+    "lang": "FR",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Apple TV unveils the Season 2 trailer for Las Azules (Women in Blue), the Mexican police drama set in 1970s Mexico; the new season centers on a shocking investigation tied to the 1968 Tlatelolco massacre, with the returning cast plus new additions, premiering August 12, 2026 with weekly episodes through September 30."
   },
   {
     "outlet": "Infobae México",
@@ -7954,6 +7979,19 @@
     "storyGroup": "deadline-s2-renewal-20250501"
   },
   {
+    "outlet": "MacDailyNews",
+    "headline": "Apple's critically acclaimed drama 'Women in Blue' renewed for season two",
+    "url": "https://macdailynews.com/2025/05/20/apples-critically-acclaimed-drama-women-in-blue-renewed-for-season-two/",
+    "date": "May 20, 2025",
+    "ts": 20250520,
+    "dateSource": "article_published_time",
+    "lang": "EN",
+    "market": "US",
+    "type": "Trade",
+    "excerpt": "MacDailyNews reports Apple TV+'s critically acclaimed Spanish-language crime drama 'Women in Blue' ('Las Azules') has been renewed for a second season, citing Apple's press materials on the eight-episode continuation.",
+    "storyGroup": "deadline-s2-renewal-20250501"
+  },
+  {
     "outlet": "Marlife (YouTube)",
     "headline": "Natalia Téllez gana “Mejor elenco” por “Las Azules” junto a Barbara Morí en los #PremiosAura2025",
     "url": "https://www.youtube.com/watch?v=Hf5qezmA4dY",
@@ -8752,6 +8790,18 @@
     "market": "Mexico",
     "type": "Entertainment",
     "excerpt": "Feature on the Apple TV+ series following four women who challenge 1970s Mexico's conservative norms by joining the country's first female police force, and how the show's theme of female empowerment can unsettle some viewers."
+  },
+  {
+    "outlet": "Ayther.fr",
+    "headline": "Las Azules Saison 2 : Quelle date de sortie Apple TV+ ?",
+    "url": "https://ayther.fr/las-azules-saison-2/",
+    "date": "Aug 6, 2024",
+    "ts": 20240806,
+    "dateSource": "article_published_time",
+    "lang": "FR",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "French outlet Ayther speculates on a potential Season 2 release window for Las Azules (Women in Blue) following its Season 1 premiere on July 24, 2024, noting no renewal had yet been announced and estimating a late-2026 window pending Apple's review of viewership and critical reception."
   },
   {
     "outlet": "EscribiendoCine",
@@ -9804,6 +9854,18 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "French tech/entertainment outlet iPhoneSoft previews Apple TV+'s new Spanish-language crime drama Women in Blue (Las Azules), premiering July 31, 2024: four pioneering women join Mexico's first female police brigade in the 1970s only to discover their unit is a media distraction from a string of murders."
+  },
+  {
+    "outlet": "MacDailyNews",
+    "headline": "Apple TV+ shares first look at 'Women in Blue' ('Las Azules'), new Spanish-language crime drama",
+    "url": "https://macdailynews.com/2024/05/09/apple-tv-shares-first-look-at-women-in-blue-las-azules-new-spanish-language-crime-drama/",
+    "date": "May 9, 2024",
+    "ts": 20240509,
+    "dateSource": "article_published_time",
+    "lang": "EN",
+    "market": "US",
+    "type": "Tech",
+    "excerpt": "Apple TV+ unveils the premiere date and first-look images for 'Women in Blue' ('Las Azules'), its ten-episode Spanish-language crime drama led by Ariel Award nominee Barbara Mori, premiering July 31, 2024."
   },
   {
     "outlet": "Al Dia News",
