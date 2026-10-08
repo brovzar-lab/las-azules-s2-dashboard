@@ -21525,7 +21525,28 @@
           "note": "Classified and permanentSkip'd on first sight (Pass 1 Exa broad-query noise / Pass 0b Rule G or Rule I archive-index), see skipNote."
         }
       ]
+    },
+    {
+      "url": "https://youtube.com/watch?v=-YkTAOF56Bg",
+      "firstSeen": "2026-10-08T04:05:12.000Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-08T04:05:12.000Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "reviewable": false,
+      "skipNote": "Fan-repost/edit account: \"WINE UP\" channel. Video description self-identifies as \"This is a clip from Women in blue on AppleTV. This is set in a historical fiction #tvclips #tvshow #edit\" -- a fan edit/clip repost, not an outlet, publisher, or official show/platform account. Published 2026-10-04 per YouTube Data API. Relevance gate fails under Rule B; no fetch-fallback-chain attempt spent on dateability.",
+      "history": [
+        {
+          "attempt": "2026-10-08T04:05:12.000Z",
+          "method": "YouTube Data API v3 videos.list (channel/title/description check)",
+          "status": 200,
+          "issue": "LEMA-12174",
+          "note": "Fan-repost/edit account confirmed via video description self-identifying as a fan clip/edit ('#tvclips #tvshow #edit'); Rule B relevance gate fails."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-08T02:07:47.145Z"
+  "lastUpdated": "2026-10-08T04:05:12.000Z"
 }
