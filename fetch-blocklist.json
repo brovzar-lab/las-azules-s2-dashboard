@@ -21786,7 +21786,127 @@
           "note": "Path is a tag-index route ('/es/etiquetas/<tag>'), consistent with the already-ledgered apple-tv tag page classified editorial_listing_or_database."
         }
       ]
+    },
+    {
+      "url": "https://scrapethatceiling.com/article/pluribus-season-2-update-release-date-cast-and-emmy-wins-apple-tv",
+      "firstSeen": "2026-10-08T10:06:45Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-08T10:06:45Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Apple TV+'s \"Pluribus\" Season 2 (release date, cast, Emmy wins). No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"Apple TV Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T10:06:45Z",
+          "method": "Exa search (Pass 1)",
+          "status": 0,
+          "issue": "LEMA-12178",
+          "note": "Classification made from the Exa search result title/URL, which unambiguously identifies a different show; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://yexpund.com/article/widow-s-bay-season-2-release-date-everything-we-know-so-far-apple-tv-horror-comedy-update",
+      "firstSeen": "2026-10-08T10:06:45Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-08T10:06:45Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Apple TV+'s \"Widow's Bay\" Season 2 horror-comedy update. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"Apple TV Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T10:06:45Z",
+          "method": "Exa search (Pass 1)",
+          "status": 0,
+          "issue": "LEMA-12178",
+          "note": "Classification made from the Exa search result title/URL, which unambiguously identifies a different show; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://ngontinh24.com/article/will-sugar-season-3-happen-season-2-finale-recap-what-s-next",
+      "firstSeen": "2026-10-08T10:06:45Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-08T10:06:45Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article speculating on a Season 3 of Apple TV+'s \"Sugar\" and recapping its Season 2 finale. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"season 2 finale\" / \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T10:06:45Z",
+          "method": "Exa search (Pass 1)",
+          "status": 0,
+          "issue": "LEMA-12178",
+          "note": "Classification made from the Exa search result title/URL, which unambiguously identifies a different show; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://mrelay03.econeteditora.com.br/loot-season-2-unpacking-apple-tvs-hilarious-return-to-absurdist-wealth-satire",
+      "firstSeen": "2026-10-08T10:06:45Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-08T10:06:45Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Apple TV+'s comedy \"Loot\" Season 2. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"Apple TV Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T10:06:45Z",
+          "method": "Exa search (Pass 1)",
+          "status": 0,
+          "issue": "LEMA-12178",
+          "note": "Classification made from the Exa search result title/URL, which unambiguously identifies a different show; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "http://www.thefutoncritic.com/news/2026/02/03/apple-tv-debuts-first-look-images-for-matchbox-the-movie-491213/20260203apple09/",
+      "firstSeen": "2026-10-08T10:06:45Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-08T10:06:45Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TheFutonCritic press-release item about Apple TV's first-look images for \"Matchbox The Movie\". No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T10:06:45Z",
+          "method": "Exa search (Pass 1)",
+          "status": 0,
+          "issue": "LEMA-12178",
+          "note": "Classification made from the Exa search result title/URL, which unambiguously identifies a different show; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.20minutos.es/cinemania/series/todas-ley-fecha-estreno-temporada-2-kim-kardashian_7046229_0.html",
+      "firstSeen": "2026-10-08T10:06:45Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-08T10:06:45Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "20minutos.es article about the Disney+ series fronted by Kim Kardashian getting a Season 2 premiere date. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"temporada 2\" / \"fecha de estreno\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-08T10:06:45Z",
+          "method": "Exa search (Pass 1)",
+          "status": 0,
+          "issue": "LEMA-12178",
+          "note": "Classification made from the Exa search result title/URL, which unambiguously identifies a different show; no ambiguity to resolve via full body fetch."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-08T08:07:39Z"
+  "lastUpdated": "2026-10-08T10:06:45Z"
 }
