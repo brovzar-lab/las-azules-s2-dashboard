@@ -1,5 +1,17 @@
 [
   {
+    "outlet": "Plano Crítico",
+    "headline": "Crítica: Mulheres de Azul - 2ª Temporada",
+    "url": "https://www.planocritico.com/critica-mulheres-de-azul-2a-temporada/",
+    "date": "Oct 8, 2026",
+    "ts": 20261008,
+    "dateSource": "jsonld_datepublished",
+    "lang": "PT",
+    "market": "International",
+    "type": "Review",
+    "excerpt": "Brazilian review of Women in Blue (Mulheres de Azul) Season 2: praises the season for maintaining the first season's style while escalating narrative complexity as the four female officers investigate murders tied to past anti-government protests, crediting its portrayal of systemic government/police corruption alongside the protagonists' personal struggles within a patriarchal society."
+  },
+  {
     "outlet": "Excélsior",
     "headline": "Horacio García Rojas en 'Las Azules': \"El arte debe cuestionar las estructuras de poder\"",
     "url": "https://excelsior.com.mx/espectaculos/horacio-garcia-rojas-azules-arte-debe-cuestionar-estructuras-poder",
@@ -8124,6 +8136,18 @@
     "excerpt": "Bárbara Mori discusses her role as María in Las Azules, revealing personal connections to her character journey of self-discovery, alongside partner and producer Fernando Rovzar, who reflects on the collaborative experience of the series."
   },
   {
+    "outlet": "El Economista (Argentina)",
+    "headline": "Entrevista a Leonardo Sbaraglia: un thriller latinoamericano en México de los '70",
+    "url": "https://eleconomista.com.ar/sociedad-redes/entrevista-leonardo-sbaraglia-thriller-latinoamericano-mexico-70-n77826",
+    "date": "Sep 23, 2024",
+    "ts": 20240923,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "Argentina",
+    "type": "Entertainment",
+    "excerpt": "El Economista (Argentina) interviews Leonardo Sbaraglia about his role in Las Azules, which he says reflects the machista universe of 1970s Mexican society contrasted with the country's first female police officers."
+  },
+  {
     "outlet": "Apple TV (X)",
     "headline": "Women in Blue (Las Azules) — Now Streaming",
     "url": "https://x.com/AppleTV/status/1837519173062479974",
@@ -9981,17 +10005,5 @@
     "market": "US",
     "type": "Tech",
     "excerpt": "MacDailyNews reports Apple TV+ has ordered the 10-episode Spanish-language crime drama Las Azules, created by Fernando Rovzar and Pablo Aramendi, following four women who join Mexico's first female police force in 1970 only to discover their squad is a publicity stunt masking a serial-killer investigation."
-  },
-  {
-    "outlet": "El Economista (Argentina)",
-    "headline": "Entrevista a Leonardo Sbaraglia: un thriller latinoamericano en México de los '70",
-    "url": "https://eleconomista.com.ar/sociedad-redes/entrevista-leonardo-sbaraglia-thriller-latinoamericano-mexico-70-n77826",
-    "date": "Sep 23, 2024",
-    "ts": 20240923,
-    "dateSource": "visible_dateline",
-    "lang": "ES",
-    "market": "Argentina",
-    "type": "Entertainment",
-    "excerpt": "El Economista (Argentina) interviews Leonardo Sbaraglia about his role in Las Azules, which he says reflects the machista universe of 1970s Mexican society contrasted with the country's first female police officers."
   }
 ]
