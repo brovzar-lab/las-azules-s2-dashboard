@@ -22558,7 +22558,87 @@
           "note": "Classified from Exa Pass 1 search result title, which unambiguously identifies a different show (\"Ciudad de Dios\"); no ambiguity to resolve via full body fetch."
         }
       ]
+    },
+    {
+      "url": "https://azat.tv/en/imperfect-women-season-2-kerry-washington-pivot/",
+      "firstSeen": "2026-10-09T02:01:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T02:01:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Azat TV piece about \"Imperfect Women\", an unrelated Apple TV thriller starring Kerry Washington (season 2 set on Martha's Vineyard with an original storyline). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"season 2\"/\"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T02:01:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12213",
+          "note": "WebFetch confirmed the article is about Imperfect Women (Kerry Washington), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://itsofts.org/article/widow-s-bay-season-2-all-the-latest-updates-and-release-date-speculations",
+      "firstSeen": "2026-10-09T02:01:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T02:01:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "itsofts.org piece (redirects to custommapposter.com) about \"Widow's Bay\", an unrelated Apple TV+ horror-comedy series (season 2 anticipated late 2027). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"season 2\"/\"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T02:01:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12213",
+          "note": "WebFetch (following a 302 redirect to custommapposter.com) confirmed the article is about Widow's Bay, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://cornerstonelex.org/article/dark-matter-season-2-release-date-time-cast-and-everything-you-need-to-know",
+      "firstSeen": "2026-10-09T02:01:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T02:01:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "cornerstonelex.org piece (redirects to custommapposter.com) about \"Dark Matter\", an unrelated Apple TV sci-fi thriller based on Blake Crouch's novel (season 2 premiered Aug 28, 2026). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"season 2\"/\"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T02:01:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12213",
+          "note": "WebFetch (following a 302 redirect to custommapposter.com) confirmed the article is about Dark Matter, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://jingletree.com/amazon-mgm-execs-javiera-balmaceda-nicole-morganti-talk-big-spanish-language-action-swings-the-push-for-scale-at-iberseries-platino-industria-279163.html",
+      "firstSeen": "2026-10-09T02:01:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T02:01:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Jingletree general industry piece on Amazon MGM's Spanish-language content strategy (citing \"Zeta\" and \"Venganza\" as examples), not about Las Azules specifically. Surfaced only as a broad-query match on \"Bárbara Mori entrevista Las Azules temporada 2\" via generic Spanish-language-industry terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T02:01:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12213",
+          "note": "WebFetch confirmed this is a general Amazon MGM Spanish-language-content industry piece, not about Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-09T00:05:18Z"
+  "lastUpdated": "2026-10-09T02:01:09Z"
 }
