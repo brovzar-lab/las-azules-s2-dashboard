@@ -20832,9 +20832,9 @@
     {
       "url": "https://macobserver.com/?p=488827",
       "firstSeen": "2026-10-05T20:04:41Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 403,
-      "lastAttempt": "2026-10-05T20:04:41Z",
+      "lastAttempt": "2026-10-09T14:00:00Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -20857,6 +20857,20 @@
           "status": "no_content",
           "issue": "LEMA-12111",
           "note": "Tavily Extract returned no content/empty result. Full-chain failure, failCount=1."
+        },
+        {
+          "attempt": "2026-10-09T14:00:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12294",
+          "note": "WebFetch returned HTTP 403 (Cloudflare bot-wall). curl -IL confirmed no redirect (403 at the ?p= URL itself, per looksLikeIdPermalink=true check)."
+        },
+        {
+          "attempt": "2026-10-09T14:00:00Z",
+          "method": "Tavily Extract (advanced)",
+          "status": "no_content",
+          "issue": "LEMA-12294",
+          "note": "Tavily Extract returned no content/empty result. Full-chain failure, failCount incremented 1->2."
         }
       ]
     },
