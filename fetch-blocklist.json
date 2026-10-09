@@ -22638,7 +22638,49 @@
           "note": "WebFetch confirmed this is a general Amazon MGM Spanish-language-content industry piece, not about Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.sensacine.com.mx/actores/actor-146425/news/",
+      "firstSeen": "2026-10-09T06:10:00.000Z",
+      "lastAttempt": "2026-10-09T06:10:00.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "Confirmed via WebFetch: an actor news archive/tag page (Barbara Mori) listing headline+thumbnail+date for each pickup chronologically, not a single editorial article. Rule F: no written editorial content survives the strip-the-metadata-table test. Same surface family as the already-ledgered actor-41018 (Ximena Sarinana) row.",
+      "history": [
+        {
+          "attempt": "2026-10-09T06:10:00.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12216",
+          "note": "Confirmed archive/tag listing structure, no standalone prose."
+        }
+      ]
+    },
+    {
+      "url": "https://www.sensacine.com.mx/actores/actor-858770/news/",
+      "firstSeen": "2026-10-09T06:10:00.000Z",
+      "lastAttempt": "2026-10-09T06:10:00.000Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "reviewable": false,
+      "skipNote": "Confirmed via WebFetch: an actor news archive/tag page (Natalia Tellez) listing headline+thumbnail+date for each pickup chronologically, not a single editorial article. Rule F: no written editorial content survives the strip-the-metadata-table test. Same surface family as the already-ledgered actor-41018 (Ximena Sarinana) row.",
+      "history": [
+        {
+          "attempt": "2026-10-09T06:10:00.000Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12216",
+          "note": "Confirmed archive/tag listing structure, no standalone prose."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-09T02:01:09Z"
+  "lastUpdated": "2026-10-09T06:10:00.000Z"
 }
