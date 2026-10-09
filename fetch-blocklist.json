@@ -23083,7 +23083,129 @@
           "note": "Pass 1 Exa broad-query noise, consistent with the routine's known post-finale broad-query noise pattern."
         }
       ]
+    },
+    {
+      "url": "https://www.instagram.com/reel/DeRgVUWjvWT/",
+      "firstSeen": "2026-10-09T16:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T16:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Instagram reel posted by @atresplayer promoting 'Vestidas de Azul' (a different Spanish drama on the atresplayer streaming service, premiere episode about a character named Valeria and 'La Veneno'), not Las Azules/Women in Blue. Surfaced via Exa Pass 1 broad English query ('Las Azules Women in Blue Season 2 Apple TV'). Confirmed off-topic via WebFetch. (LEMA-12297)"
+    },
+    {
+      "url": "https://www.dizibox.live/take-charge-of-my-heart-1-sezon-9-bolum-izle/",
+      "firstSeen": "2026-10-09T16:00:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-09T16:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish streaming site episode page for 'Take Charge of My Heart' (Sezon 1, Bölüm 9), an unrelated drama with no connection to Las Azules/Women in Blue. Surfaced via Exa Pass 1 broad English query ('Las Azules Women in Blue Season 2 Apple TV'). Classified off-topic from title/outlet alone. (LEMA-12297)"
+    },
+    {
+      "url": "https://riooja.org/article/imperfect-women-season-2-announced-kerry-washington-returns-to-apple-tv",
+      "firstSeen": "2026-10-09T16:00:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-09T16:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Imperfect Women' Season 2 (Kerry Washington, a different Apple TV+ series), not Las Azules/Women in Blue. Surfaced via Exa Pass 1 broad English query. Classified off-topic from title alone. (LEMA-12297)"
+    },
+    {
+      "url": "https://www.formulatv.com/noticias/serie-vasca-desaparecido-rodaje-segunda-temporada-138457/",
+      "firstSeen": "2026-10-09T16:00:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-09T16:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about the Basque series 'Desaparecido' starting its second-season shoot, an unrelated show. Surfaced via Exa Pass 1 broad English query (published same day, generic 'segunda temporada' match). Classified off-topic from title alone. (LEMA-12297)"
+    },
+    {
+      "url": "https://9to5mac.com/2026/10/09/apple-tv-reveals-unconventional-rom-com-show-with-the-white-lotus-star/",
+      "firstSeen": "2026-10-09T16:00:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-09T16:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "9to5Mac article about a new Apple TV rom-com starring a 'The White Lotus' cast member, an unrelated show. Surfaced via Exa Pass 1 broad English query (generic 'Apple TV' match). Classified off-topic from title alone. (LEMA-12297)"
+    },
+    {
+      "url": "https://www.adorocinema.com/series/serie-31977/temporada-47354/elenco/",
+      "firstSeen": "2026-10-09T16:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T16:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "AdoroCinema Season 1 cast-listing page ('elenco') for 'Mulheres de Azul' (Brazilian Portuguese title for Las Azules/Women in Blue, confirmed on-topic). Bare cast/crew/producer list with no written editorial prose about the show; strip test (Rule F) leaves nothing. Surfaced via Exa Pass 1 broad English query. Confirmed via WebFetch. (LEMA-12297)"
+    },
+    {
+      "url": "https://www.cosmopolitan.com/es/entretenimiento-cultura/a74091137/furia-parte-2-novedades-serie/",
+      "firstSeen": "2026-10-09T16:00:53Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-09T16:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Cosmopolitan ES article about 'Furia Parte 2', an unrelated series, not Las Azules. Surfaced via Exa Pass 1 Spanish query ('Bárbara Mori entrevista Las Azules temporada 2'), matched on generic Spanish entertainment terms only. Classified off-topic from title alone. (LEMA-12297)"
+    },
+    {
+      "url": "https://www.justwatch.com/br/serie/las-azules",
+      "firstSeen": "2026-10-09T16:00:53Z",
+      "failCount": 0,
+      "lastStatus": 301,
+      "lastAttempt": "2026-10-09T16:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "301-redirects to https://br.justwatch.com/br/serie/las-azules (ledgered separately as a distinct normalized key; see that row for the content finding). Surfaced via Pass 2 standard EN/ES sweep. (LEMA-12297)"
+    },
+    {
+      "url": "https://br.justwatch.com/br/serie/las-azules",
+      "firstSeen": "2026-10-09T16:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T16:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch Brazil streaming-availability listing: platform icons, IMDb/Rotten Tomatoes/JustWatch rating aggregates, episode guide, and a single reused synopsis blurb. No original written editorial content about the show; strip test (Rule F) confirms this is a database/listing page, same treatment as the IMDb title-record family. Is the canonical target of a 301 redirect from https://www.justwatch.com/br/serie/las-azules (ledgered separately). Confirmed via WebFetch. (LEMA-12297)"
+    },
+    {
+      "url": "https://observatoriodocinema.com.br/streaming/apple-tv-plus/os-lancamentos-de-julho-de-2024-no-apple-tv",
+      "firstSeen": "2026-10-09T16:00:53Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-09T16:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Genuine on-topic coverage: a July 2024 Apple TV+ release-schedule roundup article naming 'Mulheres de Azul' (Las Azules) with its own synopsis paragraph -- this is written journalism about a release schedule, not a Rule F data row, per the Just Jared/Fiction Horizon/Film Book precedent. No real publish date could be recovered: WebFetch returned 403 Forbidden (WAF block); Tavily Extract (advanced depth) returned full page content but no article:published_time, JSON-LD datePublished, or visible dateline anywhere in the extracted text; a direct curl with a browser user-agent was also blocked (403). The URL path '/streaming/apple-tv-plus/os-lancamentos-de-julho-de-2024-no-apple-tv' names a month only (no day component), so Rule A's URL-path exception does not apply. Both WebFetch and Tavily Extract are exhausted per Rule A. reviewable=true so this stays listable for a future manual date lookup. Surfaced via Pass 2 standard EN/ES sweep. (LEMA-12297)"
+    },
+    {
+      "url": "https://ovicio.com.br/?p=915625",
+      "firstSeen": "2026-10-09T16:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T16:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page covers Apple TV+'s March 2026 lineup, headlined by 'Mulheres Imperfeitas' (Imperfect Women, a different Apple TV+ miniseries starring Elisabeth Moss/Kerry Washington/Kate Mara). Does not mention Las Azules/Women in Blue. looksLikeIdPermalink flag resolved: the URL does not redirect to a Las Azules page (curl -L returned the same ?p= URL, HTTP 520 on that probe; WebFetch separately succeeded and returned the actual off-topic content). Surfaced via Pass 2 standard EN/ES sweep. (LEMA-12297)"
     }
   ],
-  "lastUpdated": "2026-10-09T12:08:00Z"
+  "lastUpdated": "2026-10-09T16:00:53Z"
 }
