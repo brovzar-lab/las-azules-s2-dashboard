@@ -22418,7 +22418,147 @@
           "note": "Returned only iMore site navigation/boilerplate content, no forum thread text and no mention of Las Azules. Full-chain failure per step 4d; not added to data.json."
         }
       ]
+    },
+    {
+      "url": "https://screenrant.com/netflix-below-season-2-renewal-status-updates/",
+      "firstSeen": "2026-10-09T00:05:18Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-09T00:05:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Screen Rant article about Netflix's \"Below\" Season 2 renewal status. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T00:05:18Z",
+          "method": "search-result-title",
+          "status": 0,
+          "issue": "LEMA-12212",
+          "note": "Classified from Exa Pass 3 search result title, which unambiguously identifies a different show (\"Below\"); no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://dizibox.live/below-1-sezon-6-bolum-sezon-finali-izle/2",
+      "firstSeen": "2026-10-09T00:05:18Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-09T00:05:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish-language streaming page (dizibox.live) for \"Below\" Season 1 Episode 6 season finale. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T00:05:18Z",
+          "method": "search-result-title",
+          "status": 0,
+          "issue": "LEMA-12212",
+          "note": "Classified from Exa Pass 3 search result title, which unambiguously identifies a different show (\"Below\"); no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://bbvk.org/article/sugar-season-2-review-a-blue-skinned-alien-detective-s-gritty-journey",
+      "firstSeen": "2026-10-09T00:05:18Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-09T00:05:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Review of Apple TV+'s \"Sugar\" Season 2 (a different Apple TV+ series). No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"Apple TV Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T00:05:18Z",
+          "method": "search-result-title",
+          "status": 0,
+          "issue": "LEMA-12212",
+          "note": "Classified from Exa Pass 1 search result title, which unambiguously identifies a different show (\"Sugar\"); no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://rtve.es/play/videos/el-perro-andaluz-by-manu-sanchez/temporada-2-programa-6/17258644",
+      "firstSeen": "2026-10-09T00:05:18Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-09T00:05:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RTVE Play video page for \"El perro andaluz\" (a Manu Sánchez talk/comedy program), Season 2 Episode 6. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"temporada 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T00:05:18Z",
+          "method": "search-result-title",
+          "status": 0,
+          "issue": "LEMA-12212",
+          "note": "Classified from Exa Pass 1 search result title, which unambiguously identifies a different program (\"El perro andaluz\"); no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://newsdigitales.com/nota/306357/toda-la-verdad-sobre-la-vuelta-de-casi-angeles",
+      "firstSeen": "2026-10-09T00:05:18Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-09T00:05:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "NewsDigitales article about the return of the telenovela \"Casi Ángeles\". No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"temporada 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T00:05:18Z",
+          "method": "search-result-title",
+          "status": 0,
+          "issue": "LEMA-12212",
+          "note": "Classified from Exa Pass 1 search result title, which unambiguously identifies a different show (\"Casi Ángeles\"); no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://rnoticias.com.mx/Portal/2026/10/08/osvaldo-benavides-rompe-el-silencio-sobre-su-polemico-papel-en-serie-de-timbiriche",
+      "firstSeen": "2026-10-09T00:05:18Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-09T00:05:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RNoticias article about actor Osvaldo Benavides' role in a \"Timbiriche\" series. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"temporada 2\" / cast-interview terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T00:05:18Z",
+          "method": "search-result-title",
+          "status": 0,
+          "issue": "LEMA-12212",
+          "note": "Classified from Exa Pass 1 search result title, which unambiguously identifies a different show (\"Timbiriche\"); no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://areacucuta.com/la-segunda-temporada-de-ciudad-de-dios-la-lucha-no-para-se-estrena-el-8-de-noviembre-y-presenta-su-trailer-y-poster-oficiales",
+      "firstSeen": "2026-10-09T00:05:18Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-09T00:05:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "AreaCucuta article about Season 2 of \"Ciudad de Dios: La lucha no para\" premiering November 8. No relation to Las Azules / Women in Blue; surfaced only as a broad-query match on generic \"segunda temporada\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T00:05:18Z",
+          "method": "search-result-title",
+          "status": 0,
+          "issue": "LEMA-12212",
+          "note": "Classified from Exa Pass 1 search result title, which unambiguously identifies a different show (\"Ciudad de Dios\"); no ambiguity to resolve via full body fetch."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-08T20:08:39Z"
+  "lastUpdated": "2026-10-09T00:05:18Z"
 }
