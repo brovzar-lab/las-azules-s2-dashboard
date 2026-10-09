@@ -22840,7 +22840,236 @@
           "note": "WebFetch confirmed the article is about a different show (Timbiriche, la serie), unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://tv.apple.com/pt/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-10-09T12:05:36Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "pt-locale Apple TV show landing page for Las Azules (umc.cmc.73wmdmkfpta5ul1vbwckmme39), surfaced via Pass 3 BR Exa query (LEMA-12281). Classified directly without a fetch per the established tv.apple.com/{locale}/show/ surface-family ruling (LEMA-10627/10628, Rule F clarification LEMA-10632): Rule F classifies the surface family, not per-locale depth, and the us-locale sibling of this exact show page is already ledgered as editorial_listing_or_database. No written editorial content about the show at this surface, only the catalog/metadata page. reviewable=false, not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-10-09T12:05:36Z",
+          "method": "classified by surface-family precedent, no fetch",
+          "status": null,
+          "issue": "LEMA-12281",
+          "note": "pt-locale sibling of already-ledgered tv.apple.com/us/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39; Rule F family classification applied without a fetch per LEMA-10627/10628/10632."
+        }
+      ]
+    },
+    {
+      "url": "https://es.hollywoodreporter.com/estos-son-los-ganadores-de-los-emmy-internacionales-2025",
+      "firstSeen": "2026-10-09T12:05:36Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T12:05:36Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Hollywood Reporter en Espanol recap of the International Emmy 2025 winners (published Nov 25, 2025), surfaced via Pass 2 standard web sweep (LEMA-12281). WebFetch succeeded (200, real content). Applied Rule F's strip test: Las Azules appears only as one line in the Serie Dramatica nominee/winner list (\"Las Azules - Lemon Studios / Apple TV+ (Mexico)\"); it did not win (Rivals, UK, won the category). No sentence of written commentary or analysis about Las Azules exists anywhere in the article body beyond that listing line. Stripping the awards-category list leaves nothing written about the show, matching Rule F's general test even though the page is a news article rather than a TVDB/EPG-style database page. reviewable=false, not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-10-09T12:05:36Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12281",
+          "note": "Full article fetched; confirmed Las Azules receives a nominee-list mention only, zero written commentary specific to the show."
+        }
+      ]
+    },
+    {
+      "url": "https://www.dizibox.live/is-it-cake-halloween-2-sezon-2-bolum-izle/",
+      "firstSeen": "2026-10-09T12:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: Turkish streaming-site episode page for 'Is It Cake? Halloween' season 2 episode 2 -- a different Netflix/Apple-adjacent show entirely, surfaced only via Pass 1 Exa broad EN query ('Las Azules Women in Blue Season 2 Apple TV') semantic matching on unrelated 'season 2' terms. Ledgered per Rule G (LEMA-9927) so the sweep stops re-considering it; not evaluated for dateability.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-09T12:08:00Z",
+          "method": "classified from Exa search-result title/URL, no fetch needed (clearly different show on its face)",
+          "status": null,
+          "issue": "LEMA-12281",
+          "note": "Pass 1 Exa broad-query noise, consistent with the routine's known post-finale broad-query noise pattern."
+        }
+      ]
+    },
+    {
+      "url": "https://www.macobserver.com/appletv/announces-dustfall-a-new-crime-thriller-starring-anna-torv/",
+      "firstSeen": "2026-10-09T12:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: MacObserver article about 'Dustfall', an unrelated new Apple TV crime thriller starring Anna Torv -- different show, surfaced only via Pass 1 broad EN query matching on 'Apple TV' + crime-genre terms. Ledgered per Rule G (LEMA-9927) so the sweep stops re-considering it; not evaluated for dateability.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-09T12:08:00Z",
+          "method": "classified from Exa search-result title/URL, no fetch needed (clearly different show on its face)",
+          "status": null,
+          "issue": "LEMA-12281",
+          "note": "Pass 1 Exa broad-query noise, consistent with the routine's known post-finale broad-query noise pattern."
+        }
+      ]
+    },
+    {
+      "url": "https://www.dizibox.live/avatar-seven-havens-1-sezon-2-bolum-izle/",
+      "firstSeen": "2026-10-09T12:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: Turkish streaming-site episode page for 'Avatar: Seven Havens' season 1 episode 2 -- a wholly different animated series, surfaced only via Pass 1 broad EN query matching on 'season 2' terms. Ledgered per Rule G (LEMA-9927) so the sweep stops re-considering it; not evaluated for dateability.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-09T12:08:00Z",
+          "method": "classified from Exa search-result title/URL, no fetch needed (clearly different show on its face)",
+          "status": null,
+          "issue": "LEMA-12281",
+          "note": "Pass 1 Exa broad-query noise, consistent with the routine's known post-finale broad-query noise pattern."
+        }
+      ]
+    },
+    {
+      "url": "https://www.macobserver.com/appletv/stick-season-2-gets-november-4-release-date-watch-the-new-trailer/",
+      "firstSeen": "2026-10-09T12:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: MacObserver article about 'Stick' Season 2's November 4 release date -- different Apple TV show, surfaced only via Pass 1 broad EN query matching on 'Apple TV Season 2' terms. Ledgered per Rule G (LEMA-9927) so the sweep stops re-considering it; not evaluated for dateability.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-09T12:08:00Z",
+          "method": "classified from Exa search-result title/URL, no fetch needed (clearly different show on its face)",
+          "status": null,
+          "issue": "LEMA-12281",
+          "note": "Pass 1 Exa broad-query noise, consistent with the routine's known post-finale broad-query noise pattern."
+        }
+      ]
+    },
+    {
+      "url": "https://warhammerleveling.org/article/nocturne-stephen-graham-liev-schreiber-star-in-apple-tv-s-upcoming-crime-thriller",
+      "firstSeen": "2026-10-09T12:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: Article about 'Nocturne', an unrelated upcoming Apple TV crime thriller starring Stephen Graham and Liev Schreiber -- different show, surfaced only via Pass 1 broad EN query matching on 'Apple TV' + crime-thriller terms. Ledgered per Rule G (LEMA-9927) so the sweep stops re-considering it; not evaluated for dateability.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-09T12:08:00Z",
+          "method": "classified from Exa search-result title/URL, no fetch needed (clearly different show on its face)",
+          "status": null,
+          "issue": "LEMA-12281",
+          "note": "Pass 1 Exa broad-query noise, consistent with the routine's known post-finale broad-query noise pattern."
+        }
+      ]
+    },
+    {
+      "url": "https://messapi.org/article/sugar-season-2-on-apple-tv-premiere-date-cast-trailer-everything-we-know",
+      "firstSeen": "2026-10-09T12:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: Article about 'Sugar' Season 2 on Apple TV -- a different show, surfaced only via Pass 1 broad EN query matching on 'Apple TV Season 2' terms. Ledgered per Rule G (LEMA-9927) so the sweep stops re-considering it; not evaluated for dateability.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-09T12:08:00Z",
+          "method": "classified from Exa search-result title/URL, no fetch needed (clearly different show on its face)",
+          "status": null,
+          "issue": "LEMA-12281",
+          "note": "Pass 1 Exa broad-query noise, consistent with the routine's known post-finale broad-query noise pattern."
+        }
+      ]
+    },
+    {
+      "url": "https://glamour.globo.com/entretenimento/filmes-e-series/noticia/2026/10/amor-da-minha-vida-elenco-fala-sobre-relacoes-limites-e-amadurecimento-na-segunda-temporada.ghtml",
+      "firstSeen": "2026-10-09T12:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: Globo Glamour (Brazil) article about the cast of 'Amor da Minha Vida' discussing its second season -- a wholly different telenovela, surfaced only via Pass 1 broad ES query ('Barbara Mori entrevista Las Azules temporada 2') matching on generic 'segunda temporada' terms. Ledgered per Rule G (LEMA-9927) so the sweep stops re-considering it; not evaluated for dateability.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-09T12:08:00Z",
+          "method": "classified from Exa search-result title/URL, no fetch needed (clearly different show on its face)",
+          "status": null,
+          "issue": "LEMA-12281",
+          "note": "Pass 1 Exa broad-query noise, consistent with the routine's known post-finale broad-query noise pattern."
+        }
+      ]
+    },
+    {
+      "url": "https://www.ambito.com/espectaculos/si-sos-gamer-no-te-podes-perder-esta-serie-netflix-que-se-renueva-octubre-n6330811",
+      "firstSeen": "2026-10-09T12:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: Ambito.com article about an unrelated Netflix gamer-themed series renewal -- different show/platform entirely, surfaced only via Pass 1 broad ES query matching on generic 'serie se renueva' terms. Ledgered per Rule G (LEMA-9927) so the sweep stops re-considering it; not evaluated for dateability.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-09T12:08:00Z",
+          "method": "classified from Exa search-result title/URL, no fetch needed (clearly different show on its face)",
+          "status": null,
+          "issue": "LEMA-12281",
+          "note": "Pass 1 Exa broad-query noise, consistent with the routine's known post-finale broad-query noise pattern."
+        }
+      ]
+    },
+    {
+      "url": "https://www.esquire.com/es/actualidad/tv/a74063766/javier-morgade-raphael-actor-serie-netflix-entrevista-fotos/",
+      "firstSeen": "2026-10-09T12:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Rule G: Esquire Spain interview with actor Javier Morgade about his role in an unrelated Netflix series ('Raphael') -- different show/actor entirely, no connection to Las Azules or Barbara Mori, surfaced only via Pass 1 broad ES query semantic matching. Ledgered per Rule G (LEMA-9927) so the sweep stops re-considering it; not evaluated for dateability.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-09T12:08:00Z",
+          "method": "classified from Exa search-result title/URL, no fetch needed (clearly different show on its face)",
+          "status": null,
+          "issue": "LEMA-12281",
+          "note": "Pass 1 Exa broad-query noise, consistent with the routine's known post-finale broad-query noise pattern."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-09T08:05:00Z"
+  "lastUpdated": "2026-10-09T12:08:00Z"
 }
