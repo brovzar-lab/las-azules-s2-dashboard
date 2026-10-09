@@ -22680,7 +22680,167 @@
           "note": "Confirmed archive/tag listing structure, no standalone prose."
         }
       ]
+    },
+    {
+      "url": "https://stanbowman.com/article/apple-tv-s-sugar-season-2-trailer-big-twist-still-hidden",
+      "firstSeen": "2026-10-09T08:05:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T08:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Content-farm page on custommapposter.com (served via a stanbowman.com redirect) about Apple TV's \"Sugar\" Season 2 trailer (Colin Farrell). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple TV\" + season terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T08:05:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12267",
+          "note": "WebFetch (after following 302 redirect to custommapposter.com) confirmed the article is about a different show (Sugar S2), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://mynorthminster.org/article/imperfect-women-why-this-apple-tv-thriller-has-viewers-hooked-episode-3-preview",
+      "firstSeen": "2026-10-09T08:05:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T08:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Content-farm page on custommapposter.com (served via a mynorthminster.org redirect) about Apple TV+'s \"Imperfect Women\" (Kerry Washington, Elisabeth Moss). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple TV\" + season terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T08:05:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12267",
+          "note": "WebFetch (after following 302 redirect to custommapposter.com) confirmed the article is about a different show (Imperfect Women), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://literaturamondo.org/article/apple-s-new-vertical-mini-series-nido-de-villanas-shot-with-iphone-17-pro",
+      "firstSeen": "2026-10-09T08:05:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T08:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Content-farm page on custommapposter.com (served via a literaturamondo.org redirect) about Apple's \"Nido de Villanas\" vertical mini-series shot on iPhone 17 Pro. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple\" + Spanish-language-drama terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T08:05:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12267",
+          "note": "WebFetch (after following 302 redirect to custommapposter.com) confirmed the article is about a different show (Nido de Villanas), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://clcepa.org/article/michelle-maclaren-directs-james-marsden-in-apple-tv-thriller-disavowed-exclusive-details",
+      "firstSeen": "2026-10-09T08:05:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T08:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Content-farm page on custommapposter.com (served via a clcepa.org redirect) about Apple TV+'s \"Disavowed\" (James Marsden, dir. Michelle MacLaren). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on \"Apple TV thriller\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T08:05:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12267",
+          "note": "WebFetch (after following 302 redirect to custommapposter.com) confirmed the article is about a different show (Disavowed), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://los40.com/2026/10/09/furia-temporada-2-llega-a-hbo-cuantos-capitulos-tiene-reparto-y-de-que-trata",
+      "firstSeen": "2026-10-09T08:05:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-09T08:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Los40.com article about \"Furia\" Season 2 arriving on HBO (episode count, cast, synopsis). Different show and different platform than Las Azules (Apple TV+); WebFetch was blocked by the site (unable to fetch), but the headline/URL slug unambiguously name a different title (\"furia-temporada-2-llega-a-hbo\") with no connection to Las Azules or Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-09T08:05:00Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-12267",
+          "note": "WebFetch blocked by site; classification made on unambiguous headline/URL evidence (different show, different platform) per Rule G, which gates on relevance not dateability."
+        }
+      ]
+    },
+    {
+      "url": "https://latam.martincid.com/tv-latam/bia-y-victor-amor-de-mi-vida-2-llega-a-disney-con-bruna-marquezine-enfrentando-la-vida-en-pareja",
+      "firstSeen": "2026-10-09T08:05:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T08:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "MartinCid LatAm article about \"Bia y Víctor: Amor de mi vida\" Season 2 on Disney+ (Bruna Marquezine, Sérgio Malheiros). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic telenovela/season-2 terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T08:05:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12267",
+          "note": "WebFetch confirmed the article is about a different show (Bia y Víctor), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://la100.cienradios.com/espectaculos/cine-y-series/se-estrena-la-serie-de-timbiriche-y-su-elenco-original-la-rechazo-no-es-la-historia-contada-por-nosotros",
+      "firstSeen": "2026-10-09T08:05:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-09T08:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La100/Cienradios article about the premiere of the \"Timbiriche\" biographical series (ViX) and its original cast's reaction. Different show, different platform than Las Azules. WebFetch was blocked by the site (unable to fetch), but the headline is unambiguous and corroborated by a separate confirmed Rule G finding this same run (razon.com.mx) on the identical Timbiriche story.",
+      "history": [
+        {
+          "attempt": "2026-10-09T08:05:00Z",
+          "method": "WebFetch",
+          "status": null,
+          "issue": "LEMA-12267",
+          "note": "WebFetch blocked by site; classification made on unambiguous headline evidence plus same-run corroboration from the razon.com.mx Timbiriche article, which fetched successfully and confirmed the topic."
+        }
+      ]
+    },
+    {
+      "url": "https://razon.com.mx/entretenimiento/2026/10/09/macarena-garcia-timbiriche-me-reta-al-interpretar-a-sasha",
+      "firstSeen": "2026-10-09T08:05:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-09T08:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Razón (Mexico) article about actress Macarena García portraying Sasha Sokol in the \"Timbiriche, la serie\" biographical drama (ViX). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic Mexican-cast/series terms.",
+      "history": [
+        {
+          "attempt": "2026-10-09T08:05:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12267",
+          "note": "WebFetch confirmed the article is about a different show (Timbiriche, la serie), unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-09T06:10:00.000Z"
+  "lastUpdated": "2026-10-09T08:05:00Z"
 }
