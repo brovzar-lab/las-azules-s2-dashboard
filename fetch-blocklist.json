@@ -24404,6 +24404,126 @@
           "note": "Tavily Extract returned no content (empty result), likely also bot-walled. Fetch fallback chain exhausted without confirming page content: this is dizibox.live's own show-index template (same domain/template pattern as two confirmed episode-watch piracy pages for other shows), consistent with a possible Rule E (unauthorized-distribution) candidate for Las Azules specifically, but not yet confirmed since no content was retrieved. Not classified as permanentSkip; left for retry on next run."
         }
       ]
+    },
+    {
+      "url": "https://screenrant.com/boston-blue-season-2-story-timeline-cliffhanger-ending-confirmed/",
+      "firstSeen": "2026-10-10T20:03:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T20:03:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ScreenRant piece about \"Boston Blue\" (a CBS crime drama, unrelated to Las Azules) Season 2 story timeline and cliffhanger ending. Surfaced via Pass 1 Exa broad English query (\"Las Azules Women in Blue Season 2 Apple TV\") on a generic title-token match (\"Blue\"/\"Season 2\"). No mention of Las Azules or Women in Blue anywhere in the piece.",
+      "history": [
+        {
+          "attempt": "2026-10-10T20:03:43Z",
+          "method": "Exa search metadata (title/snippet review)",
+          "status": 200,
+          "issue": "LEMA-12347",
+          "note": "Confirmed off-topic: piece is about Boston Blue, an unrelated show."
+        }
+      ]
+    },
+    {
+      "url": "https://vapaws.org/article/unveiling-sugar-season-2-release-date-episodes-and-more",
+      "firstSeen": "2026-10-10T20:03:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T20:03:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "vapaws.org piece about \"Sugar\" Season 2 release date and episodes, an unrelated Apple TV+ show. Surfaced via Pass 1 Exa broad English query (\"Las Azules Women in Blue Season 2 Apple TV\") on generic \"Season 2\"/\"Apple TV\" term overlap. No mention of Las Azules or Women in Blue anywhere in the piece.",
+      "history": [
+        {
+          "attempt": "2026-10-10T20:03:43Z",
+          "method": "Exa search metadata (title/snippet review)",
+          "status": 200,
+          "issue": "LEMA-12347",
+          "note": "Confirmed off-topic: piece is about Sugar, an unrelated show."
+        }
+      ]
+    },
+    {
+      "url": "https://seat42f.com/boston-blue-season-2-episode-1-recap/",
+      "firstSeen": "2026-10-10T20:03:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T20:03:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Seat42F recap of \"Boston Blue\" Season 2 Episode 1 (\"The Crash\"), an unrelated show. Surfaced via Pass 1 Exa broad English query (\"Las Azules Women in Blue Season 2 Apple TV\") on generic \"Blue\"/\"Season 2\" term overlap. No mention of Las Azules or Women in Blue anywhere in the piece.",
+      "history": [
+        {
+          "attempt": "2026-10-10T20:03:43Z",
+          "method": "Exa search metadata (title/snippet review)",
+          "status": 200,
+          "issue": "LEMA-12347",
+          "note": "Confirmed off-topic: piece is about Boston Blue, an unrelated show."
+        }
+      ]
+    },
+    {
+      "url": "https://elconstitucional.es/es/mqtv/mas-tv/rosalia-pone-ritmo-trailer-segunda-temporada-todas-ley-ya-tiene-fecha-estreno-en-disney_8763_102.html",
+      "firstSeen": "2026-10-10T20:03:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T20:03:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Constitucional piece about Rosalía scoring the Season 2 trailer for \"Todas las de la ley\" on Disney+, an unrelated Spanish series. Surfaced via Pass 1 Exa broad Spanish query (\"Bárbara Mori entrevista Las Azules temporada 2\") on generic \"temporada 2\"/\"trailer\" term overlap. No mention of Las Azules, Bárbara Mori, or Women in Blue anywhere in the piece.",
+      "history": [
+        {
+          "attempt": "2026-10-10T20:03:43Z",
+          "method": "Exa search metadata (title/snippet review)",
+          "status": 200,
+          "issue": "LEMA-12347",
+          "note": "Confirmed off-topic: piece is about Todas las de la ley (Disney+), an unrelated show."
+        }
+      ]
+    },
+    {
+      "url": "https://fakeperocierto.com/todo-listo-para-el-estreno-de-la-serie-de-timbiriche-conoce-el-elenco-y-cuando-verla",
+      "firstSeen": "2026-10-10T20:03:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T20:03:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Fake pero Cierto piece about an upcoming Timbiriche biographical series (cast and premiere date), an unrelated production. Surfaced via Pass 1 Exa broad Spanish query (\"Bárbara Mori entrevista Las Azules temporada 2\") on generic \"serie\"/\"estreno\"/\"elenco\" term overlap. No mention of Las Azules, Bárbara Mori, or Women in Blue anywhere in the piece.",
+      "history": [
+        {
+          "attempt": "2026-10-10T20:03:43Z",
+          "method": "Exa search metadata (title/snippet review)",
+          "status": 200,
+          "issue": "LEMA-12347",
+          "note": "Confirmed off-topic: piece is about a Timbiriche series, an unrelated production."
+        }
+      ]
+    },
+    {
+      "url": "https://produ.com/?p=635238",
+      "firstSeen": "2026-10-10T20:03:43Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T20:03:43Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "WordPress ID-permalink form (looksLikeIdPermalink flag from lookup --strict). Resolved via curl -L: redirects (200 final) to https://www.produ.com/ushispanic/noticias/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama-produced-by-lemon-studios/, which is already present in data.json (PRODU, ts 20220525, \"Apple TV orders Las Azules...\"). Same document at an unresolved ID-permalink address, not new coverage.",
+      "history": [
+        {
+          "attempt": "2026-10-10T20:03:43Z",
+          "method": "curl -L (redirect check)",
+          "status": 200,
+          "issue": "LEMA-12347",
+          "note": "Redirects to https://www.produ.com/ushispanic/noticias/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama-produced-by-lemon-studios/, already tracked in data.json under PRODU, ts 20220525."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-10-10T18:06:00Z"
