@@ -23915,7 +23915,104 @@
           "note": "?p=1399053 redirects to the canonical slug URL, which was fetched and added to data.json."
         }
       ]
+    },
+    {
+      "url": "https://jackpotescapecollection.com/article/imperfect-women-season-2-kerry-washington-s-apple-tv-thriller-renewed-for-spinoff",
+      "firstSeen": "2026-10-10T10:06:05Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T10:06:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Apple TV's \"Imperfect Women\" starring Kerry Washington being renewed for Season 2 / a spinoff. A different, unrelated show; surfaced only as a broad-query match on generic \"Season 2\"/\"Apple TV\" terms. No mention of Las Azules or Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-10T10:06:05Z",
+          "method": "Exa search (title/metadata only, no fetch needed)",
+          "status": 200,
+          "issue": "LEMA-12337",
+          "note": "Title and search snippet make the off-topic subject unambiguous; classified without a body fetch per established Rule G practice."
+        }
+      ]
+    },
+    {
+      "url": "https://modgames2026.com/article/widow-s-bay-season-2-all-you-need-to-know",
+      "firstSeen": "2026-10-10T10:06:05Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T10:06:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about an unrelated show, \"Widow's Bay\" Season 2. Surfaced only as a broad-query match on generic \"Season 2\" terms. No mention of Las Azules or Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-10T10:06:05Z",
+          "method": "Exa search (title/metadata only, no fetch needed)",
+          "status": 200,
+          "issue": "LEMA-12337",
+          "note": "Title and search snippet make the off-topic subject unambiguous; classified without a body fetch per established Rule G practice."
+        }
+      ]
+    },
+    {
+      "url": "https://docuprint.cloud68.co/post/1554850/barbara-mori-net-worth-wiki-age-weight-and-height-relationships-family-and-more.html",
+      "firstSeen": "2026-10-10T10:06:05Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T10:06:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Generic celebrity net-worth/wiki aggregator page about Barbara Mori personally (age, height, relationships, family), not about Las Azules or Women in Blue. Surfaced only as a broad-query match on her name.",
+      "history": [
+        {
+          "attempt": "2026-10-10T10:06:05Z",
+          "method": "Exa search (title/metadata only, no fetch needed)",
+          "status": 200,
+          "issue": "LEMA-12337",
+          "note": "Title identifies this as a generic bio/net-worth farm page, not show coverage; classified without a body fetch per established Rule G practice."
+        }
+      ]
+    },
+    {
+      "url": "https://excelsior.com.mx/espectaculos/cecilia-suarez-une-elenco-satira-estado-furia-parte-2-hbo-max",
+      "firstSeen": "2026-10-10T10:06:05Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T10:06:05Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Excelsior article about actress Cecilia Suarez joining the cast of HBO Max's \"Estado de Furia parte 2\" (\"State of Fury part 2\"), an unrelated show. Surfaced only as a broad-query match on generic Mexican-actress/\"parte 2\" terms. No mention of Las Azules or Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-10T10:06:05Z",
+          "method": "Exa search (title/metadata only, no fetch needed)",
+          "status": 200,
+          "issue": "LEMA-12337",
+          "note": "Title identifies a different show (HBO Max's Estado de Furia); classified without a body fetch per established Rule G practice."
+        }
+      ]
+    },
+    {
+      "url": "https://forums.imore.com/imore-com-news-discussion-contests/454101-apple-announces-new-spanish-crime-drama-las-azules-for-tv-plus-print.html",
+      "firstSeen": "2026-10-10T10:06:05Z",
+      "failCount": 1,
+      "lastStatus": 301,
+      "lastAttempt": "2026-10-10T10:06:05Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-10-10T10:06:05Z",
+          "method": "WebFetch",
+          "status": 301,
+          "issue": "LEMA-12337",
+          "note": "URL 301-redirects to the generic iMore homepage (www.imore.com), not to a specific article or archived thread. The iMore community forum this thread lived on appears retired; no distinct content is retrievable at this address. Treated as a full-chain fetch failure, not an editorial exclusion: no permanentSkip set, so a future run can re-check if the forum is restored."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-10T08:10:03Z"
+  "lastUpdated": "2026-10-10T10:06:05Z"
 }
