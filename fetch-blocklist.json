@@ -23528,6 +23528,146 @@
           "note": "URL returns HTTP 200 but server-side redirects (confirmed via curl -L, canonical tag points to homepage) to the SoloCine homepage; zero occurrences of 'las-azules' in the resolved HTML. WebFetch and Tavily Extract (advanced) both returned only homepage/aggregator content, no article body recoverable. Treated as a full fetch-chain failure (content gone, not merely undateable), failCount=1, not yet at the 3-fetch cooldown threshold."
         }
       ]
+    },
+    {
+      "url": "https://fictionhorizon.com/boston-blue-season-2-episode-2-release-date-time-where-to-watch-preview/",
+      "firstSeen": "2026-10-10T04:04:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T04:04:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Fiction Horizon piece about Boston Blue Season 2 Episode 2 (CBS procedural spinoff), off-topic. No mention of Las Azules. Broad-query false positive (Pass 1 Exa).",
+      "history": [
+        {
+          "attempt": "2026-10-10T04:04:10Z",
+          "method": "Exa",
+          "status": 200,
+          "issue": "LEMA-12318",
+          "note": "Surfaced by Pass 1 Exa broad EN/ES query; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvinsider.com/1296171/boston-blue-season-2-episode-1-explained-lena-silver-danny-reagan-sonequa-martin-green/",
+      "firstSeen": "2026-10-10T04:04:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T04:04:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Insider piece explaining Boston Blue Season 2 Episode 1 (Lena Silver/Danny Reagan storyline), off-topic. Different show, no mention of Las Azules. Broad-query false positive (Pass 1 Exa).",
+      "history": [
+        {
+          "attempt": "2026-10-10T04:04:10Z",
+          "method": "Exa",
+          "status": 200,
+          "issue": "LEMA-12318",
+          "note": "Surfaced by Pass 1 Exa broad EN/ES query; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvline.com/2279457/boston-blue-season-2-episode-1-explained-donnie-wahlberg-interview-video/",
+      "firstSeen": "2026-10-10T04:04:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T04:04:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TVLine Boston Blue Season 2 Episode 1 interview with Donnie Wahlberg, off-topic. Different show, no mention of Las Azules. Broad-query false positive (Pass 1 Exa).",
+      "history": [
+        {
+          "attempt": "2026-10-10T04:04:10Z",
+          "method": "Exa",
+          "status": 200,
+          "issue": "LEMA-12318",
+          "note": "Surfaced by Pass 1 Exa broad EN/ES query; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvfanatic.com/boston-blue-season-2-episode-1-review-the-crash/",
+      "firstSeen": "2026-10-10T04:04:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T04:04:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Fanatic review of Boston Blue Season 2 Episode 1 (\"The Crash\"), off-topic. Different show, no mention of Las Azules. Broad-query false positive (Pass 1 Exa).",
+      "history": [
+        {
+          "attempt": "2026-10-10T04:04:10Z",
+          "method": "Exa",
+          "status": 200,
+          "issue": "LEMA-12318",
+          "note": "Surfaced by Pass 1 Exa broad EN/ES query; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.yahoo.com/entertainment/tv/articles/boston-blue-season-2-premiere-030000567.html",
+      "firstSeen": "2026-10-10T04:04:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T04:04:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Yahoo Entertainment piece on the Boston Blue Season 2 premiere, off-topic. Different show, no mention of Las Azules. Broad-query false positive (Pass 1 Exa).",
+      "history": [
+        {
+          "attempt": "2026-10-10T04:04:10Z",
+          "method": "Exa",
+          "status": 200,
+          "issue": "LEMA-12318",
+          "note": "Surfaced by Pass 1 Exa broad EN/ES query; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.c5n.com/ratingcero/cesar-troncoso-hablo-su-papel-la-casa-junto-diego-peretti-vivimos-un-tiempo-absoluta-zozobra-laboral-n251230",
+      "firstSeen": "2026-10-10T04:04:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T04:04:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "C5N (Argentina) piece on actor Cesar Troncoso discussing his role in \"La Casa\" opposite Diego Peretti, off-topic. Unrelated series, no mention of Las Azules. Broad-query false positive (Pass 1 Exa).",
+      "history": [
+        {
+          "attempt": "2026-10-10T04:04:10Z",
+          "method": "Exa",
+          "status": 200,
+          "issue": "LEMA-12318",
+          "note": "Surfaced by Pass 1 Exa broad EN/ES query; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://lopezdoriga.com/entretenimiento/la-serie-inspirada-en-timbiriche-estrena-con-una-trama-marcada-por-la-polemica-y-reclamos/",
+      "firstSeen": "2026-10-10T04:04:10Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T04:04:10Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Lopez-Doriga Digital piece on a series inspired by the pop group Timbiriche, off-topic. Unrelated series, no mention of Las Azules. Broad-query false positive (Pass 1 Exa).",
+      "history": [
+        {
+          "attempt": "2026-10-10T04:04:10Z",
+          "method": "Exa",
+          "status": 200,
+          "issue": "LEMA-12318",
+          "note": "Surfaced by Pass 1 Exa broad EN/ES query; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-10-10T00:07:15Z"
