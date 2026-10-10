@@ -5623,6 +5623,19 @@
     "storyGroup": "reuters-s2-fact-fiction-20260810"
   },
   {
+    "outlet": "Portal do Holanda",
+    "headline": "2ª temporada de \"Las Azules\" mistura realidade e ficção para contar história de corrupção e amadurecimento",
+    "url": "https://www.portaldoholanda.com.br/mundo/2a-temporada-de-las-azules-mistura-realidade-e-ficcao-para-contar-historia-de-corrupcao-e-amadurecimento",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "dateSource": "visible_dateline",
+    "lang": "PT",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Brazilian portal's republication of the Reuters feature (byline Hanna Rantala) on Season 2: Mexico's first female police force investigates a case tied to the 1968 Tlatelolco student massacre, blending historical fact with fiction around corruption and growth. Distinct outlet republishing the same wire story already carried by Terra and numerous US radio syndications (Rule I).",
+    "storyGroup": "reuters-s2-fact-fiction-20260810"
+  },
+  {
     "outlet": "Chic Magazine",
     "headline": "\"Las Azules\": Cuántos capítulos tendrá la segunda temporada y cuándo salen todos",
     "url": "https://www.chicmagazine.com.mx/personajes/las-azules-temporada-2-cuandos-capitulos-tendra-y-cuando-salen",
@@ -8866,6 +8879,18 @@
     "excerpt": "French outlet Ayther speculates on a potential Season 2 release window for Las Azules (Women in Blue) following its Season 1 premiere on July 24, 2024, noting no renewal had yet been announced and estimating a late-2026 window pending Apple's review of viewership and critical reception."
   },
   {
+    "outlet": "Consequence",
+    "headline": "The Cast of Women in Blue on Their New Apple TV+ Series and Embodying 1970s Mexico: Podcast",
+    "url": "https://feed.consequence.net/2024/08/women-in-blue-cast-apple-tv-podcast/",
+    "date": "Aug 5, 2024",
+    "ts": 20240805,
+    "dateSource": "jsonld_datepublished",
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Cast members Barbara Mori, Ximena Sarinana, Natalia Tellez, and Amorita Rasgado discuss Apple TV+'s Women in Blue, which dramatizes Mexico's first female police unit in 1970s Mexico City: patriarchal systems, 1970s production design, and an all-Hispanic cast portraying women navigating gender-based obstacles as their squad's real purpose, a publicity distraction from an active serial killer investigation, comes to light."
+  },
+  {
     "outlet": "EscribiendoCine",
     "headline": "Crítica de \"Las Azules\": Una audaz mezcla de thriller, comedia y crítica social con Leonardo Sbaraglia y Bárbara Mori",
     "url": "https://www.escribiendocine.com/noticias/2024/08/03/18061-critica-de-las-azules-una-audaz-mezcla-de-thriller-comedia-y-critica-social-con-leonardo-sbaraglia-y-barbara-mori",
@@ -10165,18 +10190,5 @@
     "market": "US",
     "type": "Tech",
     "excerpt": "MacDailyNews reports Apple TV+ has ordered the 10-episode Spanish-language crime drama Las Azules, created by Fernando Rovzar and Pablo Aramendi, following four women who join Mexico's first female police force in 1970 only to discover their squad is a publicity stunt masking a serial-killer investigation."
-  },
-  {
-    "outlet": "Portal do Holanda",
-    "headline": "2ª temporada de \"Las Azules\" mistura realidade e ficção para contar história de corrupção e amadurecimento",
-    "url": "https://www.portaldoholanda.com.br/mundo/2a-temporada-de-las-azules-mistura-realidade-e-ficcao-para-contar-historia-de-corrupcao-e-amadurecimento",
-    "date": "Aug 10, 2026",
-    "ts": 20260810,
-    "dateSource": "visible_dateline",
-    "lang": "PT",
-    "market": "International",
-    "type": "Entertainment",
-    "excerpt": "Brazilian portal's republication of the Reuters feature (byline Hanna Rantala) on Season 2: Mexico's first female police force investigates a case tied to the 1968 Tlatelolco student massacre, blending historical fact with fiction around corruption and growth. Distinct outlet republishing the same wire story already carried by Terra and numerous US radio syndications (Rule I).",
-    "storyGroup": "reuters-s2-fact-fiction-20260810"
   }
 ]
