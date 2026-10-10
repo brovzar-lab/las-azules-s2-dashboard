@@ -20812,10 +20812,10 @@
     {
       "url": "https://macobserver.com/?p=488827",
       "firstSeen": "2026-10-05T20:04:41Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 403,
-      "lastAttempt": "2026-10-09T14:00:00Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-10-10T16:07:02Z",
+      "cooldownUntil": "2026-11-09T16:07:02Z",
       "history": [
         {
           "attempt": "2026-10-05T20:04:41Z",
@@ -20851,6 +20851,20 @@
           "status": "no_content",
           "issue": "LEMA-12294",
           "note": "Tavily Extract returned no content/empty result. Full-chain failure, failCount incremented 1->2."
+        },
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12344",
+          "note": "WebFetch returned HTTP 403 (Cloudflare bot-wall) again."
+        },
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "Tavily Extract (advanced)",
+          "status": "no_content",
+          "issue": "LEMA-12344",
+          "note": "Tavily Extract returned no content again. Full-chain failure, failCount incremented 2->3, cooldownUntil set to 30 days."
         }
       ]
     },
@@ -24072,7 +24086,221 @@
       "skipReason": "editorial_off_topic_false_positive",
       "reviewable": false,
       "skipNote": "Surfaced via Pass 1 Exa broad ES query (\"Barbara Mori entrevista Las Azules temporada 2\"). WebFetch failed (host fetch restriction); retrieved via Tavily Extract instead. Article is about the Disney+ series \"Amor da Minha Vida\", covering actress Alanis Guillen's character's romance with a character played by Bruna Marquezine. No mention of Las Azules or Women in Blue anywhere. Broad-query false positive on generic Spanish-language entertainment/\"serie\" terms."
+    },
+    {
+      "url": "https://macobserver.com/?p=488641",
+      "firstSeen": "2026-10-10T16:07:02Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-10T16:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "curl -L (redirect check)",
+          "status": 403,
+          "issue": "LEMA-12344",
+          "note": "looksLikeIdPermalink=true; curl -L did not redirect (Cloudflare challenge/WAF block returned at the ?p= URL itself, same host behavior as the sibling ?p=488827 row)."
+        },
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12344",
+          "note": "WebFetch returned HTTP 403 (Cloudflare bot-wall challenge)."
+        },
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "Tavily Extract (advanced)",
+          "status": "no_content",
+          "issue": "LEMA-12344",
+          "note": "Tavily Extract (batched with the ?p=488827 sibling URL) returned no content/empty result for this URL. Full-chain failure, failCount=1. Candidate surfaced via web search as 'Women in Blue Season 3: What the Season 2 Finale Leaves Open for Maria and the Azules' (MacObserver); could not be dated or sourced due to the fetch block."
+        }
+      ]
+    },
+    {
+      "url": "https://haitiartcooperative.org/article/widow-s-bay-season-2-all-the-latest-updates-and-release-date-speculations",
+      "firstSeen": "2026-10-10T16:07:02Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T16:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About 'Widow's Bay' Season 2, a different Apple TV+ series entirely. Surfaced via Pass 1 Exa broad English query (generic 'Season 2'/'Apple TV' match).",
+      "history": [
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "Rule G classification (no fetch required, relevance miss identified from search result / fetched body)",
+          "status": "n/a",
+          "issue": "LEMA-12344",
+          "note": "About 'Widow's Bay' Season 2, a different Apple TV+ series entirely. Surfaced via Pass 1 Exa broad English query (generic 'Season 2'/'Apple TV' match)."
+        }
+      ]
+    },
+    {
+      "url": "https://solatatech.com/article/boston-blue-season-2-release-date-cast-plot-everything-we-know-so-far",
+      "firstSeen": "2026-10-10T16:07:02Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T16:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About 'Boston Blue' Season 2, a different, unrelated TV series. Surfaced via Pass 1 Exa broad English query (generic 'Season 2'/'Apple TV' match).",
+      "history": [
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "Rule G classification (no fetch required, relevance miss identified from search result / fetched body)",
+          "status": "n/a",
+          "issue": "LEMA-12344",
+          "note": "About 'Boston Blue' Season 2, a different, unrelated TV series. Surfaced via Pass 1 Exa broad English query (generic 'Season 2'/'Apple TV' match)."
+        }
+      ]
+    },
+    {
+      "url": "https://snooper-scope.in/boston-blue-season-2-review-the-family-procedural-formula-gets-a-fresh-coat-of-paint/",
+      "firstSeen": "2026-10-10T16:07:02Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T16:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "A review of 'Boston Blue' Season 2, a different, unrelated TV series (CBS procedural). Surfaced via Pass 1 Exa broad English query.",
+      "history": [
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "Rule G classification (no fetch required, relevance miss identified from search result / fetched body)",
+          "status": "n/a",
+          "issue": "LEMA-12344",
+          "note": "A review of 'Boston Blue' Season 2, a different, unrelated TV series (CBS procedural). Surfaced via Pass 1 Exa broad English query."
+        }
+      ]
+    },
+    {
+      "url": "https://broadcast.equitek.ca/loot-season-2-unpacking-apple-tvs-hilarious-return-to-absurdist-wealth-satire",
+      "firstSeen": "2026-10-10T16:07:02Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T16:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About 'Loot' Season 2, a different Apple TV+ comedy series entirely. Surfaced via Pass 1 Exa broad English query (generic 'Season 2'/'Apple TV' match).",
+      "history": [
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "Rule G classification (no fetch required, relevance miss identified from search result / fetched body)",
+          "status": "n/a",
+          "issue": "LEMA-12344",
+          "note": "About 'Loot' Season 2, a different Apple TV+ comedy series entirely. Surfaced via Pass 1 Exa broad English query (generic 'Season 2'/'Apple TV' match)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.a24.com/trends/luis-zahera-brilla-netflix-la-nueva-temporada-la-serie-espanola-mas-vista-n1605155",
+      "firstSeen": "2026-10-10T16:07:02Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T16:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "About Luis Zahera and an unrelated Spanish-language Netflix series. Surfaced via Pass 1 Exa Spanish query (generic 'temporada'/'serie' match); no connection to Las Azules or Barbara Mori.",
+      "history": [
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "Rule G classification (no fetch required, relevance miss identified from search result / fetched body)",
+          "status": "n/a",
+          "issue": "LEMA-12344",
+          "note": "About Luis Zahera and an unrelated Spanish-language Netflix series. Surfaced via Pass 1 Exa Spanish query (generic 'temporada'/'serie' match); no connection to Las Azules or Barbara Mori."
+        }
+      ]
+    },
+    {
+      "url": "https://topics.smt.docomo.ne.jp/article/sponichi/entertainment/sponichi-spngoo-20261010-0241",
+      "firstSeen": "2026-10-10T16:07:02Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T16:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Japanese-language article about the TV drama 'VIVANT' and an unrelated celebrity (Miyashita Kyoko). No connection to Las Azules; surfaced via Pass 1 Exa Spanish query false match.",
+      "history": [
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "Rule G classification (no fetch required, relevance miss identified from search result / fetched body)",
+          "status": "n/a",
+          "issue": "LEMA-12344",
+          "note": "Japanese-language article about the TV drama 'VIVANT' and an unrelated celebrity (Miyashita Kyoko). No connection to Las Azules; surfaced via Pass 1 Exa Spanish query false match."
+        }
+      ]
+    },
+    {
+      "url": "https://culturageek.com.ar/nominados-premios-emmy-2026/",
+      "firstSeen": "2026-10-10T16:07:02Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T16:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "General Emmy 2026 nominees roundup (The Pitt, Hacks, Widow's Bay, Pluribus, etc.). Fetched and confirmed via Tavily Extract: Las Azules / Women in Blue is not mentioned anywhere in the article (published 8 julio 2026, no Las Azules nomination that year's list covers). Surfaced via Pass 2 'Emmy premios octubre 2026' search.",
+      "history": [
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "Rule G classification (no fetch required, relevance miss identified from search result / fetched body)",
+          "status": "n/a",
+          "issue": "LEMA-12344",
+          "note": "General Emmy 2026 nominees roundup (The Pitt, Hacks, Widow's Bay, Pluribus, etc.). Fetched and confirmed via Tavily Extract: Las Azules / Women in Blue is not mentioned anywhere in the article (published 8 julio 2026, no Las Azules nomination that year's list covers). Surfaced via Pass 2 'Emmy premios octubre 2026' search."
+        }
+      ]
+    },
+    {
+      "url": "https://revistamercado.do/actualidad/estos-son-los-ganadores-revisa-la-lista-completa-de-los-premios-emmy-2026/",
+      "firstSeen": "2026-10-10T16:07:02Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T16:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "General Emmy 2026 winners roundup. Fetched via WebFetch and confirmed: Las Azules / Women in Blue is not mentioned anywhere in the article (published Sept 7, 2026, covers Creative Arts Emmy winners generally). Surfaced via Pass 2 'Emmy premios octubre 2026' search.",
+      "history": [
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "Rule G classification (no fetch required, relevance miss identified from search result / fetched body)",
+          "status": "n/a",
+          "issue": "LEMA-12344",
+          "note": "General Emmy 2026 winners roundup. Fetched via WebFetch and confirmed: Las Azules / Women in Blue is not mentioned anywhere in the article (published Sept 7, 2026, covers Creative Arts Emmy winners generally). Surfaced via Pass 2 'Emmy premios octubre 2026' search."
+        }
+      ]
+    },
+    {
+      "url": "https://kioncentralcoast.com/?p=1278872",
+      "firstSeen": "2026-10-10T16:07:02Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T16:07:02Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Emmy 2026 red-carpet fashion piece ('Asi desfilan las estrellas en la alfombra roja de los Emmy 2026', published Sept 14, 2026). Fetched via WebFetch and confirmed: no mention of Las Azules or Women in Blue. Surfaced via Pass 2 'Emmy premios octubre 2026' search.",
+      "history": [
+        {
+          "attempt": "2026-10-10T16:07:02Z",
+          "method": "Rule G classification (no fetch required, relevance miss identified from search result / fetched body)",
+          "status": "n/a",
+          "issue": "LEMA-12344",
+          "note": "Emmy 2026 red-carpet fashion piece ('Asi desfilan las estrellas en la alfombra roja de los Emmy 2026', published Sept 14, 2026). Fetched via WebFetch and confirmed: no mention of Las Azules or Women in Blue. Surfaced via Pass 2 'Emmy premios octubre 2026' search."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-10T12:10:00Z"
+  "lastUpdated": "2026-10-10T16:07:11Z"
 }
