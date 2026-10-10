@@ -23795,7 +23795,127 @@
           "note": "WebFetch confirmed off-topic: different show (Imperfect Women)."
         }
       ]
+    },
+    {
+      "url": "https://timewarnerent.com/boston-blue-season-2/",
+      "firstSeen": "2026-10-10T08:10:03Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T08:10:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Page is about \"Boston Blue\" (CBS Blue Bloods spinoff) Season 2, an unrelated show. Not fetched: title alone is unambiguous. Surfaced by Exa broad EN query (Pass 1), LEMA-12336.",
+      "history": [
+        {
+          "attempt": "2026-10-10T08:10:03Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12336",
+          "note": "Boston Blue Season 2 premiere piece, different show entirely; off-topic match on generic season-2/police-drama terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.celebdirtylaundry.com/2026/boston-blue-premiere-recap-10-09-26-season-2-episode-1-the-crash/",
+      "firstSeen": "2026-10-10T08:10:03Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T08:10:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Recap of \"Boston Blue\" Season 2 Episode 1 premiere (CBS Blue Bloods spinoff), unrelated to Las Azules. Not fetched: title alone is unambiguous. Surfaced by Exa broad EN query (Pass 1), LEMA-12336.",
+      "history": [
+        {
+          "attempt": "2026-10-10T08:10:03Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12336",
+          "note": "Boston Blue S2E1 recap, different show; off-topic match on generic season-2/blue terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mural.com.mx/danna-beli-y-mariana-conquistan-guadalajara-con-mentiras/ar3292137",
+      "firstSeen": "2026-10-10T08:10:03Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T08:10:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about performers Danna Paola (\"Beli\") and Mariana in a Guadalajara stage run of the musical \"Mentiras\"; unrelated to Las Azules. Not fetched: title alone is unambiguous. Surfaced by Exa broad ES query (Pass 1), LEMA-12336.",
+      "history": [
+        {
+          "attempt": "2026-10-10T08:10:03Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12336",
+          "note": "Stage musical coverage, different subject; off-topic match on generic Spanish-language entertainment terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.rtve.es/play/noticias/20261010/hace-cerebro-creer-propias-mentiras/17260461.shtml",
+      "firstSeen": "2026-10-10T08:10:03Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T08:10:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RTVE science/psychology article on why the brain believes its own lies (\"mentiras\"); unrelated to Las Azules. Not fetched: title alone is unambiguous. Surfaced by Exa broad ES query (Pass 1), LEMA-12336.",
+      "history": [
+        {
+          "attempt": "2026-10-10T08:10:03Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12336",
+          "note": "Neuroscience news article, off-topic match on generic Spanish search terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.rtve.es/play/videos/asi-somos/temporada-2-somos-decir-verdad-video/17260300/",
+      "firstSeen": "2026-10-10T08:10:03Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T08:10:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Video for RTVE's own unrelated show \"Asi somos\" Season 2; not Las Azules despite \"temporada 2\" match. Not fetched: title alone is unambiguous. Surfaced by Exa broad ES query (Pass 1), LEMA-12336.",
+      "history": [
+        {
+          "attempt": "2026-10-10T08:10:03Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12336",
+          "note": "Different RTVE in-house show, off-topic match on generic 'temporada 2' terms."
+        }
+      ]
+    },
+    {
+      "url": "https://feed.consequence.net/?p=1399053",
+      "firstSeen": "2026-10-10T08:10:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T08:10:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Unresolved WordPress ID-permalink (looksLikeIdPermalink flag) for https://feed.consequence.net/2024/08/women-in-blue-cast-apple-tv-podcast/, confirmed via curl -L redirect resolution (200). Canonical URL fetched and added to data.json this run (ts=20240805, outlet Consequence). Second address; canonical tracked instead. LEMA-12336.",
+      "history": [
+        {
+          "attempt": "2026-10-10T08:10:03Z",
+          "method": "WebFetch (redirect resolution)",
+          "status": 200,
+          "issue": "LEMA-12336",
+          "note": "?p=1399053 redirects to the canonical slug URL, which was fetched and added to data.json."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-10T00:07:15Z"
+  "lastUpdated": "2026-10-10T08:10:03Z"
 }
