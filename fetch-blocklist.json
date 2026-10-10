@@ -20670,26 +20670,6 @@
       ]
     },
     {
-      "url": "https://www.jingletree.com/imperfect-women-renewed-for-season-2-at-apple-tv-with-kerry-washington-returning-282473.html",
-      "firstSeen": "2026-10-05T20:04:41Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-10-05T20:04:41Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Jingletree article: \"Imperfect Women\" renewed for Season 2 at Apple TV with Kerry Washington returning. Same unrelated Apple TV show as the ScreenRant hit above; no mention of Las Azules. Broad-query false positive.",
-      "history": [
-        {
-          "attempt": "2026-10-05T20:04:41Z",
-          "method": "WebSearch",
-          "status": 200,
-          "issue": "LEMA-12111",
-          "note": "Surfaced by Pass 2 broad EN/ES web sweep; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
-        }
-      ]
-    },
-    {
       "url": "https://9to5mac.com/2026/10/05/apple-tv-brings-back-hit-limited-series-for-season-2-by-popular-demand/",
       "firstSeen": "2026-10-05T20:04:41Z",
       "failCount": 0,
@@ -23670,26 +23650,6 @@
       ]
     },
     {
-      "url": "https://jingletree.com/imperfect-women-renewed-for-season-2-at-apple-tv-with-kerry-washington-returning-282473.html",
-      "firstSeen": "2026-10-10T06:00:53Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-10-10T06:00:53Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Article is about \"Imperfect Women\", an unrelated Apple TV series starring Kerry Washington renewed for Season 2. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\"/\"Apple TV\" terms.",
-      "history": [
-        {
-          "attempt": "2026-10-10T06:00:53Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-12319",
-          "note": "WebFetch confirmed off-topic: different show (Imperfect Women)."
-        }
-      ]
-    },
-    {
       "url": "https://padillasport.com/article/sugar-season-2-finale-recap-will-there-be-a-season-3-all-your-questions-answered",
       "firstSeen": "2026-10-10T06:00:53Z",
       "failCount": 0,
@@ -23806,6 +23766,33 @@
           "status": 200,
           "issue": "LEMA-12319",
           "note": "WebFetch confirmed off-topic: unrelated reality competition video."
+        }
+      ]
+    },
+    {
+      "url": "https://jingletree.com/imperfect-women-renewed-for-season-2-at-apple-tv-with-kerry-washington-returning-282473.html",
+      "firstSeen": "2026-10-05T20:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T06:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about \"Imperfect Women\", an unrelated Apple TV series starring Kerry Washington renewed for Season 2. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\"/\"Apple TV\" terms. Prior note (LEMA-12111): Jingletree article: \"Imperfect Women\" renewed for Season 2 at Apple TV with Kerry Washington returning. Same unrelated Apple TV show as the ScreenRant hit above; no mention of Las Azules. Broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-05T20:04:41Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12111",
+          "note": "Surfaced by Pass 2 broad EN/ES web sweep; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
+        },
+        {
+          "attempt": "2026-10-10T06:00:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12319",
+          "note": "WebFetch confirmed off-topic: different show (Imperfect Women)."
         }
       ]
     }
