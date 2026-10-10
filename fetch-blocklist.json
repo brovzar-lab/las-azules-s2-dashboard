@@ -24300,7 +24300,111 @@
           "note": "Emmy 2026 red-carpet fashion piece ('Asi desfilan las estrellas en la alfombra roja de los Emmy 2026', published Sept 14, 2026). Fetched via WebFetch and confirmed: no mention of Las Azules or Women in Blue. Surfaced via Pass 2 'Emmy premios octubre 2026' search."
         }
       ]
+    },
+    {
+      "url": "https://dizibox.live/take-charge-of-my-heart-1-sezon-5-bolum-izle/2",
+      "firstSeen": "2026-10-10T18:06:00Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-10T18:06:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish dizibox.live episode-watch page for \"Take Charge of My Heart\" (Kalbimin Sahibi) season 1 episode 5, a different, unrelated show. Las Azules appears only in the site's unrelated alphabetical show-catalog sidebar, not in the page's actual content. Surfaced only as a broad-query match (Exa Pass 1 EN query).",
+      "history": [
+        {
+          "attempt": "2026-10-10T18:06:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12345",
+          "note": "WebFetch blocked (403); confirmed off-topic via Exa result title (\"Take Charge of My Heart 1.Sezon 5.Bölüm\") and via Tavily Extract sidebar content showing Las Azules only in an A-Z show catalog widget, not page content."
+        }
+      ]
+    },
+    {
+      "url": "https://dizibox.live/ted-lasso-4-sezon-10-bolum-sezon-finali-izle",
+      "firstSeen": "2026-10-10T18:06:00Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-10T18:06:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish dizibox.live episode-watch page for Ted Lasso season 4 episode 10 (season finale), a different, unrelated show. Las Azules appears only in the site's unrelated alphabetical show-catalog sidebar, not in the page's actual content. Surfaced only as a broad-query match (Exa Pass 1 EN query).",
+      "history": [
+        {
+          "attempt": "2026-10-10T18:06:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12345",
+          "note": "WebFetch blocked (403); confirmed off-topic via Exa result title (\"Ted Lasso 4.Sezon 10.Bölüm Sezon Finali\") and via Tavily Extract sidebar content showing Las Azules only in an A-Z show catalog widget, not page content."
+        }
+      ]
+    },
+    {
+      "url": "https://mundiario.com/video/appletv/stick-season-2-official-trailer-apple-tv/20261010191033446069.html",
+      "firstSeen": "2026-10-10T18:06:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T18:06:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Mundiario piece about the Apple TV+ comedy \"Stick\" (Owen Wilson) season 2 trailer, a different, unrelated show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match (Exa Pass 1 EN query) on generic \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-10T18:06:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12345",
+          "note": "WebFetch succeeded; confirmed page is about Stick season 2, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://cnnbrasil.com.br/pop/streaming/amor-da-minha-vida-elenco-revela-desafios-de-retornar-para-2a-temporada",
+      "firstSeen": "2026-10-10T18:06:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T18:06:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "CNN Brasil piece about the Brazilian Disney+ series \"Amor da Minha Vida\" (Love of My Life) season 2, a different, unrelated show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match (Exa Pass 1 ES query) on generic \"segunda temporada\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-10T18:06:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12345",
+          "note": "WebFetch succeeded; confirmed page is about Amor da Minha Vida season 2, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://dizibox.live/diziler/las-azules",
+      "firstSeen": "2026-10-10T18:06:00Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-10T18:06:00Z",
+      "cooldownUntil": null,
+      "history": [
+        {
+          "attempt": "2026-10-10T18:06:00Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12345",
+          "note": "WebFetch blocked (403). Incidentally discovered via the site's own catalog sidebar (seen on two sibling dizibox.live episode pages for other shows) while verifying those as off-topic; not itself surfaced by Pass 1/2/3 queries this run."
+        },
+        {
+          "attempt": "2026-10-10T18:06:00Z",
+          "method": "Tavily Extract",
+          "status": null,
+          "issue": "LEMA-12345",
+          "note": "Tavily Extract returned no content (empty result), likely also bot-walled. Fetch fallback chain exhausted without confirming page content: this is dizibox.live's own show-index template (same domain/template pattern as two confirmed episode-watch piracy pages for other shows), consistent with a possible Rule E (unauthorized-distribution) candidate for Las Azules specifically, but not yet confirmed since no content was retrieved. Not classified as permanentSkip; left for retry on next run."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-10T16:07:11Z"
+  "lastUpdated": "2026-10-10T18:06:00Z"
 }
