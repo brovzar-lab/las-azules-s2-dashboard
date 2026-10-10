@@ -24524,6 +24524,86 @@
           "note": "Redirects to https://www.produ.com/ushispanic/noticias/apple-tv-orders-las-azules-a-new-spanish-language-crime-drama-produced-by-lemon-studios/, already tracked in data.json under PRODU, ts 20220525."
         }
       ]
+    },
+    {
+      "url": "https://ntbustour.com/article/kerry-washington-s-imperfect-women-returns-for-season-2-what-to-expect",
+      "firstSeen": "2026-10-10T22:02:59Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T22:02:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "NTBusTour article: \"Imperfect Women\" (Kerry Washington) returns for Season 2 on Apple TV. Same unrelated show as the other \"Imperfect Women\" hits already ledgered (jingletree.com, dnyuz.com, tommystriplethreatbluesrevue.com); no mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on generic \"Apple TV Season 2\" terms (Pass 1 Exa broad English query).",
+      "history": [
+        {
+          "attempt": "2026-10-10T22:02:59Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12348",
+          "note": "Surfaced by Pass 1 Exa broad English query; confirmed off-topic from title alone, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://starprodexpres.com/article/where-s-wanda-season-2-trailer-apple-tv-s-dark-comedy-returns",
+      "firstSeen": "2026-10-10T22:02:59Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T22:02:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "StarProdExpres article about 'Where's Wanda?', an unrelated Apple TV dark-comedy series, Season 2 trailer. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\"/\"Apple TV\" terms (Pass 1 Exa broad English query).",
+      "history": [
+        {
+          "attempt": "2026-10-10T22:02:59Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12348",
+          "note": "Surfaced by Pass 1 Exa broad English query; confirmed off-topic from title alone, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://elcomercio.pe/mag/fama/que-ver/though-i-am-an-inept-villainess-la-nueva-ilustracion-antes-del-estreno-de-la-temporada-2-nnda-nnlt-noticia",
+      "firstSeen": "2026-10-10T22:02:59Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T22:02:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Comercio (Peru) piece about \"Though I Am an Inept Villainess\", an unrelated anime series, new illustration ahead of its own season 2 premiere. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic Spanish-language \"temporada 2\" terms (Pass 1 Exa Spanish query).",
+      "history": [
+        {
+          "attempt": "2026-10-10T22:02:59Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12348",
+          "note": "Surfaced by Pass 1 Exa Spanish-language query; confirmed off-topic from title alone, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://efectococuyo.com/la-humanidad/el-lado-b-de-la-transicion-venezolana-inicia-su-segunda-temporada",
+      "firstSeen": "2026-10-10T22:02:59Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-10T22:02:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Efecto Cocuyo (Venezuela) piece about a documentary/journalism series on the Venezuelan political transition (\"El Lado B\") starting its own second season. Not a TV show and not about Las Azules or Women in Blue; surfaced only as a broad-query match on generic Spanish-language \"segunda temporada\" terms (Pass 1 Exa Spanish query).",
+      "history": [
+        {
+          "attempt": "2026-10-10T22:02:59Z",
+          "method": "WebSearch",
+          "status": 200,
+          "issue": "LEMA-12348",
+          "note": "Surfaced by Pass 1 Exa Spanish-language query; confirmed off-topic from title alone, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-10-10T18:06:00Z"
