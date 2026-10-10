@@ -23668,6 +23668,146 @@
           "note": "Surfaced by Pass 1 Exa broad EN/ES query; confirmed off-topic from title/snippet, no body fetch needed (Rule G, dateability irrelevant)."
         }
       ]
+    },
+    {
+      "url": "https://jingletree.com/imperfect-women-renewed-for-season-2-at-apple-tv-with-kerry-washington-returning-282473.html",
+      "firstSeen": "2026-10-10T06:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T06:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about \"Imperfect Women\", an unrelated Apple TV series starring Kerry Washington renewed for Season 2. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\"/\"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-10T06:00:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12319",
+          "note": "WebFetch confirmed off-topic: different show (Imperfect Women)."
+        }
+      ]
+    },
+    {
+      "url": "https://padillasport.com/article/sugar-season-2-finale-recap-will-there-be-a-season-3-all-your-questions-answered",
+      "firstSeen": "2026-10-10T06:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T06:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about \"Sugar\", an unrelated Apple TV neo-noir series starring Colin Farrell (Season 2 finale recap). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\"/\"Apple TV\" terms. Page redirects (302) to custommapposter.com, confirmed there.",
+      "history": [
+        {
+          "attempt": "2026-10-10T06:00:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12319",
+          "note": "WebFetch (following 302 redirect to custommapposter.com) confirmed off-topic: different show (Sugar)."
+        }
+      ]
+    },
+    {
+      "url": "https://techtoday.techotd.in/news/2272/Gaming/October-10-2026/How-to-watch-Boston-Blue-season-2-online-from-anywhere",
+      "firstSeen": "2026-10-10T06:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T06:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about \"Boston Blue\", an unrelated CBS Blue Bloods spin-off series (how-to-watch Season 2 guide). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\"/\"Blue\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-10T06:00:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12319",
+          "note": "WebFetch confirmed off-topic: different show (Boston Blue)."
+        }
+      ]
+    },
+    {
+      "url": "https://macobserver.com/appletv/new-romantic-comedy-prodigies-gets-first-look-and-release-date",
+      "firstSeen": "2026-10-10T06:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T06:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about \"Prodigies\", an unrelated upcoming Apple TV romantic comedy (first look, release date Feb 10, 2027). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-10T06:00:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12319",
+          "note": "WebFetch confirmed off-topic: different show (Prodigies)."
+        }
+      ]
+    },
+    {
+      "url": "https://diezminutos.es/teleprograma/programas-tv/a74044200/segunda-temporada-berrocal-reality-espanol-enganchado",
+      "firstSeen": "2026-10-10T06:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T06:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about \"Las Berrocal\", an unrelated Spanish reality show on Movistar+ (favorable Season 2 review). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"segunda temporada\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-10T06:00:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12319",
+          "note": "WebFetch confirmed off-topic: different show (Las Berrocal)."
+        }
+      ]
+    },
+    {
+      "url": "https://soycinefanatico.blogspot.com/2026/10/llega-la-segunda-temporada-de-ciudad-de.html",
+      "firstSeen": "2026-10-10T06:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T06:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article is about \"Ciudad de Dios: La Lucha No Para\" (City of God: The Struggle Continues), an unrelated HBO Max series continuing the 2002 film. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"segunda temporada\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-10T06:00:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12319",
+          "note": "WebFetch confirmed off-topic: different show (Ciudad de Dios)."
+        }
+      ]
+    },
+    {
+      "url": "https://febspot.com/video/3529017",
+      "firstSeen": "2026-10-10T06:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T06:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Video is \"Es mi sueño\" Capítulo 7, an unrelated Spanish-language reality singing-competition show. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"temporada 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-10T06:00:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12319",
+          "note": "WebFetch confirmed off-topic: unrelated reality competition video."
+        }
+      ]
     }
   ],
   "lastUpdated": "2026-10-10T00:07:15Z"
