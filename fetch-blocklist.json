@@ -24012,7 +24012,67 @@
           "note": "URL 301-redirects to the generic iMore homepage (www.imore.com), not to a specific article or archived thread. The iMore community forum this thread lived on appears retired; no distinct content is retrievable at this address. Treated as a full-chain fetch failure, not an editorial exclusion: no permanentSkip set, so a future run can re-check if the forum is restored."
         }
       ]
+    },
+    {
+      "url": "https://dev.wisepay.com.br/the-thrilling-return-inside-the-making-of-money-heist-season-2",
+      "firstSeen": "2026-10-10T12:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T12:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Surfaced via Pass 1 Exa broad EN query (\"Las Azules Women in Blue Season 2 Apple TV\"). Fetched via WebFetch: article is entirely about Money Heist (La Casa de Papel) Season 2 production/cast/cinematography. No mention of Las Azules or Women in Blue anywhere. Broad-query false positive on generic \"Season 2\" terms."
+    },
+    {
+      "url": "https://jsfree.org/article/apple-tv-shows-ending-this-week-shrinking-the-hunt-the-last-thing-he-told-me-what-s-next",
+      "firstSeen": "2026-10-10T12:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T12:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Surfaced via Pass 1 Exa broad EN query (\"Las Azules Women in Blue Season 2 Apple TV\"). URL 302-redirects to https://custommapposter.com/article/apple-tv-shows-ending-this-week-shrinking-the-hunt-the-last-thing-he-told-me-what-s-next/13564; fetched via WebFetch. Article is an \"Apple TV shows ending this week\" roundup covering Shrinking, The Hunt, The Last Thing He Told Me, Your Friends & Neighbors, Imperfect Women, Monarch: Legacy of Monsters, and Margo's Got Money Troubles. No mention of Las Azules or Women in Blue anywhere. Broad-query false positive on generic \"Apple TV\"/\"Season 2\" terms."
+    },
+    {
+      "url": "https://www.apple.com/es/tv-pr/news/2026/03/apple-tvs-spanish-language-crime-drama-women-in-blue-las-azules-returns-for-season-two-on-wednesday-august-12/",
+      "firstSeen": "2026-10-10T12:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T12:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "Surfaced via Pass 3 Exa (international markets). Fetched via WebFetch: ES-locale (es) translation/mirror of Apple's already-tracked global press release at https://www.apple.com/tv-pr/news/2026/03/apple-tvs-spanish-language-crime-drama-women-in-blue-las-azules-returns-for-season-two-on-wednesday-august-12/ (in data.json, ts 20260326, outlet \"Apple TV Press\"). Same headline (\"El drama policiaco en espanol de Apple TV, Las Azules, regresa para su segunda temporada el miercoles 12 de agosto\"), same March 26, 2026 dateline (\"Nota de prensa 26 de marzo de 2026\"), same announcement content, translated. Per the locale-mirror precedent (apple.com show-page locale clarification, LEMA-10627/LEMA-10628: ca/fr-style byte-identical mirrors stay Rule I), this is a second address for the same document, not a genuinely separate editorial artifact under Rule I's amendment."
+    },
+    {
+      "url": "https://www.informador.mx/entretenimiento/streaming-mas-alla-de-la-nostalgiael-lado-desconocido-de-timbiriche-20261010-0024.html",
+      "firstSeen": "2026-10-10T12:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T12:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Surfaced via Pass 1 Exa broad ES query (\"Barbara Mori entrevista Las Azules temporada 2\"). Fetched via WebFetch: article is about the ViX series \"Timbiriche\" (biopic of the Mexican pop band), featuring interviews with Jesusa Ochoa and Cecilia Carbonell. No mention of Las Azules or Women in Blue anywhere. Broad-query false positive (matched on \"streaming\"/entertainment terms, not on Barbara Mori)."
+    },
+    {
+      "url": "https://www.uol.com.br/splash/noticias/2026/10/10/alanis-guillen-exalta-romance-com-bruna-marquezine-em-serie-identificacao.ghtm",
+      "firstSeen": "2026-10-10T12:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T12:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Surfaced via Pass 1 Exa broad ES query (\"Barbara Mori entrevista Las Azules temporada 2\"). WebFetch failed (host fetch restriction); retrieved via Tavily Extract instead. Article is about the Disney+ series \"Amor da Minha Vida\", covering actress Alanis Guillen's character's romance with a character played by Bruna Marquezine. No mention of Las Azules or Women in Blue anywhere. Broad-query false positive on generic Spanish-language entertainment/\"serie\" terms."
     }
   ],
-  "lastUpdated": "2026-10-10T10:06:05Z"
+  "lastUpdated": "2026-10-10T12:10:00Z"
 }
