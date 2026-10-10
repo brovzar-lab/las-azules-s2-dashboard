@@ -10165,5 +10165,18 @@
     "market": "US",
     "type": "Tech",
     "excerpt": "MacDailyNews reports Apple TV+ has ordered the 10-episode Spanish-language crime drama Las Azules, created by Fernando Rovzar and Pablo Aramendi, following four women who join Mexico's first female police force in 1970 only to discover their squad is a publicity stunt masking a serial-killer investigation."
+  },
+  {
+    "outlet": "Portal do Holanda",
+    "headline": "2ª temporada de \"Las Azules\" mistura realidade e ficção para contar história de corrupção e amadurecimento",
+    "url": "https://www.portaldoholanda.com.br/mundo/2a-temporada-de-las-azules-mistura-realidade-e-ficcao-para-contar-historia-de-corrupcao-e-amadurecimento",
+    "date": "Aug 10, 2026",
+    "ts": 20260810,
+    "dateSource": "visible_dateline",
+    "lang": "PT",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Brazilian portal's republication of the Reuters feature (byline Hanna Rantala) on Season 2: Mexico's first female police force investigates a case tied to the 1968 Tlatelolco student massacre, blending historical fact with fiction around corruption and growth. Distinct outlet republishing the same wire story already carried by Terra and numerous US radio syndications (Rule I).",
+    "storyGroup": "reuters-s2-fact-fiction-20260810"
   }
 ]
