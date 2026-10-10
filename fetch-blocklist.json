@@ -23428,7 +23428,107 @@
           "note": "Classified off-topic from Exa search-result title snippet per Rule G; no fetch spent."
         }
       ]
+    },
+    {
+      "url": "https://gsvmh.org/article/stick-season-2-trailer-owen-wilson-timothy-olyphant-apple-tv",
+      "firstSeen": "2026-10-10T00:07:15Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T00:07:15Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Exa broad English query 'Las Azules Women in Blue Season 2 Apple TV'. WebFetch confirmed (via a server-side 302 redirect to custommapposter.com) the page is about Apple TV+'s 'Stick' Season 2 trailer (Owen Wilson, Timothy Olyphant golf comedy), an unrelated show. No mention of Las Azules/Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-10T00:07:15Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12314",
+          "note": "WebFetch followed a 302 redirect to custommapposter.com; confirmed page is about 'Stick' Season 2, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://infobae.com/malditos-nerds/2026/10/09/owen-wilson-vuelve-al-golf-en-el-trailer-de-la-temporada-2-de-stick",
+      "firstSeen": "2026-10-10T00:07:15Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T00:07:15Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Exa broad Spanish query 'Bárbara Mori entrevista Las Azules temporada 2'. WebFetch confirmed the page (Infobae, Malditos Nerds) is about Apple TV+'s 'Stick' Season 2 trailer (Owen Wilson returns to golf), an unrelated show. No mention of Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-10-10T00:07:15Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12314",
+          "note": "WebFetch confirmed page is about 'Stick' Season 2, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://jingletree.com/all-s-fair-season-2-to-launch-from-rome-film-festival-with-kim-kardashian-naomi-watts-niecy-nash-betts-and-sarah-paulson-attending-282981.html",
+      "firstSeen": "2026-10-10T00:07:15Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T00:07:15Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Exa broad English query. WebFetch confirmed the page is about Ryan Murphy's 'All's Fair' Season 2 launching from the Rome Film Festival (Kim Kardashian, Naomi Watts, Niecy Nash-Betts, Sarah Paulson cast), an unrelated legal drama. No mention of Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-10-10T00:07:15Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12314",
+          "note": "WebFetch confirmed page is about 'All's Fair' Season 2, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://analisisdigital.com.ar/show-y-redes/2026/10/09/si-sos-gamer-no-te-podes-perder-esta-serie-de-netflix-que-se-renueva-en-octubre",
+      "firstSeen": "2026-10-10T00:07:15Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T00:07:15Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Exa broad Spanish query. WebFetch confirmed the page is about 'Cyberpunk: Edgerunners' Season 2, a Netflix anime premiering Oct 20, 2026, entirely unrelated to Las Azules. No mention of Las Azules anywhere.",
+      "history": [
+        {
+          "attempt": "2026-10-10T00:07:15Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12314",
+          "note": "WebFetch confirmed page is about Cyberpunk: Edgerunners Season 2, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://solocine.it/2026/08/09/las-azules-serie-apple-racconta-polizia-femminile-serial-killer-nel-messico-anni-70",
+      "firstSeen": "2026-10-10T00:07:15Z",
+      "failCount": 1,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-10T00:07:15Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-10-10T00:07:15Z",
+          "method": "WebFetch + Tavily Extract (advanced) + curl -L raw HTML",
+          "status": 200,
+          "issue": "LEMA-12314",
+          "note": "URL returns HTTP 200 but server-side redirects (confirmed via curl -L, canonical tag points to homepage) to the SoloCine homepage; zero occurrences of 'las-azules' in the resolved HTML. WebFetch and Tavily Extract (advanced) both returned only homepage/aggregator content, no article body recoverable. Treated as a full fetch-chain failure (content gone, not merely undateable), failCount=1, not yet at the 3-fetch cooldown threshold."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-09T22:01:05Z"
+  "lastUpdated": "2026-10-10T00:07:15Z"
 }
