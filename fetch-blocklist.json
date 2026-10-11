@@ -25053,7 +25053,147 @@
           "note": "WebFetch confirmed the article is a 2011 Nacho Cano interview unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://www.elperiodico.com/es/ocio-y-cultura/20261011/barbara-rey-entrevista-carrera-festival-de-sitges-135226852",
+      "firstSeen": "2026-10-11T14:03:56Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T14:03:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Periodico interview with Barbara Rey (actress/TV personality, different person from Barbara Mori) about her career and the Sitges Festival Nosferatu award. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on the Spanish Exa query's \"Barbara\" + \"entrevista\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T14:03:56Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-12391",
+          "note": "El Periodico interview with Barbara Rey (actress/TV personality, different person from Barbara Mori) about her career and the Sitges Festival Nosferatu award. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on the Spanish Exa query's \"Barbara\" + \"entrevista\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://vanguardia.com.mx/show/cuna-de-lobos-bajo-la-superficie-y-estado-de-furia-MD24054923",
+      "firstSeen": "2026-10-11T14:03:56Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T14:03:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Vanguardia roundup piece about unrelated telenovelas/shows (Cuna de Lobos, Bajo la Superficie, Estado de Furia). No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on generic Mexican-TV terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T14:03:56Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-12391",
+          "note": "Vanguardia roundup piece about unrelated telenovelas/shows (Cuna de Lobos, Bajo la Superficie, Estado de Furia). No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on generic Mexican-TV terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eluniversal.com.mx/opinion/luis-magana/las-criticas-a-digger-y-el-triunfo-de-mariana-ochoa-en-lcdlfm-entre-lo-mas-leido-de-la-semana/",
+      "firstSeen": "2026-10-11T14:03:56Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T14:03:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Universal opinion column by Luis Magana about the unrelated shows \"Digger\" and La Casa de los Famosos Mexico (Mariana Ochoa's win). No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on generic Mexican-entertainment-criticism terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T14:03:56Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-12391",
+          "note": "El Universal opinion column by Luis Magana about the unrelated shows \"Digger\" and La Casa de los Famosos Mexico (Mariana Ochoa's win). No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on generic Mexican-entertainment-criticism terms."
+        }
+      ]
+    },
+    {
+      "url": "https://racerpm.com/article/unveiling-sugar-season-2-release-date-cast-and-more",
+      "firstSeen": "2026-10-11T14:03:56Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T14:03:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RacerPM piece about Sugar Season 2 (Colin Farrell series), an unrelated Apple TV+ show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on \"Apple TV Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T14:03:56Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-12391",
+          "note": "RacerPM piece about Sugar Season 2 (Colin Farrell series), an unrelated Apple TV+ show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on \"Apple TV Season 2\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://leedsmasters.org/article/sugar-season-2-review-colin-farrell-s-noir-masterpiece-returns-with-a-genre-bending-twist",
+      "firstSeen": "2026-10-11T14:03:56Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T14:03:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "LeedsMasters review of Sugar Season 2 (Colin Farrell series), an unrelated Apple TV+ show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on \"Apple TV Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T14:03:56Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-12391",
+          "note": "LeedsMasters review of Sugar Season 2 (Colin Farrell series), an unrelated Apple TV+ show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on \"Apple TV Season 2\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://www.dizibox.live/mobland-2-sezon-4-bolum-izle/2/",
+      "firstSeen": "2026-10-11T14:03:56Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T14:03:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Dizibox (Turkish streaming/piracy site) episode page for MobLand Season 2 Episode 4, an unrelated show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on generic \"Season 2\" terms; same host pattern previously ledgered under LEMA-12345 for other unrelated titles.",
+      "history": [
+        {
+          "attempt": "2026-10-11T14:03:56Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-12391",
+          "note": "Dizibox (Turkish streaming/piracy site) episode page for MobLand Season 2 Episode 4, an unrelated show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on generic \"Season 2\" terms; same host pattern previously ledgered under LEMA-12345 for other unrelated titles."
+        }
+      ]
+    },
+    {
+      "url": "https://www.dizibox.live/dizi/treasure-island/1-sezon-treasure-island/",
+      "firstSeen": "2026-10-11T14:03:56Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T14:03:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Dizibox (Turkish streaming/piracy site) show page for Treasure Island Season 1, an unrelated show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on generic \"Season 2\" terms; same host pattern previously ledgered under LEMA-12345 for other unrelated titles.",
+      "history": [
+        {
+          "attempt": "2026-10-11T14:03:56Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-12391",
+          "note": "Dizibox (Turkish streaming/piracy site) show page for Treasure Island Season 1, an unrelated show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on generic \"Season 2\" terms; same host pattern previously ledgered under LEMA-12345 for other unrelated titles."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-11T12:05:58Z"
+  "lastUpdated": "2026-10-11T14:03:56Z"
 }
