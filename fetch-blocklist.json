@@ -25497,7 +25497,147 @@
           "note": "WebFetch succeeded; confirmed tag-archive page surfaces the already-tracked Jul 16, 2026 The Movie Blog post and no other original editorial content."
         }
       ]
+    },
+    {
+      "url": "https://justwatch.com/us/tv-show/blue-ridge/season-2",
+      "firstSeen": "2026-10-11T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-11T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch streaming-guide page for \"Blue Ridge\" Season 2, an unrelated TV series. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa query match on generic \"season 2\" streaming terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T20:00:00Z",
+          "method": "none (classified from Exa search-result title/snippet; unambiguous different-show mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-12400",
+          "note": "JustWatch streaming-guide page for \"Blue Ridge\" Season 2, an unrelated TV series. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa query match on generic \"season 2\" streaming terms."
+        }
+      ]
+    },
+    {
+      "url": "https://dizibox.live/tall-tales-murder-1-sezon-6-bolum-sezon-finali-izle",
+      "firstSeen": "2026-10-11T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-11T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish-language streaming page for \"Tall Tales & Murder\" season 1 episode 6 (season finale), an unrelated Turkish drama. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa query match on generic \"season finale\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T20:00:00Z",
+          "method": "none (classified from Exa search-result title/snippet; unambiguous different-show mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-12400",
+          "note": "Turkish-language streaming page for \"Tall Tales & Murder\" season 1 episode 6 (season finale), an unrelated Turkish drama. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa query match on generic \"season finale\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://dizibox.live/blue-box-2-sezon-2-bolum-izle/3",
+      "firstSeen": "2026-10-11T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-11T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish-language streaming page for \"Blue Box\" season 2 episode 2, an unrelated series. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa query match on generic \"season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T20:00:00Z",
+          "method": "none (classified from Exa search-result title/snippet; unambiguous different-show mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-12400",
+          "note": "Turkish-language streaming page for \"Blue Box\" season 2 episode 2, an unrelated series. No mention of Las Azules or Women in Blue; surfaced only as a broad Exa query match on generic \"season 2\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://diariodemexico.com/escena/serie-inspirada-en-timbiriche-estrena-con-trama-marcada-por-polemica",
+      "firstSeen": "2026-10-11T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-11T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Diario de Mexico article about a Mexican series inspired by the band Timbiriche (\"La serie inspirada en Timbiriche estrena con una trama marcada por polemica\"), an unrelated production. No mention of Las Azules or Women in Blue; surfaced only as a broad Spanish-language Exa query match on generic Mexican-series terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T20:00:00Z",
+          "method": "none (classified from Exa search-result title/snippet; unambiguous different-show mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-12400",
+          "note": "Diario de Mexico article about a Mexican series inspired by the band Timbiriche (\"La serie inspirada en Timbiriche estrena con una trama marcada por polemica\"), an unrelated production. No mention of Las Azules or Women in Blue; surfaced only as a broad Spanish-language Exa query match on generic Mexican-series terms."
+        }
+      ]
+    },
+    {
+      "url": "https://cnnbrasil.com.br/pop/streaming/bruna-marquezine-revela-como-a-vida-pessoal-inspirou-amor-da-minha-vida",
+      "firstSeen": "2026-10-11T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-11T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "CNN Brasil article about actress Bruna Marquezine discussing the unrelated series \"Amor da Minha Vida\". No mention of Las Azules or Women in Blue; surfaced only as a broad Spanish-language Exa query match on generic streaming-interview terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T20:00:00Z",
+          "method": "none (classified from Exa search-result title/snippet; unambiguous different-show mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-12400",
+          "note": "CNN Brasil article about actress Bruna Marquezine discussing the unrelated series \"Amor da Minha Vida\". No mention of Las Azules or Women in Blue; surfaced only as a broad Spanish-language Exa query match on generic streaming-interview terms."
+        }
+      ]
+    },
+    {
+      "url": "https://uniradioinforma.com/fama/jesusa-ochoa-cuenta-como-fue-convertirse-alix-serie-timbiriche-n907920",
+      "firstSeen": "2026-10-11T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-11T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Uniradio Informa article about actress Jesusa Ochoa discussing her role as \"Alix\" in a Timbiriche-inspired series, an unrelated production. No mention of Las Azules or Women in Blue; surfaced only as a broad Spanish-language Exa query match.",
+      "history": [
+        {
+          "attempt": "2026-10-11T20:00:00Z",
+          "method": "none (classified from Exa search-result title/snippet; unambiguous different-show mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-12400",
+          "note": "Uniradio Informa article about actress Jesusa Ochoa discussing her role as \"Alix\" in a Timbiriche-inspired series, an unrelated production. No mention of Las Azules or Women in Blue; surfaced only as a broad Spanish-language Exa query match."
+        }
+      ]
+    },
+    {
+      "url": "https://eltiempomx.com/noticia/2026/alejandro-gou-pide-fidelidad-en-la-serie-de-timbiriche.html",
+      "firstSeen": "2026-10-11T20:00:00Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-11T20:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Tiempo Monclova article about producer Alejandro Gou asking for fidelity in a Timbiriche-inspired series, an unrelated production. No mention of Las Azules or Women in Blue; surfaced only as a broad Spanish-language Exa query match.",
+      "history": [
+        {
+          "attempt": "2026-10-11T20:00:00Z",
+          "method": "none (classified from Exa search-result title/snippet; unambiguous different-show mismatch, no fetch needed)",
+          "status": 0,
+          "issue": "LEMA-12400",
+          "note": "El Tiempo Monclova article about producer Alejandro Gou asking for fidelity in a Timbiriche-inspired series, an unrelated production. No mention of Las Azules or Women in Blue; surfaced only as a broad Spanish-language Exa query match."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-11T18:04:39Z"
+  "lastUpdated": "2026-10-11T20:05:00Z"
 }
