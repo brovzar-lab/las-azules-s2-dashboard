@@ -24689,22 +24689,22 @@
       "url": "https://www.milenio.com/espectaculos/television/el-circulo-final-explicado-serie-netflix",
       "firstSeen": "2026-10-11T02:05:00Z",
       "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": null,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T02:12:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Milenio (Grupo Milenio) article explaining the ending of \"El Círculo\", an unrelated Netflix series, by Natalie González Arredondo. No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic season-2/streaming terms via the Pass 1 Spanish Exa query.",
+      "skipNote": "Milenio (Grupo Milenio) article by Natalie González Arredondo explaining the finale of \"El Círculo\", an unrelated Netflix Mexican series. Confirmed via WebFetch that the article discusses a conspiracy around Pamela Dosantos's death orchestrated by a character named Jaime, within a friend group the show itself calls \"Los Azules\" -- the shared \"Azules\" term is almost certainly why this surfaced on the Pass 1 Spanish Exa query (\"Bárbara Mori entrevista Las Azules temporada 2\"). No mention of Bárbara Mori, Apple TV, or the actual Las Azules series anywhere in the piece.",
       "history": [
         {
-          "attempt": "2026-10-11T02:05:00Z",
-          "method": "none (relevance gate, title/metadata sufficient per Rule G)",
-          "status": null,
+          "attempt": "2026-10-11T02:12:00Z",
+          "method": "WebFetch",
+          "status": 200,
           "issue": "LEMA-12364",
-          "note": "Confirmed off-topic from search result title/author metadata (different show, different outlet focus); no body fetch required under Rule G."
+          "note": "WebFetch succeeded; confirmed article is about a different Netflix series (\"El Círculo\"), whose in-show friend group is coincidentally also called \"Los Azules\" -- unrelated to Las Azules / Women in Blue."
         }
       ]
     }
   ],
-  "lastUpdated": "2026-10-11T02:05:00Z"
+  "lastUpdated": "2026-10-11T02:12:00Z"
 }
