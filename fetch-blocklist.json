@@ -25637,7 +25637,109 @@
           "note": "El Tiempo Monclova article about producer Alejandro Gou asking for fidelity in a Timbiriche-inspired series, an unrelated production. No mention of Las Azules or Women in Blue; surfaced only as a broad Spanish-language Exa query match."
         }
       ]
+    },
+    {
+      "url": "https://mcahv.org/article/unraveling-sugar-season-2-episode-guide-cast-and-more",
+      "firstSeen": "2026-10-11T22:04:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T22:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "mcahv.org article about \"Sugar,\" the Colin Farrell neo-noir sci-fi detective series on Apple TV, covering its Season 2 episode guide and cast (redirects to custommapposter.com/article/unraveling-sugar-season-2-episode-guide-cast-and-more/12770). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Apple TV Season 2\" terms (Pass 1 Exa broad English query).",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T22:04:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12401",
+          "note": "WebFetch succeeded (direct or via redirect); confirmed post is about a different show, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://theriveroc.org/article/where-s-wanda-season-2-trailer-apple-tv-s-dark-comedy-returns",
+      "firstSeen": "2026-10-11T22:04:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T22:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "theriveroc.org article about \"Where's Wanda?\", a German-language dark comedy on Apple TV returning for Season 2 on October 21 (redirects to custommapposter.com/article/where-s-wanda-season-2-trailer-apple-tv-s-dark-comedy-returns/14894). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Apple TV Season 2\" terms (Pass 1 Exa broad English query).",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T22:04:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12401",
+          "note": "WebFetch succeeded (direct or via redirect); confirmed post is about a different show, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://punto.mx/2026/10/11/regresa-todo-vale-disney-lanza-poster-de-la-segunda-temporada/",
+      "firstSeen": "2026-10-11T22:04:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T22:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Punto MX article about \"Todo Vale\" (Ryan Murphy's legal comedy), returning for Season 2 on Disney+ November 4. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"nueva temporada\"/\"Apple TV\" terms (Pass 1 Exa Spanish query).",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T22:04:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12401",
+          "note": "WebFetch succeeded (direct or via redirect); confirmed post is about a different show, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://lamananadigital.com/quien-es-quien-en-la-serie-biografica-de-timbiriche/",
+      "firstSeen": "2026-10-11T22:04:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T22:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Mañana article about \"Timbiriche\", the ViX biographical series on the Mexican pop group. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic Mexican-series terms (Pass 1 Exa Spanish query).",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T22:04:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12401",
+          "note": "WebFetch succeeded (direct or via redirect); confirmed post is about a different show, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mundoplus.tv/series/apple-tv-quiere-repetir-el-exito-de-las-esposas-cazadoras-con-un-nuevo-thriller-lleno-de-secretos-y-rivalidades/",
+      "firstSeen": "2026-10-11T22:04:53Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-11T22:04:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T22:04:53Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12401",
+          "note": "WebFetch returned 403 Forbidden; Tavily Extract (advanced) returned no content. Full fallback-chain failure, content unconfirmed. Title suggests coverage of a different, unnamed thriller (\"Las esposas cazadoras\" referenced as a prior hit, not Las Azules); not classified as Rule G without a successful content fetch."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-11T20:05:00Z"
+  "lastUpdated": "2026-10-11T22:04:53Z"
 }
