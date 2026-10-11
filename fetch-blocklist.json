@@ -21315,9 +21315,9 @@
     {
       "url": "https://www.macobserver.com/?p=488779",
       "firstSeen": "2026-10-08T00:11:35Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 403,
-      "lastAttempt": "2026-10-08T00:11:35Z",
+      "lastAttempt": "2026-10-11T18:04:39Z",
       "cooldownUntil": null,
       "history": [
         {
@@ -21326,6 +21326,13 @@
           "status": 403,
           "issue": "LEMA-12171",
           "note": "ES-locale finale 'Ending Explained' piece (title: 'Final explicado del episodio 8 de la temporada 2 de Women in Blue: ¿Detienen las Azules al Verdugo en «Goyo»?'), distinct from the already-tracked ES 'Quien es Goyo' piece. WebFetch returned 403; Tavily Extract (basic, then advanced) returned no content. Full-chain failure, genuinely new content not yet added to data.json pending a successful fetch."
+        },
+        {
+          "attempt": "2026-10-11T18:04:39Z",
+          "method": "WebFetch + Tavily Extract",
+          "status": 403,
+          "issue": "LEMA-12394",
+          "note": "Second attempt, same ES-locale finale 'Ending Explained' piece. WebFetch returned 403 again; Tavily Extract (advanced depth) returned no content. Full-chain failure, genuinely new content still not added to data.json pending a successful fetch. failCount now 2; cooldown not yet set (sets at failCount=3 per ledger policy)."
         }
       ]
     },
@@ -25390,7 +25397,107 @@
           "issue": "LEMA-12393"
         }
       ]
+    },
+    {
+      "url": "https://www.cbr.com/prime-video-scarpetta-season-2-release-window/",
+      "firstSeen": "2026-10-11T18:04:39Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-11T18:04:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "CBR article about Prime Video's 'Scarpetta', an unrelated 8-part mystery series based on a 26-year-old book, confirming its own Season 2 release window. No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic 'Apple TV Season 2' terms in Pass 1's Exa broad EN query.",
+      "history": [
+        {
+          "attempt": "2026-10-11T18:04:39Z",
+          "method": "Exa title/snippet",
+          "status": 0,
+          "issue": "LEMA-12394",
+          "note": "Classified from Exa search result title/snippet ('Prime Video's 8-Part Mystery Based on a 26-Year-Old Book Confirms Release Window'), which unambiguously identifies a different show on a different platform; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.excelsior.com.mx/espectaculos/mauricio-martinez-explota-contra-serie-timbiriche-y-defiende-sasha-sokol-nostalgia-no-justifica",
+      "firstSeen": "2026-10-11T18:04:39Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-11T18:04:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Excelsior article about actor Mauricio Martínez criticizing the Mexican biographical series 'Timbiriche' and defending Sasha Sokol. Unrelated to Las Azules / Women in Blue; surfaced only as a broad-query match on generic Mexican celebrity/entertainment terms in Pass 1's Exa broad ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-11T18:04:39Z",
+          "method": "Exa title/snippet",
+          "status": 0,
+          "issue": "LEMA-12394",
+          "note": "Classified from Exa search result title/snippet, which unambiguously identifies a different show (Timbiriche); no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.viveusa.mx/showbiz/lucran-con-su-dolor-ana-maria-alvarado-estalla-contra-la-serie-de-timbiriche-por-sasha-sokol/",
+      "firstSeen": "2026-10-11T18:04:39Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-11T18:04:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ViveUSA article about Ana María Alvarado criticizing the Mexican biographical series 'Timbiriche' over its handling of Sasha Sokol's story. Unrelated to Las Azules / Women in Blue; surfaced only as a broad-query match on generic Mexican celebrity/entertainment terms in Pass 1's Exa broad ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-11T18:04:39Z",
+          "method": "Exa title/snippet",
+          "status": 0,
+          "issue": "LEMA-12394",
+          "note": "Classified from Exa search result title/snippet, which unambiguously identifies a different show (Timbiriche); no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://elpueblo.com/farandula/alejandro-gou-aviva-la-polemica-por-la-serie-de-timbiriche-20261011-489046.html",
+      "firstSeen": "2026-10-11T18:04:39Z",
+      "failCount": 0,
+      "lastStatus": 0,
+      "lastAttempt": "2026-10-11T18:04:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Pueblo article about producer Alejandro Gou fueling controversy over the Mexican biographical series 'Timbiriche'. Unrelated to Las Azules / Women in Blue; surfaced only as a broad-query match on generic Mexican celebrity/entertainment terms in Pass 1's Exa broad ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-11T18:04:39Z",
+          "method": "Exa title/snippet",
+          "status": 0,
+          "issue": "LEMA-12394",
+          "note": "Classified from Exa search result title/snippet, which unambiguously identifies a different show (Timbiriche); no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.themovieblog.com/tag/las-azules/",
+      "firstSeen": "2026-10-11T18:04:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T18:04:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "The Movie Blog's 'las-azules' tag archive index page. Fetched via WebFetch: the page surfaces one already-tracked post as its featured item (\"Women in Blue Returns for Season Two\", Jul 16, 2026, already in data.json at https://www.themovieblog.com/2026/07/women-in-blue-returns-for-season-two/), plus generic site navigation/sidebar chrome. A tag/archive index surfacing an already-tracked post is a second address under Rule I, not a distinct document.",
+      "history": [
+        {
+          "attempt": "2026-10-11T18:04:39Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12394",
+          "note": "WebFetch succeeded; confirmed tag-archive page surfaces the already-tracked Jul 16, 2026 The Movie Blog post and no other original editorial content."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-11T16:00:00Z"
+  "lastUpdated": "2026-10-11T18:04:39Z"
 }
