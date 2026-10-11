@@ -24809,7 +24809,91 @@
           "note": "WebFetch confirmed page is about an unrelated Chilean comedy show, not Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://tunestracker.com/article/pluribus-season-2-release-date-cast-and-emmy-wins-apple-tv-series",
+      "firstSeen": "2026-10-11T06:03:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad English query hit (\"Las Azules Women in Blue Season 2 Apple TV\"). Article is about \"Pluribus\", an unrelated Apple TV series (release date, cast, Emmy wins roundup). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\"/\"Apple TV\" terms.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T06:03:33Z",
+          "method": "title-inspection",
+          "status": null,
+          "issue": "LEMA-12367",
+          "note": "Unambiguous off-topic by title/subject; no fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://kennelbiscotti.com/article/imperfect-women-a-thrilling-mystery-series-with-a-star-studded-cast",
+      "firstSeen": "2026-10-11T06:03:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad English query hit (\"Las Azules Women in Blue Season 2 Apple TV\"). Article is about \"Imperfect Women\", an unrelated mystery series (star-studded cast roundup). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\" terms. Distinct URL/domain from the Imperfect Women off-topic row already ledgered under LEMA-12366 (uncsangam.org).",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T06:03:33Z",
+          "method": "title-inspection",
+          "status": null,
+          "issue": "LEMA-12367",
+          "note": "Unambiguous off-topic by title/subject; no fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://pterodance.org/article/avatar-the-last-airbender-interview-how-toph-s-arrival-changes-the-game-in-season-2",
+      "firstSeen": "2026-10-11T06:03:33Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad Spanish query hit (\"Barbara Mori entrevista Las Azules temporada 2\"). Article is an interview piece about \"Avatar: The Last Airbender\" Season 2 (Toph's arrival). No mention of Las Azules, Women in Blue, or Barbara Mori; surfaced only as a broad-query match on generic \"Season 2\" terms.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T06:03:33Z",
+          "method": "title-inspection",
+          "status": null,
+          "issue": "LEMA-12367",
+          "note": "Unambiguous off-topic by title/subject; no fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://infobae.com/teleshow/2026/10/11/cesar-troncoso-de-el-eternauta-a-su-trabajo-con-diego-peretti-los-actores-uruguayos-siempre-apuntamos-a-buenos-aires",
+      "firstSeen": "2026-10-11T06:03:33Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T06:03:33Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad Spanish query hit (\"Barbara Mori entrevista Las Azules temporada 2\"). Article is an Infobae Teleshow interview with Uruguayan actor Cesar Troncoso about his work on \"El Eternauta\" and with Diego Peretti; no connection to Las Azules or Barbara Mori. Surfaced only as a broad-query match on generic actor-interview terms.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T06:03:33Z",
+          "method": "title-inspection",
+          "status": 200,
+          "issue": "LEMA-12367",
+          "note": "Unambiguous off-topic by title/subject; no fetch needed."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-11T04:04:39Z"
+  "lastUpdated": "2026-10-11T06:03:33Z"
 }
