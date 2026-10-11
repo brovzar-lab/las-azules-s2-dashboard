@@ -25193,7 +25193,204 @@
           "note": "Dizibox (Turkish streaming/piracy site) show page for Treasure Island Season 1, an unrelated show. No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on generic \"Season 2\" terms; same host pattern previously ledgered under LEMA-12345 for other unrelated titles."
         }
       ]
+    },
+    {
+      "url": "https://justwatch.com/in/tv-show/dark-matter-2024/season-2",
+      "firstSeen": "2026-10-11T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa EN broad query ('Las Azules Women in Blue Season 2 Apple TV'), via the JustWatch India locale listing. Page title itself reads 'Dark Matter Season 2 - watch full episodes streaming online' -- the recurring unrelated Apple TV+ sci-fi series already ledgered under this skipReason for multiple other locales in this ledger (US/ZA/ID/UK/Egypt/India-season-1 variants). No mention of Las Azules/Women in Blue. Not fetched: unambiguous title match to the already-established off-topic family, same posture as other dark-matter-2024 rows in this ledger.",
+      "history": [
+        {
+          "attempt": "2026-10-11T16:00:00Z",
+          "method": "search-snippet (title unambiguous, same established off-topic family)",
+          "status": null,
+          "issue": "LEMA-12393",
+          "note": "Confirmed off-topic from Exa result title alone; matches existing dark-matter-2024 Rule G family."
+        }
+      ]
+    },
+    {
+      "url": "https://harwichaccommodations.com/article/imperfect-women-season-2-renewed-at-apple-tv-kerry-washington-returns-major-casting-changes",
+      "firstSeen": "2026-10-11T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa EN broad query. Page is about 'Imperfect Women', an unrelated Apple TV+ thriller starring Kerry Washington and Elisabeth Moss, not Las Azules / Women in Blue. Broad-query false positive on shared 'Apple TV Season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T16:00:00Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-12393",
+          "note": "Confirmed off-topic: different show (Imperfect Women)."
+        }
+      ]
+    },
+    {
+      "url": "https://kenage.org/article/kerry-washington-elisabeth-moss-star-in-imperfect-women-first-look-apple-tv-thriller",
+      "firstSeen": "2026-10-11T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa EN broad query. Page is about 'Imperfect Women', an unrelated Apple TV+ thriller starring Kerry Washington and Elisabeth Moss, not Las Azules / Women in Blue. Broad-query false positive on shared 'Apple TV Season 2' terms (same underlying story as the harwichaccommodations.com row above, different outlet).",
+      "history": [
+        {
+          "attempt": "2026-10-11T16:00:00Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-12393",
+          "note": "Confirmed off-topic: different show (Imperfect Women)."
+        }
+      ]
+    },
+    {
+      "url": "https://dev-even.focusonforce.com/loot-season-2-youtubecom-full-plot-breakdown-cast-return-and-where-to-watch-legally",
+      "firstSeen": "2026-10-11T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa EN broad query. Page is about 'Loot' Season 2, an unrelated Apple TV+ comedy series starring Maya Rudolph, not Las Azules / Women in Blue. Broad-query false positive on shared 'Season 2' 'where to watch' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T16:00:00Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-12393",
+          "note": "Confirmed off-topic: different show (Loot)."
+        }
+      ]
+    },
+    {
+      "url": "https://eltrecetv.com.ar/videos/eltrece-prende/2026/10/11/noa-kirel-y-agus-bernasconi-hablan-de-su-serie-estreno-con-las-chicas-guapas-programa-completo-del-091026",
+      "firstSeen": "2026-10-11T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa ES query ('Barbara Mori entrevista Las Azules temporada 2'). Page is an Argentine talk-show (eltrece 'Prende') segment about the unrelated series 'Las Chicas Guapas', not Las Azules. No mention of Barbara Mori or Las Azules. Broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-11T16:00:00Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-12393",
+          "note": "Confirmed off-topic: different show (Las Chicas Guapas)."
+        }
+      ]
+    },
+    {
+      "url": "https://la100.cienradios.com/espectaculos/cine-y-series/clanes-volvio-a-netflix-con-6-capitulos-y-luis-zahera-que-pasa-con-ana-y-daniel",
+      "firstSeen": "2026-10-11T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa ES query. Page is about the unrelated Netflix series 'Clanes', not Las Azules. Broad-query false positive on generic Spanish-language series terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T16:00:00Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-12393",
+          "note": "Confirmed off-topic: different show (Clanes)."
+        }
+      ]
+    },
+    {
+      "url": "https://laverdad.com.mx/2026/10/timbiriche-presenta-su-serie-en-vix-sin-el-respaldo-de-la-banda",
+      "firstSeen": "2026-10-11T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa ES query. Page is about a Timbiriche-related series on ViX, unrelated to Las Azules. Broad-query false positive on generic Mexican-series terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T16:00:00Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-12393",
+          "note": "Confirmed off-topic: different subject (Timbiriche/ViX)."
+        }
+      ]
+    },
+    {
+      "url": "https://justwatch.com/es/serie/las-azules",
+      "firstSeen": "2026-10-11T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch Spain streaming-availability listing page for Las Azules. Same established JustWatch listing-page family already ledgered for other locales in this ledger (IT/BO/FR/ZA/SA/JP/DE/BR etc.): platform availability grid, ratings aggregate, stock synopsis, no original written editorial content once the listing/grid is stripped (Rule F). Not fetched: pattern match against the already-confirmed JustWatch surface family, consistent with prior same-family rows in this ledger.",
+      "history": [
+        {
+          "attempt": "2026-10-11T16:00:00Z",
+          "method": "Pattern match (same surface family as existing ledgered JustWatch rows, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-12393"
+        }
+      ]
+    },
+    {
+      "url": "https://justwatch.com/ec/serie/las-azules",
+      "firstSeen": "2026-10-11T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch Ecuador streaming-availability listing page for Las Azules. Same established JustWatch listing-page family already ledgered for other locales in this ledger. Not fetched: pattern match against the already-confirmed JustWatch surface family.",
+      "history": [
+        {
+          "attempt": "2026-10-11T16:00:00Z",
+          "method": "Pattern match (same surface family as existing ledgered JustWatch rows, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-12393"
+        }
+      ]
+    },
+    {
+      "url": "https://justwatch.com/fi/sarja/las-azules",
+      "firstSeen": "2026-10-11T16:00:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T16:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch Finland streaming-availability listing page for Las Azules. Same established JustWatch listing-page family already ledgered for other locales in this ledger. Not fetched: pattern match against the already-confirmed JustWatch surface family.",
+      "history": [
+        {
+          "attempt": "2026-10-11T16:00:00Z",
+          "method": "Pattern match (same surface family as existing ledgered JustWatch rows, no fetch needed)",
+          "status": null,
+          "issue": "LEMA-12393"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-11T14:03:56Z"
+  "lastUpdated": "2026-10-11T16:00:00Z"
 }
