@@ -24604,7 +24604,87 @@
           "note": "Surfaced by Pass 1 Exa Spanish-language query; confirmed off-topic from title alone, no body fetch needed (Rule G, dateability irrelevant)."
         }
       ]
+    },
+    {
+      "url": "https://exitoina.perfil.com/noticias/series/netflix-presento-nueva-serie-protagonizada-jimena-baron-cande-vetrano-y-muriel-santa-ana-que-trata.phtml",
+      "firstSeen": "2026-10-11T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exitoina (Perfil) piece on a new Netflix series starring Jimena Barón, Cande Vetrano and Muriel Santa Ana. No connection to Las Azules/Women in Blue; surfaced only as a broad-query match on the Spanish Pass 1 query. Classified from Exa search result title alone (unambiguous: a different Netflix series entirely); not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-11T00:08:00Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12352",
+          "note": "Classified off-topic from Exa Pass 1 ES query title/snippet alone, unambiguous different-show match."
+        }
+      ]
+    },
+    {
+      "url": "https://mail.radiot-rock.com/viewevento.php?id=4043",
+      "firstSeen": "2026-10-11T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Radio T-Rock event listing for a Soy Luna farewell tour concert at Arena CDMX. No connection to Las Azules/Women in Blue; surfaced only as a broad-query match on the Spanish Pass 1 query. Classified from Exa search result title alone (unambiguous concert listing for an unrelated show); not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-11T00:08:00Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12352",
+          "note": "Classified off-topic from Exa Pass 1 ES query title/snippet alone, unambiguous different-show concert listing."
+        }
+      ]
+    },
+    {
+      "url": "https://odiyanacentre.org/article/dark-matter-season-2-release-date-episode-guide-and-cast-updates",
+      "firstSeen": "2026-10-11T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Dark Matter Season 2 (a different Apple TV show). No connection to Las Azules/Women in Blue; surfaced only as a broad-query match on \"Season 2\"/\"Apple TV\" terms in the Exa Pass 1 EN query. Classified from Exa search result title alone (unambiguous different-show match); not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-11T00:08:00Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12352",
+          "note": "Classified off-topic from Exa Pass 1 EN query title/snippet alone, unambiguous different-show match."
+        }
+      ]
+    },
+    {
+      "url": "https://puffinstuffny.com/article/ted-lasso-season-4-trailer-jason-sudeikis-women-s-soccer-coaching-apple-tv-release",
+      "firstSeen": "2026-10-11T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Ted Lasso Season 4 trailer (a different Apple TV show). No connection to Las Azules/Women in Blue; surfaced only as a broad-query match on \"Women\"/\"Season 2\"/\"Apple TV\" terms in the Exa Pass 1 EN query. Classified from Exa search result title alone (unambiguous different-show match); not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-11T00:08:00Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12352",
+          "note": "Classified off-topic from Exa Pass 1 EN query title/snippet alone, unambiguous different-show match."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-10T18:06:00Z"
+  "lastUpdated": "2026-10-11T00:08:00Z"
 }
