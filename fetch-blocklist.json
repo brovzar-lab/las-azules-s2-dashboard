@@ -24973,7 +24973,87 @@
           "note": "WebFetch confirmed article is about Verano Azul (1981 TVE series), a different show sharing only a similar name."
         }
       ]
+    },
+    {
+      "url": "https://bizzfox.com/article/imperfect-women-season-2-announced-what-to-expect-with-kerry-washington-s-return",
+      "firstSeen": "2026-10-11T12:05:58Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T12:05:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Bizzfox article about \"Imperfect Women\", an unrelated Apple TV+ series renewed for Season 2 with Kerry Washington returning. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2 Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T12:05:58Z",
+          "method": "Exa result title/snippet",
+          "status": null,
+          "issue": "LEMA-12387",
+          "note": "Exa search result title unambiguously identifies a different show (Imperfect Women / Kerry Washington); no ambiguity to resolve via fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://topactionm.com/article/sugar-season-2-unveiling-the-mystery-release-date-episodes-and-more",
+      "firstSeen": "2026-10-11T12:05:58Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T12:05:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TopActionM article about \"Sugar\" Season 2, an unrelated series. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2 Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T12:05:58Z",
+          "method": "Exa result title/snippet",
+          "status": null,
+          "issue": "LEMA-12387",
+          "note": "Exa search result title unambiguously identifies a different show (Sugar); no ambiguity to resolve via fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://tuningperu.com/article/dark-matter-season-2-release-date-time-cast-and-everything-you-need-to-know",
+      "firstSeen": "2026-10-11T12:05:58Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T12:05:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TuningPeru article about \"Dark Matter\" Season 2, an unrelated Apple TV+ series. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2 Apple TV\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T12:05:58Z",
+          "method": "Exa result title/snippet",
+          "status": null,
+          "issue": "LEMA-12387",
+          "note": "Exa search result title unambiguously identifies a different show (Dark Matter); no ambiguity to resolve via fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://eluniversal.com.mx/espectaculos/el-mexicano-tiene-muchos-mundos-nacho-cano",
+      "firstSeen": "2026-10-11T12:05:58Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T12:05:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Universal interview (dated Oct 26, 2011) with Spanish musician Nacho Cano about his decades-long relationship with Mexico and his stage production \"Malinche\". No mention of Las Azules or Women in Blue anywhere in the article; surfaced only as a broad-query match on generic \"Las Azules\" + Mexican-entertainment terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T12:05:58Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12387",
+          "note": "WebFetch confirmed the article is a 2011 Nacho Cano interview unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-11T10:04:41Z"
+  "lastUpdated": "2026-10-11T12:05:58Z"
 }
