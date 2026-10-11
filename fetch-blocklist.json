@@ -24684,7 +24684,27 @@
           "note": "Classified off-topic from Exa Pass 1 EN query title/snippet alone, unambiguous different-show match."
         }
       ]
+    },
+    {
+      "url": "https://www.milenio.com/espectaculos/television/el-circulo-final-explicado-serie-netflix",
+      "firstSeen": "2026-10-11T02:05:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Milenio (Grupo Milenio) article explaining the ending of \"El Círculo\", an unrelated Netflix series, by Natalie González Arredondo. No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic season-2/streaming terms via the Pass 1 Spanish Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-11T02:05:00Z",
+          "method": "none (relevance gate, title/metadata sufficient per Rule G)",
+          "status": null,
+          "issue": "LEMA-12364",
+          "note": "Confirmed off-topic from search result title/author metadata (different show, different outlet focus); no body fetch required under Rule G."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-11T00:08:00Z"
+  "lastUpdated": "2026-10-11T02:05:00Z"
 }
