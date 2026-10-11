@@ -24893,7 +24893,87 @@
           "note": "Unambiguous off-topic by title/subject; no fetch needed."
         }
       ]
+    },
+    {
+      "url": "https://noiloaggenm.com/article/sugar-season-2-release-date-trailer-cast-and-everything-you-need-to-know",
+      "firstSeen": "2026-10-11T10:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T10:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "SEO content-farm article (redirects to custommapposter.com) about Apple TV+ neo-noir detective series \"Sugar\" (Colin Farrell) Season 2 release date/trailer/cast. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic \"Apple TV season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T10:04:41Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12385",
+          "note": "WebFetch (following a 302 redirect to custommapposter.com) confirmed article is about Sugar Season 2, an unrelated Apple TV+ show."
+        }
+      ]
+    },
+    {
+      "url": "https://amancalleddada.com/article/boston-blue-season-2-marg-helgenberger-joins-the-cast-tracker-season-4-casts-michael-malarkey",
+      "firstSeen": "2026-10-11T10:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T10:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "SEO content-farm article (redirects to custommapposter.com) about casting news for \"Boston Blue\" Season 2 and \"Tracker\" Season 4, both unrelated shows. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic \"season 2\"/casting terms.",
+      "history": [
+        {
+          "attempt": "2026-10-11T10:04:41Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12385",
+          "note": "WebFetch (following a 302 redirect to custommapposter.com) confirmed article is about Boston Blue/Tracker casting, unrelated shows."
+        }
+      ]
+    },
+    {
+      "url": "https://facebook.com/StarTrek/posts/1668345617984529",
+      "firstSeen": "2026-10-11T10:04:41Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-11T10:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Official Star Trek Facebook page post announcing \"Star Trek: Starfleet Academy\" Season 2 premiere (March 2027), a different franchise entirely. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic \"season 2 premiere\" terms. Classified from the post's own text/title, not a body fetch (Facebook posts are not reliably fetchable).",
+      "history": [
+        {
+          "attempt": "2026-10-11T10:04:41Z",
+          "method": "search-result-title",
+          "status": null,
+          "issue": "LEMA-12385",
+          "note": "Exa search result title/snippet (\"Attention, cadets! Star Trek: Starfleet Academy Season 2 premieres March 2027...\") unambiguously identifies this as off-topic; Facebook post not fetched."
+        }
+      ]
+    },
+    {
+      "url": "https://infobae.com/america/agencias/2026/10/11/tve-estrenaba-hace-45-anos-la-serie-verano-azul",
+      "firstSeen": "2026-10-11T10:04:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T10:04:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Infobae article about the 45th anniversary of \"Verano Azul\", a 1981 TVE (Spanish public broadcaster) series directed by Antonio Mercero, unrelated to \"Las Azules\"/\"Women in Blue\" despite the similar-sounding name. No mention of the Apple TV show anywhere; surfaced only as a broad-query match on the \"azul(es)\" keyword.",
+      "history": [
+        {
+          "attempt": "2026-10-11T10:04:41Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12385",
+          "note": "WebFetch confirmed article is about Verano Azul (1981 TVE series), a different show sharing only a similar name."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-11T06:03:33Z"
+  "lastUpdated": "2026-10-11T10:04:41Z"
 }
