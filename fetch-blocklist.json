@@ -24704,7 +24704,112 @@
           "note": "WebFetch succeeded; confirmed article is about a different Netflix series (\"El Círculo\"), whose in-show friend group is coincidentally also called \"Los Azules\" -- unrelated to Las Azules / Women in Blue."
         }
       ]
+    },
+    {
+      "url": "https://uncsangam.org/article/imperfect-women-season-2-everything-we-know-about-kerry-washington-s-eleanor-spin-off",
+      "firstSeen": "2026-10-11T04:04:39Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad English query hit. Article is about \"Imperfect Women\", an unrelated Apple TV series spin-off centered on Kerry Washington's Eleanor character. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\"/\"Apple TV\" terms.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T04:04:39Z",
+          "method": "title-inspection",
+          "status": null,
+          "issue": "LEMA-12366",
+          "note": "Unambiguous off-topic by title/subject; no fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://homesofhagerstown.com/article/boston-blue-season-2-release-date-cast-plot-everything-we-know",
+      "firstSeen": "2026-10-11T04:04:39Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad English query hit. Article is about \"Boston Blue\", an unrelated CBS police drama Season 2 (release date/cast/plot roundup). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\"/\"Blue\" terms.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T04:04:39Z",
+          "method": "title-inspection",
+          "status": null,
+          "issue": "LEMA-12366",
+          "note": "Unambiguous off-topic by title/subject; no fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://fcfchurchonline.org/article/stick-season-2-trailer-breakdown-owen-wilson-s-golf-comeback-on-apple-tv",
+      "firstSeen": "2026-10-11T04:04:39Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad English query hit. Article is a trailer breakdown for \"Stick\", an unrelated Apple TV golf comedy starring Owen Wilson. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic \"Season 2\"/\"Apple TV\" terms.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T04:04:39Z",
+          "method": "title-inspection",
+          "status": null,
+          "issue": "LEMA-12366",
+          "note": "Unambiguous off-topic by title/subject; no fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://infobae.com/mexico/2026/10/11/la-historia-de-andrea-legarreta-y-timbiriche-de-cercania-a-ignorar-al-elenco-de-la-nueva-serie",
+      "firstSeen": "2026-10-11T04:04:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T04:04:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad Spanish query hit (\"Barbara Mori entrevista Las Azules temporada 2\"). WebFetch confirmed the article is about Andrea Legarreta's relationship with Timbiriche and a ViX biographical series about the band; \"la nueva serie\" refers to that ViX production, not Las Azules. No mention of Barbara Mori, Apple TV, or Las Azules anywhere in the piece.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T04:04:39Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12366",
+          "note": "WebFetch confirmed article is about an unrelated ViX Timbiriche biographical series, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://mega.cl/programas/coliseo/capitulos/221273-coliseo-temporada-2-capitulo-9.html",
+      "firstSeen": "2026-10-11T04:04:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-11T04:04:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Exa broad Spanish query hit (\"Barbara Mori entrevista Las Azules temporada 2\"). WebFetch confirmed the page is about \"Coliseo\" Season 2 Episode 9, a Chilean comedy competition show on Mega TV (Stefan Kramer, semifinalist selection). No mention of Las Azules or Women in Blue anywhere.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-11T04:04:39Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12366",
+          "note": "WebFetch confirmed page is about an unrelated Chilean comedy show, not Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-11T02:12:00Z"
+  "lastUpdated": "2026-10-11T04:04:39Z"
 }
