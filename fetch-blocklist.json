@@ -26468,7 +26468,27 @@
           "note": "WebFetch succeeded; confirmed primary topic is Sarinana's music comeback, not Las Azules S2 coverage."
         }
       ]
+    },
+    {
+      "url": "https://www.nmas.com.mx/nuevo-leon/movilidad/marchas/ximena-sarinana-en-la-marcha-lgbtqmas-2026-en-monterrey-cuando-y-a-que-hora-se-presentara/",
+      "firstSeen": "2026-10-12T16:00:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T16:00:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "N+ (nmas.com.mx) Nuevo Leon local piece about Ximena Sarinana appearing as ambassador for the 25th Marcha de la Diversidad (LGBTQ+ Pride March) in Monterrey on June 20, 2026. No mention of Las Azules or Women in Blue anywhere in the body (confirmed via WebFetch). Surfaced only as a broad-query match on the actress's name; unrelated to the show.",
+      "history": [
+        {
+          "attempt": "2026-10-12T16:00:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12516",
+          "note": "WebFetch succeeded (200); confirmed page is about an unrelated LGBTQ+ march appearance, no mention of Las Azules/Women in Blue."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-12T10:05:23Z"
+  "lastUpdated": "2026-10-12T16:00:49Z"
 }
