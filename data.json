@@ -4875,6 +4875,19 @@
     "excerpt": "Covers the Season 2 premiere, with cast and creators discussing the responsibility of portraying Mexico's first female police force and the 1968 Tlatelolco massacre, and celebrating the Spanish-language production's global platform reach."
   },
   {
+    "outlet": "Revista Q",
+    "headline": "'Las Azules' celebra el \u00e9xito de M\u00e9xico en Apple TV pero con \"responsabilidad\" hist\u00f3rica",
+    "url": "https://revistaq.mx/espectaculos/las-azules-celebra-el-exito-de-mexico-en-apple-tv-pero-con-responsabilidad-historica/",
+    "date": "Aug 12, 2026",
+    "ts": 20260812,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Revista Q's republication of the EFE wire story (byline Pedro Pablo Cortes, dateline \"Miami (EE.UU.), 12 ago (EFE)\"): the cast of Las Azules celebrates Season 2 putting Mexico on the map on Apple TV while embracing the responsibility of portraying the 1968 Tlatelolco massacre and the 1971 founding of Mexico City's first female police force.",
+    "storyGroup": "efe-las-azules-celebra-exito-responsabilidad-20260812"
+  },
+  {
     "outlet": "Fiction Horizon",
     "headline": "'Las Azules' Recap Revisits a Defiant Season 1 Finale as Season 2 Arrives on Apple TV+",
     "url": "https://fictionhorizon.com/las-azules-recap-revisits-a-defiant-season-1-finale-as-season-2-arrives-on-apple-tv/",
@@ -7595,6 +7608,18 @@
     "excerpt": "Ecuadorian outlet's recap of Latino presence at the International Emmy Awards gala. Las Azules, starring B\u00e1rbara Mori, Miguel Rodarte and Natalia T\u00e9llez, is cited as an example of Mexican fiction addressing female empowerment in the 1970s; coverage is a brief mention within a broader gala roundup."
   },
   {
+    "outlet": "HOLA! Americas",
+    "headline": "Premios Emmy Internacionales 2025: los latinos que brillaron en la entrega",
+    "url": "https://www.hola.com/us-es/entretenimiento/20251125869315/premios-emmy-internacionales-2025-latinos-que-brillaron-entrega/",
+    "date": "Nov 25, 2025",
+    "ts": 20251125,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Recap of the 53rd International Emmy Awards gala in New York; Las Azules cast members Barbara Mori, Miguel Rodarte and Natalia Tellez discuss representing Mexico with a story centered on female empowerment."
+  },
+  {
     "outlet": "Hollywood Reporter en Espa\u00f1ol",
     "headline": "Las Azules: la serie mexicana nominada al Emmy Internacional",
     "url": "https://es.hollywoodreporter.com/?p=9808",
@@ -7642,6 +7667,18 @@
     "excerpt": "Fernando Rovzar attended a charity race for the Amorinfinito foundation and expressed enthusiasm about Las Azules' International Emmy nomination, saying he will compete for the award on November 24 in New York."
   },
   {
+    "outlet": "Bloomberg Linea",
+    "headline": "Latinoamerica brilla en las nominaciones a los International Emmy 2025",
+    "url": "https://www.bloomberglinea.com/estilo-de-vida/latinoamerica-brilla-en-las-nominaciones-a-los-international-emmy-2025/",
+    "date": "Sep 27, 2025",
+    "ts": 20250927,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Roundup of Latin American nominees at the 2025 International Emmy Awards; notes Mexico received four nominations including Las Azules, starring Barbara Mori, alongside nods for Brazil, Argentina, Chile and Colombia."
+  },
+  {
     "outlet": "VideoAge International",
     "headline": "2025 International Emmy\u00ae Noms Unveiled",
     "url": "https://www.videoageinternational.net/2025/09/26/news/2025-international-emmy-noms-unveiled/",
@@ -7664,6 +7701,18 @@
     "market": "International",
     "type": "Trade",
     "excerpt": "Roundup of Hispanic/Latino nominees at the 53rd International Emmy Awards (64 nominations, 26 countries). Las Azules is named among the Best Drama Series nominees for Mexico, competing against entries from the UK, Israel and South Africa; brief mention within broader coverage, no further detail on the show itself."
+  },
+  {
+    "outlet": "World Screen",
+    "headline": "International Emmy Nominees Unveiled",
+    "url": "https://worldscreen.com/international-emmy-nominees-unveiled/",
+    "date": "Sep 26, 2025",
+    "ts": 20250926,
+    "dateSource": "visible_dateline",
+    "lang": "EN",
+    "market": "International",
+    "type": "Trade",
+    "excerpt": "Trade announcement of the 2025 International Emmy nominees across 16 categories; Las Azules (Mexico) is named a Best Drama Series nominee alongside Bad Boy (Israel), Koek (South Africa) and Rivals (UK)."
   },
   {
     "outlet": "Apple World Today",
@@ -7697,6 +7746,18 @@
     "market": "US",
     "type": "Trade",
     "excerpt": "In the drama series competition, Mexico's Apple TV+ series Las Azules (Women in Blue), the story of trailblazing female police officers in 1970s Mexico City, goes up against Israel's Bad Boy, South Africa's Koek (Cake), and the UK's Rivals. By Scott Roxborough."
+  },
+  {
+    "outlet": "Quien",
+    "headline": "Mexicanos nominados a los Premios Emmy Internacionales 2025",
+    "url": "https://www.quien.com/espectaculos/2025/09/25/mexicanos-nominados-a-los-premios-emmy-internacionales-2025",
+    "date": "Sep 25, 2025",
+    "ts": 20250925,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Report on Mexican productions nominated for the 2025 International Emmy Awards; Las Azules, produced by Estudios Lemon for Apple TV+, is named a Best Drama Series nominee for its depiction of Mexico's first female police officers."
   },
   {
     "outlet": "Common Sense Media",
@@ -9465,6 +9526,18 @@
     "excerpt": "Excelsior feature (byline Nancy M\u00e9ndez) on Las Azules ahead of its July 31, 2024 premiere: stars B\u00e1rbara Mori and Ximena Sari\u00f1ana discuss how the show, based on Mexico's first female police force founded in 1971, depicts the women investigating a serial killer while confronting the era's patriarchal society; Mori notes parallels to issues women still face today."
   },
   {
+    "outlet": "Chic Magazine",
+    "headline": "Las Azules: Qui\u00e9n es qui\u00e9n en la nueva serie de B\u00e1rbara Mori",
+    "url": "https://www.chicmagazine.com.mx/personajes/las-azules-personajes-y-elenco-de-serie",
+    "date": "Jul 30, 2024",
+    "ts": 20240730,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Andrea Bouchot profiles the Las Azules cast and characters ahead of the Season 1 premiere, explaining the show's premise (four women joining Mexico's first female police force while a serial killer is at large) and its basis in a male-dominated institution, alongside character-to-actor breakdowns."
+  },
+  {
     "outlet": "Los Lunes Seriefilos",
     "headline": "[Series] Resenamos 'Las Azules' (Apple TV+): la astucia y la rebeldia de las primeras mujeres policia de Mexico",
     "url": "https://www.loslunesseriefilos.com/2024/07/ciritca-las-azules-serie-apple-tv.html",
@@ -9634,6 +9707,18 @@
     "market": "US",
     "type": "Review",
     "excerpt": "Apple TV+'s Women in Blue is a stylish crime drama that\u2019s at its best when it focuses on its layered characters and makes bold choices."
+  },
+  {
+    "outlet": "Milenio",
+    "headline": "Las Azules. Cuatro mujeres y su lucha contra el machismo",
+    "url": "https://www.milenio.com/espectaculos/television/azules-historia-grupo-mujeres-policias-mexico",
+    "date": "Jul 20, 2024",
+    "ts": 20240720,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Feature interview on the Apple TV+ series Las Azules exploring Mexico's first female police force in the 1970s; showrunner Fernando Rovzar and the cast (Barbara Mori, Ximena Sarinana, Natalia Tellez, Amorita Rasgado) discuss the show's themes of machismo and violence against women."
   },
   {
     "outlet": "UnoTV",
@@ -10191,30 +10276,5 @@
     "market": "US",
     "type": "Tech",
     "excerpt": "MacDailyNews reports Apple TV+ has ordered the 10-episode Spanish-language crime drama Las Azules, created by Fernando Rovzar and Pablo Aramendi, following four women who join Mexico's first female police force in 1970 only to discover their squad is a publicity stunt masking a serial-killer investigation."
-  },
-  {
-    "outlet": "Revista Q",
-    "headline": "'Las Azules' celebra el \u00e9xito de M\u00e9xico en Apple TV pero con \"responsabilidad\" hist\u00f3rica",
-    "url": "https://revistaq.mx/espectaculos/las-azules-celebra-el-exito-de-mexico-en-apple-tv-pero-con-responsabilidad-historica/",
-    "date": "Aug 12, 2026",
-    "ts": 20260812,
-    "dateSource": "visible_dateline",
-    "lang": "ES",
-    "market": "Mexico",
-    "type": "Entertainment",
-    "excerpt": "Revista Q's republication of the EFE wire story (byline Pedro Pablo Cortes, dateline \"Miami (EE.UU.), 12 ago (EFE)\"): the cast of Las Azules celebrates Season 2 putting Mexico on the map on Apple TV while embracing the responsibility of portraying the 1968 Tlatelolco massacre and the 1971 founding of Mexico City's first female police force.",
-    "storyGroup": "efe-las-azules-celebra-exito-responsabilidad-20260812"
-  },
-  {
-    "outlet": "Chic Magazine",
-    "headline": "Las Azules: Qui\u00e9n es qui\u00e9n en la nueva serie de B\u00e1rbara Mori",
-    "url": "https://www.chicmagazine.com.mx/personajes/las-azules-personajes-y-elenco-de-serie",
-    "date": "Jul 30, 2024",
-    "ts": 20240730,
-    "dateSource": "visible_dateline",
-    "lang": "ES",
-    "market": "Mexico",
-    "type": "Entertainment",
-    "excerpt": "Andrea Bouchot profiles the Las Azules cast and characters ahead of the Season 1 premiere, explaining the show's premise (four women joining Mexico's first female police force while a serial killer is at large) and its basis in a male-dominated institution, alongside character-to-actor breakdowns."
   }
 ]
