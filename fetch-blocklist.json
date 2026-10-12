@@ -25941,7 +25941,170 @@
           "note": "WebFetch succeeded; confirmed off-topic per skipNote."
         }
       ]
+    },
+    {
+      "url": "https://butwhytho.net/2026/10/blue-box-season-2-episode-2-review/",
+      "firstSeen": "2026-10-12T04:12:06Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-10-12T04:12:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad English query ('Las Azules Women in Blue Season 2 Apple TV'). Review of 'Blue Box' Season 2 Episode 2, an unrelated anime/live-action adaptation; no mention of Las Azules or Women in Blue. Off-topic false positive from generic 'season 2'/'blue' keyword overlap per Rule G. Not attempted for fetch: relevance gate fails before dateability is evaluated.",
+      "history": [
+        {
+          "attempt": "2026-10-12T04:12:06Z",
+          "method": "none",
+          "status": "not_attempted_relevance_gate",
+          "issue": "LEMA-12417",
+          "note": "Title/snippet alone confirms a different show (Blue Box); no body fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://interasearch.com/article/sugar-season-2-release-date-time-everything-you-need-to-know",
+      "firstSeen": "2026-10-12T04:12:06Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-10-12T04:12:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 1 Exa broad English query. Article is about 'Sugar' Season 2, an unrelated Apple TV+ series starring Colin Farrell; no mention of Las Azules or Women in Blue. Off-topic false positive from broad Apple TV Season 2 keyword overlap per Rule G.",
+      "history": [
+        {
+          "attempt": "2026-10-12T04:12:06Z",
+          "method": "none",
+          "status": "not_attempted_relevance_gate",
+          "issue": "LEMA-12417",
+          "note": "Title/snippet alone confirms a different show (Sugar); no body fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://mexiconewsdaily.com/mexicolife/the-town-of-tequilas-best-kept-secret/",
+      "firstSeen": "2026-10-12T04:12:06Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-10-12T04:12:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 2 Google News sweep (generic 'Las Azules' term match). Travel feature about 'Blue Falls' (Las Azules Falls), a waterfall near Tequila, Jalisco; unrelated to the TV series. Same underlying story is also ledgered under the /mexico-living/ path variant of this URL.",
+      "history": [
+        {
+          "attempt": "2026-10-12T04:12:06Z",
+          "method": "none",
+          "status": "not_attempted_relevance_gate",
+          "issue": "LEMA-12417",
+          "note": "Title/snippet alone confirms a different topic (a waterfall, not the TV series); no body fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://theguadalajarareporter.net/index.php/columns/columns/john-pint/53497-cooling-off-beneath-tequila-s-idyllic-blue-falls",
+      "firstSeen": "2026-10-12T04:12:06Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-10-12T04:12:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced via Pass 2 Google News sweep (generic 'Las Azules' term match). Travel column about 'Blue Falls' near Tequila, Jalisco; unrelated to the TV series, same underlying topic as the mexiconewsdaily.com waterfall pieces.",
+      "history": [
+        {
+          "attempt": "2026-10-12T04:12:06Z",
+          "method": "none",
+          "status": "not_attempted_relevance_gate",
+          "issue": "LEMA-12417",
+          "note": "Title/snippet alone confirms a different topic (a waterfall, not the TV series); no body fetch needed."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/en/digital/apple-tv-comparte-primer-vistazo-de-la-segunda-temporada-de-las-azules/amp",
+      "firstSeen": "2026-10-12T04:12:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T04:12:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "WebFetch confirms this /en/ path actually serves Spanish-language body text, word-for-word the same story already tracked at https://senalnews.com/es/digital/apple-tv-comparte-primer-vistazo-de-la-segunda-temporada-de-las-azules (ts=20260723): not a genuine English translation, a second address for the same Spanish document under a mislabeled /en/ path plus an /amp suffix.",
+      "history": [
+        {
+          "attempt": "2026-10-12T04:12:06Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12417",
+          "note": "Body fetched successfully; content is Spanish, matching the already-tracked ES article verbatim in substance. Second address, not a distinct EN edition."
+        }
+      ]
+    },
+    {
+      "url": "https://amp.milenio.com/espectaculos/television/azules-historia-grupo-mujeres-policias-mexico",
+      "firstSeen": "2026-10-12T04:12:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T04:12:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "AMP rendering of Milenio's own canonical article; <link rel=\"canonical\"> on this page points to https://www.milenio.com/espectaculos/television/azules-historia-grupo-mujeres-policias-mexico, which was added to data.json instead (ts=20240720).",
+      "history": [
+        {
+          "attempt": "2026-10-12T04:12:06Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12417",
+          "note": "Canonical link verified via curl; non-AMP canonical fetched separately and added to data.json."
+        }
+      ]
+    },
+    {
+      "url": "https://worldscreen.com/?p=337381",
+      "firstSeen": "2026-10-12T04:12:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T04:12:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "WordPress ID-permalink; 301-redirects (confirmed via curl with a browser user-agent, WebFetch alone returned 403) to https://worldscreen.com/international-emmy-nominees-unveiled/, which was added to data.json instead (ts=20250926).",
+      "history": [
+        {
+          "attempt": "2026-10-12T04:12:06Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-12417",
+          "note": "WebFetch returned 403; Tavily Extract succeeded and confirmed content matches the canonical redirect target, which was added to data.json instead."
+        }
+      ]
+    },
+    {
+      "url": "https://www.sensacine.com.mx/series/serie-31977/",
+      "firstSeen": "2026-10-12T04:12:06Z",
+      "failCount": 0,
+      "lastStatus": "not_attempted_relevance_gate",
+      "lastAttempt": "2026-10-12T04:12:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Bare SensaCine show-info page for Las Azules (cast list, synopsis, season listing); stripping the metadata table leaves no outlet-written prose about the show. Rule F database/listing page, not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-12T04:12:06Z",
+          "method": "none",
+          "status": "not_attempted_relevance_gate",
+          "issue": "LEMA-12417",
+          "note": "Page shape (bare show-info template) is sufficient to classify under Rule F without a fetch."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-12T02:05:57Z"
+  "lastUpdated": "2026-10-12T04:12:06Z"
 }
