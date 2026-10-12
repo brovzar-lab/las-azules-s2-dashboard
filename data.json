@@ -8653,6 +8653,18 @@
     "excerpt": "Apple TV+ released a preview for the fifth episode of the Spanish-language true crime drama \"Women in Blue\" (\"Las Azules\"), which follows four women who defy the ultra-conservative norms of the time and join Mexico's first female police force in 1970."
   },
   {
+    "outlet": "Common Sense Media",
+    "headline": "Guía para padres sobre Las Azules",
+    "url": "https://www.commonsensemedia.org/es/resenas-tv/las-azules",
+    "date": "Aug 15, 2024",
+    "ts": 20240815,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "US",
+    "type": "Review",
+    "excerpt": "Spanish-language parental guide review by Melissa Camacho rating Las Azules appropriate for ages 15+, noting mature content (strong language, serial-murder imagery, occasional sexual content) while praising the protagonists as strong, committed, intelligent role models challenging sexist norms."
+  },
+  {
     "outlet": "Nerds That Geek",
     "headline": "‘Women in Blue (Las Azules)’ Recap: ‘Alma’",
     "url": "https://nerdsthatgeek.com/television/women-in-blue-las-azules-recap-alma",
@@ -9536,6 +9548,18 @@
     "market": "Mexico",
     "type": "Entertainment",
     "excerpt": "Andrea Bouchot profiles the Las Azules cast and characters ahead of the Season 1 premiere, explaining the show's premise (four women joining Mexico's first female police force while a serial killer is at large) and its basis in a male-dominated institution, alongside character-to-actor breakdowns."
+  },
+  {
+    "outlet": "Chilango",
+    "headline": "Las Azules, la inspiradora historia sobre las primeras mujeres policía en CDMX",
+    "url": "https://www.chilango.com/cine-y-tv/series/las-azules-serie-mujeres-policia-cdmx/",
+    "date": "Jul 30, 2024",
+    "ts": 20240730,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "Mexico",
+    "type": "Entertainment",
+    "excerpt": "Feature on the real history behind Las Azules, Mexico's first female police unit in 1970s Mexico City, with cast members Barbara Mori and Ximena Sarinana reflecting on the show's historical inspiration."
   },
   {
     "outlet": "Los Lunes Seriefilos",
