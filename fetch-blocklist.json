@@ -24111,9 +24111,9 @@
     {
       "url": "https://macobserver.com/?p=488641",
       "firstSeen": "2026-10-10T16:07:02Z",
-      "failCount": 1,
+      "failCount": 2,
       "lastStatus": 403,
-      "lastAttempt": "2026-10-10T16:07:02Z",
+      "lastAttempt": "2026-10-12T06:04:40Z",
       "cooldownUntil": null,
       "permanentSkip": false,
       "skipReason": null,
@@ -24139,6 +24139,13 @@
           "status": "no_content",
           "issue": "LEMA-12344",
           "note": "Tavily Extract (batched with the ?p=488827 sibling URL) returned no content/empty result for this URL. Full-chain failure, failCount=1. Candidate surfaced via web search as 'Women in Blue Season 3: What the Season 2 Finale Leaves Open for Maria and the Azules' (MacObserver); could not be dated or sourced due to the fetch block."
+        },
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "WebFetch + Tavily Extract (advanced)",
+          "status": 403,
+          "issue": "LEMA-12434",
+          "note": "Third attempt, same EN season-3 speculation piece ('Women in Blue Season 3: What the Season 2 Finale Leaves Open for Maria and the Azules'). WebFetch returned 403 (Cloudflare bot-wall); Tavily Extract (advanced) returned no content. Full-chain failure, failCount incremented 1->2. Cooldown not yet set (sets at failCount=3)."
         }
       ]
     },
@@ -26104,7 +26111,175 @@
           "note": "Page shape (bare show-info template) is sufficient to classify under Rule F without a fetch."
         }
       ]
+    },
+    {
+      "url": "https://macobserver.com/?p=488829",
+      "firstSeen": "2026-10-12T06:04:40Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-12T06:04:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "curl -L (redirect check)",
+          "status": 403,
+          "issue": "LEMA-12434",
+          "note": "looksLikeIdPermalink=true; curl -L did not redirect (same host behavior as sibling ?p=488827/488641 rows)."
+        },
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12434",
+          "note": "WebFetch returned HTTP 403 (Cloudflare bot-wall challenge)."
+        },
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "Tavily Extract (advanced)",
+          "status": "no_content",
+          "issue": "LEMA-12434",
+          "note": "Tavily Extract returned no content/empty result. Full-chain failure, failCount=1. Candidate surfaced via web search as IT-language edition of the Season 3 speculation piece ('Women in Blue stagione 3: cosa lascia in sospeso il finale della stagione 2 per Maria e le Azules'); could not be dated or sourced due to the fetch block."
+        }
+      ]
+    },
+    {
+      "url": "https://macobserver.com/?p=488828",
+      "firstSeen": "2026-10-12T06:04:40Z",
+      "failCount": 1,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-12T06:04:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": null,
+      "history": [
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "curl -L (redirect check)",
+          "status": 403,
+          "issue": "LEMA-12434",
+          "note": "looksLikeIdPermalink=true; curl -L did not redirect (same host behavior as sibling ?p=488827/488641 rows)."
+        },
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12434",
+          "note": "WebFetch returned HTTP 403 (Cloudflare bot-wall challenge)."
+        },
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "Tavily Extract (advanced)",
+          "status": "no_content",
+          "issue": "LEMA-12434",
+          "note": "Tavily Extract returned no content/empty result. Full-chain failure, failCount=1. Candidate surfaced via web search as DE-language edition of the Season 3 speculation piece ('Women in Blue Staffel 3: Was das Finale von Staffel 2 fuer Maria und die Azules offen laesst'); could not be dated or sourced due to the fetch block."
+        }
+      ]
+    },
+    {
+      "url": "https://ap4.gn.fosun.com/loot-season-2-unpacking-apple-tvs-hilarious-return-to-absurdist-wealth-satire",
+      "firstSeen": "2026-10-12T06:04:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T06:04:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Loot' Season 2, a different Apple TV+ comedy series starring Maya Rudolph. No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic 'Apple TV season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "Exa/web search result title/snippet",
+          "status": 200,
+          "issue": "LEMA-12434",
+          "note": "Classification made from the search result title, which unambiguously identifies a different, unrelated topic; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lavanguardia.com/series/20261012/11656637/negocio-vivienda-pone-furiosas.html",
+      "firstSeen": "2026-10-12T06:04:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T06:04:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Vanguardia article about a housing/real-estate business story unrelated to Las Azules. Surfaced only as a broad-query match on generic Spanish terms.",
+      "history": [
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "Exa/web search result title/snippet",
+          "status": 200,
+          "issue": "LEMA-12434",
+          "note": "Classification made from the search result title, which unambiguously identifies a different, unrelated topic; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lavanguardia.com/encatala/20261012/11656641/negoci-l-habitatge-ens-posa-furioses-ctx.html",
+      "firstSeen": "2026-10-12T06:04:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T06:04:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Catalan-language La Vanguardia edition of the same housing/real-estate business story (see sibling row negocio-vivienda-pone-furiosas), unrelated to Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "Exa/web search result title/snippet",
+          "status": 200,
+          "issue": "LEMA-12434",
+          "note": "Classification made from the search result title, which unambiguously identifies a different, unrelated topic; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lavanguardia.com/cultura/20261012/11656647/barbara-rey-se-valgo-hay-modestia-mi-parte.html",
+      "firstSeen": "2026-10-12T06:04:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T06:04:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Vanguardia article about Barbara Rey, a Spanish TV personality unrelated to Las Azules cast member Barbara Mori. No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on the name 'Barbara'.",
+      "history": [
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "Exa/web search result title/snippet",
+          "status": 200,
+          "issue": "LEMA-12434",
+          "note": "Classification made from the search result title, which unambiguously identifies a different, unrelated topic; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.hechoencalifornia1010.com/barbara-rey-premio-nosferatu-del-festival-de-sitges/",
+      "firstSeen": "2026-10-12T06:04:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T06:04:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about Barbara Rey receiving a Nosferatu award at the Sitges Festival. Different person from Las Azules cast member Barbara Mori; surfaced only as a broad-query match on the name 'Barbara'.",
+      "history": [
+        {
+          "attempt": "2026-10-12T06:04:40Z",
+          "method": "Exa/web search result title/snippet",
+          "status": 200,
+          "issue": "LEMA-12434",
+          "note": "Classification made from the search result title, which unambiguously identifies a different, unrelated topic; no ambiguity to resolve via full body fetch."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-12T04:12:06Z"
+  "lastUpdated": "2026-10-12T06:04:40Z"
 }
