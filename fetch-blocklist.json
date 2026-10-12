@@ -26279,7 +26279,127 @@
           "note": "Classification made from the search result title, which unambiguously identifies a different, unrelated topic; no ambiguity to resolve via full body fetch."
         }
       ]
+    },
+    {
+      "url": "https://sortiraparis.com/en/what-to-do-in-paris/cinema-series/articles/314697-las-azules-a-new-series-about-a-mexican-police-squad-made-up-of-women-on-apple-tv",
+      "firstSeen": "2026-10-12T08:05:44Z",
+      "failCount": 0,
+      "lastStatus": 301,
+      "lastAttempt": "2026-10-12T08:05:44Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Stale/earlier slug for Sortiraparis article ID 314697. Rule I mechanical shortcut (same outlet, same CMS post ID): curl -L confirms a 301 redirect chain (apex->www, then to the current slug) landing on https://www.sortiraparis.com/en/what-to-do-in-paris/cinema-series/articles/314697-las-azules-on-apple-tv-season-2-premieres-august-12-2026, which is already tracked in data.json (ts=20260716, outlet=Sortiraparis, EN). Second address for a document already in data.json, not a distinct document.",
+      "history": [
+        {
+          "attempt": "2026-10-12T08:05:44Z",
+          "method": "curl -L (redirect chain)",
+          "status": 301,
+          "issue": "LEMA-12479",
+          "note": "301 -> https://www.sortiraparis.com/en/...314697-las-azules-a-new-series-about-a-mexican-police-squad-made-up-of-women-on-apple-tv (www-fold) -> 301 -> https://www.sortiraparis.com/en/...314697-las-azules-on-apple-tv-season-2-premieres-august-12-2026 (200, canonical, already in data.json)."
+        }
+      ]
+    },
+    {
+      "url": "https://task.joby.com/loot-season-2-unpacking-apple-tvs-hilarious-return-to-absurdist-wealth-satire",
+      "firstSeen": "2026-10-12T08:05:44Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T08:05:44Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Loot' Season 2, a different Apple TV+ comedy series starring Maya Rudolph. No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic 'Apple TV season 2' terms (Exa Pass 1 EN query).",
+      "history": [
+        {
+          "attempt": "2026-10-12T08:05:44Z",
+          "method": "Exa/web search result title/snippet",
+          "status": 200,
+          "issue": "LEMA-12479",
+          "note": "Classification made from the search result title, which unambiguously identifies a different, unrelated topic; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://thepeoplesmovies.com/trailer-for-season-2-of-apple-tvs-stick-released/",
+      "firstSeen": "2026-10-12T08:05:44Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T08:05:44Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about a Season 2 trailer for 'Stick', a different Apple TV+ series. No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic 'Apple TV season 2' terms (Exa Pass 1 EN query).",
+      "history": [
+        {
+          "attempt": "2026-10-12T08:05:44Z",
+          "method": "Exa/web search result title/snippet",
+          "status": 200,
+          "issue": "LEMA-12479",
+          "note": "Classification made from the search result title, which unambiguously identifies a different, unrelated topic; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eluniversal.com.mx/espectaculos/osvaldo-benavides-sobre-serie-de-timbiriche-estamos-tranquilos/",
+      "firstSeen": "2026-10-12T08:05:44Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T08:05:44Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Universal interview with Osvaldo Benavides about an unrelated Timbiriche biographical series. No mention of Las Azules / Women in Blue, Barbara Mori, or the show's cast; surfaced only as a broad-query match on generic Mexican entertainment/series terms (Pass 2 Spanish-language sweep).",
+      "history": [
+        {
+          "attempt": "2026-10-12T08:05:44Z",
+          "method": "WebSearch result title/snippet",
+          "status": 200,
+          "issue": "LEMA-12479",
+          "note": "Classification made from the search result title, which unambiguously identifies a different, unrelated topic; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.europesays.com/es/814115/",
+      "firstSeen": "2026-10-12T08:05:44Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T08:05:44Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Aggregator piece about Barbara Rey, a Spanish TV personality unrelated to Las Azules cast member Barbara Mori. No mention of Las Azules / Women in Blue; surfaced only as a broad first-name match on the Spanish-language Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-12T08:05:44Z",
+          "method": "Exa/web search result title/snippet",
+          "status": 200,
+          "issue": "LEMA-12479",
+          "note": "Classification made from the search result title, which unambiguously identifies a different person; no ambiguity to resolve via full body fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvazteca.com/aztecanoticias/entrevista-a-ben-affleck-por-animales-un-thriller-actores-mexicanos/",
+      "firstSeen": "2026-10-12T08:05:44Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T08:05:44Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Azteca interview with Ben Affleck about an unrelated thriller film ('Animales') featuring Mexican actors. No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic Mexican-actors/entertainment terms (Pass 2 Spanish-language sweep).",
+      "history": [
+        {
+          "attempt": "2026-10-12T08:05:44Z",
+          "method": "WebSearch result title/snippet",
+          "status": 200,
+          "issue": "LEMA-12479",
+          "note": "Classification made from the search result title, which unambiguously identifies a different, unrelated topic; no ambiguity to resolve via full body fetch."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-12T06:04:40Z"
+  "lastUpdated": "2026-10-12T08:05:44Z"
 }
