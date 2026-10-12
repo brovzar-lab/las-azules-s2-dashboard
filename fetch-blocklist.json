@@ -21958,17 +21958,6 @@
       "skipNote": "WebFetch (2026-10-08) confirmed primary topic is Ximena Sariñana's new single 'ALV' and her Festival HERA HSBC appearance; Las Azules is mentioned only as brief bio/plot context (her dual role as actress and theme-song producer), no Season 2 plot/character/review content. Dated Aug 23, 2024 (pre-Season 2, Season 1 promotion window). Surfaced via Pass 2 broad ES query combining Bárbara Mori/Ximena Sariñana with Las Azules."
     },
     {
-      "url": "https://forbes.com.mx/exclusiva-ximena-sarinana-vuelve-a-los-escenarios-con-musica-nueva/",
-      "firstSeen": "2026-10-08T12:00:56Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-10-08T12:00:56Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Original candidate URL https://forbes.com.mx/?p=1240943 is an unresolved WordPress ID-permalink (looksLikeIdPermalink flag from lookup); resolved via curl -L to this canonical URL before evaluation, per the step 4a2 ID-permalink resolution instruction. WebFetch (2026-10-08) confirmed primary topic is Ximena Sariñana's return to live performing with a new single, dated Jul 2, 2024 (pre-Season 2). Las Azules mentioned only as brief bio/plot summary. Surfaced via Pass 2 broad ES query."
-    },
-    {
       "url": "https://www.unotv.com/entretenimiento/ximena-sarinana-revela-como-fue-su-inicio-en-la-industria-hasta-convertirse-en-un-referente/",
       "firstSeen": "2026-10-08T12:00:56Z",
       "failCount": 0,
@@ -26401,26 +26390,6 @@
       ]
     },
     {
-      "url": "https://forbes.com.mx/exclusiva-ximena-sarinana-vuelve-a-los-escenarios-con-musica-nueva/",
-      "firstSeen": "2026-10-12T10:05:23Z",
-      "failCount": 0,
-      "lastStatus": 200,
-      "lastAttempt": "2026-10-12T10:05:23Z",
-      "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Forbes Mexico piece (published 2026-07-02, pre-dates Season 2) about Ximena Sarinana's return to music with new single \"ALV\" and her co-producer role at the Hera HSBC festival (launching 2026-08-24). Las Azules is mentioned only as a one-line acting-credit bio note (Season 1, no Season 2 content). Surfaced via a broad cast-member-name + show-title query match; primary subject is her music career, not the show. URL resolved from WordPress ID-permalink https://forbes.com.mx/?p=1240943 via redirect before ledgering, per looksLikeIdPermalink handling.",
-      "history": [
-        {
-          "attempt": "2026-10-12T10:05:23Z",
-          "method": "WebFetch",
-          "status": 200,
-          "issue": "LEMA-12503",
-          "note": "WebFetch succeeded; confirmed primary topic is Sarinana's music comeback, not Las Azules S2 coverage."
-        }
-      ]
-    },
-    {
       "url": "https://custommapposter.com/article/widow-s-bay-season-2-release-date-cast-and-emmy-wins-everything-we-know/16816",
       "firstSeen": "2026-10-12T10:05:23Z",
       "failCount": 0,
@@ -26477,6 +26446,26 @@
           "status": 200,
           "issue": "LEMA-12503",
           "note": "WebFetch succeeded; confirmed article is about Estado de Furia, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://forbes.com.mx/exclusiva-ximena-sarinana-vuelve-a-los-escenarios-con-musica-nueva",
+      "firstSeen": "2026-10-08T12:00:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Forbes Mexico piece (published 2026-07-02, pre-dates Season 2) about Ximena Sarinana's return to music with new single \"ALV\" and her co-producer role at the Hera HSBC festival (launching 2026-08-24). Las Azules is mentioned only as a one-line acting-credit bio note (Season 1, no Season 2 content). Surfaced via a broad cast-member-name + show-title query match; primary subject is her music career, not the show. URL resolved from WordPress ID-permalink https://forbes.com.mx/?p=1240943 via redirect before ledgering, per looksLikeIdPermalink handling. Prior note (unknown): Original candidate URL https://forbes.com.mx/?p=1240943 is an unresolved WordPress ID-permalink (looksLikeIdPermalink flag from lookup); resolved via curl -L to this canonical URL before evaluation, per the step 4a2 ID-permalink resolution instruction. WebFetch (2026-10-08) confirmed primary topic is Ximena Sariñana's return to live performing with a new single, dated Jul 2, 2024 (pre-Season 2). Las Azules mentioned only as brief bio/plot summary. Surfaced via Pass 2 broad ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-12T10:05:23Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12503",
+          "note": "WebFetch succeeded; confirmed primary topic is Sarinana's music comeback, not Las Azules S2 coverage."
         }
       ]
     }
