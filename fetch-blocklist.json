@@ -26399,7 +26399,87 @@
           "note": "Classification made from the search result title, which unambiguously identifies a different, unrelated topic; no ambiguity to resolve via full body fetch."
         }
       ]
+    },
+    {
+      "url": "https://forbes.com.mx/exclusiva-ximena-sarinana-vuelve-a-los-escenarios-con-musica-nueva/",
+      "firstSeen": "2026-10-12T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Forbes Mexico piece (published 2026-07-02, pre-dates Season 2) about Ximena Sarinana's return to music with new single \"ALV\" and her co-producer role at the Hera HSBC festival (launching 2026-08-24). Las Azules is mentioned only as a one-line acting-credit bio note (Season 1, no Season 2 content). Surfaced via a broad cast-member-name + show-title query match; primary subject is her music career, not the show. URL resolved from WordPress ID-permalink https://forbes.com.mx/?p=1240943 via redirect before ledgering, per looksLikeIdPermalink handling.",
+      "history": [
+        {
+          "attempt": "2026-10-12T10:05:23Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12503",
+          "note": "WebFetch succeeded; confirmed primary topic is Sarinana's music comeback, not Las Azules S2 coverage."
+        }
+      ]
+    },
+    {
+      "url": "https://custommapposter.com/article/widow-s-bay-season-2-release-date-cast-and-emmy-wins-everything-we-know/16816",
+      "firstSeen": "2026-10-12T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Content-farm article entirely about a different Apple TV show, \"Widow's Bay\" (season 2 release date, cast, Emmy wins). No mention of Las Azules or Women in Blue anywhere on the page. Surfaced via Exa Pass 1 broad query (\"Las Azules Women in Blue Season 2 Apple TV\"). Original candidate URL https://hobbycolombi.org/article/widow-s-bay-season-2-release-date-cast-and-emmy-wins-everything-we-know 302-redirects here; ledgering the resolved destination.",
+      "history": [
+        {
+          "attempt": "2026-10-12T10:05:23Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12503",
+          "note": "WebFetch succeeded; confirmed article is about Widow's Bay, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://custommapposter.com/article/apple-tv-s-2026-recap-renewals-cancellations-and-a-major-announcement/15489",
+      "firstSeen": "2026-10-12T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Content-farm general Apple TV 2026 programming recap (renewals/cancellations roundup). No mention of Las Azules or Women in Blue anywhere on the page. Surfaced via Exa Pass 1 broad query. Original candidate URL https://tahoewomenservices.org/article/apple-tv-s-2026-recap-renewals-cancellations-and-a-major-announcement 302-redirects here; ledgering the resolved destination.",
+      "history": [
+        {
+          "attempt": "2026-10-12T10:05:23Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12503",
+          "note": "WebFetch succeeded; confirmed no Las Azules mention anywhere in the article."
+        }
+      ]
+    },
+    {
+      "url": "https://www.inoticias.cl/a-las-mujeres-se-nos-ha-negado-la-rabia-cecilia-suarez-adelanta-la-segunda-temporada-de-estado-de-furia-en-hbo-max",
+      "firstSeen": "2026-10-12T10:05:23Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-12T10:05:23Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about a different show entirely: \"Estado de Furia\" (HBO Max), featuring Mexican actress Cecilia Suarez discussing her character India Mendoza ahead of that show's season 2. No mention of Las Azules or Women in Blue anywhere on the page. Surfaced via Spanish-language broad query (shared cast-adjacent Mexican-actress/season-2 terms).",
+      "history": [
+        {
+          "attempt": "2026-10-12T10:05:23Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12503",
+          "note": "WebFetch succeeded; confirmed article is about Estado de Furia, unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-12T08:05:44Z"
+  "lastUpdated": "2026-10-12T10:05:23Z"
 }
