@@ -26648,7 +26648,27 @@
           "note": "Surfaced via Pass 2 web sweep; confirmed Rule I second-address duplicate of existing data.json entry, same post ID."
         }
       ]
+    },
+    {
+      "url": "https://vanillaicecentral.com/article/unveiling-the-mystery-who-s-the-new-face-on-ted-lasso-s-women-s-team",
+      "firstSeen": "2026-10-13T06:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-13T06:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "custommapposter.com (redirect target of vanillaicecentral.com) article about Apple TV's \"Ted Lasso\" Season 4, introducing new character Gemma Jay (Abbie Hern). No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query Exa match on \"Apple TV\" + \"women's team\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-13T06:08:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12536",
+          "note": "WebFetch (via 302 redirect to custommapposter.com) succeeded; confirmed article is about Ted Lasso Season 4, unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-13T04:06:03Z"
+  "lastUpdated": "2026-10-13T06:08:00Z"
 }
