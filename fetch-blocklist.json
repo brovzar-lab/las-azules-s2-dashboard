@@ -26488,7 +26488,87 @@
           "note": "WebFetch succeeded (200); confirmed page is about an unrelated LGBTQ+ march appearance, no mention of Las Azules/Women in Blue."
         }
       ]
+    },
+    {
+      "url": "https://dbusiness.com/events-party-pictures/women-in-blue-2026",
+      "firstSeen": "2026-10-13T00:01:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-13T00:01:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "DBusiness Magazine (Detroit) event photo gallery for the Detroit Public Safety Foundation's 13th annual \"Women in Blue\" celebration (May 27, 2026, MGM Grand Detroit), honoring Detroit Police/Fire Department women. No relation to the Apple TV+ show Las Azules / Women in Blue; surfaced only as a broad-query title match via Exa Pass 1 EN query. Tavily Extract (advanced) confirmed the page content.",
+      "history": [
+        {
+          "attempt": "2026-10-13T00:01:09Z",
+          "method": "Tavily Extract (advanced)",
+          "status": 200,
+          "issue": "LEMA-12523",
+          "note": "WebFetch returned 403; Tavily Extract succeeded and confirmed off-topic (Detroit gala event, not the TV show)."
+        }
+      ]
+    },
+    {
+      "url": "https://kinoafisha.info/en/series/10898",
+      "firstSeen": "2026-10-13T00:01:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-13T00:01:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Kinoafisha.info database/catalog record for Las Azules / Women in Blue (2024, Mexico, Drama/Crime): ratings, season/episode counts, cast list, synopsis blurb, related-series recommendations, media galleries. No written editorial content about the show beyond the catalog metadata; strip the metadata table and nothing remains. Surfaced via Exa Pass 3 IT query.",
+      "history": [
+        {
+          "attempt": "2026-10-13T00:01:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12523",
+          "note": "WebFetch succeeded; confirmed structured database/listing page, Rule F."
+        }
+      ]
+    },
+    {
+      "url": "https://memorabletv.com/news/maddie-hasson-joins-julia-garner-lewis-pullman-apple-tvs",
+      "firstSeen": "2026-10-13T00:01:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-13T00:01:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "MemorableTV article about Maddie Hasson joining the cast of Apple TV+'s \"Guilty Creatures\" (with Julia Garner and Lewis Pullman). No mention of Las Azules or Women in Blue anywhere in the article; surfaced only as a broad-query match via Exa Pass 1 EN query (shared Apple TV + crime-drama-casting terms).",
+      "history": [
+        {
+          "attempt": "2026-10-13T00:01:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12523",
+          "note": "WebFetch succeeded; confirmed article is about a different show (Guilty Creatures)."
+        }
+      ]
+    },
+    {
+      "url": "https://milenio.com/espectaculos/famosos/critican-serie-timbiriche-revictimizar-a-sasha-sokol-por-caso-llano",
+      "firstSeen": "2026-10-13T00:01:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-13T00:01:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Milenio article about the ViX series \"Timbiriche\" and controversy over its portrayal of Sasha Sokol and Luis de Llano. No mention of Las Azules or Women in Blue anywhere in the article; surfaced only as a broad-query match via Exa Pass 1 ES query (shared Mexican-series/Milenio terms).",
+      "history": [
+        {
+          "attempt": "2026-10-13T00:01:09Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12523",
+          "note": "WebFetch succeeded; confirmed article is about a different show (Timbiriche)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-12T16:00:49Z"
+  "lastUpdated": "2026-10-13T00:01:09Z"
 }
