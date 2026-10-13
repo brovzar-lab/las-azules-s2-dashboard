@@ -26695,7 +26695,107 @@
           "note": "Surfaced by Pass 3 Exa (DE market query) as a not-found/inDataJson=false candidate with looksLikeIdPermalink=true; resolved redirect target already in data.json, ledgered as redundant second address per step 4a2."
         }
       ]
+    },
+    {
+      "url": "https://tiktok.com/",
+      "firstSeen": "2026-10-13T20:05:19Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-13T20:05:19Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TikTok homepage (bare platform landing page, no article content). No mention of Las Azules or Women in Blue. Classified from Exa search result alone (unambiguous: a bare platform homepage carries no show-related content); not fetched. Surfaced only as a broad-query match on the Spanish-language Pass 1 query.",
+      "history": [
+        {
+          "attempt": "2026-10-13T20:05:19Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12581",
+          "note": "TikTok homepage (bare platform landing page, no article content). No mention of Las Azules or Women in Blue. Classified from Exa search result alone (unambiguous: a bare platform homepage carries no show-related content); not fetched. Surfaced only as a broad-query match on the Spanish-language Pass 1 query."
+        }
+      ]
+    },
+    {
+      "url": "https://eropush.com/article/unveiling-sugar-season-2-release-date-episodes-and-more",
+      "firstSeen": "2026-10-13T20:05:19Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-13T20:05:19Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "eropush.com article about Sugar (a different Apple TV+ series, starring Colin Farrell) Season 2 release date. No mention of Las Azules or Women in Blue. Classified from Exa search result title alone (unambiguous: names a different Apple TV show); not fetched. Surfaced only as a broad-query match on generic \"Apple TV Season 2\" terms.",
+      "history": [
+        {
+          "attempt": "2026-10-13T20:05:19Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12581",
+          "note": "eropush.com article about Sugar (a different Apple TV+ series, starring Colin Farrell) Season 2 release date. No mention of Las Azules or Women in Blue. Classified from Exa search result title alone (unambiguous: names a different Apple TV show); not fetched. Surfaced only as a broad-query match on generic \"Apple TV Season 2\" terms."
+        }
+      ]
+    },
+    {
+      "url": "https://canalsur.es/rtva/comunicacion/miguel-poveda-descubre-raices-andaluzas_1_1443417.html",
+      "firstSeen": "2026-10-13T20:05:19Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-13T20:05:19Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Canal Sur article about flamenco singer Miguel Poveda discussing his Andalusian roots. No mention of Las Azules or Women in Blue, and no relation to Bárbara Mori. Classified from Exa search result title alone (unambiguous: different person, different topic); not fetched. Surfaced only as a broad-query match on generic Spanish-entertainment terms.",
+      "history": [
+        {
+          "attempt": "2026-10-13T20:05:19Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12581",
+          "note": "Canal Sur article about flamenco singer Miguel Poveda discussing his Andalusian roots. No mention of Las Azules or Women in Blue, and no relation to Bárbara Mori. Classified from Exa search result title alone (unambiguous: different person, different topic); not fetched. Surfaced only as a broad-query match on generic Spanish-entertainment terms."
+        }
+      ]
+    },
+    {
+      "url": "https://zeno.fm/podcast/radio-maricel-de-sitges/episodes/barbara-rey-hace-muchos-anos-que-no-hacia-cine-no-porque-yo-no-quisiera-tengo-una-vis-comica-impresionante",
+      "firstSeen": "2026-10-13T20:05:19Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-13T20:05:19Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Zeno.fm podcast episode (Radio Maricel de Sitges) featuring actress Barbara Rey discussing her film career. Different person from Bárbara Mori (Las Azules lead); no mention of Las Azules or Women in Blue. Classified from Exa search result title alone (unambiguous: different named individual); not fetched. Surfaced only as a broad-query match on the first name \"Barbara\".",
+      "history": [
+        {
+          "attempt": "2026-10-13T20:05:19Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12581",
+          "note": "Zeno.fm podcast episode (Radio Maricel de Sitges) featuring actress Barbara Rey discussing her film career. Different person from Bárbara Mori (Las Azules lead); no mention of Las Azules or Women in Blue. Classified from Exa search result title alone (unambiguous: different named individual); not fetched. Surfaced only as a broad-query match on the first name \"Barbara\"."
+        }
+      ]
+    },
+    {
+      "url": "https://infobae.com/mexico/2026/10/13/pedro-damian-lanza-mensaje-sobre-la-serie-de-timbiriche-a-mi-tampoco-me-preguntaron-nada",
+      "firstSeen": "2026-10-13T20:05:19Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-13T20:05:19Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Infobae Mexico article about producer Pedro Damián's comments on an upcoming Timbiriche biographical series. No mention of Las Azules or Women in Blue. Classified from Exa search result title alone (unambiguous: different series entirely); not fetched. Surfaced only as a broad-query match on generic Mexican-TV-series terms.",
+      "history": [
+        {
+          "attempt": "2026-10-13T20:05:19Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-12581",
+          "note": "Infobae Mexico article about producer Pedro Damián's comments on an upcoming Timbiriche biographical series. No mention of Las Azules or Women in Blue. Classified from Exa search result title alone (unambiguous: different series entirely); not fetched. Surfaced only as a broad-query match on generic Mexican-TV-series terms."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-13T16:04:41Z"
+  "lastUpdated": "2026-10-13T20:05:19Z"
 }
