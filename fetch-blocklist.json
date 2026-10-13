@@ -26568,7 +26568,67 @@
           "note": "WebFetch succeeded; confirmed article is about a different show (Timbiriche)."
         }
       ]
+    },
+    {
+      "url": "https://texansformedicalmarijuana.org/article/boston-blue-season-2-detective-lena-s-fate-and-new-family-drama",
+      "firstSeen": "2026-10-13T02:05:28Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-13T02:05:28Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Content-farm page (redirects 302 to custommapposter.com, same syndicated network) about \"Boston Blue\" Season 2, Detective Lena Silver and Detective Brian Rodgers. No mention of Las Azules or Women in Blue anywhere; surfaced only as a broad-query match on generic 'season 2 detective' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-13T02:05:28Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12533",
+          "note": "WebFetch (after following 302 redirect to custommapposter.com) confirmed page is about Boston Blue, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://collider.com/lioness-star-stephanie-nur-cast-apple-tv-series-beat-the-reaper/",
+      "firstSeen": "2026-10-13T02:05:28Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-13T02:05:28Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Collider article about actress Stephanie Nur (Lioness) joining Apple TV+'s unrelated dramedy \"Beat the Reaper\". No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic 'Apple TV series' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-13T02:05:28Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12533",
+          "note": "WebFetch confirmed page is about Lioness/Beat the Reaper casting, unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://heraldodemexico.com.mx/espectaculos/2026/10/12/con-capitulos-en-netflix-la-serie-espanola-con-luis-zahera-que-causa-furor-ya-prepara-su-final-906840.html",
+      "firstSeen": "2026-10-13T02:05:28Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-13T02:05:28Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Heraldo de Mexico article about Netflix's Spanish series \"Clanes\" (Luis Zahera joining cast, season 3 renewal). No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic 'Spanish-language series' terms. WebFetch returned 403; confirmed via Tavily Extract (advanced).",
+      "history": [
+        {
+          "attempt": "2026-10-13T02:05:28Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-12533",
+          "note": "WebFetch returned 403 Forbidden; Tavily Extract (advanced) succeeded and confirmed page is about Clanes, unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-13T00:01:09Z"
+  "lastUpdated": "2026-10-13T02:05:28Z"
 }
