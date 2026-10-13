@@ -26628,7 +26628,27 @@
           "note": "WebFetch returned 403 Forbidden; Tavily Extract (advanced) succeeded and confirmed page is about Clanes, unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://cinefilos.it/serie-tv/news/las-azules-il-nuovo-crime-drama-in-lingua-spagnola-in-arrivo-su-apple-tv-621572",
+      "firstSeen": "2026-10-13T04:06:03Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-13T04:06:03Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Second address (www subdomain + alternate slug, same CMS post ID 621572) for a Cinefilos.it article already tracked in data.json at https://cinefilos.it/serie-tv/news/las-azules-il-nuovo-crime-drama-in-lingua-spagnola-di-apple-tv-621572 (ts 20240509). WebFetch of this candidate URL returned the identical headline (Las Azules, il nuovo crime drama in lingua spagnola di Apple TV+) and the same May 9 2024 dateline, confirming same document per Rule I mechanical shortcut (same outlet, same post ID, fetch shows identical body). Not added to data.json.",
+      "history": [
+        {
+          "attempt": "2026-10-13T04:06:03Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12535",
+          "note": "Surfaced via Pass 2 web sweep; confirmed Rule I second-address duplicate of existing data.json entry, same post ID."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-13T02:05:28Z"
+  "lastUpdated": "2026-10-13T04:06:03Z"
 }
