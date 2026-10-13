@@ -26668,7 +26668,27 @@
           "note": "WebFetch (via 302 redirect to custommapposter.com) succeeded; confirmed article is about Ted Lasso Season 4, unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://appleworld.today/?p=125225",
+      "firstSeen": "2026-10-13T12:08:00Z",
+      "failCount": 0,
+      "lastStatus": 301,
+      "lastAttempt": "2026-10-13T12:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "WordPress ID-permalink (?p=125225) 301-redirects to https://appleworld.today/2026/03/second-season-of-women-in-blue-las-azules-arrives-on-apple-tv-august-12/, already tracked in data.json (ts=20260327, outlet=Apple World Today). Second address for an already-tracked document, not fetched for excerpt (redirect confirmed via curl -L, no body fetch spent per step 4a2 pre-fetch dedup gate).",
+      "history": [
+        {
+          "attempt": "2026-10-13T12:08:00Z",
+          "method": "curl -L redirect resolution",
+          "status": 301,
+          "issue": "LEMA-12572",
+          "note": "Surfaced by Pass 3 Exa (DE market query) as a not-found/inDataJson=false candidate with looksLikeIdPermalink=true; resolved redirect target already in data.json, ledgered as redundant second address per step 4a2."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-13T06:08:00Z"
+  "lastUpdated": "2026-10-13T12:08:00Z"
 }
