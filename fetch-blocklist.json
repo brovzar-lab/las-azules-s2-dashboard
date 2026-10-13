@@ -26795,7 +26795,26 @@
           "note": "Infobae Mexico article about producer Pedro Damián's comments on an upcoming Timbiriche biographical series. No mention of Las Azules or Women in Blue. Classified from Exa search result title alone (unambiguous: different series entirely); not fetched. Surfaced only as a broad-query match on generic Mexican-TV-series terms."
         }
       ]
+    },
+    {
+      "url": "https://sensacine.com/series/serie-31977/temporada-1000001953/reparto",
+      "firstSeen": "2026-10-13T22:00:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-13T22:00:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "SensaCine 'Reparto' (cast/crew) listing page for Las Azules temporada 2, surfaced by the Exa ES pass (LEMA-12582, 2026-10-13 22:00Z fire). WebFetch confirms a database-style cast/crew table (actor/character pairs, creator, producers, composer) with no written editorial prose about the show; the only dated items on the page are unrelated news-teaser headlines in a sidebar, not this page's own content. No article:published_time or JSON-LD datePublished present. Per Rule F (LEMA-9927): strip the metadata table and nothing written about the show remains, so this is a listing/database surface, not coverage. reviewable omitted (false) per Rule F posture.",
+      "history": [
+        {
+          "attempt": "2026-10-13T22:00:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12582"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-13T20:05:19Z"
+  "lastUpdated": "2026-10-13T22:00:00Z"
 }
