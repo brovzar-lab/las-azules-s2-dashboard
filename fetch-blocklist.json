@@ -135,10 +135,10 @@
     {
       "url": "https://www.aol.com/perfect-crime-series-branded-simply-222400629.html",
       "firstSeen": "2026-09-02T18:06:40Z",
-      "failCount": 3,
+      "failCount": 4,
       "lastStatus": 404,
-      "lastAttempt": "2026-09-05T14:07:26Z",
-      "cooldownUntil": "2026-10-05T14:07:26Z",
+      "lastAttempt": "2026-10-13T16:04:41Z",
+      "cooldownUntil": "2026-11-12T16:04:41Z",
       "history": [
         {
           "attempt": "2026-09-02T18:06:40Z",
@@ -172,6 +172,13 @@
           "status": 404,
           "issue": "LEMA-9749",
           "note": "Retry after prior failCount=2; both WebFetch and Firecrawl returned 404 (page not found). failCount now 3, cooldown set."
+        },
+        {
+          "attempt": "2026-10-13T16:04:41Z",
+          "method": "WebFetch+Tavily Extract (advanced)",
+          "status": 404,
+          "issue": "LEMA-12578",
+          "note": "Expired-cooldown retry. WebFetch returned HTTP 404. Tavily Extract (advanced) returned AOL's generic page-not-found placeholder (err=404 redirect target), not the article. Full-chain failure confirmed again; failCount now 4, cooldown reset 30 days."
         }
       ]
     },
@@ -26690,5 +26697,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-10-13T12:08:00Z"
+  "lastUpdated": "2026-10-13T16:04:41Z"
 }
