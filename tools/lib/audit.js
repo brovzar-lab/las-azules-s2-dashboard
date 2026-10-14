@@ -414,7 +414,12 @@ function hasConcreteAlternativeSubject(skipNote) {
   const quotedTitle = /["“]([^"”]{2,})["”]|'([^']{2,})'/.test(skipNote);
   if (quotedTitle) return true;
   const withoutShowName = skipNote.replace(SHOW_NAME_PATTERN, '');
-  const properNounSequences = withoutShowName.match(/\b[A-Z][\p{L}'-]*(?:\s+[A-Z][\p{L}'-]*)+\b/gu) || [];
+  // \p{Lu} (Unicode uppercase letter), not ASCII [A-Z]: this ledger is
+  // majority Spanish/Latin-American coverage, where an accented capital
+  // (e.g. "Los Ángeles Azules") is exactly as common a proper-noun
+  // lead character as a plain ASCII one. An ASCII-only check silently
+  // missed real named alternatives in this population.
+  const properNounSequences = withoutShowName.match(/\b\p{Lu}[\p{L}'-]*(?:\s+\p{Lu}[\p{L}'-]*)+\b/gu) || [];
   return properNounSequences.length > 0;
 }
 

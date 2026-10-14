@@ -512,3 +512,12 @@ test('skipMethodVocabularyCheck: flags a present value outside the two-item voca
   assert.equal(findings[0].url, 'https://example.com/k');
   assert.equal(findings[0].skipMethod, 'exa-metadata-only');
 });
+
+test('hasConcreteAlternativeSubject: an accented-capital proper noun (Spanish-language dataset) still counts (ASCII-only [A-Z] would miss this)', () => {
+  assert.equal(
+    hasConcreteAlternativeSubject(
+      'X/Twitter account for Los Ángeles Azules, a Mexican cumbia band, unrelated to the TV show Las Azules.'
+    ),
+    true
+  );
+});
