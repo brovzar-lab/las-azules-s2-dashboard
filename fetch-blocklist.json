@@ -26972,7 +26972,175 @@
           "note": "Surfaced by Pass 1 Exa broad Spanish query; confirmed off-topic from title alone, no body fetch needed (Rule G, dateability irrelevant)."
         }
       ]
+    },
+    {
+      "url": "https://snipe.herotel.com/la-reina-de-las-lgrimas-reparto-todo-sobre-los-actores-que-interpretan-la-tragedia-y-la-fortaleza",
+      "firstSeen": "2026-10-14T12:05:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T12:05:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Herotel/Snipe article about the Korean drama 'La Reina De Las Lagrimas' (Queen of Tears), covering cast Kim So Hyun and Cha Eun Woo. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic Spanish-language drama terms.",
+      "history": [
+        {
+          "attempt": "2026-10-14T12:05:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12632",
+          "note": "WebFetch succeeded; confirmed article is about a different show (La Reina De Las Lagrimas / Queen of Tears), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://tarantlinchetto.com/article/imperfect-women-season-2-everything-we-know-about-kerry-washington-s-eleanor-spinoff",
+      "firstSeen": "2026-10-14T12:05:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T12:05:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Imperfect Women', a Kerry Washington/Eleanor spinoff series, unrelated to Las Azules. URL redirects (302) to custommapposter.com/article/imperfect-women-season-2-everything-we-know-about-kerry-washington-s-eleanor-spinoff/16487; content confirmed via Tavily Extract. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on 'Season 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-14T12:05:04Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-12632",
+          "note": "Tavily Extract succeeded (after a 302 redirect); confirmed article is about a different show (Imperfect Women), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.957jamz.com/2026/10/14/owen-wilson-returns-to-the-golf-course-in-stick-season-2-trailer/",
+      "firstSeen": "2026-10-14T12:05:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T12:05:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "957 Jamz article about the 'Stick' Season 2 trailer (Owen Wilson golf comedy, Apple TV+), unrelated to Las Azules. WebFetch returned 403; content confirmed via Tavily Extract. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic Apple TV Season 2 terms.",
+      "history": [
+        {
+          "attempt": "2026-10-14T12:05:04Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12632",
+          "note": "WebFetch blocked (403)."
+        },
+        {
+          "attempt": "2026-10-14T12:05:04Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-12632",
+          "note": "Tavily Extract succeeded; confirmed article is about a different show (Stick Season 2), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.comingsoon.net/guides/news/2207296-last-seen-new-episode-7-not-releasing-this-week-apple-tv",
+      "firstSeen": "2026-10-14T12:05:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T12:05:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "ComingSoon.net article about 'Last Seen' (a different Apple TV+ series) episode 7 release scheduling, unrelated to Las Azules. WebFetch returned 403; content confirmed via Tavily Extract. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic Apple TV Season terms.",
+      "history": [
+        {
+          "attempt": "2026-10-14T12:05:04Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12632",
+          "note": "WebFetch blocked (403)."
+        },
+        {
+          "attempt": "2026-10-14T12:05:04Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-12632",
+          "note": "Tavily Extract succeeded; confirmed article is about a different show (Last Seen), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.dizibox.live/dizi/slow-horses/6-sezon-slow-horses/",
+      "firstSeen": "2026-10-14T12:05:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T12:05:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "DiziBOX (Turkish streaming index) season-6 listing page for 'Slow Horses', unrelated to Las Azules. WebFetch returned 403; content confirmed via Tavily Extract. The site's sidebar carries a nav link to a separate Las Azules listing page (https://www.dizibox.live/diziler/las-azules/), but that is a distinct URL not surfaced by this run's candidate searches and is out of scope for this entry. Surfaced only as a broad-query match on generic Apple TV Season terms.",
+      "history": [
+        {
+          "attempt": "2026-10-14T12:05:04Z",
+          "method": "WebFetch",
+          "status": 403,
+          "issue": "LEMA-12632",
+          "note": "WebFetch blocked (403)."
+        },
+        {
+          "attempt": "2026-10-14T12:05:04Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-12632",
+          "note": "Tavily Extract succeeded; confirmed page is about a different show (Slow Horses season 6), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.larazon.es/tecnologia-consumo/series/trailer-fecha-estreno-temporada-2-ciudad-dios-lucha-no-trae-vuelta-mayor-narcotraficante-pelicula-original-rival-ze-pequeno_202610146acf52a6b79b18452fc40680.html",
+      "firstSeen": "2026-10-14T12:05:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T12:05:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Razon article about the trailer and premiere date for 'Ciudad de Dios: La Lucha No Para' season 2 (City of God franchise spinoff), unrelated to Las Azules. WebFetch failed to connect; content confirmed via Tavily Extract. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic 'temporada 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-14T12:05:04Z",
+          "method": "WebFetch",
+          "status": "fetch_failed",
+          "issue": "LEMA-12632",
+          "note": "WebFetch could not connect to host."
+        },
+        {
+          "attempt": "2026-10-14T12:05:04Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-12632",
+          "note": "Tavily Extract succeeded; confirmed article is about a different franchise (Ciudad de Dios: La Lucha No Para), unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.orm.es/programas/el-mirador/fomo-del-bullense-jose-antonio-valera-llega-a-miles-de-hogares-con-filmin/",
+      "firstSeen": "2026-10-14T12:05:04Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T12:05:04Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Onda Regional de Murcia (ORM) radio-segment article about director Jose Antonio Valera and his unrelated miniseries 'FOMO' on Filmin, unrelated to Las Azules. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on generic 'temporada 2' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-14T12:05:04Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12632",
+          "note": "WebFetch succeeded; confirmed article is about a different series (FOMO), unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-14T02:06:41Z"
+  "lastUpdated": "2026-10-14T12:05:04Z"
 }
