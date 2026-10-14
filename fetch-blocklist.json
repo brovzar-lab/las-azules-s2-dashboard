@@ -27240,7 +27240,207 @@
           "issue": "LEMA-12638"
         }
       ]
+    },
+    {
+      "url": "https://justwatch.com/fr/serie/las-azules",
+      "firstSeen": "2026-10-14T20:05:22Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T20:05:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch FR streaming-availability page for Las Azules. WebFetch confirms the only written sentences on the page are a one-line distributor synopsis (\"En 1971, quatre femmes defient les lois ultraconservatrices et rejoignent les premieres forces de police feminines du Mexique.\"), a one-line availability statement, and auto-generated popularity-ranking text. Rule F: stripping the availability/metadata/ranking widgets leaves nothing written about the show. No original editorial content.",
+      "history": [
+        {
+          "attempt": "2026-10-14T20:05:22Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Confirmed bare listing/availability page, no editorial prose.",
+          "issue": "LEMA-12641"
+        }
+      ]
+    },
+    {
+      "url": "https://deadline.com/2026/10/maximum-pleasure-guaranteed-renewed-season-2-apple-tv-1237157176",
+      "firstSeen": "2026-10-14T20:05:22Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-14T20:05:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Deadline article about 'Maximum Pleasure Guaranteed' (different Apple TV+ show, renewed for Season 2) surfaced by Exa's broad EN query (semantic match on 'Apple TV Season 2 renewed', not on Las Azules/Women in Blue). Unrelated title and cast; no mention of Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-10-14T20:05:22Z",
+          "method": "WebSearch result inspection (no dedicated fetch)",
+          "status": null,
+          "note": "Classified off-topic directly from the search result's title/summary, which unambiguously names a different show/topic; no ambiguity warranting a fetch per Rule G.",
+          "issue": "LEMA-12641"
+        }
+      ]
+    },
+    {
+      "url": "https://variety.com/2026/tv/news/maximum-pleasure-guaranteed-season-2-apple-tv-1236912202",
+      "firstSeen": "2026-10-14T20:05:22Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-14T20:05:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Variety article about 'Maximum Pleasure Guaranteed' Season 2 renewal (different Apple TV+ show). Surfaced by Exa's broad EN query via keyword overlap ('Apple TV', 'Season 2'), not about Las Azules/Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-14T20:05:22Z",
+          "method": "WebSearch result inspection (no dedicated fetch)",
+          "status": null,
+          "note": "Classified off-topic directly from the search result's title/summary, which unambiguously names a different show/topic; no ambiguity warranting a fetch per Rule G.",
+          "issue": "LEMA-12641"
+        }
+      ]
+    },
+    {
+      "url": "https://thewrap.com/creative-content/tv-shows/maximum-pleasure-guaranteed-season-2-renewed-apple",
+      "firstSeen": "2026-10-14T20:05:22Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-14T20:05:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TheWrap article about 'Maximum Pleasure Guaranteed' Season 2 renewal (different Apple TV+ show). Same false-positive cluster as the Deadline/Variety/Verge entries from this run's Exa EN query.",
+      "history": [
+        {
+          "attempt": "2026-10-14T20:05:22Z",
+          "method": "WebSearch result inspection (no dedicated fetch)",
+          "status": null,
+          "note": "Classified off-topic directly from the search result's title/summary, which unambiguously names a different show/topic; no ambiguity warranting a fetch per Rule G.",
+          "issue": "LEMA-12641"
+        }
+      ]
+    },
+    {
+      "url": "https://theverge.com/entertainment/1011428/even-more-pleasure",
+      "firstSeen": "2026-10-14T20:05:22Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-14T20:05:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "The Verge article ('Even More Pleasure') about 'Maximum Pleasure Guaranteed' Season 2 (different Apple TV+ show, Tatiana Maslany). Off-topic, same false-positive cluster as this run's other Exa EN hits.",
+      "history": [
+        {
+          "attempt": "2026-10-14T20:05:22Z",
+          "method": "WebSearch result inspection (no dedicated fetch)",
+          "status": null,
+          "note": "Classified off-topic directly from the search result's title/summary, which unambiguously names a different show/topic; no ambiguity warranting a fetch per Rule G.",
+          "issue": "LEMA-12641"
+        }
+      ]
+    },
+    {
+      "url": "https://eng.pressbee.net/show4925569.html?title=maximum-pleasure-guaranteed-renewed-for-season-2-by-apple-tv",
+      "firstSeen": "2026-10-14T20:05:22Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-14T20:05:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Pressbee aggregator item re-headlining the 'Maximum Pleasure Guaranteed' Season 2 renewal (different Apple TV+ show). Off-topic, same false-positive cluster.",
+      "history": [
+        {
+          "attempt": "2026-10-14T20:05:22Z",
+          "method": "WebSearch result inspection (no dedicated fetch)",
+          "status": null,
+          "note": "Classified off-topic directly from the search result's title/summary, which unambiguously names a different show/topic; no ambiguity warranting a fetch per Rule G.",
+          "issue": "LEMA-12641"
+        }
+      ]
+    },
+    {
+      "url": "https://headliner.nl/artikelen/apple-tv-bestelt-tweede-seizoen-maximum-pleasure-guaranteed-tatiana-maslany-201970",
+      "firstSeen": "2026-10-14T20:05:22Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-14T20:05:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Dutch-language Headliner.nl article: Apple TV orders a second season of 'Maximum Pleasure Guaranteed' starring Tatiana Maslany (different show). Off-topic, same false-positive cluster.",
+      "history": [
+        {
+          "attempt": "2026-10-14T20:05:22Z",
+          "method": "WebSearch result inspection (no dedicated fetch)",
+          "status": null,
+          "note": "Classified off-topic directly from the search result's title/summary, which unambiguously names a different show/topic; no ambiguity warranting a fetch per Rule G.",
+          "issue": "LEMA-12641"
+        }
+      ]
+    },
+    {
+      "url": "https://kinotico.es/actualidad/2026-10-14/los-premios-produ-anuncian-los-finalistas-para-la-edicion-2026-con-fuerte-presencia-de-la-ficcion-espanola",
+      "firstSeen": "2026-10-14T20:05:22Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-14T20:05:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Kinotico.es article about the Premios Produ 2026 awards finalists (Spanish fiction industry awards). Surfaced by Exa's broad ES query via keyword overlap; no content about Las Azules/Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-14T20:05:22Z",
+          "method": "WebSearch result inspection (no dedicated fetch)",
+          "status": null,
+          "note": "Classified off-topic directly from the search result's title/summary, which unambiguously names a different show/topic; no ambiguity warranting a fetch per Rule G.",
+          "issue": "LEMA-12641"
+        }
+      ]
+    },
+    {
+      "url": "https://produ.com/television/noticias/productora-chilena-mazal-producciones-presenta-las-series-intensa-y-rey-del-oro-en-mipcom",
+      "firstSeen": "2026-10-14T20:05:22Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-14T20:05:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Produ.com article about Chilean production company Mazal Producciones presenting unrelated series ('Intensa', 'Rey del Oro') at MIPCOM. No content about Las Azules/Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-14T20:05:22Z",
+          "method": "WebSearch result inspection (no dedicated fetch)",
+          "status": null,
+          "note": "Classified off-topic directly from the search result's title/summary, which unambiguously names a different show/topic; no ambiguity warranting a fetch per Rule G.",
+          "issue": "LEMA-12641"
+        }
+      ]
+    },
+    {
+      "url": "https://youtube.com/watch?list=PLe4GXBB52jAVt9emEf-MAEUIXU0HYLtG4&v=l8le6_YWXOE",
+      "firstSeen": "2026-10-14T20:05:22Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T20:05:22Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Rule I second address: same video already in data.json as https://www.youtube.com/watch?v=l8le6_YWXOE (Bonnie Laufer interview with Natalia Tellez & Amorita Rasgado, ts 20240711); this candidate carries an extra &list=PLe4GXBB52jAVt9emEf-MAEUIXU0HYLtG4 playlist query param that produces a different normalize() key (query-param ordering/content is not stripped), causing lookup --strict to report inDataJson=false for this exact literal URL even though the underlying document is already tracked. Confirmed via Tavily Extract: identical video (same title, channel Bonnie Laufer, Posted 2024-07-11, same transcript). Not new coverage; ledgered here so this literal address is not re-surfaced as a false 'not-found' candidate on a future sweep. Known normalization gap (tracking/playlist query params not stripped) flagged for tools/sweep-integrity.js's own ticket, not patched here.",
+      "history": [
+        {
+          "attempt": "2026-10-14T20:05:22Z",
+          "method": "WebFetch (failed, JS-gated) + Tavily Extract advanced (succeeded)",
+          "status": 200,
+          "issue": "LEMA-12641",
+          "note": "Tavily Extract returned full transcript/description confirming this is the same video already present in data.json under its bare watch?v= address."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-14T16:10:00Z"
+  "lastUpdated": "2026-10-14T20:05:22Z"
 }
