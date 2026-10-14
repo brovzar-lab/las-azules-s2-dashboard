@@ -26814,7 +26814,67 @@
           "issue": "LEMA-12582"
         }
       ]
+    },
+    {
+      "url": "https://www.justwatch.com/us/tv-show/haven",
+      "firstSeen": "2026-10-14T00:01:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa EN query (LEMA-12584, 2026-10-14 00:01Z fire). JustWatch streaming-availability page for \"Haven\" (SyFy supernatural drama, 2010-2015), an entirely unrelated show. No mention of Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous: different title, different platform page); not fetched.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-14T00:01:00Z",
+          "method": "classified-from-title-only",
+          "status": null,
+          "issue": "LEMA-12584"
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/ar/serie/average-joe/temporada-2",
+      "firstSeen": "2026-10-14T00:01:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa EN query (LEMA-12584, 2026-10-14 00:01Z fire). JustWatch (Argentina locale) streaming-availability page for \"Average Joe\" season 2, an entirely unrelated show. No mention of Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous: different title, different platform page); not fetched.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-14T00:01:00Z",
+          "method": "classified-from-title-only",
+          "status": null,
+          "issue": "LEMA-12584"
+        }
+      ]
+    },
+    {
+      "url": "https://www.lared.cl/2026/series-retro/los-angeles-de-charlie-siguen-conquistando-las-tardes-de-la-red-accion-glamour-intriga-y-misiones-que-no-dan-tregua-revive-una-de-las-series-mas-iconicas-de-la-television-y-acompana-a-este-inolvid-3",
+      "firstSeen": "2026-10-14T00:01:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": null,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Surfaced by Pass 1 Exa ES query (LEMA-12584, 2026-10-14 00:01Z fire). La Red (Chile) piece about reruns of \"Los Ángeles de Charlie\" (Charlie's Angels), an unrelated 1970s US show airing in afternoon retro programming. No mention of Las Azules / Women in Blue or Bárbara Mori. Classified from Exa search result title alone (unambiguous: different show, different era); not fetched.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-14T00:01:00Z",
+          "method": "classified-from-title-only",
+          "status": null,
+          "issue": "LEMA-12584"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-13T22:00:00Z"
+  "lastUpdated": "2026-10-14T00:01:00Z"
 }
