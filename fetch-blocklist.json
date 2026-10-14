@@ -26874,7 +26874,91 @@
           "issue": "LEMA-12584"
         }
       ]
+    },
+    {
+      "url": "https://fictionhorizon.com/?p=377730",
+      "firstSeen": "2026-10-14T02:06:41Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T02:06:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "reviewable": false,
+      "skipNote": "WordPress ID-permalink second address for the already-tracked https://fictionhorizon.com/las-azules-recap-revisits-a-defiant-season-1-finale-as-season-2-arrives-on-apple-tv/ (data.json ts=20260811, outlet 'Fiction Horizon'). curl -L did not resolve a redirect (403), so WebFetch was used directly; it returned identical headline/author/content (Robert Milakovic, 'Las Azules Recap Revisits a Defiant Season 1 Finale as Season 2 Arrives on Apple TV+'), confirming second address, not distinct content.",
+      "history": [
+        {
+          "attempt": "2026-10-14T02:06:41Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12593",
+          "note": "WebFetch confirmed identical content to the already-tracked fictionhorizon.com slug URL; looksLikeIdPermalink flag from lookup --strict correctly caught this as a likely alias."
+        }
+      ]
+    },
+    {
+      "url": "https://hotfoilprinting.org/article/imperfect-women-elisabeth-moss-kerry-washington-kate-mara-in-a-gripping-drama-apple-tv-review",
+      "firstSeen": "2026-10-14T02:06:41Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-14T02:06:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Article is about 'Imperfect Women' (Elisabeth Moss, Kerry Washington, Kate Mara), an unrelated Apple TV+ drama. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on Pass 1 Exa's EN query. Same unrelated show as jingletree.com/ntbustour.com hits already ledgered.",
+      "history": [
+        {
+          "attempt": "2026-10-14T02:06:41Z",
+          "method": "WebSearch (Exa Pass 1 EN)",
+          "status": 200,
+          "issue": "LEMA-12593",
+          "note": "Surfaced by Pass 1 Exa broad English query; confirmed off-topic from title alone, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://radiomitre.cienradios.com/celebrities/maribel-verdu-actriz-espanola-no-se-nos-puede-imponer-que-sepamos-de-todo-y-que-podamos-opinar-de-todo-con-un-criterio-excelso-siempre/",
+      "firstSeen": "2026-10-14T02:06:41Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-14T02:06:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Interview with Spanish actress Maribel Verdu on an unrelated topic; no mention of Las Azules, Women in Blue, or any cast member of this show. Surfaced only as a broad-query match on Pass 1 Exa's ES query (\"Barbara Mori entrevista Las Azules temporada 2\").",
+      "history": [
+        {
+          "attempt": "2026-10-14T02:06:41Z",
+          "method": "WebSearch (Exa Pass 1 ES)",
+          "status": 200,
+          "issue": "LEMA-12593",
+          "note": "Surfaced by Pass 1 Exa broad Spanish query; confirmed off-topic from title alone, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
+    },
+    {
+      "url": "https://red92.com/mas/prime-video-revela-el-primer-vistazo-de-la-segunda-temporada-de-menem-97309",
+      "firstSeen": "2026-10-14T02:06:41Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-14T02:06:41Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "skipNote": "Article is about Prime Video's 'Menem' series second season, an unrelated show. No mention of Las Azules or Women in Blue; surfaced only as a broad-query match on Pass 1 Exa's ES query (\"Barbara Mori entrevista Las Azules temporada 2\").",
+      "history": [
+        {
+          "attempt": "2026-10-14T02:06:41Z",
+          "method": "WebSearch (Exa Pass 1 ES)",
+          "status": 200,
+          "issue": "LEMA-12593",
+          "note": "Surfaced by Pass 1 Exa broad Spanish query; confirmed off-topic from title alone, no body fetch needed (Rule G, dateability irrelevant)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-14T00:01:00Z"
+  "lastUpdated": "2026-10-14T02:06:41Z"
 }
