@@ -27140,7 +27140,107 @@
           "note": "WebFetch succeeded; confirmed article is about a different series (FOMO), unrelated to Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://premiosprodu.com/finalistas",
+      "firstSeen": "2026-10-14T16:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T16:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "Premios PRODU 2026 official finalists page: a bare data table (RUBRO/CATEGORIA/FINALISTA/PANTALLA/PRODUCTORA/PAIS columns) across Contenido and Talento Artistico/Tecnico tabs, with no written editorial prose about any nominee. \"Las azules 2\" appears only as a single table row (Serie de Drama Historico, Politico, Social; Apple TV; Lemon Studios; Mexico) plus rows for Barbara Mori (Actriz Protagonista) and the writing/producing teams -- no narrative text, review, or commentary. Strip-test per Rule F: removing the table leaves nothing written about the show. Surfaced via Tavily search for Las Azules PRODU coverage (LEMA-12638 run, 2026-10-14). The dedicated EscribiendoCine article covering these same nominations in prose was added to data.json instead (escribiendocine.com/noticias/2026/10/13/25932).",
+      "history": [
+        {
+          "attempt": "2026-10-14T16:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Page fetched successfully; bare finalists data table, no editorial prose. Classified Rule F without further fetch attempts.",
+          "issue": "LEMA-12638"
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/p/DecoknhJxLd",
+      "firstSeen": "2026-10-14T16:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T16:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Instagram post by @cesar_cine_indica (Oct 13, 2026), a personal film-content account with no visible bio, verification, or stated outlet/publisher affiliation -- poster/meme-style posts about film generally. Caption is auto-generated alt text only (\"meme of one or more people, poster and text\"), no original reporting. Not a publisher, outlet, or editorial-brand account under Rule B, so classified as fan/personal repost without spending a dateability fetch attempt.",
+      "history": [
+        {
+          "attempt": "2026-10-14T16:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Account identified as unaffiliated personal/fan account; Rule B relevance gate applied, no further fetch attempted.",
+          "issue": "LEMA-12638"
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/p/DeNBj0Oicy8",
+      "firstSeen": "2026-10-14T16:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T16:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Instagram post by @comentariodd (\"El Comentario del Dia\"), posted Oct 7, 2026: a generic restated plot/theme summary of Las Azules S2 with a \"link en bio\" out-link and #noticias/#comentariodeldia hashtags. No verification badge, no stated newsroom/outlet affiliation, and no original reporting in the caption itself (summary-only, consistent with a social aggregator/fan-brief account rather than an editorial outlet). Classified under Rule B as fan/personal repost; not pursued for independent dateability.",
+      "history": [
+        {
+          "attempt": "2026-10-14T16:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Account identified as an unverified social aggregator/commentary account reposting show summary; Rule B relevance gate applied.",
+          "issue": "LEMA-12638"
+        }
+      ]
+    },
+    {
+      "url": "https://instagram.com/p/DecEMPcEd2N",
+      "firstSeen": "2026-10-14T16:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T16:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "Instagram post by @seriesypunto (Oct 13, 2026): a generic plot/theme recap of Las Azules S2 ending with an engagement question (\"have you watched it, what did you think?\"). No verification badge or stated outlet/publisher affiliation; pattern (recap + engagement bait, no original reporting) is consistent with a fan/series-recap account rather than an editorial brand. Classified under Rule B as fan/personal repost.",
+      "history": [
+        {
+          "attempt": "2026-10-14T16:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Account identified as unaffiliated fan/recap account; Rule B relevance gate applied.",
+          "issue": "LEMA-12638"
+        }
+      ]
+    },
+    {
+      "url": "https://youtube.com/watch?v=88KtTOkpLJE",
+      "firstSeen": "2026-10-14T16:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T16:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_personal_repost",
+      "skipNote": "YouTube Short \"Goyo Cardenas in Women in Blue\" (normalized from youtube.com/shorts/88KtTOkpLJE per the shorts->watch?v= fold). Generic hashtag-spam style short (#goyocardenas #lasazules #series #appletv #psicologadepelicula) with no identifiable channel name, official affiliation, or original commentary surfaced in search results; pattern matches true-crime clip/fan-repost channels rather than an editorial outlet. Classified under Rule B as fan/personal repost.",
+      "history": [
+        {
+          "attempt": "2026-10-14T16:10:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "note": "Channel identity could not be confirmed as an outlet/publisher; content is a short clip repost. Rule B relevance gate applied.",
+          "issue": "LEMA-12638"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-14T12:05:04Z"
+  "lastUpdated": "2026-10-14T16:10:00Z"
 }
