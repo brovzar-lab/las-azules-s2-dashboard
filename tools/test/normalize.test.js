@@ -107,6 +107,18 @@ test('YouTube playlist param on a mixed-case id is preserved byte-for-byte, not 
   assert.equal(key, 'youtube.com/playlist?list=PLPddDmhRE2s8AbC123');
 });
 
+// keepByPath lookup is case-insensitive (LEMA-12644): youtube.com is not in
+// HOST_CASE_INSENSITIVE_PATH, so the path reaches buildQueryString in its
+// original case. A /PLAYLIST casing variant must still match the lowercase
+// '/playlist' keepByPath table entry, or `list` silently drops and two
+// distinct playlist URLs collapse onto the same key -- the exact collision
+// class LEMA-12643 was written to avoid.
+
+test('YouTube playlist param survives a path-casing variant (/PLAYLIST), keepByPath matches case-insensitively', () => {
+  const { key } = normalizeUrl('https://www.youtube.com/PLAYLIST?list=PLPDDDmhRE2s8abc123');
+  assert.equal(key, 'youtube.com/PLAYLIST?list=PLPDDDmhRE2s8abc123');
+});
+
 // youtu.be -> youtube.com/watch?v=<id> fold (LEMA-9942 pre-approval,
 // shipped LEMA-11959): youtu.be only ever redirects to the watch form, so
 // it folds to the same key as its youtube.com/watch?v= equivalent, with

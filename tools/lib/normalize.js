@@ -440,7 +440,13 @@ function buildQueryString(searchParams, host, path) {
   const kept = [];
   for (const [key, value] of searchParams.entries()) {
     if (allowEntry) {
-      const pathKeep = (allowEntry.keepByPath && allowEntry.keepByPath[path]) || [];
+      // keepByPath is looked up case-insensitively (LEMA-12644): `path` here
+      // is case-preserved (see normalizeUrl's PATH CASE-SENSITIVITY comment
+      // below), so a path-casing variant like /PLAYLIST must still match the
+      // lowercase /playlist table entry. This lookup-only lowercasing never
+      // touches the emitted key -- keyPath's own case-folding stays governed
+      // solely by foldPathCase/HOST_CASE_INSENSITIVE_PATH.
+      const pathKeep = (allowEntry.keepByPath && allowEntry.keepByPath[path.toLowerCase()]) || [];
       if (allowEntry.keep.includes(key) || pathKeep.includes(key)) kept.push([key, value]);
     } else if (!isTrackingParam(key)) {
       kept.push([key, value]);
