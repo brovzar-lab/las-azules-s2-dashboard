@@ -27385,12 +27385,12 @@
       "url": "https://kinotico.es/actualidad/2026-10-14/los-premios-produ-anuncian-los-finalistas-para-la-edicion-2026-con-fuerte-presencia-de-la-ficcion-espanola",
       "firstSeen": "2026-10-14T20:05:22Z",
       "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": "2026-10-14T20:05:22Z",
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-14T22:10:00Z",
       "cooldownUntil": null,
-      "permanentSkip": true,
-      "skipReason": "editorial_off_topic_false_positive",
-      "skipNote": "Kinotico.es article about the Premios Produ 2026 awards finalists (Spanish fiction industry awards). Surfaced by Exa's broad ES query via keyword overlap; no content about Las Azules/Women in Blue.",
+      "permanentSkip": false,
+      "skipReason": null,
+      "skipNote": "RECLASSIFIED 2026-10-14 (this run, LEMA-12645): the prior disposition below was wrong. A direct fetch of the live page (curl with a browser User-Agent, 200; WebFetch itself returned 403, Tavily Extract returned a partial/truncated body that happened to omit the relevant sentence) shows the article's body text explicitly names 'Las azules' as one of the national finalist titles for Premios PRODU 2026: \"La representacion nacional se extiende a titulos como 'Las azules', 'Futuro desierto', 'El otro padre' y 'Rosario Tijeras'...\". JSON-LD datePublished on the page confirms 2026-10-14T07:06:00.000Z, canonical/og:url both self-match. The prior run's own history note admitted it classified this off-topic directly from the search result's title/summary with no dedicated fetch, on the premise that the title \"unambiguously names a different show/topic\" -- but the title (\"Los PRODU 2026 anuncian sus finalistas, con una abundante presencia de la ficcion espanola\") names no show at all; it is a general awards-finalists roundup, and Las Azules turned out to be one of the titles it covers. This is genuine coverage (distinct document, different outlet, from EscribiendoCine's existing Oct 13 PRODU 2026 nominations piece already in data.json -- Rule I), added to data.json this run. permanentSkip cleared; row and history preserved per Rule C (one URL, one row, always). Prior disposition (superseded 2026-10-14, permanentSkip=true, skipReason=editorial_off_topic_false_positive): Kinotico.es article about the Premios Produ 2026 awards finalists (Spanish fiction industry awards). Surfaced by Exa's broad ES query via keyword overlap; no content about Las Azules/Women in Blue.",
       "history": [
         {
           "attempt": "2026-10-14T20:05:22Z",
@@ -27398,6 +27398,13 @@
           "status": null,
           "note": "Classified off-topic directly from the search result's title/summary, which unambiguously names a different show/topic; no ambiguity warranting a fetch per Rule G.",
           "issue": "LEMA-12641"
+        },
+        {
+          "attempt": "2026-10-14T22:10:00Z",
+          "method": "curl with browser User-Agent (WebFetch 403, Tavily Extract partial/inconclusive)",
+          "status": 200,
+          "issue": "LEMA-12645",
+          "note": "Reclassification: page body confirmed to explicitly name 'Las azules' among PRODU 2026 national finalist titles; JSON-LD datePublished=2026-10-14T07:06:00.000Z. Added to data.json."
         }
       ]
     },
@@ -27442,5 +27449,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-10-14T20:05:22Z"
+  "lastUpdated": "2026-10-14T22:10:00Z"
 }
