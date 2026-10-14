@@ -1,5 +1,41 @@
 [
   {
+    "outlet": "Brad Gilmore (YouTube)",
+    "headline": "Fernando Rovzar on Women in Blue Season 2 | Interview with Brad Gilmore",
+    "url": "https://youtube.com/watch?v=V9gDhPjQB_Q",
+    "date": "Oct 13, 2026",
+    "ts": 20261013,
+    "dateSource": "visible_dateline",
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Show co-creator Fernando Rovzar discusses going bigger in season two, Mexico's 1968 Tlatelolco massacre and 1971 Halconazo as the season's central historical throughline, and why the story required expanding beyond season one's world-building."
+  },
+  {
+    "outlet": "Brad Gilmore (YouTube)",
+    "headline": "Bárbara Mori & Ximena Sariñana on Women in Blue Season 2 | Brad Gilmore Interview",
+    "url": "https://youtube.com/watch?v=PQeabgqfTjA",
+    "date": "Oct 13, 2026",
+    "ts": 20261013,
+    "dateSource": "visible_dateline",
+    "lang": "EN",
+    "market": "US",
+    "type": "Entertainment",
+    "excerpt": "Stars Bárbara Mori and Ximena Sariñana discuss season two's increased plot complexity, the show's expanded scale with hundreds of new locations, and collaborating with creator Fernando Rovzar on their characters' arcs."
+  },
+  {
+    "outlet": "Psicóloga de película (YouTube)",
+    "headline": "Women in Blue: Lozano (Ep 5, Season 2) #womeninblue #lozano #appletv #series #moviepsychologist",
+    "url": "https://youtube.com/watch?v=lQnO3XOdkvk",
+    "date": "Oct 10, 2026",
+    "ts": 20261010,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "International",
+    "type": "Social",
+    "excerpt": "Short fan commentary on season 2 episode 5 ('Lozano'), praising Bárbara Mori's performance and discussing the vigilante cop-corruption plot and María's personal storylines."
+  },
+  {
     "outlet": "Chilango",
     "headline": "¿Habrá tercera temporada de Las Azules? Esto contaron sus protagonistas en Vavava de Chilango Radio",
     "url": "https://www.chilango.com/cine-y-tv/series/las-azules-revelan-secretos-personajes-habra-tercera-temporada/",
@@ -216,6 +252,18 @@
     "market": "International",
     "type": "Entertainment",
     "excerpt": "The season two finale follows the Azules as they discover Goyo's accomplice is his wife Macaria, leading them to an abandoned factory where they rescue Chief Escobedo. After Escobedo takes vigilante justice against Goyo, the president strips his rank and jails him, finally delivering accountability while the team establishes a new behavioral science division."
+  },
+  {
+    "outlet": "Renata Páez (YouTube)",
+    "headline": "5 Reasons to Watch Las Azules on Apple TV 💙🇲🇽",
+    "url": "https://youtube.com/watch?v=ni3RbWsKEPQ",
+    "date": "Oct 1, 2026",
+    "ts": 20261001,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "International",
+    "type": "Social",
+    "excerpt": "Personal recommendation video posted after season 2's finale, listing five reasons to watch Las Azules: its basis in Mexico's real first female police force, its mystery plot, Bárbara Mori's performance, 1960s period styling, and two seasons' worth of content."
   },
   {
     "outlet": "Comic Basics",
@@ -623,6 +671,18 @@
     "type": "Entertainment",
     "excerpt": "Actress Natalia Téllez discusses Las Azules Season 2 on Apple TV, calling it the only Spanish-language Latino production currently premiering on the platform, and addresses how machismo persists in Mexico and the series bold portrayal of the 1968 Tlatelolco student massacre.",
     "storyGroup": "cinegeek-s2-tellez-interview-20260924"
+  },
+  {
+    "outlet": "Cine Geek (YouTube)",
+    "headline": "Natalia Téllez habla de Las Azules Temporada 2 en Apple TV",
+    "url": "https://youtube.com/watch?v=y8fNU1HOh-Y",
+    "date": "Sep 24, 2026",
+    "ts": 20260924,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "International",
+    "type": "Entertainment",
+    "excerpt": "Interview with Natalia Téllez for Cine Geek about playing Valentina in season 2, being Apple TV's only current Latino production, recreating 1971 Mexico City, and the personal resonance of the Tlatelolco massacre storyline for her family."
   },
   {
     "outlet": "MacObserver",
