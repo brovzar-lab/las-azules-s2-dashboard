@@ -45,9 +45,21 @@ function isTrackingParam(name) {
 // per-host justification writeup and the live-data measurement each entry
 // below is seeded from.
 //
-// YouTube (LEMA-9942, approved LEMA-9904 Item 5): `v` (video id) and `list`
-// (playlist id) are the only identity-bearing params; everything else
-// (locale flags like `vl`, session/share params, etc.) is dropped.
+// YouTube (LEMA-9942, approved LEMA-9904 Item 5; made path-aware LEMA-12643):
+// `v` (video id) is identity-bearing on every youtube.com path and is kept
+// unconditionally. `list` (playlist id) is identity-bearing ONLY on a bare
+// `/playlist` path -- that path carries no id anywhere else, so `list` IS
+// the document identity there (4 live fetch-blocklist.json rows as of
+// LEMA-12643 are exactly this shape). On `/watch`, `v` already is the
+// document identity and `list` only selects a sidebar queue, so two
+// `/watch?v=X` URLs that differ only in `list` are the same video and must
+// produce the same key -- keeping `list` there was the LEMA-12641 defect
+// (a `&list=` suffix produced a different key than the already-ledgered
+// bare `/watch?v=` row for the same video, see LEMA-12642). `keepByPath`
+// below expresses that split; `keep` stays the path-independent base case
+// (also covers youtube.com paths that are neither /watch nor /playlist,
+// e.g. channel/browse pages, where `list` has never been observed and
+// dropping it by default is the safe choice).
 // Video/playlist IDs are case-sensitive -- this table only ever gates
 // *which* params survive, never lowercases a value (see buildQueryString
 // below), so that guarantee holds here. One entry only, keyed on
@@ -56,7 +68,10 @@ function isTrackingParam(name) {
 // 'youtube.com' upstream (stripLeadingMobile and HOST_ALIASES
 // respectively) before buildQueryString ever looks the host up here. See
 // foldYoutubeVideoPath and normalizeUrl's KNOWN GAP comment (now closed)
-// below for the full fold.
+// below for the full fold. buildQueryString is given the POST-fold path
+// (after foldYoutubeVideoPath has run), so `youtu.be/<id>?list=Y` and
+// `youtube.com/shorts/<id>?list=Y` -- which fold to `/watch` -- also drop
+// `list`, same as a native `/watch?list=` URL.
 //
 // The following seven entries were added under LEMA-11733, generalizing
 // this mechanism per the CEO ruling on LEMA-11732 (a bare `?v=3` cache-
@@ -142,7 +157,7 @@ function isTrackingParam(name) {
 // next deferred-param host doesn't disappear from the advisory the same
 // way tv.apple.com did.
 const HOST_PARAM_ALLOWLIST = new Map([
-  ['youtube.com', { keep: ['v', 'list'] }],
+  ['youtube.com', { keep: ['v'], keepByPath: { '/playlist': ['list'] } }],
   ['163.com', { keep: [] }],
   ['macprime.ch', { keep: [] }],
   ['reforma.com', { keep: [] }],
@@ -414,12 +429,19 @@ function foldAmpPath(host, path) {
 // The routine prose does not specify an order for surviving query params.
 // Sorted here so two URLs whose params differ only in order produce the
 // same key. Implementation decision, flagged as an ambiguity.
-function buildQueryString(searchParams, host) {
+//
+// `path` is the POST-fold normalized path (after foldYoutubeVideoPath/
+// foldFacebookPath/foldAmpPath have already run) -- required so a
+// `keepByPath` entry (LEMA-12643, see HOST_PARAM_ALLOWLIST's youtube.com
+// comment) can gate a param on the path the key will actually carry, not
+// the raw pre-fold path.
+function buildQueryString(searchParams, host, path) {
   const allowEntry = HOST_PARAM_ALLOWLIST.get(host);
   const kept = [];
   for (const [key, value] of searchParams.entries()) {
     if (allowEntry) {
-      if (allowEntry.keep.includes(key)) kept.push([key, value]);
+      const pathKeep = (allowEntry.keepByPath && allowEntry.keepByPath[path]) || [];
+      if (allowEntry.keep.includes(key) || pathKeep.includes(key)) kept.push([key, value]);
     } else if (!isTrackingParam(key)) {
       kept.push([key, value]);
     }
@@ -507,6 +529,15 @@ function buildQueryString(searchParams, host) {
  * the anchoring that keeps `de-campeones`/`camp-rock-3` untouched, and the
  * reasoning for why shape 2 is host-scoped while the other three are not.
  *
+ * YOUTUBE `list` PARAM, PATH-AWARE (LEMA-12643): the youtube.com
+ * HOST_PARAM_ALLOWLIST entry keeps `list` only when the (post-fold) path is
+ * `/playlist` -- where it is the only identity the URL carries -- and drops
+ * it everywhere else, including `/watch`, where `v` already is the identity
+ * and `list` only selects a sidebar queue. See HOST_PARAM_ALLOWLIST's
+ * youtube.com comment and buildQueryString's `keepByPath` for the
+ * implementation; this also applies to `youtu.be`/`youtube.com/shorts/<id>`
+ * URLs carrying `list`, since they fold to `/watch` before this runs.
+ *
  * FACEBOOK PATH FOLD (LEMA-10602): facebook.com URLs of the form
  * /<page>/<type>/<slug>/<id> (type is videos, posts, or reel) fold to
  * /<page>/<type>/<id>, dropping the body-text slug segment. See
@@ -565,7 +596,7 @@ function normalizeUrl(rawUrl) {
     ? parsed.searchParams
     : new URLSearchParams(parsed.searchParams);
   if (videoId !== null) searchParams.set('v', videoId);
-  const query = buildQueryString(searchParams, host);
+  const query = buildQueryString(searchParams, host, path);
 
   // Path case-folding (LEMA-11825, HOST_CASE_INSENSITIVE_PATH above) is
   // applied to the COMPARISON key only, never to the display url -- same

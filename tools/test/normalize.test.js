@@ -89,6 +89,24 @@ test('YouTube case-mixed video id is preserved byte-for-byte, not lowercased', (
   assert.equal(url, 'https://youtube.com/watch?v=Z9n3TkdcGLY');
 });
 
+// `list` is path-aware (LEMA-12643): identity-bearing on /playlist (the
+// path carries no id of its own there), NOT identity-bearing on /watch
+// (where `v` already is the identity and `list` only selects a sidebar
+// queue). The LEMA-12642 defect was a /watch?v=X&list=Y candidate producing
+// a different key than the already-ledgered bare /watch?v=X row for the
+// same video.
+
+test('YouTube watch URL with a list param drops list -- same key as the bare watch URL', () => {
+  const { key, url } = normalizeUrl('https://www.youtube.com/watch?v=Z9n3TkdcGLY&list=PLPDDDmhRE2s8abc123');
+  assert.equal(key, 'youtube.com/watch?v=Z9n3TkdcGLY');
+  assert.equal(url, 'https://youtube.com/watch?v=Z9n3TkdcGLY');
+});
+
+test('YouTube playlist param on a mixed-case id is preserved byte-for-byte, not lowercased', () => {
+  const { key } = normalizeUrl('https://www.youtube.com/playlist?list=PLPddDmhRE2s8AbC123');
+  assert.equal(key, 'youtube.com/playlist?list=PLPddDmhRE2s8AbC123');
+});
+
 // youtu.be -> youtube.com/watch?v=<id> fold (LEMA-9942 pre-approval,
 // shipped LEMA-11959): youtu.be only ever redirects to the watch form, so
 // it folds to the same key as its youtube.com/watch?v= equivalent, with
@@ -104,6 +122,11 @@ test('youtu.be and its watch?v= equivalent collapse to the same key', () => {
   const short = normalizeUrl('https://youtu.be/Z9n3TkdcGLY');
   const watch = normalizeUrl('https://www.youtube.com/watch?v=Z9n3TkdcGLY');
   assert.equal(short.key, watch.key);
+});
+
+test('youtu.be with a list param folds to watch?v= and drops list (post-fold path is /watch, LEMA-12643)', () => {
+  const { key } = normalizeUrl('https://youtu.be/Z9n3TkdcGLY?list=PLPDDDmhRE2s8abc123');
+  assert.equal(key, 'youtube.com/watch?v=Z9n3TkdcGLY');
 });
 
 // youtube.com/shorts/<id> -> watch?v=<id> fold (LEMA-9942 pre-approval,
@@ -128,6 +151,11 @@ test('m.youtube.com/shorts/<id> also folds to the watch?v= key (m. strip runs be
 
 test('youtube.com/shorts/<id> whitelist still applies: a tracking param alongside it is dropped', () => {
   const { key } = normalizeUrl('https://youtube.com/shorts/SSsG4MybyTU?feature=share');
+  assert.equal(key, 'youtube.com/watch?v=SSsG4MybyTU');
+});
+
+test('youtube.com/shorts/<id> with a list param folds to watch?v= and drops list (post-fold path is /watch, LEMA-12643)', () => {
+  const { key } = normalizeUrl('https://youtube.com/shorts/SSsG4MybyTU?list=PLPDDDmhRE2s8abc123');
   assert.equal(key, 'youtube.com/watch?v=SSsG4MybyTU');
 });
 
