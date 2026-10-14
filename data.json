@@ -1,5 +1,17 @@
 [
   {
+    "outlet": "Kinótico",
+    "headline": "Los PRODU 2026 anuncian sus finalistas, con una abundante presencia de la ficción española",
+    "url": "https://kinotico.es/actualidad/2026-10-14/los-premios-produ-anuncian-los-finalistas-para-la-edicion-2026-con-fuerte-presencia-de-la-ficcion-espanola",
+    "date": "Oct 14, 2026",
+    "ts": 20261014,
+    "dateSource": "jsonld_datepublished",
+    "lang": "ES",
+    "market": "International",
+    "type": "Trade",
+    "excerpt": "Spanish entertainment site Kinótico covers the Premios PRODU 2026 finalists announcement, naming 'Las azules' among the national titles with international representation, alongside 'Futuro desierto', 'El otro padre' and 'Rosario Tijeras'."
+  },
+  {
     "outlet": "Brad Gilmore (YouTube)",
     "headline": "Fernando Rovzar on Women in Blue Season 2 | Interview with Brad Gilmore",
     "url": "https://youtube.com/watch?v=V9gDhPjQB_Q",
@@ -22,6 +34,18 @@
     "market": "US",
     "type": "Entertainment",
     "excerpt": "Stars Bárbara Mori and Ximena Sariñana discuss season two's increased plot complexity, the show's expanded scale with hundreds of new locations, and collaborating with creator Fernando Rovzar on their characters' arcs."
+  },
+  {
+    "outlet": "EscribiendoCine",
+    "headline": "Todas las nominaciones a los Premios PRODU 2026",
+    "url": "https://escribiendocine.com/noticias/2026/10/13/25932-todas-las-nominaciones-a-los-premios-produ-2026",
+    "date": "Oct 13, 2026",
+    "ts": 20261013,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "International",
+    "type": "Trade",
+    "excerpt": "Argentine trade outlet's full list of Premios PRODU 2026 finalists names \"Las azules 2\" (Apple TV, Lemon Studios, Mexico/Uruguay) as a nominee for Best Drama Series (Historico, Politico, Social), with Barbara Mori nominated for Lead Actress and the writing/producing teams (Fernando Rovzar, Pablo Aramendi, et al.) nominated in Talento Tecnico categories for the same title."
   },
   {
     "outlet": "Psicóloga de película (YouTube)",
@@ -10396,17 +10420,5 @@
     "market": "US",
     "type": "Tech",
     "excerpt": "MacDailyNews reports Apple TV+ has ordered the 10-episode Spanish-language crime drama Las Azules, created by Fernando Rovzar and Pablo Aramendi, following four women who join Mexico's first female police force in 1970 only to discover their squad is a publicity stunt masking a serial-killer investigation."
-  },
-  {
-    "outlet": "EscribiendoCine",
-    "headline": "Todas las nominaciones a los Premios PRODU 2026",
-    "url": "https://escribiendocine.com/noticias/2026/10/13/25932-todas-las-nominaciones-a-los-premios-produ-2026",
-    "date": "Oct 13, 2026",
-    "ts": 20261013,
-    "dateSource": "visible_dateline",
-    "lang": "ES",
-    "market": "International",
-    "type": "Trade",
-    "excerpt": "Argentine trade outlet's full list of Premios PRODU 2026 finalists names \"Las azules 2\" (Apple TV, Lemon Studios, Mexico/Uruguay) as a nominee for Best Drama Series (Historico, Politico, Social), with Barbara Mori nominated for Lead Actress and the writing/producing teams (Fernando Rovzar, Pablo Aramendi, et al.) nominated in Talento Tecnico categories for the same title."
   }
 ]
