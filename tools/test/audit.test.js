@@ -16,6 +16,9 @@ const {
   queryVariantCheck,
   computeFirstSeenDates,
   runDateProxyCheck,
+  titleOnlySkipSuspectsCheck,
+  skipMethodVocabularyCheck,
+  hasConcreteAlternativeSubject,
 } = require('../lib/audit');
 const { HOST_PARAM_ALLOWLIST } = require('../lib/normalize');
 
@@ -354,4 +357,158 @@ test('runDateProxyCheck: tolerates a row with no dateSource field, and passes it
     firstSeenDates
   );
   assert.equal(withField[0].dateSource, 'firstSeen');
+});
+
+// ---- titleOnlySkipSuspectsCheck / skipMethodVocabularyCheck (LEMA-12649) ----
+
+function ruleGRow(url, overrides = {}) {
+  return ledgerRow(url, { skipReason: 'editorial_off_topic_false_positive', ...overrides });
+}
+
+test('hasConcreteAlternativeSubject: a quoted title satisfies the note', () => {
+  assert.equal(
+    hasConcreteAlternativeSubject('post about an unrelated show, "Damsel in Distress"'),
+    true
+  );
+});
+
+test('hasConcreteAlternativeSubject: a multi-word proper name satisfies the note (the Lotus FM row, verbatim)', () => {
+  assert.equal(
+    hasConcreteAlternativeSubject(
+      'post about actors Daniel Anderson and Kiruna Lind Devar promoting an unrelated show, "Damsel in Distress"'
+    ),
+    true
+  );
+});
+
+test('hasConcreteAlternativeSubject: a bare note only asserting this show is absent does not satisfy, even though "Las Azules" is itself capitalized', () => {
+  assert.equal(hasConcreteAlternativeSubject('Off-topic; does not mention Las Azules.'), false);
+  assert.equal(hasConcreteAlternativeSubject('Article is unrelated to Las Azules Season 2.'), false);
+});
+
+test('hasConcreteAlternativeSubject: null/empty note does not satisfy', () => {
+  assert.equal(hasConcreteAlternativeSubject(null), false);
+  assert.equal(hasConcreteAlternativeSubject(''), false);
+});
+
+test('titleOnlySkipSuspectsCheck: flags a title-only row with a bare note (skipMethod absent, history is title/snippet-only)', () => {
+  const findings = titleOnlySkipSuspectsCheck([
+    ruleGRow('https://kinotico.es/produ-2026-finalistas', {
+      skipNote: 'Off-topic; does not mention Las Azules.',
+      history: [{ attempt: '2026-10-01T00:00:00Z', method: 'title-only (Exa metadata)', issue: 'LEMA-1' }],
+    }),
+  ]);
+  assert.equal(findings.length, 1);
+  assert.equal(findings[0].url, 'https://kinotico.es/produ-2026-finalistas');
+  assert.equal(findings[0].condition3, 'no_fetch_method_in_history');
+  assert.equal(findings[0].condition4, 'note_lacks_alternative_subject');
+});
+
+test('titleOnlySkipSuspectsCheck: does not flag a row with real fetch evidence in history', () => {
+  const findings = titleOnlySkipSuspectsCheck([
+    ruleGRow('https://example.com/a', {
+      skipNote: 'Off-topic; does not mention Las Azules.',
+      history: [{ attempt: '2026-10-01T00:00:00Z', method: 'WebFetch', issue: 'LEMA-1' }],
+    }),
+  ]);
+  assert.equal(findings.length, 0);
+});
+
+test('titleOnlySkipSuspectsCheck: a "no fetch required" relevance-skip string does not count as fetch evidence (contains no fetch token)', () => {
+  const findings = titleOnlySkipSuspectsCheck([
+    ruleGRow('https://example.com/b', {
+      skipNote: 'Off-topic; does not mention Las Azules.',
+      history: [
+        {
+          attempt: '2026-10-01T00:00:00Z',
+          method: 'Relevance skip (no fetch required, off-topic determined from title/URL/content)',
+          issue: 'LEMA-1',
+        },
+      ],
+    }),
+  ]);
+  assert.equal(findings.length, 1);
+});
+
+test('titleOnlySkipSuspectsCheck: does not flag a title-only row whose note names a different show', () => {
+  const findings = titleOnlySkipSuspectsCheck([
+    ruleGRow('https://lotusfm.example/post', {
+      skipMethod: 'title_snippet_only',
+      skipNote:
+        'post about actors Daniel Anderson and Kiruna Lind Devar promoting an unrelated show, "Damsel in Distress"',
+    }),
+  ]);
+  assert.equal(findings.length, 0);
+});
+
+test('titleOnlySkipSuspectsCheck: flags a row with no history at all', () => {
+  const findings = titleOnlySkipSuspectsCheck([
+    ruleGRow('https://example.com/c', {
+      skipNote: 'Off-topic; does not mention Las Azules.',
+      history: [],
+    }),
+  ]);
+  assert.equal(findings.length, 1);
+  assert.equal(findings[0].condition3, 'no_history');
+});
+
+test('titleOnlySkipSuspectsCheck: does not flag a row carrying skipMethod=body_fetch, regardless of history/note', () => {
+  const findings = titleOnlySkipSuspectsCheck([
+    ruleGRow('https://example.com/d', {
+      skipMethod: 'body_fetch',
+      skipNote: 'Off-topic; does not mention Las Azules.',
+      history: [],
+    }),
+  ]);
+  assert.equal(findings.length, 0);
+});
+
+test('titleOnlySkipSuspectsCheck: an out-of-vocabulary skipMethod is NOT trusted as body-fetch evidence -- falls back to history', () => {
+  const findings = titleOnlySkipSuspectsCheck([
+    ruleGRow('https://example.com/e', {
+      skipMethod: 'exa-metadata-only', // not in the two-item vocabulary
+      skipNote: 'Off-topic; does not mention Las Azules.',
+      history: [],
+    }),
+  ]);
+  assert.equal(findings.length, 1);
+  assert.equal(findings[0].condition3, 'no_history');
+});
+
+test('titleOnlySkipSuspectsCheck: never flags rows outside permanentSkip/Rule G scope', () => {
+  const findings = titleOnlySkipSuspectsCheck([
+    ledgerRow('https://example.com/f', {
+      permanentSkip: true,
+      skipReason: 'editorial_listing_or_database', // Rule F, not Rule G
+      skipNote: 'Off-topic; does not mention Las Azules.',
+      history: [],
+    }),
+    ledgerRow('https://example.com/g', {
+      permanentSkip: false, // not a permanent skip at all
+      skipReason: 'editorial_off_topic_false_positive',
+      skipNote: 'Off-topic; does not mention Las Azules.',
+      history: [],
+    }),
+  ]);
+  assert.equal(findings.length, 0);
+});
+
+test('skipMethodVocabularyCheck: tolerates absence -- never a finding on its own (mirrors dateSource, LEMA-10626)', () => {
+  const findings = skipMethodVocabularyCheck([ruleGRow('https://example.com/h', { skipMethod: undefined })]);
+  assert.equal(findings.length, 0);
+});
+
+test('skipMethodVocabularyCheck: accepts both closed-vocabulary values without complaint', () => {
+  const findings = skipMethodVocabularyCheck([
+    ruleGRow('https://example.com/i', { skipMethod: 'body_fetch' }),
+    ruleGRow('https://example.com/j', { skipMethod: 'title_snippet_only' }),
+  ]);
+  assert.equal(findings.length, 0);
+});
+
+test('skipMethodVocabularyCheck: flags a present value outside the two-item vocabulary, advisory shape only', () => {
+  const findings = skipMethodVocabularyCheck([ruleGRow('https://example.com/k', { skipMethod: 'exa-metadata-only' })]);
+  assert.equal(findings.length, 1);
+  assert.equal(findings[0].url, 'https://example.com/k');
+  assert.equal(findings[0].skipMethod, 'exa-metadata-only');
 });

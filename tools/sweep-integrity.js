@@ -31,6 +31,8 @@ const {
   queryVariantCheck,
   runDateProxyCheck,
   getFirstSeenDates,
+  titleOnlySkipSuspectsCheck,
+  skipMethodVocabularyCheck,
 } = require('./lib/audit');
 const { computeReconciliation } = require('./lib/reconcile');
 
@@ -493,6 +495,9 @@ function cmdAudit(flags) {
   const familyMatchUrls = new Set(surfaceFamilyMatch.map((f) => f.url));
   const intersection = runDateProxySuspects.filter((f) => familyMatchUrls.has(f.url));
 
+  const titleOnlySkipSuspects = titleOnlySkipSuspectsCheck(ledgerEntries);
+  const skipMethodVocabulary = skipMethodVocabularyCheck(ledgerEntries);
+
   const result = {
     generatedAt: new Date().toISOString(),
     rowsChecked: datasetEntries.length,
@@ -536,6 +541,18 @@ function cmdAudit(flags) {
         count: intersection.length,
         findings: intersection,
       },
+      titleOnlySkipSuspects: {
+        description:
+          "Advisory, never gates (LEMA-12647/LEMA-12649): the opposite-direction check from ledgerOverlap -- a fetch-blocklist.json row permanentSkip'd as skipReason=editorial_off_topic_false_positive (Rule G) with no body-fetch evidence (skipMethod=title_snippet_only, or skipMethod absent/out-of-vocabulary with no history[].method entry showing a real fetch) and a skipNote that does not name a concrete alternative subject. A false positive here costs one fetch during triage; a false negative hides a permanently suppressed article that may actually be Las Azules coverage -- see LEMA-12645 (kinotico.es).",
+        count: titleOnlySkipSuspects.length,
+        findings: titleOnlySkipSuspects,
+      },
+      skipMethodVocabulary: {
+        description:
+          "Advisory, never gates: fetch-blocklist.json rows carrying a skipMethod value outside the closed two-item vocabulary (body_fetch, title_snippet_only -- LEMA-12648). Absence of skipMethod is expected and never reported here (pre-adoption rows are never backfilled), same tolerance the tool already extends to a row lacking dateSource (LEMA-10626).",
+        count: skipMethodVocabulary.length,
+        findings: skipMethodVocabulary,
+      },
     },
   };
 
@@ -576,6 +593,14 @@ function cmdAudit(flags) {
     console.log(`- Intersection (surface-family AND run-date proxy -- near-conclusive): ${intersection.length} row(s)`);
     for (const f of intersection) {
       console.log(`  - ${f.url}`);
+    }
+    console.log(`- Title-only skip suspects (advisory, never gates): ${titleOnlySkipSuspects.length} row(s)`);
+    for (const f of titleOnlySkipSuspects) {
+      console.log(`  - ${f.url} -- ${f.condition3}, note: ${f.skipNote || '(none)'}`);
+    }
+    console.log(`- skipMethod out-of-vocabulary (advisory, never gates): ${skipMethodVocabulary.length} row(s)`);
+    for (const f of skipMethodVocabulary) {
+      console.log(`  - ${f.url} -- skipMethod=${f.skipMethod}`);
     }
   }
 

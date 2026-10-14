@@ -328,6 +328,163 @@ function queryVariantCheck(dataset, ledgerEntries) {
   return findings;
 }
 
+// ---- Check: title-only skip suspects (advisory, never gates) ----
+//
+// LEMA-12647/LEMA-12649: every check above looks at the direction "a row is
+// in data.json but should not be." Nothing looks at the opposite direction
+// -- a fetch-blocklist.json row that was permanentSkip'd as off-topic on
+// title/snippet evidence alone, when the body (never fetched) might
+// actually have named Las Azules. LEMA-12645 found a real instance
+// (kinotico.es, skipped on title alone, body actually named the show) --
+// caught only by luck. This check narrows the 576-row
+// editorial_off_topic_false_positive category (as measured at ticket time)
+// down to a finite worklist for LEMA-12650, rather than buying a re-fetch
+// sampling pass.
+//
+// Deliberately restricted to skipReason === editorial_off_topic_false_positive
+// (Rule G) -- the other permanentSkip reasons (Rule F listing/database
+// pages, Rule E piracy, Rule B vendor-promo, etc.) are not "this skip was a
+// relevance miss that body text could overturn" calls the way Rule G is;
+// widening this would misclassify structural/editorial judgment calls as
+// evidence gaps.
+const TITLE_ONLY_SKIP_REASON = 'editorial_off_topic_false_positive';
+
+// LEMA-12648: skipMethod is a closed two-value vocabulary, forward-only
+// (never backfilled onto rows ledgered before adoption). A value outside
+// this set is tolerated (never a gate) but is advisory-worthy on its own --
+// see skipMethodVocabularyCheck below.
+const SKIP_METHOD_VALUES = new Set(['body_fetch', 'title_snippet_only']);
+
+// Explicit allow-list of fetch-method substrings, matched case-insensitively
+// against each `history[].method` string individually. Kept as one named
+// constant so it is auditable/extendable, same convention as
+// HOST_CASE_INSENSITIVE_PATH in normalize.js. This exists because 79
+// distinct free-text `method` strings were measured across Rule G rows
+// alone at ticket time (WebFetch, search-snippet, title-only (Exa
+// metadata), Relevance skip (no fetch required, off-topic determined from
+// title/URL/content), and so on) -- no single field or enum can be trusted
+// to select the exposed population today, pre-skipMethod.
+const FETCH_METHOD_TOKENS = ['webfetch', 'firecrawl', 'tavily', 'curl', 'scrape'];
+const NO_FETCH_METHOD_TOKENS = ['title', 'snippet', 'metadata', 'no fetch', 'not fetched', 'search-result'];
+
+// A single history[].method string counts as fetch evidence only when a
+// fetch token is present in THAT string and no no-fetch token also appears
+// in it -- e.g. "Relevance skip (no fetch required...)" contains neither
+// "webfetch" nor any other fetch token, so it correctly does not count,
+// while a hypothetical "WebFetch attempt failed, fell back to title-only
+// classification" string contains both a fetch token and a no-fetch token
+// and correctly does NOT count either, since the actual classification was
+// title-only despite the attempt.
+function methodStringHasFetchEvidence(method) {
+  if (typeof method !== 'string' || !method) return false;
+  const lower = method.toLowerCase();
+  const hasFetchToken = FETCH_METHOD_TOKENS.some((t) => lower.includes(t));
+  if (!hasFetchToken) return false;
+  const hasNoFetchToken = NO_FETCH_METHOD_TOKENS.some((t) => lower.includes(t));
+  return !hasNoFetchToken;
+}
+
+// A row has body-fetch evidence if ANY history entry's method string
+// qualifies -- e.g. an earlier title-only attempt followed by a later real
+// fetch still means the body was seen at some point.
+function rowHasFetchEvidenceInHistory(history) {
+  if (!Array.isArray(history) || history.length === 0) return false;
+  return history.some((h) => methodStringHasFetchEvidence(h && h.method));
+}
+
+// Show name that a "bare" skipNote is defined against (ticket's bad-note
+// example: a note whose only content is that this show is not mentioned).
+// Stripped out before the proper-noun scan below so a note that only names
+// Las Azules itself (to say it's absent) can never count as naming a
+// concrete alternative subject.
+const SHOW_NAME_PATTERN = /las\s+azules/gi;
+
+// Deliberately simple, deliberately errs toward flagging (ticket's explicit
+// instruction): a note is satisfactory only when it names a concrete
+// alternative subject -- a quoted/curly-quoted title, or two-or-more
+// consecutive capitalized words (a person's name, a named program).
+// Requiring 2+ words (not a single capitalized word) is the conservative
+// choice that tunes toward flagging more, not fewer, notes: a single
+// capitalized common word ("Netflix", "Season") proves much less than an
+// actual multi-word name or a quoted title, and the one worked example in
+// the ticket (the Lotus FM row) satisfies this via both a quoted title AND
+// two multi-word proper names.
+function hasConcreteAlternativeSubject(skipNote) {
+  if (typeof skipNote !== 'string' || !skipNote.trim()) return false;
+  const quotedTitle = /["“]([^"”]{2,})["”]|'([^']{2,})'/.test(skipNote);
+  if (quotedTitle) return true;
+  const withoutShowName = skipNote.replace(SHOW_NAME_PATTERN, '');
+  const properNounSequences = withoutShowName.match(/\b[A-Z][\p{L}'-]*(?:\s+[A-Z][\p{L}'-]*)+\b/gu) || [];
+  return properNounSequences.length > 0;
+}
+
+// Flags a ledger row when ALL of: (1) permanentSkip true, (2) skipReason is
+// Rule G, (3) no body-fetch evidence (explicit skipMethod=title_snippet_only,
+// OR skipMethod absent and no history[].method entry matches
+// FETCH_METHOD_TOKENS -- including the no-history-at-all case), and (4) the
+// skipNote does not name a concrete alternative subject. An out-of-
+// vocabulary skipMethod value (neither vocabulary value) is treated the
+// same as absent for condition 3 -- an unrecognized value carries no
+// trustworthy signal either way, so this falls back to the actual
+// history evidence rather than silently assuming body-fetch happened; the
+// value itself is reported separately by skipMethodVocabularyCheck.
+function titleOnlySkipSuspectsCheck(ledgerEntries) {
+  const findings = [];
+  for (const row of ledgerEntries) {
+    if (row.permanentSkip !== true) continue;
+    if (row.skipReason !== TITLE_ONLY_SKIP_REASON) continue;
+
+    const skipMethod = row.skipMethod;
+    const hasKnownSkipMethod = SKIP_METHOD_VALUES.has(skipMethod);
+    const explicitTitleOnly = hasKnownSkipMethod && skipMethod === 'title_snippet_only';
+    const explicitBodyFetch = hasKnownSkipMethod && skipMethod === 'body_fetch';
+
+    let noFetchEvidenceReason = null;
+    if (explicitTitleOnly) {
+      noFetchEvidenceReason = 'skipMethod_title_snippet_only';
+    } else if (!explicitBodyFetch) {
+      // skipMethod is absent or out-of-vocabulary: fall back to history.
+      if (!Array.isArray(row.history) || row.history.length === 0) {
+        noFetchEvidenceReason = 'no_history';
+      } else if (!rowHasFetchEvidenceInHistory(row.history)) {
+        noFetchEvidenceReason = 'no_fetch_method_in_history';
+      }
+    }
+    if (!noFetchEvidenceReason) continue; // condition 3 false: has fetch evidence
+
+    if (hasConcreteAlternativeSubject(row.skipNote)) continue; // condition 4 false
+
+    findings.push({
+      url: row.url,
+      skipNote: row.skipNote || null,
+      skipMethod: hasKnownSkipMethod ? skipMethod : skipMethod || null,
+      historyMethods: Array.isArray(row.history) ? row.history.map((h) => h && h.method).filter(Boolean) : [],
+      condition3: noFetchEvidenceReason,
+      condition4: 'note_lacks_alternative_subject',
+    });
+  }
+  return findings;
+}
+
+// ---- Check: skipMethod vocabulary (advisory, never gates) ----
+//
+// LEMA-12648: skipMethod is forward-only and closed-vocabulary. Absence is
+// expected and fine on every pre-adoption row (handled above by treating it
+// like the absent-dateSource case, LEMA-10626 -- never a finding on its
+// own). A *present* value outside the two-item vocabulary is a real data
+// defect worth surfacing (typo, stale value from before the vocabulary was
+// finalized, etc.) -- advisory only, same posture as every other check in
+// this file.
+function skipMethodVocabularyCheck(ledgerEntries) {
+  const findings = [];
+  for (const row of ledgerEntries) {
+    if (row.skipMethod === undefined || row.skipMethod === null) continue;
+    if (SKIP_METHOD_VALUES.has(row.skipMethod)) continue;
+    findings.push({ url: row.url, skipMethod: row.skipMethod });
+  }
+  return findings;
+}
+
 function git(repoDir, args) {
   return execFileSync('git', ['-C', repoDir, ...args], { encoding: 'utf8', maxBuffer: 1024 * 1024 * 128 }).trim();
 }
@@ -395,7 +552,16 @@ module.exports = {
   computeFirstSeenDates,
   runDateProxyCheck,
   getFirstSeenDates,
+  titleOnlySkipSuspectsCheck,
+  skipMethodVocabularyCheck,
+  methodStringHasFetchEvidence,
+  rowHasFetchEvidenceInHistory,
+  hasConcreteAlternativeSubject,
   FAMILY_MIN_PRECEDENT,
   FAMILY_SKIP_REASON,
   NON_ASSERTABLE_OVERLAP_SKIP_REASONS,
+  TITLE_ONLY_SKIP_REASON,
+  SKIP_METHOD_VALUES,
+  FETCH_METHOD_TOKENS,
+  NO_FETCH_METHOD_TOKENS,
 };
