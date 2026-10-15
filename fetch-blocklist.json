@@ -27887,7 +27887,154 @@
           "note": "Title explicitly names a different, specific topic (teaching philosophy); no-fetch Rule G carve-out applies."
         }
       ]
+    },
+    {
+      "url": "https://video.corriere.it/oggi/nord-sud-ovest-est-protagonisti-ci-raccontano-seconda-ultima-stagione/92489922-c880-11f1-92ed-65927a6cf1d2",
+      "firstSeen": "2026-10-15T12:07:20Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T12:07:20Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Page is about Italian TV series \"Nord Sud Ovest Est\" (final, second season), not Las Azules / Women in Blue. Surfaced only via a broad Exa Pass 1 query (title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out).",
+      "history": [
+        {
+          "attempt": "2026-10-15T12:07:20Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12714",
+          "note": "Title/snippet names a specific different subject (Italian TV series \"Nord Sud Ovest Est\" (final, second season)); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://lacalderadeldiablo.net/2022/05/podcast-especial-bochini.html",
+      "firstSeen": "2026-10-15T12:07:20Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T12:07:20Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Page is about podcast about Argentine footballer Ricardo Bochini, not Las Azules / Women in Blue. Surfaced only via a broad Exa Pass 1 query (title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out).",
+      "history": [
+        {
+          "attempt": "2026-10-15T12:07:20Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12714",
+          "note": "Title/snippet names a specific different subject (podcast about Argentine footballer Ricardo Bochini); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://viva-raphael.com/news/9372/71/nebolshoe-intervyu-rafaelya-v-kolumbii-na-kanale-Caracol-TV",
+      "firstSeen": "2026-10-15T12:07:20Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T12:07:20Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Page is about fan-site piece about singer Rafael (Raphael) interviewed on Colombia's Caracol TV, not Las Azules / Women in Blue. Surfaced only via a broad Exa Pass 1 query (title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out).",
+      "history": [
+        {
+          "attempt": "2026-10-15T12:07:20Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12714",
+          "note": "Title/snippet names a specific different subject (fan-site piece about singer Rafael (Raphael) interviewed on Colombia's Caracol TV); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://fanaticasporviolettaoficial.blogspot.com/2015/04/entrevista-de-martina-stoessel-para-la.html",
+      "firstSeen": "2026-10-15T12:07:20Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T12:07:20Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Page is about fan blog interview with Martina Stoessel about the Disney series \"Violetta\", not Las Azules / Women in Blue. Surfaced only via a broad Exa Pass 1 query (title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out).",
+      "history": [
+        {
+          "attempt": "2026-10-15T12:07:20Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12714",
+          "note": "Title/snippet names a specific different subject (fan blog interview with Martina Stoessel about the Disney series \"Violetta\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://lacalderadeldiablo.net/2021/10/pavoni-fue-una-fiesta-completa.html",
+      "firstSeen": "2026-10-15T12:07:20Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T12:07:20Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Page is about unrelated post about a subject named \"Pavoni\", not Las Azules / Women in Blue. Surfaced only via a broad Exa Pass 1 query (title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out).",
+      "history": [
+        {
+          "attempt": "2026-10-15T12:07:20Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12714",
+          "note": "Title/snippet names a specific different subject (unrelated post about a subject named \"Pavoni\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://ssaporestefanodiaz.blogspot.com/2011/01/bel-marques-fala-exclusivamente-para-o.html",
+      "firstSeen": "2026-10-15T12:07:20Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T12:07:20Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Page is about blog interview with Brazilian musician Bel Marques, not Las Azules / Women in Blue. Surfaced only via a broad Exa Pass 1 query (title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out).",
+      "history": [
+        {
+          "attempt": "2026-10-15T12:07:20Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12714",
+          "note": "Title/snippet names a specific different subject (blog interview with Brazilian musician Bel Marques); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://mimundocontraelmundo.blogspot.com/2008/12/entrevista-exclusiva-la-parca-habla.html",
+      "firstSeen": "2026-10-15T12:07:20Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T12:07:20Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Page is about blog interview with lucha libre wrestler \"La Parca\", not Las Azules / Women in Blue. Surfaced only via a broad Exa Pass 1 query (title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out).",
+      "history": [
+        {
+          "attempt": "2026-10-15T12:07:20Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12714",
+          "note": "Title/snippet names a specific different subject (blog interview with lucha libre wrestler \"La Parca\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-15T08:01:00Z"
+  "lastUpdated": "2026-10-15T12:07:20Z"
 }
