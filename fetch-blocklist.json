@@ -27656,7 +27656,91 @@
           "note": "WebFetch: tool-level failure. Direct curl: 403. Tavily Extract: returned no content. No date metadata recoverable by any method tried; Exa search-index publishedDate (2026-08-21) noted but not treated as a sourced date."
         }
       ]
+    },
+    {
+      "url": "https://kraina100jezior.org/article/unveiling-sugar-season-2-release-date-episodes-and-more",
+      "firstSeen": "2026-10-15T02:01:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-15T02:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article about \"Sugar\" Season 2, an unrelated Apple TV+ title, entirely unconnected to Las Azules. Surfaced only via the broad EN Exa query. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T02:01:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12670",
+          "note": "Title names a specific unconnected show (\"Sugar\" Season 2); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "https://www.omelete.com.br/series-tv/prazer-maximo-garantido-e-renovada-para-a-2a-temporada-pela-apple",
+      "firstSeen": "2026-10-15T02:01:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-15T02:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Omelete (Brazil) piece about \"Prazer Máximo Garantido\" being renewed for a second season by Apple, an unrelated Apple TV+ title, entirely unconnected to Las Azules / Mulheres de Azul. Surfaced only via the broad EN Exa query. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T02:01:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12670",
+          "note": "Title names a specific unconnected show (\"Prazer Máximo Garantido\"); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "http://mysheerbeauty.blogspot.com/2014/06/thea-tolentino-on-andre-paras-is.html",
+      "firstSeen": "2026-10-15T02:01:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-15T02:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2014 Filipino celebrity-gossip blog post about Thea Tolentino and Andre Paras, entirely unrelated to Las Azules. Surfaced only via the broad ES Exa query (coincidental keyword overlap). Title names specific unconnected people, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T02:01:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12670",
+          "note": "Title names specific unconnected people (Thea Tolentino, Andre Paras); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lacapital.com.ar/zoom/premios-emmy-2026-lista-completa-ganadores-n10281118.html",
+      "firstSeen": "2026-10-15T02:01:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T02:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "La Capital (Argentina) complete winners list for the 2026 Primetime Emmy Awards (Sept 14, 2026 ceremony; \"Widow's Bay\" named top winner). Confirmed via direct fetch that the article never mentions \"Las Azules\" or \"Women in Blue\" anywhere in the body. Headline (\"lista completa de ganadores\") names no specific subject, so the LEMA-12648 carve-out required a body fetch before any Rule G skip; fetch performed and confirmed off-topic.",
+      "history": [
+        {
+          "attempt": "2026-10-15T02:01:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12670",
+          "note": "Fetched directly; confirmed the article covers the 2026 Primetime Emmy Awards winners and never names Las Azules / Women in Blue."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-15T00:08:00Z"
+  "lastUpdated": "2026-10-15T02:01:00Z"
 }
