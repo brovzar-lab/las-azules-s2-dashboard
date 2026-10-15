@@ -28244,7 +28244,133 @@
           "note": "Title explicitly names a different, specific topic (Mori's personal relationship with Rovzar, not the show); no-fetch Rule G carve-out applies per LEMA-12648."
         }
       ]
+    },
+    {
+      "url": "https://senalnews.com/es/digital/apple-tv-renueva-para-una-segunda-temporada-de-maximo-placer-garantizado",
+      "firstSeen": "2026-10-15T18:08:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T18:08:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Señal News piece about a different Apple TV show, \"Máximo Placer Garantizado\" (Maximum Pleasure Guaranteed) being renewed for its own season 2; title explicitly names a different, specific title. Surfaced via Pass 1 Exa EN query.",
+      "history": [
+        {
+          "attempt": "2026-10-15T18:08:01Z",
+          "method": "title/snippet review (Exa result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12721",
+          "note": "Señal News piece about a different Apple TV show, \"Máximo Placer Garantizado\" (Maximum Pleasure Guaranteed) being renewed for its own season 2; title explicitly names a different, specific title. Surfaced via Pass 1 Exa EN query."
+        }
+      ]
+    },
+    {
+      "url": "https://www.digitalfernsehen.de/news/inhalte/streaming/apple-tv-verlaengert-spannenden-serienneustart-um-staffel-2-1189981/",
+      "firstSeen": "2026-10-15T18:08:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T18:08:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "DIGITAL FERNSEHEN piece about \"Maximum Pleasure Guaranteed\" Staffel 2 (a different Apple TV show starring Tatiana Maslany); title explicitly names a different, specific title. Surfaced via Pass 1 Exa EN query.",
+      "history": [
+        {
+          "attempt": "2026-10-15T18:08:01Z",
+          "method": "title/snippet review (Exa result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12721",
+          "note": "DIGITAL FERNSEHEN piece about \"Maximum Pleasure Guaranteed\" Staffel 2 (a different Apple TV show starring Tatiana Maslany); title explicitly names a different, specific title. Surfaced via Pass 1 Exa EN query."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mamasbellas.com/destacado-1/cony-capelli-recibio-insolita-propuesta-estando-embarazada/",
+      "firstSeen": "2026-10-15T18:08:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T18:08:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Mamas Bellas piece about Cony Capelli receiving a pregnancy proposal; title explicitly names a specific different person with no connection to Las Azules / Women in Blue. Surfaced via Pass 1 Exa ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-15T18:08:01Z",
+          "method": "title/snippet review (Exa result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12721",
+          "note": "Mamas Bellas piece about Cony Capelli receiving a pregnancy proposal; title explicitly names a specific different person with no connection to Las Azules / Women in Blue. Surfaced via Pass 1 Exa ES query."
+        }
+      ]
+    },
+    {
+      "url": "http://martiorriols.blogspot.com/2012/03/entrevista-boolino.html",
+      "firstSeen": "2026-10-15T18:08:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T18:08:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2012 Catalan teaching blog post, \"Entrevista a Boolino\" (an interview about the children's book platform Boolino); title explicitly names a specific different subject. Surfaced via Pass 1 Exa ES query on the generic term \"entrevista\".",
+      "history": [
+        {
+          "attempt": "2026-10-15T18:08:01Z",
+          "method": "title/snippet review (Exa result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12721",
+          "note": "2012 Catalan teaching blog post, \"Entrevista a Boolino\" (an interview about the children's book platform Boolino); title explicitly names a specific different subject. Surfaced via Pass 1 Exa ES query on the generic term \"entrevista\"."
+        }
+      ]
+    },
+    {
+      "url": "https://ar.cienradios.com/espectaculos/musica/madonna-y-stuart-price-explicaron-como-nacio-confessions-ii-descubrir-nuevos-territorios/",
+      "firstSeen": "2026-10-15T18:08:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T18:08:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Cien Radios (Argentina) piece about Madonna and Stuart Price discussing the making of \"Confessions II\"; title explicitly names specific different people with no connection to Las Azules. Surfaced via Pass 1 Exa ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-15T18:08:01Z",
+          "method": "title/snippet review (Exa result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12721",
+          "note": "Cien Radios (Argentina) piece about Madonna and Stuart Price discussing the making of \"Confessions II\"; title explicitly names specific different people with no connection to Las Azules. Surfaced via Pass 1 Exa ES query."
+        }
+      ]
+    },
+    {
+      "url": "http://arapotsermai.blogspot.com/2008/07/documental-indit.html",
+      "firstSeen": "2026-10-15T18:08:01Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T18:08:01Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "2008 Catalan-language (Mallorcan dialect) comedy/personal blog post, \"Documental inèdit\", a joke about a fictitious unreleased documentary; no mention of Las Azules / Women in Blue anywhere in the body. Headline named no specific subject, which required a fetch under the LEMA-12648 carve-out. Body fetched via WebFetch.",
+      "history": [
+        {
+          "attempt": "2026-10-15T18:08:01Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12721",
+          "note": "2008 Catalan-language (Mallorcan dialect) comedy/personal blog post, \"Documental inèdit\", a joke about a fictitious unreleased documentary; no mention of Las Azules / Women in Blue anywhere in the body. Headline named no specific subject, which required a fetch under the LEMA-12648 carve-out. Body fetched via WebFetch."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-15T14:10:00Z"
+  "lastUpdated": "2026-10-15T18:08:01Z"
 }
