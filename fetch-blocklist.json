@@ -28370,7 +28370,183 @@
           "note": "2008 Catalan-language (Mallorcan dialect) comedy/personal blog post, \"Documental inèdit\", a joke about a fictitious unreleased documentary; no mention of Las Azules / Women in Blue anywhere in the body. Headline named no specific subject, which required a fetch under the LEMA-12648 carve-out. Body fetched via WebFetch."
         }
       ]
+    },
+    {
+      "url": "https://livingwaterrecovery.com/article/widow-s-bay-season-2-release-date-cast-trailer-and-more",
+      "firstSeen": "2026-10-15T22:06:45.000Z",
+      "lastAttempt": "2026-10-15T22:06:45.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "About Widow's Bay Season 2 (a different streaming series), not Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-15T22:06:45.000Z",
+          "method": "Classified per Rule G no-fetch carve-out (title/snippet names a specific different subject; no fetch performed)",
+          "status": null,
+          "issue": "LEMA-12724",
+          "note": "About Widow's Bay Season 2 (a different streaming series), not Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://jumpmantours.com/article/apple-tv-2026-press-day-all-new-shows-movies-announced-lucky-outcome-monarch-more",
+      "firstSeen": "2026-10-15T22:06:45.000Z",
+      "lastAttempt": "2026-10-15T22:06:45.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "Apple TV 2026 Press Day roundup naming Lucky, Outcome, and Monarch; does not cover Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-15T22:06:45.000Z",
+          "method": "Classified per Rule G no-fetch carve-out (title/snippet names a specific different subject; no fetch performed)",
+          "status": null,
+          "issue": "LEMA-12724",
+          "note": "Apple TV 2026 Press Day roundup naming Lucky, Outcome, and Monarch; does not cover Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://www.macerkopf.de/2026/10/15/apple-tv-staffel-maximum-pleasure/",
+      "firstSeen": "2026-10-15T22:06:45.000Z",
+      "lastAttempt": "2026-10-15T22:06:45.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "About Apple TV's German-market series 'Maximum Pleasure Guaranteed' Season 2 renewal, not Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-10-15T22:06:45.000Z",
+          "method": "Classified per Rule G no-fetch carve-out (title/snippet names a specific different subject; no fetch performed)",
+          "status": null,
+          "issue": "LEMA-12724",
+          "note": "About Apple TV's German-market series 'Maximum Pleasure Guaranteed' Season 2 renewal, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.clarin.com/internacional/divino-vuelta-epica-presentacion-oficial-avenida-brasil-2-elenco-original-escenario_0_k4XLL8JWUG.html",
+      "firstSeen": "2026-10-15T22:06:45.000Z",
+      "lastAttempt": "2026-10-15T22:06:45.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "About Avenida Brasil 2's stage presentation/cast reunion event, not Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-10-15T22:06:45.000Z",
+          "method": "Classified per Rule G no-fetch carve-out (title/snippet names a specific different subject; no fetch performed)",
+          "status": null,
+          "issue": "LEMA-12724",
+          "note": "About Avenida Brasil 2's stage presentation/cast reunion event, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://mimorelia.com/entretenimiento/carminha-buscara-venganza-avenida-brasil-tendra-segunda-temporada-n5594805",
+      "firstSeen": "2026-10-15T22:06:45.000Z",
+      "lastAttempt": "2026-10-15T22:06:45.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "About Avenida Brasil's renewal for a second season, not Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-10-15T22:06:45.000Z",
+          "method": "Classified per Rule G no-fetch carve-out (title/snippet names a specific different subject; no fetch performed)",
+          "status": null,
+          "issue": "LEMA-12724",
+          "note": "About Avenida Brasil's renewal for a second season, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://flipr.com.ar/nacionales/streaming/infobae/los-actores-que-tienen-seguidores-son-los-que-mas-trabajo-tienen-osqui-guzman-en-infobae/",
+      "firstSeen": "2026-10-15T22:06:45.000Z",
+      "lastAttempt": "2026-10-15T22:06:45.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "Infobae interview with actor Osqui Guzman about actors with large social followings getting more work; unrelated to Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-10-15T22:06:45.000Z",
+          "method": "Classified per Rule G no-fetch carve-out (title/snippet names a specific different subject; no fetch performed)",
+          "status": null,
+          "issue": "LEMA-12724",
+          "note": "Infobae interview with actor Osqui Guzman about actors with large social followings getting more work; unrelated to Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eldiario.es/cultura/musica/artistas-vienen-marruecos-crear-hits-espana-tuve-abandonar-raices-sentirme-acogido_1_13586947.html",
+      "firstSeen": "2026-10-15T22:06:45.000Z",
+      "lastAttempt": "2026-10-15T22:06:45.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "About Moroccan musicians creating hits in Spain's music scene, not Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-10-15T22:06:45.000Z",
+          "method": "Classified per Rule G no-fetch carve-out (title/snippet names a specific different subject; no fetch performed)",
+          "status": null,
+          "issue": "LEMA-12724",
+          "note": "About Moroccan musicians creating hits in Spain's music scene, not Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "http://lanbaencatala.blogspot.com/2014/03/entrevista-pol-olivier-canyadell.html",
+      "firstSeen": "2026-10-15T22:06:45.000Z",
+      "lastAttempt": "2026-10-15T22:06:45.000Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "2014 Catalan-language NBA blog interview with basketball player Pol Olivier Canyadell, unrelated to Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-10-15T22:06:45.000Z",
+          "method": "Classified per Rule G no-fetch carve-out (title/snippet names a specific different subject; no fetch performed)",
+          "status": null,
+          "issue": "LEMA-12724",
+          "note": "2014 Catalan-language NBA blog interview with basketball player Pol Olivier Canyadell, unrelated to Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-15T18:08:01Z"
+  "lastUpdated": "2026-10-15T22:06:45.000Z"
 }
