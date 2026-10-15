@@ -28034,7 +28034,217 @@
           "note": "Title/snippet names a specific different subject (blog interview with lucha libre wrestler \"La Parca\"); no-fetch Rule G carve-out applies per LEMA-12648."
         }
       ]
+    },
+    {
+      "url": "https://www.eldestapeweb.com/cultura/mejores-10-series-apple-tv-ver-imdb-20261015103943",
+      "firstSeen": "2026-10-15T14:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T14:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "El Destape listicle of the top 10 Apple TV series per IMDb ratings. Body fetched via WebFetch; confirmed no mention of Las Azules / Women in Blue anywhere in the article. Surfaced only via Pass 2 broad web search; listicle headline required a body fetch under the LEMA-12648 carve-out before a Rule G skip.",
+      "history": [
+        {
+          "attempt": "2026-10-15T14:10:00Z",
+          "method": "WebFetch body fetch",
+          "status": 200,
+          "issue": "LEMA-12718",
+          "note": "Listicle headline names no specific subject; carve-out required a fetch. Body confirmed off-topic."
+        }
+      ]
+    },
+    {
+      "url": "https://www.upi.com/Entertainment_News/TV/2026/10/15/tatiana-maslany-maximum-pleasure-guaranteed-renewed-apple-tv/8651792065774/",
+      "firstSeen": "2026-10-15T14:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T14:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "UPI article about Apple TV+ renewing Tatiana Maslany's 'Maximum' for Season 2; unrelated different show named explicitly in the title. Surfaced via Pass 1 Exa EN broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-15T14:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12718",
+          "note": "Title explicitly names a different, specific show (\"Maximum\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://businessupturn.com/entertainment/hollywood/hollywood-web-series/widows-bay-season-2-release-date-update-cast-where-to-watch-and-everything-to-know-about-the-apple-tv-horror-comedy/",
+      "firstSeen": "2026-10-15T14:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T14:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Business Upturn piece about Apple TV horror-comedy 'Widow's Bay' Season 2; unrelated different show named explicitly in the title. Surfaced via Pass 1 Exa EN broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-15T14:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12718",
+          "note": "Title explicitly names a different, specific show (\"Widow's Bay\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.expreso.ec/entretenimiento/avenida-brasil-2-globo-presenta-parte-2-elenco-original-confirma-estreno-2027-299425.html",
+      "firstSeen": "2026-10-15T14:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T14:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Expreso.ec piece about Globo's telenovela 'Avenida Brasil 2' casting and 2027 premiere; unrelated different show named explicitly in the title. Surfaced via Pass 1 Exa ES broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-15T14:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12718",
+          "note": "Title explicitly names a different, specific show (\"Avenida Brasil 2\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://stories.caracol.com.co/newstory/reels/stories/56ba69b2fa84379c73a9",
+      "firstSeen": "2026-10-15T14:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T14:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Caracol stories/reel of actress Amparo Grisales giving her opinion on 'perreo' dancing; unrelated different person/topic named explicitly in the title. Surfaced via Pass 1 Exa ES broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-15T14:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12718",
+          "note": "Title explicitly names a different, specific person/topic (Amparo Grisales / perreo); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mediasetinfinity.es/mtmad/nayades-sin-frenos/temporada-1/top-videos/nayades-lospitao-habla-divorcio-padres-40_020438954/player/",
+      "firstSeen": "2026-10-15T14:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T14:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Mediaset Infinity clip from the reality show 'Náyades, sin frenos' about a cast member's parents' divorce; unrelated different show named explicitly in the title. Surfaced via Pass 1 Exa ES broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-15T14:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12718",
+          "note": "Title explicitly names a different, specific show (\"Náyades, sin frenos\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://bellerdigital.net/archivos/163432",
+      "firstSeen": "2026-10-15T14:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T14:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Beller Digital piece about the origin of the song 'La Loba' and singer Miriam Cruz; unrelated music topic named explicitly in the title. Surfaced via Pass 1 Exa ES broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-15T14:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12718",
+          "note": "Title explicitly names a different, specific topic (Ramon Orlando / Miriam Cruz song history); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://elrincondelbasket.blogspot.com/2019/01/pick-roll-cantabria-15012019.html",
+      "firstSeen": "2026-10-15T14:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T14:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2019-dated Spanish basketball blog post about a Cantabria pick-and-roll game; unrelated sports topic named explicitly in the title. Surfaced via Pass 1 Exa ES broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-15T14:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12718",
+          "note": "Title explicitly names a different, specific topic (basketball pick-and-roll, Cantabria); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://weltwoche.ch/story/ich-will-heftiger-leben-und-atmen/",
+      "firstSeen": "2026-10-15T14:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T14:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Weltwoche (Swiss magazine) 2008-12-18 interview with French actress Beatrice Dalle about her film 'Domaine'; no mention of Las Azules / Women in Blue. Body fetched via Tavily Extract (advanced) after the headline alone named no specific subject, which required a fetch under the LEMA-12648 carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T14:10:00Z",
+          "method": "Tavily Extract (advanced)",
+          "status": 200,
+          "issue": "LEMA-12718",
+          "note": "Vague quote-style headline named no specific subject; carve-out required a fetch. Body confirmed off-topic (2008 Beatrice Dalle interview)."
+        }
+      ]
+    },
+    {
+      "url": "https://www.hola.com/us-es/celebrities/20240801710302/barbara-mori-relacion-fernando-rovzar/",
+      "firstSeen": "2026-10-15T14:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T14:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Hola! piece about Barbara Mori's personal romantic relationship with Fernando Rovzar; not coverage of Las Azules / Women in Blue, a specific different (personal-life) topic named explicitly in the title. Surfaced via Pass 2 broad web search.",
+      "history": [
+        {
+          "attempt": "2026-10-15T14:10:00Z",
+          "method": "title/snippet review (WebSearch result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12718",
+          "note": "Title explicitly names a different, specific topic (Mori's personal relationship with Rovzar, not the show); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-15T12:07:20Z"
+  "lastUpdated": "2026-10-15T14:10:00Z"
 }
