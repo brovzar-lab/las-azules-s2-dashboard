@@ -27740,7 +27740,154 @@
           "note": "Fetched directly; confirmed the article covers the 2026 Primetime Emmy Awards winners and never names Las Azules / Women in Blue."
         }
       ]
+    },
+    {
+      "url": "https://t2online.in/screen/streaming/apple-tv-renews-maximum-pleasure-guaranteed-for-season-2/2008652",
+      "firstSeen": "2026-10-15T08:01:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T08:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Headline is about Apple TV+ renewing a different show, 'Maximum Pleasure Guaranteed', for its own season 2. Surfaced on the Pass 1 Exa EN query via generic 'season 2 Apple TV' keyword overlap. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T08:01:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12675",
+          "note": "Title explicitly names a different show (Maximum Pleasure Guaranteed); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "https://ispazio.net/2282355/maximum-pleasure-guaranteed-seconda-stagione-apple-tv",
+      "firstSeen": "2026-10-15T08:01:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T08:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Italian headline about Apple TV renewing 'Maximum Pleasure Guaranteed' for a second season. Same off-topic family as t2online.in/indianbroadcastingworld.com this run. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T08:01:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12675",
+          "note": "Title explicitly names a different show (Maximum Pleasure Guaranteed); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "https://indianbroadcastingworld.com/apple-tv-renews-maximum-pleasure",
+      "firstSeen": "2026-10-15T08:01:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T08:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Headline about Apple TV renewing 'Maximum Pleasure Guaranteed' for season 2. Same off-topic family as t2online.in/ispazio.net this run. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T08:01:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12675",
+          "note": "Title explicitly names a different show (Maximum Pleasure Guaranteed); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "http://mirandoalazul.blogspot.com/2012/02/nuevas-noticias-3.html",
+      "firstSeen": "2026-10-15T08:01:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T08:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "WebFetch-confirmed: a Feb 1, 2012 post on the Spanish book-blog 'Mirando al Azul' covering a film-option news item, a novel release, and two book giveaways. No mention of Las Azules/Women in Blue; the blog name is a coincidental keyword match only ('al azul'). Headline named no specific subject, so the no-fetch carve-out did not apply and a body fetch was required.",
+      "history": [
+        {
+          "attempt": "2026-10-15T08:01:00Z",
+          "method": "WebFetch (body content reviewed)",
+          "status": 200,
+          "issue": "LEMA-12675",
+          "note": "Confirmed off-topic Spanish book blog, unrelated to the show; predates the show's 2022 announcement."
+        }
+      ]
+    },
+    {
+      "url": "https://times.abema.tv/es/articles/photo/10280733",
+      "firstSeen": "2026-10-15T08:01:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T08:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Spanish-language interview about the anime 'Just Like Mona Lisa', matched only on the incidental phrase 'azul turquesa' (turquoise blue) in the headline. Title names the specific different, unrelated work (a named anime), satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T08:01:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12675",
+          "note": "Title explicitly names a different, unrelated anime title; no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "http://auladevalencia-iesmarinabaixa.blogspot.com/2018/05/tasca-realitzar-una-entrevista-oral.html",
+      "firstSeen": "2026-10-15T08:01:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T08:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "A 2018 Catalan-language teaching blog post assigning students an oral-interview classroom task ('Realitzar una entrevista oral'), matched only on the generic Spanish word 'entrevista' in the ES query. Title names an explicitly different, specific topic (a language-teaching assignment), satisfying the LEMA-12648 no-fetch carve-out; also predates the show entirely.",
+      "history": [
+        {
+          "attempt": "2026-10-15T08:01:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12675",
+          "note": "Title explicitly names a different, specific topic (classroom oral-interview task); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "http://lacasetaeliastormo.blogspot.com/2012/03/mestres-com-i-per-que.html",
+      "firstSeen": "2026-10-15T08:01:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T08:01:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "A 2012 Catalan teaching-philosophy blog post ('Ser mestre, com i per que?' - being a teacher, how and why), matched only on the generic Spanish word 'entrevista' in the ES query results. Title names an explicitly different, specific topic (teaching philosophy), satisfying the LEMA-12648 no-fetch carve-out; also predates the show entirely.",
+      "history": [
+        {
+          "attempt": "2026-10-15T08:01:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12675",
+          "note": "Title explicitly names a different, specific topic (teaching philosophy); no-fetch Rule G carve-out applies."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-15T02:01:00Z"
+  "lastUpdated": "2026-10-15T08:01:00Z"
 }
