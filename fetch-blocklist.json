@@ -27447,7 +27447,216 @@
           "note": "Tavily Extract returned full transcript/description confirming this is the same video already present in data.json under its bare watch?v= address."
         }
       ]
+    },
+    {
+      "url": "https://ext.to/las-azules-s01e07-dora-1080p-atvp-web-dl-dd5-1-h264-g66-mkv-15177385/",
+      "firstSeen": "2026-10-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_piracy_or_unauthorized_distribution",
+      "skipNote": "ext.to torrent-index listing for \"Las.Azules.S01E07.Dora.1080p.ATVP.WEB-DL.DD5.1.H264\" (release-quality tag in the URL/title itself, ext.to is a known torrent/magnet indexing site). Primary function is supplying an unauthorized copy of the episode, not reporting on, reviewing, or promoting the show. Per Rule E, dateability is irrelevant and no fetch-fallback attempt was spent dating it. reviewable omitted: not coverage at all.",
+      "history": [
+        {
+          "attempt": "2026-10-15T00:08:00Z",
+          "method": "URL/title signal review (no fetch, per Rule E)",
+          "status": 200,
+          "issue": "LEMA-12661",
+          "note": "Torrent listing identified by release-tag naming convention in the URL path alone; classified without fetching per Rule E scope."
+        }
+      ]
+    },
+    {
+      "url": "https://diyhamantenna.com/article/unveiling-sugar-season-2-release-date-cast-and-what-to-expect",
+      "firstSeen": "2026-10-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article is about \"Sugar\" Season 2, an unrelated Apple TV+ series, not Las Azules / Women in Blue. Surfaced only via the broad EN Exa query (\"Las Azules Women in Blue Season 2 Apple TV\"). Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T00:08:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12661",
+          "note": "Title explicitly names a different, specific show (\"Sugar Season 2\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.produ.com/television/videos/duda-perman-de-kanal-d/",
+      "firstSeen": "2026-10-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "PRODU video-catalog entry for an interview with Duda Perman of Kanal D (Turkish broadcaster), an industry figure with no connection to Las Azules. Surfaced only via the broad ES Exa query (\"Bárbara Mori entrevista Las Azules temporada 2\"). Title names a specific unconnected person/outlet, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T00:08:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12661",
+          "note": "Title names a specific named person (Duda Perman) at an unrelated broadcaster (Kanal D); no connection to Las Azules cast/crew. No-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "https://www.produ.com/television/videos/mikaela-perez-de-ogm-universe/",
+      "firstSeen": "2026-10-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "PRODU video-catalog entry for an interview with Mikaela Pérez of OGM Universe, an industry figure with no connection to Las Azules. Surfaced only via the broad ES Exa query. Title names a specific unconnected person/company, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T00:08:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12661",
+          "note": "Title names a specific named person (Mikaela Pérez) at an unrelated production company (OGM Universe); no connection to Las Azules cast/crew. No-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "https://radio-mejor.com/la-serie-inspirada-en-timbiriche-estrena-con-una-trama-marcada-por-la-polemica-y-reclamos/",
+      "firstSeen": "2026-10-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article is about a different, unrelated series inspired by the Mexican pop group Timbiriche, not Las Azules. Surfaced only via the broad ES Exa query. Title names the specific different topic (Timbiriche-inspired series), satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T00:08:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12661",
+          "note": "Title explicitly names a different subject (a series inspired by Timbiriche); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "https://2001online.com/farandula/mimi-lazo-revive-el-pez-que-fuma-roman-chalbaud-me-dio-fuerzas-desde-el-cielo-para-hacer-a-la-garza-202610141850",
+      "firstSeen": "2026-10-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article is about actress Mimí Lazo and the play/film \"El pez que fuma\" (Román Chalbaud), entirely unrelated to Las Azules. Surfaced only via the broad ES Exa query. Title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T00:08:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12661",
+          "note": "Title names a specific unconnected person and work (Mimí Lazo, \"El pez que fuma\"); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "https://www.rtve.es/play/videos/brooke-shields-una-hermosa-criatura/segunda-parte/16900635/",
+      "firstSeen": "2026-10-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "RTVE video page about the Brooke Shields documentary \"Una hermosa criatura\", entirely unrelated to Las Azules. Surfaced only via the broad ES Exa query. Title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-15T00:08:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12661",
+          "note": "Title names a specific unconnected person and work (Brooke Shields documentary); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "https://www.cadebordedepotins.com/tag/las%20azules/",
+      "firstSeen": "2026-10-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipMethod": "body_fetch",
+      "skipNote": "Tag/archive index page on \"Cà debord de potins\" listing teasers for 5 already-tracked posts on this blog (episodes 1-2 review 20260822, episode 3 review 20260901 [newly confirmed this run, already in data.json], episodes 4-8 review 20261008, plus two 2024 Season 1 pieces), confirmed via direct fetch. The index page itself carries no original written content beyond the teaser excerpts of posts already captured at their own URLs. Per Rule I, this is a tag/archive index surfacing already-tracked posts, not a distinct document.",
+      "history": [
+        {
+          "attempt": "2026-10-15T00:08:00Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12661",
+          "note": "Fetched directly; confirmed tag-index page listing links/teasers to posts already present in data.json under their own URLs."
+        }
+      ]
+    },
+    {
+      "url": "https://wthr.com/article/entertainment/television/women-in-blue-interview-las-azules-spanish-mexico-crime-drama-tv-series-apple-tv-plus-barbara-mori-ximena-sarinana-natalia-tellez-amorita-rasgado/531-fc0ab543-09fd-44cc-a15f-a964ffcb9b1f",
+      "firstSeen": "2026-10-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "WTHR (Indianapolis NBC affiliate) Season 1-era preview piece (\"Women in Blue begins streaming Wednesday, July 31 on Apple TV+\", cast-preview content matching the same AP-wire-era pieces already tracked under Daily Herald/InTheSeats/WhatToWatch). On-topic confirmed via Tavily search snippet, but WebFetch returned a 403 bot-wall and Tavily Extract returned no content for this URL; no og:article:published_time/JSON-LD datePublished/visible dateline was recoverable by either method. URL path carries no date component (opaque content ID only), so the Rule A URL-date exception does not apply either. Both methods exhausted per Rule A.",
+      "history": [
+        {
+          "attempt": "2026-10-15T00:08:00Z",
+          "method": "WebFetch (403) then Tavily Extract (empty)",
+          "status": 403,
+          "issue": "LEMA-12661",
+          "note": "WebFetch: 403 bot-wall. Tavily Extract: returned no content for this URL. No date metadata recoverable by either method; content confirmed on-topic only via a Tavily search snippet, not a full fetch."
+        }
+      ]
+    },
+    {
+      "url": "https://www.demorgen.be/tv-series/tweede-women-in-blue-seizoen-raakt-veel-beter-zijn-tijdsgewricht~b04d1ff1/",
+      "firstSeen": "2026-10-15T00:08:00Z",
+      "failCount": 0,
+      "lastStatus": 403,
+      "lastAttempt": "2026-10-15T00:08:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "De Morgen (Belgian newspaper) review of Las Azules / Women in Blue Season 2, on-topic confirmed via Tavily search snippet (\"Tweede Women in Blue-seizoen raakt veel beter zijn tijdsgewricht\"). WebFetch failed (tool-level fetch failure), a direct curl attempt returned 403, and Tavily Extract returned no content for this URL. No og:article:published_time/JSON-LD datePublished/visible dateline was recoverable. Exa's own search-index publishedDate (2026-08-21) was observed but is not an independently-verified page-sourced date per Rule A and was not used. Both WebFetch and Tavily Extract exhausted per Rule A.",
+      "history": [
+        {
+          "attempt": "2026-10-15T00:08:00Z",
+          "method": "WebFetch (failed) then curl (403) then Tavily Extract (empty)",
+          "status": 403,
+          "issue": "LEMA-12661",
+          "note": "WebFetch: tool-level failure. Direct curl: 403. Tavily Extract: returned no content. No date metadata recoverable by any method tried; Exa search-index publishedDate (2026-08-21) noted but not treated as a sourced date."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-14T22:10:00Z"
+  "lastUpdated": "2026-10-15T00:08:00Z"
 }
