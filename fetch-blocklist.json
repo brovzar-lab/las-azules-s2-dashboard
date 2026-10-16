@@ -29740,7 +29740,70 @@
           "note": "WebFetch succeeded; confirmed article covers seven different Apple TV shows, none of them Las Azules/Women in Blue."
         }
       ]
+    },
+    {
+      "url": "https://www.threads.com/@appletv",
+      "firstSeen": "2026-10-16T22:05:34Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T22:05:34Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Apple TV's general Threads account profile (@appletv, ~880K followers). Confirmed via direct fetch that the visible bio and recent posts (Slow Horses, Matchbox The Movie, Tenzing, a Ted Lasso post, F1/MLS mentions) never reference Las Azules / Women in Blue. Profile page names no specific subject in its title, so the LEMA-12648 carve-out required a body fetch before any Rule G skip; fetch performed and confirmed off-topic.",
+      "history": [
+        {
+          "attempt": "2026-10-16T22:05:34Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12873",
+          "note": "Surfaced via Pass 1 Exa broad EN query. Fetched directly; account overview covers other Apple TV+ titles, no mention of Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tvazteca.com/aztecauno/venga-la-alegria/itati-cantoral-volveria-una-telenovela-thalia/",
+      "firstSeen": "2026-10-16T22:05:34Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T22:05:34Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "TV Azteca piece about whether Itati Cantoral would return to telenovelas alongside Thalia. Unrelated to Las Azules / Women in Blue; headline names a specific different subject (Itati Cantoral / Thalia telenovela speculation), satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T22:05:34Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12873",
+          "note": "Surfaced via Pass 1 Exa broad ES query. Title names a different, specific topic (Itati Cantoral / Thalia telenovela); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://blog-farreras.blogspot.com/2014/07/entevista-la-escritora-marlene-monleon.html",
+      "firstSeen": "2026-10-16T22:05:34Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T22:05:34Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2014 personal blog post, an interview with writer Marlene Monleon about literature. No connection to Las Azules / Women in Blue; headline names a specific different subject (an interview with a named author), satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T22:05:34Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12873",
+          "note": "Surfaced via Pass 1 Exa broad ES query (semantic drift to an unrelated 2014 blog post). Title names a different, specific subject (an interview with author Marlene Monleon); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-16T20:05:39Z"
+  "lastUpdated": "2026-10-16T22:05:34Z"
 }
