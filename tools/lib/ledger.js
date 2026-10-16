@@ -217,16 +217,20 @@ function mergeLedgerGroup(rows) {
 // Detection only, never rewrites -- these rows carry real editorial
 // skipReason/skipNote content (LEMA-12683 no-auto-rewrite posture).
 //
-// A second shape was scoped alongside this one -- permanentSkip === true
-// but missing one of firstSeen/lastStatus/lastAttempt/history -- and is
-// deliberately NOT implemented here. A full-history backtest against both
-// repos' fetch-blocklist.json (54 commits on El Círculo, 408 on Las
-// Azules) found zero true positives and a large false-positive rate
-// (12/219 and 90/1260 permanentSkip rows respectively, on current HEAD
-// alone) against rows that legitimately never populate lastStatus /
-// lastAttempt / history for a single-pass classification. See the
-// LEMA-12738 comment thread for the measured numbers before that shape is
-// revisited.
+// Shape B was originally scoped as permanentSkip === true missing any of
+// firstSeen/lastStatus/lastAttempt/history. A full-history backtest against
+// both repos' fetch-blocklist.json (54 commits on El Círculo, 408 on Las
+// Azules) found zero true positives for that literal definition and a
+// large false-positive rate (12/219 and 90/1260 permanentSkip rows
+// respectively, on current HEAD alone) against rows that legitimately
+// never populate lastStatus/lastAttempt/history for a single-pass
+// classification -- the exact "guard gets disabled" failure mode
+// LEMA-12683 warned about. Narrowed per the LEMA-12738 scope call
+// (2026-10-16) to flag only a missing `firstSeen`: the one field present
+// on 100% of well-formed permanentSkip rows in both repos' full history,
+// and the field the two traced failure-mode commits (b51bd1e, d16e6e4)
+// actually drop. Backtests at zero false positives on both repos (see the
+// LEMA-12738 deliverable for the re-run numbers).
 function findMalformedSkipEntries(entries) {
   const malformed = [];
   entries.forEach((entry, index) => {
@@ -238,6 +242,13 @@ function findMalformedSkipEntries(entries) {
         index,
         shape: 'A',
         detail: 'skipReason set without permanentSkip === true',
+      });
+    } else if (isPermanentSkip && !entry.firstSeen) {
+      malformed.push({
+        url: entry.url,
+        index,
+        shape: 'B',
+        detail: 'permanentSkip === true without firstSeen',
       });
     }
   });

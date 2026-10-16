@@ -176,9 +176,10 @@ test('assertLedgerIntegrity: malformedSkipEntries is empty on a well-formed fixt
 });
 
 // LEMA-12738: Shape A detector (LEMA-12737's lookup-output-shape-pasted-as-
-// entry / plain missing-flag rows). Shape B (permanentSkip === true missing
-// scaffold) is intentionally not implemented -- see ledger.js comment and
-// the LEMA-12738 ticket for the backtest finding that killed it.
+// entry / plain missing-flag rows), plus the narrowed Shape B detector
+// (permanentSkip === true missing firstSeen specifically -- the original
+// four-field Shape B backtested at zero true positives and a large false-
+// positive rate, see ledger.js comment and the LEMA-12738 ticket).
 
 test('findMalformedSkipEntries: flags a row with skipReason but no permanentSkip flag at all (plain missing-flag case)', () => {
   const entries = [
@@ -228,6 +229,25 @@ test('findMalformedSkipEntries: does not flag a well-formed permanentSkip row, e
 test('findMalformedSkipEntries: does not flag a row with no skipReason at all (active-cooldown / not-found shapes)', () => {
   const entries = [
     { url: 'https://example.com/e', failCount: 1, cooldownUntil: '2099-01-01T00:00:00Z' },
+  ];
+  const flags = findMalformedSkipEntries(entries);
+  assert.deepEqual(flags, []);
+});
+
+test('findMalformedSkipEntries: flags a permanentSkip row missing firstSeen (narrowed Shape B)', () => {
+  const entries = [
+    { url: 'https://example.com/f', permanentSkip: true, skipReason: 'editorial_listing_or_database', skipNote: 'note', lastStatus: 200, lastAttempt: '2026-10-09T10:00:00Z', history: [] },
+  ];
+  const flags = findMalformedSkipEntries(entries);
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].url, 'https://example.com/f');
+  assert.equal(flags[0].shape, 'B');
+  assert.equal(flags[0].index, 0);
+});
+
+test('findMalformedSkipEntries: does not flag a permanentSkip row missing lastStatus/lastAttempt/history when firstSeen is present', () => {
+  const entries = [
+    { url: 'https://example.com/g', permanentSkip: true, skipReason: 'editorial_vendor_promo', skipNote: 'note', firstSeen: '2026-10-09T10:00:00Z' },
   ];
   const flags = findMalformedSkipEntries(entries);
   assert.deepEqual(flags, []);
