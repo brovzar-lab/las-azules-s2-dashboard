@@ -29306,7 +29306,142 @@
           "note": "Mar 10, 2011 post on the 'Mirando al Azul' book blog summarizing the plot of Scott Westerfeld's 'Specials' (Uglies series). No mention of Las Azules/Women in Blue/Barbara Mori. Title named no specific subject, confirmed via body fetch per the LEMA-12648 carve-out."
         }
       ]
+    },
+    {
+      "url": "https://www.justwatch.com/uk/tv-series/the-nanny",
+      "firstSeen": "2026-10-16T12:05:37Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T12:05:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "JustWatch streaming-availability page for 'The Nanny', an unrelated sitcom. Surfaced via the Exa EN broad-query pass. Search-result title ('The Nanny - watch tv series streaming online') affirmatively names a different specific title, so this qualifies for the LEMA-12648 no-fetch carve-out: no fetch spent.",
+      "history": [
+        {
+          "attempt": "2026-10-16T12:05:37Z",
+          "method": "title_snippet_only",
+          "status": null,
+          "issue": "LEMA-12833",
+          "note": "Search-result title names a different specific show ('The Nanny'). Off-topic confirmed without a body fetch per the LEMA-12648 carve-out (affirmative different-title signal)."
+        }
+      ]
+    },
+    {
+      "url": "https://news-journal.com/2026/10/16/longview-native-may-cobbs-novel-to-be-turned-into-apple-tv-series/",
+      "firstSeen": "2026-10-16T12:05:37Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T12:05:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "Longview News-Journal piece about author May Cobb's novel being adapted into an unrelated Apple TV series. Search-result title affirmatively names a different specific subject (May Cobb's novel adaptation), so this qualifies for the LEMA-12648 no-fetch carve-out: no fetch spent.",
+      "history": [
+        {
+          "attempt": "2026-10-16T12:05:37Z",
+          "method": "title_snippet_only",
+          "status": null,
+          "issue": "LEMA-12833",
+          "note": "Search-result title names a different specific project (May Cobb's novel adaptation). Off-topic confirmed without a body fetch per the LEMA-12648 carve-out."
+        }
+      ]
+    },
+    {
+      "url": "https://www.sensacine.com/actores/actor-146425/biografia/",
+      "firstSeen": "2026-10-16T12:05:37Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T12:05:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipMethod": "body_fetch",
+      "reviewable": false,
+      "skipNote": "SensaCine actor biography/filmography database page for Barbara Mori. Las Azules appears only as a co-star credit in the 'Ha trabajado con' (worked with) section alongside Leonardo Sbaraglia, Bruno Bichir, and Ximena Sarinana; no original editorial prose about the show anywhere on the page, and no article publish date (only her birth date and her other works' release dates). Rule F: stripped of the bio/filmography/stats table, nothing about Las Azules remains.",
+      "history": [
+        {
+          "attempt": "2026-10-16T12:05:37Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12833",
+          "note": "Confirmed actor bio/filmography database page; Las Azules only appears as a co-star credit, no editorial content and no publish date."
+        }
+      ]
+    },
+    {
+      "url": "https://www.moviepilot.de/serie/las-azules/staffel/2/kritik",
+      "firstSeen": "2026-10-16T12:05:37Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T12:05:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_user_review_aggregate",
+      "skipMethod": "body_fetch",
+      "reviewable": false,
+      "skipNote": "Despite the 'kritik' URL slug, this is Moviepilot.de's user-comments tab for Women in Blue Staffel 2 (page headline: 'Kommentare zu Women in Blue'), not a staff-written review. Comments themselves were not rendered server-side ('Kommentare werden geladen...'/comments loading placeholder) in either a WebFetch pass or a Tavily Extract (advanced depth) pass. Rule H: outlet-run surface whose show-related content, if any, comes from the public, and this is the aggregation surface itself, not an authored article.",
+      "history": [
+        {
+          "attempt": "2026-10-16T12:05:37Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12833",
+          "note": "Page resolved to Moviepilot's 'Kommentare' (user comments) tab, not a staff review. No review prose present."
+        },
+        {
+          "attempt": "2026-10-16T12:05:37Z",
+          "method": "Tavily Extract (advanced)",
+          "status": 200,
+          "issue": "LEMA-12833",
+          "note": "Confirmed same result: comments-loading placeholder, no rendered comment or review text, no publish date."
+        }
+      ]
+    },
+    {
+      "url": "https://latinamedia.co/The%20Latest",
+      "firstSeen": "2026-10-16T12:05:37Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T12:05:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "reviewable": false,
+      "skipNote": "LatinaMedia.Co 'The Latest' category/listing index page. No Las Azules content in any headline or preview on the page; closest match is an unrelated title, 'Las Cosas Que Brillan'. Headline ('The Latest') named no specific subject, so a body fetch was required per the LEMA-12648 carve-out rather than a title-only call; fetch confirms off-topic.",
+      "history": [
+        {
+          "attempt": "2026-10-16T12:05:37Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12833",
+          "note": "Confirmed category/listing index page with no Las Azules content."
+        }
+      ]
+    },
+    {
+      "url": "https://screenanarchy.com/2026%2F08",
+      "firstSeen": "2026-10-16T12:05:37Z",
+      "failCount": 1,
+      "lastStatus": 404,
+      "lastAttempt": "2026-10-16T12:05:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": false,
+      "history": [
+        {
+          "attempt": "2026-10-16T12:05:37Z",
+          "method": "WebFetch",
+          "status": 404,
+          "issue": "LEMA-12833",
+          "note": "Double-encoded archive-path URL from Exa (literal '%2F' in path). Resolved via 301 redirect to http://screenanarchy.com/2026/08/, which returned 404 Not Found. Full-chain fetch failure, not an editorial skip; eligible for retry."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-16T10:04:59Z"
+  "lastUpdated": "2026-10-16T12:05:37Z"
 }
