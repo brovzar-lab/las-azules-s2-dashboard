@@ -209,6 +209,41 @@ function mergeLedgerGroup(rows) {
   return merged;
 }
 
+// LEMA-12738: detects Shape A from LEMA-12737 -- a row carrying a truthy
+// skipReason but permanentSkip not strictly === true. Covers both the
+// stray lookup-output-shape-pasted-as-entry case (a row carrying
+// lookupCandidate's `key`/`disposition` fields instead of the ledger write
+// schema) and a plain missing-flag case (permanentSkip omitted or false).
+// Detection only, never rewrites -- these rows carry real editorial
+// skipReason/skipNote content (LEMA-12683 no-auto-rewrite posture).
+//
+// A second shape was scoped alongside this one -- permanentSkip === true
+// but missing one of firstSeen/lastStatus/lastAttempt/history -- and is
+// deliberately NOT implemented here. A full-history backtest against both
+// repos' fetch-blocklist.json (54 commits on El Círculo, 408 on Las
+// Azules) found zero true positives and a large false-positive rate
+// (12/219 and 90/1260 permanentSkip rows respectively, on current HEAD
+// alone) against rows that legitimately never populate lastStatus /
+// lastAttempt / history for a single-pass classification. See the
+// LEMA-12738 comment thread for the measured numbers before that shape is
+// revisited.
+function findMalformedSkipEntries(entries) {
+  const malformed = [];
+  entries.forEach((entry, index) => {
+    const hasSkipReason = Boolean(entry.skipReason);
+    const isPermanentSkip = entry.permanentSkip === true;
+    if (hasSkipReason && !isPermanentSkip) {
+      malformed.push({
+        url: entry.url,
+        index,
+        shape: 'A',
+        detail: 'skipReason set without permanentSkip === true',
+      });
+    }
+  });
+  return malformed;
+}
+
 /**
  * Step 10: recompute normalized keys across fetch-blocklist.json, report
  * rows / distinct normalized URLs / duplicate groups, and (only when
@@ -278,6 +313,7 @@ function assertLedgerIntegrity(ledger, { fix = false } = {}) {
     autoMerged,
     pendingMerge,
     conflicts,
+    malformedSkipEntries: findMalformedSkipEntries(entries),
     entries, // possibly-merged entries (only differs from input when fix=true)
     passes: scan.rows === scan.distinctNormalizedUrls,
   };
@@ -290,5 +326,6 @@ module.exports = {
   findDuplicateGroups,
   groupAgrees,
   mergeLedgerGroup,
+  findMalformedSkipEntries,
   assertLedgerIntegrity,
 };

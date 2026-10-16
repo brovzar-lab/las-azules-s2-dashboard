@@ -362,6 +362,9 @@ function cmdAssertIntegrity(flags) {
       for (const c of l.conflicts) {
         console.log(`  - escalated group [${c.key}]: ${c.urls.join(', ')} -- dispositions differ, agent must resolve (Step 10 escalation path, including the search-existing-issues dedup check)`);
       }
+      for (const m of l.malformedSkipEntries) {
+        console.log(`  - malformed skip entry [shape ${m.shape}] ${m.url}: ${m.detail} (LEMA-12738, detect-only -- not auto-fixed)`);
+      }
     }
     if (result.dataset) {
       const d = result.dataset;

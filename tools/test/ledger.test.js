@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 const fs = require('fs');
 const path = require('path');
 
-const { lookupAll, lookupCandidate, buildLedgerIndex, assertLedgerIntegrity } = require('../lib/ledger');
+const { lookupAll, lookupCandidate, buildLedgerIndex, assertLedgerIntegrity, findMalformedSkipEntries } = require('../lib/ledger');
 
 const FIXTURE_LEDGER = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'fixtures', 'mini-ledger.json'), 'utf8')
@@ -169,3 +169,67 @@ test('assertLedgerIntegrity --fix: auto-merges the agreeing group, leaves the co
   assert.equal(result.entries.length, 5); // 6 - 2 merged + 1 merged row
   assert.equal(result.passes, false); // conflict group still unresolved
 });
+
+test('assertLedgerIntegrity: malformedSkipEntries is empty on a well-formed fixture', () => {
+  const result = assertLedgerIntegrity(FIXTURE_LEDGER, { fix: false });
+  assert.deepEqual(result.malformedSkipEntries, []);
+});
+
+// LEMA-12738: Shape A detector (LEMA-12737's lookup-output-shape-pasted-as-
+// entry / plain missing-flag rows). Shape B (permanentSkip === true missing
+// scaffold) is intentionally not implemented -- see ledger.js comment and
+// the LEMA-12738 ticket for the backtest finding that killed it.
+
+test('findMalformedSkipEntries: flags a row with skipReason but no permanentSkip flag at all (plain missing-flag case)', () => {
+  const entries = [
+    { url: 'https://example.com/a', skipReason: 'editorial_listing_or_database', skipNote: 'note' },
+  ];
+  const flags = findMalformedSkipEntries(entries);
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].url, 'https://example.com/a');
+  assert.equal(flags[0].shape, 'A');
+  assert.equal(flags[0].index, 0);
+});
+
+test('findMalformedSkipEntries: flags a row with skipReason and permanentSkip explicitly false', () => {
+  const entries = [
+    { url: 'https://example.com/b', permanentSkip: false, skipReason: 'editorial_vendor_promo' },
+  ];
+  const flags = findMalformedSkipEntries(entries);
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].shape, 'A');
+});
+
+test('findMalformedSkipEntries: flags a stray lookupCandidate-output-shaped row (key/disposition instead of the write schema)', () => {
+  const entries = [
+    {
+      url: 'https://example.com/c',
+      key: 'example.com/c',
+      disposition: 'permanentSkip',
+      skipReason: 'editorial_listing_or_database',
+      skipNote: 'note',
+      reviewable: false,
+      firstSeen: '2026-10-12T06:00:00Z',
+    },
+  ];
+  const flags = findMalformedSkipEntries(entries);
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].shape, 'A');
+});
+
+test('findMalformedSkipEntries: does not flag a well-formed permanentSkip row, even one legitimately missing history/lastStatus/lastAttempt', () => {
+  const entries = [
+    { url: 'https://example.com/d', permanentSkip: true, skipReason: 'editorial_redundant_syndication', skipNote: 'note', firstSeen: '2026-10-09T10:00:00Z' },
+  ];
+  const flags = findMalformedSkipEntries(entries);
+  assert.deepEqual(flags, []);
+});
+
+test('findMalformedSkipEntries: does not flag a row with no skipReason at all (active-cooldown / not-found shapes)', () => {
+  const entries = [
+    { url: 'https://example.com/e', failCount: 1, cooldownUntil: '2099-01-01T00:00:00Z' },
+  ];
+  const flags = findMalformedSkipEntries(entries);
+  assert.deepEqual(flags, []);
+});
+
