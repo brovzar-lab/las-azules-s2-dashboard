@@ -29441,7 +29441,153 @@
           "note": "Double-encoded archive-path URL from Exa (literal '%2F' in path). Resolved via 301 redirect to http://screenanarchy.com/2026/08/, which returned 404 Not Found. Full-chain fetch failure, not an editorial skip; eligible for retry."
         }
       ]
+    },
+    {
+      "url": "https://tv.apple.com/gm/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-10-16T14:06:08Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T14:06:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Apple TV show page (Gambia/gm locale) for Women in Blue, surfaced by Exa Pass 1 EN query. Matches the established tv.apple.com/{locale}/show/ Rule F family (LEMA-10287/LEMA-10632): a show/catalog page with no written editorial content about the show, strip-test fails. No fetch spent per family classification precedent.",
+      "history": [
+        {
+          "attempt": "2026-10-16T14:06:08Z",
+          "method": "classification by URL family (no fetch)",
+          "status": 200,
+          "issue": "LEMA-12850",
+          "note": "Apple TV show page (gm locale) for Women in Blue, same content ID (umc.cmc.73wmdmkfpta5ul1vbwckmme39) as numerous other already-ledgered locale siblings. Classified by surface family per Rule F clarification, no fetch spent."
+        }
+      ]
+    },
+    {
+      "url": "http://agusrey.blogspot.com/2011/08/vuelve-la-biblia-y-el-calefon-con.html",
+      "firstSeen": "2026-10-16T14:06:08Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-16T14:06:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced via Pass 1 ES Exa query. Exa title: 'NOTIREY: Vuelve \"La Biblia y el Calefón\" con Sebastián Wainraich' (2011 blog post about the Argentine sitcom's return, unrelated to Las Azules / Women in Blue). Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T14:06:08Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12850",
+          "note": "Title explicitly names a different, specific show (\"La Biblia y el Calefón\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.tiempodesanjuan.com/espectaculos/la-bomba-que-sacude-a-los-fanaticos-de-avenida-brasil-cuando-se-estrenara-la-segunda-parte-en-argentina_1792154177",
+      "firstSeen": "2026-10-16T14:06:08Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-16T14:06:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced via Pass 1 ES Exa query. Exa title: 'La bomba que sacude a los fanáticos de Avenida Brasil: cuándo se estrenará la segunda parte en Argentina' -- about the telenovela 'Avenida Brasil', unrelated to Las Azules / Women in Blue. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T14:06:08Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12850",
+          "note": "Title explicitly names a different, specific show (\"Avenida Brasil\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.eltrecetv.com.ar/videos/arriba-argentinos/2026/10/16/la-pastillita-azul-la-vecina-mas-descontrolada-aparecio-en-el-movil-de-arriba-argentinos/",
+      "firstSeen": "2026-10-16T14:06:08Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-16T14:06:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced via Pass 1 ES Exa query. Exa title: '\"LA PASTILLITA AZUL\": LA VECINA MÁS DESCONTROLADA APARECIÓ EN EL MÓVIL DE ARRIBA ARGENTINOS | eltrece' -- a segment from the variety show 'Arriba Argentinos', unrelated to Las Azules / Women in Blue despite the word 'azul' appearing in the segment nickname. Title names the specific different program, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T14:06:08Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12850",
+          "note": "Title explicitly names a different, specific program (\"Arriba Argentinos\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://agusrey.blogspot.com/2011/09/jazmin-stuart-elegida-para-el-hombre-de.html",
+      "firstSeen": "2026-10-16T14:06:08Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-16T14:06:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced via Pass 1 ES Exa query. Exa title: 'NOTIREY: Jazmín Stuart: Elegida para \"El Hombre de tu Vida\"' (2011 casting-news blog post), naming an actress and production with no connection to Las Azules / Women in Blue. Title names a specific different person and title, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T14:06:08Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12850",
+          "note": "Title explicitly names a different, specific person and production (\"Jazmín Stuart\", \"El Hombre de tu Vida\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://lonely-geographer.blogspot.com/2014/04/fracasados-por-el-mundo-episodio-2.html",
+      "firstSeen": "2026-10-16T14:06:08Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-16T14:06:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced via Pass 1 ES Exa query. Exa title: 'El Geògraf Solitari: Fracasados por el Mundo. Episodio 2.' -- a 2014 blog recap of the unrelated show 'Fracasados por el Mundo'. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T14:06:08Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12850",
+          "note": "Title explicitly names a different, specific show (\"Fracasados por el Mundo\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://senalnews.com/es/etiquetas/apple-tv?pagina=0",
+      "firstSeen": "2026-10-16T14:06:08Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T14:06:08Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Paginated tag/archive index page (\"etiquetas/apple-tv\", page 0), same family as the already-ledgered pagina=1/pagina=4 siblings; surfaces links to Apple TV-related senalnews.com articles, several already tracked in data.json. Not a distinct document per Rule I (named example: tag or archive index surfacing an already-tracked post).",
+      "history": [
+        {
+          "attempt": "2026-10-16T14:06:08Z",
+          "method": "search-snippet-only",
+          "status": null,
+          "issue": "LEMA-12850",
+          "note": "URL path (/etiquetas/apple-tv?pagina=0) is self-evidently a paginated tag archive index, same structure as already-ledgered sibling pages; no fetch needed to confirm."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-16T12:05:37Z"
+  "lastUpdated": "2026-10-16T14:06:08Z"
 }
