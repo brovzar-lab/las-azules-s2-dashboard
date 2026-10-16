@@ -29096,7 +29096,133 @@
           "issue": "LEMA-12742"
         }
       ]
+    },
+    {
+      "url": "https://santosepulcrovillarrobledo.org/article/apple-tv-s-where-s-wanda-season-2-release-date-first-look-images-revealed",
+      "firstSeen": "2026-10-16T08:03:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T08:03:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article is about \"Where's Wanda?\" Season 2, an unrelated Apple TV+ series, not Las Azules / Women in Blue. Surfaced via the broad EN Exa query. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T08:03:46Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12788",
+          "note": "Article is about \"Where's Wanda?\" Season 2, an unrelated Apple TV+ series, not Las Azules / Women in Blue. Surfaced via the broad EN Exa query. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out."
+        }
+      ]
+    },
+    {
+      "url": "https://kenage.org/article/will-there-be-a-season-2-of-maximum-pleasure-guaranteed-on-apple-tv-everything-we-know",
+      "firstSeen": "2026-10-16T08:03:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T08:03:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article is about \"Maximum Pleasure Guaranteed\" Season 2, an unrelated Apple TV+ series, not Las Azules / Women in Blue. Surfaced via the broad EN Exa query. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T08:03:46Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12788",
+          "note": "Article is about \"Maximum Pleasure Guaranteed\" Season 2, an unrelated Apple TV+ series, not Las Azules / Women in Blue. Surfaced via the broad EN Exa query. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out."
+        }
+      ]
+    },
+    {
+      "url": "https://app-dev.blogarama.com/famous-venezuelan-actresses-from-rctv-a-look-back",
+      "firstSeen": "2026-10-16T08:03:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T08:03:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Blogarama post about famous Venezuelan actresses from RCTV, a retrospective on Venezuelan telenovela performers. No connection to Las Azules / Women in Blue. Title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T08:03:46Z",
+          "method": "title/snippet review (WebSearch result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12788",
+          "note": "Blogarama post about famous Venezuelan actresses from RCTV, a retrospective on Venezuelan telenovela performers. No connection to Las Azules / Women in Blue. Title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out."
+        }
+      ]
+    },
+    {
+      "url": "http://agusrey.blogspot.com/2011/04/los-regresos-mas-esperados-de-la.html",
+      "firstSeen": "2026-10-16T08:03:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T08:03:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Notirey gossip-blog post (Apr 25, 2011) about anticipated May 2011 Argentine TV comebacks: Marcelo Tinelli's Showmatch/Bailando, Julian Weich's Justo a tiempo, and Susana Gimenez's new season. No mention of Las Azules or Women in Blue anywhere in the body. Title names no specific subject, so confirmed via body fetch per the LEMA-12648 carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T08:03:46Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12788",
+          "note": "Notirey gossip-blog post (Apr 25, 2011) about anticipated May 2011 Argentine TV comebacks: Marcelo Tinelli's Showmatch/Bailando, Julian Weich's Justo a tiempo, and Susana Gimenez's new season. No mention of Las Azules or Women in Blue anywhere in the body. Title names no specific subject, so confirmed via body fetch per the LEMA-12648 carve-out."
+        }
+      ]
+    },
+    {
+      "url": "http://orientevision.blogspot.com/2009/06/oriente-vision-con-nancy-nakazato-la.html",
+      "firstSeen": "2026-10-16T08:03:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T08:03:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Blogspot post about an interview with yoga instructor Nancy Nakazato (Utilisima Satelital / Fox TV). No connection to Las Azules / Women in Blue. Title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T08:03:46Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12788",
+          "note": "Blogspot post about an interview with yoga instructor Nancy Nakazato (Utilisima Satelital / Fox TV). No connection to Las Azules / Women in Blue. Title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out."
+        }
+      ]
+    },
+    {
+      "url": "http://sonargentinos.blogspot.com/2007/10/",
+      "firstSeen": "2026-10-16T08:03:46Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T08:03:46Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Son Argentinos blog archive page for October 2007: Argentine celebrity/vedette gossip (Jessica Cirio, Pamela David, Wanda Nara, etc.) and sports items (IRB player-of-year nominations, Messi/Ballon d'Or commentary). No mention of Las Azules or Women in Blue. Title names no specific subject (a monthly archive index), so confirmed via body fetch per the LEMA-12648 carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T08:03:46Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12788",
+          "note": "Son Argentinos blog archive page for October 2007: Argentine celebrity/vedette gossip (Jessica Cirio, Pamela David, Wanda Nara, etc.) and sports items (IRB player-of-year nominations, Messi/Ballon d'Or commentary). No mention of Las Azules or Women in Blue. Title names no specific subject (a monthly archive index), so confirmed via body fetch per the LEMA-12648 carve-out."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-16T06:01:00Z"
+  "lastUpdated": "2026-10-16T08:03:46Z"
 }
