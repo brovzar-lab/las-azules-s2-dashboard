@@ -29719,7 +29719,28 @@
           "note": "Platform-wide slate article, per Rule G carve-out required a body fetch; fetch confirms no mention of this show."
         }
       ]
+    },
+    {
+      "url": "https://screenrant.com/apple-tv-shows-that-deserve-more-attention/",
+      "firstSeen": "2026-10-16T20:05:39Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T20:05:39Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "ScreenRant listicle \"7 Apple TV Shows That Deserve More Love\" (dated Oct 16, 2026). Body fetch confirms it covers Dickinson, Central Park, WeCrashed, Bad Sisters, Loot, Chief of War, and Murderbot -- no mention of Las Azules or Women in Blue anywhere in the article. Surfaced only via Pass 1 Exa broad EN query (\"Las Azules Women in Blue Season 2 Apple TV\"); title names no specific show, so the LEMA-12648 no-fetch carve-out did not apply and a body fetch was required before this Rule G call.",
+      "history": [
+        {
+          "attempt": "2026-10-16T20:05:39Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12870",
+          "note": "WebFetch succeeded; confirmed article covers seven different Apple TV shows, none of them Las Azules/Women in Blue."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-16T16:07:24Z"
+  "lastUpdated": "2026-10-16T20:05:39Z"
 }
