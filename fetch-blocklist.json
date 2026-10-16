@@ -611,6 +611,7 @@
     },
     {
       "url": "https://www.tiktok.com/discover/cuando-sacan-la-temporada-2-de-las-azules",
+      "firstSeen": "2026-09-04T18:05:15.000Z",
       "failCount": 3,
       "lastStatus": 403,
       "lastAttempt": "2026-09-05T12:05:48Z",
@@ -821,6 +822,7 @@
     },
     {
       "url": "https://www.tiktok.com/discover/final-explicado-las-azules-serie",
+      "firstSeen": "2026-09-22T08:00:00Z",
       "failCount": 3,
       "lastStatus": "webfetch_empty_shell;firecrawl_403_unsupported_site",
       "lastAttempt": "2026-09-22T08:00:00Z",
@@ -2095,6 +2097,7 @@
     },
     {
       "url": "https://www.tiktok.com/discover/serie-en-apple-tv-tendencia",
+      "firstSeen": "2026-09-08T22:00:27.000Z",
       "failCount": 1,
       "lastStatus": "webfetch_empty_body; firecrawl_403_unsupported_site",
       "lastAttempt": "2026-09-08T22:00:27.000Z",
@@ -2148,6 +2151,7 @@
     },
     {
       "url": "https://www.youtube.com/watch?v=Z9n3TkdcGLY",
+      "firstSeen": "2026-09-09T10:03:05.000Z",
       "permanentSkip": false,
       "failCount": 0,
       "cooldownUntil": null,
@@ -2405,6 +2409,7 @@
     },
     {
       "url": "https://www.tiktok.com/discover/donde-ver-las-azules-serie-completa",
+      "firstSeen": "2026-09-10T02:05:57.000Z",
       "permanentSkip": false,
       "failCount": 3,
       "cooldownUntil": "2026-10-10T10:00:00Z",
@@ -2443,6 +2448,7 @@
     },
     {
       "url": "https://www.tiktok.com/discover/donde-puedo-ver-la-serie-las-azules",
+      "firstSeen": "2026-09-10T02:05:57.000Z",
       "permanentSkip": false,
       "failCount": 1,
       "cooldownUntil": null,
@@ -2460,6 +2466,7 @@
     },
     {
       "url": "https://www.tiktok.com/discover/las-azules-serie-capitulo-5",
+      "firstSeen": "2026-09-10T02:05:57.000Z",
       "permanentSkip": false,
       "failCount": 1,
       "cooldownUntil": null,
@@ -11241,6 +11248,7 @@
     },
     {
       "url": "https://tomsguide.com/entertainment/apple-tv-plus/how-to-watch-women-in-blue-online-and-from-anywhere-now",
+      "firstSeen": "2026-09-20T10:10:27.023Z",
       "permanentSkip": false,
       "failCount": 1,
       "cooldownUntil": null,
@@ -11258,6 +11266,7 @@
     },
     {
       "url": "https://youtube.com/watch?v=ESWc7jYeaCY",
+      "firstSeen": "2026-09-20T10:10:27.023Z",
       "permanentSkip": false,
       "failCount": 1,
       "cooldownUntil": null,
@@ -11275,6 +11284,7 @@
     },
     {
       "url": "https://24heures.ch/las-azules-la-serie-apple-sur-les-policieres-mexicaines-revient-668343431334",
+      "firstSeen": "2026-09-20T12:07:27Z",
       "permanentSkip": false,
       "failCount": 0,
       "cooldownUntil": null,
@@ -28857,5 +28867,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-10-16T03:10:00Z"
+  "lastUpdated": "2026-10-16T03:10:01Z"
 }
