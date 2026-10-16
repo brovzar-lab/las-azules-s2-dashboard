@@ -28865,7 +28865,238 @@
           "note": "PRODU video interview with Michelle Wasserman (Banijay Rights) touring the Banijay House stand at Mipcom 2026; names a specific different subject (Banijay executive/stand tour), but bordered on 'industry-trend piece' so a body fetch was made before the Rule G call per the carve-out's scope limits. Fetch confirmed zero mention of Las Azules, Women in Blue, Lemon Studios, Fernando Rovzar, or Barbara Mori."
         }
       ]
+    },
+    {
+      "url": "https://firstbabymall.com/article/apple-tv-2026-press-day-all-new-shows-movies-announced-lucky-outcome-monarch-more",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Apple TV 2026 Press Day roundup covering Lucky, Outcome, Monarch and other titles (platform-wide slate article, required a body fetch under the LEMA-12648 carve-out). Body fetch (via redirect to custommapposter.com) confirmed zero mention of Las Azules / Women in Blue.",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T06:01:00Z",
+      "cooldownUntil": null,
+      "firstSeen": "2026-10-16T06:01:00Z",
+      "history": [
+        {
+          "attempt": "2026-10-16T06:01:00Z",
+          "status": 200,
+          "method": "WebFetch (LEMA-12648 carve-out: platform-wide slate article required body fetch before Rule G call)",
+          "note": "Apple TV 2026 Press Day roundup covering Lucky, Outcome, Monarch and other titles (platform-wide slate article, required a body fetch under the LEMA-12648 carve-out). Body fetch (via redirect to custommapposter.com) confirmed zero mention of Las Azules / Women in Blue.",
+          "issue": "LEMA-12742"
+        }
+      ]
+    },
+    {
+      "url": "https://www.indulgexpress.com/entertainment/ott/2026/Oct/16/ott-releases-this-week-october-16-to-october-22",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Indulgexpress 'OTT Releases This Week (Oct 16-22)' listicle roundup, required a body fetch under the LEMA-12648 carve-out. Body fetch (via curl, WebFetch failed) confirmed zero mention of Las Azules / Women in Blue.",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T06:01:00Z",
+      "cooldownUntil": null,
+      "firstSeen": "2026-10-16T06:01:00Z",
+      "history": [
+        {
+          "attempt": "2026-10-16T06:01:00Z",
+          "status": 200,
+          "method": "curl fallback after WebFetch failure (LEMA-12648 carve-out: listicle required body fetch before Rule G call)",
+          "note": "Indulgexpress 'OTT Releases This Week (Oct 16-22)' listicle roundup, required a body fetch under the LEMA-12648 carve-out. Body fetch (via curl, WebFetch failed) confirmed zero mention of Las Azules / Women in Blue.",
+          "issue": "LEMA-12742"
+        }
+      ]
+    },
+    {
+      "url": "http://lqsabyalbert.blogspot.com/2014/",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Catalan fan blog 2014 archive page for the unrelated Spanish sitcom 'La que se avecina' (LQSA); title named no specific subject, required a body fetch under the LEMA-12648 carve-out. Fetch confirmed zero mention of Las Azules / Women in Blue.",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T06:01:00Z",
+      "cooldownUntil": null,
+      "firstSeen": "2026-10-16T06:01:00Z",
+      "history": [
+        {
+          "attempt": "2026-10-16T06:01:00Z",
+          "status": 200,
+          "method": "WebFetch (LEMA-12648 carve-out: headline named no specific subject, required body fetch before Rule G call)",
+          "note": "Catalan fan blog 2014 archive page for the unrelated Spanish sitcom 'La que se avecina' (LQSA); title named no specific subject, required a body fetch under the LEMA-12648 carve-out. Fetch confirmed zero mention of Las Azules / Women in Blue.",
+          "issue": "LEMA-12742"
+        }
+      ]
+    },
+    {
+      "url": "http://ontamos.blogspot.com/2009/05/y-entre-tanto-recuerdo-los-amigos.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "2009 personal blog post by 'Marisa' reminiscing about the band On'ta's second album recording (c. 1979-1980); title named no specific subject, required a body fetch under the LEMA-12648 carve-out. Fetch confirmed zero mention of Las Azules / Women in Blue.",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T06:01:00Z",
+      "cooldownUntil": null,
+      "firstSeen": "2026-10-16T06:01:00Z",
+      "history": [
+        {
+          "attempt": "2026-10-16T06:01:00Z",
+          "status": 200,
+          "method": "WebFetch (LEMA-12648 carve-out: headline named no specific subject, required body fetch before Rule G call)",
+          "note": "2009 personal blog post by 'Marisa' reminiscing about the band On'ta's second album recording (c. 1979-1980); title named no specific subject, required a body fetch under the LEMA-12648 carve-out. Fetch confirmed zero mention of Las Azules / Women in Blue.",
+          "issue": "LEMA-12742"
+        }
+      ]
+    },
+    {
+      "url": "https://shakiraquilla.blogspot.com/2010/11/sale-el-sol-interview-part-1.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Shakira fan-club blog post, 2010 interview excerpt about her 'Sale el Sol' album; title explicitly names a different, unrelated subject (Shakira).",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T06:01:00Z",
+      "cooldownUntil": null,
+      "firstSeen": "2026-10-16T06:01:00Z",
+      "history": [
+        {
+          "attempt": "2026-10-16T06:01:00Z",
+          "status": 200,
+          "method": "title/snippet review (Exa result, no fetch)",
+          "note": "Shakira fan-club blog post, 2010 interview excerpt about her 'Sale el Sol' album; title explicitly names a different, unrelated subject (Shakira).",
+          "issue": "LEMA-12742"
+        }
+      ]
+    },
+    {
+      "url": "http://aclatinos609.blogspot.com/2010/03/victor-manuelle-en-felton-entrevista.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Blog post, 2010 exclusive interview with salsa singer Victor Manuelle; title explicitly names a different, unrelated person.",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T06:01:00Z",
+      "cooldownUntil": null,
+      "firstSeen": "2026-10-16T06:01:00Z",
+      "history": [
+        {
+          "attempt": "2026-10-16T06:01:00Z",
+          "status": 200,
+          "method": "title/snippet review (Exa result, no fetch)",
+          "note": "Blog post, 2010 exclusive interview with salsa singer Victor Manuelle; title explicitly names a different, unrelated person.",
+          "issue": "LEMA-12742"
+        }
+      ]
+    },
+    {
+      "url": "https://qoshe.com/libertad-digital/cristina-losada/iglesias-colau-montero-y-rufi-n-en-cu-ntame-/189354391",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Libertad Digital opinion column by Cristina Losada about Spanish politicians (Pablo Iglesias, Ada Colau, Irene Montero, Gabriel Rufian) appearing on the unrelated Spanish TV show 'Cuentame'; title explicitly names different, unrelated subjects.",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T06:01:00Z",
+      "cooldownUntil": null,
+      "firstSeen": "2026-10-16T06:01:00Z",
+      "history": [
+        {
+          "attempt": "2026-10-16T06:01:00Z",
+          "status": 200,
+          "method": "title/snippet review (Exa result, no fetch)",
+          "note": "Libertad Digital opinion column by Cristina Losada about Spanish politicians (Pablo Iglesias, Ada Colau, Irene Montero, Gabriel Rufian) appearing on the unrelated Spanish TV show 'Cuentame'; title explicitly names different, unrelated subjects.",
+          "issue": "LEMA-12742"
+        }
+      ]
+    },
+    {
+      "url": "http://notasalpiedelcamino.blogspot.com/2011/04/youtube-video-player.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Blog post, 2011 interview with Spanish poet Roger Wolfe; title explicitly names a different, unrelated person.",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T06:01:00Z",
+      "cooldownUntil": null,
+      "firstSeen": "2026-10-16T06:01:00Z",
+      "history": [
+        {
+          "attempt": "2026-10-16T06:01:00Z",
+          "status": 200,
+          "method": "title/snippet review (Exa result, no fetch)",
+          "note": "Blog post, 2011 interview with Spanish poet Roger Wolfe; title explicitly names a different, unrelated person.",
+          "issue": "LEMA-12742"
+        }
+      ]
+    },
+    {
+      "url": "http://radiofontanelles.blogspot.com/2018/02/entrevista-magda-marsal-i-montse.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Local radio station blog post, 2018 interview with Magda Marsal i Montse Alberich; title explicitly names different, unrelated people.",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T06:01:00Z",
+      "cooldownUntil": null,
+      "firstSeen": "2026-10-16T06:01:00Z",
+      "history": [
+        {
+          "attempt": "2026-10-16T06:01:00Z",
+          "status": 200,
+          "method": "title/snippet review (Exa result, no fetch)",
+          "note": "Local radio station blog post, 2018 interview with Magda Marsal i Montse Alberich; title explicitly names different, unrelated people.",
+          "issue": "LEMA-12742"
+        }
+      ]
+    },
+    {
+      "url": "https://www.20minutos.es/deportes/mireia-belmonte-me-gustaria-que-me-recordaran-como-una-persona-que-lucho-por-sus-suenos-siempre-disfruto-nadar_7048711_0.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "20minutos.es sports interview with Olympic swimmer Mireia Belmonte; title explicitly names a different, unrelated person.",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T06:01:00Z",
+      "cooldownUntil": null,
+      "firstSeen": "2026-10-16T06:01:00Z",
+      "history": [
+        {
+          "attempt": "2026-10-16T06:01:00Z",
+          "status": 200,
+          "method": "title/snippet review (Exa result, no fetch)",
+          "note": "20minutos.es sports interview with Olympic swimmer Mireia Belmonte; title explicitly names a different, unrelated person.",
+          "issue": "LEMA-12742"
+        }
+      ]
+    },
+    {
+      "url": "http://dx-om-530-1710.blogspot.com/2025/04/lona-mitjana-radio-rubi-any-1987.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Amateur/DX radio hobbyist blog post about 1980s medium-wave broadcasting and 'Radio Rubi'; title explicitly names an unrelated, specific topic (amateur radio history).",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T06:01:00Z",
+      "cooldownUntil": null,
+      "firstSeen": "2026-10-16T06:01:00Z",
+      "history": [
+        {
+          "attempt": "2026-10-16T06:01:00Z",
+          "status": 200,
+          "method": "title/snippet review (Exa result, no fetch)",
+          "note": "Amateur/DX radio hobbyist blog post about 1980s medium-wave broadcasting and 'Radio Rubi'; title explicitly names an unrelated, specific topic (amateur radio history).",
+          "issue": "LEMA-12742"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-16T03:10:02Z"
+  "lastUpdated": "2026-10-16T06:01:00Z"
 }
