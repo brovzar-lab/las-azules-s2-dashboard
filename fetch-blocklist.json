@@ -29222,7 +29222,91 @@
           "note": "Son Argentinos blog archive page for October 2007: Argentine celebrity/vedette gossip (Jessica Cirio, Pamela David, Wanda Nara, etc.) and sports items (IRB player-of-year nominations, Messi/Ballon d'Or commentary). No mention of Las Azules or Women in Blue. Title names no specific subject (a monthly archive index), so confirmed via body fetch per the LEMA-12648 carve-out."
         }
       ]
+    },
+    {
+      "url": "https://tv.apple.com/fm/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-10-16T10:04:59Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T10:04:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipMethod": "body_fetch",
+      "skipNote": "Apple TV show landing/catalog page (fm locale) for Women in Blue: genre/runtime/rating metadata, one-sentence promotional synopsis (\"Inspired by true events.\"), cast/crew list, six-episode list with one-line summaries, trailers/related titles, accessibility info. No original editorial prose about the show. Rule F clarification (LEMA-10632): tv.apple.com/{locale}/show/ pages are Rule F by surface family regardless of locale.",
+      "history": [
+        {
+          "attempt": "2026-10-16T10:04:59Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12831",
+          "note": "Apple TV show landing/catalog page (fm locale) for Women in Blue: genre/runtime/rating metadata, one-sentence promotional synopsis (\"Inspired by true events.\"), cast/crew list, six-episode list with one-line summaries, trailers/related titles, accessibility info. No original editorial prose about the show. Rule F clarification (LEMA-10632): tv.apple.com/{locale}/show/ pages are Rule F by surface family regardless of locale."
+        }
+      ]
+    },
+    {
+      "url": "https://collider.com/widows-bay-apple-tv-streaming-success-october-2026",
+      "firstSeen": "2026-10-16T10:04:59Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T10:04:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Collider article about Widow's Bay, a different Apple TV horror comedy starring Matthew Rhys, discussing its Emmy wins and viewership gains. No mention of Las Azules or Women in Blue anywhere in the body (Ted Lasso, The Morning Show, The Studio named only in passing). Headline (\"Apple TV's New Crown Jewel Officially Continues Streaming Domination\") named no specific subject, so confirmed via body fetch per the LEMA-12648 carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T10:04:59Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12831",
+          "note": "Collider article about Widow's Bay, a different Apple TV horror comedy starring Matthew Rhys, discussing its Emmy wins and viewership gains. No mention of Las Azules or Women in Blue anywhere in the body. Headline named no specific subject, confirmed via body fetch per the LEMA-12648 carve-out."
+        }
+      ]
+    },
+    {
+      "url": "http://mirandoalazul.blogspot.com/2011/12/estoy-de-nuevo-aqui-con-nuevas.html",
+      "firstSeen": "2026-10-16T10:04:59Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T10:04:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Dec 2, 2011 post on the Spanish-language book blog 'Mirando al Azul': editorial-house news (Alamut, Kiwi), book recommendations, an author congratulation, and blog-anniversary housekeeping. No mention of Las Azules, Women in Blue, or Barbara Mori; the only 'azul' is in the blog's own name. Title named no specific subject, confirmed via body fetch per the LEMA-12648 carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T10:04:59Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12831",
+          "note": "Dec 2, 2011 post on the Spanish-language book blog 'Mirando al Azul': editorial-house news, book recommendations, author congratulation, blog-anniversary housekeeping. No mention of Las Azules/Women in Blue/Barbara Mori. Title named no specific subject, confirmed via body fetch per the LEMA-12648 carve-out."
+        }
+      ]
+    },
+    {
+      "url": "http://mirandoalazul.blogspot.com/2011/03/especiales.html",
+      "firstSeen": "2026-10-16T10:04:59Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-16T10:04:59Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Mar 10, 2011 post on the 'Mirando al Azul' book blog summarizing the plot of the Scott Westerfeld 'Uglies' series novel 'Specials' (Tally Youngblood joins 'Circunstancias Especiales'). No mention of Las Azules, Women in Blue, or Barbara Mori. Title named no specific subject, confirmed via body fetch per the LEMA-12648 carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-16T10:04:59Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12831",
+          "note": "Mar 10, 2011 post on the 'Mirando al Azul' book blog summarizing the plot of Scott Westerfeld's 'Specials' (Uglies series). No mention of Las Azules/Women in Blue/Barbara Mori. Title named no specific subject, confirmed via body fetch per the LEMA-12648 carve-out."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-16T08:03:46Z"
+  "lastUpdated": "2026-10-16T10:04:59Z"
 }
