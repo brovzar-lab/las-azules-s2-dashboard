@@ -29587,7 +29587,139 @@
           "note": "URL path (/etiquetas/apple-tv?pagina=0) is self-evidently a paginated tag archive index, same structure as already-ledgered sibling pages; no fetch needed to confirm."
         }
       ]
+    },
+    {
+      "url": "http://gustavobiosca.blogspot.com/2007/10/entrevista-para-europapress-de-gustavo.html",
+      "firstSeen": "2026-10-16T16:06:50Z",
+      "lastAttempt": "2026-10-16T16:06:50Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "2007 blog interview with comic artist Gustavo Biosca (EUROPAPRESS interview), unrelated to Las Azules/Women in Blue. Surfaced via Pass 1 Exa ES broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-16T16:06:50Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12867",
+          "note": "Title names a specific different person (Gustavo Biosca), no connection to this show."
+        }
+      ]
+    },
+    {
+      "url": "http://refugiosantiaereosdebarcelona.blogspot.com/2011/03/entrevista-sobre-angoixa-en-la-prensa.html",
+      "firstSeen": "2026-10-16T16:06:50Z",
+      "lastAttempt": "2026-10-16T16:06:50Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "2011 blog post about press coverage of the play 'Angoixa' by Josep Maria Contel i Ruiz, unrelated to Las Azules/Women in Blue. Surfaced via Pass 1 Exa ES broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-16T16:06:50Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12867",
+          "note": "Title names a specific different work (Angoixa) and author, no connection to this show."
+        }
+      ]
+    },
+    {
+      "url": "https://eldiariony.com/videos/macarena-garcia-e-iker-sanchez-cuentan-los-retos-de-la-serie-timbiriche-el-diario/",
+      "firstSeen": "2026-10-16T16:06:50Z",
+      "lastAttempt": "2026-10-16T16:06:50Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "El Diario NY video about the telenovela/series 'Timbiriche' with Macarena Garcia and Iker Sanchez, unrelated to Las Azules/Women in Blue. Surfaced via Pass 1 Exa ES broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-16T16:06:50Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12867",
+          "note": "Title names a specific different show (Timbiriche), no connection to this show."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lagaceta.com.ar/nota/1158334/cultura/pepe-cibrian-llega-provincia-dracula-2-me-importa-mucho-mas-ir-tucuman-estrenar-madrid.html",
+      "firstSeen": "2026-10-16T16:06:50Z",
+      "lastAttempt": "2026-10-16T16:06:50Z",
+      "lastStatus": null,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "reviewable": false,
+      "skipNote": "La Gaceta (Argentina) article about Pepe Cibrian bringing 'Dracula 2' to Tucuman, unrelated to Las Azules/Women in Blue. Surfaced via Pass 1 Exa ES broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-16T16:06:50Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12867",
+          "note": "Title names a specific different person (Pepe Cibrian) and production (Dracula 2), no connection to this show."
+        }
+      ]
+    },
+    {
+      "url": "http://mypresstoday.com/in/en/post/6291/356486712/5-apple-tv-shows-to-watch-after-ted-lasso.html",
+      "firstSeen": "2026-10-16T16:06:50Z",
+      "lastAttempt": "2026-10-16T16:06:50Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "reviewable": false,
+      "skipNote": "BGR India listicle '5 Apple TV Shows To Watch After Ted Lasso'. Body fetch confirms Las Azules/Women in Blue is not mentioned anywhere in the piece; only Ted Lasso is named plus an unnamed Hulu series in a 'read also' block. Surfaced via Pass 1 Exa EN broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-16T16:06:50Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12867",
+          "note": "Listicle headline, per Rule G carve-out required a body fetch; fetch confirms no mention of this show."
+        }
+      ]
+    },
+    {
+      "url": "https://www.itopnews.de/2026/10/euer-abend-bei-apple-tv-tenzing-neu-mpg-2-und-prodigies/",
+      "firstSeen": "2026-10-16T16:06:50Z",
+      "lastAttempt": "2026-10-16T16:06:50Z",
+      "lastStatus": 200,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "reviewable": false,
+      "skipNote": "iTopnews.de 'Euer Abend bei Apple TV' nightly programming digest covering Tenzing, Maximum Pleasure Guaranteed S2 renewal, and Prodigies. Body fetch confirms Las Azules/Women in Blue is not mentioned. Surfaced via Pass 1 Exa EN broad query.",
+      "history": [
+        {
+          "attempt": "2026-10-16T16:06:50Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12867",
+          "note": "Platform-wide slate article, per Rule G carve-out required a body fetch; fetch confirms no mention of this show."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-16T14:06:08Z"
+  "lastUpdated": "2026-10-16T16:07:24Z"
 }
