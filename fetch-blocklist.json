@@ -30328,7 +30328,154 @@
           "note": "Title names an explicitly different, specific subject (Laura Caorsi interview on immigration (unrelated 2007 blog post)); no-fetch Rule G carve-out applies per LEMA-12648."
         }
       ]
+    },
+    {
+      "url": "https://filmdaily.co/news/where-to-watch-true-detective-season-two-now",
+      "skipNote": "Article is about \"True Detective\" season two (\"where to watch\" guide), an unrelated show, not Las Azules / Women in Blue. Surfaced via the broad EN Exa query. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "firstSeen": "2026-10-17T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T22:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "history": [
+        {
+          "attempt": "2026-10-17T22:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12949",
+          "note": "Title explicitly names a different, specific show (\"True Detective\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://enstarz.com/latino/articles/18242/20261017/los-angeles-azules-celebran-50-anos-con-una-nueva-version-de-lejos-de-la-ciudad-junto-daniela.htm",
+      "skipNote": "Article is about Los Ángeles Azules, a Mexican cumbia band, celebrating their 50th anniversary with a new version of \"Lejos de la Ciudad\" featuring Daniela Spalla. Different proper noun (\"Los Ángeles Azules\" band) coincidentally containing \"Azules\", unrelated to the Las Azules TV series. Surfaced via the broad ES Exa query. Title names the specific different subject (the band and collaborator), satisfying the LEMA-12648 no-fetch carve-out.",
+      "firstSeen": "2026-10-17T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T22:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "history": [
+        {
+          "attempt": "2026-10-17T22:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12949",
+          "note": "Title explicitly names a different, specific subject (Los Ángeles Azules band + Daniela Spalla collaboration); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://europesays.com/es/823476",
+      "skipNote": "Article is about actress Sílvia Abril (55) discussing nuns from her school days, unrelated to Las Azules / Women in Blue. Surfaced via the broad ES Exa query. Title names a specific different person with no connection to this show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "firstSeen": "2026-10-17T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T22:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "history": [
+        {
+          "attempt": "2026-10-17T22:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12949",
+          "note": "Title explicitly names a different, specific person (Sílvia Abril) with no connection to this show; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://diariolasamericas.com/cultura/angelica-vale-revela-cual-procedimiento-enfrento-prevenir-el-cancer-mama-n5403839",
+      "skipNote": "Article is about Angélica Vale discussing a procedure she underwent to prevent breast cancer, unrelated to Las Azules / Women in Blue. Surfaced via the broad ES Exa query. Title names a specific different person with no connection to this show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "firstSeen": "2026-10-17T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T22:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "history": [
+        {
+          "attempt": "2026-10-17T22:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12949",
+          "note": "Title explicitly names a different, specific person (Angélica Vale) with no connection to this show; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://gingaciadedanca.blogspot.com/2009/02/aproveitando-questao-levantada-pela.html",
+      "skipNote": "A 2009 blog post from a Brazilian dance company (Ginga Cia de Dança) responding to a question raised by a reader named Júlia. Predates the show entirely and is unrelated. Surfaced via the broad ES Exa query. Title/blog identity names a specific different, unrelated topic, satisfying the LEMA-12648 no-fetch carve-out.",
+      "firstSeen": "2026-10-17T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T22:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "history": [
+        {
+          "attempt": "2026-10-17T22:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12949",
+          "note": "Blog identity and title name a specific different, unrelated topic (a 2009 Brazilian dance company post); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://hecho-enperu.blogspot.com/2009/06/entrevistas-por-lima-gris.html",
+      "skipNote": "A 2009 \"Made in Peru\" blog post about interviews conducted via Lima Gris. Predates the show entirely and is unrelated. Surfaced via the broad ES Exa query. Title/blog identity names a specific different, unrelated topic, satisfying the LEMA-12648 no-fetch carve-out.",
+      "firstSeen": "2026-10-17T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T22:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "history": [
+        {
+          "attempt": "2026-10-17T22:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12949",
+          "note": "Blog identity and title name a specific different, unrelated topic (2009 Peru-focused interviews blog); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://davidlitmark.com/article/apple-tv-press-day-2026-new-shows-movies-and-trailers-revealed",
+      "firstSeen": "2026-10-17T22:10:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T22:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Platform-wide Apple TV Press Day 2026 slate roundup (Lucky, Outcome, Monarch: Legacy of Monsters S2, Cape Fear, Maximum Pleasure Guaranteed, Your Friends & Neighbors S2/S3, Imperfect Women, Humans of Apple TV ad). Headline named no specific subject, so the LEMA-12648 no-fetch carve-out did not apply; body fetch performed (redirects to custommapposter.com/article/apple-tv-press-day-2026-new-shows-movies-and-trailers-revealed/12832) and confirmed zero mentions of Las Azules / Women in Blue.",
+      "history": [
+        {
+          "attempt": "2026-10-17T22:10:00Z",
+          "method": "WebFetch (body fetch; redirected davidlitmark.com -> custommapposter.com)",
+          "status": 200,
+          "issue": "LEMA-12949",
+          "note": "Platform-wide slate headline named no specific subject, required body fetch per LEMA-12648; body confirmed no Las Azules mention."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-17T20:03:00Z"
+  "lastUpdated": "2026-10-17T22:10:00Z"
 }
