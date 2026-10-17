@@ -29992,7 +29992,49 @@
           "note": "Body fetch confirmed article is a Netflix/HBO Max weekend watch-guide with no mention of Las Azules; title was a generic listicle so body fetch was required per LEMA-12648 carve-out."
         }
       ]
+    },
+    {
+      "url": "https://tv.apple.com/cy/show/las-azules/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
+      "firstSeen": "2026-10-17T12:05:58Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T12:05:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipMethod": "body_fetch",
+      "skipNote": "Welsh-locale (cy) Apple TV show landing page for Las Azules / Women in Blue, surfaced via Pass 1 Exa EN query (LEMA-12939, 2026-10-17 12:00Z fire). WebFetch confirmed 200 with the standard show-page template: series synopsis (\"In 1970s Mexico, four women defy ultraconservative norms and join the first female police force...\"), per-episode one-line blurbs, cast list, ratings, content advisories, language/subtitle lists, trailer/clip titles, related-show titles, country selector. This is the same CMS synopsis/metadata template already classified Rule F (editorial_listing_or_database) across other tv.apple.com/{locale}/show/ siblings (e.g. the US landing page, LEMA-9653/LEMA-10217); stripping the metadata table/synopsis-and-episode-blurb block leaves no written journalism about the show. No written editorial content beyond the standard show-page template, so Rule F applies regardless of locale.",
+      "history": [
+        {
+          "attempt": "2026-10-17T12:05:58Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12939",
+          "note": "Confirmed standard Apple TV show-page template (synopsis + per-episode blurbs + metadata); no written editorial content about the show beyond that template. Rule F (editorial_listing_or_database) per LEMA-9927/LEMA-10632 surface-family clarification."
+        }
+      ]
+    },
+    {
+      "url": "https://elpais.com.co/noticias/emmys",
+      "firstSeen": "2026-10-17T12:05:58Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T12:05:58Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "El Pais Cali (Colombia) \"Emmys\" tag/index page, surfaced via Pass 2 general web sweep (LEMA-12939, 2026-10-17 12:00Z fire, broad Emmy-related query). WebFetch confirmed this is a tag/category index listing unrelated Emmy-awards articles (Emmy 2026 winners roundup, The Pitt/Hacks coverage, Sofia Vergara medical emergency and her past Griselda nomination). Neither \"Las Azules\" nor \"Women in Blue\" appears anywhere on the page or in any listed article headline. Off-topic false positive from a broad query match, not a listing of this show's coverage.",
+      "history": [
+        {
+          "attempt": "2026-10-17T12:05:58Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12939",
+          "note": "Body-fetch confirmed: generic Emmys tag/index page, no mention of Las Azules/Women in Blue anywhere on page. Off-topic false positive (Rule G)."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-17T08:05:00Z"
+  "lastUpdated": "2026-10-17T12:05:58Z"
 }
