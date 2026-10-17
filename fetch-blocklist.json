@@ -30181,7 +30181,154 @@
           "note": "Title names an explicitly different, specific topic (generic Apple TV app how-to tutorial), no connection to any show; no-fetch Rule G carve-out applies per LEMA-12648."
         }
       ]
+    },
+    {
+      "url": "https://pcbdisposalinc.com/article/monarch-legacy-of-monsters-season-2-release-date-trailer-breakdown-apple-tv-exclusive",
+      "firstSeen": "2026-10-17T20:03:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T20:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Off-topic: page is about Monarch: Legacy of Monsters (different Apple TV+ show). Headline is entirely about 'Monarch: Legacy of Monsters' Season 2 release date and trailer breakdown; Apple TV+ is the only shared element. No mention of Las Azules / Women in Blue. Surfaced only via the broad EN Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-17T20:03:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12947",
+          "note": "Title names an explicitly different, specific subject (Monarch: Legacy of Monsters (different Apple TV+ show)); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://vogue.globo.com/celebridades/noticia/2026/10/mel-maia-revela-detalhes-de-avenida-brasil-2-e-promete-reviravoltas-publico-vai-ficar-de-queixo-caido.ghtml",
+      "firstSeen": "2026-10-17T20:03:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T20:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Off-topic: page is about Avenida Brasil 2 (different Brazilian telenovela) / actress Mel Maia. Headline names a different telenovela ('Avenida Brasil 2') and actress Mel Maia, with no connection to Las Azules / Women in Blue. Surfaced only via the broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-17T20:03:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12947",
+          "note": "Title names an explicitly different, specific subject (Avenida Brasil 2 (different Brazilian telenovela) / actress Mel Maia); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.cronica.com.ar/diarioshow/diarioshow/farandula/angela-torres-podria-interpretar-a-una-de-las-mejores-cantantes-argentinas-en-una-pelicula-seria-increible/",
+      "firstSeen": "2026-10-17T20:03:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T20:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Off-topic: page is about Angela Torres possibly playing an Argentine singer in an unrelated film. Headline names a different person (Angela Torres) and an unrelated film project (possible biopic role), with no connection to Las Azules / Women in Blue. Surfaced only via the broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-17T20:03:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12947",
+          "note": "Title names an explicitly different, specific subject (Angela Torres possibly playing an Argentine singer in an unrelated film); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://lauracaorsi.blogspot.com/2009/09/aqui-la-gente-vive-tranquila-y-yo-no.html",
+      "firstSeen": "2026-10-17T20:03:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T20:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Off-topic: page is about Laura Caorsi interview on immigration (unrelated 2009 blog post). Headline is a quote from an interview with Laura Caorsi about immigration/emigration, an explicitly different topic with no connection to Las Azules / Women in Blue. Surfaced only via the broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-17T20:03:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12947",
+          "note": "Title names an explicitly different, specific subject (Laura Caorsi interview on immigration (unrelated 2009 blog post)); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://yemasnegras.blogspot.com/2008/09/los-medios-se-hacen-eco.html",
+      "firstSeen": "2026-10-17T20:03:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T20:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Off-topic: page is about Yemas Negras (different, unrelated production/blog subject). Headline names a different, unrelated subject ('Yemas Negras'), with no connection to Las Azules / Women in Blue. Surfaced only via the broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-17T20:03:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12947",
+          "note": "Title names an explicitly different, specific subject (Yemas Negras (different, unrelated production/blog subject)); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://lauracaorsi.blogspot.com/2008/09/el-que-emigra-es-quien-tiene-que-adaptarse-no-al-revez.html",
+      "firstSeen": "2026-10-17T20:03:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T20:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Off-topic: page is about Laura Caorsi interview on immigration (unrelated 2008 blog post). Headline is a quote from an interview with Laura Caorsi about immigration, an explicitly different topic with no connection to Las Azules / Women in Blue. Surfaced only via the broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-17T20:03:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12947",
+          "note": "Title names an explicitly different, specific subject (Laura Caorsi interview on immigration (unrelated 2008 blog post)); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://lauracaorsi.blogspot.com/2007/05/los-inmigrantes-no-padecen-depresin.html",
+      "firstSeen": "2026-10-17T20:03:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T20:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Off-topic: page is about Laura Caorsi interview on immigration (unrelated 2007 blog post). Headline is a quote from an interview with Laura Caorsi about immigration, an explicitly different topic with no connection to Las Azules / Women in Blue. Surfaced only via the broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-17T20:03:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12947",
+          "note": "Title names an explicitly different, specific subject (Laura Caorsi interview on immigration (unrelated 2007 blog post)); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-17T18:04:00Z"
+  "lastUpdated": "2026-10-17T20:03:00Z"
 }
