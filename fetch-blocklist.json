@@ -29803,7 +29803,91 @@
           "note": "Surfaced via Pass 1 Exa broad ES query (semantic drift to an unrelated 2014 blog post). Title names a different, specific subject (an interview with author Marlene Monleon); no-fetch Rule G carve-out applies per LEMA-12648."
         }
       ]
+    },
+    {
+      "url": "https://laopinion.com/videos/macarena-garcia-e-iker-sanchez-revelan-como-se-prepararon-para-timbiriche-la-opinion/",
+      "firstSeen": "2026-10-17T00:04:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T00:04:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article/video is about Macarena Garcia and Iker Sanchez discussing their preparation for a 'Timbiriche' project, an unrelated show, not Las Azules / Women in Blue. Surfaced only via the Exa ES broad query. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-17T00:04:09Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12875",
+          "note": "Title explicitly names a different, specific show ('Timbiriche'); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.infobae.com/mexico/2026/10/16/los-angeles-azules-festejan-50-anos-de-trayectoria-con-conciertos-en-monterrey-y-colaboracion-con-daniela-spalla/",
+      "firstSeen": "2026-10-17T00:04:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T00:04:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article is about 'Los Angeles Azules', a Mexican cumbia band, celebrating their 50th anniversary with concerts and a collaboration with Daniela Spalla; unrelated to the Las Azules / Women in Blue TV series. Surfaced only via the Exa ES broad query (keyword collision on 'azules'). Title names a specific different subject (the band), satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-17T00:04:09Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12875",
+          "note": "Title explicitly names a different, specific subject ('Los Angeles Azules' band, 50th anniversary); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://zonafranca.mx/tendencias/itati-cantoral-reacciona-al-trauma-de-thalia-por-las-telenovelas/",
+      "firstSeen": "2026-10-17T00:04:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T00:04:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article is about Itati Cantoral reacting to comments by Thalia about trauma from telenovelas; unrelated to Las Azules / Women in Blue. Surfaced only via the Exa ES broad query. Title names specific different people/topic, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-17T00:04:09Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12875",
+          "note": "Title explicitly names different, specific subjects (Itati Cantoral, Thalia, telenovelas generally); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.presspassla.com/all-the-shows-renewed-for-season-2-scrubs-neagley-imperfect-women-and-more/",
+      "firstSeen": "2026-10-17T00:04:09Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-17T00:04:09Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Body-fetch confirmed (WebFetch, 2026-10-17): article covers season-2 renewals for Anna Pigeon (USA Network), Imperfect Women (Apple TV), A Different World (Netflix), Neagley (Prime Video), The Beast in Me (Netflix), Crew Girl (Netflix), Elle (Prime Video), Scrubs (ABC), and All's Fair (Hulu). Does not mention Las Azules / Women in Blue anywhere in the body. Headline is a listicle ('...and more') naming no single subject, so the LEMA-12648 no-fetch carve-out did not apply and a body fetch was required before this Rule G call.",
+      "history": [
+        {
+          "attempt": "2026-10-17T00:04:09Z",
+          "method": "WebFetch (body fetch required: listicle headline, no-fetch carve-out does not apply)",
+          "status": 200,
+          "issue": "LEMA-12875",
+          "note": "Confirmed via body fetch that the article covers a different set of shows and never mentions Las Azules / Women in Blue."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-16T22:05:34Z"
+  "lastUpdated": "2026-10-17T00:04:09Z"
 }
