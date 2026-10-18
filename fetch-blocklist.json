@@ -30496,7 +30496,196 @@
           "note": "Surfaced via Pass 3 (DE market Exa query). Body fetch confirmed database/listing page per Rule F; no critic attribution present to mine."
         }
       ]
+    },
+    {
+      "url": "https://elretironigran.com/article/widow-s-bay-season-2-release-date-everything-we-know-so-far",
+      "firstSeen": "2026-10-18T06:00:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-18T06:00:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article is about \"Widow's Bay\" Season 2, an unrelated series, not Las Azules / Women in Blue. Surfaced only via the Pass 1 broad EN Exa query. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-18T06:00:51Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12971",
+          "note": "Title explicitly names a different, specific show (\"Widow's Bay\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://ny.gn.fosun.com/apple-tvs-hottest-new-series-whats-brewing-in-the-innovation-vortex",
+      "firstSeen": "2026-10-18T06:00:51Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T06:00:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Promotional piece about unrelated, fictional upcoming Apple TV titles (Chrono Shift, Neural Echos, Iron Horizon, Silent Spaces). Does not mention Las Azules or Women in Blue anywhere in the body. Title named no specific subject, so the no-fetch carve-out did not apply; body fetch performed per LEMA-12648.",
+      "history": [
+        {
+          "attempt": "2026-10-18T06:00:51Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12971",
+          "note": "Body fetch confirmed the article covers unrelated fictional Apple TV titles, no mention of Las Azules."
+        }
+      ]
+    },
+    {
+      "url": "http://mauhenaoserbia.blogspot.com/2012/11/entrevista-tamoencine.html",
+      "firstSeen": "2026-10-18T06:00:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-18T06:00:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2012 blog post titled \"Entrevista #TamoEnCine\" about Mauricio Henao Serbia, a named individual with no connection to Las Azules / Women in Blue. Surfaced only via the Pass 1 broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T06:00:51Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12971",
+          "note": "Title names a different, specific person unconnected to the show; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://rebeldesbrprasempre.blogspot.com/2012/03/video-carla-diaz-falando-sobre-2.html",
+      "firstSeen": "2026-10-18T06:00:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-18T06:00:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2012 blog post about Carla Diaz discussing a second season of the Brazilian show \"Rebelde\", an unrelated telenovela. Surfaced only via the Pass 1 broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T06:00:51Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12971",
+          "note": "Title names a different, specific show (\"Rebelde\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://chinanexttopmodel.blogspot.com/2011/08/mxntm-ciclo-2-episodio-1-ser-una-top.html",
+      "firstSeen": "2026-10-18T06:00:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-18T06:00:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2011 blog post about \"China's Next Top Model\" Cycle 2 Episode 1, an unrelated reality show, not Las Azules. Surfaced only via the Pass 1 broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T06:00:51Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12971",
+          "note": "Title names a different, specific show (\"China's Next Top Model\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://telefenow.blogspot.com/2015/08/elegidos-ya-graba-su-segunda-temporada.html",
+      "firstSeen": "2026-10-18T06:00:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-18T06:00:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2015 blog post about the Argentine Telefe show \"Elegidos\" starting production on its second season, an unrelated show, not Las Azules. Surfaced only via the Pass 1 broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T06:00:51Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12971",
+          "note": "Title names a different, specific show (\"Elegidos\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://hechoencalifornia1010.com/tinet-rubira",
+      "firstSeen": "2026-10-18T06:00:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-18T06:00:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Profile page about Tinet Rubira, a named radio/media personality with no connection to Las Azules / Women in Blue. Surfaced only via the Pass 1 broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T06:00:51Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12971",
+          "note": "Title names a different, specific person unconnected to the show; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "http://bellesgloriesosona.blogspot.com/2013/08/obeses-entrevista-al-via-lliure-de-rac1.html",
+      "firstSeen": "2026-10-18T06:00:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-18T06:00:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2013 blog post about the Catalan radio program \"Via Lliure\" (RAC1) interviewing about the play \"Obeses\", unrelated to Las Azules. Surfaced only via the Pass 1 broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T06:00:51Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12971",
+          "note": "Title names a different, specific topic (\"Obeses\"/\"Via Lliure\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://lavanguardia.com/gente/20261018/11648899/maria-morales-actriz-bola-negra-dar-hecho-han-conquistado-derechos-me-parece-peligroso.html",
+      "firstSeen": "2026-10-18T06:00:51Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-18T06:00:51Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "La Vanguardia interview with Maria Morales, an actress from the unrelated Spanish series \"La bola negra\", not Las Azules. Surfaced only via the Pass 1 broad ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T06:00:51Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-12971",
+          "note": "Title names a different, specific show (\"La bola negra\") and person; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-18T00:03:00Z"
+  "lastUpdated": "2026-10-18T06:03:00Z"
 }
