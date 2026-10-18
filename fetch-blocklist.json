@@ -30789,7 +30789,217 @@
           "note": "WebFetch failed (host fetch error); Tavily Extract advanced succeeded and confirmed no mention of Las Azules / Women in Blue; article is about actress of La Virgen de la Tosquera."
         }
       ]
+    },
+    {
+      "url": "https://www.bild.de/leben-wissen/digital/diese-filme-und-serien-sind-neu-bei-apple-tv-im-november-6ad0df27199dc15f1abd518c",
+      "firstSeen": "2026-10-18T16:06:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T16:06:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "BILD.de \"new on Apple TV in November 2026\" roundup; Tavily Extract confirms the body names only \"Being Heumann,\" \"Warrior Kid,\" and \"12 12 12.\" No mention of Las Azules/Women in Blue anywhere. Headline named no specific subject (platform-wide slate article), so body fetch was required per the LEMA-12648 carve-out. Surfaced via Pass 1 Exa EN query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T16:06:24Z",
+          "method": "Tavily Extract (WebFetch failed to retrieve bild.de)",
+          "status": 200,
+          "issue": "LEMA-13027",
+          "note": "Confirmed off-topic platform slate article; no mention of Las Azules/Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://collider.com/slow-horses-apple-tv-streaming-streak-october-2026/",
+      "firstSeen": "2026-10-18T16:06:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T16:06:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Collider article confirmed via WebFetch to be entirely about \"Slow Horses\" (Apple TV spy series, season 6), unrelated to Las Azules/Women in Blue. Headline (\"Apple TV's Near-Perfect Spy Series...\") did not name the show explicitly, so body fetch was required. Surfaced via Pass 1 Exa EN query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T16:06:24Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-13027",
+          "note": "Confirmed off-topic; article is about Slow Horses."
+        }
+      ]
+    },
+    {
+      "url": "http://archivobdh.blogspot.com/2008/02/gordita-y-calientita.html",
+      "firstSeen": "2026-10-18T16:06:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T16:06:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "2008 blog post (\"El Archivo de Besos de Hetaira\") about Puerto Rican sexologist Alessandra Rampolla's talk show; confirmed via WebFetch, no connection to Las Azules/Women in Blue. Headline (\"Gordita y Calientita\") named no specific subject, so body fetch was required. Surfaced via Pass 1 Exa ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T16:06:24Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-13027",
+          "note": "Confirmed off-topic; post is about Alessandra Rampolla, unrelated."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/pt/serie/last-seen/temporada-1",
+      "firstSeen": "2026-10-18T16:06:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T16:06:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "JustWatch Portugal page for \"Last Seen: Desaparecida\" Season 1, an unrelated series. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out. Surfaced via Pass 1 Exa EN query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T16:06:24Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13027",
+          "note": "Title explicitly names a different, specific show (\"Last Seen\"); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "https://eldia.com.do/ingrid-gomez-presenta-la-segunda-temporada-de-dominicanas-que-inspiran/",
+      "firstSeen": "2026-10-18T16:06:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T16:06:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "El Dia (Dominican Republic) piece about season 2 of \"Dominicanas que Inspiran,\" an unrelated show. Title names the specific different show. Surfaced via Pass 1 Exa ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T16:06:24Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13027",
+          "note": "Title explicitly names a different, specific show (\"Dominicanas que Inspiran\"); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "http://www.helfimed.com/2009/09/entrevista-talentos-de-bruma.html",
+      "firstSeen": "2026-10-18T16:06:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T16:06:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2009 blog interview titled \"Talentos de Bruma,\" an unrelated production. Title names the specific different subject. Surfaced via Pass 1 Exa ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T16:06:24Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13027",
+          "note": "Title explicitly names a different, specific subject (\"Talentos de Bruma\"); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "http://afterschool-are-playg.blogspot.com/2012/05/foto-hellovenus-d2-primera-entrevista.html",
+      "firstSeen": "2026-10-18T16:06:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T16:06:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2012 K-pop fan blog post about girl group HelloVenus D2, unrelated to Las Azules. Title names the specific different subject. Surfaced via Pass 1 Exa ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T16:06:24Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13027",
+          "note": "Title explicitly names a different, specific subject (\"HelloVenus D2\"); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "http://anemalamola.blogspot.com/2014/02/cuerdas.html",
+      "firstSeen": "2026-10-18T16:06:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T16:06:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Catalan personal blog post titled \"Cuerdas\" (referring to the unrelated 2013 animated short film of that name), unrelated to Las Azules. Title names the specific different subject. Surfaced via Pass 1 Exa ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T16:06:24Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13027",
+          "note": "Title explicitly names a different, specific subject (\"Cuerdas\"); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "https://titoballesteros.blogspot.com/2017/04/la-radio-musical-radio-en-crisis-ii.html",
+      "firstSeen": "2026-10-18T16:06:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T16:06:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Blog post about the radio industry (\"La radio musical. ¿Radio en crisis? (II)\"), an unrelated topic. Title names the specific different topic. Surfaced via Pass 1 Exa ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T16:06:24Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13027",
+          "note": "Title explicitly names a different, specific topic (radio industry); no-fetch Rule G carve-out applies."
+        }
+      ]
+    },
+    {
+      "url": "http://portaldafofoca24h.blogspot.com/2013/03/val-marchiori-diz-que-nao-precisa-da.html",
+      "firstSeen": "2026-10-18T16:06:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T16:06:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2013 Brazilian gossip post about Val Marchiori and the unrelated show \"Mulheres Ricas,\" unrelated to Las Azules. Title names a specific different person/show. Surfaced via Pass 1 Exa ES query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T16:06:24Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13027",
+          "note": "Title explicitly names a different, specific person/show (\"Val Marchiori\" / \"Mulheres Ricas\"); no-fetch Rule G carve-out applies."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-18T10:00:53Z"
+  "lastUpdated": "2026-10-18T16:06:24Z"
 }
