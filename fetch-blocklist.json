@@ -30999,7 +30999,56 @@
           "note": "Title explicitly names a different, specific person/show (\"Val Marchiori\" / \"Mulheres Ricas\"); no-fetch Rule G carve-out applies."
         }
       ]
+    },
+    {
+      "url": "https://www.threads.com/@_kikifloresm/post/Deo_qZWoDWu/las-azules-temporada-episodio-minuto-en-adelante-es-todo-lo-que-esta-bien/",
+      "firstSeen": "2026-10-18T20:05:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T20:05:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "Threads post by @_kikifloresm recommending a moment (minute 34) from Season 1 Episode 5 of Las Azules, with heart/crying emojis. On-topic (names the show, discusses a specific episode) but WebFetch returned only a relative timestamp (\"4h\") with no absolute date, no bio, and no visible JSON-LD/meta date field; a follow-up Tavily Extract (advanced depth) returned no content at all. Both fetch methods exhausted per Rule A with no recoverable publish date. Account's profile carried no bio/follower info, so Rule B's commentator-vs-fandom test (LEMA-12888) could not be affirmatively settled either way from the profile alone; moot here since Rule A's undateable bar independently blocks inclusion regardless of the Rule B outcome. Skipped as editorial_undateable, reviewable=true so this stays listable for a future manual date lookup.",
+      "history": [
+        {
+          "attempt": "2026-10-18T20:05:06Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-13030",
+          "note": "Real post content returned (recommends S1E5 minute 34) but only a relative \"4h\" timestamp, no absolute date."
+        },
+        {
+          "attempt": "2026-10-18T20:05:06Z",
+          "method": "Tavily Extract (advanced)",
+          "status": null,
+          "issue": "LEMA-13030",
+          "note": "Returned no content/results for this URL. Documented exhaustion of method per Rule A."
+        }
+      ]
+    },
+    {
+      "url": "https://www.justwatch.com/mx/serie/daria",
+      "firstSeen": "2026-10-18T20:05:06Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T20:05:06Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "JustWatch Mexico streaming-availability page for the unrelated series \"Daría\", not Las Azules / Women in Blue. Surfaced only via the broad EN Exa query (\"Las Azules Women in Blue Season 2 Apple TV\"). Title explicitly names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-18T20:05:06Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13030",
+          "note": "Title explicitly names a different, specific show (\"Daría\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-18T16:06:24Z"
+  "lastUpdated": "2026-10-18T20:05:06Z"
 }
