@@ -30685,7 +30685,69 @@
           "note": "Title names a different, specific show (\"La bola negra\") and person; no-fetch Rule G carve-out applies per LEMA-12648."
         }
       ]
+    },
+    {
+      "url": "https://de.headtopics.com/news/where-s-wanda-das-erste-deutsche-apple-original-geht-in-88928848",
+      "firstSeen": "2026-10-18T08:05:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T08:05:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Headline announces a new season of a different Apple Original series, 'Where's Wanda?' (Apple's first German-language original), not Las Azules. No connection to this show anywhere in the title/snippet. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-18T08:05:40Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-12975",
+          "note": "Title explicitly names a different, specific show (\"Where's Wanda?\"); no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.com/es-es/news/ni66039505",
+      "firstSeen": "2026-10-18T08:05:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T08:05:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "Spanish-locale (/es-es/) address for the same IMDb news story already tracked in data.json at the canonical https://www.imdb.com/news/ni66039505/ (identical numeric story ID ni66039505, \"Will 'Las Azules' Return for a Season 3\"). This is the documented locale-path normalization gap (an /es-es/ variant does not collapse to the same key as its non-locale counterpart), confirmed manually by matching the story ID rather than by the normalize key. Rule I second address, not a distinct document.",
+      "history": [
+        {
+          "attempt": "2026-10-18T08:05:40Z",
+          "method": "manual ID match (locale-path normalization gap)",
+          "status": 200,
+          "issue": "LEMA-12975",
+          "note": "Same story ID (ni66039505) as an existing data.json row under the non-locale URL; excluded as redundant, not a fetch failure."
+        }
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/reel/Demt55XJEFh",
+      "firstSeen": "2026-10-18T08:05:40Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T08:05:40Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Instagram reel by @juanfrank24 about the Dominican baseball team Tigres del Licey and its LIDOM fans; 'azules' refers to the team's blue colors, not the show. No mention of Las Azules, Women in Blue, or Apple TV anywhere in the post. Surfaced only via a broad 'azules' keyword search.",
+      "history": [
+        {
+          "attempt": "2026-10-18T08:05:40Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-12975",
+          "note": "Body fetch confirmed the post covers Dominican baseball (Tigres del Licey / LIDOM), no mention of Las Azules."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-18T06:03:00Z"
+  "lastUpdated": "2026-10-18T08:05:40Z"
 }
