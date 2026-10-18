@@ -31048,7 +31048,133 @@
           "note": "Title explicitly names a different, specific show (\"Daría\"); no-fetch Rule G carve-out applies per LEMA-12648."
         }
       ]
+    },
+    {
+      "url": "https://prensaxtremard.com/entertainmento/ingrid-gomez-presenta-la-segunda-temporada",
+      "firstSeen": "2026-10-18T22:00:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T22:00:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article is about Ingrid Gomez (Dominican entertainment personality) presenting a second season of her own project, not Las Azules / Women in Blue. Surfaced only via the broad ES Exa query (\"Barbara Mori entrevista Las Azules temporada 2\"). Title names a specific different person, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-18T22:00:47Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13032",
+          "note": "Rule G no-fetch carve-out applies: title/snippet affirmatively names a different, specific subject."
+        }
+      ]
+    },
+    {
+      "url": "https://elnacional.com.do/fama-y-vida/ingrid-gomez-regresa-12-historias-mujeres-dominicanas-dejan-huella_583788.html",
+      "firstSeen": "2026-10-18T22:00:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T22:00:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article is about Ingrid Gomez returning with '12 historias de mujeres dominicanas', not Las Azules / Women in Blue. Surfaced only via the broad ES Exa query. Title names a specific different person, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-18T22:00:47Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13032",
+          "note": "Rule G no-fetch carve-out applies: title/snippet affirmatively names a different, specific subject."
+        }
+      ]
+    },
+    {
+      "url": "https://titoballesteros.blogspot.com/2016/05/una-entrevista-diferente-entremixta.html",
+      "firstSeen": "2026-10-18T22:00:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T22:00:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2016 personal blog post about the unrelated radio program 'Entremixta', not Las Azules / Women in Blue. Surfaced only via the broad ES Exa query. Title names a specific different, unrelated subject, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-18T22:00:47Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13032",
+          "note": "Rule G no-fetch carve-out applies: title/snippet affirmatively names a different, specific subject."
+        }
+      ]
+    },
+    {
+      "url": "http://programalegendarios.blogspot.com/2013/01/legendarios-forever-debora-albuquerque.html",
+      "firstSeen": "2026-10-18T22:00:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T22:00:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2013 personal blog post about Debora Albuquerque, not Las Azules / Women in Blue. Surfaced only via the broad ES Exa query. Title names a specific different person, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-18T22:00:47Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13032",
+          "note": "Rule G no-fetch carve-out applies: title/snippet affirmatively names a different, specific subject."
+        }
+      ]
+    },
+    {
+      "url": "https://elmundo.es/papel/2026/10/18/6ad0dbdde85ecec27e8b45b2.html",
+      "firstSeen": "2026-10-18T22:00:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T22:00:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "El Mundo interview with actor Luis Merlo about the unrelated Spanish sitcom 'Aqui no hay quien viva', not Las Azules / Women in Blue. Surfaced only via the broad ES Exa query. Title names specific different people/show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-18T22:00:47Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13032",
+          "note": "Rule G no-fetch carve-out applies: title/snippet affirmatively names a different, specific subject."
+        }
+      ]
+    },
+    {
+      "url": "http://larepublicasb.blogspot.com/2017/04/lentrevista-sittar-green-020317.html",
+      "firstSeen": "2026-10-18T22:00:47Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T22:00:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2017 local-club blog post interviewing 'Sittar Green', not Las Azules / Women in Blue. Surfaced only via the broad ES Exa query. Title names a specific different person, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-18T22:00:47Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": 200,
+          "issue": "LEMA-13032",
+          "note": "Rule G no-fetch carve-out applies: title/snippet affirmatively names a different, specific subject."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-18T20:05:06Z"
+  "lastUpdated": "2026-10-18T22:00:47Z"
 }
