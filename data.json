@@ -1,5 +1,29 @@
 [
   {
+    "outlet": "Józsefváros Újság",
+    "headline": "Nők, legendák és szörnyetegek",
+    "url": "https://jozsefvarosujsag.hu/nok-legendak-es-szornyetegek/",
+    "date": "Oct 17, 2026",
+    "ts": 20261017,
+    "dateSource": "jsonld_datepublished",
+    "lang": "HU",
+    "market": "International",
+    "type": "Review",
+    "excerpt": "Hungarian district newspaper's culture recommendations roundup rates three picks: Kekek (Las Azules) on Apple TV, actor Cserhalmi Gyorgy's autobiographical stage show Szekfoglalo, and the Resident Evil film A kaptar (2026). Praises Las Azules for not resembling Hungarian telenovelas; rates it 5/5, the highest of the three."
+  },
+  {
+    "outlet": "psicologadepelicula (Instagram)",
+    "headline": "Final de temporada: Las azules",
+    "url": "https://www.instagram.com/reel/Denjx65MJlo/",
+    "date": "Oct 17, 2026",
+    "ts": 20261017,
+    "dateSource": "visible_dateline",
+    "lang": "ES",
+    "market": "International",
+    "type": "Social",
+    "excerpt": "Instagram reel from film/series analysis-and-review account psicologadepelicula (Nancy Jimenez, 26K IG followers, +40K TikTok, independent entertainment-commentary brand) marking the Las Azules season finale: \"Final de temporada: Las azules.\" Tagged #LasAzules #Series #AppleTV."
+  },
+  {
     "outlet": "Kinótico",
     "headline": "Los PRODU 2026 anuncian sus finalistas, con una abundante presencia de la ficción española",
     "url": "https://kinotico.es/actualidad/2026-10-14/los-premios-produ-anuncian-los-finalistas-para-la-edicion-2026-con-fuerte-presencia-de-la-ficcion-espanola",
