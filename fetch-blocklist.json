@@ -30475,7 +30475,28 @@
           "note": "Platform-wide slate headline named no specific subject, required body fetch per LEMA-12648; body confirmed no Las Azules mention."
         }
       ]
+    },
+    {
+      "url": "https://moviepilot.de/serie/las-azules/staffel/2",
+      "firstSeen": "2026-10-18T00:03:00Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T00:03:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipMethod": "body_fetch",
+      "skipNote": "Moviepilot.de season-2 overview page (Staffel 2 tab): air-date/genre metadata block, an 8-entry episode guide with templated one-line descriptions, and a short generic synopsis (premiere date, serial-killer case tied to 1968 Tlatelolco massacre). No staff-written review or article prose. Kommentare (comments) tab checked and carries no visible user or critic reviews, so no Rule H mining duty attaches (LEMA-10458 extension). Strip the metadata/episode grid and nothing written about the show remains: Rule F (LEMA-9927), same family as the already-ledgered rottentomatoes.com s01/s02 and tv.apple.com/apple.com show-page rows.",
+      "history": [
+        {
+          "attempt": "2026-10-18T00:03:00Z",
+          "method": "WebFetch body fetch",
+          "status": 200,
+          "issue": "LEMA-12951",
+          "note": "Surfaced via Pass 3 (DE market Exa query). Body fetch confirmed database/listing page per Rule F; no critic attribution present to mine."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-17T22:10:00Z"
+  "lastUpdated": "2026-10-18T00:03:00Z"
 }
