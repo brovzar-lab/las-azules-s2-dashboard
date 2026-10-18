@@ -30747,7 +30747,49 @@
           "note": "Body fetch confirmed the post covers Dominican baseball (Tigres del Licey / LIDOM), no mention of Las Azules."
         }
       ]
+    },
+    {
+      "url": "https://gameblog.fr/geek/ed/news/apple-tv-sorties-confirmees-novembre-2026-724901",
+      "firstSeen": "2026-10-18T10:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T10:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "Gameblog.fr (French) monthly preview of Apple TV's confirmed November 2026 releases: Being Heumann, Warrior Kid, Stick Season 2, Awkwafina: la cheffe improbable, and 12 12 12. No mention of Las Azules / Women in Blue anywhere in the body; surfaced only as a broad-query match on generic Apple TV release terms.",
+      "history": [
+        {
+          "attempt": "2026-10-18T10:00:53Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-13018",
+          "note": "WebFetch succeeded; body fetch confirmed no mention of Las Azules / Women in Blue; article covers unrelated Apple TV November 2026 slate."
+        }
+      ]
+    },
+    {
+      "url": "https://tn.com.ar/show/famosos/2026/10/18/es-bailarina-llego-al-cine-casi-por-casualidad-y-protagonizo-una-pelicula-candidata-al-oscar-se-me-abrio-una-puerta-hermosa",
+      "firstSeen": "2026-10-18T10:00:53Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-18T10:00:53Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "TN.com.ar (Argentina) profile of an unnamed dancer-turned-actress who starred in \"La Virgen de la Tosquera\", Argentina's Oscar submission. No mention of Las Azules, Women in Blue, or any cast member anywhere in the body; surfaced only as a broad-query match via the ES Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-18T10:00:53Z",
+          "method": "Tavily Extract (advanced; WebFetch failed to fetch from this host)",
+          "status": 200,
+          "issue": "LEMA-13018",
+          "note": "WebFetch failed (host fetch error); Tavily Extract advanced succeeded and confirmed no mention of Las Azules / Women in Blue; article is about actress of La Virgen de la Tosquera."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-18T08:05:40Z"
+  "lastUpdated": "2026-10-18T10:00:53Z"
 }
