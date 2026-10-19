@@ -399,16 +399,48 @@ function rowHasFetchEvidenceInHistory(history) {
 // concrete alternative subject.
 const SHOW_NAME_PATTERN = /las\s+azules/gi;
 
+// Role/category nouns that, across this ledger's real skipNote population,
+// routinely introduce the named alternative subject one or two words later
+// ("singer Amaia", "band Veintiuno", "actresses from RCTV", "series A la
+// deriva"). Closed, curated list (not "any noun") so it doesn't swallow
+// unrelated capitalized words -- LEMA-13111.
+const ENTITY_CUE_WORDS = /\b(?:singer|actor|actress|actors|actresses|band|show|series|program|programme|account|platform|team|film|movie|drama|telenovela|novela|novel|album|song|game|app|label|segment|episode|podcast|magazine)\b/gi;
+
+// Connector words that commonly sit inside a multi-word proper noun or
+// title without breaking it ("A la deriva", "Cuna de Lobos", "Los Angeles
+// Azules"). Only one connector allowed between the two capitalized anchors,
+// so this stays a titled-phrase detector, not "any two caps in a sentence".
+const CONNECTOR_WORDS = '(?:de|del|la|las|el|los|von|van|the|of|and|y)';
+
+// A cue-word lookahead stops at the next sentence/clause boundary so it
+// never reaches into the *following* sentence, where an ordinary
+// sentence-initial capital ("No connection...", "Confirmed off-topic...")
+// would otherwise be misread as a named entity.
+const SENTENCE_BOUNDARY = /[.!?;]/;
+
 // Deliberately simple, deliberately errs toward flagging (ticket's explicit
 // instruction): a note is satisfactory only when it names a concrete
-// alternative subject -- a quoted/curly-quoted title, or two-or-more
-// consecutive capitalized words (a person's name, a named program).
-// Requiring 2+ words (not a single capitalized word) is the conservative
-// choice that tunes toward flagging more, not fewer, notes: a single
-// capitalized common word ("Netflix", "Season") proves much less than an
-// actual multi-word name or a quoted title, and the one worked example in
-// the ticket (the Lotus FM row) satisfies this via both a quoted title AND
-// two multi-word proper names.
+// alternative subject -- a quoted/curly-quoted title, two-or-more
+// consecutive capitalized words (a person's name, a named program), a
+// capitalized phrase broken by a single connector word ("A la deriva"), or
+// a capitalized word introduced by a role/category cue word in the same
+// clause ("singer Amaia", "band Veintiuno").
+//
+// LEMA-13111: the original version only checked for quoted titles or 2+
+// *consecutive* capitalized words, which real skipNotes in this ledger
+// routinely don't satisfy -- a single-word proper noun ("Amaia",
+// "Veintiuno", "RCTV") or a Spanish-style title broken by a lowercase
+// article ("A la deriva") both plainly name a concrete subject to a human
+// reader but matched neither original branch. Measured: of the 11 rows
+// `titleOnlySkipSuspects` flagged in the 2026-10-19 run, 8 had a populated
+// top-level skipNote that named a real subject by this plain-language
+// standard, but only 0 of those 8 satisfied the original regex -- the
+// other 3 flagged rows have no top-level skipNote at all (a ledger data
+// gap, not a condition4 bug; out of this check's scope, see LEMA-13111's
+// deliverable). The two new branches below close that gap for the 8
+// genuine false positives without widening the check enough to also pass
+// rows that only gesture at being "about" a vague, unnamed topic (verified
+// against the full fetch-blocklist.json population -- see deliverable).
 function hasConcreteAlternativeSubject(skipNote) {
   if (typeof skipNote !== 'string' || !skipNote.trim()) return false;
   const quotedTitle = /["“]([^"”]{2,})["”]|'([^']{2,})'/.test(skipNote);
@@ -420,7 +452,26 @@ function hasConcreteAlternativeSubject(skipNote) {
   // lead character as a plain ASCII one. An ASCII-only check silently
   // missed real named alternatives in this population.
   const properNounSequences = withoutShowName.match(/\b\p{Lu}[\p{L}'-]*(?:\s+\p{Lu}[\p{L}'-]*)+\b/gu) || [];
-  return properNounSequences.length > 0;
+  if (properNounSequences.length > 0) return true;
+
+  // No 'i' flag here: in JS, case-insensitive mode case-folds \p{Lu} too,
+  // turning "uppercase letter" into "any letter" and silently matching
+  // lowercase anchors. Connector words are closed-class function words
+  // that only occur lowercase in this prose, so case-insensitivity isn't
+  // needed on this branch, and adding it would reintroduce that bug.
+  const connectedPhrase = new RegExp(`\\b\\p{Lu}[\\p{L}'-]*\\s+${CONNECTOR_WORDS}\\s+\\p{Lu}[\\p{L}'-]*\\b`, 'gu');
+  if (connectedPhrase.test(withoutShowName)) return true;
+
+  ENTITY_CUE_WORDS.lastIndex = 0;
+  let cueMatch;
+  while ((cueMatch = ENTITY_CUE_WORDS.exec(withoutShowName)) !== null) {
+    const rest = withoutShowName.slice(cueMatch.index + cueMatch[0].length);
+    const boundaryIdx = rest.search(SENTENCE_BOUNDARY);
+    const clause = boundaryIdx === -1 ? rest : rest.slice(0, boundaryIdx);
+    if (/\b\p{Lu}[\p{L}'-]*\b/u.test(clause)) return true;
+  }
+
+  return false;
 }
 
 // Flags a ledger row when ALL of: (1) permanentSkip true, (2) skipReason is
