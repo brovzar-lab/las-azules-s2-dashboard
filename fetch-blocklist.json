@@ -22446,10 +22446,10 @@
     {
       "url": "https://forums.imore.com/imore-com-news-discussion-contests/454101-apple-announces-new-spanish-crime-drama-las-azules-tv-plus-print.html",
       "firstSeen": "2026-10-08T20:08:39Z",
-      "failCount": 2,
+      "failCount": 3,
       "lastStatus": 301,
-      "lastAttempt": "2026-10-12T02:05:57Z",
-      "cooldownUntil": null,
+      "lastAttempt": "2026-10-19T04:04:18Z",
+      "cooldownUntil": "2026-11-18T04:04:18Z",
       "permanentSkip": false,
       "history": [
         {
@@ -22479,6 +22479,20 @@
           "status": 200,
           "issue": "LEMA-12415",
           "note": "Returned only iMore site navigation/boilerplate ('iMore - Apple News, Reviews, Deals, & Help'), no forum thread text, no mention of Las Azules."
+        },
+        {
+          "attempt": "2026-10-19T04:04:18Z",
+          "method": "WebFetch",
+          "status": 301,
+          "issue": "LEMA-13045",
+          "note": "Re-attempted per expired-cooldown-retry disposition. Still 301-redirects to the generic iMore homepage (www.imore.com); confirmed again via Tavily Extract (advanced), which returned only site navigation/boilerplate ('iMore - Apple News, Reviews, Deals, & Help'), no forum thread content, no mention of Las Azules. Full-chain failure, consistent with LEMA-12191/LEMA-12415 prior findings. failCount reaches 3 this attempt: 30-day cooldown set."
+        },
+        {
+          "attempt": "2026-10-19T04:04:18Z",
+          "method": "Tavily Extract (advanced)",
+          "status": 200,
+          "issue": "LEMA-13045",
+          "note": "Returned only iMore site navigation/boilerplate, no forum thread text, no mention of Las Azules."
         }
       ]
     },
@@ -31244,7 +31258,168 @@
       "firstSeen": "2026-10-19T00:07:38Z",
       "lastAttempt": "2026-10-19T00:07:38Z",
       "lastStatus": 200
+    },
+    {
+      "url": "https://hotnamelist.com/article/widow-s-bay-season-2-all-the-latest-updates-and-release-date-speculations",
+      "firstSeen": "2026-10-19T04:04:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T04:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced by Pass 1 Exa broad query, 2026-10-19T04:00Z run. Page is about: named different title: \"Widow's Bay Season 2\" updates/release-date speculation, no connection to Las Azules/Women in Blue. Rule G no-fetch carve-out applies: title/snippet names a specific different subject.",
+      "history": [
+        {
+          "attempt": "2026-10-19T04:04:18Z",
+          "method": "title/snippet only (Rule G no-fetch carve-out, LEMA-12648)",
+          "status": null,
+          "issue": "LEMA-13045"
+        }
+      ]
+    },
+    {
+      "url": "https://www.segundabase.com.br/estatisticas/lea-seydoux-nao-tem-medo-depois-de-azul-e-a-cor-mais-quente-entrevista/366188/",
+      "firstSeen": "2026-10-19T04:04:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T04:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced by Pass 1 Exa broad query, 2026-10-19T04:00Z run. Page is about: an interview with actress Lea Seydoux about the 2013 film \"Blue Is the Warmest Colour\" (\"Azul e a cor mais quente\"); named different person and named different title. Rule G no-fetch carve-out applies: title/snippet names a specific different subject.",
+      "history": [
+        {
+          "attempt": "2026-10-19T04:04:18Z",
+          "method": "title/snippet only (Rule G no-fetch carve-out, LEMA-12648)",
+          "status": null,
+          "issue": "LEMA-13045"
+        }
+      ]
+    },
+    {
+      "url": "https://www.diariodesevilla.es/videos/video-zaguan-carlos-navarro-irene-gomez_8_2008263444.html",
+      "firstSeen": "2026-10-19T04:04:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T04:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced by Pass 1 Exa broad query, 2026-10-19T04:00Z run. Page is about: a video segment of the Spanish talk show \"El Zaguan\" featuring Carlos Navarro and Irene Gomez-Calado; named different show and named people, no connection to Las Azules. Rule G no-fetch carve-out applies: title/snippet names a specific different subject.",
+      "history": [
+        {
+          "attempt": "2026-10-19T04:04:18Z",
+          "method": "title/snippet only (Rule G no-fetch carve-out, LEMA-12648)",
+          "status": null,
+          "issue": "LEMA-13045"
+        }
+      ]
+    },
+    {
+      "url": "http://chonmuamaylanh.blogspot.com/2018/02/entrevistamos-el-reino-infantil-el.html",
+      "firstSeen": "2026-10-19T04:04:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T04:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced by Pass 1 Exa broad query, 2026-10-19T04:00Z run. Page is about: a 2018 Vietnamese-language blog post interviewing the YouTube channel \"El Reino Infantil\"; named different subject, no connection to Las Azules. Rule G no-fetch carve-out applies: title/snippet names a specific different subject.",
+      "history": [
+        {
+          "attempt": "2026-10-19T04:04:18Z",
+          "method": "title/snippet only (Rule G no-fetch carve-out, LEMA-12648)",
+          "status": null,
+          "issue": "LEMA-13045"
+        }
+      ]
+    },
+    {
+      "url": "http://publicarteblog.blogspot.com/2010/08/mariam-krasner.html",
+      "firstSeen": "2026-10-19T04:04:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T04:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced by Pass 1 Exa broad query, 2026-10-19T04:00Z run. Page is about: a 2010 blog post about artist Mariam Krasner; named different person, no connection to Las Azules. Rule G no-fetch carve-out applies: title/snippet names a specific different subject.",
+      "history": [
+        {
+          "attempt": "2026-10-19T04:04:18Z",
+          "method": "title/snippet only (Rule G no-fetch carve-out, LEMA-12648)",
+          "status": null,
+          "issue": "LEMA-13045"
+        }
+      ]
+    },
+    {
+      "url": "http://coneixentlajulia.blogspot.com/2018/02/txell-bonet.html",
+      "firstSeen": "2026-10-19T04:04:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T04:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced by Pass 1 Exa broad query, 2026-10-19T04:00Z run. Page is about: a 2018 Catalan-language blog post about Txell Bonet; named different person, no connection to Las Azules. Rule G no-fetch carve-out applies: title/snippet names a specific different subject.",
+      "history": [
+        {
+          "attempt": "2026-10-19T04:04:18Z",
+          "method": "title/snippet only (Rule G no-fetch carve-out, LEMA-12648)",
+          "status": null,
+          "issue": "LEMA-13045"
+        }
+      ]
+    },
+    {
+      "url": "https://www.vanitatis.elconfidencial.com/casas-reales/2026-10-19/hablamos-con-anne-dorleans-pinturas-vida-ser-princesa-no-se-elige_4446352/",
+      "firstSeen": "2026-10-19T04:04:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T04:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced by Pass 1 Exa broad query, 2026-10-19T04:00Z run. Page is about: an interview with Anne d'Orleans, aunt of King Felipe of Spain, about her painting and royal life; named different person and topic, no connection to Las Azules. Rule G no-fetch carve-out applies: title/snippet names a specific different subject.",
+      "history": [
+        {
+          "attempt": "2026-10-19T04:04:18Z",
+          "method": "title/snippet only (Rule G no-fetch carve-out, LEMA-12648)",
+          "status": null,
+          "issue": "LEMA-13045"
+        }
+      ]
+    },
+    {
+      "url": "https://seniorstoday.in/?p=65474",
+      "firstSeen": "2026-10-19T04:04:18Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T04:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipMethod": "body_fetch",
+      "skipNote": "WordPress ?p=65474 ID-permalink (looksLikeIdPermalink flag) resolved via curl -L to https://seniorstoday.in/entertainment/entertainment-review/entertainment-review-women-in-blue (200), which is already in data.json (ts=20240802, outlet=\"Senior Today\"). Second address for an already-tracked document per Rule I/step 4a2; no fetch spent on the canonical page.",
+      "history": [
+        {
+          "attempt": "2026-10-19T04:04:18Z",
+          "method": "curl -L redirect resolution",
+          "status": 200,
+          "issue": "LEMA-13045",
+          "note": "Resolved to canonical URL already present in data.json; not a new fetch."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-19T00:07:38Z"
+  "lastUpdated": "2026-10-19T04:04:18Z"
 }
