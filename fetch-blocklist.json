@@ -6267,6 +6267,7 @@
       "lastStatus": 200,
       "lastAttempt": "2026-10-19T08:30:00Z",
       "firstSeen": "2026-09-13T14:01:02Z",
+      "skipNote": "Vanitatis (El Confidencial) piece about singer Ana Torroja reflecting on her early years in the band Mecano. No connection to Las Azules / Women in Blue; surfaced only via Exa Pass 1 ES broad-query match on 'entrevista'/'temporada'. Rule G, reviewable=false.",
       "history": [
         {
           "attempt": "2026-09-13T14:01:02Z",
@@ -6295,6 +6296,7 @@
       "lastStatus": 200,
       "lastAttempt": "2026-10-19T08:30:00Z",
       "firstSeen": "2026-09-13T14:01:02Z",
+      "skipNote": "HeadTopics ES piece about the anniversary of the unrelated Mexican TV series 'Cuentame como paso' and its cast. No connection to Las Azules; surfaced only via Exa Pass 1 ES broad-query match. Rule G, reviewable=false.",
       "history": [
         {
           "attempt": "2026-09-13T14:01:02Z",
@@ -6323,6 +6325,7 @@
       "lastStatus": 200,
       "lastAttempt": "2026-10-19T08:30:00Z",
       "firstSeen": "2026-09-13T14:01:02Z",
+      "skipNote": "X account for 'Unami Futsalfem' (a women's futsal team), handle contains 'azules'. No connection to Las Azules / Women in Blue; surfaced only via Pass 2 #LasAzules broad-query match. Rule G, reviewable=false.",
       "history": [
         {
           "attempt": "2026-09-13T14:01:02Z",
@@ -6351,6 +6354,7 @@
       "lastStatus": 200,
       "lastAttempt": "2026-09-13T14:01:02Z",
       "firstSeen": "2026-09-13T14:01:02Z",
+      "skipNote": "Wikipedia article about Ptazeta, a Spanish rapper (real name Zuleima del Pino Gonzalez). No connection to Las Azules; surfaced only via Pass 2 #LasAzules broad-query match. Rule G, reviewable=false.",
       "history": [
         {
           "attempt": "2026-09-13T14:01:02Z",
@@ -6371,6 +6375,7 @@
       "lastStatus": 200,
       "lastAttempt": "2026-09-13T14:01:02Z",
       "firstSeen": "2026-09-13T14:01:02Z",
+      "skipNote": "Wikipedia article about Polvos Azules, a shopping centre in Lima, Peru. No connection to Las Azules; surfaced only via Pass 2 #LasAzules broad-query match. Rule G, reviewable=false.",
       "history": [
         {
           "attempt": "2026-09-13T14:01:02Z",
