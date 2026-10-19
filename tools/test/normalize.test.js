@@ -675,3 +675,36 @@ test('a path segment that merely contains "amp" mid-word is not folded by the le
   assert.equal(normalizeUrl('https://example.com/campaign-launch/').key, 'example.com/campaign-launch');
   assert.equal(normalizeUrl('https://example.com/amphitheater-tour/').key, 'example.com/amphitheater-tour');
 });
+
+// AMP shape 5 (LEMA-13114): `?amp=1` query-param marker, distinct from the
+// four path/extension shapes above. Dropped via TRACKING_PARAM_NAMES (a
+// generic, name-only deny-list entry), not foldAmpPath, since this shape
+// needs no path rewrite -- removing the param alone yields the canonical
+// key. Live pair: technosports.co.in (El Circulo corpus).
+
+test('AMP shape 5: ?amp=1 query param collapses to the canonical no-query key (technosports.co.in live pair)', () => {
+  const amp = normalizeUrl('https://technosports.co.in/inside-the-circle-netflix-review-a-fast?amp=1');
+  const canonical = normalizeUrl('https://technosports.co.in/inside-the-circle-netflix-review-a-fast');
+  assert.equal(amp.key, canonical.key);
+  assert.equal(amp.url, canonical.url);
+});
+
+test('AMP shape 5: the amp param is dropped regardless of value, same as every other TRACKING_PARAM_NAMES entry', () => {
+  const { key } = normalizeUrl('https://example.com/article?amp=true&id=42');
+  assert.equal(key, 'example.com/article?id=42');
+});
+
+test('AMP shape 5: a bare ?amp (no value) is also dropped', () => {
+  const { key } = normalizeUrl('https://example.com/article?amp&id=42');
+  assert.equal(key, 'example.com/article?id=42');
+});
+
+test('AMP shape 5: an allow-listed host (youtube.com) is unaffected -- its keep-list already excludes amp', () => {
+  const { key } = normalizeUrl('https://www.youtube.com/watch?v=Z9n3TkdcGLY&amp=1');
+  assert.equal(key, 'youtube.com/watch?v=Z9n3TkdcGLY');
+});
+
+test('a query param that merely contains "amp" mid-name is not dropped (name-exact match only)', () => {
+  const { key } = normalizeUrl('https://example.com/article?campaign=launch&ampersand=x');
+  assert.equal(key, 'example.com/article?ampersand=x&campaign=launch');
+});

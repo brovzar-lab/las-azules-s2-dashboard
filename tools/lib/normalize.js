@@ -20,11 +20,30 @@
 // fetch-blocklist.json same-key groups (4 auto-merged on agreeing
 // disposition, 2 escalated as pre-existing disposition conflicts -- see
 // that ticket for the conflict detail and remediation routing).
+//
+// amp added under LEMA-13114: a fifth AMP second-address shape, this one a
+// query param rather than the four path/extension shapes folded by
+// foldAmpPath (LEMA-11953). `?amp=1` (and any other value -- the marker is
+// the param NAME, same as every other entry in this set, not a specific
+// value) is Google's AMP query-string convention: the canonical page is the
+// same URL with the param removed, a web-wide standard rather than one
+// outlet's CMS choice, so it folds globally like hl/lang/locale above
+// rather than being host-scoped like the bollywoodshaadis
+// /amp-articles/ path rename. Surfaced by a one-time `audit` run against
+// El Circulo's live data.json (199 rows)/fetch-blocklist.json (298 rows) on
+// 2026-10-19 (LEMA-13112): exactly one live occurrence in either sweep
+// corpus, technosports.co.in's `?amp=1` second address, already correctly
+// disposed in fetch-blocklist.json as permanentSkip/
+// editorial_redundant_syndication under LEMA-12522 (predates this ticket --
+// no data.json row and no new ledger row were needed here). Las Azules
+// carries zero occurrences as of this same commit; shipped here anyway for
+// normalizer parity, per the standing sweep-rules-land-on-every-sweep
+// ruling (LEMA-12653/LEMA-13105).
 const TRACKING_PARAM_NAMES = new Set([
   'fbclid', 'gclid', 'gclsrc', 'dclid', 'msclkid',
   'mc_cid', 'mc_eid', 'igshid', 'ref', 'ref_src', 'ref_url', 'ref_',
   'spm', 'si', 'cmpid', 'icid', 'srsltid', 'sessionid',
-  'hl', 'lang', 'locale',
+  'hl', 'lang', 'locale', 'amp',
 ]);
 const TRACKING_PARAM_PREFIX = /^utm_/i;
 
