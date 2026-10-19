@@ -31419,7 +31419,70 @@
           "note": "Resolved to canonical URL already present in data.json; not a new fetch."
         }
       ]
+    },
+    {
+      "url": "https://topics.smt.docomo.ne.jp/article/k_tai/trend/k_tai-2149213",
+      "firstSeen": "2026-10-19T06:04:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T06:04:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "NTT Docomo (smt.docomo.ne.jp) Japanese trend article about Apple TV+'s November 2026 lineup of original dramas/films/documentaries (。12 12 12〃, 【ウォリアー・キッド】, 【わたしが人間であるために Being Heumann】, 【スティック】シーズン2, 【シェフ、オークワフィナ】) plus subscription pricing/promo details. Las Azules / Women in Blue is not named anywhere in the article. Surfaced via the broad EN Exa query; required a body fetch under the LEMA-12648 carve-out since the headline named no specific subject (a platform-wide slate article).",
+      "history": [
+        {
+          "attempt": "2026-10-19T06:04:56Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-13051",
+          "note": "Confirmed off-topic: November 2026 Apple TV+ slate roundup naming five other titles, no mention of Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://www.masculin.com/culture/923800-apple-renouvelle-lune-de-ses-meilleures-series-meconnues-pourquoi-il-faut-la-rattraper/",
+      "firstSeen": "2026-10-19T06:04:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T06:04:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "French Masculin.com article (publié le 19 octobre 2026, byline \"Lilian B.\") about \"Plaisir maximum garanti\" (Maximum Pleasure Guaranteed), an unrelated Apple TV comedy-thriller. Las Azules / Women in Blue is not named. Surfaced via the broad EN Exa query; required a body fetch under the LEMA-12648 carve-out since the headline named no specific show (\"one of its best lesser-known series\").",
+      "history": [
+        {
+          "attempt": "2026-10-19T06:04:56Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-13051",
+          "note": "Confirmed off-topic: article is about a different Apple TV series, \"Plaisir maximum garanti\"; no mention of Las Azules / Women in Blue."
+        }
+      ]
+    },
+    {
+      "url": "https://movieplayer.it/serietv/las-azules_8830/",
+      "firstSeen": "2026-10-19T06:04:56Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T06:04:56Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipMethod": "body_fetch",
+      "skipNote": "Movieplayer.it \"Scheda\" (database/catalog) page for Las Azules Season 1: synopsis, cast, streaming availability, rating, and teaser links out to a separate review and news item, but no original editorial prose rendered on this page itself (strip test leaves only a linked-out teaser, nothing original). No article:published_time or JSON-LD datePublished present; only visible date is a 31/07/2024 premiere news blurb.",
+      "history": [
+        {
+          "attempt": "2026-10-19T06:04:56Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-13051",
+          "note": "Rule F: catalog/database record (synopsis, cast, streaming, rating), not an authored article; review and news are linked out, not reproduced."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-19T04:04:18Z"
+  "lastUpdated": "2026-10-19T06:04:56Z"
 }
