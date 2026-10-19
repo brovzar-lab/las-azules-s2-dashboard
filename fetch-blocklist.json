@@ -31174,7 +31174,77 @@
           "note": "Rule G no-fetch carve-out applies: title/snippet affirmatively names a different, specific subject."
         }
       ]
+    },
+    {
+      "url": "http://blueneo.blogspot.com/2009/11/blog-post_21.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "2009 Bulgarian-language blog post ('La Dolce Vita in Blue') about an unrelated interview with an association; no mention of Las Azules or Women in Blue anywhere in the body (confirmed by fetch), predates the show's existence by 15 years. Surfaced only via Exa broad-query keyword overlap on 'blue'.",
+      "firstSeen": "2026-10-19T00:07:38Z",
+      "lastAttempt": "2026-10-19T00:07:38Z",
+      "lastStatus": 200
+    },
+    {
+      "url": "http://heiseipandavn.blogspot.com/2012/02/vietsub-suzuki-airi-hellokids-interview.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "2012 Vietnamese fansub blog post (Heisei Panda Fansub) about a J-pop idol (Suzuki Airi / Hey! Say! JUMP) interview; no mention of Las Azules or Women in Blue anywhere in the body (confirmed by fetch). Surfaced only via Exa broad-query keyword overlap.",
+      "firstSeen": "2026-10-19T00:07:38Z",
+      "lastAttempt": "2026-10-19T00:07:38Z",
+      "lastStatus": 200
+    },
+    {
+      "url": "http://joan-entideponent.blogspot.com/2015/07/maria-del-mar-albajar.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "body_fetch",
+      "skipNote": "2015 Catalan-language blog post about a person named Maria del Mar Albajar, unrelated to the show's cast or crew; no mention of Las Azules or Women in Blue anywhere in the body (confirmed by fetch). Surfaced only via Exa broad-query keyword overlap.",
+      "firstSeen": "2026-10-19T00:07:38Z",
+      "lastAttempt": "2026-10-19T00:07:38Z",
+      "lastStatus": 200
+    },
+    {
+      "url": "https://cartermatt.com/730019/presumed-innocent-season-2-premiere-date-october-2026-update/",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Headline names a different, specific show: 'Presumed Innocent' season 2 premiere date update. No connection to Las Azules / Women in Blue. Affirmative named-different-title signal per the Rule G no-fetch carve-out.",
+      "firstSeen": "2026-10-19T00:07:38Z",
+      "lastAttempt": "2026-10-19T00:07:38Z",
+      "lastStatus": 200
+    },
+    {
+      "url": "https://filmdaily.co/news/where-to-watch-your-friends-and-neighbours-online-today/",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Headline names a different, specific show: 'Your Friends and Neighbours' (where-to-watch piece). No connection to Las Azules / Women in Blue. Affirmative named-different-title signal per the Rule G no-fetch carve-out.",
+      "firstSeen": "2026-10-19T00:07:38Z",
+      "lastAttempt": "2026-10-19T00:07:38Z",
+      "lastStatus": 200
+    },
+    {
+      "url": "https://www.dizibox.live/a-love-other-than-yours-1-sezon-10-bolum-izle/2/",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Headline names a different, specific (Turkish) show: 'A Love Other Than Yours' (Aşk Başkaı), season 1 episode 10. No connection to Las Azules / Women in Blue. Affirmative named-different-title signal per the Rule G no-fetch carve-out.",
+      "firstSeen": "2026-10-19T00:07:38Z",
+      "lastAttempt": "2026-10-19T00:07:38Z",
+      "lastStatus": 200
+    },
+    {
+      "url": "https://www.threads.com/@deandrevidale/post/DepVmyimY5T/los-azules-women-in-blue-on-apple-tv-is-really-just-f-the-police-and-their/",
+      "permanentSkip": true,
+      "skipReason": "editorial_undateable",
+      "reviewable": true,
+      "skipNote": "On-topic personal Threads post reacting to Women in Blue (Las Azules) S2; account @deandrevidale is an individual (Emmy-winning TV/film editor) posting casual personal commentary, not an outlet. Only a relative timestamp ('5h') is visible on the page; no absolute date, article:published_time, JSON-LD datePublished, or platform_api_timestamp-grade value could be recovered via WebFetch or Tavily Extract (advanced). Rule A undateable path applied; reviewable for a future manual date lookup. Note for future reference: whether this account's bio (Emmy-winning TV/film editor, not journalist/critic/academic/official) clears Rule B's affirmative commentator test was not resolved here because the undateable gate controls the outcome regardless; revisit if a sourced date is later found.",
+      "firstSeen": "2026-10-19T00:07:38Z",
+      "lastAttempt": "2026-10-19T00:07:38Z",
+      "lastStatus": 200
     }
   ],
-  "lastUpdated": "2026-10-18T22:00:47Z"
+  "lastUpdated": "2026-10-19T00:07:38Z"
 }
