@@ -32510,7 +32510,154 @@
         }
       ],
       "skipMethod": "body_fetch"
+    },
+    {
+      "url": "http://latinofansbg.blogspot.com/2016/06/blog-post_11.html",
+      "firstSeen": "2026-10-19T22:05:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T22:05:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Latino Fans Bulgaria (Bulgarian-language telenovela fan blog) post dated June 11, 2016, covering Televisa/RCN telenovela casting news (Vino el amor, Sueño de amor, Sala de urgencias, La ley del corazón) and a celebrity separation announcement. No mention of Las Azules / Women in Blue anywhere in the body; predates the show's existence by years. Confirmed via WebFetch body fetch (not title/snippet alone) since the Exa snippet itself named no specific subject.",
+      "history": [
+        {
+          "attempt": "2026-10-19T22:05:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-13194",
+          "note": "Surfaced via Exa Pass 1 (ES query). Body fetch confirms 2016 Bulgarian telenovela news roundup, unrelated to Las Azules."
+        }
+      ],
+      "skipMethod": "body_fetch"
+    },
+    {
+      "url": "http://latinofansbg.blogspot.com/2016/04/blog-post_12.html",
+      "firstSeen": "2026-10-19T22:05:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T22:05:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Latino Fans Bulgaria (Bulgarian-language telenovela fan blog) post dated April 12, 2016 ('Светът на теленовелите: Край и начало'), covering Santa diabla, La Dona (Doña Bárbara remake), Silvana sin lana casting, and the Pasión y poder finale. No mention of Las Azules / Women in Blue anywhere in the body; predates the show's existence by years. Confirmed via WebFetch body fetch since the Exa snippet named no specific subject.",
+      "history": [
+        {
+          "attempt": "2026-10-19T22:05:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-13194",
+          "note": "Surfaced via Exa Pass 1 (ES query). Body fetch confirms 2016 Bulgarian telenovela news roundup, unrelated to Las Azules."
+        }
+      ],
+      "skipMethod": "body_fetch"
+    },
+    {
+      "url": "https://elnuevodiario.com.do/ingrid-gomez-presenta-la-segunda-temporada-de-dominicanas-que-inspiran-por-telesistema-canal-11/",
+      "firstSeen": "2026-10-19T22:05:49Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T22:05:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Nuevo Diario (Dominican Republic) article about Ingrid Gomez presenting Season 2 of a different show, 'Dominicanas que Inspiran,' on Telesistema Canal 11. A named different, unrelated program; no connection to Las Azules / Women in Blue. Affirmative different-subject signal in the title itself, per the Rule G no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T22:05:49Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13194",
+          "note": "Surfaced via Exa Pass 1 (ES query). Title names a specific different show ('Dominicanas que Inspiran'); classified from title alone per Rule G no-fetch carve-out."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://nataliamillanitalia.blogspot.com/2009/06/questo-e-il-personaggio-piu-bello-che.html",
+      "firstSeen": "2026-10-19T22:05:49Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T22:05:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Fan blog dedicated to actress Natalia Millan (nataliamillanitalia), post dated June 2009, an interview quote about a past role. Named different person with no stated connection to Las Azules / Women in Blue; predates the show's existence by 15 years. Affirmative different-subject signal (named person) per the Rule G no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T22:05:49Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13194",
+          "note": "Surfaced via Exa Pass 1 (ES query). Blog identity and title name a specific different, unconnected person (Natalia Millan); classified from title/blog identity alone per Rule G no-fetch carve-out."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.lasestrellas.tv/famosos/cuantas-versiones-tiene-la-telenovela-rubi",
+      "firstSeen": "2026-10-19T22:05:49Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T22:05:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Las Estrellas article about the different telenovela 'Rubi' and its various versions/remakes. Named different title with no connection to Las Azules / Women in Blue. Affirmative different-subject signal in the title itself, per the Rule G no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T22:05:49Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13194",
+          "note": "Surfaced via Exa Pass 1 (ES query). Title names a specific different telenovela ('Rubi'); classified from title alone per Rule G no-fetch carve-out."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.tvazteca.com/aztecauno/la-granja-vip/quieren-ser-mamas-manelyk-y-la-bebeshita-confiesan-sus-dudas-en-la-granja-vip/",
+      "firstSeen": "2026-10-19T22:05:49Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T22:05:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Azteca article about the different reality show 'La Granja VIP' (Manelyk and La Bebeshita). Named different, unrelated program; no connection to Las Azules / Women in Blue. Affirmative different-subject signal in the title itself, per the Rule G no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T22:05:49Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13194",
+          "note": "Surfaced via Exa Pass 1 (ES query). Title names a specific different show ('La Granja VIP'); classified from title alone per Rule G no-fetch carve-out."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.justwatch.com/eg/tv-show/women-in-blue",
+      "firstSeen": "2026-10-19T22:05:49Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T22:05:49Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "JustWatch Egypt (/eg/) locale streaming-availability listing page for the show. Confirmed via WebFetch (200): page is built from metadata (where-to-watch, pricing, runtime, cast/crew, chart rankings) with only a boilerplate plot synopsis as prose -- strip test leaves nothing written about the show. Matches the established JustWatch locale-show-page family already ledgered under Rule F (e.g. justwatch.com/it/serie-tv/las-azules). Lists Season 2 (8 episodes) alongside Season 1 (10 episodes).",
+      "history": [
+        {
+          "attempt": "2026-10-19T22:05:49Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-13194",
+          "note": "Surfaced via Exa Pass 1 (EN query), new locale (Egypt) not previously ledgered. Body fetch confirms database/listing surface, Rule F family."
+        }
+      ],
+      "skipMethod": "body_fetch"
     }
   ],
-  "lastUpdated": "2026-10-19T18:06:48Z"
+  "lastUpdated": "2026-10-19T22:05:49Z"
 }
