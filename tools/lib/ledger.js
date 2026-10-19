@@ -94,6 +94,26 @@ function lookupCandidate(candidateUrl, index, now = new Date(), datasetIndex = n
   if (datasetIndex) {
     Object.assign(result, lookupInDataJson(candidateUrl, datasetIndex));
   }
+
+  // LEMA-13191: permanentSkip + skipReason=editorial_redundant_syndication +
+  // inDataJson=true is the expected shape of this category, not a defect --
+  // redundant_syndication means this candidate IS a second address (AMP
+  // page, m. subdomain, ref_=-tagged reprint, etc.) for a document already
+  // in data.json, so the overlap is the category working as designed (see
+  // ledgerOverlapAdvisory in audit.js/README, "Rule I"). Four recurrences
+  // of a reader re-deriving this from scratch (most recently LEMA-13188)
+  // makes it a tooling gap, not an attention one -- annotate instead of
+  // asking the reader to carry it. Purely additive: never changes
+  // disposition/skipReason/inDataJson, and the field is absent (not merely
+  // false) unless all three conditions hold.
+  if (
+    result.disposition === 'permanentSkip' &&
+    result.skipReason === 'editorial_redundant_syndication' &&
+    result.inDataJson === true
+  ) {
+    result.expectedOverlap = 'rule_i_second_address';
+  }
+
   return result;
 }
 

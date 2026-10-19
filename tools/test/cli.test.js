@@ -210,6 +210,90 @@ test('lookup CLI --json: results carry inDataJson/dataJsonTs/dataJsonOutlet fiel
   assert.equal(r.dataJsonOutlet, 'Test Outlet');
 });
 
+// expectedOverlap wiring (LEMA-13191), self-contained fixtures (not the
+// real repo ledger/data.json, which churn too fast to assert a specific
+// permanentSkip+editorial_redundant_syndication+inDataJson row against).
+
+function writeExpectedOverlapFixtures(tmp, { skipReason = 'editorial_redundant_syndication', inDataJson = true } = {}) {
+  const candidatesPath = path.join(tmp, 'candidates.json');
+  const ledgerPath = path.join(tmp, 'fetch-blocklist.json');
+  const dataPath = path.join(tmp, 'data.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(['https://example.com/amp/syndicated-story']));
+  fs.writeFileSync(ledgerPath, JSON.stringify({
+    entries: [
+      {
+        url: 'https://example.com/amp/syndicated-story',
+        firstSeen: '2026-10-01T00:00:00Z',
+        failCount: 0,
+        lastStatus: 200,
+        lastAttempt: '2026-10-01T00:00:00Z',
+        cooldownUntil: null,
+        permanentSkip: true,
+        skipReason,
+        skipNote: 'AMP second address for the canonical story below.',
+        history: [],
+      },
+    ],
+    lastUpdated: '2026-10-01T00:00:00Z',
+  }));
+  fs.writeFileSync(dataPath, JSON.stringify(
+    inDataJson
+      ? [{ outlet: 'Canonical Outlet', headline: 'Canonical story', url: 'https://example.com/syndicated-story', date: 'Oct 1, 2026', ts: 20261001, lang: 'EN', market: 'US', type: 'Entertainment', excerpt: 'e' }]
+      : []
+  ));
+  return { candidatesPath, ledgerPath, dataPath };
+}
+
+test('lookup CLI: annotates the text line with expectedOverlap when permanentSkip + editorial_redundant_syndication + inDataJson=true all hold', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const { candidatesPath, ledgerPath, dataPath } = writeExpectedOverlapFixtures(tmp);
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', ledgerPath, '--data', dataPath]);
+
+  assert.equal(result.status, 0);
+  assert.match(
+    result.stdout,
+    /https:\/\/example\.com\/amp\/syndicated-story\tpermanentSkip skipReason=editorial_redundant_syndication inDataJson=true dataJsonTs=20261001 dataJsonOutlet="Canonical Outlet" expectedOverlap=rule_i_second_address \(expected: this is a second address/
+  );
+});
+
+test('lookup CLI --json: expectedOverlap field present and equal to rule_i_second_address when all three conditions hold', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const { candidatesPath, ledgerPath, dataPath } = writeExpectedOverlapFixtures(tmp);
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', ledgerPath, '--data', dataPath, '--json']);
+
+  assert.equal(result.status, 0);
+  const [r] = JSON.parse(result.stdout);
+  assert.equal(r.expectedOverlap, 'rule_i_second_address');
+});
+
+test('lookup CLI: no annotation (near miss) when skipReason matches but inDataJson=false', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const { candidatesPath, ledgerPath, dataPath } = writeExpectedOverlapFixtures(tmp, { inDataJson: false });
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', ledgerPath, '--data', dataPath]);
+
+  assert.equal(result.status, 0);
+  assert.doesNotMatch(result.stdout, /expectedOverlap/);
+  const jsonResult = runCli(['lookup', candidatesPath, '--fetch-blocklist', ledgerPath, '--data', dataPath, '--json']);
+  const [r] = JSON.parse(jsonResult.stdout);
+  assert.equal('expectedOverlap' in r, false);
+});
+
+test('lookup CLI: no annotation (near miss) when inDataJson=true but skipReason is a different value', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'sweep-integrity-test-'));
+  const { candidatesPath, ledgerPath, dataPath } = writeExpectedOverlapFixtures(tmp, { skipReason: 'editorial_vendor_promo' });
+
+  const result = runCli(['lookup', candidatesPath, '--fetch-blocklist', ledgerPath, '--data', dataPath]);
+
+  assert.equal(result.status, 0);
+  assert.doesNotMatch(result.stdout, /expectedOverlap/);
+  const jsonResult = runCli(['lookup', candidatesPath, '--fetch-blocklist', ledgerPath, '--data', dataPath, '--json']);
+  const [r] = JSON.parse(jsonResult.stdout);
+  assert.equal('expectedOverlap' in r, false);
+});
+
 // LEMA-10592: without a data.json shape check, --strict validated the
 // ledger and candidates files but let an unusable data.json through --
 // lookupAll would receive `datasetEntries || []` and every candidate

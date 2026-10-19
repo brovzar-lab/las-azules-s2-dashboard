@@ -115,6 +115,65 @@ test('lookup: permanentSkip disposition, matched via a www/trailing-slash varian
   assert.equal(r.skipReason, 'editorial_redundant_syndication');
 });
 
+// expectedOverlap wiring (LEMA-13191): permanentSkip +
+// skipReason=editorial_redundant_syndication + inDataJson=true is the
+// expected "second address for a document already in data.json" shape
+// (Rule I), not a defect. Three-way condition, plus the two near-miss
+// shapes that must NOT annotate.
+
+test('lookup: expectedOverlap=rule_i_second_address when permanentSkip + editorial_redundant_syndication + inDataJson=true all hold', () => {
+  const dataset = [
+    {
+      outlet: 'Canonical Outlet',
+      headline: 'Canonical story',
+      url: 'https://example.com/news/permanent-skip-story',
+      date: 'Sep 1, 2026',
+      ts: 20260901,
+      lang: 'EN',
+      market: 'US',
+      type: 'Entertainment',
+      excerpt: 'The canonical address this ledger row is a second address for.',
+    },
+  ];
+  const results = lookupAll(FIXTURE_CANDIDATES, FIXTURE_LEDGER, NOW, dataset);
+  const r = results.find((x) => x.url === 'https://www.example.com/news/permanent-skip-story');
+  assert.equal(r.disposition, 'permanentSkip');
+  assert.equal(r.skipReason, 'editorial_redundant_syndication');
+  assert.equal(r.inDataJson, true);
+  assert.equal(r.expectedOverlap, 'rule_i_second_address');
+});
+
+test('lookup: expectedOverlap absent (near miss) when skipReason matches but inDataJson=false', () => {
+  const results = lookupAll(FIXTURE_CANDIDATES, FIXTURE_LEDGER, NOW, []); // dataset present but empty -- inDataJson=false, not omitted
+  const r = results.find((x) => x.url === 'https://www.example.com/news/permanent-skip-story');
+  assert.equal(r.disposition, 'permanentSkip');
+  assert.equal(r.skipReason, 'editorial_redundant_syndication');
+  assert.equal(r.inDataJson, false);
+  assert.equal('expectedOverlap' in r, false);
+});
+
+test('lookup: expectedOverlap absent (near miss) when inDataJson=true but skipReason is a different value', () => {
+  const dataset = [
+    {
+      outlet: 'Some Outlet',
+      headline: 'Unrelated vendor-promo page',
+      url: 'https://example.com/news/conflict-a',
+      date: 'Sep 1, 2026',
+      ts: 20260901,
+      lang: 'EN',
+      market: 'US',
+      type: 'Entertainment',
+      excerpt: 'e',
+    },
+  ];
+  const results = lookupAll(['https://example.com/news/conflict-a'], FIXTURE_LEDGER, NOW, dataset);
+  const r = results[0];
+  assert.equal(r.disposition, 'permanentSkip');
+  assert.equal(r.skipReason, 'editorial_vendor_promo'); // not editorial_redundant_syndication
+  assert.equal(r.inDataJson, true);
+  assert.equal('expectedOverlap' in r, false);
+});
+
 test('lookup: active-cooldown disposition when cooldownUntil is in the future', () => {
   const results = lookupAll(FIXTURE_CANDIDATES, FIXTURE_LEDGER, NOW);
   const r = results.find((x) => x.url === 'https://example.com/news/active-cooldown-story');

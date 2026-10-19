@@ -304,7 +304,16 @@ function cmdLookup(positional, flags) {
     // new," never a disposition change. See looksLikeUnresolvedIdPermalink
     // in normalize.js.
     const idPermalinkExtra = r.looksLikeUnresolvedIdPermalink ? ' looksLikeIdPermalink=true (verify redirect target before including)' : '';
-    console.log(`${r.url}\t${r.disposition}${extra}${dataJsonExtra}${idPermalinkExtra}`);
+    // LEMA-13191: additive trailing annotation, same precedent as
+    // idPermalinkExtra above -- permanentSkip + skipReason=
+    // editorial_redundant_syndication + inDataJson=true is the expected
+    // "second address for a document already in data.json" shape (Rule I),
+    // not a defect, so name the mechanism inline instead of asking the
+    // reader to re-derive it (4th recurrence: LEMA-13188).
+    const expectedOverlapExtra = r.expectedOverlap
+      ? ` expectedOverlap=${r.expectedOverlap} (expected: this is a second address -- e.g. AMP page, m. subdomain, ref_=-tagged reprint -- for a document already in data.json, not a defect)`
+      : '';
+    console.log(`${r.url}\t${r.disposition}${extra}${dataJsonExtra}${idPermalinkExtra}${expectedOverlapExtra}`);
   }
 }
 

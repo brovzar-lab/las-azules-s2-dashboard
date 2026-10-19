@@ -115,6 +115,28 @@ https://appleworld.today/?p=129727  not-found inDataJson=false looksLikeIdPermal
 Omitted from the plain-text line when false, always present in `--json` output as a boolean
 `looksLikeUnresolvedIdPermalink` field.
 
+**`permanentSkip` + `skipReason=editorial_redundant_syndication` + `inDataJson=true` is
+annotated as expected, not a defect (LEMA-13191).** This exact combination was misread as a
+tooling defect four separate times (most recently [LEMA-13188](/LEMA/issues/LEMA-13188)) because
+the plain-text line used to compose `skipReason=...` and `inDataJson=...` as two independent,
+unannotated fragments -- the reader had to re-derive from scratch, each time, that
+`editorial_redundant_syndication` *means* "this is a second address (an AMP page, an `m.`
+subdomain, a `?ref_=`-tagged reprint, etc.) for a document that IS in `data.json`", so the
+overlap is the category working as designed (same reasoning as `audit`'s `ledgerOverlapAdvisory`
+check below). Now, when all three conditions hold, the line gets a purely additive trailing
+suffix naming the mechanism inline:
+
+```
+$ node tools/sweep-integrity.js lookup candidates.json --data data.json
+https://example.com/amp/story  permanentSkip skipReason=editorial_redundant_syndication inDataJson=true dataJsonTs=20261001 dataJsonOutlet="Some Outlet" expectedOverlap=rule_i_second_address (expected: this is a second address -- e.g. AMP page, m. subdomain, ref_=-tagged reprint -- for a document already in data.json, not a defect)
+```
+
+Omitted (not `false`) from the plain-text line and from `--json` output whenever any of the
+three conditions doesn't hold -- `inDataJson=false` with this `skipReason`, or `inDataJson=true`
+with a different `skipReason`, are both near-misses that must **not** annotate. Never changes
+`disposition`, `skipReason`, or `inDataJson`, same additive-only discipline as
+`looksLikeUnresolvedIdPermalink` above.
+
 ### `assert-integrity [--target ledger|data|both] [--fix] [--json]`
 
 Recomputes normalized keys across `fetch-blocklist.json` (Step 10) and/or `data.json`
