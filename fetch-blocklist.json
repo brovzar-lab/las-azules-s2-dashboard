@@ -31846,7 +31846,217 @@
           "note": "Portuguese-language hip-hop blog post quoting actor Lazaro Ramos (\"Ainda sou excecao\"). No connection to Las Azules / Women in Blue. Surfaced via Pass 1 Exa ES broad-query match. Title names a specific different person and unrelated topic, satisfying the LEMA-12648 no-fetch carve-out."
         }
       ]
+    },
+    {
+      "url": "http://iloveamicsdelesarts.blogspot.com/2013/02/vidreres-entrevista-i-nens.html",
+      "firstSeen": "2026-10-19T12:05:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T12:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Catalan blog post about the musical duo 'Amics de les Arts' (an interview and kids segment, 'Vidreres, entrevista i nens'). No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (names a specific different subject, the band Amics de les Arts); not fetched. Surfaced only as a broad-query match on the Spanish query terms.",
+      "history": [
+        {
+          "attempt": "2026-10-19T12:05:26Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13177",
+          "note": "Catalan blog post about the musical duo 'Amics de les Arts' (an interview and kids segment, 'Vidreres, entrevista i nens'). No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (names a specific different subject, the band Amics de les Arts); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://teleinterferencias.blogspot.com/2009/08/jaime-panefiel-y-kiko-matamoros.html",
+      "firstSeen": "2026-10-19T12:05:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T12:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Spanish blog post about Jaime Pañafiel and Kiko Matamoros appearing on the TV program 'La Noria'. No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (names specific different people and show); not fetched. Surfaced only as a broad-query match on the Spanish query terms.",
+      "history": [
+        {
+          "attempt": "2026-10-19T12:05:26Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13177",
+          "note": "Spanish blog post about Jaime Pañafiel and Kiko Matamoros appearing on the TV program 'La Noria'. No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (names specific different people and show); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://global.techradar.com/es-es/how-to/twitter-borra-los-checks-azules-asi-se-diferencian-los-perfiles-reales-de-los-falsos",
+      "firstSeen": "2026-10-19T12:05:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T12:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TechRadar (es-es) how-to article about Twitter/X removing legacy blue verification checkmarks. No relation to Las Azules / Women in Blue; coincidental keyword overlap on 'azules' (blue checkmarks). Classified from Exa search result title alone (names a specific different topic, Twitter verification badges); not fetched. Surfaced only as a broad-query match on the Spanish query terms.",
+      "history": [
+        {
+          "attempt": "2026-10-19T12:05:26Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13177",
+          "note": "TechRadar (es-es) how-to article about Twitter/X removing legacy blue verification checkmarks. No relation to Las Azules / Women in Blue; coincidental keyword overlap on 'azules' (blue checkmarks). Classified from Exa search result title alone (names a specific different topic, Twitter verification badges); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://global.techradar.com/es-mx/how-to/twitter-elimina-los-antiguos-checks-azules-asi-se-sabe-quien-es-real-y-quien-falso",
+      "firstSeen": "2026-10-19T12:05:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T12:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TechRadar (es-mx) how-to article about Twitter/X removing legacy blue verification checkmarks. No relation to Las Azules / Women in Blue; coincidental keyword overlap on 'azules' (blue checkmarks). Classified from Exa search result title alone (names a specific different topic, Twitter verification badges); not fetched. Surfaced only as a broad-query match on the Spanish query terms.",
+      "history": [
+        {
+          "attempt": "2026-10-19T12:05:26Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13177",
+          "note": "TechRadar (es-mx) how-to article about Twitter/X removing legacy blue verification checkmarks. No relation to Las Azules / Women in Blue; coincidental keyword overlap on 'azules' (blue checkmarks). Classified from Exa search result title alone (names a specific different topic, Twitter verification badges); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://stories.lasexta.com/newstory/stories/1b120abd00dd80d8c720",
+      "firstSeen": "2026-10-19T12:05:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T12:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "LaSexta 'stories' post announcing a new episode of their own series 'Conociendo America Latina'. No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (names a specific different show); not fetched. Surfaced only as a broad-query match on the Spanish query terms.",
+      "history": [
+        {
+          "attempt": "2026-10-19T12:05:26Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13177",
+          "note": "LaSexta 'stories' post announcing a new episode of their own series 'Conociendo America Latina'. No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (names a specific different show); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.dizibox.live/universal-basic-guys-3-sezon-3-bolum-izle/",
+      "firstSeen": "2026-10-19T12:05:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T12:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Turkish streaming-aggregator page for 'Universal Basic Guys' Season 3 Episode 3 ('3.Sezon 3.Bolum'). No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (names a specific different show); not fetched. Surfaced only as a broad-query match on the English query terms.",
+      "history": [
+        {
+          "attempt": "2026-10-19T12:05:26Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13177",
+          "note": "Turkish streaming-aggregator page for 'Universal Basic Guys' Season 3 Episode 3 ('3.Sezon 3.Bolum'). No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (names a specific different show); not fetched. Surfaced only as a broad-query match on the English query terms."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.rtvcnoticias.com/actualidad/tecnologia/por-que-twitter-retiro-las-marcas-de-verificacion-azules-a-las-cuentas",
+      "firstSeen": "2026-10-19T12:05:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T12:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RTVC Noticias article about Twitter/X removing blue verification marks from accounts. No relation to Las Azules / Women in Blue; coincidental keyword overlap on 'azules' (blue checkmarks). Classified from Exa search result title alone (names a specific different topic, Twitter verification marks); not fetched. Surfaced only as a broad-query match on the Spanish query terms.",
+      "history": [
+        {
+          "attempt": "2026-10-19T12:05:26Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13177",
+          "note": "RTVC Noticias article about Twitter/X removing blue verification marks from accounts. No relation to Las Azules / Women in Blue; coincidental keyword overlap on 'azules' (blue checkmarks). Classified from Exa search result title alone (names a specific different topic, Twitter verification marks); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.rtvcnoticias.com/twitter-marcas-verificacion-cuentas-colores",
+      "firstSeen": "2026-10-19T12:05:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T12:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RTVC Noticias article about Twitter/X verification marks and account color coding. No relation to Las Azules / Women in Blue; coincidental keyword overlap on 'azules' (blue). Classified from Exa search result title alone (names a specific different topic, Twitter verification marks); not fetched. Surfaced only as a broad-query match on the Spanish query terms.",
+      "history": [
+        {
+          "attempt": "2026-10-19T12:05:26Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13177",
+          "note": "RTVC Noticias article about Twitter/X verification marks and account color coding. No relation to Las Azules / Women in Blue; coincidental keyword overlap on 'azules' (blue). Classified from Exa search result title alone (names a specific different topic, Twitter verification marks); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.bgr.com/2288228/apple-tv-free-premiere-section-is-streaming-best-kept-secret/",
+      "firstSeen": "2026-10-19T12:05:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T12:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "BGR article about Apple TV's 'Free Premiere' section as a general streaming feature. Body fetch (WebFetch) confirmed no mention of Las Azules or Women in Blue anywhere in the article; it discusses the free-premiere feature generically. Headline named no specific subject, so a body fetch was required (Rule G carve-out exclusion) before this skip.",
+      "history": [
+        {
+          "attempt": "2026-10-19T12:05:26Z",
+          "method": "WebFetch/Tavily Extract (body fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-13177",
+          "note": "BGR article about Apple TV's 'Free Premiere' section as a general streaming feature. Body fetch (WebFetch) confirmed no mention of Las Azules or Women in Blue anywhere in the article; it discusses the free-premiere feature generically. Headline named no specific subject, so a body fetch was required (Rule G carve-out exclusion) before this skip."
+        }
+      ],
+      "skipMethod": "body_fetch"
+    },
+    {
+      "url": "https://www.hoerzu.de/streaming/luna-jordans-letzte-rolle-und-lupin-das-sind-die-streaming-tipps-der-woche/",
+      "firstSeen": "2026-10-19T12:05:26Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T12:05:26Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Hoerzu.de weekly streaming-tips listicle covering ZDF's 'Wake up', Apple TV's 'Where's Wanda?' season 2, Netflix's 'Lupin' season 4, and a WOW documentary. Body fetch (Tavily Extract, advanced depth, after WebFetch failed) confirmed no mention of Las Azules or Women in Blue anywhere in the article. Headline is a listicle naming other shows, so a body fetch was required (Rule G carve-out exclusion) before this skip.",
+      "history": [
+        {
+          "attempt": "2026-10-19T12:05:26Z",
+          "method": "WebFetch/Tavily Extract (body fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-13177",
+          "note": "Hoerzu.de weekly streaming-tips listicle covering ZDF's 'Wake up', Apple TV's 'Where's Wanda?' season 2, Netflix's 'Lupin' season 4, and a WOW documentary. Body fetch (Tavily Extract, advanced depth, after WebFetch failed) confirmed no mention of Las Azules or Women in Blue anywhere in the article. Headline is a listicle naming other shows, so a body fetch was required (Rule G carve-out exclusion) before this skip."
+        }
+      ],
+      "skipMethod": "body_fetch"
     }
   ],
-  "lastUpdated": "2026-10-19T08:30:00Z"
+  "lastUpdated": "2026-10-19T12:05:26Z"
 }
