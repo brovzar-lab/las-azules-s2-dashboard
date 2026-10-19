@@ -521,3 +521,15 @@ test('hasConcreteAlternativeSubject: an accented-capital proper noun (Spanish-la
     true
   );
 });
+
+// LEMA-13133: the named subject's FIRST word starts with an accented
+// capital. JS `\b` is ASCII-only even under the `u` flag, so `\b\p{Lu}`
+// never fired right before an accented capital -- these minimal pairs
+// (accented vs. plain ASCII, otherwise byte-identical) regressed to FLAG
+// pre-fix even though `\p{Lu}` was already in place.
+test('hasConcreteAlternativeSubject: a named subject whose first word leads with an accented capital counts, same as its ASCII twin', () => {
+  assert.equal(hasConcreteAlternativeSubject('Article about Angela Aguilar. No relation.'), true);
+  assert.equal(hasConcreteAlternativeSubject('Article about Ángela Aguilar. No relation.'), true);
+  assert.equal(hasConcreteAlternativeSubject('Piece about Oscar Jaenada. Different subject.'), true);
+  assert.equal(hasConcreteAlternativeSubject('Piece about Óscar Jaenada. Different subject.'), true);
+});

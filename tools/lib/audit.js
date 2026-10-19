@@ -451,7 +451,17 @@ function hasConcreteAlternativeSubject(skipNote) {
   // (e.g. "Los Ángeles Azules") is exactly as common a proper-noun
   // lead character as a plain ASCII one. An ASCII-only check silently
   // missed real named alternatives in this population.
-  const properNounSequences = withoutShowName.match(/\b\p{Lu}[\p{L}'-]*(?:\s+\p{Lu}[\p{L}'-]*)+\b/gu) || [];
+  //
+  // Word-start/end is `(?<![\p{L}\p{N}_])` / `(?![\p{L}\p{N}_])`, not `\b`:
+  // JS `\b` is defined on ASCII `[A-Za-z0-9_]` even under the `u` flag, so it
+  // never fires next to an accented capital (LEMA-13133) -- "Ángela" failed
+  // the leading boundary because \b treats both the preceding space AND Á as
+  // "non-word". The lookaround version is a drop-in Unicode-aware boundary:
+  // it still rejects a capital that starts mid-word (e.g. the P in
+  // "iPhone", preceded by the letter i) the same way \b did, so it doesn't
+  // widen the check into matching inside a single token.
+  const properNounSequences =
+    withoutShowName.match(/(?<![\p{L}\p{N}_])\p{Lu}[\p{L}'-]*(?:\s+\p{Lu}[\p{L}'-]*)+(?![\p{L}\p{N}_])/gu) || [];
   if (properNounSequences.length > 0) return true;
 
   // No 'i' flag here: in JS, case-insensitive mode case-folds \p{Lu} too,
@@ -459,7 +469,10 @@ function hasConcreteAlternativeSubject(skipNote) {
   // lowercase anchors. Connector words are closed-class function words
   // that only occur lowercase in this prose, so case-insensitivity isn't
   // needed on this branch, and adding it would reintroduce that bug.
-  const connectedPhrase = new RegExp(`\\b\\p{Lu}[\\p{L}'-]*\\s+${CONNECTOR_WORDS}\\s+\\p{Lu}[\\p{L}'-]*\\b`, 'gu');
+  const connectedPhrase = new RegExp(
+    `(?<![\\p{L}\\p{N}_])\\p{Lu}[\\p{L}'-]*\\s+${CONNECTOR_WORDS}\\s+\\p{Lu}[\\p{L}'-]*(?![\\p{L}\\p{N}_])`,
+    'gu'
+  );
   if (connectedPhrase.test(withoutShowName)) return true;
 
   ENTITY_CUE_WORDS.lastIndex = 0;
@@ -468,7 +481,7 @@ function hasConcreteAlternativeSubject(skipNote) {
     const rest = withoutShowName.slice(cueMatch.index + cueMatch[0].length);
     const boundaryIdx = rest.search(SENTENCE_BOUNDARY);
     const clause = boundaryIdx === -1 ? rest : rest.slice(0, boundaryIdx);
-    if (/\b\p{Lu}[\p{L}'-]*\b/u.test(clause)) return true;
+    if (/(?<![\p{L}\p{N}_])\p{Lu}[\p{L}'-]*(?![\p{L}\p{N}_])/u.test(clause)) return true;
   }
 
   return false;
