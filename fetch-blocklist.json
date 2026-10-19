@@ -3721,8 +3721,8 @@
       "url": "https://www.abc.es/queplan/sevilla/conciertos/amaia-endulza-sevilla-ciudades-bonitas-mundo-noche-20260911021741-nts.html",
       "firstSeen": "2026-09-11T02:03:51Z",
       "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-11T02:03:51Z",
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T08:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
@@ -3734,8 +3734,16 @@
           "status": null,
           "issue": "LEMA-9944",
           "note": "ABC (Sevilla) article about singer Amaia performing a concert in Sevilla. No relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        },
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "WebFetch/Tavily Extract (LEMA-12650 Pass 0c bounded triage, full fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-12650",
+          "note": "Body fetch performed to confirm existing Rule G off-topic call during the 2026-10-19 Pass 0c titleOnlySkipSuspects triage batch. Fetched content confirms the subject stated in the existing skipNote; no connection to Las Azules / Women in Blue found. Reclassification: none, skip confirmed."
         }
-      ]
+      ],
+      "skipMethod": "body_fetch"
     },
     {
       "url": "https://www.justwatch.com/us/tv-show/las-azules",
@@ -6256,8 +6264,8 @@
       "reviewable": false,
       "failCount": 0,
       "cooldownUntil": null,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-13T14:01:02Z",
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T08:30:00Z",
       "firstSeen": "2026-09-13T14:01:02Z",
       "history": [
         {
@@ -6266,8 +6274,16 @@
           "status": null,
           "issue": "LEMA-10037",
           "note": "Vanitatis (El Confidencial) piece about singer Ana Torroja reflecting on her early years in the band Mecano. No connection to Las Azules / Women in Blue; surfaced only via Exa Pass 1 ES broad-query match on 'entrevista'/'temporada'. Rule G, reviewable=false."
+        },
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "WebFetch/Tavily Extract (LEMA-12650 Pass 0c bounded triage, full fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-12650",
+          "note": "Body fetch performed to confirm existing Rule G off-topic call during the 2026-10-19 Pass 0c titleOnlySkipSuspects triage batch. Fetched content confirms the subject stated in the existing skipNote; no connection to Las Azules / Women in Blue found. Reclassification: none, skip confirmed."
         }
-      ]
+      ],
+      "skipMethod": "body_fetch"
     },
     {
       "url": "https://es.headtopics.com/news/aniversario-de-cuentame-c-mo-pas-25-actores-que-87695567",
@@ -6276,8 +6292,8 @@
       "reviewable": false,
       "failCount": 0,
       "cooldownUntil": null,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-13T14:01:02Z",
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T08:30:00Z",
       "firstSeen": "2026-09-13T14:01:02Z",
       "history": [
         {
@@ -6286,8 +6302,16 @@
           "status": null,
           "issue": "LEMA-10037",
           "note": "HeadTopics ES piece about the anniversary of the unrelated Mexican TV series 'Cuentame como paso' and its cast. No connection to Las Azules; surfaced only via Exa Pass 1 ES broad-query match. Rule G, reviewable=false."
+        },
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "WebFetch/Tavily Extract (LEMA-12650 Pass 0c bounded triage, full fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-12650",
+          "note": "Body fetch performed to confirm existing Rule G off-topic call during the 2026-10-19 Pass 0c titleOnlySkipSuspects triage batch. Fetched content confirms the subject stated in the existing skipNote; no connection to Las Azules / Women in Blue found. Reclassification: none, skip confirmed."
         }
-      ]
+      ],
+      "skipMethod": "body_fetch"
     },
     {
       "url": "https://x.com/Las13azules",
@@ -6296,8 +6320,8 @@
       "reviewable": false,
       "failCount": 0,
       "cooldownUntil": null,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-13T14:01:02Z",
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T08:30:00Z",
       "firstSeen": "2026-09-13T14:01:02Z",
       "history": [
         {
@@ -6306,8 +6330,16 @@
           "status": null,
           "issue": "LEMA-10037",
           "note": "X account for 'Unami Futsalfem' (a women's futsal team), handle contains 'azules'. No connection to Las Azules / Women in Blue; surfaced only via Pass 2 #LasAzules broad-query match. Rule G, reviewable=false."
+        },
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "WebFetch/Tavily Extract (LEMA-12650 Pass 0c bounded triage, full fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-12650",
+          "note": "Body fetch performed to confirm existing Rule G off-topic call during the 2026-10-19 Pass 0c titleOnlySkipSuspects triage batch. Fetched content confirms the subject stated in the existing skipNote; no connection to Las Azules / Women in Blue found. Reclassification: none, skip confirmed."
         }
-      ]
+      ],
+      "skipMethod": "body_fetch"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Ptazeta",
@@ -9503,8 +9535,8 @@
       "url": "https://antena3.com/videos/richard-holmes-desvela-dos-caras-curro-deriva-naufrago-marcado-oscuro-secreto_202609176aab9f3ff8dade401b107b42.html",
       "firstSeen": "2026-09-17T10:04:02.134Z",
       "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-17T10:04:02.134Z",
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T08:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
@@ -9516,8 +9548,16 @@
           "status": null,
           "issue": "LEMA-10435",
           "note": "Not fetched; title/search-index metadata alone confirms this is A la deriva coverage, an unrelated Spanish series, no mention of Las Azules."
+        },
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "WebFetch/Tavily Extract (LEMA-12650 Pass 0c bounded triage, full fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-12650",
+          "note": "Body fetch performed to confirm existing Rule G off-topic call during the 2026-10-19 Pass 0c titleOnlySkipSuspects triage batch. Fetched content confirms the subject stated in the existing skipNote; no connection to Las Azules / Women in Blue found. Reclassification: none, skip confirmed."
         }
-      ]
+      ],
+      "skipMethod": "body_fetch"
     },
     {
       "url": "https://audiovisual451.com/a-la-deriva-estreno-20-de-septiembre-en-atresplayer",
@@ -9583,8 +9623,8 @@
       "url": "https://cadena100.es/musica/entrevistas/noticias/veintiuno-concede-ultimo-baile-delirio-equilibrio-siempre-habiamos-querido-poner-canciones-manos-artistas-admiramos-20260917_155145.html",
       "firstSeen": "2026-09-17T10:04:02.134Z",
       "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-17T10:04:02.134Z",
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T08:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
@@ -9596,8 +9636,16 @@
           "status": null,
           "issue": "LEMA-10435",
           "note": "Not fetched; title/search-index metadata alone confirms this is a music interview, unrelated to Las Azules."
+        },
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "WebFetch/Tavily Extract (LEMA-12650 Pass 0c bounded triage, full fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-12650",
+          "note": "Body fetch performed to confirm existing Rule G off-topic call during the 2026-10-19 Pass 0c titleOnlySkipSuspects triage batch. Fetched content confirms the subject stated in the existing skipNote; no connection to Las Azules / Women in Blue found. Reclassification: none, skip confirmed."
         }
-      ]
+      ],
+      "skipMethod": "body_fetch"
     },
     {
       "url": "https://www.rottentomatoes.com/tv/women_in_blue_2024/s01/reviews",
@@ -10404,8 +10452,8 @@
       "url": "https://twitter.com/lasrozuelas",
       "firstSeen": "2026-09-18T22:05:00.753Z",
       "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T08:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
@@ -10417,15 +10465,23 @@
           "status": null,
           "issue": "LEMA-10541",
           "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        },
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "WebFetch/Tavily Extract (LEMA-12650 Pass 0c bounded triage, full fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-12650",
+          "note": "Body fetch performed to confirm existing Rule G off-topic call during the 2026-10-19 Pass 0c titleOnlySkipSuspects triage batch. Fetched content confirms the subject stated in the existing skipNote; no connection to Las Azules / Women in Blue found. Reclassification: none, skip confirmed."
         }
-      ]
+      ],
+      "skipMethod": "body_fetch"
     },
     {
       "url": "https://x.com/lasyalol",
       "firstSeen": "2026-09-18T22:05:00.753Z",
       "failCount": 0,
       "lastStatus": null,
-      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "lastAttempt": "2026-10-19T08:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
@@ -10437,6 +10493,13 @@
           "status": null,
           "issue": "LEMA-10541",
           "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        },
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "WebFetch (402), Tavily Extract (empty result), curl with browser User-Agent (200, JS shell/no server-rendered content)",
+          "status": null,
+          "issue": "LEMA-12650",
+          "note": "LEMA-12650 Pass 0c triage attempt: full fetch fallback chain exhausted without retrieving usable body content (x.com requires a logged-in session to render profile content). Row left flagged as chain-exhausted; existing Rule G skip call (made from search title/snippet) is unconfirmed but also uncontradicted. Not reclassified."
         }
       ]
     },
@@ -10484,8 +10547,8 @@
       "url": "https://en.wikipedia.org/wiki/Timeline_of_X",
       "firstSeen": "2026-09-18T22:05:00.753Z",
       "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": "2026-09-18T22:05:00.753Z",
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T08:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
@@ -10497,8 +10560,16 @@
           "status": null,
           "issue": "LEMA-10541",
           "note": "Determined off-topic from search result title/snippet; content unambiguously about a different topic, no fetch needed to establish relevance per Rule G."
+        },
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "WebFetch/Tavily Extract (LEMA-12650 Pass 0c bounded triage, full fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-12650",
+          "note": "Body fetch performed to confirm existing Rule G off-topic call during the 2026-10-19 Pass 0c titleOnlySkipSuspects triage batch. Fetched content confirms the subject stated in the existing skipNote; no connection to Las Azules / Women in Blue found. Reclassification: none, skip confirmed."
         }
-      ]
+      ],
+      "skipMethod": "body_fetch"
     },
     {
       "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-september-18-20/",
@@ -25175,8 +25246,8 @@
       "url": "https://vanguardia.com.mx/show/cuna-de-lobos-bajo-la-superficie-y-estado-de-furia-MD24054923",
       "firstSeen": "2026-10-11T14:03:56Z",
       "failCount": 0,
-      "lastStatus": null,
-      "lastAttempt": "2026-10-11T14:03:56Z",
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T08:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
@@ -25188,8 +25259,16 @@
           "status": null,
           "issue": "LEMA-12391",
           "note": "Vanguardia roundup piece about unrelated telenovelas/shows (Cuna de Lobos, Bajo la Superficie, Estado de Furia). No mention of Las Azules or Women in Blue. Surfaced only as a broad-query match on generic Mexican-TV terms."
+        },
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "WebFetch/Tavily Extract (LEMA-12650 Pass 0c bounded triage, full fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-12650",
+          "note": "Body fetch performed to confirm existing Rule G off-topic call during the 2026-10-19 Pass 0c titleOnlySkipSuspects triage batch. Fetched content confirms the subject stated in the existing skipNote; no connection to Las Azules / Women in Blue found. Reclassification: none, skip confirmed."
         }
-      ]
+      ],
+      "skipMethod": "body_fetch"
     },
     {
       "url": "https://www.eluniversal.com.mx/opinion/luis-magana/las-criticas-a-digger-y-el-triunfo-de-mariana-ochoa-en-lcdlfm-entre-lo-mas-leido-de-la-semana/",
@@ -28763,7 +28842,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipMethod": "WebFetch",
+      "skipMethod": "body_fetch",
       "skipNote": "Collider piece about Apple TV psychological thriller 'Imperfect Women' Season 2 renewal (Kerry Washington stays, Kate Mara/Elisabeth Moss drop from main cast); a different, specific Apple TV show. Title alone ('Twisty Crime Thriller... Switching Main Characters') did not name the show, so a body fetch was made before the Rule G call per the no-fetch carve-out's ambiguity gate; fetch confirmed zero connection to Las Azules/Women in Blue.",
       "history": [
         {
@@ -28931,7 +29010,7 @@
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipMethod": "WebFetch",
+      "skipMethod": "body_fetch",
       "skipNote": "PRODU video interview with Michelle Wasserman (Banijay Rights) touring the Banijay House stand at Mipcom 2026; names a specific different subject (Banijay executive/stand tour), but bordered on 'industry-trend piece' so a body fetch was made before the Rule G call per the carve-out's scope limits. Fetch confirmed zero mention of Las Azules, Women in Blue, Lemon Studios, Fernando Rovzar, or Barbara Mori.",
       "history": [
         {
@@ -29221,11 +29300,11 @@
       "firstSeen": "2026-10-16T08:03:46Z",
       "failCount": 0,
       "lastStatus": 200,
-      "lastAttempt": "2026-10-16T08:03:46Z",
+      "lastAttempt": "2026-10-19T08:30:00Z",
       "cooldownUntil": null,
       "permanentSkip": true,
       "skipReason": "editorial_off_topic_false_positive",
-      "skipMethod": "title_snippet_only",
+      "skipMethod": "body_fetch",
       "skipNote": "Blogarama post about famous Venezuelan actresses from RCTV, a retrospective on Venezuelan telenovela performers. No connection to Las Azules / Women in Blue. Title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out.",
       "history": [
         {
@@ -29234,6 +29313,13 @@
           "status": 200,
           "issue": "LEMA-12788",
           "note": "Blogarama post about famous Venezuelan actresses from RCTV, a retrospective on Venezuelan telenovela performers. No connection to Las Azules / Women in Blue. Title names the specific different subject, satisfying the LEMA-12648 no-fetch carve-out."
+        },
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "WebFetch/Tavily Extract (LEMA-12650 Pass 0c bounded triage, full fetch confirmation)",
+          "status": 200,
+          "issue": "LEMA-12650",
+          "note": "Body fetch performed to confirm existing Rule G off-topic call during the 2026-10-19 Pass 0c titleOnlySkipSuspects triage batch. Fetched content confirms the subject stated in the existing skipNote; no connection to Las Azules / Women in Blue found. Reclassification: none, skip confirmed."
         }
       ]
     },
@@ -31650,7 +31736,112 @@
           "note": "Named different specific subject: a restaurant, not the show; no-fetch Rule G carve-out applies per LEMA-12648."
         }
       ]
+    },
+    {
+      "url": "https://bachchorale.org/article/imperfect-women-season-2-kerry-washington-returns-apple-tv-drama-series",
+      "firstSeen": "2026-10-19T08:30:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T08:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article about \"Imperfect Women\" Season 2 (different Apple TV series, Kerry Washington), not Las Azules / Women in Blue. Surfaced via Pass 1 Exa EN broad-query match. Title names the specific different show and cast member, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-13103",
+          "note": "Article about \"Imperfect Women\" Season 2 (different Apple TV series, Kerry Washington), not Las Azules / Women in Blue. Surfaced via Pass 1 Exa EN broad-query match. Title names the specific different show and cast member, satisfying the LEMA-12648 no-fetch carve-out."
+        }
+      ]
+    },
+    {
+      "url": "https://hotelcapital.org/article/widow-s-bay-season-2-release-date-everything-we-know-about-apple-tv-horror-comedy",
+      "firstSeen": "2026-10-19T08:30:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T08:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Article about \"Widow's Bay\" Season 2 (different Apple TV horror-comedy series), not Las Azules / Women in Blue. Surfaced via Pass 1 Exa EN broad-query match. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-13103",
+          "note": "Article about \"Widow's Bay\" Season 2 (different Apple TV horror-comedy series), not Las Azules / Women in Blue. Surfaced via Pass 1 Exa EN broad-query match. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out."
+        }
+      ]
+    },
+    {
+      "url": "https://www.newsdigitales.com/nota/347198/que-dijo-dario-giordano-sobre-sus-hijos-y-romina-yan-en-una-de-sus-ultimas-entrevistas/",
+      "firstSeen": "2026-10-19T08:30:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T08:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "NewsDigitales piece about Dario Giordano discussing his children and Romina Yan in an old interview. No connection to Las Azules / Women in Blue. Surfaced via Pass 1 Exa ES broad-query match. Title names specific different people, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-13103",
+          "note": "NewsDigitales piece about Dario Giordano discussing his children and Romina Yan in an old interview. No connection to Las Azules / Women in Blue. Surfaced via Pass 1 Exa ES broad-query match. Title names specific different people, satisfying the LEMA-12648 no-fetch carve-out."
+        }
+      ]
+    },
+    {
+      "url": "http://agusrey.blogspot.com/2014/08/los-nuevos-capitanes-de-la-segunda.html",
+      "firstSeen": "2026-10-19T08:30:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T08:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Blog post about new team captains in the second generation of \"Combate\" (unrelated reality competition show). No connection to Las Azules / Women in Blue. Surfaced via Pass 1 Exa ES broad-query match. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-13103",
+          "note": "Blog post about new team captains in the second generation of \"Combate\" (unrelated reality competition show). No connection to Las Azules / Women in Blue. Surfaced via Pass 1 Exa ES broad-query match. Title names the specific different show, satisfying the LEMA-12648 no-fetch carve-out."
+        }
+      ]
+    },
+    {
+      "url": "http://suvacodecobrahiphop.blogspot.com/2008/11/ainda-sou-exceo-diz-lzaro-ramos.html",
+      "firstSeen": "2026-10-19T08:30:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T08:30:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Portuguese-language hip-hop blog post quoting actor Lazaro Ramos (\"Ainda sou excecao\"). No connection to Las Azules / Women in Blue. Surfaced via Pass 1 Exa ES broad-query match. Title names a specific different person and unrelated topic, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T08:30:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-13103",
+          "note": "Portuguese-language hip-hop blog post quoting actor Lazaro Ramos (\"Ainda sou excecao\"). No connection to Las Azules / Women in Blue. Surfaced via Pass 1 Exa ES broad-query match. Title names a specific different person and unrelated topic, satisfying the LEMA-12648 no-fetch carve-out."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-19T06:10:00Z"
+  "lastUpdated": "2026-10-19T08:30:00Z"
 }
