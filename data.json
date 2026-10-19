@@ -336,7 +336,8 @@
     "lang": "EN",
     "market": "US",
     "type": "Review",
-    "excerpt": "The Apple TV crime drama concludes its second season with a finale that connects the Executioner investigation to institutional corruption within the police force, revealing the partnership between Goyo and Macaria as a pivotal plot twist; critics note the ending is “slightly overburdened with material” but still delivers a strong emotional payoff."
+    "excerpt": "The Apple TV crime drama concludes its second season with a finale that connects the Executioner investigation to institutional corruption within the police force, revealing the partnership between Goyo and Macaria as a pivotal plot twist; critics note the ending is “slightly overburdened with material” but still delivers a strong emotional payoff.",
+    "storyGroup": "comicbasics-s2-ep8-finale-20260930"
   },
   {
     "outlet": "Télé Star",
@@ -595,6 +596,19 @@
     "type": "Entertainment",
     "excerpt": "IMDb news syndication crediting Comic Basics (\"See full article at Comic Basics\", byline Arthur S. Poe, dated 9/30/2026): with the Season 2 finale about to air, Apple TV has not announced a Season 3 renewal or cancellation, and fans are already reading every scrap of news for clues about the show's future.",
     "storyGroup": "comicbasics-s2-season3-renewal-20260930"
+  },
+  {
+    "outlet": "IMDb (via Comic Basics)",
+    "headline": "'Las Azules' Season 2 Episode 8 Recap and Ending Explained: Why the Finale Changes Everything for the Azules",
+    "url": "https://www.imdb.com/fr/news/ni66040174/",
+    "date": "Sep 30, 2026",
+    "ts": 20260930,
+    "dateSource": "visible_dateline",
+    "lang": "EN",
+    "market": "International",
+    "type": "Review",
+    "excerpt": "IMDb's news feed reposts Comic Basics' finale recap: the eighth episode wraps Season 2 with an hour built to resolve every loose thread, tying the Executioner investigation to institutional corruption and revealing the Goyo/Macaria partnership as a pivotal twist.",
+    "storyGroup": "comicbasics-s2-ep8-finale-20260930"
   },
   {
     "outlet": "Midgard Times",
