@@ -32056,7 +32056,243 @@
         }
       ],
       "skipMethod": "body_fetch"
+    },
+    {
+      "url": "https://tiktok.com/discover/a-ilha-das-feministas-pine-drama",
+      "firstSeen": "2026-10-19T16:01:30Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T16:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Exa Pass 1 (EN) hit. Page title/snippet names a different, specific show ('A Ilha Das Feministas', a Portuguese-language drama), with no mention of Las Azules / Women in Blue. Classified on title/snippet per the Rule G no-fetch carve-out (named different title).",
+      "history": [
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "title/snippet review (no fetch)",
+          "status": "off_topic_confirmed",
+          "issue": "LEMA-13186"
+        }
+      ]
+    },
+    {
+      "url": "https://dizibox.live/diziler/youth",
+      "firstSeen": "2026-10-19T16:01:30Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T16:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Exa Pass 1 (EN) hit. Turkish streaming-aggregator page for the unrelated series 'Youth' ('Youth izle'). No mention of Las Azules / Women in Blue. Classified on title/snippet per the Rule G no-fetch carve-out (named different title).",
+      "history": [
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "title/snippet review (no fetch)",
+          "status": "off_topic_confirmed",
+          "issue": "LEMA-13186"
+        }
+      ]
+    },
+    {
+      "url": "https://tiktok.com/discover/horacio-garc%C3%ADa-rojas",
+      "firstSeen": "2026-10-19T16:01:30Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T16:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipMethod": "body_fetch",
+      "skipNote": "Exa Pass 1 (ES) hit. TikTok Discover topic-aggregation page for cast member Horacio Garcia Rojas, same surface family as the 17 already-ledgered tiktok.com/discover/* rows for this title (e.g. las-azules-final-serie-episodio-8, LEMA-11565). Tavily Extract (advanced) succeeded this time and returned the page body: it is TikTok's algorithmic 'Discover videos related to...' topic index, aggregating dozens of unrelated clips about this actor's other work (Diablero, Narcos Mexico, Batman Azteca, Mentiras La Serie) with only one incidental post referencing Las Azules (a GIFF festival clip). Not a single dateable document; classified per Rule F surface-family test.",
+      "history": [
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "WebFetch",
+          "status": "empty_shell",
+          "note": "Returned only 'TikTok - Make Your Day' app-shell boilerplate, no rendered content.",
+          "issue": "LEMA-13186"
+        },
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "Tavily Extract (advanced)",
+          "status": 200,
+          "note": "Succeeded, returned the Discover topic-index page body confirming Rule F classification.",
+          "issue": "LEMA-13186"
+        }
+      ]
+    },
+    {
+      "url": "https://tiktok.com/discover/las-azules-serie-final",
+      "firstSeen": "2026-10-19T16:01:30Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T16:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipMethod": "body_fetch",
+      "skipNote": "Exa Pass 1 (ES) hit. TikTok Discover topic-aggregation page, same surface family as the 17 already-ledgered tiktok.com/discover/* rows for this title (e.g. las-azules-final-serie-episodio-8, LEMA-11565). Tavily Extract (advanced) succeeded and returned the page body: TikTok's algorithmic 'Discover videos related to Las Azules Serie Final' topic index aggregating dozens of separate users' posts, not a single dateable document. Classified per Rule F surface-family test.",
+      "history": [
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "WebFetch",
+          "status": "empty_shell",
+          "note": "Returned only 'TikTok - Make Your Day' app-shell boilerplate, no rendered content.",
+          "issue": "LEMA-13186"
+        },
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "Tavily Extract (advanced)",
+          "status": 200,
+          "note": "Succeeded, returned the Discover topic-index page body confirming Rule F classification.",
+          "issue": "LEMA-13186"
+        }
+      ]
+    },
+    {
+      "url": "https://eldoce.tv/videos/cuarteteando/2026/10/19/la-historia-de-la-mami-madre-de-los-hermanos-herrera",
+      "firstSeen": "2026-10-19T16:01:30Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T16:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Exa Pass 1 (ES) hit. Argentine TV segment ('Cuarteteando') about 'La mami', mother of the Herrera brothers -- a named, unrelated Argentine entertainment topic. No connection to Las Azules. Classified on title/snippet per the Rule G no-fetch carve-out (named different subject).",
+      "history": [
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "title/snippet review (no fetch)",
+          "status": "off_topic_confirmed",
+          "issue": "LEMA-13186"
+        }
+      ]
+    },
+    {
+      "url": "https://eldoce.tv/videos/cuarteteando/2026/10/19/el-desafio-de-mama-de-criar-a-los-ninci-tres-artistas-utopicos",
+      "firstSeen": "2026-10-19T16:01:30Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T16:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Exa Pass 1 (ES) hit. Argentine TV segment ('Cuarteteando') about the Ninci family, 'tres artistas utopicos' -- a named, unrelated Argentine entertainment topic. No connection to Las Azules. Classified on title/snippet per the Rule G no-fetch carve-out (named different subject).",
+      "history": [
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "title/snippet review (no fetch)",
+          "status": "off_topic_confirmed",
+          "issue": "LEMA-13186"
+        }
+      ]
+    },
+    {
+      "url": "https://telemundo51.com/video/entretenimiento/realities-de-telemundo/kelly-entrevista-final-top-chef-vip/2837444",
+      "firstSeen": "2026-10-19T16:01:30Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T16:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Exa Pass 1 (ES) hit. Telemundo Miami interview with Kelly tied to the finale of 'Top Chef VIP', a named different reality show. No connection to Las Azules. Classified on title/snippet per the Rule G no-fetch carve-out (named different title).",
+      "history": [
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "title/snippet review (no fetch)",
+          "status": "off_topic_confirmed",
+          "issue": "LEMA-13186"
+        }
+      ]
+    },
+    {
+      "url": "https://glamour.hu/kultura/hamori-gabriella-interju-orkeny-szinhaz-utan/qjldt10",
+      "firstSeen": "2026-10-19T16:01:30Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T16:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Exa Pass 1 (ES) hit. Hungarian-language interview with actress Hamori Gabriella about her life after leaving the Orkeny theatre -- a named different, unrelated person. No connection to Las Azules. Classified on title/snippet per the Rule G no-fetch carve-out (named different person).",
+      "history": [
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "title/snippet review (no fetch)",
+          "status": "off_topic_confirmed",
+          "issue": "LEMA-13186"
+        }
+      ]
+    },
+    {
+      "url": "http://agusrey.blogspot.com/2011/04/sabado-show-tendra-una-nueva-seccion-de.html",
+      "firstSeen": "2026-10-19T16:01:30Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T16:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Exa Pass 1 (ES) hit. 2011 blog post about a new portfolio section on the Spanish TV program 'Sabado Show' -- a named different, unrelated topic predating this show entirely, no lineage. Classified on title/snippet per the Rule G no-fetch carve-out (named different subject).",
+      "history": [
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "title/snippet review (no fetch)",
+          "status": "off_topic_confirmed",
+          "issue": "LEMA-13186"
+        }
+      ]
+    },
+    {
+      "url": "https://europesays.com/hu/283891",
+      "firstSeen": "2026-10-19T16:01:30Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T16:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Exa Pass 1 (ES) hit. Hungarian-language syndication of the Hamori Gabriella interview (see glamour.hu row) -- a named different, unrelated person. No connection to Las Azules. Classified on title/snippet per the Rule G no-fetch carve-out (named different person).",
+      "history": [
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "title/snippet review (no fetch)",
+          "status": "off_topic_confirmed",
+          "issue": "LEMA-13186"
+        }
+      ]
+    },
+    {
+      "url": "http://nataliamillanitalia.blogspot.com/2009/10/reportage-yo-dona-foto-e-video.html",
+      "firstSeen": "2026-10-19T16:01:30Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T16:01:30Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Exa Pass 1 (ES) hit. 2009 fan blog post about actress Natalia Millan's 'Yo Dona' photo/video reportage -- a named different, unrelated person/topic predating this show entirely, no lineage. Classified on title/snippet per the Rule G no-fetch carve-out (named different subject).",
+      "history": [
+        {
+          "attempt": "2026-10-19T16:01:30Z",
+          "method": "title/snippet review (no fetch)",
+          "status": "off_topic_confirmed",
+          "issue": "LEMA-13186"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-19T12:05:26Z"
+  "lastUpdated": "2026-10-19T16:01:30Z"
 }
