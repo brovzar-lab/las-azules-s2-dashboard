@@ -31482,7 +31482,175 @@
           "note": "Rule F: catalog/database record (synopsis, cast, streaming, rating), not an authored article; review and news are linked out, not reproduced."
         }
       ]
+    },
+    {
+      "url": "http://behappytribute.blogspot.com/2014/04/interviews-in-barcelona.html",
+      "firstSeen": "2026-10-19T06:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T06:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Blog post titled \"If you want be happy, be - Leo Tolstoy : Interviews in Barcelona\" (behappytribute.blogspot.com, 2014). Names Leo Tolstoy, a 19th-century author with no connection to Las Azules / Women in Blue. Surfaced only via the broad ES Exa query (\"Bárbara Mori entrevista Las Azules temporada 2\"). Title names a specific unconnected person, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T06:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-13051",
+          "note": "Title names a specific person (Leo Tolstoy) with no connection to the show; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.elperiodico.com/es/tele/20261019/baste-clapes-sergi-mas-135469147",
+      "firstSeen": "2026-10-19T06:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T06:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "El Periódico TV piece titled \"Baste y Clapés\" naming Spanish broadcasters Xavier Bascé/Clapés and Sergi Mas, unconnected to Las Azules / Women in Blue. Surfaced only via the broad ES Exa query (\"Bárbara Mori entrevista Las Azules temporada 2\"). Title names specific unconnected people, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T06:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-13051",
+          "note": "Title names specific unconnected broadcast personalities; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lavanguardia.com/clic/20261019/11660827/fer-miralles-experto-comunicacion-capaz-hablar-20-preguntar-80-haciendo-sientan-gusto-querer-volver-conectar-contigo-gvm2.html",
+      "firstSeen": "2026-10-19T06:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T06:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "La Vanguardia piece titled \"Fer Miralles, experto en comunicación...\", a communications-skills interview naming a specific unconnected expert. Surfaced only via the broad ES Exa query. Title names a specific unconnected person, satisfying the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T06:10:00Z",
+          "method": "title/snippet review (Exa search result, no fetch)",
+          "status": null,
+          "issue": "LEMA-13051",
+          "note": "Title names a specific unconnected communications expert; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.travelocity.com/Cartama-Hotels-Los-Azules.h41935238.Hotel-Information",
+      "firstSeen": "2026-10-19T06:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T06:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Travelocity hotel-booking page for \"Los Azules\" hotel in Cártama, Spain. Named different specific subject (a hotel property), not the TV show. Surfaced via a generic Pass 2 web query. Satisfies the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T06:10:00Z",
+          "method": "title/snippet review (no fetch)",
+          "status": null,
+          "issue": "LEMA-13051",
+          "note": "Named different specific subject: a hotel property, not the show; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.goodreads.com/work/quotes/2783032",
+      "firstSeen": "2026-10-19T06:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T06:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Goodreads quotes page titled \"Las luces azules Quotes\", a different, specifically named book title, not Las Azules / Women in Blue. Surfaced via a generic Pass 2 web query. Satisfies the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T06:10:00Z",
+          "method": "title/snippet review (no fetch)",
+          "status": null,
+          "issue": "LEMA-13051",
+          "note": "Named different specific book title; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.expedia.co.kr/en/Velez-Rubio-Hotels-Las-Persianas-Azules.h32883978.Hotel-Information",
+      "firstSeen": "2026-10-19T06:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T06:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Expedia hotel-booking page for \"Las Persianas Azules\" in Vélez-Rubio, Spain. Named different specific subject (a hotel property), not the TV show. Surfaced via a generic Pass 2 web query. Satisfies the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T06:10:00Z",
+          "method": "title/snippet review (no fetch)",
+          "status": null,
+          "issue": "LEMA-13051",
+          "note": "Named different specific subject: a hotel property, not the show; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.goodreads.com/work/quotes/49825109",
+      "firstSeen": "2026-10-19T06:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T06:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Goodreads quotes page titled \"Azules son las horas Quotes\", a different, specifically named book title, not Las Azules / Women in Blue. Surfaced via a generic Pass 2 web query. Satisfies the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T06:10:00Z",
+          "method": "title/snippet review (no fetch)",
+          "status": null,
+          "issue": "LEMA-13051",
+          "note": "Named different specific book title; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
+    },
+    {
+      "url": "https://www.barcelona-metropolitan.com/api/amp/eating-and-drinking/devishly-delicious/",
+      "firstSeen": "2026-10-19T06:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T06:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Barcelona Metropolitan restaurant review naming \"Los Azulejos\", a different, specifically named restaurant, not the TV show. Surfaced via a generic Pass 2 web query. Satisfies the LEMA-12648 no-fetch carve-out.",
+      "history": [
+        {
+          "attempt": "2026-10-19T06:10:00Z",
+          "method": "title/snippet review (no fetch)",
+          "status": null,
+          "issue": "LEMA-13051",
+          "note": "Named different specific subject: a restaurant, not the show; no-fetch Rule G carve-out applies per LEMA-12648."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-19T06:04:56Z"
+  "lastUpdated": "2026-10-19T06:10:00Z"
 }
