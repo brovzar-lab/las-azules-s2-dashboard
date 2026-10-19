@@ -11826,13 +11826,13 @@
     {
       "url": "https://www.tiktok.com/discover/las-azules-temporada-2-cap-3",
       "firstSeen": "2026-09-21T02:06:38Z",
-      "failCount": 1,
-      "lastStatus": 403,
-      "lastAttempt": "2026-09-21T02:06:38Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T18:06:48Z",
       "cooldownUntil": null,
-      "permanentSkip": false,
-      "skipReason": null,
-      "skipNote": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "TikTok discover/topic aggregator page for \"Las Azules Temporada 2 Cap 3\". On-topic (cards reference Las Azules S2, Apple TV, cast) but the page itself is a discover-topic aggregation surface (a feed of unrelated video cards), not written editorial content -- same Rule F family as the other TikTok discover rows already ledgered (horacio-garcia-rojas, las-azules-serie-final).",
       "history": [
         {
           "attempt": "2026-09-21T02:06:38Z",
@@ -11847,8 +11847,16 @@
           "status": 403,
           "issue": "LEMA-10638",
           "note": "Firecrawl returned a blanket 'we do not support this site' refusal for tiktok.com, same documented exhaustion pattern as facebook.com under Rule A. Full fallback-chain failure; not added to data.json this run."
+        },
+        {
+          "attempt": "2026-10-19T18:06:48Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-13188",
+          "note": "Successful retry (expired-cooldown-retry disposition). Body fetch succeeded this time; page classified as Rule F discover-aggregator surface, consistent with sibling TikTok discover rows."
         }
-      ]
+      ],
+      "skipMethod": "body_fetch"
     },
     {
       "url": "https://www.mensjournal.com/entertainment/apple-tv-revives-jessica-chastain-series-it-pulled-just-3-days-before-premiere",
@@ -32292,7 +32300,217 @@
           "issue": "LEMA-13186"
         }
       ]
+    },
+    {
+      "url": "https://www.tiktok.com/discover/laplaces-trailer",
+      "firstSeen": "2026-10-19T18:06:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T18:06:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TikTok discover page entirely about the Roblox game \"Laplace\" (a Mushoku Tensei-inspired RPG). All videos on the page concern the game, not Las Azules / Women in Blue. Surfaced only as a broad-query match on the English Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-19T18:06:48Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-13188",
+          "note": "Body fetch confirmed page is a TikTok discover/topic page for the Roblox game \"Laplace\", unrelated to Las Azules."
+        }
+      ],
+      "skipMethod": "body_fetch"
+    },
+    {
+      "url": "https://www.larazon.es/tecnologia-consumo/series/apple-tv-renueva-segunda-temporada-su-serie-chantaje-asesinatos-relaciones-toxicas-futbol_202610196ad6444eb79b18452fca22b7.html",
+      "firstSeen": "2026-10-19T18:06:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T18:06:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "La Razon article about Apple TV+ renewing \"Satisfaccion garantizada\" (starring Tatiana Maslany and Jake Johnson) for a second season. Not about Las Azules / Women in Blue; surfaced only as a broad-query match on \"Apple TV\" + \"segunda temporada\".",
+      "history": [
+        {
+          "attempt": "2026-10-19T18:06:48Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-13188",
+          "note": "Body fetch confirmed article is about Satisfaccion garantizada, a different Apple TV+ series."
+        }
+      ],
+      "skipMethod": "body_fetch"
+    },
+    {
+      "url": "https://www.rtve.es/play/noticias/20261019/azucar-moreno-reivindican-legado-menudo-cuadro/17273742.shtml",
+      "firstSeen": "2026-10-19T18:06:48Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T18:06:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RTVE Play article about singers Azucar Moreno and the Spanish TV program \"Menudo Cuadro\". No relation to Las Azules / Women in Blue. Title affirmatively names a different, specific subject (Rule G no-fetch carve-out).",
+      "history": [
+        {
+          "attempt": "2026-10-19T18:06:48Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13188",
+          "note": "Title/snippet affirmatively names Azucar Moreno and Menudo Cuadro, an unrelated show; not fetched per the Rule G no-fetch carve-out."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.rtve.es/play/videos/menudo-cuadro/azucar-moreno/17273739/",
+      "firstSeen": "2026-10-19T18:06:48Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T18:06:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RTVE Play video page for singers Azucar Moreno on the Spanish TV program \"Menudo Cuadro\". No relation to Las Azules / Women in Blue. Title affirmatively names a different, specific subject (Rule G no-fetch carve-out).",
+      "history": [
+        {
+          "attempt": "2026-10-19T18:06:48Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13188",
+          "note": "Title/snippet affirmatively names Azucar Moreno and Menudo Cuadro, an unrelated show; not fetched per the Rule G no-fetch carve-out."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.gala.fr/culture/television/interview-nathalie-loriot-n-oubliez-pas-les-paroles-mes-parents-sont-super-fiers-de-moi-20261019",
+      "firstSeen": "2026-10-19T18:06:48Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T18:06:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Gala.fr interview with Nathalie Loriot, a contestant on French game show \"N'oubliez pas les paroles\". No relation to Las Azules / Women in Blue. Title affirmatively names a different, specific subject (Rule G no-fetch carve-out).",
+      "history": [
+        {
+          "attempt": "2026-10-19T18:06:48Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13188",
+          "note": "Title/snippet affirmatively names Nathalie Loriot and \"N'oubliez pas les paroles\", an unrelated show; not fetched per the Rule G no-fetch carve-out."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.fucsia.co/que-pasa/articulo/lo-que-barrio-abajo-le-enseno-a-edgar-vittorino-sobre-ser-barranquillero/202600/",
+      "firstSeen": "2026-10-19T18:06:48Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-19T18:06:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Fucsia.co article about actor Edgar Vittorino and the Colombian TV show \"Barrio Abajo\". No relation to Las Azules / Women in Blue. Title affirmatively names a different, specific subject (Rule G no-fetch carve-out).",
+      "history": [
+        {
+          "attempt": "2026-10-19T18:06:48Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13188",
+          "note": "Title/snippet affirmatively names Edgar Vittorino and \"Barrio Abajo\", an unrelated show; not fetched per the Rule G no-fetch carve-out."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.sensacine.com.mx/actores/actor-214927/",
+      "firstSeen": "2026-10-19T18:06:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T18:06:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "SensaCine Mexico actor biography/filmography database page for Horacio Garcia Rojas (Las Azules cast member). Strip test: biography blurb, filmography table, photos, co-star list -- no written editorial content about Las Azules itself, which appears only as one filmography row (31 jul 2024).",
+      "history": [
+        {
+          "attempt": "2026-10-19T18:06:48Z",
+          "method": "WebFetch",
+          "status": 200,
+          "issue": "LEMA-13188",
+          "note": "Body fetch confirmed actor biography/filmography database page; Rule F surface family (cf. imdb.com/name/*)."
+        }
+      ],
+      "skipMethod": "body_fetch"
+    },
+    {
+      "url": "https://www.sensacine.com.mx/actores/actor-214927/videos/",
+      "firstSeen": "2026-10-19T18:06:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T18:06:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "SensaCine Mexico actor profile videos/trailers tab for Horacio Garcia Rojas. Same database surface family as the actor's main biography page; no written editorial content about Las Azules.",
+      "history": [
+        {
+          "attempt": "2026-10-19T18:06:48Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-13188",
+          "note": "Body fetch confirmed this is the videos tab of the same actor profile database page, listing unrelated film/series trailers; Las Azules mentioned only in the filmography module."
+        }
+      ],
+      "skipMethod": "body_fetch"
+    },
+    {
+      "url": "https://www.sensacine.com/actores/actor-214927/streaming/",
+      "firstSeen": "2026-10-19T18:06:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T18:06:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "SensaCine (Spain) actor streaming-availability listing for Horacio Garcia Rojas. Las Azules appears as one of eight titles in a streaming-catalog table with no original editorial content about the show.",
+      "history": [
+        {
+          "attempt": "2026-10-19T18:06:48Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-13188",
+          "note": "Body fetch confirmed a streaming-catalog listing page (8 titles including Las Azules), no editorial prose about the show."
+        }
+      ],
+      "skipMethod": "body_fetch"
+    },
+    {
+      "url": "https://en.everybodywiki.com/Horacio_Garcia-Rojas",
+      "firstSeen": "2026-10-19T18:06:48Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-19T18:06:48Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "EverybodyWiki (Wikipedia mirror) biography/filmography page for actor Horacio Garcia Rojas. Las Azules appears only as one row in the Television filmography table and a single clause in the Career prose (\"a main character in the Apple TV series Las Azules\"); strip test leaves nothing substantive about the show itself.",
+      "history": [
+        {
+          "attempt": "2026-10-19T18:06:48Z",
+          "method": "Tavily Extract",
+          "status": 200,
+          "issue": "LEMA-13188",
+          "note": "Body fetch confirmed wiki biography/filmography database page (mirrors Wikipedia), Rule F surface family."
+        }
+      ],
+      "skipMethod": "body_fetch"
     }
   ],
-  "lastUpdated": "2026-10-19T16:01:30Z"
+  "lastUpdated": "2026-10-19T18:06:48Z"
 }
