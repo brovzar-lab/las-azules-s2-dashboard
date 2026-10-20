@@ -32897,7 +32897,91 @@
           "note": "2009 Catalan-language blog post about an interview with a day-care center director (centre de dia, Santa Coloma de Gramenet), an explicitly different topic predating this show, no connection to Las Azules / Women in Blue. Broad-query false positive on Pass 1 Exa ES query."
         }
       ]
+    },
+    {
+      "url": "http://twilight2you.blogspot.com/2009/09/interviuri.html",
+      "firstSeen": "2026-10-20T06:04:24Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T06:04:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Personal blog post from 2009 titled 'Interviuri', about the Twilight film franchise. No relation to Las Azules / Women in Blue. Classified from Exa Spanish search-result title alone (unambiguous different subject named); not fetched. Surfaced only as a broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-20T06:04:24Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13208",
+          "note": "Personal blog post from 2009 titled 'Interviuri', about the Twilight film franchise. No relation to Las Azules / Women in Blue. Classified from Exa Spanish search-result title alone (unambiguous different subject named); not fetched. Surfaced only as a broad-query false positive."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://elcomercio.pe/luces/musica/tengo-mas-motivos-para-agradecer-que-para-lamentarme-sonia-morales-y-el-precio-del-exito-tras-32-anos-de-carrera-noticia/",
+      "firstSeen": "2026-10-20T06:04:24Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T06:04:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "El Comercio (Peru) interview with singer Sonia Morales about her 32-year music career. No relation to Las Azules / Women in Blue. Classified from Exa Spanish search-result title alone (unambiguous different subject named); not fetched. Surfaced only as a broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-20T06:04:24Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13208",
+          "note": "El Comercio (Peru) interview with singer Sonia Morales about her 32-year music career. No relation to Las Azules / Women in Blue. Classified from Exa Spanish search-result title alone (unambiguous different subject named); not fetched. Surfaced only as a broad-query false positive."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://styler.rbc.ua/ukr/people/dantes-barskih-i-tarabarova-k-zminilisya-1792412407.html",
+      "firstSeen": "2026-10-20T06:04:24Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T06:04:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "RBC-Ukraine Styler piece (Ukrainian) about Ukrainian 'Star Factory 2' TV talent-show alumni (Dantes, Barskih, Tarabarova) and where they are now. No relation to Las Azules / Women in Blue. Classified from Exa Spanish search-result title alone (unambiguous different subject named); not fetched. Surfaced only as a broad-query false positive.",
+      "history": [
+        {
+          "attempt": "2026-10-20T06:04:24Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13208",
+          "note": "RBC-Ukraine Styler piece (Ukrainian) about Ukrainian 'Star Factory 2' TV talent-show alumni (Dantes, Barskih, Tarabarova) and where they are now. No relation to Las Azules / Women in Blue. Classified from Exa Spanish search-result title alone (unambiguous different subject named); not fetched. Surfaced only as a broad-query false positive."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.gqindia.com/content/what-to-watch-7-apple-tv-series-that-are-pure-big-screen-entertainment",
+      "firstSeen": "2026-10-20T06:04:24Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-20T06:04:24Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "GQ India 'What to watch' listicle naming 7 Apple TV+ series: Pachinko, Silo, See, Hijack, Masters of the Air, Disclaimer, and The New Look. Las Azules / Women in Blue is not among them and is not mentioned anywhere in the body. Confirmed via full-body fetch (Tavily Extract, advanced) per the Rule G no-fetch-carve-out exclusion for listicle headlines. Surfaced only as a broad-query false positive on shared 'Apple TV' terms.",
+      "history": [
+        {
+          "attempt": "2026-10-20T06:04:24Z",
+          "method": "Tavily Extract (advanced)",
+          "status": 200,
+          "issue": "LEMA-13208",
+          "note": "GQ India 'What to watch' listicle naming 7 Apple TV+ series: Pachinko, Silo, See, Hijack, Masters of the Air, Disclaimer, and The New Look. Las Azules / Women in Blue is not among them and is not mentioned anywhere in the body. Surfaced only as a broad-query false positive on shared 'Apple TV' terms."
+        }
+      ],
+      "skipMethod": "body_fetch"
     }
   ],
-  "lastUpdated": "2026-10-20T04:04:42Z"
+  "lastUpdated": "2026-10-20T06:04:24Z"
 }
