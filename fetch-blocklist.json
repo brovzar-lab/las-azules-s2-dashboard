@@ -33022,7 +33022,70 @@
         }
       ],
       "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://cinema.icrewplay.com/dove-wanda-2-calendario-episodi-finale/",
+      "firstSeen": "2026-10-20T20:05:16Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T20:05:16Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "icrewplay.com (Italian) article about \"Dov'e Wanda?\" (Where's Wanda?) season 2 episode calendar and finale on Apple TV. A different Apple TV+ show entirely; no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (title names the specific different show); not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-20T20:05:16Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13290",
+          "note": "icrewplay.com (Italian) article about \"Dov'e Wanda?\" (Where's Wanda?) season 2 episode calendar and finale on Apple TV. A different Apple TV+ show entirely; no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (title names the specific different show); not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.dizibox.live/diziler/phony/",
+      "firstSeen": "2026-10-20T20:05:16Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T20:05:16Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "dizibox.live (Turkish) page for a show titled \"Phony\" (\"Phony izle\" = \"Watch Phony\"). A named different TV title; no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (title names the specific different show); not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-20T20:05:16Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13290",
+          "note": "dizibox.live (Turkish) page for a show titled \"Phony\" (\"Phony izle\" = \"Watch Phony\"). A named different TV title; no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (title names the specific different show); not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.justwatch.com/fr/serie/rick-and-morty/saison-7",
+      "firstSeen": "2026-10-20T20:05:16Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T20:05:16Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch (France) streaming-availability page for \"Rick and Morty\" season 7. A named different show entirely; no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (title names the specific different show); not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-20T20:05:16Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13290",
+          "note": "JustWatch (France) streaming-availability page for \"Rick and Morty\" season 7. A named different show entirely; no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (title names the specific different show); not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
     }
   ],
-  "lastUpdated": "2026-10-20T18:03:47Z"
+  "lastUpdated": "2026-10-20T20:05:16Z"
 }
