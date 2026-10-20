@@ -32981,7 +32981,27 @@
         }
       ],
       "skipMethod": "body_fetch"
+    },
+    {
+      "url": "https://www.tagesspiegel.de/gesellschaft/dpa-streamingserie-bei-apple-tv-wheres-wanda-familie-klatts-wahnsinn-geht-weiter-16179082.html",
+      "firstSeen": "2026-10-20T08:10:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T08:10:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced via Pass 1 Exa broad EN query (LEMA-13226, 2026-10-20 08:00Z fire). Title/snippet name a different, unrelated Apple TV+ German-language show: \"Where's Wanda?\" (German title reporting on the Klatt family), not Las Azules / Women in Blue. Affirmative different-subject identifier present in the title itself (named different show + named family), qualifies for the Rule G no-fetch carve-out (LEMA-12648/LEMA-12647): no body fetch performed.",
+      "history": [
+        {
+          "attempt": "2026-10-20T08:10:00Z",
+          "method": "Exa search result (title/snippet only, no fetch)",
+          "status": null,
+          "issue": "LEMA-13226"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-20T06:04:24Z"
+  "lastUpdated": "2026-10-20T08:10:00Z"
 }
