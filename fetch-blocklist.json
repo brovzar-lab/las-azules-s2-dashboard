@@ -32657,7 +32657,49 @@
         }
       ],
       "skipMethod": "body_fetch"
+    },
+    {
+      "url": "https://www.ciudad.com.ar/videos/espectaculos/2026/10/19/la-incomoda-reaccion-de-fran-stoessel-cuando-le-preguntaron-por-tini/",
+      "firstSeen": "2026-10-20T00:05:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T00:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Ciudad Magazine (Argentina) video piece about Fran Stoessel's reaction when asked about Tini. About unrelated Argentine celebrities; no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous named-different-subject signal); not fetched. Surfaced only as a broad-query match on the Spanish query terms.",
+      "history": [
+        {
+          "attempt": "2026-10-20T00:05:00Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13196",
+          "note": "Ciudad Magazine (Argentina) video piece about Fran Stoessel's reaction when asked about Tini. About unrelated Argentine celebrities; no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous named-different-subject signal); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.tvazteca.com/aztecauno/al-extremo/reaccion-de-las-las-mujeres-al-descubrir-una-infidelidad/",
+      "firstSeen": "2026-10-20T00:05:00Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T00:05:00Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TV Azteca 'Al Extremo' segment ('Catedral o capillita') showing women's reactions to discovering infidelity, a reality/variety-show bit with no connection to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous named-different-topic signal); not fetched. Surfaced only as a broad-query match on the Spanish query terms.",
+      "history": [
+        {
+          "attempt": "2026-10-20T00:05:00Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13196",
+          "note": "TV Azteca 'Al Extremo' segment ('Catedral o capillita') showing women's reactions to discovering infidelity, a reality/variety-show bit with no connection to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous named-different-topic signal); not fetched. Surfaced only as a broad-query match on the Spanish query terms."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
     }
   ],
-  "lastUpdated": "2026-10-19T22:05:49Z"
+  "lastUpdated": "2026-10-20T00:05:00Z"
 }
