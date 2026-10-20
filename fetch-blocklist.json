@@ -32699,7 +32699,95 @@
         }
       ],
       "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://sacredstorytelling.org/article/widow-s-bay-season-2-all-the-latest-updates-and-release-date-speculations",
+      "firstSeen": "2026-10-20T02:04:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T02:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced via Pass 2 EN web sweep. Title and snippet name 'Widow's Bay', an unrelated series, not Las Azules / Women in Blue. Broad-query false positive on shared 'Season 2' terms.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-20T02:04:18Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-13197",
+          "note": "Confirmed off-topic: different show (Widow's Bay)."
+        }
+      ]
+    },
+    {
+      "url": "https://cartermatt.com/730077/boston-blue-season-2-episode-5-spoilers-more-on-jamie-reagan-arrival/",
+      "firstSeen": "2026-10-20T02:04:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T02:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced via Pass 2 EN web sweep. Title names 'Boston Blue' (a Blue Bloods spinoff), not Las Azules / Women in Blue. Broad-query false positive on shared 'Blue' and 'Season 2' terms.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-20T02:04:18Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-13197",
+          "note": "Confirmed off-topic: different show (Boston Blue)."
+        }
+      ]
+    },
+    {
+      "url": "https://bulgaria-italia.com/bg/bg_news/news/02326.asp",
+      "firstSeen": "2026-10-20T02:04:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T02:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced via Pass 1 Exa ES broad query. Bulgarian-language page about actress Sophia Loren, unrelated to Las Azules / Women in Blue. Broad-query false positive, no topical connection.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-20T02:04:18Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-13197",
+          "note": "Confirmed off-topic: unrelated subject (Sophia Loren profile)."
+        }
+      ]
+    },
+    {
+      "url": "http://paradigmasactuales.blogspot.com/2005/12/latino-humano-universal.html",
+      "firstSeen": "2026-10-20T02:04:18Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T02:04:18Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Surfaced via Pass 1 Exa ES broad query. A 2005 blog post titled 'LATINO, HUMANO UNIVERSAL', a general essay on Latino identity predating this show's existence, with no topical connection to Las Azules / Women in Blue. Broad-query false positive.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-20T02:04:18Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-13197",
+          "note": "Confirmed off-topic: unrelated 2005 blog post, no connection to the show."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-20T00:05:00Z"
+  "lastUpdated": "2026-10-20T02:04:18Z"
 }
