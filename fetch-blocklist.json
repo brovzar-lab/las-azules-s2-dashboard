@@ -33001,7 +33001,28 @@
           "issue": "LEMA-13226"
         }
       ]
+    },
+    {
+      "url": "https://moviepilot.de/news/morgen-kehrt-eine-der-besten-aber-kaum-beachteten-krimi-serien-zuruck-heike-makatsch-und-axel-stein-brillieren-im-whodunit-1165133",
+      "firstSeen": "2026-10-20T18:03:47Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T18:03:47Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "moviepilot.de (DE) article about the return of a German crime series starring Heike Makatsch and Axel Stein in \"Whodunit\" (Krimi-Serie). No mention of Las Azules / Women in Blue; surfaced only as a broad-query match on generic Apple TV / crime-drama terms. Classified from Exa search result title alone (unambiguous different subject: named different title \"Whodunit\" plus named different cast, no connection to this show).",
+      "history": [
+        {
+          "attempt": "2026-10-20T18:03:47Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13288",
+          "note": "moviepilot.de article confirmed off-topic (different German crime series \"Whodunit\" starring Heike Makatsch and Axel Stein) from Exa search result title alone; no connection to Las Azules / Women in Blue. Rule G no-fetch carve-out applies: title names a specific different show and cast."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
     }
   ],
-  "lastUpdated": "2026-10-20T08:10:00Z"
+  "lastUpdated": "2026-10-20T18:03:47Z"
 }
