@@ -32787,7 +32787,117 @@
           "note": "Confirmed off-topic: unrelated 2005 blog post, no connection to the show."
         }
       ]
+    },
+    {
+      "url": "https://tuentrenadorenlaweb.blogspot.com/2018/09/entrevista-melissa-hermosillo-en.html",
+      "firstSeen": "2026-10-20T04:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T04:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Entrevista a Melissa Hermosillo en EXPOLIT 18, a fitness/wellness expo interview from 2018, unrelated to Las Azules / Women in Blue. Broad-query false positive on Pass 1 Exa ES query.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-20T04:04:42Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-13207",
+          "note": "Entrevista a Melissa Hermosillo en EXPOLIT 18, a fitness/wellness expo interview from 2018, unrelated to Las Azules / Women in Blue. Broad-query false positive on Pass 1 Exa ES query."
+        }
+      ]
+    },
+    {
+      "url": "https://www.lanacion.com.ar/lifestyle/el-movimiento-es-sinonimo-de-vida-brillo-en-tiras-juveniles-una-intervencion-trunco-su-carrera-al-nid20102026/",
+      "firstSeen": "2026-10-20T04:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T04:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "La Nacion lifestyle profile of a dancer/performer whose career was interrupted by a medical intervention; an explicitly different topic (dance/health profile), no connection to Las Azules / Women in Blue. Broad-query false positive on Pass 1 Exa ES query.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-20T04:04:42Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-13207",
+          "note": "La Nacion lifestyle profile of a dancer/performer whose career was interrupted by a medical intervention; an explicitly different topic (dance/health profile), no connection to Las Azules / Women in Blue. Broad-query false positive on Pass 1 Exa ES query."
+        }
+      ]
+    },
+    {
+      "url": "https://www.pagina12.com.ar/2026/10/20/maria-ezquiaga-hay-una-sobrevaloracion-de-la-adolescencia/",
+      "firstSeen": "2026-10-20T04:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T04:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "Pagina/12 interview with psychologist Maria Ezquiaga about adolescence, a named person with no connection to Las Azules / Women in Blue. Broad-query false positive on Pass 1 Exa ES query.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-20T04:04:42Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-13207",
+          "note": "Pagina/12 interview with psychologist Maria Ezquiaga about adolescence, a named person with no connection to Las Azules / Women in Blue. Broad-query false positive on Pass 1 Exa ES query."
+        }
+      ]
+    },
+    {
+      "url": "https://eldoce.tv/videos/show/2026/10/20/florencia-raggi-recordo-sus-inicios-con-nicolas-repetto-tras-los-rumores-de-crisis/",
+      "firstSeen": "2026-10-20T04:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T04:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "ElDoce.tv piece on Argentine actors Florencia Raggi and Nicolas Repetto recalling their early careers, named different people with no connection to Las Azules / Women in Blue. Broad-query false positive on Pass 1 Exa ES query.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-20T04:04:42Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-13207",
+          "note": "ElDoce.tv piece on Argentine actors Florencia Raggi and Nicolas Repetto recalling their early careers, named different people with no connection to Las Azules / Women in Blue. Broad-query false positive on Pass 1 Exa ES query."
+        }
+      ]
+    },
+    {
+      "url": "http://carlesfurest.blogspot.com/2009/10/pluja-de-idees-sobre-la-entrevista-al.html",
+      "firstSeen": "2026-10-20T04:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-20T04:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipMethod": "title_snippet_only",
+      "skipNote": "2009 Catalan-language blog post about an interview with a day-care center director (centre de dia, Santa Coloma de Gramenet), an explicitly different topic predating this show, no connection to Las Azules / Women in Blue. Broad-query false positive on Pass 1 Exa ES query.",
+      "reviewable": false,
+      "history": [
+        {
+          "attempt": "2026-10-20T04:04:42Z",
+          "method": "search-snippet (title unambiguous)",
+          "status": null,
+          "issue": "LEMA-13207",
+          "note": "2009 Catalan-language blog post about an interview with a day-care center director (centre de dia, Santa Coloma de Gramenet), an explicitly different topic predating this show, no connection to Las Azules / Women in Blue. Broad-query false positive on Pass 1 Exa ES query."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-10-20T02:04:18Z"
+  "lastUpdated": "2026-10-20T04:04:42Z"
 }
