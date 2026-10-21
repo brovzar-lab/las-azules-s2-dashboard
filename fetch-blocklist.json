@@ -33085,7 +33085,238 @@
         }
       ],
       "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://9to5mac.com/2026/10/20/dark-comedy-wheres-wanda-season-2-premieres-on-apple-tv/",
+      "firstSeen": "2026-10-21T02:03:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T02:03:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "9to5Mac article about 'Where's Wanda?' Season 2 premiering on Apple TV. Different show entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous distinct show name); not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-21T02:03:37Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13295",
+          "note": "9to5Mac article about 'Where's Wanda?' Season 2 premiering on Apple TV. Different show entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous distinct show name); not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://batanesseasidelodge.com/article/apple-tv-s-imperfect-women-returns-for-season-2-what-to-expect",
+      "firstSeen": "2026-10-21T02:03:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T02:03:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Imperfect Women' Season 2 on Apple TV. Different show entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous distinct show name); not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-21T02:03:37Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13295",
+          "note": "Article about 'Imperfect Women' Season 2 on Apple TV. Different show entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone (unambiguous distinct show name); not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://monterazzio.com/article/imperfect-women-season-2-renewed-at-apple-tv-kerry-washington-returns",
+      "firstSeen": "2026-10-21T02:03:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T02:03:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Article about 'Imperfect Women' Season 2 renewal at Apple TV, starring Kerry Washington. Different show and named person entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-21T02:03:37Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13295",
+          "note": "Article about 'Imperfect Women' Season 2 renewal at Apple TV, starring Kerry Washington. Different show and named person entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://mezha.net/eng/news/mezha-d9ad0d8e9e4af88ec10e684f_where-s_wanda-_season/",
+      "firstSeen": "2026-10-21T02:03:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T02:03:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "mezha.net article about 'Where's Wanda?' Season 2 streaming on Apple TV. Different show entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-21T02:03:37Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13295",
+          "note": "mezha.net article about 'Where's Wanda?' Season 2 streaming on Apple TV. Different show entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the English Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://dvi.lines.com/victoria-ruffo-the-enduring-power-of-a-mexican-television-icon",
+      "firstSeen": "2026-10-21T02:03:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T02:03:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Profile piece about Mexican television actress Victoria Ruffo. Named different person/topic, no relation to Las Azules / Women in Blue cast or storyline. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-21T02:03:37Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13295",
+          "note": "Profile piece about Mexican television actress Victoria Ruffo. Named different person/topic, no relation to Las Azules / Women in Blue cast or storyline. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://morvoz.blogspot.com/2010/12/elizabeth-castro-y-homero-aridjis.html",
+      "firstSeen": "2026-10-21T02:03:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T02:03:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2010 archival blog post about Elizabeth Castro and Homero Aridjis. Named different people/topic, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-21T02:03:37Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13295",
+          "note": "2010 archival blog post about Elizabeth Castro and Homero Aridjis. Named different people/topic, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://dvi.lines.com/ariel-miramontes-architect-of-queer-latinx-literature-and-pioneering-voice-of-marginalized-love",
+      "firstSeen": "2026-10-21T02:03:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T02:03:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Profile piece about writer Ariel Miramontes. Named different person/topic, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-21T02:03:37Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13295",
+          "note": "Profile piece about writer Ariel Miramontes. Named different person/topic, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://dvi.lines.com/salvador-zerboni-actor-the-theater-soul-behind-argentinas-most-beloved-screen-legend",
+      "firstSeen": "2026-10-21T02:03:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T02:03:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Profile piece about Argentine actor Salvador Zerboni. Named different person/topic, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-21T02:03:37Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13295",
+          "note": "Profile piece about Argentine actor Salvador Zerboni. Named different person/topic, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://dvi.lines.com/the-rising-power-of-jos-ron-from-novocom-to-television-titans",
+      "firstSeen": "2026-10-21T02:03:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T02:03:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Profile piece about actor Jose Ron. Named different person/topic, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-21T02:03:37Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13295",
+          "note": "Profile piece about actor Jose Ron. Named different person/topic, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://tanstupids.blogspot.com/2013/12/comencen-les-gravacions-del-segon-disc.html",
+      "firstSeen": "2026-10-21T02:03:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T02:03:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2013 Catalan-language blog post about a band (TanStuPids) starting recording of their second album. Named different topic entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-21T02:03:37Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13295",
+          "note": "2013 Catalan-language blog post about a band (TanStuPids) starting recording of their second album. Named different topic entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://estrelando.com.br/nota/2026/10/21/participantes-do-reality-poderosas-do-cerrado-entregam-primeiras-impressoes-do-programa-e-como-a-relacao-delas-esta-hoje-em-dia-336005",
+      "firstSeen": "2026-10-21T02:03:37Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T02:03:37Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Estrelando (Brazil) article about reality show 'Poderosas do Cerrado' participants. Named different show entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query.",
+      "history": [
+        {
+          "attempt": "2026-10-21T02:03:37Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13295",
+          "note": "Estrelando (Brazil) article about reality show 'Poderosas do Cerrado' participants. Named different show entirely, no relation to Las Azules / Women in Blue. Classified from Exa search result title alone; not fetched. Surfaced only as a broad-query match on the Spanish Pass 1 Exa query."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
     }
   ],
-  "lastUpdated": "2026-10-20T20:05:16Z"
+  "lastUpdated": "2026-10-21T02:03:37Z"
 }
