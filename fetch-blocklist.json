@@ -33637,7 +33637,258 @@
         }
       ],
       "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://amp.milenio.com/espectaculos/iliana-donatlan-en-las-azules",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": 200,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_redundant_syndication",
+      "skipNote": "AMP second address for the canonical Milenio article at https://www.milenio.com/espectaculos/iliana-donatlan-en-las-azules (added to data.json this run, ts=20240730). Confirmed via body fetch: identical headline, byline (Lizbeth Cruz Jimenez) and dateline on both addresses.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "body fetch (WebFetch)",
+          "status": 200,
+          "issue": "LEMA-13343",
+          "note": "AMP page for the same CMS post as the canonical milenio.com URL added to data.json this run; per Rule I an AMP page is a second address, not a distinct document."
+        }
+      ]
+    },
+    {
+      "url": "https://www.imdb.com/title/tt29011445/",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_listing_or_database",
+      "skipNote": "IMDb title record for \"Where's Wanda?\" (TV Series 2024-), an unrelated Apple TV+ show. Classified as Rule F by surface family (imdb.com/title/*) regardless of subject.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13343",
+          "note": "IMDb title record for \"Where's Wanda?\" (TV Series 2024-), an unrelated Apple TV+ show. Classified as Rule F by surface family (imdb.com/title/*) regardless of subject."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://news.lavx.hu/article/where-s-wanda-season-2-premieres-on-apple-tv",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "LavX News piece on \"Where's Wanda?\" season 2 premiere on Apple TV, a different show. No relation to Las Azules / Women in Blue. Named different title in headline; not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13343",
+          "note": "LavX News piece on \"Where's Wanda?\" season 2 premiere on Apple TV, a different show. No relation to Las Azules / Women in Blue. Named different title in headline; not fetched."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.justwatch.com/be/serie/portee-disparue",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "JustWatch Belgium page for \"Portee disparue\" (French-language title of a different Apple TV+ series, not Las Azules). No relation to Las Azules / Women in Blue. Named different title; not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13343",
+          "note": "JustWatch Belgium page for \"Portee disparue\" (French-language title of a different Apple TV+ series, not Las Azules). No relation to Las Azules / Women in Blue. Named different title; not fetched."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://news.lavx.hu/fr/article/ou-est-wanda-saison-2-en-avant-premiere-sur-apple-tv",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "LavX News (French edition) piece on \"Ou est Wanda ?\" season 2 Apple TV premiere, a different show. No relation to Las Azules / Women in Blue. Named different title; not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13343",
+          "note": "LavX News (French edition) piece on \"Ou est Wanda ?\" season 2 Apple TV premiere, a different show. No relation to Las Azules / Women in Blue. Named different title; not fetched."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://el7art.blogspot.com/2020/09/the-mandalorian-season-2_9.html",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Catalan blog post about \"The Mandalorian\" Season 2 (2020), an unrelated Star Wars series. No relation to Las Azules / Women in Blue. Named different title; not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13343",
+          "note": "Catalan blog post about \"The Mandalorian\" Season 2 (2020), an unrelated Star Wars series. No relation to Las Azules / Women in Blue. Named different title; not fetched."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://voltaalmon2010.blogspot.com/2010/11/2a-entrevista-la-cadena-ser.html",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2010 Catalan travel blog post about a radio interview on Cadena SER (Spanish radio station). No relation to Las Azules / Women in Blue, which did not exist in 2010. Named different, specific topic; not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13343",
+          "note": "2010 Catalan travel blog post about a radio interview on Cadena SER (Spanish radio station). No relation to Las Azules / Women in Blue, which did not exist in 2010. Named different, specific topic; not fetched."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.butaquesisomnis.com/2014/02/pau-miro-entrevista-agata-roca.html",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2014 Catalan theatre blog: playwright Pau Miro interviews actress Agata Roca. No relation to Las Azules / Women in Blue. Named different, specific subjects; not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13343",
+          "note": "2014 Catalan theatre blog: playwright Pau Miro interviews actress Agata Roca. No relation to Las Azules / Women in Blue. Named different, specific subjects; not fetched."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.butaquesisomnis.com/2014/08/nous-vents-per-al-vaixell-de-mar-i-cel.html",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2014 Catalan theatre blog post about the stage production \"Mar i cel\", an unrelated show. No relation to Las Azules / Women in Blue. Named different title; not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13343",
+          "note": "2014 Catalan theatre blog post about the stage production \"Mar i cel\", an unrelated show. No relation to Las Azules / Women in Blue. Named different title; not fetched."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://frankgenteenobra2009.blogspot.com/2012/06/entrevista-carolina-y-gaston.html",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2012 Argentine theatre blog interview with Carolina and Gaston, unrelated individuals. No relation to Las Azules / Women in Blue. Named different, specific subjects; not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13343",
+          "note": "2012 Argentine theatre blog interview with Carolina and Gaston, unrelated individuals. No relation to Las Azules / Women in Blue. Named different, specific subjects; not fetched."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.clarin.com/videos/paulo-londra-emocional_3_d75RcMApYN.html",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Clarin video piece about musician Paulo Londra. No relation to Las Azules / Women in Blue. Named different, specific subject; not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13343",
+          "note": "Clarin video piece about musician Paulo Londra. No relation to Las Azules / Women in Blue. Named different, specific subject; not fetched."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.butaquesisomnis.com/2013/07/sidi-larbi-cherkaoui-puzzle-es-un.html",
+      "firstSeen": "2026-10-21T10:07:54Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T10:07:54Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2013 Catalan theatre blog piece about choreographer Sidi Larbi Cherkaoui's stage work \"Puzzle\". No relation to Las Azules / Women in Blue. Named different, specific subject; not fetched.",
+      "history": [
+        {
+          "attempt": "2026-10-21T10:07:54Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13343",
+          "note": "2013 Catalan theatre blog piece about choreographer Sidi Larbi Cherkaoui's stage work \"Puzzle\". No relation to Las Azules / Women in Blue. Named different, specific subject; not fetched."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
     }
   ],
-  "lastUpdated": "2026-10-21T06:04:42Z"
+  "lastUpdated": "2026-10-21T10:07:54Z"
 }
