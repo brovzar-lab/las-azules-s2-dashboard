@@ -33316,7 +33316,139 @@
         }
       ],
       "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://pastorjohnwright.org/article/imperfect-women-season-2-renewed-at-apple-tv-kerry-washington-returns",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T04:05:11Z",
+      "firstSeen": "2026-10-21T04:05:11Z",
+      "skipNote": "pastorjohnwright.org piece titled \"Imperfect Women Season 2 Renewed at Apple TV+ | Kerry Washington Returns (2026)\". Named different title (Imperfect Women) and named different person (Kerry Washington) with no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 EN broad-query match. Rule G, reviewable=false.",
+      "history": [
+        {
+          "attempt": "2026-10-21T04:05:11Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13305",
+          "note": "pastorjohnwright.org piece titled \"Imperfect Women Season 2 Renewed at Apple TV+ | Kerry Washington Returns (2026)\". Named different title (Imperfect Women) and named different person (Kerry Washington) with no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 EN broad-query match. Rule G, reviewable=false."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://programalegendarios.blogspot.com/2011/06/news-teena-entrevistou-cantora-dulce.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T04:05:11Z",
+      "firstSeen": "2026-10-21T04:05:11Z",
+      "skipNote": "2011 Brazilian blog post: \"News: A Teena entrevistou a cantora Dulce Maria\" (interview with singer Dulce Maria). Named different person (Dulce Maria), no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 ES broad-query match on 'entrevista'. Rule G, reviewable=false.",
+      "history": [
+        {
+          "attempt": "2026-10-21T04:05:11Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13305",
+          "note": "2011 Brazilian blog post: \"News: A Teena entrevistou a cantora Dulce Maria\" (interview with singer Dulce Maria). Named different person (Dulce Maria), no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 ES broad-query match on 'entrevista'. Rule G, reviewable=false."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.telemundo.com/noticias/noticias-telemundo/internacional/video/una-cantante-mexicana-rescata-la-musica-tradicional-latinoamericana-para-acercarla-a-los-jovenes-tmvo13235842",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T04:05:11Z",
+      "firstSeen": "2026-10-21T04:05:11Z",
+      "skipNote": "Telemundo video piece: \"Una cantante mexicana rescata la musica tradicional latinoamericana para acercarla a los jovenes\" -- a Mexican singer reviving traditional Latin American folk music. Explicitly different topic, no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 ES broad-query match. Rule G, reviewable=false.",
+      "history": [
+        {
+          "attempt": "2026-10-21T04:05:11Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13305",
+          "note": "Telemundo video piece: \"Una cantante mexicana rescata la musica tradicional latinoamericana para acercarla a los jovenes\" -- a Mexican singer reviving traditional Latin American folk music. Explicitly different topic, no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 ES broad-query match. Rule G, reviewable=false."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://teamrosalienikkireed.blogspot.com/2011/07/entrevista-por-moviefone-con-nikki-reed.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T04:05:11Z",
+      "firstSeen": "2026-10-21T04:05:11Z",
+      "skipNote": "2011 fan blog post: \"Entrevista por Moviefone con Nikki Reed y el cast de Amanecer\" (Twilight Breaking Dawn cast interview). Named different person (Nikki Reed) and different title (Amanecer/Breaking Dawn), no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 ES broad-query match on 'entrevista'. Rule G, reviewable=false.",
+      "history": [
+        {
+          "attempt": "2026-10-21T04:05:11Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13305",
+          "note": "2011 fan blog post: \"Entrevista por Moviefone con Nikki Reed y el cast de Amanecer\" (Twilight Breaking Dawn cast interview). Named different person (Nikki Reed) and different title (Amanecer/Breaking Dawn), no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 ES broad-query match on 'entrevista'. Rule G, reviewable=false."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://aescures.blogspot.com/2014/06/entrevista-lluis-xabel-alvarez-garcia-6.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T04:05:11Z",
+      "firstSeen": "2026-10-21T04:05:11Z",
+      "skipNote": "2014 blog post: interview with Lluis Xabel Alvarez Garcia on the philosophy of 'Texuca'. Named different person, no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 ES broad-query match on 'entrevista'. Rule G, reviewable=false.",
+      "history": [
+        {
+          "attempt": "2026-10-21T04:05:11Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13305",
+          "note": "2014 blog post: interview with Lluis Xabel Alvarez Garcia on the philosophy of 'Texuca'. Named different person, no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 ES broad-query match on 'entrevista'. Rule G, reviewable=false."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://humanconnecttotokiohotel.blogspot.com/2011/09/entrevista-antigua-pero-que-vale-la.html",
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "reviewable": false,
+      "failCount": 0,
+      "cooldownUntil": null,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T04:05:11Z",
+      "firstSeen": "2026-10-21T04:05:11Z",
+      "skipNote": "2011 fan blog post about the band Tokio Hotel: \"Entrevista antigua pero que vale la pena releer\". Named different topic (Tokio Hotel), no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 ES broad-query match on 'entrevista'. Rule G, reviewable=false.",
+      "history": [
+        {
+          "attempt": "2026-10-21T04:05:11Z",
+          "method": "title-only (Exa metadata)",
+          "status": null,
+          "issue": "LEMA-13305",
+          "note": "2011 fan blog post about the band Tokio Hotel: \"Entrevista antigua pero que vale la pena releer\". Named different topic (Tokio Hotel), no connection to Las Azules / Women in Blue. Surfaced only via Exa Pass 1 ES broad-query match on 'entrevista'. Rule G, reviewable=false."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
     }
   ],
-  "lastUpdated": "2026-10-21T02:03:37Z"
+  "lastUpdated": "2026-10-21T04:05:11Z"
 }
