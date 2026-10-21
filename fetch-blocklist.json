@@ -33448,7 +33448,196 @@
         }
       ],
       "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "http://associaciosantlluc.blogspot.com/2015/05/entrevista-cecilia-morales-el-public.html",
+      "firstSeen": "2026-10-21T06:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T06:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2015 Catalan arts blog post, \"ENTREVISTA A CECÍLIA MORALES A EL PÚBLIC\" (interview with Cecília Morales for El Públic). No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep).",
+      "history": [
+        {
+          "attempt": "2026-10-21T06:04:42Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-13306",
+          "note": "2015 Catalan arts blog post, \"ENTREVISTA A CECÍLIA MORALES A EL PÚBLIC\" (interview with Cecília Morales for El Públic). No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep)."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://rbdunion.blogspot.com/2015/06/dulce-maria-da-entrevista-para.html",
+      "firstSeen": "2026-10-21T06:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T06:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2015 RBD fan blog post about Dulce María giving an interview to Cosmopolitan Mexico, discussing RBD. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep).",
+      "history": [
+        {
+          "attempt": "2026-10-21T06:04:42Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-13306",
+          "note": "2015 RBD fan blog post about Dulce María giving an interview to Cosmopolitan Mexico, discussing RBD. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep)."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://rbdunion.blogspot.com/2016/11/dulce-maria-diz-que-gostaria-de-divir-o.html",
+      "firstSeen": "2026-10-21T06:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T06:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2016 RBD fan blog post about Dulce María saying she'd like to share a stage with Anitta. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep).",
+      "history": [
+        {
+          "attempt": "2026-10-21T06:04:42Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-13306",
+          "note": "2016 RBD fan blog post about Dulce María saying she'd like to share a stage with Anitta. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep)."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://tbreak.com/where-to-watch-wheres-wanda-season-2-in-the-uae/",
+      "firstSeen": "2026-10-21T06:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T06:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "\"Where's Wanda?\" season 2 (a different Apple TV+ series) streaming availability in the UAE. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep).",
+      "history": [
+        {
+          "attempt": "2026-10-21T06:04:42Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-13306",
+          "note": "\"Where's Wanda?\" season 2 (a different Apple TV+ series) streaming availability in the UAE. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep)."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://thetechstreetnow.com/how-to-watch-wheres-wanda-season-2-online-stream-the-german-dark-comedy-from-anywhere/",
+      "firstSeen": "2026-10-21T06:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T06:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "\"Where's Wanda?\" season 2, a German dark comedy on Apple TV+, how-to-watch guide. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep).",
+      "history": [
+        {
+          "attempt": "2026-10-21T06:04:42Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-13306",
+          "note": "\"Where's Wanda?\" season 2, a German dark comedy on Apple TV+, how-to-watch guide. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep)."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.diariodemallorca.es/ocio/tv/2026/10/21/tinet-rubira-ot-entrevista-operacion-triunfo-135566894.html",
+      "firstSeen": "2026-10-21T06:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T06:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Diario de Mallorca interview with Tinet Rubira about Operación Triunfo (OT), a different TV talent show. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep).",
+      "history": [
+        {
+          "attempt": "2026-10-21T06:04:42Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-13306",
+          "note": "Diario de Mallorca interview with Tinet Rubira about Operación Triunfo (OT), a different TV talent show. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep)."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.gameblog.fr/geek/ed/news/apple-tv-wheres-wanda-saison-2-dispo-725017",
+      "firstSeen": "2026-10-21T06:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T06:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "Gameblog.fr piece on \"Where's Wanda?\" ('Mulheres de Azul' false-cognate is a different show) season 2 availability on Apple TV. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep).",
+      "history": [
+        {
+          "attempt": "2026-10-21T06:04:42Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-13306",
+          "note": "Gameblog.fr piece on \"Where's Wanda?\" ('Mulheres de Azul' false-cognate is a different show) season 2 availability on Apple TV. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep)."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://www.techradar.com/entertainment/tv-shows/how-to-watch-wheres-wanda-season-2",
+      "firstSeen": "2026-10-21T06:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T06:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "TechRadar how-to-watch guide for \"Where's Wanda?\" season 2, a different Apple TV+ series. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep).",
+      "history": [
+        {
+          "attempt": "2026-10-21T06:04:42Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-13306",
+          "note": "TechRadar how-to-watch guide for \"Where's Wanda?\" season 2, a different Apple TV+ series. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep)."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
+    },
+    {
+      "url": "https://wwwpablolayuscomar.blogspot.com/2010/12/pettinato-mando-al-frente-suar.html",
+      "firstSeen": "2026-10-21T06:04:42Z",
+      "failCount": 0,
+      "lastStatus": null,
+      "lastAttempt": "2026-10-21T06:04:42Z",
+      "cooldownUntil": null,
+      "permanentSkip": true,
+      "skipReason": "editorial_off_topic_false_positive",
+      "skipNote": "2010 Argentine TV blog post about Jorge Lanata/Mario Pettinato and Adrián Suar. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep).",
+      "history": [
+        {
+          "attempt": "2026-10-21T06:04:42Z",
+          "method": "title-only (Exa/WebSearch metadata)",
+          "status": null,
+          "issue": "LEMA-13306",
+          "note": "2010 Argentine TV blog post about Jorge Lanata/Mario Pettinato and Adrián Suar. No relation to Las Azules / Women in Blue. Classified from search result title alone (unambiguous subject); not fetched. Surfaced only as a broad-query match (Pass 1 Exa or Pass 2 standard sweep)."
+        }
+      ],
+      "skipMethod": "title_snippet_only"
     }
   ],
-  "lastUpdated": "2026-10-21T04:05:11Z"
+  "lastUpdated": "2026-10-21T06:04:42Z"
 }
